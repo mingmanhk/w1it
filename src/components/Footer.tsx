@@ -76,31 +76,36 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mingmanhk/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
                 aria-label="LinkedIn"
+                title="Connect on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="https://github.com"
+                href="https://github.com/mingmanhk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
                 aria-label="GitHub"
+                title="View GitHub Profile"
               >
                 <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://mingmanhk.github.io/React-Portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
+                aria-label="Portfolio"
+                title="View Portfolio"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                </svg>
               </a>
             </div>
           </div>

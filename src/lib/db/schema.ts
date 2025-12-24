@@ -120,6 +120,92 @@ export const subscribers = pgTable('subscribers', {
   unsubscribedAt: timestamp('unsubscribed_at'),
 });
 
+// Team Members / Experience (from comprehensive plan)
+export const teamMembers = pgTable('team_members', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 255 }).notNull(),
+  title: varchar('title', { length: 255 }).notNull(),
+  bio: text('bio'),
+  imageUrl: varchar('image_url', { length: 500 }),
+  email: varchar('email', { length: 255 }),
+  phone: varchar('phone', { length: 50 }),
+  linkedinUrl: varchar('linkedin_url', { length: 500 }),
+  githubUrl: varchar('github_url', { length: 500 }),
+  displayOrder: integer('display_order').default(0),
+  isActive: boolean('is_active').default(true).notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export const teamMemberExperience = pgTable('team_member_experience', {
+  id: serial('id').primaryKey(),
+  teamMemberId: integer('team_member_id').references(() => teamMembers.id).notNull(),
+  title: varchar('title', { length: 255 }).notNull(),
+  company: varchar('company', { length: 255 }).notNull(),
+  location: varchar('location', { length: 255 }),
+  startDate: varchar('start_date', { length: 20 }).notNull(),
+  endDate: varchar('end_date', { length: 20 }),
+  isCurrent: boolean('is_current').default(false),
+  description: text('description'),
+  achievements: jsonb('achievements'), // Array of achievements
+  displayOrder: integer('display_order').default(0),
+});
+
+export const certifications = pgTable('certifications', {
+  id: serial('id').primaryKey(),
+  teamMemberId: integer('team_member_id').references(() => teamMembers.id).notNull(),
+  name: varchar('name', { length: 255 }).notNull(),
+  issuer: varchar('issuer', { length: 255 }).notNull(),
+  issueDate: varchar('issue_date', { length: 20 }).notNull(),
+  expiryDate: varchar('expiry_date', { length: 20 }),
+  credentialId: varchar('credential_id', { length: 100 }),
+  credentialUrl: varchar('credential_url', { length: 500 }),
+  displayOrder: integer('display_order').default(0),
+});
+
+export const skills = pgTable('skills', {
+  id: serial('id').primaryKey(),
+  teamMemberId: integer('team_member_id').references(() => teamMembers.id).notNull(),
+  category: varchar('category', { length: 100 }).notNull(),
+  name: varchar('name', { length: 255 }).notNull(),
+  proficiency: integer('proficiency'), // 1-5 scale
+  yearsOfExperience: integer('years_of_experience'),
+  displayOrder: integer('display_order').default(0),
+});
+
+// Availability / Scheduling (from comprehensive plan)
+export const availabilitySlots = pgTable('availability_slots', {
+  id: serial('id').primaryKey(),
+  teamMemberId: integer('team_member_id').references(() => teamMembers.id).notNull(),
+  dayOfWeek: integer('day_of_week').notNull(), // 0-6 (Sunday-Saturday)
+  startTime: varchar('start_time', { length: 10 }).notNull(), // HH:MM format
+  endTime: varchar('end_time', { length: 10 }).notNull(), // HH:MM format
+  timezone: varchar('timezone', { length: 50 }).default('America/Los_Angeles'),
+  slotType: varchar('slot_type', { length: 50 }).default('consultation'), // consultation, support, meeting
+  isRecurring: boolean('is_recurring').default(true),
+  maxBookingsPerSlot: integer('max_bookings_per_slot').default(1),
+  isActive: boolean('is_active').default(true).notNull(),
+});
+
+export const bookedAppointments = pgTable('booked_appointments', {
+  id: serial('id').primaryKey(),
+  teamMemberId: integer('team_member_id').references(() => teamMembers.id).notNull(),
+  clientName: varchar('client_name', { length: 255 }).notNull(),
+  clientEmail: varchar('client_email', { length: 255 }).notNull(),
+  clientPhone: varchar('client_phone', { length: 50 }),
+  appointmentDate: timestamp('appointment_date').notNull(),
+  durationMinutes: integer('duration_minutes').default(60),
+  meetingType: varchar('meeting_type', { length: 50 }).default('consultation'), // consultation, support, followup
+  meetingTopic: varchar('meeting_topic', { length: 255 }),
+  meetingNotes: text('meeting_notes'),
+  meetingLink: varchar('meeting_link', { length: 500 }),
+  status: varchar('status', { length: 20 }).default('scheduled'), // scheduled, confirmed, completed, cancelled, no-show
+  reminderSent: boolean('reminder_sent').default(false),
+  followupSent: boolean('followup_sent').default(false),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
 // Type exports for use in the application
 export type Service = InferSelectModel<typeof services>;
 export type NewService = InferInsertModel<typeof services>;
@@ -133,3 +219,17 @@ export type Testimonial = InferSelectModel<typeof testimonials>;
 export type NewTestimonial = InferInsertModel<typeof testimonials>;
 export type Subscriber = InferSelectModel<typeof subscribers>;
 export type NewSubscriber = InferInsertModel<typeof subscribers>;
+
+// New types for experience and availability
+export type TeamMember = InferSelectModel<typeof teamMembers>;
+export type NewTeamMember = InferInsertModel<typeof teamMembers>;
+export type TeamMemberExperience = InferSelectModel<typeof teamMemberExperience>;
+export type NewTeamMemberExperience = InferInsertModel<typeof teamMemberExperience>;
+export type Certification = InferSelectModel<typeof certifications>;
+export type NewCertification = InferInsertModel<typeof certifications>;
+export type Skill = InferSelectModel<typeof skills>;
+export type NewSkill = InferInsertModel<typeof skills>;
+export type AvailabilitySlot = InferSelectModel<typeof availabilitySlots>;
+export type NewAvailabilitySlot = InferInsertModel<typeof availabilitySlots>;
+export type BookedAppointment = InferSelectModel<typeof bookedAppointments>;
+export type NewBookedAppointment = InferInsertModel<typeof bookedAppointments>;
