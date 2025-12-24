@@ -1,3 +1,13 @@
 {
-  "IDX.agenticWorkspace": true
+  "IDX.agenticWorkspace": true,
+  "sqltools.connections": [
+    {
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "name": "W1IT",
+      "connectString": "postgres://019b4b8d-2c0a-7a1d-822f-11613540345c:a502b0a5-823b-4e04-96ba-5dad95a066d7@us-west-2.db.thenile.dev/w1it"
+    }
+  ]
 }

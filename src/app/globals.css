@@ -1,26 +1,251 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Modern IT Professional Theme */
+    --color-primary: 0 112 243; /* Azure Blue - Trust, Technology */
+    --color-primary-dark: 0 82 204; /* Deep Azure */
+    --color-secondary: 16 185 129; /* Emerald Green - Growth, Success */
+    --color-accent: 139 92 246; /* Violet - Innovation, Creativity */
+    --color-accent-alt: 245 158 11; /* Amber - Energy, Attention */
+
+    /* Neutral colors - Professional IT palette */
+    --color-background: 255 255 255;
+    --color-surface: 249 250 251; /* Light gray background */
+    --color-surface-dark: 17 24 39; /* Dark surface for sections */
+    --color-text-primary: 17 24 39; /* Gray 900 */
+    --color-text-secondary: 75 85 99; /* Gray 600 */
+    --color-text-tertiary: 107 114 128; /* Gray 500 */
+    --color-border: 229 231 235; /* Gray 200 */
+    --color-border-dark: 55 65 81; /* Gray 700 */
+
+    /* State colors */
+    --color-success: 16 185 129; /* Emerald */
+    --color-warning: 245 158 11; /* Amber */
+    --color-error: 239 68 68; /* Red */
+    --color-info: 59 130 246; /* Blue */
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+    --gradient-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    --gradient-dark: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  }
+
+  .dark {
+    --color-background: 17 24 39;
+    --color-surface: 31 41 55;
+    --color-surface-dark: 10 15 25;
+    --color-text-primary: 249 250 251;
+    --color-text-secondary: 209 213 219;
+    --color-text-tertiary: 156 163 175;
+    --color-border: 55 65 81;
+    --color-border-dark: 75 85 99;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out;
+  }
+
+  .animate-pulse-subtle {
+    animation: pulseSubtle 2s infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Modern gradient backgrounds */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+  }
+
+  .bg-gradient-secondary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  }
+
+  .bg-gradient-light {
+    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  }
+
+  /* Glass morphism effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Modern shadows */
+  .shadow-elevated {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .shadow-floating {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.05);
+  }
+
+  /* Text gradients */
+  .text-gradient-primary {
+    background: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-secondary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Modern borders */
+  .border-gradient-primary {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #0070f3 0%, #0052cc 100%) border-box;
+  }
+
+  /* Grid patterns */
+  .bg-grid-pattern {
+    background-image:
+      linear-gradient(to right, rgba(0, 112, 243, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 112, 243, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .bg-dot-pattern {
+    background-image: radial-gradient(rgba(0, 112, 243, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: rgba(0, 112, 243, 0.2);
+  color: inherit;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #0070f3;
+  outline-offset: 2px;
 }
