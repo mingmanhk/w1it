@@ -18,7 +18,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/blog',
   openGraph: {
-    title: 'IT Insights & Tech Blog | Pinkkamii',
+    title: 'IT Insights & Tech Blog | w1IT',
     description: 'Expert IT insights and technical tips from Seattle-based IT professionals.',
     type: 'website',
   },

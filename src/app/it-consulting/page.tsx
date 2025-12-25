@@ -23,7 +23,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/it-consulting',
   openGraph: {
-    title: 'IT Consulting Services Seattle | Pinkkamii',
+    title: 'IT Consulting Services Seattle | w1IT',
     description:
       'Smart IT consulting with clear strategies for secure, scalable growth. Bilingual support available.',
     type: 'website',
@@ -33,11 +33,11 @@ export const metadata: Metadata = generateSEO({
 export default function ITConsulting() {
   // Generate structured data for SEO
   const localBusinessSchema = generateLocalBusinessSchema({
-    name: 'Pinkkamii - IT Consulting',
+    name: 'w1IT - IT Consulting',
     description:
       'Strategic IT consulting services including technology roadmapping, system architecture design, process optimization, and security compliance guidance with bilingual support.',
-    url: 'https://pinkkamii.com/it-consulting',
-    email: 'contact@pinkkamii.com',
+    url: 'https://w1it.com/it-consulting',
+    email: 'contact@w1it.com',
     address: {
       addressLocality: 'Seattle',
       addressRegion: 'WA',
@@ -51,8 +51,8 @@ export default function ITConsulting() {
     description:
       'Strategic IT consulting for businesses including technology strategy, network architecture, security compliance, and process optimization with clear, actionable recommendations.',
     provider: {
-      name: 'Pinkkamii',
-      url: 'https://pinkkamii.com',
+      name: 'w1IT',
+      url: 'https://w1it.com',
     },
     areaServed: ['Seattle', 'Bellevue', 'Issaquah', 'Snoqualmie', 'Redmond', 'Tacoma', 'Greater King County', 'Remote Worldwide'],
     serviceType: 'IT Consulting',

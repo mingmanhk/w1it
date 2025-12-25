@@ -8,24 +8,22 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'Managed IT Services', href: '/services/managed-services' },
-      { name: 'Virus Removal & Prevention', href: '/services/security' },
-      { name: 'Microsoft Windows Management', href: '/services/windows-management' },
-      { name: 'Data Backup & Recovery', href: '/services/data-backup' },
-      { name: 'IT Help Desk Services', href: '/services/help-desk' },
-      { name: 'Email & VOIP Communications', href: '/services/communications' },
+      { name: 'Managed IT Services', href: '/it-services' },
+      { name: 'Remote Support', href: '/services/remote-support' },
+      { name: 'Network Setup', href: '/services/network-setup' },
+      { name: 'IT Consulting', href: '/it-consulting' },
+      { name: 'Technical Writing', href: '/services/technical-writing' },
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
       { name: 'Blog', href: '/blog' },
+      { name: 'Contact', href: '/contact' },
     ],
     resources: [
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'FAQ', href: '/faq' },
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Data Analytics', href: '/solutions/data-analytics' },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },

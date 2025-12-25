@@ -1,6 +1,6 @@
 # SEO Optimization Documentation
 
-This document outlines all the SEO optimizations implemented for the Pinkkamii website.
+This document outlines all the SEO optimizations implemented for the w1IT website.
 
 ## Overview
 
@@ -73,7 +73,7 @@ Created a comprehensive SEO utility library that provides:
   - Service schema for consulting services
 
 #### Contact Page (`/app/contact/layout.tsx`)
-- **Title**: "Contact Pinkkamii - IT Services & App Support"
+- **Title**: "Contact w1IT - IT Services & App Support"
 - **Description**: Emphasizes bilingual support availability
 - **Keywords**: Contact-focused terms
 

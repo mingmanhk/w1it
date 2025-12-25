@@ -56,13 +56,13 @@
     animation: fadeInUp 0.6s ease-out;
   }
 
-  .animate-slide-in-left {
+  /* .animate-slide-in-left { // Currently unused
     animation: slideInLeft 0.5s ease-out;
   }
 
-  .animate-slide-in-right {
+  .animate-slide-in-right { // Currently unused
     animation: slideInRight 0.5s ease-out;
-  }
+  } */
 
   .animate-scale-in {
     animation: scaleIn 0.4s ease-out;
@@ -72,9 +72,9 @@
     animation: pulseSubtle 2s infinite;
   }
 
-  .animate-float {
+  /* .animate-float { // Currently unused
     animation: float 3s ease-in-out infinite;
-  }
+  } */
 
   /* Professional gradient backgrounds */
   .bg-gradient-primary {
@@ -97,21 +97,22 @@
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%);
   }
 
-  .bg-gradient-light {
+  /* Available gradient backgrounds */
+  /* .bg-gradient-light { // Currently unused
     background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  }
+  } */
 
   .bg-gradient-blue {
     background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   }
 
-  .bg-gradient-sky {
+  /* .bg-gradient-sky { // Currently unused
     background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   }
 
-  .bg-gradient-purple {
+  .bg-gradient-purple { // Currently unused
     background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
-  }
+  } */
 
   .bg-gradient-amber {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
@@ -124,13 +125,7 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  .glass-dark {
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  /* Modern shadows */
+  /* Modern shadows - available but currently unused
   .shadow-elevated {
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
@@ -138,6 +133,7 @@
   .shadow-floating {
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.05);
   }
+  */
 
   /* Text gradients */
   .text-gradient-primary {
@@ -147,12 +143,12 @@
     background-clip: text;
   }
 
-  .text-gradient-secondary {
+  /* .text-gradient-secondary { // Currently unused
     background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
+  } */
 
   .text-gradient-tech {
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%);
@@ -168,19 +164,19 @@
     background-clip: text;
   }
 
-  .text-gradient-sky {
+  /* .text-gradient-sky { // Currently unused
     background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .text-gradient-purple {
+  .text-gradient-purple { // Currently unused
     background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
+  } */
 
   .text-gradient-amber {
     background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
@@ -190,11 +186,11 @@
   }
 
   /* Modern borders */
-  .border-gradient-primary {
+  /* .border-gradient-primary { // Currently unused
     border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) border-box;
-  }
+  } */
 
   .border-gradient-tech {
     border: 2px solid transparent;
@@ -245,7 +241,7 @@
   }
 }
 
-@keyframes slideInLeft {
+/* @keyframes slideInLeft { // Currently unused
   from {
     opacity: 0;
     transform: translateX(-20px);
@@ -256,7 +252,7 @@
   }
 }
 
-@keyframes slideInRight {
+@keyframes slideInRight { // Currently unused
   from {
     opacity: 0;
     transform: translateX(20px);
@@ -265,7 +261,7 @@
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
 @keyframes scaleIn {
   from {
@@ -287,14 +283,14 @@
   }
 }
 
-@keyframes float {
+/* @keyframes float { // Currently unused
   0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-10px);
   }
-}
+} */
 
 body {
   margin: 0;

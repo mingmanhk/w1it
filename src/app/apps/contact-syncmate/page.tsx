@@ -82,13 +82,16 @@ export default function ContactSyncMate() {
             </div>
             <div className="flex-1">
               <div className="bg-gradient-to-br from-blush to-white rounded-2xl p-8 shadow-xl">
-                <Image
-                  src="/Contact SyncMate Icon.png"
-                  alt="Contact SyncMate"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-contain"
-                />
+                <div className="relative aspect-square w-full max-w-[800px] mx-auto">
+                  <Image
+                    src="/Contact SyncMate Icon.webp"
+                    alt="Contact SyncMate"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

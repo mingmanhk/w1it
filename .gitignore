@@ -1,98 +1,30 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node.js
+node_modules
+npm-debug.log
+yarn-error.log
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Next.js
+.next
+out
 
-# testing
-/coverage
+# Drizzle
+drizzle
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
+# Build artifacts
+dist
+build
 .vercel
 
-# IDE settings
-.vscode/settings.json
+# Environment variables
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# IDE configuration
+.vscode
+.idea
 
-# database
-drizzle/*.sql
-!drizzle/meta/
-drizzle/meta/_journal.json
-
-# logs
-*.log
-logs/
-firebase-debug.log
-
-# operating system files
-Thumbs.db
+# OS files
 .DS_Store
-desktop.ini
-
-# IDE
-.idea/
-*.swp
-*.swo
-*~
-
-# temporary files
-*.tmp
-*.temp
-.temp/
-
-# secrets and credentials
-secrets/
-credentials/
-*.key
-*.p12
-*.pem
-*.crt
-*.cer
-
-# build artifacts
-dist/
-.cache/
-.next/cache/
-
-# coverage and testing
-coverage/
-.nyc_output/
-
-# package manager specific
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-bun.lockb
-
-# environment files (keep this at the end)
-.env*
-!.env.example
+Thumbs.db

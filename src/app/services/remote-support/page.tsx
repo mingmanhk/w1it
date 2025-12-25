@@ -19,7 +19,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/services/remote-support',
   openGraph: {
-    title: 'Remote IT Support & Troubleshooting | Pinkkamii',
+    title: 'Remote IT Support & Troubleshooting | w1IT',
     description: 'Fast, secure remote IT support available worldwide from Seattle-based experts.',
     type: 'website',
   },
@@ -31,8 +31,8 @@ export default function RemoteSupport() {
     description:
       'Professional remote IT support and troubleshooting services providing fast technical assistance via secure remote connections.',
     provider: {
-      name: 'Pinkkamii',
-      url: 'https://pinkkamii.com',
+      name: 'w1IT',
+      url: 'https://w1it.com',
     },
     areaServed: ['Seattle', 'Worldwide'],
     serviceType: 'Remote IT Support',

@@ -26,7 +26,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/it-services',
   openGraph: {
-    title: 'Seattle IT Support & Managed IT Services | Pinkkamii',
+    title: 'Seattle IT Support & Managed IT Services | w1IT',
     description:
       'Comprehensive IT service management with bilingual support. Available remotely worldwide and locally in Greater Seattle.',
     type: 'website',
@@ -36,11 +36,11 @@ export const metadata: Metadata = generateSEO({
 export default function ITServices() {
   // Generate structured data for SEO
   const localBusinessSchema = generateLocalBusinessSchema({
-    name: 'Pinkkamii - IT Services',
+    name: 'w1IT - IT Services',
     description:
       'Professional managed IT services including infrastructure management, network monitoring, SSL/DNS troubleshooting, and bilingual technical support.',
-    url: 'https://pinkkamii.com/it-services',
-    email: 'contact@pinkkamii.com',
+    url: 'https://w1it.com/it-services',
+    email: 'contact@w1it.com',
     address: {
       addressLocality: 'Seattle',
       addressRegion: 'WA',
@@ -54,8 +54,8 @@ export default function ITServices() {
     description:
       'Comprehensive IT service management including system administration, network monitoring, workflow automation, and technical documentation for businesses.',
     provider: {
-      name: 'Pinkkamii',
-      url: 'https://pinkkamii.com',
+      name: 'w1IT',
+      url: 'https://w1it.com',
     },
     areaServed: ['Seattle', 'Bellevue', 'Issaquah', 'Snoqualmie', 'Redmond', 'Tacoma', 'Greater King County', 'Remote Worldwide'],
     serviceType: 'IT Support and Services',

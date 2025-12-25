@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, memo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from './Container';
-import { Menu, X, ChevronDown, Cloud, Shield, Wrench, Cpu, BarChart, RefreshCw, FileText, Network, Phone, Zap, Database, Globe, Code, MessageSquare } from 'lucide-react';
+import { Menu, X, ChevronDown, Cloud, Shield, Wrench, Cpu, BarChart, RefreshCw, FileText, Network, Phone, Zap, Database, Globe, Code, MessageSquare, Server } from 'lucide-react';
 
 interface NavigationItem {
   name: string;
@@ -18,7 +19,7 @@ interface NavigationCategory {
   items: NavigationItem[];
 }
 
-export default function Header() {
+function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
@@ -33,19 +34,19 @@ export default function Header() {
       icon: <Wrench className="w-4 h-4" />,
       submenu: [
         {
-          name: 'Infrastructure & Cloud',
+          name: 'IT Support & Services',
           items: [
             {
-              name: 'Cloud Solutions',
-              href: '/services/cloud-solutions',
-              icon: <Cloud className="w-4 h-4" />,
-              description: 'AWS, Azure, Google Cloud migration and management'
+              name: 'Managed IT Services',
+              href: '/it-services',
+              icon: <Cpu className="w-4 h-4" />,
+              description: 'Comprehensive IT management and support'
             },
             {
-              name: 'Managed Services',
-              href: '/services/managed-services',
-              icon: <Cpu className="w-4 h-4" />,
-              description: '24/7 monitoring, maintenance, and support'
+              name: 'Remote Support',
+              href: '/services/remote-support',
+              icon: <Phone className="w-4 h-4" />,
+              description: 'Quick response IT support and troubleshooting'
             },
             {
               name: 'Network Setup',
@@ -56,25 +57,42 @@ export default function Header() {
           ]
         },
         {
-          name: 'Support & Security',
+          name: 'Consulting & Strategy',
           items: [
             {
-              name: 'Remote Support',
-              href: '/services/remote-support',
-              icon: <Phone className="w-4 h-4" />,
-              description: 'Quick response IT support and troubleshooting'
-            },
-            {
-              name: 'Security Services',
-              href: '/services/security',
-              icon: <Shield className="w-4 h-4" />,
-              description: 'Cybersecurity, compliance, and threat protection'
+              name: 'IT Consulting',
+              href: '/it-consulting',
+              icon: <BarChart className="w-4 h-4" />,
+              description: 'Strategic technology planning and guidance'
             },
             {
               name: 'Technical Writing',
               href: '/services/technical-writing',
               icon: <FileText className="w-4 h-4" />,
-              description: 'Documentation, manuals, and knowledge bases'
+              description: 'Professional documentation and manuals'
+            },
+            {
+              name: 'Cloud Solutions',
+              href: '/services/cloud-solutions',
+              icon: <Cloud className="w-4 h-4" />,
+              description: 'AWS, Azure, Google Cloud migration'
+            },
+          ]
+        },
+        {
+          name: 'Security & Infrastructure',
+          items: [
+            {
+              name: 'Security Services',
+              href: '/services/security',
+              icon: <Shield className="w-4 h-4" />,
+              description: 'Cybersecurity and threat protection'
+            },
+            {
+              name: 'Managed Services',
+              href: '/services/managed-services',
+              icon: <Server className="w-4 h-4" />,
+              description: '24/7 monitoring and maintenance'
             },
           ]
         }
@@ -148,21 +166,25 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-white to-blue-50 border-b border-blue-100 shadow-lg">
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 flex items-center justify-center">
-              <img
-                src="/images/Logo.png"
+            <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl shadow-md">
+              <Image
+                src="/images/optimized/Logo.webp"
                 alt="W1IT Solutions Logo"
-                className="h-10 w-auto object-contain"
+                width={48}
+                height={48}
+                className="object-contain filter brightness-0 invert"
+                priority
+                sizes="48px"
               />
             </div>
             <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-slate-900 font-poppins">W1IT Solutions</div>
-              <div className="text-sm text-slate-600 font-inter">Expert Computer Repair & IT Services in Bellevue, WA</div>
+              <div className="text-2xl font-bold text-slate-900 font-poppins bg-gradient-to-r from-blue-700 to-blue-900 bg-clip-text text-transparent">W1IT Solutions</div>
+              <div className="text-sm text-slate-600 font-inter">Expert IT Services & Consulting in Bellevue, WA</div>
             </div>
           </Link>
 
@@ -172,35 +194,38 @@ export default function Header() {
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-1.5 py-2 px-3 font-inter hover:bg-blue-50 rounded-md"
+                  className="text-slate-800 hover:text-blue-700 font-semibold transition-all duration-300 flex items-center gap-1.5 py-2 px-4 font-inter hover:bg-white hover:shadow-md rounded-lg border border-transparent hover:border-blue-200"
                 >
+                  {item.icon && <span className="text-blue-600">{item.icon}</span>}
                   {item.name}
-                  {item.submenu && <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />}
+                  {item.submenu && <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 text-blue-500" />}
                 </Link>
 
                 {/* Submenu - Clean Professional Menu */}
                 {item.submenu && (
-                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-lg border border-slate-200 p-6">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-6 w-[700px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-gradient-to-br from-white to-blue-50 rounded-xl shadow-2xl border border-blue-100 p-8 backdrop-blur-sm">
                     {/* Services Mega Menu with Categories */}
                     {item.name === 'Services' && Array.isArray(item.submenu) && item.submenu[0] && 'items' in item.submenu[0] ? (
-                      <div className="grid grid-cols-2 gap-8">
+                      <div className="grid grid-cols-3 gap-8">
                         {(item.submenu as NavigationCategory[]).map((category, idx) => (
-                          <div key={idx}>
-                            <h3 className="font-poppins font-semibold text-slate-900 mb-3 text-lg">
+                          <div key={idx} className="relative">
+                            <div className="absolute -left-2 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-blue-300 rounded-full"></div>
+                            <h3 className="font-poppins font-bold text-slate-900 mb-4 text-lg flex items-center gap-2">
+                              <span className="text-blue-600">{idx === 0 ? '🛠️' : idx === 1 ? '📊' : '🔒'}</span>
                               {category.name}
                             </h3>
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                               {category.items.map((subitem) => (
                                 <Link
                                   key={subitem.name}
                                   href={subitem.href}
-                                  className="flex items-start gap-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md p-3 transition-all duration-200 font-inter group/item"
+                                  className="flex items-start gap-3 text-slate-700 hover:text-blue-700 hover:bg-white rounded-lg p-4 transition-all duration-300 font-inter group/item border border-transparent hover:border-blue-200 hover:shadow-md"
                                 >
-                                  <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700">
+                                  <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700 bg-blue-50 p-2 rounded-lg">
                                     {subitem.icon}
                                   </div>
                                   <div className="flex-1">
-                                    <div className="font-medium">{subitem.name}</div>
+                                    <div className="font-semibold">{subitem.name}</div>
                                     <div className="text-sm text-slate-500 mt-1">
                                       {subitem.description}
                                     </div>
@@ -213,18 +238,18 @@ export default function Header() {
                       </div>
                     ) : (
                       /* Regular Submenu for Solutions and Apps */
-                      <div className="space-y-1">
+                      <div className="space-y-2">
                         {(item.submenu as NavigationItem[]).map((subitem) => (
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="flex items-start gap-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md p-3 transition-all duration-200 font-inter group/item"
+                            className="flex items-start gap-3 text-slate-700 hover:text-blue-700 hover:bg-white rounded-lg p-4 transition-all duration-300 font-inter group/item border border-transparent hover:border-blue-200 hover:shadow-md"
                           >
-                            <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700">
+                            <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700 bg-blue-50 p-2 rounded-lg">
                               {subitem.icon}
                             </div>
                             <div className="flex-1">
-                              <div className="font-medium">{subitem.name}</div>
+                              <div className="font-semibold">{subitem.name}</div>
                               {subitem.description && (
                                 <div className="text-sm text-slate-500 mt-1">{subitem.description}</div>
                               )}
@@ -243,16 +268,17 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-all duration-300 font-inter shadow-sm hover:shadow-md"
+              className="px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-blue-900 transition-all duration-300 font-inter shadow-lg hover:shadow-xl hover:scale-105 transform flex items-center gap-2"
             >
-              Get Support
+              <Phone className="w-4 h-4" />
+              Get Free Consultation
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-3 text-slate-700 hover:text-blue-600 transition-colors rounded-md hover:bg-blue-50"
+            className="lg:hidden p-3 text-slate-800 hover:text-blue-700 transition-all duration-300 rounded-xl hover:bg-blue-100 border border-blue-200"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -261,15 +287,16 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-slate-200 animate-fade-in bg-white">
+          <div className="lg:hidden py-6 border-t border-blue-200 animate-fade-in bg-gradient-to-b from-white to-blue-50">
             <div className="flex flex-col space-y-2">
               {navigation.map((item) => (
-                <div key={item.name} className="border-b border-slate-100 last:border-0">
+                <div key={item.name} className="border-b border-blue-100 last:border-0">
                   <Link
                     href={item.href}
-                    className="block text-slate-800 hover:text-blue-600 font-medium transition-colors py-4 px-2 font-inter text-lg"
+                    className="block text-slate-800 hover:text-blue-700 font-semibold transition-all duration-300 py-4 px-4 font-inter text-lg flex items-center gap-3 hover:bg-white rounded-lg hover:shadow-sm"
                     onClick={() => setMobileMenuOpen(false)}
                   >
+                    {item.icon && <span className="text-blue-600">{item.icon}</span>}
                     {item.name}
                   </Link>
                   {item.submenu && (
@@ -282,19 +309,19 @@ export default function Header() {
                               <h4 className="font-poppins font-semibold text-slate-700 mb-2 text-sm uppercase tracking-wide">
                                 {category.name}
                               </h4>
-                              <div className="space-y-2">
+                              <div className="space-y-3">
                                 {category.items.map((subitem) => (
                                   <Link
                                     key={subitem.name}
                                     href={subitem.href}
-                                    className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors py-2 pl-4 border-l-2 border-slate-200 hover:border-blue-500 font-inter"
+                                    className="flex items-center gap-3 text-slate-700 hover:text-blue-700 transition-all duration-300 py-3 pl-4 border-l-2 border-blue-300 hover:border-blue-600 hover:bg-white rounded-r-lg font-inter group/item"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    <div className="text-blue-600">
+                                    <div className="text-blue-600 bg-blue-50 p-2 rounded-lg">
                                       {subitem.icon}
                                     </div>
                                     <div>
-                                      <div className="font-medium">{subitem.name}</div>
+                                      <div className="font-semibold">{subitem.name}</div>
                                       {subitem.description && (
                                         <div className="text-xs text-slate-500 mt-0.5">{subitem.description}</div>
                                       )}
@@ -311,14 +338,14 @@ export default function Header() {
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors py-2 pl-4 border-l-2 border-slate-200 hover:border-blue-500 font-inter"
+                            className="flex items-center gap-3 text-slate-700 hover:text-blue-700 transition-all duration-300 py-3 pl-4 border-l-2 border-blue-300 hover:border-blue-600 hover:bg-white rounded-r-lg font-inter group/item"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            <div className="text-blue-600">
+                            <div className="text-blue-600 bg-blue-50 p-2 rounded-lg">
                               {subitem.icon}
                             </div>
                             <div>
-                              <div className="font-medium">{subitem.name}</div>
+                              <div className="font-semibold">{subitem.name}</div>
                               {subitem.description && (
                                 <div className="text-xs text-slate-500 mt-0.5">{subitem.description}</div>
                               )}
@@ -332,10 +359,11 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mt-6 px-6 py-4 bg-blue-600 text-white text-center font-medium rounded-md hover:bg-blue-700 transition-all duration-300 font-inter shadow-sm hover:shadow-md"
+                className="mt-6 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white font-semibold text-center rounded-xl hover:from-blue-700 hover:to-blue-900 transition-all duration-300 font-inter shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Support
+                <Phone className="w-4 h-4" />
+                Get Free Consultation
               </Link>
             </div>
           </div>
@@ -344,3 +372,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default memo(Header);

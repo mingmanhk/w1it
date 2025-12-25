@@ -21,7 +21,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/services/technical-writing',
   openGraph: {
-    title: 'Bilingual Technical Writing Services | Pinkkamii',
+    title: 'Bilingual Technical Writing Services | w1IT',
     description: 'Professional technical documentation in English and Chinese for IT and software projects.',
     type: 'website',
   },
@@ -33,8 +33,8 @@ export default function TechnicalWriting() {
     description:
       'Professional technical writing and documentation in English and Chinese, specializing in IT documentation, user guides, and cross-cultural technical communication.',
     provider: {
-      name: 'Pinkkamii',
-      url: 'https://pinkkamii.com',
+      name: 'w1IT',
+      url: 'https://w1it.com',
     },
     areaServed: ['Seattle', 'Bellevue', 'Redmond', 'Remote Worldwide'],
     serviceType: 'Technical Writing',

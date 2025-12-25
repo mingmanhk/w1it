@@ -20,7 +20,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/services/network-setup',
   openGraph: {
-    title: 'Network Setup Services Seattle | Pinkkamii',
+    title: 'Network Setup Services Seattle | w1IT',
     description: 'Professional network installation and configuration for Seattle area businesses.',
     type: 'website',
   },
@@ -28,11 +28,11 @@ export const metadata: Metadata = generateSEO({
 
 export default function NetworkSetup() {
   const localBusinessSchema = generateLocalBusinessSchema({
-    name: 'Pinkkamii - Network Setup Services',
+    name: 'w1IT - Network Setup Services',
     description:
       'Professional network setup, WiFi installation, and network troubleshooting services for homes and businesses in the Seattle area.',
-    url: 'https://pinkkamii.com/services/network-setup',
-    email: 'contact@pinkkamii.com',
+    url: 'https://w1it.com/services/network-setup',
+    email: 'contact@w1it.com',
     address: {
       addressLocality: 'Seattle',
       addressRegion: 'WA',
@@ -46,8 +46,8 @@ export default function NetworkSetup() {
     description:
       'Professional network installation, WiFi setup, router configuration, and network troubleshooting services for Seattle area homes and businesses.',
     provider: {
-      name: 'Pinkkamii',
-      url: 'https://pinkkamii.com',
+      name: 'w1IT',
+      url: 'https://w1it.com',
     },
     areaServed: ['Seattle', 'Bellevue', 'Issaquah', 'Snoqualmie', 'Redmond'],
     serviceType: 'Network Installation and Configuration',
@@ -227,7 +227,7 @@ export default function NetworkSetup() {
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
-              Why Choose Pinkkamii for Network Setup
+              Why Choose w1IT for Network Setup
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -65,13 +65,16 @@ export default function ScreenGrabber() {
             </div>
             <div className="flex-1">
               <div className="bg-gradient-to-br from-blush to-white rounded-2xl p-8 shadow-xl">
-                <Image
-                  src="/ScreenGrabber.png"
-                  alt="ScreenGrabber"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-contain"
-                />
+                <div className="relative aspect-square w-full max-w-[800px] mx-auto">
+                  <Image
+                    src="/ScreenGrabber.webp"
+                    alt="ScreenGrabber"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

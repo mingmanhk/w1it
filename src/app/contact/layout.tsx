@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata: Metadata = generateSEO({
-  title: 'Contact Pinkkamii - IT Services & App Support',
+  title: 'Contact w1IT - IT Services & App Support',
   description:
-    'Get in touch with Pinkkamii for IT services, consulting, or app support. Based in Seattle, WA. Bilingual support available (English/Chinese). Contact us for managed IT services, remote troubleshooting, or questions about our apps.',
+    'Get in touch with w1IT for IT services, consulting, or app support. Based in Seattle, WA. Bilingual support available (English/Chinese). Contact us for managed IT services, remote troubleshooting, or questions about our apps.',
   keywords: [
-    'contact Pinkkamii',
+    'contact w1IT',
     'IT support contact',
     'Seattle IT services contact',
     'request IT consultation',
@@ -15,7 +15,7 @@ export const metadata: Metadata = generateSEO({
   ],
   canonical: '/contact',
   openGraph: {
-    title: 'Contact Pinkkamii | IT Services & App Support',
+    title: 'Contact w1IT | IT Services & App Support',
     description: 'Get in touch for IT services, consulting, or app support. Bilingual support available.',
     type: 'website',
   },
