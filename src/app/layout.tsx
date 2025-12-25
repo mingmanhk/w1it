@@ -71,6 +71,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+      </head>
+      <body className={inter.className}>
+        <Header />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <Analytics />
         {/* Google Analytics Script */}
         {/* Google tag (gtag.js) */}
         <Script
@@ -86,12 +92,6 @@ export default function RootLayout({
             gtag('config', 'G-C6XYWJB91J');
           `}
         </Script>
-      </head>
-      <body className={inter.className}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <Analytics />
       </body>
     </html>
   );
