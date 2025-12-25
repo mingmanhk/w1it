@@ -4,22 +4,22 @@
 
 @layer base {
   :root {
-    /* Modern Tech Theme - Sleek & Professional */
-    --color-primary: 37 99 235; /* Royal Blue - Trust, Stability */
+    /* Professional IT Services Theme - Clean & Trustworthy */
+    --color-primary: 37 99 235; /* Royal Blue - Trust, Professionalism */
     --color-primary-dark: 30 64 175; /* Deep Royal Blue */
-    --color-secondary: 14 165 233; /* Sky Blue - Innovation, Clarity */
-    --color-accent: 168 85 247; /* Purple - Creativity, Technology */
-    --color-accent-alt: 245 158 11; /* Amber - Energy, Attention */
+    --color-secondary: 59 130 246; /* Bright Blue - Reliability */
+    --color-accent: 14 165 233; /* Sky Blue - Support, Helpfulness */
+    --color-accent-alt: 16 185 129; /* Emerald Green - Success, Growth */
 
-    /* Neutral colors - Clean & Modern */
+    /* Neutral colors - Clean & Professional */
     --color-background: 255 255 255;
-    --color-surface: 248 250 252; /* Light blue-gray background */
-    --color-surface-dark: 15 23 42; /* Deep blue-gray for sections */
-    --color-text-primary: 15 23 42; /* Slate 900 */
-    --color-text-secondary: 71 85 105; /* Slate 600 */
-    --color-text-tertiary: 100 116 139; /* Slate 500 */
-    --color-border: 226 232 240; /* Slate 200 */
-    --color-border-dark: 51 65 85; /* Slate 700 */
+    --color-surface: 249 250 251; /* Light gray background */
+    --color-surface-dark: 243 244 246; /* Slightly darker gray for sections */
+    --color-text-primary: 17 24 39; /* Gray 900 */
+    --color-text-secondary: 75 85 99; /* Gray 600 */
+    --color-text-tertiary: 107 114 128; /* Gray 500 */
+    --color-border: 229 231 235; /* Gray 200 */
+    --color-border-dark: 209 213 219; /* Gray 300 */
 
     /* State colors */
     --color-success: 16 185 129; /* Emerald */
@@ -27,23 +27,23 @@
     --color-error: 239 68 68; /* Red */
     --color-info: 59 130 246; /* Blue */
 
-    /* Gradients - Modern & Vibrant */
+    /* Gradients - Professional & Clean */
     --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-    --gradient-secondary: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
-    --gradient-accent: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
-    --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    --gradient-tech: linear-gradient(135deg, #2563eb 0%, #0ea5e9 50%, #a855f7 100%);
+    --gradient-secondary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    --gradient-dark: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    --gradient-tech: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%);
   }
 
   .dark {
-    --color-background: 15 23 42;
-    --color-surface: 30 41 59;
-    --color-surface-dark: 8 13 24;
-    --color-text-primary: 248 250 252;
-    --color-text-secondary: 203 213 225;
-    --color-text-tertiary: 148 163 184;
-    --color-border: 51 65 85;
-    --color-border-dark: 71 85 105;
+    --color-background: 17 24 39;
+    --color-surface: 31 41 55;
+    --color-surface-dark: 24 32 46;
+    --color-text-primary: 249 250 251;
+    --color-text-secondary: 209 213 219;
+    --color-text-tertiary: 156 163 175;
+    --color-border: 55 65 81;
+    --color-border-dark: 75 85 99;
   }
 }
 
@@ -76,37 +76,41 @@
     animation: float 3s ease-in-out infinite;
   }
 
-  /* Modern gradient backgrounds */
+  /* Professional gradient backgrounds */
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
   }
 
   .bg-gradient-secondary {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   }
 
   .bg-gradient-accent {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   }
 
   .bg-gradient-dark {
-    background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  }
+
+  .bg-gradient-tech {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%);
   }
 
   .bg-gradient-light {
-    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   }
 
   .bg-gradient-blue {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   }
 
-  .bg-gradient-emerald {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  .bg-gradient-sky {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   }
 
-  .bg-gradient-violet {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  .bg-gradient-purple {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
   }
 
   .bg-gradient-amber {
@@ -137,35 +141,42 @@
 
   /* Text gradients */
   .text-gradient-primary {
-    background: linear-gradient(135deg, #0070f3 0%, #0052cc 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-secondary {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-tech {
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-blue {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .text-gradient-emerald {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  .text-gradient-sky {
+    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .text-gradient-violet {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  .text-gradient-purple {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -182,20 +193,35 @@
   .border-gradient-primary {
     border: 2px solid transparent;
     background: linear-gradient(white, white) padding-box,
-                linear-gradient(135deg, #0070f3 0%, #0052cc 100%) border-box;
+                linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) border-box;
+  }
+
+  .border-gradient-tech {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #0ea5e9 100%) border-box;
   }
 
   /* Grid patterns */
   .bg-grid-pattern {
     background-image:
-      linear-gradient(to right, rgba(0, 112, 243, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 112, 243, 0.05) 1px, transparent 1px);
+      linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
     background-size: 40px 40px;
   }
 
   .bg-dot-pattern {
-    background-image: radial-gradient(rgba(0, 112, 243, 0.1) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  .bg-circuit-pattern {
+    background-image:
+      linear-gradient(90deg, rgba(37, 99, 235, 0.1) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(37, 99, 235, 0.1) 1px, transparent 1px),
+      linear-gradient(45deg, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+      linear-gradient(135deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
   }
 }
 
@@ -285,12 +311,12 @@ html {
 
 /* Selection styling */
 ::selection {
-  background-color: rgba(0, 112, 243, 0.2);
+  background-color: rgba(37, 99, 235, 0.2);
   color: inherit;
 }
 
 /* Focus styles for accessibility */
 :focus-visible {
-  outline: 2px solid #0070f3;
+  outline: 2px solid #2563eb;
   outline-offset: 2px;
 }

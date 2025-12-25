@@ -125,7 +125,7 @@ export default function ServicesPage() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+        <div className="absolute inset-0 bg-circuit-pattern opacity-10" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-subtle" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-subtle" />
 
@@ -133,13 +133,13 @@ export default function ServicesPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Comprehensive
-              <span className="block text-gradient-primary mt-2">IT Services</span>
+              <span className="block text-gradient-tech mt-2">IT Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               End-to-end technology solutions designed to accelerate your digital transformation and drive business growth.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" size="xl" className="group bg-gradient-tech hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -149,16 +149,16 @@ export default function ServicesPage() {
       </section>
 
       {/* All Services Section */}
-      <section className="py-24 bg-neutral-50">
+      <section className="py-24 bg-slate-50">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-slate-900 mb-6">
               Complete Technology Solutions
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
               From strategy to implementation and support, we provide comprehensive IT services tailored to your business needs.
             </p>
           </div>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
               <Card
                 key={index}
                 hoverable
-                className="animate-scale-in border border-neutral-200 hover:border-transparent hover:shadow-xl transition-all duration-300"
+                className="animate-scale-in border border-slate-200 hover:border-transparent hover:shadow-xl transition-all duration-300 border-gradient-tech"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="p-2">
@@ -176,10 +176,10 @@ export default function ServicesPage() {
                     <div className="text-white">{service.icon}</div>
                   </div>
 
-                  <h3 className="font-poppins font-semibold text-2xl text-neutral-900 mb-4">
+                  <h3 className="font-poppins font-semibold text-2xl text-slate-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-600 mb-6 font-inter leading-relaxed">
+                  <p className="text-slate-600 mb-6 font-inter leading-relaxed">
                     {service.description}
                   </p>
 
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{feature}</span>
+                        <span className="text-slate-700 font-inter">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -210,10 +210,10 @@ export default function ServicesPage() {
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Why Choose Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-slate-900 mb-6">
               The W1 IT Advantage
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
               Experience the difference with our client-centric approach and technical excellence.
             </p>
           </div>
@@ -222,16 +222,16 @@ export default function ServicesPage() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="animate-fade-in-up p-8 rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300"
+                className="animate-fade-in-up p-8 rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 hover:border-gradient-tech"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-primary-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-poppins font-semibold text-xl text-slate-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-slate-600 font-inter leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -241,7 +241,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-primary text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-tech text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
@@ -259,7 +259,7 @@ export default function ServicesPage() {
                 href="/contact"
                 variant="secondary"
                 size="xl"
-                className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className="bg-white text-primary-600 hover:bg-slate-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Schedule Free Consultation
               </Button>

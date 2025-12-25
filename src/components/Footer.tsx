@@ -40,7 +40,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-sky-500 to-sky-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-xl">W1</span>
               </div>
               <div>
@@ -56,18 +56,18 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-sky-400" />
+                <MapPin className="w-4 h-4 text-primary-400" />
                 <span>Seattle, WA</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-sky-400" />
-                <a href="mailto:info@w1it.com" className="hover:text-sky-400 transition-colors">
+                <Mail className="w-4 h-4 text-primary-400" />
+                <a href="mailto:info@w1it.com" className="hover:text-primary-400 transition-colors">
                   info@w1it.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-sky-400" />
-                <a href="tel:+12065551234" className="hover:text-sky-400 transition-colors">
+                <Phone className="w-4 h-4 text-primary-400" />
+                <a href="tel:+12065551234" className="hover:text-primary-400 transition-colors">
                   (206) 555-1234
                 </a>
               </div>
@@ -79,7 +79,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/mingmanhk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
                 aria-label="LinkedIn"
                 title="Connect on LinkedIn"
               >
@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://github.com/mingmanhk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
                 aria-label="GitHub"
                 title="View GitHub Profile"
               >
@@ -99,7 +99,7 @@ export default function Footer() {
                 href="https://mingmanhk.github.io/React-Portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-sky-600 transition-colors"
+                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
                 aria-label="Portfolio"
                 title="View Portfolio"
               >
@@ -118,7 +118,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-sky-400 transition-colors"
+                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-sky-400 transition-colors"
+                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -152,7 +152,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-sky-400 transition-colors"
+                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -173,7 +173,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="hover:text-sky-400 transition-colors"
+                  className="hover:text-primary-400 transition-colors"
                 >
                   {link.name}
                 </Link>

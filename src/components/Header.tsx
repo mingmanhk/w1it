@@ -148,41 +148,45 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
-              <span className="text-white font-bold text-2xl">W1</span>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img
+                src="/logo.png"
+                alt="W1 IT Solutions Logo"
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-neutral-900 font-poppins">W1 IT Solutions</div>
-              <div className="text-sm text-neutral-600 font-inter">Innovative Technology Partners</div>
+              <div className="text-2xl font-bold text-slate-900 font-poppins">W1 IT Solutions</div>
+              <div className="text-sm text-slate-600 font-inter">Professional IT Services & Support</div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="text-neutral-700 hover:text-primary-600 font-medium transition-colors flex items-center gap-1.5 py-2 px-1 font-inter"
+                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors flex items-center gap-1.5 py-2 px-3 font-inter hover:bg-blue-50 rounded-md"
                 >
                   {item.name}
                   {item.submenu && <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />}
                 </Link>
 
-                {/* Submenu - Modern Mega Menu */}
+                {/* Submenu - Clean Professional Menu */}
                 {item.submenu && (
-                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-floating border border-neutral-200 p-6">
+                  <div className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-lg shadow-lg border border-slate-200 p-6">
                     {/* Services Mega Menu with Categories */}
                     {item.name === 'Services' && Array.isArray(item.submenu) && item.submenu[0] && 'items' in item.submenu[0] ? (
                       <div className="grid grid-cols-2 gap-8">
                         {(item.submenu as NavigationCategory[]).map((category, idx) => (
                           <div key={idx}>
-                            <h3 className="font-poppins font-semibold text-neutral-900 mb-3 text-lg">
+                            <h3 className="font-poppins font-semibold text-slate-900 mb-3 text-lg">
                               {category.name}
                             </h3>
                             <div className="space-y-2">
@@ -190,14 +194,14 @@ export default function Header() {
                                 <Link
                                   key={subitem.name}
                                   href={subitem.href}
-                                  className="flex items-start gap-3 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter group/item"
+                                  className="flex items-start gap-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md p-3 transition-all duration-200 font-inter group/item"
                                 >
-                                  <div className="mt-0.5 text-primary-600 group-hover/item:text-primary-700">
+                                  <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700">
                                     {subitem.icon}
                                   </div>
                                   <div className="flex-1">
                                     <div className="font-medium">{subitem.name}</div>
-                                    <div className="text-sm text-neutral-500 mt-1">
+                                    <div className="text-sm text-slate-500 mt-1">
                                       {subitem.description}
                                     </div>
                                   </div>
@@ -214,15 +218,15 @@ export default function Header() {
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="flex items-start gap-3 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter group/item"
+                            className="flex items-start gap-3 text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md p-3 transition-all duration-200 font-inter group/item"
                           >
-                            <div className="mt-0.5 text-primary-600 group-hover/item:text-primary-700">
+                            <div className="mt-0.5 text-blue-600 group-hover/item:text-blue-700">
                               {subitem.icon}
                             </div>
                             <div className="flex-1">
                               <div className="font-medium">{subitem.name}</div>
                               {subitem.description && (
-                                <div className="text-sm text-neutral-500 mt-1">{subitem.description}</div>
+                                <div className="text-sm text-slate-500 mt-1">{subitem.description}</div>
                               )}
                             </div>
                           </Link>
@@ -239,16 +243,16 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/contact"
-              className="px-6 py-3 bg-gradient-primary text-white font-medium rounded-lg hover:shadow-lg transition-all duration-200 font-inter shadow-md"
+              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-all duration-300 font-inter shadow-sm hover:shadow-md"
             >
-              Schedule Consultation
+              Get Support
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-3 text-neutral-700 hover:text-primary-600 transition-colors rounded-lg hover:bg-neutral-100"
+            className="lg:hidden p-3 text-slate-700 hover:text-blue-600 transition-colors rounded-md hover:bg-blue-50"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -257,13 +261,13 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-neutral-200 animate-fade-in bg-white">
+          <div className="lg:hidden py-6 border-t border-slate-200 animate-fade-in bg-white">
             <div className="flex flex-col space-y-2">
               {navigation.map((item) => (
-                <div key={item.name} className="border-b border-neutral-100 last:border-0">
+                <div key={item.name} className="border-b border-slate-100 last:border-0">
                   <Link
                     href={item.href}
-                    className="block text-neutral-800 hover:text-primary-600 font-medium transition-colors py-4 px-2 font-inter text-lg"
+                    className="block text-slate-800 hover:text-blue-600 font-medium transition-colors py-4 px-2 font-inter text-lg"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -275,7 +279,7 @@ export default function Header() {
                         <>
                           {(item.submenu as NavigationCategory[]).map((category, idx) => (
                             <div key={idx} className="mb-4">
-                              <h4 className="font-poppins font-semibold text-neutral-700 mb-2 text-sm uppercase tracking-wide">
+                              <h4 className="font-poppins font-semibold text-slate-700 mb-2 text-sm uppercase tracking-wide">
                                 {category.name}
                               </h4>
                               <div className="space-y-2">
@@ -283,16 +287,16 @@ export default function Header() {
                                   <Link
                                     key={subitem.name}
                                     href={subitem.href}
-                                    className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
+                                    className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors py-2 pl-4 border-l-2 border-slate-200 hover:border-blue-500 font-inter"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    <div className="text-primary-600">
+                                    <div className="text-blue-600">
                                       {subitem.icon}
                                     </div>
                                     <div>
                                       <div className="font-medium">{subitem.name}</div>
                                       {subitem.description && (
-                                        <div className="text-xs text-neutral-500 mt-0.5">{subitem.description}</div>
+                                        <div className="text-xs text-slate-500 mt-0.5">{subitem.description}</div>
                                       )}
                                     </div>
                                   </Link>
@@ -307,16 +311,16 @@ export default function Header() {
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
+                            className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors py-2 pl-4 border-l-2 border-slate-200 hover:border-blue-500 font-inter"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            <div className="text-primary-600">
+                            <div className="text-blue-600">
                               {subitem.icon}
                             </div>
                             <div>
                               <div className="font-medium">{subitem.name}</div>
                               {subitem.description && (
-                                <div className="text-xs text-neutral-500 mt-0.5">{subitem.description}</div>
+                                <div className="text-xs text-slate-500 mt-0.5">{subitem.description}</div>
                               )}
                             </div>
                           </Link>
@@ -328,10 +332,10 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className="mt-6 px-6 py-4 bg-gradient-primary text-white text-center font-medium rounded-lg hover:shadow-lg transition-all duration-200 font-inter shadow-md"
+                className="mt-6 px-6 py-4 bg-blue-600 text-white text-center font-medium rounded-md hover:bg-blue-700 transition-all duration-300 font-inter shadow-sm hover:shadow-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Schedule Consultation
+                Get Support
               </Link>
             </div>
           </div>

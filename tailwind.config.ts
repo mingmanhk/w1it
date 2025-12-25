@@ -8,8 +8,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Modern IT Professional Colors - Sleek & Sophisticated
+        // Modern Tech Colors - Sleek & Professional
         'primary': {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+        },
+        'secondary': {
           50: '#f0f9ff',
           100: '#e0f2fe',
           200: '#bae6fd',
@@ -22,31 +35,18 @@ const config: Config = {
           900: '#0c4a6e',
           950: '#082f49',
         },
-        'secondary': {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e',
-        },
         'accent': {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+          600: '#9333ea',
+          700: '#7e22ce',
+          800: '#6b21a8',
+          900: '#581c87',
+          950: '#3b0764',
         },
         'neutral': {
           50: '#fafafa',
@@ -105,28 +105,28 @@ const config: Config = {
         'info': '#3b82f6',
 
         // Gradient colors
-        'gradient-start': '#0ea5e9',
-        'gradient-mid': '#8b5cf6',
-        'gradient-end': '#ec4899',
+        'gradient-start': '#2563eb',
+        'gradient-mid': '#0ea5e9',
+        'gradient-end': '#a855f7',
       },
       typography: {
         DEFAULT: {
           css: {
-            color: '#171717',
+            color: '#0f172a',
             maxWidth: '65ch',
             a: {
-              color: '#0ea5e9',
+              color: '#2563eb',
               textDecoration: 'none',
               fontWeight: '500',
               '&:hover': {
-                color: '#0284c7',
+                color: '#1d4ed8',
                 textDecoration: 'underline',
                 textDecorationThickness: '2px',
                 textUnderlineOffset: '2px',
               },
             },
             'h1, h2, h3, h4': {
-              color: '#0a0a0a',
+              color: '#0f172a',
               fontWeight: '700',
               letterSpacing: '-0.025em',
             },
@@ -143,18 +143,18 @@ const config: Config = {
               marginBottom: '1rem',
             },
             'code': {
-              backgroundColor: '#f5f5f5',
+              backgroundColor: '#f1f5f9',
               padding: '0.2rem 0.4rem',
               borderRadius: '0.25rem',
               fontFamily: 'monospace',
               fontSize: '0.875em',
             },
             'blockquote': {
-              borderLeftColor: '#0ea5e9',
+              borderLeftColor: '#2563eb',
               borderLeftWidth: '4px',
               paddingLeft: '1rem',
               fontStyle: 'italic',
-              color: '#525252',
+              color: '#475569',
             },
           },
         },
