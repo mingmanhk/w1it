@@ -2,74 +2,200 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://pinkkamii.com/</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Apps -->
+  <!-- Main Pages -->
   <url>
-    <loc>https://pinkkamii.com/apps/pixel-color-picker</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/about</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://pinkkamii.com/apps/deepticker</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/contact</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://pinkkamii.com/apps/screengrabber</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/it-consulting</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://pinkkamii.com/apps/contact-syncmate</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/it-services</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- IT Services -->
   <url>
-    <loc>https://pinkkamii.com/it-services</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/case-studies</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- Services Pages -->
   <url>
-    <loc>https://pinkkamii.com/it-consulting</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/services</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/cloud-solutions</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/managed-services</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/network-setup</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/remote-support</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/security</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/services/technical-writing</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Other Pages -->
+  <!-- Solutions Pages -->
   <url>
-    <loc>https://pinkkamii.com/contact</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/solutions</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/solutions/data-analytics</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/solutions/digital-transformation</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Apps Pages -->
+  <url>
+    <loc>https://w1it.com/apps</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/apps/contact-syncmate</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/apps/deepticker</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/apps/pixel-color-picker</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/apps/screengrabber</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog Pages -->
   <url>
-    <loc>https://pinkkamii.com/privacy</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/blog</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/bilingual-documentation-global-trade</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/choosing-it-support-model</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/network-security-remote-teams</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/top-it-mistakes-small-businesses</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/why-businesses-need-it-documentation</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/blog/wifi-setup-guide-seattle</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://w1it.com/privacy</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-
   <url>
-    <loc>https://pinkkamii.com/terms</loc>
-    <lastmod>2025-12-08</lastmod>
+    <loc>https://w1it.com/terms</loc>
+    <lastmod>2025-12-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://w1it.com/cookies</loc>
+    <lastmod>2025-12-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -3,11 +3,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Container from './Container';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Cloud, Shield, Wrench, Cpu, BarChart, RefreshCw, FileText, Network, Phone, Zap, Database, Globe, Code, MessageSquare } from 'lucide-react';
 
 interface NavigationItem {
   name: string;
   href: string;
+  icon?: React.ReactNode;
+  description?: string;
   submenu?: NavigationItem[] | NavigationCategory[];
 }
 
@@ -20,27 +22,60 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation: NavigationItem[] = [
-    { name: 'Home', href: '/' },
+    {
+      name: 'Home',
+      href: '/',
+      icon: <Zap className="w-4 h-4" />
+    },
     {
       name: 'Services',
       href: '/services',
+      icon: <Wrench className="w-4 h-4" />,
       submenu: [
         {
-          name: 'Core IT Services',
+          name: 'Infrastructure & Cloud',
           items: [
-            { name: 'Serverless Migration', href: '/services/serverless-migration' },
-            { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-            { name: 'Managed IT Services', href: '/services/managed-services' },
-            { name: 'IT Security & Compliance', href: '/services/security' },
+            {
+              name: 'Cloud Solutions',
+              href: '/services/cloud-solutions',
+              icon: <Cloud className="w-4 h-4" />,
+              description: 'AWS, Azure, Google Cloud migration and management'
+            },
+            {
+              name: 'Managed Services',
+              href: '/services/managed-services',
+              icon: <Cpu className="w-4 h-4" />,
+              description: '24/7 monitoring, maintenance, and support'
+            },
+            {
+              name: 'Network Setup',
+              href: '/services/network-setup',
+              icon: <Network className="w-4 h-4" />,
+              description: 'Secure and scalable network infrastructure'
+            },
           ]
         },
         {
-          name: 'Specialized Services',
+          name: 'Support & Security',
           items: [
-            { name: 'Remote Support', href: '/services/remote-support' },
-            { name: 'Technical Writing', href: '/services/technical-writing' },
-            { name: 'Network Setup', href: '/services/network-setup' },
-            { name: 'IT Consulting', href: '/it-consulting' },
+            {
+              name: 'Remote Support',
+              href: '/services/remote-support',
+              icon: <Phone className="w-4 h-4" />,
+              description: 'Quick response IT support and troubleshooting'
+            },
+            {
+              name: 'Security Services',
+              href: '/services/security',
+              icon: <Shield className="w-4 h-4" />,
+              description: 'Cybersecurity, compliance, and threat protection'
+            },
+            {
+              name: 'Technical Writing',
+              href: '/services/technical-writing',
+              icon: <FileText className="w-4 h-4" />,
+              description: 'Documentation, manuals, and knowledge bases'
+            },
           ]
         }
       ]
@@ -48,26 +83,68 @@ export default function Header() {
     {
       name: 'Solutions',
       href: '/solutions',
+      icon: <BarChart className="w-4 h-4" />,
       submenu: [
-        { name: 'Enterprise Cloud', href: '/solutions/enterprise-cloud' },
-        { name: 'Hybrid Infrastructure', href: '/solutions/hybrid-infrastructure' },
-        { name: 'Disaster Recovery', href: '/solutions/disaster-recovery' },
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+        {
+          name: 'Data Analytics',
+          href: '/solutions/data-analytics',
+          icon: <Database className="w-4 h-4" />,
+          description: 'Business intelligence and data-driven insights'
+        },
+        {
+          name: 'Digital Transformation',
+          href: '/solutions/digital-transformation',
+          icon: <RefreshCw className="w-4 h-4" />,
+          description: 'Modernize processes and embrace innovation'
+        },
       ]
     },
     {
-      name: 'Products',
+      name: 'Apps',
       href: '/apps',
+      icon: <Code className="w-4 h-4" />,
       submenu: [
-        { name: 'Pixel Color Picker', href: '/apps/pixel-color-picker' },
-        { name: 'DeepTicker', href: '/apps/deepticker' },
-        { name: 'ScreenGrabber', href: '/apps/screengrabber' },
-        { name: 'Contact SyncMate', href: '/apps/contact-syncmate' },
+        {
+          name: 'Pixel Color Picker',
+          href: '/apps/pixel-color-picker',
+          icon: <div className="w-4 h-4 rounded-full bg-gradient-to-r from-pink-500 to-purple-500" />,
+          description: 'Advanced color detection and palette tools'
+        },
+        {
+          name: 'DeepTicker',
+          href: '/apps/deepticker',
+          icon: <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />,
+          description: 'Real-time financial data and analytics'
+        },
+        {
+          name: 'ScreenGrabber',
+          href: '/apps/screengrabber',
+          icon: <div className="w-4 h-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500" />,
+          description: 'Capture and annotate screenshots easily'
+        },
+        {
+          name: 'Contact SyncMate',
+          href: '/apps/contact-syncmate',
+          icon: <div className="w-4 h-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500" />,
+          description: 'Sync contacts across platforms seamlessly'
+        },
       ]
     },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    {
+      name: 'Blog',
+      href: '/blog',
+      icon: <MessageSquare className="w-4 h-4" />
+    },
+    {
+      name: 'About',
+      href: '/about',
+      icon: <Globe className="w-4 h-4" />
+    },
+    {
+      name: 'Contact',
+      href: '/contact',
+      icon: <Phone className="w-4 h-4" />
+    },
   ];
 
   return (
@@ -100,24 +177,29 @@ export default function Header() {
                 {/* Submenu - Modern Mega Menu */}
                 {item.submenu && (
                   <div className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[600px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-floating border border-neutral-200 p-6">
-                    {/* Services Mega Menu */}
-                    {item.name === 'Services' && item.submenu && 'items' in (item.submenu[0] as any) ? (
+                    {/* Services Mega Menu with Categories */}
+                    {item.name === 'Services' && Array.isArray(item.submenu) && item.submenu[0] && 'items' in item.submenu[0] ? (
                       <div className="grid grid-cols-2 gap-8">
-                        {item.submenu.map((category: any, idx: number) => (
+                        {(item.submenu as NavigationCategory[]).map((category, idx) => (
                           <div key={idx}>
                             <h3 className="font-poppins font-semibold text-neutral-900 mb-3 text-lg">
                               {category.name}
                             </h3>
                             <div className="space-y-2">
-                              {category.items.map((subitem: any) => (
+                              {category.items.map((subitem) => (
                                 <Link
                                   key={subitem.name}
                                   href={subitem.href}
-                                  className="block text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter"
+                                  className="flex items-start gap-3 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter group/item"
                                 >
-                                  <div className="font-medium">{subitem.name}</div>
-                                  <div className="text-sm text-neutral-500 mt-1">
-                                    {subitem.description || 'Professional IT solutions'}
+                                  <div className="mt-0.5 text-primary-600 group-hover/item:text-primary-700">
+                                    {subitem.icon}
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="font-medium">{subitem.name}</div>
+                                    <div className="text-sm text-neutral-500 mt-1">
+                                      {subitem.description}
+                                    </div>
                                   </div>
                                 </Link>
                               ))}
@@ -126,18 +208,23 @@ export default function Header() {
                         ))}
                       </div>
                     ) : (
-                      /* Regular Submenu */
+                      /* Regular Submenu for Solutions and Apps */
                       <div className="space-y-1">
-                        {item.submenu.map((subitem: any) => (
+                        {(item.submenu as NavigationItem[]).map((subitem) => (
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="block text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter"
+                            className="flex items-start gap-3 text-neutral-600 hover:text-primary-600 hover:bg-primary-50 rounded-lg p-3 transition-all duration-200 font-inter group/item"
                           >
-                            <div className="font-medium">{subitem.name}</div>
-                            {subitem.description && (
-                              <div className="text-sm text-neutral-500 mt-1">{subitem.description}</div>
-                            )}
+                            <div className="mt-0.5 text-primary-600 group-hover/item:text-primary-700">
+                              {subitem.icon}
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium">{subitem.name}</div>
+                              {subitem.description && (
+                                <div className="text-sm text-neutral-500 mt-1">{subitem.description}</div>
+                              )}
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -184,22 +271,30 @@ export default function Header() {
                   {item.submenu && (
                     <div className="ml-4 mb-4 space-y-3">
                       {/* Services Mega Menu Mobile */}
-                      {item.name === 'Services' && item.submenu && 'items' in (item.submenu[0] as any) ? (
+                      {item.name === 'Services' && Array.isArray(item.submenu) && item.submenu[0] && 'items' in item.submenu[0] ? (
                         <>
-                          {item.submenu.map((category: any, idx: number) => (
+                          {(item.submenu as NavigationCategory[]).map((category, idx) => (
                             <div key={idx} className="mb-4">
                               <h4 className="font-poppins font-semibold text-neutral-700 mb-2 text-sm uppercase tracking-wide">
                                 {category.name}
                               </h4>
                               <div className="space-y-2">
-                                {category.items.map((subitem: any) => (
+                                {category.items.map((subitem) => (
                                   <Link
                                     key={subitem.name}
                                     href={subitem.href}
-                                    className="block text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
+                                    className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
-                                    {subitem.name}
+                                    <div className="text-primary-600">
+                                      {subitem.icon}
+                                    </div>
+                                    <div>
+                                      <div className="font-medium">{subitem.name}</div>
+                                      {subitem.description && (
+                                        <div className="text-xs text-neutral-500 mt-0.5">{subitem.description}</div>
+                                      )}
+                                    </div>
                                   </Link>
                                 ))}
                               </div>
@@ -207,15 +302,23 @@ export default function Header() {
                           ))}
                         </>
                       ) : (
-                        /* Regular Submenu Mobile */
-                        item.submenu.map((subitem: any) => (
+                        /* Regular Submenu Mobile for Solutions and Apps */
+                        (item.submenu as NavigationItem[]).map((subitem) => (
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="block text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
+                            className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors py-2 pl-4 border-l-2 border-neutral-200 hover:border-primary-500 font-inter"
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {subitem.name}
+                            <div className="text-primary-600">
+                              {subitem.icon}
+                            </div>
+                            <div>
+                              <div className="font-medium">{subitem.name}</div>
+                              {subitem.description && (
+                                <div className="text-xs text-neutral-500 mt-0.5">{subitem.description}</div>
+                              )}
+                            </div>
                           </Link>
                         ))
                       )}

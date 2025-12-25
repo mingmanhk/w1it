@@ -42,3 +42,57 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# database
+drizzle/*.sql
+!drizzle/meta/
+drizzle/meta/_journal.json
+
+# logs
+*.log
+logs/
+firebase-debug.log
+
+# operating system files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# temporary files
+*.tmp
+*.temp
+.temp/
+
+# secrets and credentials
+secrets/
+credentials/
+*.key
+*.p12
+*.pem
+*.crt
+*.cer
+
+# build artifacts
+dist/
+.cache/
+.next/cache/
+
+# coverage and testing
+coverage/
+.nyc_output/
+
+# package manager specific
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# environment files (keep this at the end)
+.env*
+!.env.example
