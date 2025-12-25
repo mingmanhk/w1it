@@ -14,9 +14,9 @@ export interface SEOConfig {
 }
 
 export const defaultSEO = {
-  siteName: 'Pinkkamii',
-  siteUrl: 'https://pinkkamii.com',
-  twitterHandle: '@pinkkamii',
+  siteName: 'W1IT Solutions',
+  siteUrl: 'https://w1it.com',
+  twitterHandle: '@w1itsolutions',
   defaultImage: '/og-image.png',
 };
 
@@ -29,9 +29,9 @@ export function generateSEO(config: SEOConfig): Metadata {
     openGraph = {},
   } = config;
 
-  const fullTitle = title.includes('Pinkkamii')
+  const fullTitle = title.includes('W1IT Solutions')
     ? title
-    : `${title} | Pinkkamii`;
+    : `${title} | W1IT Solutions`;
 
   const url = canonical
     ? `${defaultSEO.siteUrl}${canonical}`
@@ -223,11 +223,11 @@ export function generateOrganizationSchema(): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Pinkkamii',
-    url: 'https://pinkkamii.com',
-    logo: 'https://pinkkamii.com/logo.png',
+    name: 'W1IT Solutions',
+    url: 'https://w1it.com',
+    logo: 'https://w1it.com/images/Logo.png',
     description:
-      'Beautiful apps and professional IT services. From productivity tools to managed IT solutions, we remove everyday frustrations and add joy to your digital life.',
+      'Expert computer repair services and IT solutions for small and midsize businesses in Bellevue, WA. We help maximize performance, prevent disruptions, and build resilient systems that scale with your business.',
     sameAs: [
       // Add social media links here when available
     ],
@@ -235,7 +235,7 @@ export function generateOrganizationSchema(): object {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
       areaServed: 'US',
-      availableLanguage: ['English', 'Chinese'],
+      availableLanguage: ['English'],
     },
   };
 }
