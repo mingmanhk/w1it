@@ -8,10 +8,12 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'Serverless Migration', href: '/services/serverless-migration' },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-      { name: 'IT Consulting', href: '/services/it-consulting' },
-      { name: 'Managed Services', href: '/services/managed-services' },
+      { name: 'Managed IT Services', href: '/services/managed-services' },
+      { name: 'Virus Removal & Prevention', href: '/services/security' },
+      { name: 'Microsoft Windows Management', href: '/services/windows-management' },
+      { name: 'Data Backup & Recovery', href: '/services/data-backup' },
+      { name: 'IT Help Desk Services', href: '/services/help-desk' },
+      { name: 'Email & VOIP Communications', href: '/services/communications' },
     ],
     company: [
       { name: 'About Us', href: '/about' },
@@ -44,20 +46,19 @@ export default function Footer() {
                 <span className="text-white font-bold text-xl">W1</span>
               </div>
               <div>
-                <div className="text-lg font-bold text-white">W1 IT Solutions</div>
-                <div className="text-xs text-slate-400">Seattle-Based IT Excellence</div>
+                <div className="text-lg font-bold text-white">W1IT Solutions</div>
+                <div className="text-xs text-slate-400">Bellevue-Based IT Excellence</div>
               </div>
             </div>
             <p className="text-sm text-slate-400 mb-4 max-w-md">
-              Empowering Seattle businesses with cutting-edge IT solutions. From serverless migration
-              to cloud infrastructure, we deliver excellence in every project.
+              Expert computer repair services and IT solutions for small and midsize businesses in Bellevue, WA. We help maximize performance, prevent disruptions, and build resilient systems that scale with your business.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-primary-400" />
-                <span>Seattle, WA</span>
+                <span>Bellevue, WA</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-primary-400" />
@@ -166,7 +167,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-slate-400">
-              © {currentYear} W1 IT Solutions. All rights reserved.
+              © {currentYear} W1IT Solutions. All rights reserved. Bellevue, WA.
             </p>
             <div className="flex space-x-6 text-sm">
               {footerLinks.legal.map((link) => (

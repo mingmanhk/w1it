@@ -24,88 +24,75 @@ import {
   Headphones,
   Rocket,
   Sparkles,
+  Phone,
 } from 'lucide-react';
 
 export default function Home() {
   const services = [
     {
-      icon: <Rocket className="w-10 h-10" />,
-      title: 'Digital Transformation',
-      description: 'Accelerate your business growth with cutting-edge digital solutions and strategic technology roadmaps.',
-      href: '/solutions/digital-transformation',
-      features: ['Strategy Planning', 'Technology Adoption', 'Process Optimization'],
-      gradient: 'from-primary-500 to-accent-500',
-    },
-    {
-      icon: <Cloud className="w-10 h-10" />,
-      title: 'Cloud & Infrastructure',
-      description: 'Enterprise-grade cloud solutions with multi-cloud strategy, migration, and optimization services.',
-      href: '/services/cloud-solutions',
-      features: ['AWS/Azure/GCP', 'Hybrid Cloud', 'Cost Optimization'],
-      gradient: 'from-blue-500 to-cyan-500',
+      icon: <Cpu className="w-10 h-10" />,
+      title: 'Managed IT Services',
+      description: 'Comprehensive IT management with proactive monitoring, support, and strategic consulting for your business.',
+      href: '/services/managed-services',
+      features: ['24/7 Monitoring', 'Proactive Maintenance', 'Strategic IT Planning'],
     },
     {
       icon: <Shield className="w-10 h-10" />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions including threat detection, compliance, and risk management.',
+      title: 'Virus Removal & Prevention',
+      description: 'Protect your business from malware, ransomware, and cyber threats with expert security solutions.',
       href: '/services/security',
-      features: ['SOC 2 Compliance', 'Penetration Testing', '24/7 Monitoring'],
-      gradient: 'from-emerald-500 to-green-500',
+      features: ['Malware Removal', 'Threat Prevention', 'Security Audits'],
     },
     {
-      icon: <Cpu className="w-10 h-10" />,
-      title: 'Managed IT Services',
-      description: 'End-to-end IT management with proactive monitoring, support, and strategic consulting.',
-      href: '/services/managed-services',
-      features: ['Proactive Support', 'SLA Guaranteed', 'Strategic Planning'],
-      gradient: 'from-violet-500 to-purple-500',
+      icon: <Server className="w-10 h-10" />,
+      title: 'Microsoft Windows Management',
+      description: 'Expert implementation, management, and optimization of Microsoft Windows environments.',
+      href: '/services/windows-management',
+      features: ['Windows Deployment', 'System Updates', 'Performance Optimization'],
     },
     {
       icon: <Database className="w-10 h-10" />,
-      title: 'Data & Analytics',
-      description: 'Transform data into actionable insights with modern data platforms and analytics solutions.',
-      href: '/solutions/data-analytics',
-      features: ['Data Warehousing', 'Business Intelligence', 'AI/ML Integration'],
-      gradient: 'from-amber-500 to-orange-500',
+      title: 'Data Backup & Recovery',
+      description: 'Secure data protection with reliable backup solutions and disaster recovery planning.',
+      href: '/services/data-backup',
+      features: ['Automated Backups', 'Disaster Recovery', 'Business Continuity'],
     },
     {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: 'App Development',
-      description: 'Custom software and mobile applications built with modern frameworks and best practices.',
-      href: '/apps',
-      features: ['Custom Solutions', 'Mobile Apps', 'Web Applications'],
-      gradient: 'from-pink-500 to-rose-500',
+      icon: <Headphones className="w-10 h-10" />,
+      title: 'IT Help Desk Services',
+      description: 'Responsive technical support and troubleshooting for your business technology needs.',
+      href: '/services/help-desk',
+      features: ['Remote Support', 'Quick Response', 'Expert Troubleshooting'],
+    },
+    {
+      icon: <Phone className="w-10 h-10" />,
+      title: 'Email & VOIP Communications',
+      description: 'Reliable business communication solutions including email hosting and VOIP phone systems.',
+      href: '/services/communications',
+      features: ['Email Hosting', 'VOIP Systems', 'Unified Communications'],
     },
   ];
 
   const benefits = [
     {
-      icon: <Sparkles className="w-8 h-8" />,
-      title: 'Innovation-Driven',
-      description: 'Leverage cutting-edge technologies and modern frameworks to stay ahead of the competition.',
-      color: 'text-primary-600',
-      bgColor: 'bg-primary-50',
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Virus Removal & Prevention',
+      description: 'Comprehensive protection against malware, ransomware, and cyber threats with expert security solutions.',
     },
     {
-      icon: <Headphones className="w-8 h-8" />,
-      title: '24/7 Expert Support',
-      description: 'Round-the-clock technical support with rapid response times and dedicated account managers.',
-      color: 'text-secondary-600',
-      bgColor: 'bg-secondary-50',
+      icon: <Server className="w-8 h-8" />,
+      title: 'Windows & Apple Support',
+      description: 'Expert management and implementation for both Microsoft Windows and Apple device environments.',
     },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: 'Global Expertise',
-      description: 'Experience working with clients across industries and geographies, delivering scalable solutions.',
-      color: 'text-accent-600',
-      bgColor: 'bg-accent-50',
+      icon: <Database className="w-8 h-8" />,
+      title: 'Data Backup & Recovery',
+      description: 'Reliable disaster recovery and business continuity planning to protect your critical business data.',
     },
     {
-      icon: <Lock className="w-8 h-8" />,
-      title: 'Security First',
-      description: 'Enterprise-grade security protocols and compliance standards built into every solution.',
-      color: 'text-emerald-600',
-      bgColor: 'bg-emerald-50',
+      icon: <Phone className="w-8 h-8" />,
+      title: 'Email & VOIP Communications',
+      description: 'Professional business communication solutions including email hosting and VOIP phone systems.',
     },
   ];
 
@@ -138,18 +125,18 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Sparkles className="w-4 h-4" />
-              <span className="font-inter">Professional IT Services & Support</span>
+              <span className="font-inter">Your Trusted Partner in Bellevue, WA</span>
             </div>
 
             {/* Main Heading */}
             <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight animate-fade-in-up">
-              Expert IT Solutions for
-              <span className="block mt-2">Your Business Success</span>
+              Expert Computer Repair Services
+              <span className="block mt-2">& IT Solutions</span>
             </h1>
 
             {/* Subheading */}
             <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Reliable technology support, cloud infrastructure, and managed services to keep your business running smoothly.
+              At W1IT, we understand that your small business depends on technology — and when that technology falters, your operations can suffer. We don't just fix problems — we help you maximize performance, prevent future disruptions, and build resilient systems that scale with your business.
             </p>
 
             {/* CTA Buttons */}
@@ -184,13 +171,13 @@ export default function Home() {
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Our Services
+              Business IT Services We Offer
             </div>
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-gray-900 mb-6">
-              Comprehensive IT Solutions
+              Full Suite of Enterprise-Grade Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-              Professional technology services to support your business growth and operations
+              W1IT provides comprehensive IT services tailored to small and midsize businesses in Bellevue and the surrounding area.
             </p>
           </div>
 
@@ -241,13 +228,13 @@ export default function Home() {
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Why Choose Us
+              Not Sure What You Need?
             </div>
             <h2 className="font-poppins font-bold text-3xl md:text-4xl text-gray-900 mb-6">
-              The W1 IT Advantage
+              Expert Guidance for Your Business
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-              Professional IT services with a focus on reliability, expertise, and customer satisfaction
+              No problem. Just reach out — we'll assess your environment, listen to your goals, and recommend the right solutions to keep your business secure, efficient, and future-ready.
             </p>
           </div>
 
@@ -299,10 +286,10 @@ export default function Home() {
         <Container size="lg">
           <div className="text-center relative z-10">
             <h2 className="font-poppins font-bold text-3xl md:text-4xl mb-8">
-              Ready for Professional IT Support?
+              Ready to Maximize Your Business Technology?
             </h2>
             <p className="text-lg text-white/90 mb-12 max-w-2xl mx-auto font-inter">
-              Get reliable technology solutions and expert support for your business operations.
+              Whether you're facing common issues or complex infrastructure challenges, our expert IT support team is ready to respond with precision and care.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button

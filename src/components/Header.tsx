@@ -155,14 +155,14 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 flex items-center justify-center">
               <img
-                src="/logo.png"
-                alt="W1 IT Solutions Logo"
+                src="/images/Logo.png"
+                alt="W1IT Solutions Logo"
                 className="h-10 w-auto object-contain"
               />
             </div>
             <div className="hidden sm:block">
-              <div className="text-2xl font-bold text-slate-900 font-poppins">W1 IT Solutions</div>
-              <div className="text-sm text-slate-600 font-inter">Professional IT Services & Support</div>
+              <div className="text-2xl font-bold text-slate-900 font-poppins">W1IT Solutions</div>
+              <div className="text-sm text-slate-600 font-inter">Expert Computer Repair & IT Services in Bellevue, WA</div>
             </div>
           </Link>
 
