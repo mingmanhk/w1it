@@ -1,0 +1,12 @@
+# W1 IT Solutions Security Policy
+Contact: mailto:security@w1it.com
+Encryption: https://w1it.com/.well-known/pgp-key.txt
+Acknowledgments: https://w1it.com/security-hall-of-fame
+Policy: https://w1it.com/security-policy
+Preferred-Languages: en
+Canonical: https://w1it.com/.well-known/security.txt
+Expires: 2026-12-31T23:59:59.000Z
+
+# Please report security vulnerabilities to security@w1it.com
+# We appreciate responsible disclosure and will respond within 72 hours
+# For non-security issues, please use support@w1it.com
