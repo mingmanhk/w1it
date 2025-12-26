@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <img
-                src="/images/optimized/Logo-DarkMode.webp"
+                src="/images/optimized/Logo.webp"
                 alt="W1IT Solutions Logo"
                 className="h-10 w-auto object-contain"
               />
