@@ -13,6 +13,8 @@ import {
   Database,
   Users,
   Zap,
+  AlertTriangle,
+  FileText,
 } from 'lucide-react';
 
 export default function CaseStudiesPage() {
@@ -58,6 +60,20 @@ export default function CaseStudiesPage() {
       results: ['10x scalability', 'Auto-scaling', 'Cost management'],
       icon: <Zap className="w-8 h-8" />,
       gradient: 'from-pink-500 to-rose-500',
+    },
+    {
+      title: 'IT Checklist Failure & Rapid Recovery',
+      description: 'How a missing daily IT checklist led to a full outage and how rapid recovery saved the business.',
+      results: ['Same-day full recovery', 'Zero data loss', 'Proactive monitoring implemented'],
+      icon: <AlertTriangle className="w-8 h-8" />,
+      gradient: 'from-amber-500 to-orange-500',
+    },
+    {
+      title: 'Fragmented IT to Standardized Infrastructure',
+      description: 'Transforming a fragmented IT environment into a documented, standardized, and automated infrastructure.',
+      results: ['80% reduction in undocumented systems', 'Centralized credential management', 'Automated operational processes'],
+      icon: <FileText className="w-8 h-8" />,
+      gradient: 'from-blue-500 to-cyan-500',
     },
   ];
 

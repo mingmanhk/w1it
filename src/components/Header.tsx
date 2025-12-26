@@ -1,4 +1,4 @@
-''''use client';
+'use client';
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <img
-              src="/images/Logo.png"
+              src="/images/optimized/Logo.webp"
               alt="W1IT Solutions Logo"
               className="h-10 w-auto object-contain"
             />
@@ -90,4 +90,3 @@ export default function Header() {
     </header>
   );
 }
-'''

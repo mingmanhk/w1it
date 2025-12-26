@@ -1,4 +1,4 @@
-'''import { NextPage } from 'next';
+import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Container from '@/components/Container';
@@ -67,4 +67,3 @@ const PrivacyPolicyPage: NextPage = () => {
 };
 
 export default PrivacyPolicyPage;
-'''

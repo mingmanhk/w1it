@@ -225,7 +225,7 @@ export function generateOrganizationSchema(): object {
     '@type': 'Organization',
     name: 'W1IT Solutions',
     url: 'https://w1it.com',
-    logo: 'https://w1it.com/images/Logo.png',
+    logo: 'https://w1it.com/images/optimized/Logo.webp',
     description:
       'Expert computer repair services and IT solutions for small and midsize businesses in Bellevue, WA. We help maximize performance, prevent disruptions, and build resilient systems that scale with your business.',
     sameAs: [

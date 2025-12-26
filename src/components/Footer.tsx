@@ -1,4 +1,4 @@
-'''import React from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Container from './Container';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <img
-                src="/images/Logo.png"
+                src="/images/optimized/Logo-DarkMode.webp"
                 alt="W1IT Solutions Logo"
                 className="h-10 w-auto object-contain"
               />
@@ -102,4 +102,3 @@ export default function Footer() {
     </footer>
   );
 }
-'''

@@ -1,10 +1,10 @@
-'''@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply font-body bg-white text-brand-gray-mid;
+    @apply bg-white text-brand-gray-mid;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -23,4 +23,3 @@
     @apply text-h3 leading-h3;
   }
 }
-''
