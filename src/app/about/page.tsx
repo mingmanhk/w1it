@@ -1,64 +1,10 @@
 import Container from '@/components/Container';
-import Card from '@/components/Button';
+import Card from '@/components/Card';
 import Button from '@/components/Button';
 import { Linkedin, Github, ExternalLink } from 'lucide-react';
 
 export default function AboutPage() {
-  const experienceTimeline = [
-    {
-      year: '2020-Present',
-      title: 'IT Solutions Architect & Consultant',
-      company: 'W1 IT Solutions',
-      description: 'Leading digital transformation projects for clients across various industries. Specializing in cloud migration, infrastructure optimization, and strategic IT planning.',
-      achievements: [
-        'Managed 200+ successful IT projects with 99.9% client satisfaction',
-        'Implemented serverless architectures reducing client infrastructure costs by 40%',
-        'Led migration projects for Fortune 500 companies and government agencies'
-      ]
-    },
-    {
-      year: '2018-2020',
-      title: 'Senior Systems Engineer',
-      company: 'Tech Innovations Inc.',
-      description: 'Managed enterprise-level infrastructure and led technical teams in implementing scalable solutions.',
-      achievements: [
-        'Designed and deployed network monitoring systems for 500+ endpoints',
-        'Reduced system downtime by 75% through proactive monitoring',
-        'Mentored junior engineers and developed technical documentation standards'
-      ]
-    },
-    {
-      year: '2016-2018',
-      title: 'Network Specialist',
-      company: 'Global Communications Corp',
-      description: 'Specialized in network architecture and security implementations for multinational clients.',
-      achievements: [
-        'Implemented secure network solutions for financial institutions',
-        'Reduced security incidents by 90% through enhanced monitoring',
-        'Developed bilingual technical documentation for international teams'
-      ]
-    },
-    {
-      year: '2014-2016',
-      title: 'IT Support Engineer',
-      company: 'Startup Technology Hub',
-      description: 'Provided comprehensive IT support and implemented early-stage infrastructure solutions.',
-      achievements: [
-        'Built scalable IT infrastructure supporting company growth from 10 to 200 employees',
-        'Implemented automated deployment systems reducing setup time by 80%',
-        'Developed technical training programs for non-technical staff'
-      ]
-    }
-  ];
 
-  const certifications = [
-    { name: 'AWS Solutions Architect Professional', year: '2023' },
-    { name: 'Google Cloud Professional Architect', year: '2022' },
-    { name: 'Microsoft Azure Solutions Architect Expert', year: '2021' },
-    { name: 'Cisco CCNP Enterprise', year: '2020' },
-    { name: 'CompTIA Security+', year: '2019' },
-    { name: 'ITIL 4 Foundation', year: '2018' }
-  ];
 
   const expertiseAreas = [
     {
@@ -147,51 +93,6 @@ export default function AboutPage() {
           </Card>
         </div>
 
-        {/* Professional Journey */}
-        <section className="mb-16">
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
-            Professional Journey
-          </h2>
-          <div className="space-y-8">
-            {experienceTimeline.map((item, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="md:w-1/4">
-                    <div className="font-display font-semibold text-lg text-rose mb-1">{item.year}</div>
-                    <div className="font-display font-bold text-xl text-charcoal">{item.title}</div>
-                    <div className="font-inter text-gray-medium">{item.company}</div>
-                  </div>
-                  <div className="md:w-3/4">
-                    <p className="font-inter text-gray-medium mb-4">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <span className="text-rose mr-2">✓</span>
-                          <span className="font-inter text-gray-medium">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        {/* Certifications */}
-        <section className="mb-16">
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
-            Certifications & Qualifications
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <Card key={index} className="p-6">
-                <div className="font-display font-bold text-lg text-charcoal mb-1">{cert.name}</div>
-                <div className="font-inter text-gray-medium">Issued: {cert.year}</div>
-              </Card>
-            ))}
-          </div>
-        </section>
 
         {/* Areas of Expertise */}
         <section className="mb-16">
