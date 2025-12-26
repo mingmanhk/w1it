@@ -1,43 +1,38 @@
-# Seattle-Based IT Solutions Provider Website
+'''# W1IT Website
 
-This is a modern, serverless website for a Seattle-based IT solutions provider, built with Next.js and Vercel.
+This is the official website for W1IT Solutions, a modern IT consultancy. This project is built with Next.js and Tailwind CSS, following the design specifications provided in the `blueprint.md` file.
 
-## 🚀 Getting Started
+## Getting Started
 
-To get started with this project, follow these steps:
+First, install the dependencies:
 
-1.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
-2.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
+Then, run the development server:
 
-3.  **Open the application:**
-    Open [http://localhost:3000](http://localhost:3000) in your browser to see the running application.
+```bash
+npm run dev
+```
 
-## ✨ Features
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-*   **Serverless Architecture:** Built on a modern, scalable serverless architecture with Next.js and Vercel.
-*   **Comprehensive Services:** Showcases a wide range of IT solutions, including serverless migration, cloud infrastructure, and managed IT services.
-*   **Advanced Inquiry System:** Features an advanced inquiry system with CRM integration for seamless lead management.
-*   **Marketing Automation:** Includes powerful marketing automation features to nurture leads and drive growth.
+## Project Structure
 
-## 🛠️ Built With
+*   `src/app/`: Contains the pages and layouts for the App Router.
+*   `src/components/`: Contains reusable React components.
+*   `src/lib/`: Contains utility functions and libraries.
+*   `public/`: Contains static assets like images and fonts.
+*   `tailwind.config.ts`: The configuration file for Tailwind CSS.
+*   `blueprint.md`: The single source of truth for the project's design and features.
 
-*   [Next.js](https://nextjs.org/) - The React framework for production
-*   [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-*   [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-*   [Drizzle ORM](https://orm.drizzle.team/) - A TypeScript ORM for SQL databases
-*   [Vercel](https://vercel.com/) - The platform for frontend developers
+## Core Technologies
 
-## 🤝 Contributing
+*   **Next.js:** The React framework for production.
+*   **React:** The library for building user interfaces.
+*   **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+*   **TypeScript:** A typed superset of JavaScript.
+*   **Lucide React:** A library of simply beautiful icons.
 
-Contributions are welcome! Please feel free to submit a pull request or open an issue.
-
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+'''
