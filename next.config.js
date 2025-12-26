@@ -7,7 +7,15 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '**',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
       },
     ],
   },
@@ -54,15 +62,15 @@ const nextConfig = {
           key: 'Content-Security-Policy',
           value: [
             "default-src 'self'",
-            "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://embed.tawk.to",
-            "style-src 'self' 'unsafe-inline'",
-            "img-src 'self' data: https:",
-            "font-src 'self'",
-            "connect-src 'self' https://www.google-analytics.com https://va.vercel-scripts.com https://embed.tawk.to",
+            "script-src 'self' https://www.googletagmanager.com https://embed.tawk.to",
+            "style-src 'self'",
+            "img-src 'self' data: https://images.unsplash.com https://*.googleusercontent.com",
+            "font-src 'self' https://fonts.gstatic.com",
+            "connect-src 'self' https://www.google-analytics.com https://va.vercel-scripts.com https://embed.tawk.to https://api.web3forms.com",
             "frame-src https://embed.tawk.to",
             "object-src 'none'",
             "base-uri 'self'",
-            "form-action 'self'",
+            "form-action 'self' https://api.web3forms.com",
             "frame-ancestors 'none'",
             "block-all-mixed-content",
             "upgrade-insecure-requests"

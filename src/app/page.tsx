@@ -4,6 +4,7 @@ import React from 'react';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import BentoGrid from '@/components/BentoGrid';
 import {
   Cloud,
   Server,
@@ -114,46 +115,48 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - Clean Professional */}
+      {/* Hero Section - Modern Design */}
       <section className="relative pt-24 pb-32 md:pt-32 md:pb-48 bg-gradient-primary text-white overflow-hidden">
-        {/* Simple background */}
-        <div className="absolute inset-0 bg-blue-600 opacity-90" />
-        <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5" />
+        {/* Modern background effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 to-secondary-900/90" />
+        <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-10" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl animate-pulse-subtle" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-pulse-subtle" />
 
         <Container>
           <div className="max-w-6xl mx-auto text-center relative z-10">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
+            {/* Modern Badge */}
+            <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in border border-white/30">
               <Sparkles className="w-4 h-4" />
-              <span className="font-inter">Your Trusted Partner in Bellevue, WA</span>
+              <span className="font-inter">Modern IT Solutions for Forward-Thinking Businesses</span>
             </div>
 
-            {/* Main Heading */}
+            {/* Modern Heading */}
             <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight animate-fade-in-up">
-              Expert Computer Repair Services
-              <span className="block mt-2">& IT Solutions</span>
+              Transform Your Business with
+              <span className="block mt-2 text-gradient-accent">Modern IT Solutions</span>
             </h1>
 
-            {/* Subheading */}
+            {/* Modern Subheading */}
             <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              At W1IT, we understand that your small business depends on technology — and when that technology falters, your operations can suffer. We don't just fix problems — we help you maximize performance, prevent future disruptions, and build resilient systems that scale with your business.
+              We deliver cutting-edge IT solutions that drive growth, enhance security, and streamline operations. From cloud migration to cybersecurity, we help businesses leverage technology as a competitive advantage.
             </p>
 
-            {/* CTA Buttons */}
+            {/* Modern CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-white text-blue-600 hover:bg-blue-50 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" size="xl" className="group bg-white text-primary-600 hover:bg-white/90 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
-              <Button href="/services" variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
-                Our Services
+              <Button href="/services" variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+                Explore Services
               </Button>
             </div>
 
-            {/* Stats */}
+            {/* Modern Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center backdrop-blur-sm bg-white/10 rounded-2xl p-6 border border-white/20">
                   <div className="flex items-center justify-center space-x-2 mb-2">
                     {stat.icon}
                     <div className="text-4xl font-bold text-white font-poppins">{stat.value}</div>
@@ -163,6 +166,13 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* Bento Grid Section - Modern Layout */}
+      <section className="py-16 bg-white dark:bg-gray-950">
+        <Container>
+          <BentoGrid />
         </Container>
       </section>
 

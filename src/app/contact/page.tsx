@@ -12,19 +12,23 @@ export default function Contact() {
     event.preventDefault();
     setResult('Sending....');
     const formData = new FormData(event.currentTarget);
-    formData.append('access_key', '0a8f22a3-c584-4df6-9086-72255fabdcf9');
 
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData,
-    });
+    try {
+      const response = await fetch('/api/contact/submit', {
+        method: 'POST',
+        body: formData,
+      });
 
-    const data = await response.json();
-    if (data.success) {
-      setResult('Form Submitted Successfully');
-      event.currentTarget.reset();
-    } else {
-      setResult('Error');
+      const data = await response.json();
+      if (data.success) {
+        setResult('Form Submitted Successfully');
+        event.currentTarget.reset();
+      } else {
+        setResult('Error: ' + (data.message || 'Submission failed'));
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setResult('Error: Network or server issue');
     }
   };
 
