@@ -84,7 +84,7 @@ export default function AboutPage() {
       <div className="py-20 md:py-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+          <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
             About Me & My Experience
           </h1>
           <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto font-inter mb-8">
@@ -130,26 +130,26 @@ export default function AboutPage() {
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
           <Card className="text-center p-6">
-            <div className="font-poppins font-bold text-3xl text-rose mb-2">10+</div>
+            <div className="font-display font-bold text-3xl text-rose mb-2">10+</div>
             <div className="font-inter text-gray-medium">Years Experience</div>
           </Card>
           <Card className="text-center p-6">
-            <div className="font-poppins font-bold text-3xl text-rose mb-2">200+</div>
+            <div className="font-display font-bold text-3xl text-rose mb-2">200+</div>
             <div className="font-inter text-gray-medium">Projects Delivered</div>
           </Card>
           <Card className="text-center p-6">
-            <div className="font-poppins font-bold text-3xl text-rose mb-2">99.9%</div>
+            <div className="font-display font-bold text-3xl text-rose mb-2">99.9%</div>
             <div className="font-inter text-gray-medium">Client Satisfaction</div>
           </Card>
           <Card className="text-center p-6">
-            <div className="font-poppins font-bold text-3xl text-rose mb-2">50+</div>
+            <div className="font-display font-bold text-3xl text-rose mb-2">50+</div>
             <div className="font-inter text-gray-medium">Clients Served</div>
           </Card>
         </div>
 
         {/* Professional Journey */}
         <section className="mb-16">
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
             Professional Journey
           </h2>
           <div className="space-y-8">
@@ -157,8 +157,8 @@ export default function AboutPage() {
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex flex-col md:flex-row md:items-start gap-4">
                   <div className="md:w-1/4">
-                    <div className="font-poppins font-semibold text-lg text-rose mb-1">{item.year}</div>
-                    <div className="font-poppins font-bold text-xl text-charcoal">{item.title}</div>
+                    <div className="font-display font-semibold text-lg text-rose mb-1">{item.year}</div>
+                    <div className="font-display font-bold text-xl text-charcoal">{item.title}</div>
                     <div className="font-inter text-gray-medium">{item.company}</div>
                   </div>
                   <div className="md:w-3/4">
@@ -180,13 +180,13 @@ export default function AboutPage() {
 
         {/* Certifications */}
         <section className="mb-16">
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
             Certifications & Qualifications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <Card key={index} className="p-6">
-                <div className="font-poppins font-bold text-lg text-charcoal mb-1">{cert.name}</div>
+                <div className="font-display font-bold text-lg text-charcoal mb-1">{cert.name}</div>
                 <div className="font-inter text-gray-medium">Issued: {cert.year}</div>
               </Card>
             ))}
@@ -195,13 +195,13 @@ export default function AboutPage() {
 
         {/* Areas of Expertise */}
         <section className="mb-16">
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
             Areas of Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {expertiseAreas.map((area, index) => (
               <Card key={index} className="p-6">
-                <h3 className="font-poppins font-bold text-xl text-charcoal mb-4">{area.category}</h3>
+                <h3 className="font-display font-bold text-xl text-charcoal mb-4">{area.category}</h3>
                 <ul className="space-y-2">
                   {area.skills.map((skill, idx) => (
                     <li key={idx} className="flex items-center">
@@ -217,13 +217,13 @@ export default function AboutPage() {
 
         {/* Availability & Approach */}
         <section className="mb-16">
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-8">
             Availability & Working Approach
           </h2>
           <Card className="p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-poppins font-bold text-xl text-charcoal mb-4">Availability</h3>
+                <h3 className="font-display font-bold text-xl text-charcoal mb-4">Availability</h3>
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
@@ -252,7 +252,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-poppins font-bold text-xl text-charcoal mb-4">Working Philosophy</h3>
+                <h3 className="font-display font-bold text-xl text-charcoal mb-4">Working Philosophy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-rose mr-2">•</span>
@@ -286,7 +286,7 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-6">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-6">
             Ready to Transform Your IT Infrastructure?
           </h2>
           <p className="text-lg text-gray-medium max-w-2xl mx-auto mb-8 font-inter">

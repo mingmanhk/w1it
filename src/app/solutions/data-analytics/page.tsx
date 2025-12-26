@@ -73,7 +73,7 @@ export default function DataAnalyticsPage() {
               <Database className="w-4 h-4" />
               <span className="font-inter">Data & Analytics</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Transform Data into
               <span className="block text-gradient-amber mt-2">Actionable Insights</span>
             </h1>
@@ -98,7 +98,7 @@ export default function DataAnalyticsPage() {
               <div className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-full text-sm font-medium mb-6 font-inter">
                 Data-Driven Excellence
               </div>
-              <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
                 Modern Analytics Solutions
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
@@ -113,7 +113,7 @@ export default function DataAnalyticsPage() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl p-8 text-white">
-              <h3 className="font-poppins font-bold text-2xl mb-6">Key Benefits</h3>
+              <h3 className="font-display font-bold text-2xl mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -134,7 +134,7 @@ export default function DataAnalyticsPage() {
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Analytics Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -152,7 +152,7 @@ export default function DataAnalyticsPage() {
                 <div className="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-amber-600">{service.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-neutral-600 font-inter leading-relaxed">
@@ -171,7 +171,7 @@ export default function DataAnalyticsPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Technology Stack
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Modern Analytics Platforms
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -194,7 +194,7 @@ export default function DataAnalyticsPage() {
                 key={index}
                 className="text-center p-6 rounded-2xl border border-neutral-200 hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-2xl font-bold text-neutral-900 font-poppins mb-2">
+                <div className="text-2xl font-bold text-neutral-900 font-display mb-2">
                   {tech.name}
                 </div>
                 <div className="text-sm text-neutral-600 font-inter">
@@ -213,7 +213,7 @@ export default function DataAnalyticsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready to Unlock Your Data's Potential?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

@@ -34,7 +34,7 @@ export default function ChoosingITSupportModel() {
             <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
               Business IT
             </span>
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               Choosing the Right IT Support Model for Your Seattle Business
             </h1>
             <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
@@ -63,7 +63,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Section 1: The Three Main Models */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Three Main IT Support Models
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -72,7 +72,7 @@ export default function ChoosingITSupportModel() {
 
               <div className="space-y-8">
                 <Card className="bg-blush">
-                  <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-2xl text-charcoal mb-3">
                     1. Managed Services (MSP)
                   </h3>
                   <p className="text-gray-medium font-inter mb-4">
@@ -100,7 +100,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-2xl text-charcoal mb-3">
                     2. Break-Fix / On-Demand Support
                   </h3>
                   <p className="text-gray-medium font-inter mb-4">
@@ -128,7 +128,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card className="bg-blush">
-                  <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-2xl text-charcoal mb-3">
                     3. Consulting / Strategic IT
                   </h3>
                   <p className="text-gray-medium font-inter mb-4">
@@ -159,7 +159,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Section 2: When Each Model Makes Sense */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Which Model Is Right for You?
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -168,7 +168,7 @@ export default function ChoosingITSupportModel() {
 
               <div className="space-y-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Choose Managed Services If:
                   </h3>
                   <ul className="space-y-3 text-gray-medium font-inter">
@@ -205,7 +205,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Choose On-Demand Support If:
                   </h3>
                   <ul className="space-y-3 text-gray-medium font-inter">
@@ -242,7 +242,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Choose IT Consulting If:
                   </h3>
                   <ul className="space-y-3 text-gray-medium font-inter">
@@ -278,7 +278,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Section 3: Hybrid Approaches */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Hybrid Approaches: The Best of Both Worlds
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -287,7 +287,7 @@ export default function ChoosingITSupportModel() {
 
               <div className="space-y-4 mb-6">
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     "Core + On-Demand"
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -296,7 +296,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     "In-House + MSP Backup"
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -305,7 +305,7 @@ export default function ChoosingITSupportModel() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     "Consulting + Break-Fix"
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -317,7 +317,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Section 4: Red Flags */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Red Flags When Choosing an IT Provider
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -356,7 +356,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Section 5: Making the Switch */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Switching IT Support Models
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -395,7 +395,7 @@ export default function ChoosingITSupportModel() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -408,7 +408,7 @@ export default function ChoosingITSupportModel() {
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
                 Not Sure Which Model Is Right for You?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
@@ -425,13 +425,13 @@ export default function ChoosingITSupportModel() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -440,7 +440,7 @@ export default function ChoosingITSupportModel() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Best Practices</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
               <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
@@ -449,7 +449,7 @@ export default function ChoosingITSupportModel() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Security</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Network Security Essentials for Remote Teams
               </h3>
               <Button variant="secondary" href="/blog/network-security-remote-teams" className="w-full mt-4">

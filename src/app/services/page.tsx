@@ -131,7 +131,7 @@ export default function ServicesPage() {
 
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Comprehensive
               <span className="block text-gradient-tech mt-2">IT Services</span>
             </h1>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-slate-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-slate-900 mb-6">
               Complete Technology Solutions
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                     <div className="text-white">{service.icon}</div>
                   </div>
 
-                  <h3 className="font-poppins font-semibold text-2xl text-slate-900 mb-4">
+                  <h3 className="font-display font-semibold text-2xl text-slate-900 mb-4">
                     {service.title}
                   </h3>
                   <p className="text-slate-600 mb-6 font-inter leading-relaxed">
@@ -210,7 +210,7 @@ export default function ServicesPage() {
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Why Choose Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-slate-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-slate-900 mb-6">
               The W1 IT Advantage
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
@@ -228,7 +228,7 @@ export default function ServicesPage() {
                 <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-primary-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-slate-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-slate-900 mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-slate-600 font-inter leading-relaxed">
@@ -248,7 +248,7 @@ export default function ServicesPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

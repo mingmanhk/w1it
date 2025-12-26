@@ -105,7 +105,7 @@ export default function NetworkSetup() {
         <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
           <Container>
             <div className="text-center animate-fade-in">
-              <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Network Setup & Configuration
               </h1>
               <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-inter">
@@ -124,7 +124,7 @@ export default function NetworkSetup() {
         {/* Services Grid */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               Network Services We Offer
             </h2>
 
@@ -137,7 +137,7 @@ export default function NetworkSetup() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     {service.title}
                   </h3>
                   <p className="text-gray-medium font-inter">{service.description}</p>
@@ -150,13 +150,13 @@ export default function NetworkSetup() {
         {/* Common Issues We Solve */}
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-12">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-12">
               Common Network Problems We Solve
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Slow WiFi or Dead Zones
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -165,7 +165,7 @@ export default function NetworkSetup() {
               </Card>
 
               <Card>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Unreliable Internet Connection
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -174,7 +174,7 @@ export default function NetworkSetup() {
               </Card>
 
               <Card>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Network Security Concerns
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -183,7 +183,7 @@ export default function NetworkSetup() {
               </Card>
 
               <Card>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Can't Connect Devices
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -199,7 +199,7 @@ export default function NetworkSetup() {
           <Container>
             <div className="bg-blush p-8 md:p-12 rounded-2xl">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+                <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                   Serving Greater Seattle
                 </h2>
                 <p className="text-gray-medium font-inter text-lg mb-6">
@@ -226,13 +226,13 @@ export default function NetworkSetup() {
         {/* Why Choose Us */}
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               Why Choose w1IT for Network Setup
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card hoverable className="text-center">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   Fast Response
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -241,7 +241,7 @@ export default function NetworkSetup() {
               </Card>
 
               <Card hoverable className="text-center">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   Expert Configuration
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -250,7 +250,7 @@ export default function NetworkSetup() {
               </Card>
 
               <Card hoverable className="text-center">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   Clear Communication
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -265,7 +265,7 @@ export default function NetworkSetup() {
         <section className="py-20 md:py-32">
           <Container size="sm">
             <div className="text-center">
-              <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Ready for Better Network Performance?
               </h2>
               <p className="text-lg text-gray-medium mb-8 font-inter">

@@ -84,7 +84,7 @@ export default function RemoteSupport() {
         <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
           <Container>
             <div className="text-center animate-fade-in">
-              <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Remote IT Support
               </h1>
               <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-inter">
@@ -111,14 +111,14 @@ export default function RemoteSupport() {
         {/* How It Works */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               How Remote Support Works
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <Card className="text-center">
                 <div className="text-4xl mb-4">1️⃣</div>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Contact Us
                 </h3>
                 <p className="text-gray-medium font-inter text-sm">
@@ -128,7 +128,7 @@ export default function RemoteSupport() {
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">2️⃣</div>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Schedule Session
                 </h3>
                 <p className="text-gray-medium font-inter text-sm">
@@ -138,7 +138,7 @@ export default function RemoteSupport() {
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">3️⃣</div>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Secure Connection
                 </h3>
                 <p className="text-gray-medium font-inter text-sm">
@@ -148,7 +148,7 @@ export default function RemoteSupport() {
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">4️⃣</div>
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                   Problem Solved
                 </h3>
                 <p className="text-gray-medium font-inter text-sm">
@@ -162,7 +162,7 @@ export default function RemoteSupport() {
         {/* Services */}
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-12">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-12">
               Remote Support Services
             </h2>
 
@@ -175,7 +175,7 @@ export default function RemoteSupport() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     {service.title}
                   </h3>
                   <p className="text-gray-medium font-inter">{service.description}</p>
@@ -188,13 +188,13 @@ export default function RemoteSupport() {
         {/* Benefits */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               Why Choose Remote Support
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card hoverable>
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   ⚡ Faster Response
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -203,7 +203,7 @@ export default function RemoteSupport() {
               </Card>
 
               <Card hoverable>
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   💰 More Affordable
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -212,7 +212,7 @@ export default function RemoteSupport() {
               </Card>
 
               <Card hoverable>
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   🌍 Available Anywhere
                 </h3>
                 <p className="text-gray-medium font-inter">
@@ -222,7 +222,7 @@ export default function RemoteSupport() {
             </div>
 
             <Card className="bg-blush">
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 Perfect for Remote Workers
               </h3>
               <p className="text-gray-medium font-inter">
@@ -238,7 +238,7 @@ export default function RemoteSupport() {
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container size="sm">
             <Card>
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4 text-center">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4 text-center">
                 🔒 Secure & Private
               </h2>
               <p className="text-gray-medium font-inter mb-4">
@@ -272,7 +272,7 @@ export default function RemoteSupport() {
         <section className="py-20 md:py-32">
           <Container size="sm">
             <div className="text-center">
-              <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Need IT Help Right Now?
               </h2>
               <p className="text-lg text-gray-medium mb-8 font-inter">

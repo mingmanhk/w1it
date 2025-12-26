@@ -34,7 +34,7 @@ export default function WhyITDocumentation() {
             <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
               Best Practices
             </span>
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               Why Your Business Needs IT Documentation
             </h1>
             <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
@@ -63,7 +63,7 @@ export default function WhyITDocumentation() {
 
             {/* Section 1: The Real Cost of No Documentation */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Real Cost of No Documentation
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -72,7 +72,7 @@ export default function WhyITDocumentation() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     When Employees Leave
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -81,7 +81,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     During Emergencies
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -90,7 +90,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     For New Hires
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -99,7 +99,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Vendor Lock-In
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -117,7 +117,7 @@ export default function WhyITDocumentation() {
 
             {/* Section 2: What to Document */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 What Should You Document?
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -126,7 +126,7 @@ export default function WhyITDocumentation() {
 
               <div className="space-y-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     1. Network Infrastructure
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -154,7 +154,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     2. User Accounts & Access
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -178,7 +178,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     3. Servers & Cloud Services
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -206,7 +206,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     4. Software & Licenses
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -230,7 +230,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     5. Vendor & Support Contacts
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -254,7 +254,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     6. Procedures & Playbooks
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -281,7 +281,7 @@ export default function WhyITDocumentation() {
 
             {/* Section 3: How to Start */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 How to Start Documenting (Without Overwhelm)
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -289,7 +289,7 @@ export default function WhyITDocumentation() {
               </p>
 
               <Card className="bg-blush mb-6">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   The 80/20 Approach
                 </h3>
                 <ol className="space-y-3 text-gray-medium font-inter">
@@ -319,7 +319,7 @@ export default function WhyITDocumentation() {
 
             {/* Section 4: Tools */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Documentation Tools That Actually Work
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -328,7 +328,7 @@ export default function WhyITDocumentation() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     For Passwords
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -337,7 +337,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     For Documentation
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -346,7 +346,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     For Network Diagrams
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -355,7 +355,7 @@ export default function WhyITDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                     For IT Asset Management
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -373,7 +373,7 @@ export default function WhyITDocumentation() {
 
             {/* Section 5: Keeping Docs Current */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Secret to Keeping Documentation Current
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -408,7 +408,7 @@ export default function WhyITDocumentation() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -421,7 +421,7 @@ export default function WhyITDocumentation() {
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
                 Need Help With IT Documentation?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
@@ -438,13 +438,13 @@ export default function WhyITDocumentation() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -453,7 +453,7 @@ export default function WhyITDocumentation() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Documentation</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 How Bilingual Documentation Improves Global Trade
               </h3>
               <Button variant="secondary" href="/blog/bilingual-documentation-global-trade" className="w-full mt-4">
@@ -462,7 +462,7 @@ export default function WhyITDocumentation() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
               <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">

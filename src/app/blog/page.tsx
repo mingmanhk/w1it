@@ -84,7 +84,7 @@ export default function Blog() {
       <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
         <Container>
           <div className="text-center animate-fade-in">
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
               IT Insights & Resources
             </h1>
             <p className="text-lg md:text-xl text-gray-medium max-w-2xl mx-auto mb-8 font-inter">
@@ -132,7 +132,7 @@ export default function Blog() {
               </div>
               <div className="flex flex-col justify-center">
                 <span className="text-xs font-inter font-medium text-rose mb-2">Business IT</span>
-                <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+                <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                   Top 5 IT Mistakes Small Businesses Make
                 </h2>
                 <p className="text-gray-medium font-inter mb-6">
@@ -157,7 +157,7 @@ export default function Blog() {
       {/* Articles Grid */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-12">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-12">
             Latest Articles
           </h2>
 
@@ -179,7 +179,7 @@ export default function Blog() {
                   </span>
                 </div>
                 <span className="text-xs font-inter font-medium text-rose mb-2">{article.category}</span>
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   {article.title}
                 </h3>
                 <p className="text-gray-medium font-inter text-sm mb-4 flex-grow">
@@ -203,7 +203,7 @@ export default function Blog() {
       <section className="py-20 md:py-32">
         <Container size="sm">
           <Card className="bg-blush text-center">
-            <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+            <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
               Stay Updated
             </h2>
             <p className="text-gray-medium font-inter mb-6">

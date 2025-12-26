@@ -33,40 +33,40 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-slate-300">
+    <footer className="bg-brand-navy text-white">
       <Container>
         {/* Main Footer Content */}
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-tech rounded-lg flex items-center justify-center shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-brand-blue to-blue-700 rounded-lg flex items-center justify-center shadow-md">
                 <span className="text-white font-bold text-xl">W1</span>
               </div>
               <div>
                 <div className="text-lg font-bold text-white">W1IT Solutions</div>
-                <div className="text-xs text-slate-400">Bellevue-Based IT Excellence</div>
+                <div className="text-xs text-white/70">Bellevue-Based IT Excellence</div>
               </div>
             </div>
-            <p className="text-sm text-slate-400 mb-4 max-w-md">
+            <p className="text-sm text-white/80 mb-4 max-w-md">
               Expert computer repair services and IT solutions for small and midsize businesses in Bellevue, WA. We help maximize performance, prevent disruptions, and build resilient systems that scale with your business.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
               <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-primary-400" />
+                <MapPin className="w-4 h-4 text-brand-blue" />
                 <span>Bellevue, WA</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-primary-400" />
-                <a href="mailto:info@w1it.com" className="hover:text-primary-400 transition-colors">
+                <Mail className="w-4 h-4 text-brand-blue" />
+                <a href="mailto:info@w1it.com" className="hover:text-brand-blue transition-colors">
                   info@w1it.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-primary-400" />
-                <a href="tel:+18324727991" className="hover:text-primary-400 transition-colors">
+                <Phone className="w-4 h-4 text-brand-blue" />
+                <a href="tel:+18324727991" className="hover:text-brand-blue transition-colors">
                   832 472 7991
                 </a>
               </div>
@@ -78,7 +78,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/mingmanhk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
+                className="p-2 bg-white/10 rounded-lg hover:bg-brand-blue transition-colors hover:scale-105 transform"
                 aria-label="LinkedIn"
                 title="Connect on LinkedIn"
               >
@@ -88,7 +88,7 @@ export default function Footer() {
                 href="https://github.com/mingmanhk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
+                className="p-2 bg-white/10 rounded-lg hover:bg-brand-blue transition-colors hover:scale-105 transform"
                 aria-label="GitHub"
                 title="View GitHub Profile"
               >
@@ -98,7 +98,7 @@ export default function Footer() {
                 href="https://mingmanhk.github.io/React-Portfolio/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-slate-800 rounded-lg hover:bg-primary-600 transition-colors hover:scale-105 transform"
+                className="p-2 bg-white/10 rounded-lg hover:bg-brand-blue transition-colors hover:scale-105 transform"
                 aria-label="Portfolio"
                 title="View Portfolio"
               >
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
+                    className="text-sm hover:text-brand-blue transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -134,7 +134,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
+                    className="text-sm hover:text-brand-blue transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -151,7 +151,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm hover:text-primary-400 transition-colors hover:translate-x-1 transform inline-block"
+                    className="text-sm hover:text-brand-blue transition-colors hover:translate-x-1 transform inline-block"
                   >
                     {link.name}
                   </Link>
@@ -162,9 +162,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-slate-800 py-6">
+        <div className="border-t border-white/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-white/70">
               © {currentYear} W1IT Solutions. All rights reserved. Bellevue, WA.
             </p>
             <div className="flex space-x-6 text-sm">
@@ -172,7 +172,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="hover:text-primary-400 transition-colors"
+                  className="hover:text-brand-blue transition-colors"
                 >
                   {link.name}
                 </Link>

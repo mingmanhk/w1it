@@ -34,7 +34,7 @@ export default function NetworkSecurityRemoteTeams() {
             <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
               Security
             </span>
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               Network Security Essentials for Remote Teams
             </h1>
             <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
@@ -63,7 +63,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 1: The Remote Work Security Challenge */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Remote Work Security Challenge
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -100,14 +100,14 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 2: Essential #1 - VPN */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Essential #1: Business-Grade VPN
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 A Virtual Private Network (VPN) creates an encrypted tunnel between your employee's device and your company network. Think of it as a secure, private highway for your data.
               </p>
 
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 Why Consumer VPNs Aren't Enough
               </h3>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -147,14 +147,14 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 3: Essential #2 - Zero Trust */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Essential #2: Zero Trust Architecture
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 The old security model was "trust but verify." The new model is "never trust, always verify." With Zero Trust, every user and device must prove they are who they claim to be—every single time.
               </p>
 
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 Implementing Zero Trust for Small Businesses
               </h3>
               <ol className="space-y-4 text-gray-medium font-inter mb-6">
@@ -187,7 +187,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 4: Essential #3 - Endpoint Security */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Essential #3: Endpoint Security
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -196,7 +196,7 @@ export default function NetworkSecurityRemoteTeams() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Must-Have Protections
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter text-sm">
@@ -220,7 +220,7 @@ export default function NetworkSecurityRemoteTeams() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Device Management
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter text-sm">
@@ -247,7 +247,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 5: Essential #4 - Secure Communication */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Essential #4: Secure Communication Channels
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -255,7 +255,7 @@ export default function NetworkSecurityRemoteTeams() {
               </p>
 
               <Card className="mb-6">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   Communication Security Checklist
                 </h3>
                 <ul className="space-y-3 text-gray-medium font-inter">
@@ -281,14 +281,14 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 6: Essential #5 - Security Training */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Essential #5: Ongoing Security Training
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 Here's the hard truth: your employees are both your best defense and your biggest vulnerability. Remote workers face unique security challenges, and they need training that reflects that reality.
               </p>
 
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 What to Train On
               </h3>
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
@@ -319,7 +319,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 7: Seattle-Specific Considerations */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Seattle-Specific Considerations
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -343,7 +343,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -356,7 +356,7 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
                 Need Help Securing Your Remote Team?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
@@ -373,13 +373,13 @@ export default function NetworkSecurityRemoteTeams() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -388,7 +388,7 @@ export default function NetworkSecurityRemoteTeams() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Networking</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 WiFi Setup Guide for Seattle Homes and Offices
               </h3>
               <Button variant="secondary" href="/blog/wifi-setup-guide-seattle" className="w-full mt-4">
@@ -397,7 +397,7 @@ export default function NetworkSecurityRemoteTeams() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Best Practices</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
               <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">

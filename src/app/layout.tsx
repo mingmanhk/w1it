@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/Header";
@@ -11,10 +11,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const poppins = Poppins({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -37,6 +36,16 @@ export const metadata: Metadata = {
   authors: [{ name: "W1 IT Solutions" }],
   creator: "W1 IT Solutions",
   publisher: "W1 IT Solutions",
+  icons: {
+    icon: [
+      { url: '/images/optimized/favicon.ico' },
+      { url: '/images/optimized/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/images/optimized/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/optimized/apple-touch-icon.png' },
+    ],
+  },
   openGraph: {
     title: "W1 IT Solutions | Seattle-Based IT Services",
     description: "Transform your business with cutting-edge IT solutions from Seattle's premier technology partner.",
@@ -69,8 +78,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
+        {/* Favicon Links */}
+        <link rel="icon" href="/images/optimized/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/optimized/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/images/optimized/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/images/optimized/apple-touch-icon.png" />
+
         {/* Google Analytics Script */}
         {/* Google tag (gtag.js) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6XYWJB91J"></script>

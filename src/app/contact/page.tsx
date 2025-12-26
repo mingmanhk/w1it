@@ -35,7 +35,7 @@ export default function Contact() {
   return (
     <Container>
       <div className="py-20 md:py-32">
-        <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 text-center">
+        <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 text-center">
           Contact & Availability
         </h1>
         <p className="text-lg md:text-xl text-gray-medium max-w-2xl mx-auto mb-8 font-inter text-center">
@@ -51,7 +51,7 @@ export default function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 className="font-poppins font-bold text-xl text-charcoal mb-2">Business Hours</h3>
+              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Business Hours</h3>
               <p className="font-inter text-gray-medium">
                 Monday - Friday<br />
                 9:00 AM - 6:00 PM PST
@@ -63,7 +63,7 @@ export default function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                 </svg>
               </div>
-              <h3 className="font-poppins font-bold text-xl text-charcoal mb-2">Response Time</h3>
+              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Response Time</h3>
               <p className="font-inter text-gray-medium">
                 Within 2 hours during business hours<br />
                 24/7 emergency support for clients
@@ -75,7 +75,7 @@ export default function Contact() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                 </svg>
               </div>
-              <h3 className="font-poppins font-bold text-xl text-charcoal mb-2">Consultation Slots</h3>
+              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Consultation Slots</h3>
               <p className="font-inter text-gray-medium">
                 Available within 24-48 hours<br />
                 Virtual or in-person (Seattle area)
@@ -84,10 +84,10 @@ export default function Contact() {
           </div>
 
           <div className="bg-gray-bg rounded-xl p-6 mb-8">
-            <h3 className="font-poppins font-bold text-2xl text-charcoal mb-4">Best Ways to Reach Me</h3>
+            <h3 className="font-display font-bold text-2xl text-charcoal mb-4">Best Ways to Reach Me</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-poppins font-semibold text-lg text-charcoal mb-2">For Project Inquiries</h4>
+                <h4 className="font-display font-semibold text-lg text-charcoal mb-2">For Project Inquiries</h4>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-rose mr-2">•</span>
@@ -104,7 +104,7 @@ export default function Contact() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-poppins font-semibold text-lg text-charcoal mb-2">For Existing Clients</h4>
+                <h4 className="font-display font-semibold text-lg text-charcoal mb-2">For Existing Clients</h4>
                 <ul className="space-y-2">
                   <li className="flex items-center">
                     <span className="text-rose mr-2">•</span>

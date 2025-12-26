@@ -90,7 +90,7 @@ export default function AppsPage() {
 
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Innovative
               <span className="block text-gradient-primary mt-2">Applications</span>
             </h1>
@@ -114,7 +114,7 @@ export default function AppsPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Applications
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Featured Software Solutions
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -140,7 +140,7 @@ export default function AppsPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-poppins font-semibold text-2xl text-neutral-900 mb-4">
+                  <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-4">
                     {app.title}
                   </h3>
                   <p className="text-neutral-600 mb-6 font-inter leading-relaxed">
@@ -174,7 +174,7 @@ export default function AppsPage() {
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Development Excellence
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Why Our Apps Stand Out
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -192,7 +192,7 @@ export default function AppsPage() {
                 <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-primary-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-neutral-600 font-inter leading-relaxed">
@@ -212,7 +212,7 @@ export default function AppsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Need a Custom Solution?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

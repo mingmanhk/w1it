@@ -34,7 +34,7 @@ export default function BilingualDocumentation() {
             <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
               Documentation
             </span>
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               How Bilingual Documentation Improves Global Trade
             </h1>
             <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
@@ -64,7 +64,7 @@ export default function BilingualDocumentation() {
 
             {/* Section 1 */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Beyond Simple Translation
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -100,7 +100,7 @@ export default function BilingualDocumentation() {
 
             {/* Section 2 */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Business Impact
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -109,7 +109,7 @@ export default function BilingualDocumentation() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Faster Market Entry
                   </h3>
                   <p className="text-gray-medium font-inter">
@@ -118,7 +118,7 @@ export default function BilingualDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Reduced Support Costs
                   </h3>
                   <p className="text-gray-medium font-inter">
@@ -127,7 +127,7 @@ export default function BilingualDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Better Partnerships
                   </h3>
                   <p className="text-gray-medium font-inter">
@@ -136,7 +136,7 @@ export default function BilingualDocumentation() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Competitive Advantage
                   </h3>
                   <p className="text-gray-medium font-inter">
@@ -148,13 +148,13 @@ export default function BilingualDocumentation() {
 
             {/* Section 3 */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Common Scenarios Where Bilingual Documentation Matters
               </h2>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     1. Software Development Teams
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed mb-3">
@@ -177,7 +177,7 @@ export default function BilingualDocumentation() {
                 </div>
 
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     2. Manufacturing & Supply Chain
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -186,7 +186,7 @@ export default function BilingualDocumentation() {
                 </div>
 
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     3. SaaS & API Products
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -198,7 +198,7 @@ export default function BilingualDocumentation() {
 
             {/* Section 4 */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 The Seattle Advantage
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -226,7 +226,7 @@ export default function BilingualDocumentation() {
 
             {/* Best Practices */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Best Practices for Bilingual Documentation
               </h2>
               <Card className="mb-6">
@@ -261,7 +261,7 @@ export default function BilingualDocumentation() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -274,7 +274,7 @@ export default function BilingualDocumentation() {
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
                 Need Bilingual Technical Documentation?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
@@ -296,13 +296,13 @@ export default function BilingualDocumentation() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -311,7 +311,7 @@ export default function BilingualDocumentation() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Best Practices</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
               <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
@@ -320,7 +320,7 @@ export default function BilingualDocumentation() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Networking</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 WiFi Setup Guide for Seattle Homes and Offices
               </h3>
               <Button variant="secondary" href="/blog/wifi-setup-guide-seattle" className="w-full mt-4">

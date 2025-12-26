@@ -34,7 +34,7 @@ export default function WiFiSetupGuide() {
             <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
               Networking
             </span>
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               WiFi Setup Guide for Seattle Homes and Offices
             </h1>
             <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
@@ -63,7 +63,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 1: Seattle's Unique WiFi Challenges */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Seattle's Unique WiFi Challenges
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
@@ -72,7 +72,7 @@ export default function WiFiSetupGuide() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Historic Buildings
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -81,7 +81,7 @@ export default function WiFiSetupGuide() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Modern Glass Towers
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -90,7 +90,7 @@ export default function WiFiSetupGuide() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Multi-Story Homes
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -99,7 +99,7 @@ export default function WiFiSetupGuide() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                     Dense Neighborhoods
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
@@ -111,7 +111,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 2: Router Placement */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Step 1: Strategic Router Placement
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -119,7 +119,7 @@ export default function WiFiSetupGuide() {
               </p>
 
               <Card className="bg-blush mb-6">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   The Golden Rules
                 </h3>
                 <ul className="space-y-3 text-gray-medium font-inter">
@@ -142,7 +142,7 @@ export default function WiFiSetupGuide() {
                 </ul>
               </Card>
 
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 What If Your Cable Jack Is In The Wrong Place?
               </h3>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -166,7 +166,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 3: Mesh vs Traditional */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Step 2: Mesh Network vs Traditional Router
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -175,7 +175,7 @@ export default function WiFiSetupGuide() {
 
               <div className="space-y-6 mb-6">
                 <Card className="bg-rose/5">
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     When Mesh Makes Sense
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -202,7 +202,7 @@ export default function WiFiSetupGuide() {
                 </Card>
 
                 <Card className="bg-blush">
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     When a Single Router Works
                   </h3>
                   <ul className="space-y-2 text-gray-medium font-inter">
@@ -241,14 +241,14 @@ export default function WiFiSetupGuide() {
 
             {/* Section 4: Channel Optimization */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Step 3: Optimize Your Channels
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 In dense Seattle neighborhoods, WiFi networks overlap like crazy. Choosing the right channel can dramatically improve performance.
               </p>
 
-              <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                 Understanding WiFi Channels
               </h3>
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
@@ -267,7 +267,7 @@ export default function WiFiSetupGuide() {
               </ul>
 
               <Card className="bg-blush mb-6">
-                <h3 className="font-poppins font-semibold text-lg text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
                   How to Find the Best Channel
                 </h3>
                 <ol className="space-y-2 text-gray-medium font-inter">
@@ -282,7 +282,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 5: Security Setup */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Step 4: Lock Down Security
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -290,7 +290,7 @@ export default function WiFiSetupGuide() {
               </p>
 
               <Card className="mb-6">
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   Essential Security Settings
                 </h3>
                 <ul className="space-y-3 text-gray-medium font-inter">
@@ -336,7 +336,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 6: Advanced Tips */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Advanced Optimization Tips
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -345,7 +345,7 @@ export default function WiFiSetupGuide() {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Enable Band Steering
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -354,7 +354,7 @@ export default function WiFiSetupGuide() {
                 </div>
 
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Adjust Transmit Power
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -363,7 +363,7 @@ export default function WiFiSetupGuide() {
                 </div>
 
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Update Firmware Regularly
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -372,7 +372,7 @@ export default function WiFiSetupGuide() {
                 </div>
 
                 <div>
-                  <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                     Quality of Service (QoS)
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
@@ -384,7 +384,7 @@ export default function WiFiSetupGuide() {
 
             {/* Section 7: Troubleshooting */}
             <div className="mb-16">
-              <h2 className="font-poppins font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
                 Common Issues & Fixes
               </h2>
               <Card className="mb-6">
@@ -411,7 +411,7 @@ export default function WiFiSetupGuide() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-poppins font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -424,7 +424,7 @@ export default function WiFiSetupGuide() {
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-poppins font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
                 Need Professional WiFi Setup?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
@@ -441,13 +441,13 @@ export default function WiFiSetupGuide() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Security</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Network Security Essentials for Remote Teams
               </h3>
               <Button variant="secondary" href="/blog/network-security-remote-teams" className="w-full mt-4">
@@ -456,7 +456,7 @@ export default function WiFiSetupGuide() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -465,7 +465,7 @@ export default function WiFiSetupGuide() {
             </Card>
             <Card hoverable>
               <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-poppins font-semibold text-lg text-charcoal mb-2">
+              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
               <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">

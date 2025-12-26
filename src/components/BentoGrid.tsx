@@ -108,7 +108,7 @@ const BentoGrid = () => {
   return (
     <div className="py-12">
       <div className="mb-10 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white font-poppins mb-4">
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white font-display mb-4">
           Modern IT Solutions Grid
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-400 font-inter max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ const BentoGrid = () => {
                       {item.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white font-poppins mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white font-display mb-2">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 font-inter mb-4">

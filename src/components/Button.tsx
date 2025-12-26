@@ -14,17 +14,17 @@ interface ButtonProps {
 }
 
 const variants = {
-  primary: 'bg-gradient-primary text-white hover:shadow-lg active:scale-95 shadow-md',
-  secondary: 'bg-white text-primary-600 hover:bg-neutral-50 active:bg-neutral-100 border border-neutral-300 shadow-sm',
-  outline: 'border-2 border-primary-500 text-primary-600 hover:bg-primary-50 active:bg-primary-100',
+  primary: 'bg-brand-blue text-white hover:bg-blue-600 active:scale-95 shadow-sm hover:shadow-md',
+  secondary: 'border border-brand-blue text-brand-blue hover:bg-blue-50 active:bg-blue-100',
+  outline: 'border-2 border-brand-blue text-brand-blue hover:bg-blue-50 active:bg-blue-100',
   ghost: 'text-neutral-700 hover:bg-neutral-100 active:bg-neutral-200',
 };
 
 const sizes = {
-  sm: 'px-4 py-2 text-sm rounded-lg',
-  md: 'px-6 py-3 text-base rounded-lg',
-  lg: 'px-8 py-4 text-lg rounded-xl',
-  xl: 'px-10 py-5 text-xl rounded-xl',
+  sm: 'px-4 py-2 text-sm rounded',
+  md: 'px-6 py-3 text-base rounded',
+  lg: 'px-8 py-4 text-lg rounded',
+  xl: 'px-10 py-5 text-xl rounded',
 };
 
 export default function Button({
@@ -40,9 +40,9 @@ export default function Button({
 }: ButtonProps) {
   const baseClasses = `
     inline-flex items-center justify-center
-    font-medium font-inter
-    transition-all duration-300
-    focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+    font-medium font-sans
+    transition-all duration-200
+    focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2
     disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
     hover:-translate-y-0.5 active:translate-y-0
     ${variants[variant]}

@@ -70,7 +70,7 @@ export default function CloudSolutionsPage() {
               <Cloud className="w-4 h-4" />
               <span className="font-inter">Cloud Solutions</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Enterprise
               <span className="block text-gradient-blue mt-2">Cloud Excellence</span>
             </h1>
@@ -91,14 +91,14 @@ export default function CloudSolutionsPage() {
       <section className="py-16 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-semibold text-2xl text-neutral-900 mb-6">
+            <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-6">
               Certified Cloud Partners
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
               {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className={`px-8 py-4 bg-gradient-to-r ${platform.color} text-white rounded-xl font-poppins font-bold text-lg`}
+                  className={`px-8 py-4 bg-gradient-to-r ${platform.color} text-white rounded-xl font-display font-bold text-lg`}
                 >
                   {platform.name}
                 </div>
@@ -115,7 +115,7 @@ export default function CloudSolutionsPage() {
             <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Cloud Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -133,7 +133,7 @@ export default function CloudSolutionsPage() {
                 <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-blue-600">{service.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-neutral-600 font-inter leading-relaxed">
@@ -152,7 +152,7 @@ export default function CloudSolutionsPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Cloud Benefits
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Why Move to the Cloud?
             </h2>
           </div>
@@ -184,7 +184,7 @@ export default function CloudSolutionsPage() {
                 <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-blue-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {benefit.title}
                 </h3>
                 <p className="text-neutral-600 font-inter">
@@ -203,7 +203,7 @@ export default function CloudSolutionsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready for Cloud Transformation?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

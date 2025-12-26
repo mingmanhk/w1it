@@ -137,7 +137,7 @@ export default function ITServices() {
       <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
         <Container>
           <div className="text-center animate-fade-in">
-            <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
               Managed IT Services
             </h1>
             <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-inter">
@@ -155,7 +155,7 @@ export default function ITServices() {
       {/* About Me Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-6">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-6">
             About Me
           </h2>
           <Card className="mb-8">
@@ -174,7 +174,7 @@ export default function ITServices() {
       {/* IT Experience Section */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
             My IT Experience
           </h2>
           <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
@@ -190,7 +190,7 @@ export default function ITServices() {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-medium font-inter">{item.description}</p>
@@ -203,7 +203,7 @@ export default function ITServices() {
       {/* IT Services Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
             IT Services I Offer
           </h2>
           <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
@@ -233,7 +233,7 @@ export default function ITServices() {
       {/* Why Work With Me Section */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Why Work With Me
           </h2>
 
@@ -245,7 +245,7 @@ export default function ITServices() {
                 className="animate-fade-in-up text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-medium font-inter">{item.description}</p>
@@ -259,7 +259,7 @@ export default function ITServices() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-lg text-gray-medium mb-8 font-inter">

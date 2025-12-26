@@ -72,7 +72,7 @@ export default function SecurityPage() {
               <Shield className="w-4 h-4" />
               <span className="font-inter">Cybersecurity</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Enterprise
               <span className="block text-gradient-emerald mt-2">Security Solutions</span>
             </h1>
@@ -93,7 +93,7 @@ export default function SecurityPage() {
       <section className="py-16 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-semibold text-2xl text-neutral-900 mb-8">
+            <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-8">
               Compliance & Standards
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -102,7 +102,7 @@ export default function SecurityPage() {
                   key={index}
                   className="p-4 bg-emerald-50 rounded-xl text-center"
                 >
-                  <div className="text-lg font-bold text-emerald-700 font-poppins mb-1">
+                  <div className="text-lg font-bold text-emerald-700 font-display mb-1">
                     {standard.name}
                   </div>
                   <div className="text-sm text-emerald-600 font-inter">
@@ -122,7 +122,7 @@ export default function SecurityPage() {
             <div className="inline-block px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Security Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -140,7 +140,7 @@ export default function SecurityPage() {
                 <div className="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-emerald-600">{service.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-neutral-600 font-inter leading-relaxed">
@@ -159,7 +159,7 @@ export default function SecurityPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Modern Threats
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Protecting Against Evolving Threats
             </h2>
           </div>
@@ -191,7 +191,7 @@ export default function SecurityPage() {
                 <div className="w-16 h-16 bg-emerald-50 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-emerald-600">{threat.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {threat.title}
                 </h3>
                 <p className="text-neutral-600 font-inter">
@@ -210,7 +210,7 @@ export default function SecurityPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

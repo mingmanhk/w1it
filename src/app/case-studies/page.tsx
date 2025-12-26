@@ -74,7 +74,7 @@ export default function CaseStudiesPage() {
               <TrendingUp className="w-4 h-4" />
               <span className="font-inter">Success Stories</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Client
               <span className="block text-gradient-primary mt-2">Success Stories</span>
             </h1>
@@ -98,7 +98,7 @@ export default function CaseStudiesPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Featured Projects
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Transformative Technology Solutions
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -119,7 +119,7 @@ export default function CaseStudiesPage() {
                       {study.icon}
                     </div>
                   </div>
-                  <h3 className="font-poppins font-bold text-2xl mb-4">
+                  <h3 className="font-display font-bold text-2xl mb-4">
                     {study.title}
                   </h3>
                   <p className="text-white/90 font-inter">
@@ -127,7 +127,7 @@ export default function CaseStudiesPage() {
                   </p>
                 </div>
                 <div className="p-8">
-                  <h4 className="font-poppins font-semibold text-lg text-neutral-900 mb-4">
+                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
                     Key Results
                   </h4>
                   <div className="space-y-3">
@@ -152,7 +152,7 @@ export default function CaseStudiesPage() {
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
               By The Numbers
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Proven Results
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -168,7 +168,7 @@ export default function CaseStudiesPage() {
               { value: '50+', label: 'Enterprise Clients' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-primary-600 font-poppins mb-4">
+                <div className="text-5xl font-bold text-primary-600 font-display mb-4">
                   {stat.value}
                 </div>
                 <div className="text-lg text-neutral-700 font-inter">
@@ -187,7 +187,7 @@ export default function CaseStudiesPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

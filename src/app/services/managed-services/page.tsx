@@ -72,7 +72,7 @@ export default function ManagedServicesPage() {
               <Cpu className="w-4 h-4" />
               <span className="font-inter">Managed IT Services</span>
             </div>
-            <h1 className="font-poppins font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Proactive
               <span className="block text-gradient-violet mt-2">IT Management</span>
             </h1>
@@ -97,7 +97,7 @@ export default function ManagedServicesPage() {
               <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-6 font-inter">
                 Complete IT Management
               </div>
-              <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
                 Your Dedicated IT Team
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
@@ -112,7 +112,7 @@ export default function ManagedServicesPage() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h3 className="font-poppins font-bold text-2xl mb-6">Key Benefits</h3>
+              <h3 className="font-display font-bold text-2xl mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -133,7 +133,7 @@ export default function ManagedServicesPage() {
             <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Services
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Managed Services
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -151,7 +151,7 @@ export default function ManagedServicesPage() {
                 <div className="w-14 h-14 bg-violet-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-violet-600">{service.icon}</div>
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-neutral-600 font-inter leading-relaxed">
@@ -170,7 +170,7 @@ export default function ManagedServicesPage() {
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Service Tiers
             </div>
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Flexible Service Plans
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
@@ -204,7 +204,7 @@ export default function ManagedServicesPage() {
                 className="border border-neutral-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 <div className={`bg-gradient-to-r ${tier.color} text-white p-8 text-center`}>
-                  <h3 className="font-poppins font-bold text-2xl mb-2">{tier.name}</h3>
+                  <h3 className="font-display font-bold text-2xl mb-2">{tier.name}</h3>
                   <p className="font-inter">{tier.description}</p>
                 </div>
                 <div className="p-8">
@@ -233,7 +233,7 @@ export default function ManagedServicesPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-poppins font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
               Ready to Simplify Your IT Management?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">

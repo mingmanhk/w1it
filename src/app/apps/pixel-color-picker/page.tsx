@@ -41,7 +41,7 @@ export default function PixelColorPicker() {
                   macOS • Design Tools
                 </span>
               </div>
-              <h1 className="font-poppins font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Pixel Color Picker
               </h1>
               <p className="text-lg md:text-xl text-gray-medium mb-8 font-inter">
@@ -84,7 +84,7 @@ export default function PixelColorPicker() {
       {/* Features Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Everything You Need
           </h2>
 
@@ -97,7 +97,7 @@ export default function PixelColorPicker() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="font-poppins font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-gray-medium font-inter">{feature.description}</p>
@@ -111,7 +111,7 @@ export default function PixelColorPicker() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Transform Your Workflow?
             </h2>
             <p className="text-lg text-gray-medium mb-8 font-inter">

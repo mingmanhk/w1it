@@ -46,12 +46,12 @@ const ModularGrid: React.FC<ModularGridProps> = ({
   };
 
   const typeClasses: Record<GridItemType, string> = {
-    card: 'bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700',
-    feature: 'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 border border-blue-100 dark:border-blue-900/30',
-    cta: 'bg-gradient-to-br from-blue-600 to-indigo-700 text-white',
-    stats: 'bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900',
-    testimonial: 'bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900',
-    news: 'bg-gradient-to-br from-orange-50 to-amber-50 dark:from-gray-800 dark:to-gray-900',
+    card: 'bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark',
+    feature: 'bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 border border-blue-200 dark:border-blue-900/30',
+    cta: 'bg-gradient-to-br from-brand-blue to-blue-700 text-white',
+    stats: 'bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-gray-800 dark:to-gray-900',
+    testimonial: 'bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-gray-800 dark:to-gray-900',
+    news: 'bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-gray-800 dark:to-gray-900',
   };
 
   const gapClasses = {
@@ -78,20 +78,20 @@ const ModularGrid: React.FC<ModularGridProps> = ({
           >
             {item.icon && (
               <div className="mb-4">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-brand-blue dark:text-brand-blue">
                   {item.icon}
                 </div>
               </div>
             )}
-            <h3 className="font-poppins font-bold text-xl text-gray-900 dark:text-white mb-3">
+            <h3 className="font-display font-bold text-xl text-text-primary dark:text-text-primary mb-3">
               {item.title}
             </h3>
             {item.description && (
-              <p className="text-gray-600 dark:text-gray-400 font-inter mb-6 flex-grow">
+              <p className="text-text-secondary dark:text-text-secondary font-sans mb-6 flex-grow">
                 {item.description}
               </p>
             )}
-            <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 mt-auto">
+            <div className="flex items-center text-brand-blue dark:text-brand-blue font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-auto">
               Learn more
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -109,22 +109,22 @@ const ModularGrid: React.FC<ModularGridProps> = ({
                 {item.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full"
+                    className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-brand-blue dark:text-brand-blue text-xs font-medium rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
             )}
-            <h3 className="font-poppins font-bold text-2xl text-gray-900 dark:text-white mb-4">
+            <h3 className="font-display font-bold text-2xl text-text-primary dark:text-text-primary mb-4">
               {item.title}
             </h3>
             {item.description && (
-              <p className="text-gray-600 dark:text-gray-400 font-inter text-lg mb-6">
+              <p className="text-text-secondary dark:text-text-secondary font-sans text-lg mb-6">
                 {item.description}
               </p>
             )}
-            <div className="flex items-center text-blue-600 dark:text-blue-400 font-medium group-hover:text-blue-700 dark:group-hover:text-blue-300 mt-auto">
+            <div className="flex items-center text-brand-blue dark:text-brand-blue font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 mt-auto">
               Explore feature
               <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
@@ -137,11 +137,11 @@ const ModularGrid: React.FC<ModularGridProps> = ({
             href={item.href}
             className={`${baseClasses} flex flex-col justify-center items-center text-center group`}
           >
-            <h3 className="font-poppins font-bold text-3xl text-white mb-4">
+            <h3 className="font-display font-bold text-3xl text-white mb-4">
               {item.title}
             </h3>
             {item.description && (
-              <p className="text-white/90 font-inter text-lg mb-8 max-w-md">
+              <p className="text-white/90 font-sans text-lg mb-8 max-w-md">
                 {item.description}
               </p>
             )}
@@ -155,17 +155,17 @@ const ModularGrid: React.FC<ModularGridProps> = ({
       case 'stats':
         return (
           <div className={`${baseClasses}`}>
-            <h3 className="font-poppins font-bold text-2xl text-gray-900 dark:text-white mb-6">
+            <h3 className="font-display font-bold text-2xl text-text-primary dark:text-text-primary mb-6">
               {item.title}
             </h3>
             {item.stats && (
               <div className="grid grid-cols-2 gap-4">
                 {item.stats.map((stat, idx) => (
                   <div key={idx} className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 font-poppins mb-1">
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 font-display mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400 font-inter">
+                    <div className="text-sm text-text-secondary dark:text-text-secondary font-sans">
                       {stat.label}
                     </div>
                   </div>
@@ -191,15 +191,15 @@ const ModularGrid: React.FC<ModularGridProps> = ({
             className={`${baseClasses} flex flex-col group`}
           >
             <div className="text-4xl text-green-600 dark:text-green-400 mb-4">"</div>
-            <h3 className="font-poppins font-bold text-xl text-gray-900 dark:text-white mb-4">
+            <h3 className="font-display font-bold text-xl text-text-primary dark:text-text-primary mb-4">
               {item.title}
             </h3>
             {item.description && (
-              <p className="text-gray-600 dark:text-gray-400 font-inter italic mb-6">
+              <p className="text-text-secondary dark:text-text-secondary font-sans italic mb-6">
                 {item.description}
               </p>
             )}
-            <div className="text-sm text-gray-500 dark:text-gray-400 font-inter mt-auto">
+            <div className="text-sm text-text-tertiary dark:text-text-tertiary font-sans mt-auto">
               Read more testimonials
             </div>
           </Link>
@@ -215,15 +215,15 @@ const ModularGrid: React.FC<ModularGridProps> = ({
               <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs font-medium rounded-full">
                 Latest
               </span>
-              <span className="text-sm text-gray-500 dark:text-gray-400 font-inter">
+              <span className="text-sm text-text-tertiary dark:text-text-tertiary font-sans">
                 Just now
               </span>
             </div>
-            <h3 className="font-poppins font-bold text-xl text-gray-900 dark:text-white mb-3">
+            <h3 className="font-display font-bold text-xl text-text-primary dark:text-text-primary mb-3">
               {item.title}
             </h3>
             {item.description && (
-              <p className="text-gray-600 dark:text-gray-400 font-inter mb-6">
+              <p className="text-text-secondary dark:text-text-secondary font-sans mb-6">
                 {item.description}
               </p>
             )}
