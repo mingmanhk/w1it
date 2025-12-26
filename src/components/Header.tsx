@@ -4,7 +4,27 @@ import React, { useState, memo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Container from './Container';
-import { Menu, X, ChevronDown, Phone } from 'lucide-react';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Zap,
+  Wrench,
+  BarChart,
+  Code,
+  MessageSquare,
+  Globe,
+  Cpu,
+  Shield,
+  Cloud,
+  Network,
+  Server,
+  FileText,
+  Database,
+  RefreshCw,
+  Headphones,
+} from 'lucide-react';
 import {
   mainNavigation,
   servicesNavigation,
@@ -16,6 +36,26 @@ import {
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Icon mapping from iconName to component
+  const iconMap: Record<string, React.ReactNode> = {
+    Zap: <Zap className="w-4 h-4" />,
+    Wrench: <Wrench className="w-4 h-4" />,
+    BarChart: <BarChart className="w-4 h-4" />,
+    Code: <Code className="w-4 h-4" />,
+    MessageSquare: <MessageSquare className="w-4 h-4" />,
+    Globe: <Globe className="w-4 h-4" />,
+    Cpu: <Cpu className="w-4 h-4" />,
+    Shield: <Shield className="w-4 h-4" />,
+    Cloud: <Cloud className="w-4 h-4" />,
+    Network: <Network className="w-4 h-4" />,
+    Server: <Server className="w-4 h-4" />,
+    FileText: <FileText className="w-4 h-4" />,
+    Database: <Database className="w-4 h-4" />,
+    RefreshCw: <RefreshCw className="w-4 h-4" />,
+    Headphones: <Headphones className="w-4 h-4" />,
+    Phone: <Phone className="w-4 h-4" />,
+  };
 
   // Helper function to get submenu for a navigation item
   const getSubmenu = (itemName: string) => {
@@ -64,7 +104,9 @@ function Header() {
                     href={item.href}
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-200 flex items-center gap-2 py-3 px-5 font-inter rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900/50"
                   >
-                    {item.icon && <span className="text-blue-600 dark:text-blue-400">{item.icon}</span>}
+                    {item.iconName && iconMap[item.iconName] && (
+                      <span className="text-blue-600 dark:text-blue-400">{iconMap[item.iconName]}</span>
+                    )}
                     <span className="font-semibold">{item.name}</span>
                     {item.badge && (
                       <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
@@ -97,7 +139,7 @@ function Header() {
                                     className="flex items-start gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg p-3 transition-all duration-200 font-inter group/item"
                                   >
                                     <div className="mt-0.5 text-blue-600 dark:text-blue-400 group-hover/item:text-blue-700 dark:group-hover/item:text-blue-300 bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg">
-                                      {subitem.icon}
+                                      {subitem.iconName && iconMap[subitem.iconName]}
                                     </div>
                                     <div className="flex-1">
                                       <div className="font-semibold text-sm flex items-center gap-2">
@@ -130,7 +172,7 @@ function Header() {
                               className="flex items-start gap-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg p-3 transition-all duration-200 font-inter group/item"
                             >
                               <div className="mt-0.5 text-blue-600 dark:text-blue-400 group-hover/item:text-blue-700 dark:group-hover/item:text-blue-300 bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg">
-                                {subitem.icon}
+                                {subitem.iconName && iconMap[subitem.iconName]}
                               </div>
                               <div className="flex-1">
                                 <div className="font-semibold text-sm flex items-center gap-2">
@@ -190,7 +232,9 @@ function Header() {
                       className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-all duration-200 py-4 px-4 font-inter text-base flex items-center gap-3 hover:bg-gray-50 dark:hover:bg-gray-900 rounded-lg"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {item.icon && <span className="text-blue-600 dark:text-blue-400">{item.icon}</span>}
+                      {item.iconName && iconMap[item.iconName] && (
+                      <span className="text-blue-600 dark:text-blue-400">{iconMap[item.iconName]}</span>
+                    )}
                       <span className="font-semibold">{item.name}</span>
                       {item.badge && (
                         <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
@@ -217,7 +261,7 @@ function Header() {
                                       onClick={() => setMobileMenuOpen(false)}
                                     >
                                       <div className="text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg">
-                                        {subitem.icon}
+                                        {subitem.iconName && iconMap[subitem.iconName]}
                                       </div>
                                       <div>
                                         <div className="font-semibold text-sm flex items-center gap-2">
@@ -248,7 +292,7 @@ function Header() {
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               <div className="text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded-lg">
-                                {subitem.icon}
+                                {subitem.iconName && iconMap[subitem.iconName]}
                               </div>
                               <div>
                                 <div className="font-semibold text-sm flex items-center gap-2">

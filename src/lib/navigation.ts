@@ -1,27 +1,10 @@
-import {
-  Zap,
-  Wrench,
-  BarChart,
-  Code,
-  MessageSquare,
-  Globe,
-  Phone,
-  Cpu,
-  Shield,
-  Cloud,
-  Network,
-  Server,
-  FileText,
-  Database,
-  RefreshCw,
-  Smartphone,
-  Headphones,
-} from 'lucide-react';
+// Navigation configuration - no JSX allowed here
+// Icons are referenced by name and will be rendered in components
 
 export interface NavigationItem {
   name: string;
   href: string;
-  icon?: React.ReactNode;
+  iconName?: string; // Icon name instead of React component
   description?: string;
   badge?: string;
   featured?: boolean;
@@ -36,34 +19,34 @@ export const mainNavigation: NavigationItem[] = [
   {
     name: 'Home',
     href: '/',
-    icon: <Zap className="w-4 h-4" />,
+    iconName: 'Zap',
   },
   {
     name: 'Services',
     href: '/services',
-    icon: <Wrench className="w-4 h-4" />,
+    iconName: 'Wrench',
     badge: 'Popular',
   },
   {
     name: 'Solutions',
     href: '/solutions',
-    icon: <BarChart className="w-4 h-4" />,
+    iconName: 'BarChart',
   },
   {
     name: 'Apps',
     href: '/apps',
-    icon: <Code className="w-4 h-4" />,
+    iconName: 'Code',
     badge: 'New',
   },
   {
     name: 'Blog',
     href: '/blog',
-    icon: <MessageSquare className="w-4 h-4" />,
+    iconName: 'MessageSquare',
   },
   {
     name: 'About',
     href: '/about',
-    icon: <Globe className="w-4 h-4" />,
+    iconName: 'Globe',
   },
 ];
 
@@ -74,27 +57,27 @@ export const servicesNavigation: NavigationGroup[] = [
       {
         name: 'Managed IT Services',
         href: '/it-services',
-        icon: <Cpu className="w-4 h-4" />,
+        iconName: 'Cpu',
         description: '24/7 monitoring and proactive maintenance',
         featured: true,
       },
       {
         name: 'Security Solutions',
         href: '/services/security',
-        icon: <Shield className="w-4 h-4" />,
+        iconName: 'Shield',
         description: 'Cybersecurity and threat protection',
         featured: true,
       },
       {
         name: 'Cloud Migration',
         href: '/services/cloud-solutions',
-        icon: <Cloud className="w-4 h-4" />,
+        iconName: 'Cloud',
         description: 'AWS, Azure, Google Cloud solutions',
       },
       {
         name: 'Network Setup',
         href: '/services/network-setup',
-        icon: <Network className="w-4 h-4" />,
+        iconName: 'Network',
         description: 'Secure and scalable infrastructure',
       },
     ],
@@ -105,26 +88,26 @@ export const servicesNavigation: NavigationGroup[] = [
       {
         name: 'IT Consulting',
         href: '/it-consulting',
-        icon: <BarChart className="w-4 h-4" />,
+        iconName: 'BarChart',
         description: 'Strategic technology planning',
         featured: true,
       },
       {
         name: 'Remote Support',
         href: '/services/remote-support',
-        icon: <Headphones className="w-4 h-4" />,
+        iconName: 'Headphones',
         description: 'Quick response troubleshooting',
       },
       {
         name: 'Technical Writing',
         href: '/services/technical-writing',
-        icon: <FileText className="w-4 h-4" />,
+        iconName: 'FileText',
         description: 'Professional documentation',
       },
       {
         name: 'Managed Services',
         href: '/services/managed-services',
-        icon: <Server className="w-4 h-4" />,
+        iconName: 'Server',
         description: '24/7 monitoring and maintenance',
       },
     ],
@@ -135,14 +118,14 @@ export const solutionsNavigation: NavigationItem[] = [
   {
     name: 'Data Analytics',
     href: '/solutions/data-analytics',
-    icon: <Database className="w-4 h-4" />,
+    iconName: 'Database',
     description: 'Business intelligence and insights',
     featured: true,
   },
   {
     name: 'Digital Transformation',
     href: '/solutions/digital-transformation',
-    icon: <RefreshCw className="w-4 h-4" />,
+    iconName: 'RefreshCw',
     description: 'Modernize processes and innovation',
     featured: true,
   },
@@ -177,7 +160,7 @@ export const quickLinks: NavigationItem[] = [
   {
     name: 'Free Consultation',
     href: '/contact',
-    icon: <Phone className="w-4 h-4" />,
+    iconName: 'Phone',
     badge: 'Free',
   },
   {
