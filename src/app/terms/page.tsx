@@ -223,7 +223,7 @@ export default function TermsOfService() {
                       </a>
                     </p>
                     <p>
-                      <strong>Phone:</strong> (206) 555-1234
+                      <strong>Phone:</strong> 832 472 7991
                     </p>
                   </div>
                 </section>

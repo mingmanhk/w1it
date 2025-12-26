@@ -66,8 +66,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-primary-400" />
-                <a href="tel:+12065551234" className="hover:text-primary-400 transition-colors">
-                  (206) 555-1234
+                <a href="tel:+18324727991" className="hover:text-primary-400 transition-colors">
+                  832 472 7991
                 </a>
               </div>
             </div>

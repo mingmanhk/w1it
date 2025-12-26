@@ -249,7 +249,7 @@ export default function CookiePolicy() {
                       <strong>Address:</strong> W1 IT Solutions, Seattle, WA
                     </p>
                     <p>
-                      <strong>Phone:</strong> (206) 555-1234
+                      <strong>Phone:</strong> 832 472 7991
                     </p>
                   </div>
                 </section>
