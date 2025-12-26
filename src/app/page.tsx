@@ -1,10 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import BentoGrid from '@/components/BentoGrid';
+import Breadcrumb from '@/components/Breadcrumb';
+import CategoryNav from '@/components/CategoryNav';
 import {
   Cloud,
   Server,
@@ -29,6 +31,32 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+  const [activeCategory, setActiveCategory] = useState<string>('hero');
+
+  // Handle scroll to detect active category
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['hero', 'services', 'benefits', 'stats', 'clients', 'bento', 'cta'];
+      const scrollPosition = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(`category-${section}`);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveCategory(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const services = [
     {
       icon: <Cpu className="w-10 h-10" />,
@@ -115,8 +143,38 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      {/* Hero Section - Modern Design */}
-      <section className="relative pt-24 pb-32 md:pt-32 md:pb-48 bg-gradient-primary text-white overflow-hidden">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 py-4">
+        <Container>
+          <Breadcrumb
+            items={[
+              { label: 'Home', href: '/', isCurrent: true },
+            ]}
+            className="text-sm"
+          />
+        </Container>
+      </div>
+
+      {/* Main Content with Sidebar */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Category Navigation Sidebar */}
+        <div className="lg:w-64 lg:sticky lg:top-24 lg:self-start lg:pt-8">
+          <Container className="lg:px-0">
+            <CategoryNav
+              activeCategoryId={activeCategory}
+              onCategoryClick={setActiveCategory}
+              sticky={false}
+            />
+          </Container>
+        </div>
+
+        {/* Main Content */}
+        <div className="flex-1">
+          {/* Hero Section - Modern Design */}
+          <section
+            id="category-hero"
+            className="relative pt-12 pb-32 md:pt-20 md:pb-48 bg-gradient-primary text-white overflow-hidden"
+          >
         {/* Modern background effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 to-secondary-900/90" />
         <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-10" />
@@ -153,43 +211,90 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Modern Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center backdrop-blur-sm bg-white/10 rounded-2xl p-6 border border-white/20">
-                  <div className="flex items-center justify-center space-x-2 mb-2">
-                    {stat.icon}
-                    <div className="text-4xl font-bold text-white font-poppins">{stat.value}</div>
-                  </div>
-                  <div className="text-sm text-white/80 font-inter">{stat.label}</div>
-                </div>
-              ))}
-            </div>
+            {/* Modern Stats - Moved to separate section below */}
           </div>
         </Container>
       </section>
 
-      {/* Bento Grid Section - Modern Layout */}
-      <section className="py-16 bg-white dark:bg-gray-950">
+      {/* Stats Section */}
+      <section
+        id="category-stats"
+        className="py-16 bg-gradient-to-br from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800"
+      >
         <Container>
-          <BentoGrid />
-        </Container>
-      </section>
-
-      {/* Services Section - Professional Cards */}
-      <section className="py-24 bg-white">
-        <Container>
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Business IT Services We Offer
+          <div className="mb-12">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 rounded-full text-sm font-medium mb-4 font-inter">
+              <span>Company Stats</span>
             </div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-gray-900 mb-6">
-              Full Suite of Enterprise-Grade Solutions
+            <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 dark:text-white mb-2">
+              Our Performance Metrics
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-              W1IT provides comprehensive IT services tailored to small and midsize businesses in Bellevue and the surrounding area.
+            <p className="text-gray-600 dark:text-gray-400 max-w-3xl font-inter">
+              Quantifiable results and achievements that demonstrate our commitment to excellence
             </p>
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div className="flex items-center justify-center space-x-2 mb-3">
+                  <div className="text-purple-600 dark:text-purple-400">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 dark:text-white font-poppins">
+                    {stat.value}
+                  </div>
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-inter">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+          {/* Bento Grid Section - Modern Layout */}
+          <section
+            id="category-bento"
+            className="py-16 bg-white dark:bg-gray-950"
+          >
+            <Container>
+              <div className="mb-8">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-indigo-50 text-indigo-700 dark:bg-indigo-900/20 dark:text-indigo-300 rounded-full text-sm font-medium mb-4 font-inter">
+                  <span>Solutions Grid</span>
+                </div>
+                <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 dark:text-white mb-2">
+                  Interactive Solutions Explorer
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 font-inter">
+                  Explore our comprehensive IT services through our interactive bento grid
+                </p>
+              </div>
+              <BentoGrid />
+            </Container>
+          </section>
+
+          {/* Services Section - Professional Cards */}
+          <section
+            id="category-services"
+            className="py-24 bg-white"
+          >
+            <Container>
+              <div className="mb-12">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
+                  <span>IT Services</span>
+                </div>
+                <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 mb-2">
+                  Full Suite of Enterprise-Grade Solutions
+                </h2>
+                <p className="text-gray-600 max-w-3xl font-inter">
+                  W1IT provides comprehensive IT services tailored to small and midsize businesses in Bellevue and the surrounding area.
+                </p>
+              </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -233,20 +338,23 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Why Choose Us - Professional Benefits */}
-      <section className="py-24 bg-gray-50">
-        <Container>
-          <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Not Sure What You Need?
-            </div>
-            <h2 className="font-poppins font-bold text-3xl md:text-4xl text-gray-900 mb-6">
-              Expert Guidance for Your Business
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-inter">
-              No problem. Just reach out — we'll assess your environment, listen to your goals, and recommend the right solutions to keep your business secure, efficient, and future-ready.
-            </p>
-          </div>
+          {/* Why Choose Us - Professional Benefits */}
+          <section
+            id="category-benefits"
+            className="py-24 bg-gray-50"
+          >
+            <Container>
+              <div className="mb-12">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-50 text-green-700 rounded-full text-sm font-medium mb-4 font-inter">
+                  <span>Business Benefits</span>
+                </div>
+                <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 mb-2">
+                  Expert Guidance for Your Business
+                </h2>
+                <p className="text-gray-600 max-w-3xl font-inter">
+                  No problem. Just reach out — we'll assess your environment, listen to your goals, and recommend the right solutions to keep your business secure, efficient, and future-ready.
+                </p>
+              </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -267,28 +375,45 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </Container>
+      </section>
 
-          {/* Client Types */}
-          <div className="mt-24 text-center">
-            <h3 className="font-poppins font-semibold text-2xl text-gray-900 mb-8">
-              Trusted by Businesses
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {clients.map((client, index) => (
-                <div
-                  key={index}
-                  className="px-6 py-3 bg-white text-gray-700 rounded-full text-sm font-medium font-inter hover:bg-blue-50 hover:text-blue-700 transition-colors border border-gray-200"
-                >
-                  {client}
-                </div>
-              ))}
+      {/* Client Types Section */}
+      <section
+        id="category-clients"
+        className="py-16 bg-white"
+      >
+        <Container>
+          <div className="mb-12">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-orange-50 text-orange-700 rounded-full text-sm font-medium mb-4 font-inter">
+              <span>Client Types</span>
             </div>
+            <h2 className="font-poppins font-bold text-2xl md:text-3xl text-gray-900 mb-2">
+              Trusted by Businesses
+            </h2>
+            <p className="text-gray-600 max-w-3xl font-inter">
+              We serve a diverse range of organizations across various industries
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="px-6 py-3 bg-white text-gray-700 rounded-full text-sm font-medium font-inter hover:bg-blue-50 hover:text-blue-700 transition-colors border border-gray-200"
+              >
+                {client}
+              </div>
+            ))}
           </div>
         </Container>
       </section>
 
       {/* CTA Section - Professional */}
-      <section className="py-24 bg-blue-600 text-white relative overflow-hidden">
+      <section
+        id="category-cta"
+        className="py-24 bg-blue-600 text-white relative overflow-hidden"
+      >
         {/* Simple background */}
         <div className="absolute top-0 left-0 w-full h-full bg-blue-700 opacity-90" />
         <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern opacity-5" />
@@ -325,6 +450,8 @@ export default function Home() {
           </div>
         </Container>
       </section>
+        </div> {/* Close main content */}
+      </div> {/* Close flex container */}
     </div>
   );
 }
