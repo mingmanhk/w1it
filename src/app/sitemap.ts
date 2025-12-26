@@ -77,6 +77,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/blog/bilingual-documentation-global-trade',
     '/blog/choosing-it-support-model',
+    '/blog/fragmented-it-standardized-infrastructure',
+    '/blog/missing-it-checklist-outage-recovery',
     '/blog/network-security-remote-teams',
     '/blog/top-it-mistakes-small-businesses',
     '/blog/why-businesses-need-it-documentation',

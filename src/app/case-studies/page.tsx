@@ -25,6 +25,7 @@ export default function CaseStudiesPage() {
       results: ['40% cost reduction', '99.99% uptime', 'HIPAA compliant'],
       icon: <Cloud className="w-8 h-8" />,
       gradient: 'from-blue-500 to-cyan-500',
+      link: null,
     },
     {
       title: 'Financial Services Security Overhaul',
@@ -32,6 +33,7 @@ export default function CaseStudiesPage() {
       results: ['SOC 2 certified', 'Zero security incidents', '24/7 monitoring'],
       icon: <Shield className="w-8 h-8" />,
       gradient: 'from-emerald-500 to-green-500',
+      link: null,
     },
     {
       title: 'Manufacturing Digital Transformation',
@@ -39,6 +41,7 @@ export default function CaseStudiesPage() {
       results: ['30% efficiency gain', 'Predictive maintenance', 'Real-time analytics'],
       icon: <Cpu className="w-8 h-8" />,
       gradient: 'from-primary-500 to-accent-500',
+      link: null,
     },
     {
       title: 'Retail Data Analytics Platform',
@@ -46,6 +49,7 @@ export default function CaseStudiesPage() {
       results: ['25% sales increase', 'Real-time insights', 'Customer personalization'],
       icon: <Database className="w-8 h-8" />,
       gradient: 'from-amber-500 to-orange-500',
+      link: null,
     },
     {
       title: 'Education Technology Modernization',
@@ -53,6 +57,7 @@ export default function CaseStudiesPage() {
       results: ['Scalable platform', 'Enhanced learning', 'Cost optimized'],
       icon: <Users className="w-8 h-8" />,
       gradient: 'from-violet-500 to-purple-500',
+      link: null,
     },
     {
       title: 'Startup Infrastructure Scaling',
@@ -60,6 +65,7 @@ export default function CaseStudiesPage() {
       results: ['10x scalability', 'Auto-scaling', 'Cost management'],
       icon: <Zap className="w-8 h-8" />,
       gradient: 'from-pink-500 to-rose-500',
+      link: null,
     },
     {
       title: 'IT Checklist Failure & Rapid Recovery',
@@ -67,6 +73,7 @@ export default function CaseStudiesPage() {
       results: ['Same-day full recovery', 'Zero data loss', 'Proactive monitoring implemented'],
       icon: <AlertTriangle className="w-8 h-8" />,
       gradient: 'from-amber-500 to-orange-500',
+      link: '/blog/missing-it-checklist-outage-recovery',
     },
     {
       title: 'Fragmented IT to Standardized Infrastructure',
@@ -74,6 +81,7 @@ export default function CaseStudiesPage() {
       results: ['80% reduction in undocumented systems', 'Centralized credential management', 'Automated operational processes'],
       icon: <FileText className="w-8 h-8" />,
       gradient: 'from-blue-500 to-cyan-500',
+      link: '/blog/fragmented-it-standardized-infrastructure',
     },
   ];
 
@@ -126,7 +134,7 @@ export default function CaseStudiesPage() {
             {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="animate-fade-in-up bg-white rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 overflow-hidden"
+                className="animate-fade-in-up bg-white rounded-2xl border border-neutral-200 hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`bg-gradient-to-br ${study.gradient} p-8 text-white`}>
@@ -142,11 +150,11 @@ export default function CaseStudiesPage() {
                     {study.description}
                   </p>
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex-grow">
                   <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
                     Key Results
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-3 mb-6">
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
@@ -154,6 +162,16 @@ export default function CaseStudiesPage() {
                       </div>
                     ))}
                   </div>
+                  {study.link && (
+                    <Button
+                      href={study.link}
+                      variant="outline"
+                      className="w-full mt-auto"
+                    >
+                      Read Full Case Study
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}

@@ -27,6 +27,22 @@ export const metadata: Metadata = generateSEO({
 export default function Blog() {
   const articles = [
     {
+      title: 'Case Study: How a Missing Daily IT Checklist Led to a Full Outage — and How Rapid Recovery Saved the Business',
+      slug: 'missing-it-checklist-outage-recovery',
+      excerpt: 'Learn how a professional services firm in Seattle experienced a complete outage due to missing IT checklists, and how structured recovery procedures restored operations within hours.',
+      category: 'Case Study',
+      readTime: '8 min read',
+      date: 'Dec 26, 2024',
+    },
+    {
+      title: 'Case Study: Transforming a Fragmented IT Environment Into a Documented, Standardized, and Automated Infrastructure',
+      slug: 'fragmented-it-standardized-infrastructure',
+      excerpt: 'Learn how we transformed a mid‑sized corporate client’s fragmented IT environment into a documented, standardized, and automated infrastructure with centralized management.',
+      category: 'Case Study',
+      readTime: '7 min read',
+      date: 'Dec 26, 2024',
+    },
+    {
       title: 'Top 5 IT Mistakes Small Businesses Make',
       slug: 'top-it-mistakes-small-businesses',
       excerpt: 'Learn about the most common IT pitfalls that cost Seattle small businesses time and money, and how to avoid them.',
@@ -76,7 +92,7 @@ export default function Blog() {
     },
   ];
 
-  const categories = ['All', 'Business IT', 'Security', 'Networking', 'Documentation', 'Best Practices'];
+  const categories = ['All', 'Case Study', 'Business IT', 'Security', 'Networking', 'Documentation', 'Best Practices'];
 
   return (
     <div>
