@@ -3,7 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Home } from 'lucide-react';
-import { Category, getCategory } from '@/lib/categories';
 
 export interface BreadcrumbItem {
   label: string;
@@ -33,7 +32,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
       <ol className="flex items-center space-x-2">
         {allItems.map((item, index) => {
           const isLast = index === allItems.length - 1;
-          const category = item.categoryId ? getCategory(item.categoryId) : undefined;
 
           return (
             <li key={index} className="flex items-center space-x-2">
@@ -51,7 +49,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
                 </Link>
               ) : (
                 <div
-                  className={`flex items-center space-x-1 ${category ? `text-${category.color}-600 dark:text-${category.color}-400` : 'text-gray-900 dark:text-white'}`}
+                  className="flex items-center space-x-1 text-gray-900 dark:text-white"
                   aria-current={isLast ? 'page' : undefined}
                 >
                   {item.icon && <span className="mr-1">{item.icon}</span>}
@@ -64,26 +62,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
       </ol>
     </nav>
   );
-};
-
-// Category breadcrumb component for page sections
-interface CategoryBreadcrumbProps {
-  currentCategoryId: string;
-  className?: string;
-}
-
-export const CategoryBreadcrumb: React.FC<CategoryBreadcrumbProps> = ({
-  currentCategoryId,
-  className = ''
-}) => {
-  const category = getCategory(currentCategoryId);
-  const allCategories = [
-    { label: 'Home', href: '/' },
-    { label: 'Page Sections', href: '#sections' },
-    ...(category ? [{ label: category.name, categoryId: category.id, isCurrent: true }] : [])
-  ];
-
-  return <Breadcrumb items={allCategories} showHome={false} className={className} />;
 };
 
 export default Breadcrumb;
