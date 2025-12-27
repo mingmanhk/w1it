@@ -17,7 +17,7 @@ const PrivacyPolicyPage: NextPage = () => {
             <div className="prose prose-lg max-w-none text-brand-gray-mid font-body">
               <p>Last updated: October 26, 2023</p>
 
-              <p>Your privacy is important to us. This Privacy Policy explains how W1 IT Solutions ("we," "us," or "our") collects, uses, and protects your personal information when you visit our website, use our services, or interact with us.</p>
+              <p>Your privacy is important to us. This Privacy Policy explains how W1 IT Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) collects, uses, and protects your personal information when you visit our website, use our services, or interact with us.</p>
 
               <h2 className="font-heading font-bold text-h2 text-brand-navy mt-12 mb-4">1. Information We Collect</h2>
               <p>We may collect the following types of personal information:</p>
