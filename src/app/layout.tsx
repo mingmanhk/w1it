@@ -23,6 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://w1it.com'),
+  viewport: 'width=device-width, initial-scale=1',
   title: {
     default: "W1 IT Solutions | Seattle-Based IT Services & Cloud Solutions",
     template: "%s | W1 IT Solutions"
