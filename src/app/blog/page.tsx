@@ -3,6 +3,7 @@ import { generateSEO } from '@/lib/seo';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import { BookOpen, MessageSquare, ArrowRight, Sparkles, Calendar, Clock, TrendingUp, Zap, Shield, Globe, Database, FileText } from 'lucide-react';
 
 export const metadata: Metadata = generateSEO({
   title: 'IT Insights & Tech Blog - Seattle IT Tips',
@@ -95,75 +96,166 @@ export default function Blog() {
   const categories = ['All', 'Case Study', 'Business IT', 'Security', 'Networking', 'Documentation', 'Best Practices'];
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
+    <div className="overflow-hidden">
+      {/* Enhanced Hero Section */}
+      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-to-b from-white to-primary-50 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl animate-pulse-subtle" />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: '2s' }} />
+
         <Container>
-          <div className="text-center animate-fade-in">
-            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-10 animate-fade-in bg-white/80 backdrop-blur-sm">
+              <BookOpen className="w-4 h-4" />
+              <span className="font-inter">Expert IT Insights</span>
+            </div>
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-neutral-900 mb-10 leading-tight animate-fade-in-up">
               IT Insights & Resources
+              <span className="block text-gradient-primary mt-3">For Seattle Businesses</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-medium max-w-2xl mx-auto mb-8 font-inter">
-              Expert advice on IT management, network security, and technology best practices for
-              Seattle businesses.
+            <p className="text-xl md:text-2xl text-neutral-600 mb-14 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                <MessageSquare className="w-5 h-5 mr-3" />
+                Subscribe to Newsletter
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
+              </Button>
+              <Button href="#featured" variant="outline" size="xl" className="border-primary-500 text-primary-600 hover:bg-primary-50 transition-all duration-300">
+                <Sparkles className="w-5 h-5 mr-3" />
+                Read Featured Article
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Enhanced Category Filter */}
+      <section className="py-12 bg-white border-b border-neutral-200">
+        <Container>
+          <div className="text-center mb-8">
+            <h3 className="font-display font-semibold text-lg text-neutral-700 mb-4 font-inter">
+              Browse by Category
+            </h3>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className={`px-5 py-2.5 rounded-full font-inter text-sm font-medium transition-all duration-300 ${
+                    category === 'All'
+                      ? 'bg-gradient-primary text-white shadow-md hover:shadow-lg'
+                      : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-800'
+                  }`}
+                >
+                  {category}
+                  {category === 'Case Study' && ' 📊'}
+                  {category === 'Security' && ' 🔒'}
+                  {category === 'Networking' && ' 📡'}
+                  {category === 'Documentation' && ' 📝'}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="text-center text-sm text-neutral-500 font-inter">
+            Filter articles by topic to find exactly what you need
+          </p>
+        </Container>
+      </section>
+
+      {/* Enhanced Featured Article */}
+      <section id="featured" className="py-20 md:py-32 bg-gradient-to-b from-white to-neutral-50">
+        <Container>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full text-sm font-medium mb-6 font-inter">
+              <Sparkles className="w-4 h-4" />
+              <span>Editor's Pick</span>
+            </div>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              Featured Article
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto font-inter">
+              Our most popular and impactful article for Seattle businesses
             </p>
           </div>
-        </Container>
-      </section>
 
-      {/* Category Filter */}
-      <section className="py-8 bg-white border-b border-gray-200">
-        <Container>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`px-4 py-2 rounded-full font-inter text-sm transition-colors ${
-                  category === 'All'
-                    ? 'bg-rose text-white'
-                    : 'bg-gray-100 text-gray-medium hover:bg-gray-200'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Featured Article */}
-      <section className="py-20 md:py-32">
-        <Container>
-          <div className="mb-12">
-            <span className="text-sm font-inter font-medium text-rose bg-blush px-3 py-1 rounded-full">
-              Featured
-            </span>
-          </div>
-          <Card hoverable className="mb-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <div className="bg-gradient-to-br from-blush to-white rounded-lg h-64 mb-4 flex items-center justify-center">
-                  <span className="text-6xl">💼</span>
+          <Card hoverable className="mb-16 border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300 hover:shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+              <div className="bg-gradient-to-br from-primary-500 to-cyan-500 p-12 text-white flex flex-col justify-center">
+                <div className="mb-8">
+                  <span className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium font-inter">
+                    <TrendingUp className="w-4 h-4" />
+                    <span>Business IT</span>
+                  </span>
                 </div>
-              </div>
-              <div className="flex flex-col justify-center">
-                <span className="text-xs font-inter font-medium text-rose mb-2">Business IT</span>
-                <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+                <h2 className="font-display font-bold text-4xl md:text-5xl mb-8 leading-tight">
                   Top 5 IT Mistakes Small Businesses Make
                 </h2>
-                <p className="text-gray-medium font-inter mb-6">
+                <p className="text-white/90 font-inter text-lg mb-8 leading-relaxed">
                   Running a small business in Seattle? These common IT mistakes could be costing you time,
-                  money, and productivity. Learn how to avoid them and set your business up for success with
-                  proper IT planning and support.
+                  money, and productivity. Learn how to avoid them and set your business up for success.
                 </p>
-                <div className="flex items-center gap-4 mb-6 text-sm text-gray-medium font-inter">
-                  <span>Dec 8, 2024</span>
-                  <span>•</span>
-                  <span>5 min read</span>
+                <div className="flex items-center gap-6 mb-8 text-white/80 font-inter">
+                  <div className="flex items-center space-x-2">
+                    <Calendar className="w-5 h-5" />
+                    <span>Dec 8, 2024</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Clock className="w-5 h-5" />
+                    <span>5 min read</span>
+                  </div>
                 </div>
-                <Button href="/blog/top-it-mistakes-small-businesses">
-                  Read Article →
+                <Button
+                  href="/blog/top-it-mistakes-small-businesses"
+                  variant="secondary"
+                  size="lg"
+                  className="bg-white text-primary-600 hover:bg-neutral-100 w-fit"
+                >
+                  Read Full Article
+                  <ArrowRight className="w-5 h-5 ml-3" />
                 </Button>
+              </div>
+              <div className="p-12 flex flex-col justify-center bg-gradient-to-br from-neutral-50 to-white">
+                <h3 className="font-display font-bold text-2xl text-neutral-900 mb-6">
+                  Key Takeaways:
+                </h3>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-lg text-neutral-900 mb-1">Poor Security Practices</h4>
+                      <p className="text-neutral-600 font-inter text-sm">Weak passwords and lack of backups put your business at risk</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Database className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-lg text-neutral-900 mb-1">No Data Backup Strategy</h4>
+                      <p className="text-neutral-600 font-inter text-sm">Critical data loss can cripple small businesses</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-lg text-neutral-900 mb-1">Outdated Technology</h4>
+                      <p className="text-neutral-600 font-inter text-sm">Old systems slow productivity and increase security risks</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <FileText className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-display font-semibold text-lg text-neutral-900 mb-1">Lack of Documentation</h4>
+                      <p className="text-neutral-600 font-inter text-sm">No processes documented leads to chaos during transitions</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
