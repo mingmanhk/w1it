@@ -48,7 +48,7 @@ export default function FragmentedITStandardizedInfrastructure() {
             <p className="text-lg text-gray-medium font-inter">
               A mid‑sized corporate client operating across multiple business units approached me with a familiar
               challenge: their IT environment had grown organically without centralized oversight. Systems were
-              functional, but institutional knowledge lived inside individual employees' heads.
+              functional, but institutional knowledge lived inside individual employees&apos; heads.
             </p>
           </div>
         </Container>
@@ -76,7 +76,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                 A mid‑sized corporate client operating across multiple business units approached me with a
                 familiar challenge: their IT environment had grown organically over several years without
                 centralized oversight. Systems were functional, but institutional knowledge lived inside
-                individual employees' heads. Documentation was inconsistent or missing entirely, and critical
+                individual employees&apos; heads. Documentation was inconsistent or missing entirely, and critical
                 processes depended on tribal knowledge rather than repeatable standards.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
@@ -91,7 +91,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                 Initial Engagement
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                I was brought in as an IT consultant to "make sense of the environment" and help stabilize
+                I was brought in as an IT consultant to &quot;make sense of the environment&quot; and help stabilize
                 operations. My first step in any engagement is rapid situational awareness. Within the first
                 few days, I performed a high‑level assessment of:
               </p>
@@ -173,7 +173,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                   <span className="text-rose mt-1">•</span>
                   <span>
                     <strong>Lack of visibility:</strong> Leadership had no clear picture of the
-                    environment's health or dependencies.
+                    environment&apos;s health or dependencies.
                   </span>
                 </li>
               </ul>
@@ -223,7 +223,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                 </li>
               </ul>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                This wasn't just documentation — it was a knowledge system designed for long‑term maintainability.
+                This wasn&apos;t just documentation — it was a knowledge system designed for long‑term maintainability.
               </p>
 
               <h3 className="font-display font-semibold text-2xl text-charcoal mb-3">
@@ -327,7 +327,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                 </li>
               </ul>
               <p className="text-gray-medium font-inter leading-relaxed">
-                Automation didn't replace the IT team — it empowered them to focus on higher‑value work.
+                Automation didn&apos;t replace the IT team — it empowered them to focus on higher‑value work.
               </p>
             </div>
 
@@ -395,9 +395,9 @@ export default function FragmentedITStandardizedInfrastructure() {
               </h2>
               <Card className="mb-6 bg-blush">
                 <p className="text-charcoal font-inter italic leading-relaxed">
-                  "Victor brought order to chaos. He didn't just fix problems — he built a foundation that
+                  &quot;Victor brought order to chaos. He didn&apos;t just fix problems — he built a foundation that
                   will support us for years. Our IT team is more efficient, our systems are more reliable,
-                  and we finally understand our own environment."
+                  and we finally understand our own environment.&quot;
                 </p>
               </Card>
             </div>
@@ -413,8 +413,8 @@ export default function FragmentedITStandardizedInfrastructure() {
                 infrastructure with clear processes and reduced operational risk.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
-                The key to successful IT transformation isn't just technical expertise — it's the ability to
-                build systems that outlast any individual's tenure and create sustainable operational
+                The key to successful IT transformation isn&apos;t just technical expertise — it&apos;s the ability to
+                build systems that outlast any individual&apos;s tenure and create sustainable operational
                 excellence.
               </p>
             </Card>
@@ -425,7 +425,7 @@ export default function FragmentedITStandardizedInfrastructure() {
                 Ready to Transform Your IT Environment?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
-                Whether you're dealing with fragmented systems, documentation gaps, or manual processes,
+                Whether you&apos;re dealing with fragmented systems, documentation gaps, or manual processes,
                 we can help you build a foundation for long‑term IT success.
               </p>
               <Button href="/contact" size="lg">

@@ -45,7 +45,7 @@ export default function WiFiSetupGuide() {
               <span>Networking</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              Seattle's unique building types—from historic brick to modern glass towers—present specific WiFi challenges. Here's how to get rock-solid coverage.
+              Seattle&apos;s unique building types—from historic brick to modern glass towers—present specific WiFi challenges. Here&apos;s how to get rock-solid coverage.
             </p>
           </div>
         </Container>
@@ -57,17 +57,17 @@ export default function WiFiSetupGuide() {
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
-                Poor WiFi is one of the most common tech complaints I hear from Seattle businesses and homeowners. Dead zones, slow speeds, dropped connections—it's frustrating and completely unnecessary. With the right setup, you can have fast, reliable WiFi throughout your space. Here's how.
+                Poor WiFi is one of the most common tech complaints I hear from Seattle businesses and homeowners. Dead zones, slow speeds, dropped connections—it&apos;s frustrating and completely unnecessary. With the right setup, you can have fast, reliable WiFi throughout your space. Here&apos;s how.
               </p>
             </Card>
 
             {/* Section 1: Seattle's Unique WiFi Challenges */}
             <div className="mb-16">
               <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
-                Seattle's Unique WiFi Challenges
+                Seattle&apos;s Unique WiFi Challenges
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                Seattle buildings aren't like anywhere else. Understanding these challenges is the first step to solving them:
+                Seattle buildings aren&apos;t like anywhere else. Understanding these challenges is the first step to solving them:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -76,7 +76,7 @@ export default function WiFiSetupGuide() {
                     Historic Buildings
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Pioneer Square, Capitol Hill, and Ballard are full of beautiful old brick buildings. They're also WiFi killers—thick brick walls block signals like a fortress.
+                    Pioneer Square, Capitol Hill, and Ballard are full of beautiful old brick buildings. They&apos;re also WiFi killers—thick brick walls block signals like a fortress.
                   </p>
                 </Card>
 
@@ -85,7 +85,7 @@ export default function WiFiSetupGuide() {
                     Modern Glass Towers
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Downtown's glass and steel buildings have their own issues—metal studs, concrete cores, and low-E glass all interfere with WiFi signals.
+                    Downtown&apos;s glass and steel buildings have their own issues—metal studs, concrete cores, and low-E glass all interfere with WiFi signals.
                   </p>
                 </Card>
 
@@ -94,7 +94,7 @@ export default function WiFiSetupGuide() {
                     Multi-Story Homes
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Seattle homes often have multiple levels with basements. Getting signal from the router in the basement to the home office on the third floor? That's a challenge.
+                    Seattle homes often have multiple levels with basements. Getting signal from the router in the basement to the home office on the third floor? That&apos;s a challenge.
                   </p>
                 </Card>
 
@@ -103,7 +103,7 @@ export default function WiFiSetupGuide() {
                     Dense Neighborhoods
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    In areas like Fremont or Wallingford, you're competing with dozens of neighboring WiFi networks for clean channels.
+                    In areas like Fremont or Wallingford, you&apos;re competing with dozens of neighboring WiFi networks for clean channels.
                   </p>
                 </Card>
               </div>
@@ -115,7 +115,7 @@ export default function WiFiSetupGuide() {
                 Step 1: Strategic Router Placement
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Your router's location is the single most important factor in WiFi performance. Here's the science behind optimal placement:
+                Your router&apos;s location is the single most important factor in WiFi performance. Here&apos;s the science behind optimal placement:
               </p>
 
               <Card className="bg-blush mb-6">
@@ -234,7 +234,7 @@ export default function WiFiSetupGuide() {
                   Skip These: WiFi Range Extenders
                 </p>
                 <p className="text-gray-medium font-inter">
-                  Traditional WiFi extenders create a separate network, force you to manually switch, and cut your speed in half. If you need to extend coverage, go mesh—it's worth the extra cost.
+                  Traditional WiFi extenders create a separate network, force you to manually switch, and cut your speed in half. If you need to extend coverage, go mesh—it&apos;s worth the extra cost.
                 </p>
               </Card>
             </div>
@@ -254,7 +254,7 @@ export default function WiFiSetupGuide() {
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-charcoal font-semibold">2.4 GHz:</span>
-                  <span>Better range, penetrates walls well, but crowded. Use channels 1, 6, or 11 only (they don't overlap).</span>
+                  <span>Better range, penetrates walls well, but crowded. Use channels 1, 6, or 11 only (they don&apos;t overlap).</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-charcoal font-semibold">5 GHz:</span>
@@ -275,7 +275,7 @@ export default function WiFiSetupGuide() {
                   <li>2. Scan to see which channels are most congested</li>
                   <li>3. Choose the least crowded channel in your router settings</li>
                   <li>4. For 2.4 GHz, stick to channels 1, 6, or 11</li>
-                  <li>5. Enable "Auto" channel selection on 5 GHz—routers usually do a good job</li>
+                  <li>5. Enable &quot;Auto&quot; channel selection on 5 GHz—routers usually do a good job</li>
                 </ol>
               </Card>
             </div>
@@ -286,7 +286,7 @@ export default function WiFiSetupGuide() {
                 Step 4: Lock Down Security
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                An unsecured WiFi network is like leaving your front door wide open. Here's how to secure your network properly:
+                An unsecured WiFi network is like leaving your front door wide open. Here&apos;s how to secure your network properly:
               </p>
 
               <Card className="mb-6">
@@ -303,7 +303,7 @@ export default function WiFiSetupGuide() {
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">2.</span>
                     <div>
-                      <strong className="text-charcoal">Use WPA3 encryption:</strong> Or WPA2 if your devices are older. Never use WEP—it's ancient and insecure.
+                      <strong className="text-charcoal">Use WPA3 encryption:</strong> Or WPA2 if your devices are older. Never use WEP—it&apos;s ancient and insecure.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -315,7 +315,7 @@ export default function WiFiSetupGuide() {
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">4.</span>
                     <div>
-                      <strong className="text-charcoal">Disable WPS:</strong> This "easy setup" feature is a security hole. Turn it off.
+                      <strong className="text-charcoal">Disable WPS:</strong> This &quot;easy setup&quot; feature is a security hole. Turn it off.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -340,7 +340,7 @@ export default function WiFiSetupGuide() {
                 Advanced Optimization Tips
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Once you've nailed the basics, these advanced tweaks can squeeze out even better performance:
+                Once you&apos;ve nailed the basics, these advanced tweaks can squeeze out even better performance:
               </p>
 
               <div className="space-y-6">
@@ -349,7 +349,7 @@ export default function WiFiSetupGuide() {
                     Enable Band Steering
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
-                    This feature automatically pushes devices to 5 GHz when they're close enough, saving the 2.4 GHz band for devices that need the range. Check your router settings to enable it.
+                    This feature automatically pushes devices to 5 GHz when they&apos;re close enough, saving the 2.4 GHz band for devices that need the range. Check your router settings to enable it.
                   </p>
                 </div>
 
@@ -358,7 +358,7 @@ export default function WiFiSetupGuide() {
                     Adjust Transmit Power
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
-                    More power isn't always better—it can actually increase interference. For mesh systems, lower transmit power helps nodes hand off devices smoothly.
+                    More power isn&apos;t always better—it can actually increase interference. For mesh systems, lower transmit power helps nodes hand off devices smoothly.
                   </p>
                 </div>
 
@@ -376,7 +376,7 @@ export default function WiFiSetupGuide() {
                     Quality of Service (QoS)
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
-                    Prioritize important traffic like video calls over things like downloads. Essential if you're working from home and competing with Netflix-watching housemates.
+                    Prioritize important traffic like video calls over things like downloads. Essential if you&apos;re working from home and competing with Netflix-watching housemates.
                   </p>
                 </div>
               </div>
@@ -403,7 +403,7 @@ export default function WiFiSetupGuide() {
                   </div>
                   <div>
                     <p className="font-semibold text-charcoal mb-1">Connection drops when moving between floors:</p>
-                    <p>Mesh system needed, or adjust roaming settings. Some devices are "sticky" and won't switch access points automatically.</p>
+                    <p>Mesh system needed, or adjust roaming settings. Some devices are &quot;sticky&quot; and won&apos;t switch access points automatically.</p>
                   </div>
                 </div>
               </Card>
@@ -415,7 +415,7 @@ export default function WiFiSetupGuide() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Great WiFi isn't magic—it's physics plus planning. Whether you're setting up a Capitol Hill apartment or a Bellevue office, these principles will get you reliable, fast coverage throughout your space.
+                Great WiFi isn&apos;t magic—it&apos;s physics plus planning. Whether you&apos;re setting up a Capitol Hill apartment or a Bellevue office, these principles will get you reliable, fast coverage throughout your space.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
                 Still struggling with WiFi dead zones or slow speeds? Sometimes professional help is worth it—we can survey your space, identify issues, and implement the right solution.

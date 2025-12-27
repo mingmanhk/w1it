@@ -45,7 +45,7 @@ export default function WhyITDocumentation() {
               <span>Best Practices</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              IT documentation isn't sexy, but it's the difference between a business that runs smoothly and one that grinds to a halt when key people are unavailable.
+              IT documentation isn&apos;t sexy, but it&apos;s the difference between a business that runs smoothly and one that grinds to a halt when key people are unavailable.
             </p>
           </div>
         </Container>
@@ -57,7 +57,7 @@ export default function WhyITDocumentation() {
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
-                It's 2 AM. Your server is down. The person who set it up left the company six months ago. Nobody knows the admin password. Nobody knows where the backup configurations are stored. Your business is offline, and the clock is ticking. This scenario is entirely preventable with proper IT documentation.
+                It&apos;s 2 AM. Your server is down. The person who set it up left the company six months ago. Nobody knows the admin password. Nobody knows where the backup configurations are stored. Your business is offline, and the clock is ticking. This scenario is entirely preventable with proper IT documentation.
               </p>
             </Card>
 
@@ -67,7 +67,7 @@ export default function WhyITDocumentation() {
                 The Real Cost of No Documentation
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                Let's be honest: most small businesses don't have comprehensive IT documentation. "It's all in Bob's head" or "We'll document it later" are common refrains. But this technical debt compounds fast:
+                Let&apos;s be honest: most small businesses don&apos;t have comprehensive IT documentation. &quot;It&apos;s all in Bob&apos;s head&quot; or &quot;We&apos;ll document it later&quot; are common refrains. But this technical debt compounds fast:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -76,7 +76,7 @@ export default function WhyITDocumentation() {
                     When Employees Leave
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Your IT person quits. Suddenly nobody knows WiFi passwords, server configurations, vendor accounts, or which services you're even paying for. You're essentially starting from scratch.
+                    Your IT person quits. Suddenly nobody knows WiFi passwords, server configurations, vendor accounts, or which services you&apos;re even paying for. You&apos;re essentially starting from scratch.
                   </p>
                 </Card>
 
@@ -94,7 +94,7 @@ export default function WhyITDocumentation() {
                     For New Hires
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Onboarding new IT staff takes 3-6 months instead of 3-6 weeks because they have to reverse-engineer everything. That's months of reduced productivity you're paying for.
+                    Onboarding new IT staff takes 3-6 months instead of 3-6 weeks because they have to reverse-engineer everything. That&apos;s months of reduced productivity you&apos;re paying for.
                   </p>
                 </Card>
 
@@ -103,14 +103,14 @@ export default function WhyITDocumentation() {
                     Vendor Lock-In
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    Without documentation, you're completely dependent on your current IT vendor. They can charge whatever they want because switching would be impossibly complex.
+                    Without documentation, you&apos;re completely dependent on your current IT vendor. They can charge whatever they want because switching would be impossibly complex.
                   </p>
                 </Card>
               </div>
 
               <Card className="bg-blush">
                 <p className="text-charcoal font-inter">
-                  <strong>Real Example:</strong> A Seattle startup I worked with spent $15,000 recovering from a server failure because they had zero documentation. With proper docs, it would've been a 30-minute restore job.
+                  <strong>Real Example:</strong> A Seattle startup I worked with spent $15,000 recovering from a server failure because they had zero documentation. With proper docs, it would&apos;ve been a 30-minute restore job.
                 </p>
               </Card>
             </div>
@@ -121,7 +121,7 @@ export default function WhyITDocumentation() {
                 What Should You Document?
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                IT documentation doesn't mean documenting everything—that's overwhelming and counterproductive. Focus on these critical areas:
+                IT documentation doesn&apos;t mean documenting everything—that&apos;s overwhelming and counterproductive. Focus on these critical areas:
               </p>
 
               <div className="space-y-6">
@@ -188,11 +188,11 @@ export default function WhyITDocumentation() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-rose mt-1">•</span>
-                      <span>What each server does (don't name them "PROD01"—use descriptive names)</span>
+                      <span>What each server does (don&apos;t name them &quot;PROD01&quot;—use descriptive names)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-rose mt-1">•</span>
-                      <span>Cloud services you're using (AWS, Azure, Google Cloud, etc.)</span>
+                      <span>Cloud services you&apos;re using (AWS, Azure, Google Cloud, etc.)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-rose mt-1">•</span>
@@ -285,7 +285,7 @@ export default function WhyITDocumentation() {
                 How to Start Documenting (Without Overwhelm)
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                The biggest mistake is trying to document everything at once. You'll burn out and quit. Instead:
+                The biggest mistake is trying to document everything at once. You&apos;ll burn out and quit. Instead:
               </p>
 
               <Card className="bg-blush mb-6">
@@ -295,15 +295,15 @@ export default function WhyITDocumentation() {
                 <ol className="space-y-3 text-gray-medium font-inter">
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">Week 1:</span>
-                    <span>Document passwords and accounts in a password manager. This alone solves most "I'm locked out" scenarios.</span>
+                    <span>Document passwords and accounts in a password manager. This alone solves most &quot;I&apos;m locked out&quot; scenarios.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">Week 2:</span>
-                    <span>Create a network diagram. Use draw.io or Lucidchart—doesn't need to be perfect, just accurate.</span>
+                    <span>Create a network diagram. Use draw.io or Lucidchart—doesn&apos;t need to be perfect, just accurate.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">Week 3:</span>
-                    <span>List all software/SaaS subscriptions with renewal dates. This often reveals you're paying for stuff nobody uses.</span>
+                    <span>List all software/SaaS subscriptions with renewal dates. This often reveals you&apos;re paying for stuff nobody uses.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">Week 4:</span>
@@ -323,7 +323,7 @@ export default function WhyITDocumentation() {
                 Documentation Tools That Actually Work
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                You don't need expensive enterprise software. Here's what Seattle businesses I work with use successfully:
+                You don&apos;t need expensive enterprise software. Here&apos;s what Seattle businesses I work with use successfully:
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -377,7 +377,7 @@ export default function WhyITDocumentation() {
                 The Secret to Keeping Documentation Current
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Here's the hard truth: documentation gets outdated fast. The secret isn't trying harder to keep everything updated—it's building documentation into your workflow:
+                Here&apos;s the hard truth: documentation gets outdated fast. The secret isn&apos;t trying harder to keep everything updated—it&apos;s building documentation into your workflow:
               </p>
 
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
@@ -391,7 +391,7 @@ export default function WhyITDocumentation() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
-                  <span><strong>When someone asks "how do I...?",</strong> write down the answer—that's your knowledge base</span>
+                  <span><strong>When someone asks &quot;how do I...?&quot;,</strong> write down the answer—that&apos;s your knowledge base</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
@@ -401,7 +401,7 @@ export default function WhyITDocumentation() {
 
               <Card className="bg-blush">
                 <p className="text-charcoal font-inter">
-                  Make documentation a requirement, not a nice-to-have. Don't approve changes or new systems unless they're documented first.
+                  Make documentation a requirement, not a nice-to-have. Don&apos;t approve changes or new systems unless they&apos;re documented first.
                 </p>
               </Card>
             </div>
@@ -412,7 +412,7 @@ export default function WhyITDocumentation() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                IT documentation isn't glamorous. It won't impress customers or boost sales. But it's the foundation of a resilient business that can survive employee turnover, recover from disasters, and scale without chaos.
+                IT documentation isn&apos;t glamorous. It won&apos;t impress customers or boost sales. But it&apos;s the foundation of a resilient business that can survive employee turnover, recover from disasters, and scale without chaos.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
                 The best time to start documenting was when you set everything up. The second-best time is right now.

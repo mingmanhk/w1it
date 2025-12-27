@@ -19,10 +19,8 @@ import {
   BookOpen,
   Cpu,
   RefreshCw,
-  Wrench,
   Linkedin,
   Github,
-  ExternalLink,
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -247,7 +245,7 @@ export default function AboutPage() {
                   </li>
                 </ul>
                 <p className="text-neutral-700 font-inter text-lg leading-relaxed">
-                  Victor's approach is calm, methodical, and rooted in operational clarity — ensuring clients always understand the "why" behind every recommendation.
+                  Victor&apos;s approach is calm, methodical, and rooted in operational clarity — ensuring clients always understand the &quot;why&quot; behind every recommendation.
                 </p>
               </div>
 
@@ -403,7 +401,7 @@ export default function AboutPage() {
               <span className="font-inter">Ready to Partner?</span>
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Let's Build Something Stable, Scalable, and Smart
+              Let&apos;s Build Something Stable, Scalable, and Smart
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
               Schedule a free consultation to discuss your specific needs and discover how we can help transform your IT operations.

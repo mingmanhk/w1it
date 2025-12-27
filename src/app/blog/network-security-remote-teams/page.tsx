@@ -45,7 +45,7 @@ export default function NetworkSecurityRemoteTeams() {
               <span>Security</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              The shift to remote work opened up incredible opportunities for Seattle businesses—but it also created new security vulnerabilities. Here's how to protect your team.
+              The shift to remote work opened up incredible opportunities for Seattle businesses—but it also created new security vulnerabilities. Here&apos;s how to protect your team.
             </p>
           </div>
         </Container>
@@ -57,7 +57,7 @@ export default function NetworkSecurityRemoteTeams() {
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
-                When COVID-19 forced businesses to go remote almost overnight, security often took a back seat to simply keeping operations running. Now that remote work is here to stay, it's time to shore up those security gaps. Whether your team is scattered across Seattle or truly worldwide, these security essentials will help keep your business protected.
+                When COVID-19 forced businesses to go remote almost overnight, security often took a back seat to simply keeping operations running. Now that remote work is here to stay, it&apos;s time to shore up those security gaps. Whether your team is scattered across Seattle or truly worldwide, these security essentials will help keep your business protected.
               </p>
             </Card>
 
@@ -104,11 +104,11 @@ export default function NetworkSecurityRemoteTeams() {
                 Essential #1: Business-Grade VPN
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                A Virtual Private Network (VPN) creates an encrypted tunnel between your employee's device and your company network. Think of it as a secure, private highway for your data.
+                A Virtual Private Network (VPN) creates an encrypted tunnel between your employee&apos;s device and your company network. Think of it as a secure, private highway for your data.
               </p>
 
               <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
-                Why Consumer VPNs Aren't Enough
+                Why Consumer VPNs Aren&apos;t Enough
               </h3>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 While consumer VPNs like NordVPN or ExpressVPN are fine for personal use, businesses need more:
@@ -151,7 +151,7 @@ export default function NetworkSecurityRemoteTeams() {
                 Essential #2: Zero Trust Architecture
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                The old security model was "trust but verify." The new model is "never trust, always verify." With Zero Trust, every user and device must prove they are who they claim to be—every single time.
+                The old security model was &quot;trust but verify.&quot; The new model is &quot;never trust, always verify.&quot; With Zero Trust, every user and device must prove they are who they claim to be—every single time.
               </p>
 
               <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
@@ -167,7 +167,7 @@ export default function NetworkSecurityRemoteTeams() {
                 <li className="flex items-start gap-3">
                   <span className="font-semibold text-charcoal">2.</span>
                   <div>
-                    <strong className="text-charcoal">Least Privilege Access:</strong> Users only get access to what they need. Your marketing person doesn't need access to financial systems.
+                    <strong className="text-charcoal">Least Privilege Access:</strong> Users only get access to what they need. Your marketing person doesn&apos;t need access to financial systems.
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
@@ -179,7 +179,7 @@ export default function NetworkSecurityRemoteTeams() {
                 <li className="flex items-start gap-3">
                   <span className="font-semibold text-charcoal">4.</span>
                   <div>
-                    <strong className="text-charcoal">Micro-Segmentation:</strong> Divide your network into small zones. A breach in one area doesn't compromise everything.
+                    <strong className="text-charcoal">Micro-Segmentation:</strong> Divide your network into small zones. A breach in one area doesn&apos;t compromise everything.
                   </div>
                 </li>
               </ol>
@@ -285,7 +285,7 @@ export default function NetworkSecurityRemoteTeams() {
                 Essential #5: Ongoing Security Training
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Here's the hard truth: your employees are both your best defense and your biggest vulnerability. Remote workers face unique security challenges, and they need training that reflects that reality.
+                Here&apos;s the hard truth: your employees are both your best defense and your biggest vulnerability. Remote workers face unique security challenges, and they need training that reflects that reality.
               </p>
 
               <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
@@ -328,7 +328,7 @@ export default function NetworkSecurityRemoteTeams() {
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
-                  <span><strong>Time zone coordination:</strong> If your team spans Seattle to Asia-Pacific, ensure security updates don't disrupt anyone's workday</span>
+                  <span><strong>Time zone coordination:</strong> If your team spans Seattle to Asia-Pacific, ensure security updates don&apos;t disrupt anyone&apos;s workday</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
@@ -347,10 +347,10 @@ export default function NetworkSecurityRemoteTeams() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Remote work isn't going away—and neither are the security challenges that come with it. The good news? With the right tools and training, you can build a security posture that's just as strong (or stronger) than when everyone was in the office.
+                Remote work isn&apos;t going away—and neither are the security challenges that come with it. The good news? With the right tools and training, you can build a security posture that&apos;s just as strong (or stronger) than when everyone was in the office.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
-                Start with these five essentials, and you'll be well on your way to protecting your remote team and your business.
+                Start with these five essentials, and you&apos;ll be well on your way to protecting your remote team and your business.
               </p>
             </Card>
 

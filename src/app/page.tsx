@@ -3,7 +3,6 @@
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
-import Link from 'next/link';
 import {
   Zap,
   Shield,
@@ -17,7 +16,6 @@ import {
   Building,
   Factory,
   Briefcase,
-  Store,
   Heart,
   Users,
   MessageSquare,
@@ -179,7 +177,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       {/* Enhanced Hero Section with Stronger Narrative */}
-      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark bg-backdrop-mobile md:bg-backdrop-desktop text-white overflow-hidden">
+      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark bg-hero-mobile md:bg-hero-desktop text-white overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-subtle" />
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse-subtle" style={{ animationDelay: '2s' }} />

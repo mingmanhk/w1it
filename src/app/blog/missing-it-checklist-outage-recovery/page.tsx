@@ -46,8 +46,8 @@ export default function MissingITChecklistOutageRecovery() {
               <span>Case Study</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              A professional services firm in Seattle learned the hard way that routine IT maintenance isn't optional.
-              When their UPS failed during a storm, the entire business went offline. Here's how structured recovery
+              A professional services firm in Seattle learned the hard way that routine IT maintenance isn&apos;t optional.
+              When their UPS failed during a storm, the entire business went offline. Here&apos;s how structured recovery
               procedures brought them back online within hours.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function MissingITChecklistOutageRecovery() {
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
                 This case study demonstrates the critical importance of daily IT checklists and routine testing.
-                Infrastructure doesn't fail all at once — it fails slowly, quietly, and predictably. Without proactive
+                Infrastructure doesn&apos;t fail all at once — it fails slowly, quietly, and predictably. Without proactive
                 maintenance, a single degraded UPS can take down an entire business.
               </p>
             </Card>
@@ -115,7 +115,7 @@ export default function MissingITChecklistOutageRecovery() {
               </ul>
               <p className="text-gray-medium font-inter leading-relaxed">
                 I escalated the issue to management, emphasizing the risk. Unfortunately, without a recent outage,
-                the urgency wasn't fully understood.
+                the urgency wasn&apos;t fully understood.
               </p>
             </div>
 
@@ -288,7 +288,7 @@ export default function MissingITChecklistOutageRecovery() {
                 </li>
               </ul>
               <p className="text-gray-medium font-inter leading-relaxed">
-                The incident became a turning point for the client's IT maturity.
+                The incident became a turning point for the client&apos;s IT maturity.
               </p>
             </div>
 
@@ -430,8 +430,8 @@ export default function MissingITChecklistOutageRecovery() {
               </h2>
               <Card className="mb-6 bg-blush">
                 <p className="text-charcoal font-inter italic leading-relaxed">
-                  "We didn't realize how vulnerable we were until everything went down. Victor not only brought us
-                  back online — he built a system that prevents this from ever happening again."
+                  &quot;We didn&apos;t realize how vulnerable we were until everything went down. Victor not only brought us
+                  back online — he built a system that prevents this from ever happening again.&quot;
                 </p>
               </Card>
             </div>
@@ -443,11 +443,11 @@ export default function MissingITChecklistOutageRecovery() {
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 This case highlights the critical importance of daily IT checklists and routine testing.
-                Infrastructure doesn't fail all at once — it fails slowly, quietly, and predictably. Without
+                Infrastructure doesn&apos;t fail all at once — it fails slowly, quietly, and predictably. Without
                 proactive maintenance, a single degraded UPS can take down an entire business.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
-                My role was not just to recover the environment, but to transform the client's operational
+                My role was not just to recover the environment, but to transform the client&apos;s operational
                 mindset from reactive to resilient.
               </p>
             </Card>
@@ -458,7 +458,7 @@ export default function MissingITChecklistOutageRecovery() {
                 Need Proactive IT Management?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
-                Don't wait for an outage to discover your IT vulnerabilities. Schedule a free infrastructure
+                Don&apos;t wait for an outage to discover your IT vulnerabilities. Schedule a free infrastructure
                 assessment to identify risks before they become emergencies.
               </p>
               <Button href="/contact" size="lg">

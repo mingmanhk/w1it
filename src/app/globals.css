@@ -25,15 +25,15 @@
 }
 
 @layer utilities {
-  .bg-backdrop-desktop {
-    background-image: url('/images/optimized/backdrop.png');
+  .bg-hero-desktop {
+    background-image: url('/images/optimized/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .bg-backdrop-mobile {
-    background-image: url('/images/optimized/backdrop_mobile.png');
+  .bg-hero-mobile {
+    background-image: url('/images/optimized/hero_mobile.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

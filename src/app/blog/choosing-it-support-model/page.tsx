@@ -45,7 +45,7 @@ export default function ChoosingITSupportModel() {
               <span>Business IT</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              Not all IT support is created equal. From managed services to on-demand help, here's how to choose the right model for your business.
+              Not all IT support is created equal. From managed services to on-demand help, here&apos;s how to choose the right model for your business.
             </p>
           </div>
         </Container>
@@ -57,7 +57,7 @@ export default function ChoosingITSupportModel() {
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
-                Your IT needs are unique. A 5-person startup has different requirements than a 50-person company. A retail business has different needs than a professional services firm. Yet most businesses default to whatever IT support model they stumbled into, rather than choosing the approach that actually fits their needs. Let's fix that.
+                Your IT needs are unique. A 5-person startup has different requirements than a 50-person company. A retail business has different needs than a professional services firm. Yet most businesses default to whatever IT support model they stumbled into, rather than choosing the approach that actually fits their needs. Let&apos;s fix that.
               </p>
             </Card>
 
@@ -88,7 +88,7 @@ export default function ChoosingITSupportModel() {
                       </ul>
                     </div>
                     <div>
-                      <p className="font-semibold text-charcoal mb-2">What's Included:</p>
+                      <p className="font-semibold text-charcoal mb-2">What&apos;s Included:</p>
                       <ul className="text-sm text-gray-medium space-y-1">
                         <li>• 24/7 monitoring</li>
                         <li>• Help desk support</li>
@@ -104,7 +104,7 @@ export default function ChoosingITSupportModel() {
                     2. Break-Fix / On-Demand Support
                   </h3>
                   <p className="text-gray-medium font-inter mb-4">
-                    Pay only when you need help. No monthly fees, no contracts—just call when something breaks and pay by the hour. This is the "pay-as-you-go" approach to IT.
+                    Pay only when you need help. No monthly fees, no contracts—just call when something breaks and pay by the hour. This is the &quot;pay-as-you-go&quot; approach to IT.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -132,7 +132,7 @@ export default function ChoosingITSupportModel() {
                     3. Consulting / Strategic IT
                   </h3>
                   <p className="text-gray-medium font-inter mb-4">
-                    High-level guidance and planning without day-to-day support. A consultant helps you make strategic IT decisions, plan projects, and optimize your technology—but doesn't handle help desk tickets.
+                    High-level guidance and planning without day-to-day support. A consultant helps you make strategic IT decisions, plan projects, and optimize your technology—but doesn&apos;t handle help desk tickets.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -163,7 +163,7 @@ export default function ChoosingITSupportModel() {
                 Which Model Is Right for You?
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-6">
-                The right choice depends on your business size, IT complexity, and how critical technology is to your operations. Here's how to decide:
+                The right choice depends on your business size, IT complexity, and how critical technology is to your operations. Here&apos;s how to decide:
               </p>
 
               <div className="space-y-6">
@@ -190,7 +190,7 @@ export default function ChoosingITSupportModel() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
-                      <span>You don't have in-house IT staff (or want to supplement them)</span>
+                      <span>You don&apos;t have in-house IT staff (or want to supplement them)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
@@ -211,7 +211,7 @@ export default function ChoosingITSupportModel() {
                   <ul className="space-y-3 text-gray-medium font-inter">
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
-                      <span>You're a very small business (under 5 employees)</span>
+                      <span>You&apos;re a very small business (under 5 employees)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
@@ -227,16 +227,16 @@ export default function ChoosingITSupportModel() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
-                      <span>You're comfortable with occasional downtime</span>
+                      <span>You&apos;re comfortable with occasional downtime</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
-                      <span>You're bootstrapping and watching every dollar</span>
+                      <span>You&apos;re bootstrapping and watching every dollar</span>
                     </li>
                   </ul>
                   <Card className="bg-blush mt-4">
                     <p className="text-charcoal font-inter text-sm">
-                      <strong>Warning:</strong> Many businesses think they're saving money with break-fix support, but end up spending more when problems pile up. If you're calling for help more than once a month, managed services is probably cheaper.
+                      <strong>Warning:</strong> Many businesses think they&apos;re saving money with break-fix support, but end up spending more when problems pile up. If you&apos;re calling for help more than once a month, managed services is probably cheaper.
                     </p>
                   </Card>
                 </Card>
@@ -252,7 +252,7 @@ export default function ChoosingITSupportModel() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
-                      <span>You're planning a major IT project (office move, cloud migration, etc.)</span>
+                      <span>You&apos;re planning a major IT project (office move, cloud migration, etc.)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-rose mt-1">✓</span>
@@ -282,31 +282,31 @@ export default function ChoosingITSupportModel() {
                 Hybrid Approaches: The Best of Both Worlds
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                You don't have to pick just one model. Many Seattle businesses I work with use hybrid approaches:
+                You don&apos;t have to pick just one model. Many Seattle businesses I work with use hybrid approaches:
               </p>
 
               <div className="space-y-4 mb-6">
                 <Card className="bg-rose/5">
                   <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
-                    "Core + On-Demand"
+                    &quot;Core + On-Demand&quot;
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    A light managed services package (monitoring and basic support) plus on-demand support for projects or complex issues. Good for growing businesses that aren't ready for full MSP pricing.
+                    A light managed services package (monitoring and basic support) plus on-demand support for projects or complex issues. Good for growing businesses that aren&apos;t ready for full MSP pricing.
                   </p>
                 </Card>
 
                 <Card className="bg-rose/5">
                   <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
-                    "In-House + MSP Backup"
+                    &quot;In-House + MSP Backup&quot;
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
-                    One in-house IT person handles day-to-day support, while an MSP provides backup, after-hours coverage, and specialized expertise. Reduces risk of the "what if they're sick/on vacation/quit" scenario.
+                    One in-house IT person handles day-to-day support, while an MSP provides backup, after-hours coverage, and specialized expertise. Reduces risk of the &quot;what if they&apos;re sick/on vacation/quit&quot; scenario.
                   </p>
                 </Card>
 
                 <Card className="bg-rose/5">
                   <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
-                    "Consulting + Break-Fix"
+                    &quot;Consulting + Break-Fix&quot;
                   </h3>
                   <p className="text-gray-medium font-inter text-sm">
                     Quarterly consulting sessions for strategic planning plus on-demand support for issues. Works well for businesses with simple IT needs but big growth plans.
@@ -328,7 +328,7 @@ export default function ChoosingITSupportModel() {
                 <ul className="space-y-3 text-gray-medium font-inter">
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">⚠</span>
-                    <span><strong>No clear SLA (Service Level Agreement):</strong> What response times can you expect? What's covered? Get it in writing.</span>
+                    <span><strong>No clear SLA (Service Level Agreement):</strong> What response times can you expect? What&apos;s covered? Get it in writing.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">⚠</span>
@@ -344,11 +344,11 @@ export default function ChoosingITSupportModel() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">⚠</span>
-                    <span><strong>Can't provide local references:</strong> Any established Seattle IT provider should have happy local clients willing to talk.</span>
+                    <span><strong>Can&apos;t provide local references:</strong> Any established Seattle IT provider should have happy local clients willing to talk.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">⚠</span>
-                    <span><strong>"Unlimited support" promises:</strong> Nothing is truly unlimited. Look for clear definitions of what's included.</span>
+                    <span><strong>&quot;Unlimited support&quot; promises:</strong> Nothing is truly unlimited. Look for clear definitions of what&apos;s included.</span>
                   </li>
                 </ul>
               </Card>
@@ -360,7 +360,7 @@ export default function ChoosingITSupportModel() {
                 Switching IT Support Models
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Already have IT support but considering a change? Here's how to transition smoothly:
+                Already have IT support but considering a change? Here&apos;s how to transition smoothly:
               </p>
 
               <Card className="mb-6">
@@ -368,13 +368,13 @@ export default function ChoosingITSupportModel() {
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">1.</span>
                     <div>
-                      <strong className="text-charcoal">Document everything first:</strong> Before switching providers, make sure you have all passwords, documentation, and account information. Don't depend on your current provider to hand it over gracefully.
+                      <strong className="text-charcoal">Document everything first:</strong> Before switching providers, make sure you have all passwords, documentation, and account information. Don&apos;t depend on your current provider to hand it over gracefully.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">2.</span>
                     <div>
-                      <strong className="text-charcoal">Check your contract:</strong> What's your termination notice period? Any penalties for early cancellation?
+                      <strong className="text-charcoal">Check your contract:</strong> What&apos;s your termination notice period? Any penalties for early cancellation?
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -399,7 +399,7 @@ export default function ChoosingITSupportModel() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                The right IT support model depends on your business size, technical complexity, and how critical technology is to your operations. There's no one-size-fits-all answer.
+                The right IT support model depends on your business size, technical complexity, and how critical technology is to your operations. There&apos;s no one-size-fits-all answer.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
                 Start by honestly assessing your needs, not your budget. Cheap IT support is expensive when it leads to downtime, security breaches, or lost productivity. Invest appropriately for your business stage and growth plans.
@@ -412,7 +412,7 @@ export default function ChoosingITSupportModel() {
                 Not Sure Which Model Is Right for You?
               </h3>
               <p className="text-gray-medium font-inter mb-6">
-                Let's talk about your business needs. We offer flexible IT support tailored to Seattle businesses.
+                Let&apos;s talk about your business needs. We offer flexible IT support tailored to Seattle businesses.
               </p>
               <Button href="/contact" size="lg">
                 Schedule Free Consultation

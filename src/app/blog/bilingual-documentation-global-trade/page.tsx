@@ -45,7 +45,7 @@ export default function BilingualDocumentation() {
               <span>Documentation</span>
             </div>
             <p className="text-lg text-gray-medium font-inter">
-              In an increasingly connected global economy, the ability to communicate effectively across languages isn't just nice to have—it's essential for business success.
+              In an increasingly connected global economy, the ability to communicate effectively across languages isn&apos;t just nice to have—it&apos;s essential for business success.
             </p>
           </div>
         </Container>
@@ -68,7 +68,7 @@ export default function BilingualDocumentation() {
                 Beyond Simple Translation
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Here's a common misconception: bilingual documentation is just translation. Run your English docs through Google Translate or hire a cheap translator, and you're done, right?
+                Here&apos;s a common misconception: bilingual documentation is just translation. Run your English docs through Google Translate or hire a cheap translator, and you&apos;re done, right?
               </p>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 Wrong. Professional bilingual technical documentation requires:
@@ -190,7 +190,7 @@ export default function BilingualDocumentation() {
                     3. SaaS & API Products
                   </h3>
                   <p className="text-gray-medium font-inter leading-relaxed">
-                    Selling software to both markets? Your developer documentation, API references, and integration guides need to be equally excellent in English and Chinese. This isn't optional—it's table stakes for success in both markets.
+                    Selling software to both markets? Your developer documentation, API references, and integration guides need to be equally excellent in English and Chinese. This isn&apos;t optional—it&apos;s table stakes for success in both markets.
                   </p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function BilingualDocumentation() {
                 The Seattle Advantage
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                Seattle's position as a hub for both technology and Asia-Pacific trade makes it uniquely positioned for businesses operating across English and Chinese markets. Companies here understand:
+                Seattle&apos;s position as a hub for both technology and Asia-Pacific trade makes it uniquely positioned for businesses operating across English and Chinese markets. Companies here understand:
               </p>
               <ul className="space-y-3 text-gray-medium font-inter mb-6">
                 <li className="flex items-start gap-3">
@@ -234,7 +234,7 @@ export default function BilingualDocumentation() {
                   <li className="flex items-start gap-3">
                     <span className="font-semibold text-charcoal">1.</span>
                     <div>
-                      <strong className="text-charcoal">Create in parallel, not sequentially:</strong> Don't write in English then translate. Develop both versions together with input from native speakers of both languages.
+                      <strong className="text-charcoal">Create in parallel, not sequentially:</strong> Don&apos;t write in English then translate. Develop both versions together with input from native speakers of both languages.
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -265,10 +265,10 @@ export default function BilingualDocumentation() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                In global trade, communication is everything. Professional bilingual documentation isn't a luxury—it's a competitive necessity. Whether you're a Seattle startup expanding to Asian markets or an established company with global operations, investing in quality bilingual technical writing pays dividends through faster launches, fewer errors, and stronger partnerships.
+                In global trade, communication is everything. Professional bilingual documentation isn&apos;t a luxury—it&apos;s a competitive necessity. Whether you&apos;re a Seattle startup expanding to Asian markets or an established company with global operations, investing in quality bilingual technical writing pays dividends through faster launches, fewer errors, and stronger partnerships.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed">
-                The question isn't whether you can afford bilingual documentation. It's whether you can afford not to have it.
+                The question isn&apos;t whether you can afford bilingual documentation. It&apos;s whether you can afford not to have it.
               </p>
             </Card>
 

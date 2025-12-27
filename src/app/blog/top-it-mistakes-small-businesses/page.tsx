@@ -45,7 +45,7 @@ export default function TopITMistakes() {
             </div>
             <p className="text-lg text-gray-medium font-inter">
               Running a small business in Seattle? These common IT mistakes could be costing you time, money,
-              and productivity. Here's how to avoid them.
+              and productivity. Here&apos;s how to avoid them.
             </p>
           </div>
         </Container>
@@ -57,8 +57,8 @@ export default function TopITMistakes() {
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-inter leading-relaxed">
-                After years of working with small businesses in the Seattle area, I've seen the same IT
-                mistakes repeated again and again. The good news? They're all preventable. Let's dive into the
+                After years of working with small businesses in the Seattle area, I&apos;ve seen the same IT
+                mistakes repeated again and again. The good news? They&apos;re all preventable. Let&apos;s dive into the
                 top 5 IT mistakes that could be holding your business back—and more importantly, how to fix
                 them.
               </p>
@@ -71,14 +71,14 @@ export default function TopITMistakes() {
               </h2>
               <Card className="mb-6 bg-rose/5">
                 <p className="text-charcoal font-inter font-semibold">
-                  "We have backups!" they said. Until they needed to restore and discovered the backups hadn't
+                  &quot;We have backups!&quot; they said. Until they needed to restore and discovered the backups hadn&apos;t
                   been running for 6 months.
                 </p>
               </Card>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 <strong>The Problem:</strong> Many Seattle businesses set up backups once and never test them.
                 Others have no backup strategy at all, assuming cloud services like Google Workspace or Office
-                365 are "backup enough." Spoiler: they're not.
+                365 are &quot;backup enough.&quot; Spoiler: they&apos;re not.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 <strong>The Fix:</strong>
@@ -109,7 +109,7 @@ export default function TopITMistakes() {
                 2. Weak Password Policies
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                <strong>The Problem:</strong> "Password123" is still more common than you'd think. Shared
+                <strong>The Problem:</strong> &quot;Password123&quot; is still more common than you&apos;d think. Shared
                 passwords, passwords written on sticky notes, or the same password used everywhere—these are
                 gold mines for hackers.
               </p>
@@ -148,7 +148,7 @@ export default function TopITMistakes() {
                 3. No IT Documentation
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                <strong>The Problem:</strong> The network password is in your IT person's head. The WiFi
+                <strong>The Problem:</strong> The network password is in your IT person&apos;s head. The WiFi
                 password is... somewhere? When that person leaves or is unavailable, your business grinds to a
                 halt.
               </p>
@@ -189,7 +189,7 @@ export default function TopITMistakes() {
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 <strong>The Problem:</strong> Only calling IT support when something breaks is like only going
-                to the doctor when you're sick. It's more expensive, more stressful, and leads to preventable
+                to the doctor when you&apos;re sick. It&apos;s more expensive, more stressful, and leads to preventable
                 problems.
               </p>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
@@ -206,7 +206,7 @@ export default function TopITMistakes() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-rose mt-1">•</span>
-                  <span>Plan for technology refresh cycles (don't wait for hardware to die)</span>
+                  <span>Plan for technology refresh cycles (don&apos;t wait for hardware to die)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-rose mt-1">•</span>
@@ -222,8 +222,8 @@ export default function TopITMistakes() {
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 <strong>The Problem:</strong> Your employees are your first line of defense against security
-                threats, but also your biggest vulnerability. Without proper training, they'll click phishing
-                links, use weak passwords, and bypass security measures "to get work done faster."
+                threats, but also your biggest vulnerability. Without proper training, they&apos;ll click phishing
+                links, use weak passwords, and bypass security measures &quot;to get work done faster.&quot;
               </p>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
                 <strong>The Fix:</strong>
@@ -254,7 +254,7 @@ export default function TopITMistakes() {
                 The Bottom Line
               </h2>
               <p className="text-gray-medium font-inter leading-relaxed mb-4">
-                These IT mistakes are common, but they don't have to happen to your business. With a little
+                These IT mistakes are common, but they don&apos;t have to happen to your business. With a little
                 planning and the right support, you can build a solid IT foundation that grows with your
                 company.
               </p>
@@ -268,7 +268,7 @@ export default function TopITMistakes() {
             {/* CTA */}
             <div className="text-center">
               <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
-                Let's Fix Your IT Together
+                Let&apos;s Fix Your IT Together
               </h3>
               <p className="text-gray-medium font-inter mb-6">
                 Schedule a free IT assessment to identify issues before they become problems.
