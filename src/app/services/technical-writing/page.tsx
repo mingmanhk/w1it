@@ -125,12 +125,12 @@ export default function TechnicalWriting() {
             </h2>
             <Card className="mb-8">
               <p className="text-gray-medium font-inter text-lg leading-relaxed mb-4">
-                In today's global economy, businesses increasingly operate across English and Chinese-speaking
-                markets. Effective technical communication isn't just about translation—it requires deep
+                In today&apos;s global economy, businesses increasingly operate across English and Chinese-speaking
+                markets. Effective technical communication isn&apos;t just about translation—it requires deep
                 understanding of both technical concepts and cultural context.
               </p>
               <p className="text-gray-medium font-inter text-lg leading-relaxed">
-                Whether you're a Seattle-based company expanding to Asian markets, or an international team
+                Whether you&apos;re a Seattle-based company expanding to Asian markets, or an international team
                 needing documentation in both languages, professional bilingual technical writing ensures
                 clarity, accuracy, and consistency across all your technical communications.
               </p>
@@ -205,7 +205,7 @@ export default function TechnicalWriting() {
                   For Seattle Businesses Going Global
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  You're expanding to China or working with Chinese partners. You need product documentation,
+                  You&apos;re expanding to China or working with Chinese partners. You need product documentation,
                   user guides, or technical specs that work for both English and Chinese-speaking audiences.
                 </p>
               </Card>
@@ -225,7 +225,7 @@ export default function TechnicalWriting() {
                   For Software Companies
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  You're selling software in both markets and need API docs, SDKs, and integration guides that
+                  You&apos;re selling software in both markets and need API docs, SDKs, and integration guides that
                   work seamlessly in English and Chinese.
                 </p>
               </Card>
@@ -251,7 +251,7 @@ export default function TechnicalWriting() {
                 Ready to Improve Your Global Communication?
               </h2>
               <p className="text-lg text-gray-medium mb-8 font-inter">
-                Let's discuss how bilingual technical documentation can support your business goals.
+                Let&apos;s discuss how bilingual technical documentation can support your business goals.
               </p>
               <Button href="/contact" size="lg">
                 Get Started

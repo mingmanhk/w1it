@@ -329,7 +329,7 @@ export default function Home() {
               Comprehensive IT Solutions for Modern Businesses
             </h2>
             <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
-              From proactive infrastructure management to strategic consulting — everything your Seattle business needs to thrive in today's digital landscape.
+              From proactive infrastructure management to strategic consulting — everything your Seattle business needs to thrive in today&apos;s digital landscape.
             </p>
           </div>
 
@@ -356,7 +356,7 @@ export default function Home() {
                 </div>
                 <div className="p-10">
                   <h4 className="font-display font-semibold text-xl text-neutral-900 mb-6">
-                    What's Included:
+                    What&apos;s Included:
                   </h4>
                   <div className="space-y-4 mb-8">
                     {service.includes.map((item, idx) => (
@@ -491,7 +491,7 @@ export default function Home() {
               Trusted by Seattle Businesses
             </h2>
             <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
-              See how we've helped businesses across industries achieve measurable results and operational excellence.
+              See how we&apos;ve helped businesses across industries achieve measurable results and operational excellence.
             </p>
           </div>
 
@@ -521,7 +521,7 @@ export default function Home() {
 
                   {/* Quote */}
                   <blockquote className="text-neutral-700 font-inter text-lg leading-relaxed mb-8 italic">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </blockquote>
 
                   {/* Results */}

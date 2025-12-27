@@ -275,7 +275,7 @@ export default function ServicesPage() {
               <span className="block text-gradient-primary mt-2">Built for Clarity and Growth</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              At W1IT, we deliver modern IT solutions that combine deep technical expertise with strategic clarity. Whether you're optimizing infrastructure, launching a new website, or solving persistent network issues, we bring precision, resilience, and results.
+              At W1IT, we deliver modern IT solutions that combine deep technical expertise with strategic clarity. Whether you&apos;re optimizing infrastructure, launching a new website, or solving persistent network issues, we bring precision, resilience, and results.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -345,7 +345,7 @@ export default function ServicesPage() {
                       <div className="flex items-center space-x-3 mb-4">
                         <Target className="w-6 h-6 text-primary-500" />
                         <h5 className="font-display font-semibold text-lg text-neutral-900">
-                          Victor's Strength Highlight
+                          Victor&apos;s Strength Highlight
                         </h5>
                       </div>
                       <p className="text-neutral-700 font-inter leading-relaxed">
@@ -362,7 +362,7 @@ export default function ServicesPage() {
                             Ready to Get Started?
                           </h4>
                           <p className="text-neutral-600 font-inter mb-6">
-                            Let's discuss how {service.title.toLowerCase()} can benefit your business.
+                            Let&apos;s discuss how {service.title.toLowerCase()} can benefit your business.
                           </p>
                           <Button
                             href="/contact"
@@ -373,7 +373,7 @@ export default function ServicesPage() {
                           </Button>
                           <div className="mt-6 pt-6 border-t border-neutral-200">
                             <p className="text-sm text-neutral-500 font-inter mb-3">
-                              What's included:
+                              What&apos;s included:
                             </p>
                             <div className="space-y-2">
                               <div className="flex items-center space-x-2">
@@ -530,7 +530,7 @@ export default function ServicesPage() {
               <span className="font-inter">Ready to Transform Your IT?</span>
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Let's Build Something Stable, Scalable, and Smart
+              Let&apos;s Build Something Stable, Scalable, and Smart
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
               Schedule a free consultation to discuss your specific needs and discover the perfect solution for your business.

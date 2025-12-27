@@ -141,7 +141,7 @@ export default function TermsOfService() {
                 <section>
                   <h2 className="text-2xl font-bold text-slate-900 mb-4">9. Disclaimer of Warranties</h2>
                   <p>
-                    Our services are provided "as is" and "as available" without warranties of any kind,
+                    Our services are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind,
                     either express or implied. We do not warrant that our services will be uninterrupted,
                     error-free, or completely secure.
                   </p>

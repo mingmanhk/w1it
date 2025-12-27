@@ -206,7 +206,7 @@ export default function IndustriesPage() {
         <Container size="lg">
           <div className="text-center relative z-10">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Don't See Your Industry?
+              Don&apos;t See Your Industry?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
               We work with businesses across all sectors. Contact us to discuss how we can create

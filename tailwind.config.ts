@@ -7,6 +7,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-desktop': "url('/hero-desktop.jpg')",
+        'hero-mobile': "url('/hero-mobile.jpg')",
+      },
       colors: {
         'brand-navy': '#0A1A2F',
         'brand-blue': '#2F80ED',

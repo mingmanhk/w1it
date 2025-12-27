@@ -102,7 +102,7 @@ export default function DigitalTransformationPage() {
                 Strategic Digital Transformation
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
-                Digital transformation is more than just technology adoption—it's a fundamental rethinking of how your organization uses technology, people, and processes to fundamentally change business performance.
+                Digital transformation is more than just technology adoption—it&apos;s a fundamental rethinking of how your organization uses technology, people, and processes to fundamentally change business performance.
               </p>
               <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
                 We take a holistic approach that aligns technology investments with business objectives, ensuring measurable ROI and sustainable growth.

@@ -103,7 +103,7 @@ export default function CaseStudiesPage() {
               <span className="block text-gradient-primary mt-2">Success Stories</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Discover how we've helped businesses transform their technology and achieve remarkable results.
+              Discover how we&apos;ve helped businesses transform their technology and achieve remarkable results.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -126,7 +126,7 @@ export default function CaseStudiesPage() {
               Transformative Technology Solutions
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-              Real-world examples of how we've helped clients achieve their technology goals.
+              Real-world examples of how we&apos;ve helped clients achieve their technology goals.
             </p>
           </div>
 

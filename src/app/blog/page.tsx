@@ -168,7 +168,7 @@ export default function Blog() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full text-sm font-medium mb-6 font-inter">
               <Sparkles className="w-4 h-4" />
-              <span>Editor's Pick</span>
+              <span>Editor&apos;s Pick</span>
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Featured Article

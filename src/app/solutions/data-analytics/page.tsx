@@ -102,7 +102,7 @@ export default function DataAnalyticsPage() {
                 Modern Analytics Solutions
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
-                In today's data-rich environment, organizations that effectively leverage their data gain significant competitive advantages. Our data analytics solutions transform raw data into strategic assets.
+                In today&apos;s data-rich environment, organizations that effectively leverage their data gain significant competitive advantages. Our data analytics solutions transform raw data into strategic assets.
               </p>
               <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
                 We help you build scalable data platforms, implement advanced analytics, and create data-driven cultures that drive innovation and growth.
@@ -214,7 +214,7 @@ export default function DataAnalyticsPage() {
         <Container size="lg">
           <div className="text-center relative z-10">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Ready to Unlock Your Data's Potential?
+              Ready to Unlock Your Data&apos;s Potential?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
               Transform your data into strategic assets that drive innovation, efficiency, and growth.

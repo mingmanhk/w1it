@@ -132,7 +132,7 @@ export default function RemoteSupport() {
                   Schedule Session
                 </h3>
                 <p className="text-gray-medium font-inter text-sm">
-                  We'll find a time that works for you
+                  We&apos;ll find a time that works for you
                 </p>
               </Card>
 
@@ -216,7 +216,7 @@ export default function RemoteSupport() {
                   🌍 Available Anywhere
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  Whether you're in Seattle or working remotely from anywhere in the world.
+                  Whether you&apos;re in Seattle or working remotely from anywhere in the world.
                 </p>
               </Card>
             </div>

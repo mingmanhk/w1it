@@ -160,7 +160,7 @@ export default function NetworkSetup() {
                   Slow WiFi or Dead Zones
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  We'll analyze your space and install access points or mesh systems for perfect coverage throughout your home or office.
+                  We&apos;ll analyze your space and install access points or mesh systems for perfect coverage throughout your home or office.
                 </p>
               </Card>
 
@@ -184,7 +184,7 @@ export default function NetworkSetup() {
 
               <Card>
                 <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
-                  Can't Connect Devices
+                  Can&apos;t Connect Devices
                 </h3>
                 <p className="text-gray-medium font-inter">
                   Troubleshoot device connectivity, configure network settings, and ensure all your devices work seamlessly.
@@ -236,7 +236,7 @@ export default function NetworkSetup() {
                   Fast Response
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  Same-day or next-day service available. We understand network issues can't wait.
+                  Same-day or next-day service available. We understand network issues can&apos;t wait.
                 </p>
               </Card>
 
@@ -254,7 +254,7 @@ export default function NetworkSetup() {
                   Clear Communication
                 </h3>
                 <p className="text-gray-medium font-inter">
-                  No tech jargon. We explain what we're doing and why, in plain English (or Chinese).
+                  No tech jargon. We explain what we&apos;re doing and why, in plain English (or Chinese).
                 </p>
               </Card>
             </div>

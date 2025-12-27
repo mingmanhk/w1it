@@ -103,7 +103,7 @@ export default function TestimonialsPage() {
               <span className="block text-gradient-primary mt-2">Real Results, Real Stories</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Don't just take our word for it. Hear from businesses across industries who have transformed their operations with W1IT's IT solutions, consulting, and website optimization services.
+              Don&apos;t just take our word for it. Hear from businesses across industries who have transformed their operations with W1IT&apos;s IT solutions, consulting, and website optimization services.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -129,7 +129,7 @@ export default function TestimonialsPage() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-              Authentic feedback from businesses we've helped transform.
+              Authentic feedback from businesses we&apos;ve helped transform.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function TestimonialsPage() {
                 <div className="mb-6">
                   <Quote className="w-8 h-8 text-primary-500/30 mb-4" />
                   <blockquote className="text-neutral-700 font-inter text-lg leading-relaxed italic">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </blockquote>
                 </div>
                 <div className="pt-6 border-t border-neutral-200">
@@ -182,7 +182,7 @@ export default function TestimonialsPage() {
               Industries We Serve
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-              We've delivered results for businesses across diverse sectors.
+              We&apos;ve delivered results for businesses across diverse sectors.
             </p>
           </div>
 

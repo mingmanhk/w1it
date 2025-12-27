@@ -215,8 +215,8 @@ export default function CookiePolicy() {
                 <section>
                   <h2 className="text-2xl font-bold text-slate-900 mb-4">6. Do Not Track Signals</h2>
                   <p>
-                    Some browsers have a "Do Not Track" feature that lets you tell websites you do not
-                    want to be tracked. Currently, we do not respond to "Do Not Track" signals because
+                    Some browsers have a &quot;Do Not Track&quot; feature that lets you tell websites you do not
+                    want to be tracked. Currently, we do not respond to &quot;Do Not Track&quot; signals because
                     there is no standard for how websites should respond to these signals.
                   </p>
                 </section>
@@ -273,7 +273,7 @@ export default function CookiePolicy() {
                         <td className="px-4 py-3 text-sm font-medium text-slate-900">Essential</td>
                         <td className="px-4 py-3 text-sm text-slate-700">Website functionality and security</td>
                         <td className="px-4 py-3 text-sm text-slate-700">Session, authentication, security</td>
-                        <td className="px-4 py-3 text-sm text-slate-700">No (site won't work properly)</td>
+                        <td className="px-4 py-3 text-sm text-slate-700">No (site won&apos;t work properly)</td>
                       </tr>
                       <tr>
                         <td className="px-4 py-3 text-sm font-medium text-slate-900">Analytics</td>

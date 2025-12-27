@@ -115,7 +115,7 @@ export default function CybersecurityStrategyPage() {
                 Beyond Basic Security
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
-                Cybersecurity strategy goes beyond installing antivirus software. It's about creating a comprehensive
+                Cybersecurity strategy goes beyond installing antivirus software. It&apos;s about creating a comprehensive
                 framework that protects your business assets, ensures regulatory compliance, and builds customer trust.
               </p>
               <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">

@@ -151,11 +151,11 @@ export default function CustomITSolutionsPage() {
                 Tailored Approach
               </div>
               <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
-                When Standard Solutions Don't Fit
+                When Standard Solutions Don&apos;t Fit
               </h2>
               <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
                 Every business is unique, with specific processes, challenges, and goals that off-the-shelf solutions
-                often can't address. That's where our custom IT solutions come in.
+                often can&apos;t address. That&apos;s where our custom IT solutions come in.
               </p>
               <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
                 We combine our deep technical expertise with a thorough understanding of your business to create
@@ -301,7 +301,7 @@ export default function CustomITSolutionsPage() {
               Have Unique Technology Needs?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
-              Let's discuss your specific requirements and explore how custom IT solutions can drive your business forward.
+              Let&apos;s discuss your specific requirements and explore how custom IT solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button

@@ -190,7 +190,7 @@ const ModularGrid: React.FC<ModularGridProps> = ({
             href={item.href}
             className={`${baseClasses} flex flex-col group`}
           >
-            <div className="text-4xl text-green-600 dark:text-green-400 mb-4">"</div>
+            <div className="text-4xl text-green-600 dark:text-green-400 mb-4">&quot;</div>
             <h3 className="font-display font-bold text-xl text-text-primary dark:text-text-primary mb-4">
               {item.title}
             </h3>
