@@ -83,10 +83,14 @@ drizzle/migrations/
 .firebase/
 firebase.json
 
-# Gatsby files
-.cache/
-public
-
 # System files
 .DS_Store
 **/.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Misc
+.turbo
+*.pem

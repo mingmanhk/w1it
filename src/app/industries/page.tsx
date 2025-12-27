@@ -1,35 +1,11 @@
 'use client';
 
 import Container from '@/components/Container';
-import { Heart, Briefcase, Factory, Building, Rocket, Users, CheckCircle2 } from 'lucide-react';
+import { Factory, Building, Rocket, Users, CheckCircle2 } from 'lucide-react';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
 
 const industries = [
-  {
-    name: 'Healthcare',
-    icon: <Heart className="w-10 h-10" />,
-    color: 'text-rose-500',
-    description: 'Secure and compliant IT solutions for the healthcare industry.',
-    services: [
-      'HIPAA-compliant cloud solutions',
-      'Electronic Health Record (EHR) system support',
-      'Telemedicine infrastructure',
-      'Data security and patient privacy',
-    ],
-  },
-  {
-    name: 'Finance',
-    icon: <Briefcase className="w-10 h-10" />,
-    color: 'text-emerald-500',
-    description: 'Reliable and secure IT services for financial institutions.',
-    services: [
-      'PCI DSS compliance solutions',
-      'Secure network infrastructure',
-      'High-availability trading systems',
-      'Data encryption and protection',
-    ],
-  },
   {
     name: 'Manufacturing',
     icon: <Factory className="w-10 h-10" />,
