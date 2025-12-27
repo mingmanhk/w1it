@@ -23,33 +23,100 @@ export default function SolutionsPage() {
     {
       title: 'Digital Transformation',
       icon: <RefreshCw className="w-10 h-10" />,
-      description: 'Process automation, legacy modernization, and cloud migration for business agility.',
+      headline: 'Modernize your systems, processes, and workflows.',
+      description: 'We help businesses transition from legacy systems to modern, efficient, cloud‑ready environments.',
       href: '/solutions/digital-transformation',
-      features: ['Process Automation', 'Legacy Modernization', 'Cloud Migration', 'Digital Strategy'],
+      outcomes: [
+        'Reduced operational overhead',
+        'Improved system reliability',
+        'Faster deployment cycles',
+        'Better team productivity',
+      ],
+      includes: [
+        'Cloud migration planning',
+        'Hybrid infrastructure design',
+        'Automation workflows',
+        'Legacy system modernization',
+      ],
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Data & Analytics',
+      title: 'Cybersecurity & Risk Management',
+      icon: <Shield className="w-10 h-10" />,
+      headline: 'Protect your business with modern security practices.',
+      description: 'Security isn\'t optional — it\'s foundational. We help organizations identify risks, strengthen defenses, and maintain compliance.',
+      href: '/solutions/cybersecurity-strategy',
+      outcomes: [
+        'Reduced security vulnerabilities',
+        'Stronger compliance posture',
+        'Improved incident response',
+        'Peace of mind',
+      ],
+      includes: [
+        'Security audits',
+        'Hardening & patching',
+        'Zero‑trust strategy',
+        'Backup & disaster recovery planning',
+      ],
+      gradient: 'from-violet-500 to-purple-500',
+    },
+    {
+      title: 'Data & Analytics Solutions',
       icon: <Database className="w-10 h-10" />,
-      description: 'Business intelligence dashboards, predictive analytics, and data-driven decision making.',
+      headline: 'Make smarter decisions with actionable insights.',
+      description: 'We turn your data into a strategic asset.',
       href: '/solutions/data-analytics',
-      features: ['Business Intelligence', 'Predictive Analytics', 'Reporting Dashboards', 'Data Warehousing'],
+      outcomes: [
+        'Clear visibility into performance',
+        'Predictive insights',
+        'Automated reporting',
+        'Better decision‑making',
+      ],
+      includes: [
+        'BI dashboards',
+        'Predictive analytics',
+        'Data cleanup & transformation',
+        'Reporting automation',
+      ],
       gradient: 'from-emerald-500 to-green-500',
     },
     {
-      title: 'Cybersecurity Strategy',
-      icon: <Shield className="w-10 h-10" />,
-      description: 'Risk management, penetration testing, compliance, and security governance.',
-      href: '/solutions/cybersecurity-strategy',
-      features: ['Risk Management', 'Penetration Testing', 'Compliance', 'Security Governance'],
-      gradient: 'from-violet-500 to-purple-500',
+      title: 'Website Optimization & Digital Growth',
+      icon: <Globe className="w-10 h-10" />,
+      headline: 'Improve performance, increase traffic, and enhance user experience.',
+      description: 'Your website is your digital storefront — we help you make it faster, clearer, and more effective.',
+      href: '/solutions/website-optimization',
+      outcomes: [
+        'Higher traffic',
+        'Better user engagement',
+        'Faster load times',
+        'Increased conversions',
+      ],
+      includes: [
+        'SEO strategy',
+        'UX improvements',
+        'Feature implementation',
+        'Analytics & conversion tracking',
+      ],
+      gradient: 'from-indigo-500 to-blue-500',
     },
     {
       title: 'Custom IT Solutions',
       icon: <Wrench className="w-10 h-10" />,
-      description: 'Tailored packages and bespoke technology solutions for unique business needs.',
+      headline: 'Tailored solutions for unique business challenges.',
+      description: 'Every business is different — we design solutions that fit your exact needs.',
       href: '/solutions/custom-it-solutions',
-      features: ['Tailored Packages', 'Bespoke Solutions', 'Integration Services', 'Custom Development'],
+      outcomes: [
+        'Reduced complexity',
+        'Better alignment with business goals',
+        'Long‑term scalability',
+      ],
+      includes: [
+        'Custom automation',
+        'Specialized integrations',
+        'Technical documentation',
+        'Workflow optimization',
+      ],
       gradient: 'from-amber-500 to-orange-500',
     },
   ];
@@ -107,11 +174,11 @@ export default function SolutionsPage() {
               <span className="font-inter">Strategic Solutions</span>
             </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
-              Strategic
-              <span className="block text-gradient-primary mt-2">IT Solutions</span>
+              Strategic IT Solutions
+              <span className="block text-gradient-primary mt-2">That Drive Real Business Outcomes</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Outcome-focused technology solutions designed to solve complex business challenges and drive measurable growth.
+              W1IT delivers strategic, outcome‑driven IT solutions that help organizations modernize, scale, and operate with confidence. Our solutions focus on long‑term value, operational clarity, and measurable results.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -131,19 +198,19 @@ export default function SolutionsPage() {
               Strategic Solutions
             </div>
             <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
-              Outcome-Focused Technology
+              Strategic Solutions for Modern Business
             </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-              Our solutions focus on strategic outcomes, not just technical services. We help you achieve business goals through technology.
+              Each solution is designed to deliver specific business outcomes, not just technical features.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {strategicSolutions.map((solution, index) => (
               <Card
                 key={index}
                 hoverable
-                className="animate-fade-in-up"
+                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`bg-gradient-to-br ${solution.gradient} p-8 text-white rounded-t-2xl`}>
@@ -152,31 +219,52 @@ export default function SolutionsPage() {
                       {solution.icon}
                     </div>
                   </div>
-                  <h3 className="font-display font-bold text-2xl mb-4">
+                  <h3 className="font-display font-bold text-2xl mb-3">
                     {solution.title}
                   </h3>
-                  <p className="text-white/90 font-inter">
-                    {solution.description}
+                  <p className="text-white/90 font-inter text-lg">
+                    {solution.headline}
                   </p>
                 </div>
                 <div className="p-8">
-                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
-                    Key Features
-                  </h4>
-                  <div className="space-y-3 mb-6">
-                    {solution.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{feature}</span>
-                      </div>
-                    ))}
+                  <p className="text-neutral-700 font-inter mb-6">
+                    {solution.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <h4 className="font-display font-semibold text-lg text-neutral-900 mb-3">
+                      Outcomes:
+                    </h4>
+                    <div className="space-y-2">
+                      {solution.outcomes.map((outcome, idx) => (
+                        <div key={idx} className="flex items-start space-x-2">
+                          <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
+                          <span className="text-neutral-600 font-inter">{outcome}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
+
+                  <div className="mb-6">
+                    <h4 className="font-display font-semibold text-lg text-neutral-900 mb-3">
+                      Includes:
+                    </h4>
+                    <div className="space-y-2">
+                      {solution.includes.map((item, idx) => (
+                        <div key={idx} className="flex items-start space-x-2">
+                          <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-neutral-600 font-inter">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
                   <Button
                     href={solution.href}
                     variant="outline"
                     className="w-full"
                   >
-                    Learn More About {solution.title}
+                    Explore {solution.title}
                   </Button>
                 </div>
               </Card>
