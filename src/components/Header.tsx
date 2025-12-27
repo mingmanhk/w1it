@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import { Menu, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { href: '/services', label: 'Services' },
@@ -20,18 +21,29 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+  // Effect to prevent body scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('overflow-hidden');
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('overflow-hidden');
     }
+    // Cleanup on component unmount
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
   }, [isOpen]);
+
+  const menuVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.2 } },
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg z-50 shadow-sm">
       <Container className="flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center space-x-3" aria-label="W1IT Home">
+        <Link href="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
           <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-xl">W</span>
           </div>
@@ -39,16 +51,14 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8" aria-label="Main navigation">
+        <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`font-inter font-medium text-neutral-600 hover:text-primary-600 transition-colors ${
-                pathname === link.href ? 'text-primary-600 font-semibold' : ''
-              }`}
-              aria-current={pathname === link.href ? 'page' : undefined}
-            >
+                pathname === link.href ? 'text-primary-600' : ''
+              }`}>
               {link.label}
             </Link>
           ))}
@@ -58,52 +68,48 @@ export default function Header() {
           <Button href="/contact" size="lg">Get in Touch</Button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation Toggle */}
         <div className="md:hidden">
-          <button 
-            onClick={() => setIsOpen(!isOpen)} 
-            className="p-2 z-50 relative" 
-            aria-expanded={isOpen} 
-            aria-controls="mobile-menu"
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
-          >
-            {isOpen ? <X className="w-7 h-7 text-white" /> : <Menu className="w-7 h-7 text-neutral-800" />}
+          <button onClick={() => setIsOpen(!isOpen)} className="p-2 z-50 relative">
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </Container>
 
       {/* Mobile Menu */}
-      <div
-        id="mobile-menu"
-        className={`md:hidden fixed inset-0 bg-gradient-dark backdrop-blur-xl z-40 transition-transform duration-300 ease-in-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="mobile-menu-heading"
-      >
-        <Container className="pt-28 h-full">
-          <h2 id="mobile-menu-heading" className="sr-only">Mobile Menu</h2>
-          <nav className="flex flex-col items-center justify-center h-full -mt-20 space-y-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`font-display font-bold text-4xl text-white hover:text-primary-300 transition-colors ${
-                  pathname === link.href ? 'text-primary-300' : ''
-                }`}
-                onClick={() => setIsOpen(false)}
-                aria-current={pathname === link.href ? 'page' : undefined}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="pt-12">
-              <Button href="/contact" size="xl" variant="secondary" onClick={() => setIsOpen(false)}>Get in Touch</Button>
-            </div>
-          </nav>
-        </Container>
-      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="md:hidden bg-white/95 backdrop-blur-lg absolute top-0 left-0 w-full h-screen pt-20"
+          >
+            <Container className="py-6 flex flex-col h-full">
+              <nav className="flex flex-col space-y-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`font-inter font-medium text-2xl text-neutral-800 hover:text-primary-600 transition-colors text-center py-2 ${
+                      pathname === link.href ? 'text-primary-600' : ''
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+              <div className="mt-auto pb-16">
+                <Button href="/contact" size="lg" className="w-full" onClick={() => setIsOpen(false)}>
+                  Get in Touch
+                </Button>
+              </div>
+            </Container>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

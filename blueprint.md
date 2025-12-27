@@ -1,25 +1,41 @@
-# Project Blueprint
+# W1IT Website Blueprint
 
 ## Overview
 
-This project is a modern, responsive website for a fictional IT solutions company, W1IT. The site is built with Next.js and Tailwind CSS and is designed to be fully accessible, following WCAG 2.1 guidelines.
+This document outlines the structure, design, and features of the W1IT website. The website is designed to be a comprehensive resource for potential clients, showcasing the company's services, expertise, and value proposition.
 
-## Accessibility Enhancements
+## Style and Design
 
-This blueprint documents the accessibility improvements made to the website. The following pages were reviewed and updated to ensure compliance with accessibility standards:
+- **Logo:** A modern, professional logo with a simple yet memorable design.
+- **Color Palette:** A clean and modern color palette with a mix of neutral and accent colors.
+  - **Primary:** A vibrant blue, used for buttons, links, and other interactive elements.
+  - **Secondary:** A complementary color, used for secondary actions and highlights.
+  - **Neutral:** A range of grays, used for text, backgrounds, and other UI elements.
+- **Typography:**
+  - **Headings:** A clean and modern sans-serif font, used for headings and other display text.
+  - **Body:** A highly readable sans-serif font, used for body text and other long-form content.
+- **Layout:** A spacious and well-organized layout with a focus on readability and usability.
+- **Iconography:** A consistent set of icons to visually represent services, features, and other information.
 
-*   **Homepage:**
-    *   Reviewed all images and icons to ensure they are decorative and do not require `alt` text. All essential information is conveyed through text.
-*   **Services Pages:**
-    *   Reviewed all `services` pages, including sub-pages, to ensure that all icons and images are decorative. No `alt` attributes are required, as all essential information is text-based.
-*   **About Page:**
-    *   Replaced placeholder images with more descriptive `alt` text to provide meaningful context for users of assistive technologies.
-*   **Contact Page:**
-    *   Added a `title` attribute to the `iframe` element to provide a descriptive title for the embedded map, making it more accessible to screen reader users.
+## Features
 
-## Implemented Features
+- **Homepage:** A comprehensive overview of the company, its services, and its value proposition.
+- **Services Page:** A detailed breakdown of the company's service offerings.
+- **Solutions Page:** An outcome-focused overview of the company's strategic solutions.
+- **About Page:** A detailed overview of the company's mission, values, and team.
+- **Industries Page:** A dedicated page showcasing the industries the company serves.
+- **Testimonials Page:** A collection of client success stories and testimonials.
+- **Contact Page:** A simple and easy-to-use contact form, along with other contact information.
+- **Mobile-Friendly Design:** A responsive design that adapts to different screen sizes, with a focus on a seamless mobile user experience.
 
-*   **Responsive Design:** The website is fully responsive and functions seamlessly on all devices, from desktops to mobile phones.
-*   **Modern UI/UX:** The design is clean, modern, and user-friendly, with a focus on intuitive navigation and clear calls-to-action.
-*   **Built with Next.js and Tailwind CSS:** The website is built with a modern, efficient, and scalable tech stack, ensuring optimal performance and maintainability.
+## Current Plan
 
+- **Refactor Homepage:** Break down the homepage into smaller, more manageable components.
+- **Create Services Page:** Create a new page with a clearer categorization of the company's services.
+- **Create Solutions Page:** Create a new, outcome-focused page that is more strategic than the services page.
+- **Create About Page:** Create a strong about page that includes the company's mission, values, founder story, approach, and why clients choose W1IT.
+- **Create Industries Page:** Create a dedicated page for the industries the company serves.
+- **Create Testimonials Page:** Create a dedicated page for client testimonials.
+- **Create Contact Page:** Create a dedicated contact page with a form and other contact information.
+- **Update Navigation:** Update the navigation bar to include the new pages.
+- **Improve Mobile Navigation:** Enhance the mobile navigation experience with a full-screen overlay, smoother animations, and improved layout.

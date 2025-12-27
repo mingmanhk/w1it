@@ -66,8 +66,8 @@ export default function AboutPage() {
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               <Image
-                src="https://placehold.co/600x400/0172F5/FFFFFF"
-                alt="A diverse team of IT professionals collaborating around a whiteboard in a modern office, brainstorming solutions."
+                src="/images/optimized/about-mission.svg"
+                alt="W1IT's mission: Empowering businesses with clear, resilient, and high-performing IT solutions"
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-xl"
@@ -104,8 +104,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up order-2 md:order-1">
               <Image
-                src="https://placehold.co/600x400/8A2BE2/FFFFFF"
-                alt="A portrait of the founder, Victor, smiling confidently in front of a modern server rack, representing his expertise."
+                src="/images/optimized/founder-story.svg"
+                alt="W1IT Founder: Over a decade of IT expertise, building partnerships with Seattle businesses"
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-xl"

@@ -103,7 +103,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-neutral-900 font-inter">Phone</h3>
-                    <p className="text-neutral-600 font-inter">(206) 555-1234</p>
+                    <p className="text-neutral-600 font-inter">(832) 472-7991</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-neutral-900 font-inter">Email</h3>
-                    <p className="text-neutral-600 font-inter">hello@w1it.com</p>
+                    <p className="text-neutral-600 font-inter">contact@w1it.com</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -120,23 +120,16 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 font-inter">Address</h3>
-                    <p className="text-neutral-600 font-inter">1234 First Ave, Seattle, WA 98101</p>
+                    <h3 className="text-lg font-semibold text-neutral-900 font-inter">Service Area</h3>
+                    <p className="text-neutral-600 font-inter">Seattle Metropolitan Area & Remote Nationwide</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-12">
-                <div className="aspect-w-16 aspect-h-9">
-                  <iframe
-                    title="Google Maps location of Pike Place Market in Seattle"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.626573523732!2d-122.340072!3d47.609714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab2d3f0f0f3%3A0x8a3d4e4b5e7d4d4f!2sPike%20Place%20Market!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                  ></iframe>
-                </div>
+              <div className="mt-12 p-8 bg-gradient-to-br from-primary-50 to-cyan-50 rounded-2xl border border-primary-100">
+                <h3 className="text-xl font-display font-bold text-neutral-900 mb-3">Serving Seattle & Beyond</h3>
+                <p className="text-neutral-600 font-inter">
+                  We provide on-site IT services throughout the Greater Seattle area, including Bellevue, Redmond, Kirkland, and surrounding communities. Remote support available nationwide for businesses across the United States.
+                </p>
               </div>
             </div>
           </div>
