@@ -33,10 +33,14 @@ export const mainNavigation: NavigationItem[] = [
     iconName: 'BarChart',
   },
   {
-    name: 'Apps',
-    href: '/apps',
-    iconName: 'Code',
-    badge: 'New',
+    name: 'Industries',
+    href: '/industries',
+    iconName: 'Building',
+  },
+  {
+    name: 'About',
+    href: '/about',
+    iconName: 'Globe',
   },
   {
     name: 'Blog',
@@ -44,9 +48,9 @@ export const mainNavigation: NavigationItem[] = [
     iconName: 'MessageSquare',
   },
   {
-    name: 'About',
-    href: '/about',
-    iconName: 'Globe',
+    name: 'Contact',
+    href: '/contact',
+    iconName: 'Phone',
   },
 ];
 

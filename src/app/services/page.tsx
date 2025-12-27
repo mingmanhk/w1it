@@ -5,96 +5,201 @@ import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import {
-  Cloud,
-  Shield,
-  Cpu,
-  Database,
-  Smartphone,
-  Rocket,
   Server,
+  Shield,
+  BarChart3,
+  Globe,
+  Cpu,
+  Headphones,
+  Wrench,
+  Network,
+  Monitor,
+  FileText,
+  Cloud,
   Zap,
+  Users,
+  Code,
+  Search,
+  TrendingUp,
+  Gauge,
+  Smartphone,
   CheckCircle2,
   ArrowRight,
-  Headphones,
-  Globe,
-  Lock,
-  Code,
-  BarChart3,
 } from 'lucide-react';
 
 export default function ServicesPage() {
-  const allServices = [
+  const serviceCategories = [
     {
-      icon: <Rocket className="w-10 h-10" />,
-      title: 'Digital Transformation',
-      description: 'Accelerate your business growth with cutting-edge digital solutions and strategic technology roadmaps.',
-      href: '/solutions/digital-transformation',
-      features: ['Strategy Planning', 'Technology Adoption', 'Process Optimization'],
-      gradient: 'from-primary-500 to-accent-500',
-    },
-    {
-      icon: <Cloud className="w-10 h-10" />,
-      title: 'Cloud & Infrastructure',
-      description: 'Enterprise-grade cloud solutions with multi-cloud strategy, migration, and optimization services.',
-      href: '/services/cloud-solutions',
-      features: ['AWS/Azure/GCP', 'Hybrid Cloud', 'Cost Optimization'],
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: <Shield className="w-10 h-10" />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions including threat detection, compliance, and risk management.',
-      href: '/services/security',
-      features: ['SOC 2 Compliance', 'Penetration Testing', '24/7 Monitoring'],
-      gradient: 'from-emerald-500 to-green-500',
-    },
-    {
-      icon: <Cpu className="w-10 h-10" />,
       title: 'Managed IT Services',
-      description: 'End-to-end IT management with proactive monitoring, support, and strategic consulting.',
-      href: '/services/managed-services',
-      features: ['Proactive Support', 'SLA Guaranteed', 'Strategic Planning'],
-      gradient: 'from-violet-500 to-purple-500',
-    },
-    {
-      icon: <Database className="w-10 h-10" />,
-      title: 'Data & Analytics',
-      description: 'Transform data into actionable insights with modern data platforms and analytics solutions.',
-      href: '/solutions/data-analytics',
-      features: ['Data Warehousing', 'Business Intelligence', 'AI/ML Integration'],
-      gradient: 'from-amber-500 to-orange-500',
-    },
-    {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: 'App Development',
-      description: 'Custom software and mobile applications built with modern frameworks and best practices.',
-      href: '/apps',
-      features: ['Custom Solutions', 'Mobile Apps', 'Web Applications'],
-      gradient: 'from-pink-500 to-rose-500',
-    },
-    {
       icon: <Server className="w-10 h-10" />,
-      title: 'Network Setup',
-      description: 'Professional network design, implementation, and optimization for businesses of all sizes.',
-      href: '/services/network-setup',
-      features: ['Network Design', 'Hardware Setup', 'Performance Optimization'],
-      gradient: 'from-indigo-500 to-blue-500',
+      description: 'Proactive monitoring, support, and infrastructure management with SLA guarantees.',
+      gradient: 'from-blue-500 to-cyan-500',
+      services: [
+        {
+          name: 'Proactive Monitoring & Support',
+          description: '24/7 system monitoring and preventive maintenance',
+          icon: <Monitor className="w-6 h-6" />,
+        },
+        {
+          name: 'SLA-Guaranteed Help Desk',
+          description: 'Guaranteed response times for critical issues',
+          icon: <Headphones className="w-6 h-6" />,
+        },
+        {
+          name: 'Remote & On-Site Support',
+          description: 'Comprehensive support options for all needs',
+          icon: <Users className="w-6 h-6" />,
+        },
+        {
+          name: 'Co-Managed IT Services',
+          description: 'Augment your existing IT team with our expertise',
+          icon: <Cpu className="w-6 h-6" />,
+        },
+        {
+          name: 'Network Setup & Optimization',
+          description: 'Professional network design and performance tuning',
+          icon: <Network className="w-6 h-6" />,
+        },
+        {
+          name: 'Hardware & Printer Setup',
+          description: 'Equipment installation and configuration',
+          icon: <Wrench className="w-6 h-6" />,
+        },
+        {
+          name: 'Microsoft Windows Repair',
+          description: 'OS troubleshooting and optimization',
+          icon: <Monitor className="w-6 h-6" />,
+        },
+      ],
     },
     {
-      icon: <Headphones className="w-10 h-10" />,
-      title: 'Remote Support',
-      description: '24/7 technical support and troubleshooting for your business systems and applications.',
-      href: '/services/remote-support',
-      features: ['24/7 Availability', 'Rapid Response', 'Expert Technicians'],
-      gradient: 'from-teal-500 to-emerald-500',
+      title: 'IT Consulting & Strategy',
+      icon: <BarChart3 className="w-10 h-10" />,
+      description: 'Strategic technology planning, audits, and transformation roadmaps.',
+      gradient: 'from-emerald-500 to-green-500',
+      services: [
+        {
+          name: 'Infrastructure Planning',
+          description: 'Scalable architecture design for growth',
+          icon: <Cloud className="w-6 h-6" />,
+        },
+        {
+          name: 'Cloud Migration & Hybrid Strategy',
+          description: 'Seamless transition to cloud platforms',
+          icon: <Cloud className="w-6 h-6" />,
+        },
+        {
+          name: 'Cybersecurity Audits & Compliance',
+          description: 'Risk assessment and regulatory compliance',
+          icon: <Shield className="w-6 h-6" />,
+        },
+        {
+          name: 'Process Optimization',
+          description: 'Streamline operations with technology',
+          icon: <Zap className="w-6 h-6" />,
+        },
+        {
+          name: 'Technology Roadmapping',
+          description: 'Strategic planning for future growth',
+          icon: <BarChart3 className="w-6 h-6" />,
+        },
+        {
+          name: 'Data Backup & Recovery',
+          description: 'Comprehensive disaster recovery planning',
+          icon: <Server className="w-6 h-6" />,
+        },
+        {
+          name: 'IT Training & Documentation',
+          description: 'Employee training and process documentation',
+          icon: <FileText className="w-6 h-6" />,
+        },
+      ],
     },
     {
-      icon: <Code className="w-10 h-10" />,
-      title: 'Technical Writing',
-      description: 'Professional documentation, user guides, and technical content for your products and services.',
-      href: '/services/technical-writing',
-      features: ['API Documentation', 'User Manuals', 'Technical Guides'],
-      gradient: 'from-gray-500 to-neutral-500',
+      title: 'Web Development & Optimization',
+      icon: <Globe className="w-10 h-10" />,
+      description: 'Website creation, enhancement, and growth strategies for client success.',
+      gradient: 'from-violet-500 to-purple-500',
+      services: [
+        {
+          name: 'Website Creation',
+          description: 'Custom websites for client businesses',
+          icon: <Code className="w-6 h-6" />,
+        },
+        {
+          name: 'Feature Implementation',
+          description: 'Custom functionality and integrations',
+          icon: <Wrench className="w-6 h-6" />,
+        },
+        {
+          name: 'UX Enhancements',
+          description: 'User experience design and optimization',
+          icon: <Smartphone className="w-6 h-6" />,
+        },
+        {
+          name: 'SEO Strategy',
+          description: 'Search engine optimization and visibility',
+          icon: <Search className="w-6 h-6" />,
+        },
+        {
+          name: 'Site Traffic Growth',
+          description: 'Marketing and traffic generation strategies',
+          icon: <TrendingUp className="w-6 h-6" />,
+        },
+        {
+          name: 'Analytics & Conversion Tracking',
+          description: 'Data-driven optimization and reporting',
+          icon: <BarChart3 className="w-6 h-6" />,
+        },
+        {
+          name: 'Performance Optimization',
+          description: 'Speed, accessibility, and mobile responsiveness',
+          icon: <Gauge className="w-6 h-6" />,
+        },
+      ],
+    },
+    {
+      title: 'On-Demand & Specialized Support',
+      icon: <Zap className="w-10 h-10" />,
+      description: 'Emergency support, specialized troubleshooting, and technical services.',
+      gradient: 'from-amber-500 to-orange-500',
+      services: [
+        {
+          name: 'Virus Removal',
+          description: 'Malware detection and eradication',
+          icon: <Shield className="w-6 h-6" />,
+        },
+        {
+          name: 'Data Recovery',
+          description: 'File and system recovery services',
+          icon: <Server className="w-6 h-6" />,
+        },
+        {
+          name: 'High-Speed Internet Setup',
+          description: 'Network connectivity optimization',
+          icon: <Network className="w-6 h-6" />,
+        },
+        {
+          name: 'Technical Troubleshooting',
+          description: 'Diagnostic and repair services',
+          icon: <Wrench className="w-6 h-6" />,
+        },
+        {
+          name: 'API Documentation',
+          description: 'Technical writing for developers',
+          icon: <FileText className="w-6 h-6" />,
+        },
+        {
+          name: 'Technical Writing',
+          description: 'Professional documentation services',
+          icon: <FileText className="w-6 h-6" />,
+        },
+        {
+          name: 'Emergency Remote Support',
+          description: '24/7 urgent technical assistance',
+          icon: <Headphones className="w-6 h-6" />,
+        },
+      ],
     },
   ];
 
@@ -125,21 +230,24 @@ export default function ServicesPage() {
     <div className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-circuit-pattern opacity-10" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-subtle" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse-subtle" />
 
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
+            <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
+              <Server className="w-4 h-4" />
+              <span className="font-inter">Professional Services</span>
+            </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Comprehensive
-              <span className="block text-gradient-tech mt-2">IT Services</span>
+              <span className="block text-gradient-primary mt-2">IT Services</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              End-to-end technology solutions designed to accelerate your digital transformation and drive business growth.
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              From proactive monitoring to strategic consulting and specialized support—everything your business needs to thrive in the digital age.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-tech hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -148,54 +256,63 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* All Services Section */}
-      <section className="py-24 bg-slate-50">
+      {/* Service Categories */}
+      <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Our Services
+              Service Categories
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-slate-900 mb-6">
-              Complete Technology Solutions
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              Four Pillars of IT Excellence
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
-              From strategy to implementation and support, we provide comprehensive IT services tailored to your business needs.
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+              Our services are organized into four comprehensive categories to address every aspect of your technology needs.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allServices.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {serviceCategories.map((category, index) => (
               <Card
                 key={index}
                 hoverable
-                className="animate-scale-in border border-slate-200 hover:border-transparent hover:shadow-xl transition-all duration-300 border-gradient-tech"
+                className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="p-2">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg`}>
-                    <div className="text-white">{service.icon}</div>
+                <div className={`bg-gradient-to-br ${category.gradient} p-8 text-white rounded-t-2xl`}>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                      {category.icon}
+                    </div>
                   </div>
-
-                  <h3 className="font-display font-semibold text-2xl text-slate-900 mb-4">
-                    {service.title}
+                  <h3 className="font-display font-bold text-2xl mb-4">
+                    {category.title}
                   </h3>
-                  <p className="text-slate-600 mb-6 font-inter leading-relaxed">
-                    {service.description}
+                  <p className="text-white/90 font-inter">
+                    {category.description}
                   </p>
-
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-slate-700 font-inter">{feature}</span>
+                </div>
+                <div className="p-8">
+                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
+                    Included Services
+                  </h4>
+                  <div className="space-y-4">
+                    {category.services.map((service, idx) => (
+                      <div key={idx} className="flex items-start space-x-4 p-3 bg-neutral-50 rounded-lg hover:bg-white transition-colors">
+                        <div className="text-primary-500 mt-1 flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <div>
+                          <h5 className="font-display font-semibold text-neutral-900">
+                            {service.name}
+                          </h5>
+                          <p className="text-neutral-600 text-sm font-inter mt-1">
+                            {service.description}
+                          </p>
+                        </div>
                       </div>
                     ))}
                   </div>
-
-                  <Button href={service.href} variant="ghost" className="group w-full justify-center">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
-                  </Button>
                 </div>
               </Card>
             ))}
@@ -203,78 +320,104 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* Benefits Section */}
+      {/* Visual Layout Section */}
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
-              Why Choose Our Services
+              At a Glance
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-slate-900 mb-6">
-              The W1 IT Advantage
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              Our Service Portfolio
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-inter">
-              Experience the difference with our client-centric approach and technical excellence.
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+              A modular card layout showcasing our core service areas with clear icons and descriptions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="animate-fade-in-up p-8 rounded-2xl border border-slate-200 hover:shadow-xl transition-all duration-300 hover:border-gradient-tech"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
-                  <div className="text-primary-600">{benefit.icon}</div>
-                </div>
-                <h3 className="font-display font-semibold text-xl text-slate-900 mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-slate-600 font-inter leading-relaxed">
-                  {benefit.description}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center p-8 border-2 border-blue-200 hover:border-blue-300 transition-colors">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Server className="w-8 h-8 text-blue-600" />
               </div>
-            ))}
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">
+                Managed IT Services
+              </h3>
+              <p className="text-neutral-600 font-inter">
+                End-to-end support, monitoring, and infrastructure management.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 border-2 border-emerald-200 hover:border-emerald-300 transition-colors">
+              <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-8 h-8 text-emerald-600" />
+              </div>
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">
+                Data Analytics
+              </h3>
+              <p className="text-neutral-600 font-inter">
+                Turn raw data into actionable insights with BI dashboards and predictive tools.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 border-2 border-violet-200 hover:border-violet-300 transition-colors">
+              <div className="w-16 h-16 bg-violet-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-violet-600" />
+              </div>
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">
+                Website Optimization
+              </h3>
+              <p className="text-neutral-600 font-inter">
+                Build, enhance, and grow client websites with SEO, UX, and analytics.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 border-2 border-amber-200 hover:border-amber-300 transition-colors">
+              <div className="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-amber-600" />
+              </div>
+              <h3 className="font-display font-bold text-xl text-neutral-900 mb-3">
+                Cybersecurity
+              </h3>
+              <p className="text-neutral-600 font-inter">
+                Protect your business with audits, compliance, and 24/7 monitoring.
+              </p>
+            </Card>
           </div>
         </Container>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-tech text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-primary text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
 
         <Container size="lg">
           <div className="text-center relative z-10">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-              Ready to Transform Your Business?
+              Not Sure What Fits?
             </h2>
             <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
-              Partner with us to build scalable, secure, and innovative technology solutions that drive business growth.
+              Schedule a free consultation to discuss your specific needs and discover the perfect service package for your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button
                 href="/contact"
                 variant="secondary"
                 size="xl"
-                className="bg-white text-primary-600 hover:bg-slate-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Schedule Free Consultation
               </Button>
               <Button
-                href="/contact"
+                href="/solutions"
                 variant="outline"
                 size="xl"
                 className="border-white text-white hover:bg-white/10"
               >
-                Contact Our Team
+                Explore Strategic Solutions
               </Button>
             </div>
-            <p className="text-sm text-white/70 mt-8 font-inter">
-              No commitment required • 30-minute discovery call • Custom solution proposal
-            </p>
           </div>
         </Container>
       </section>

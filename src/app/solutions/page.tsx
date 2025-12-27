@@ -1,80 +1,281 @@
-import { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import Container from '@/components/Container';
+'use client';
 
-const SolutionsPage: NextPage = () => {
-  const solutions = [
-    {
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights with our advanced analytics solutions.',
-      href: '/solutions/data-analytics',
-      features: ['Business Intelligence', 'Data Visualization', 'Predictive Analytics', 'Reporting Dashboards']
-    },
+import React from 'react';
+import Container from '@/components/Container';
+import Button from '@/components/Button';
+import Card from '@/components/Card';
+import {
+  RefreshCw,
+  Database,
+  Shield,
+  Wrench,
+  Globe,
+  Search,
+  TrendingUp,
+  Gauge,
+  Zap,
+  CheckCircle2,
+  ArrowRight,
+} from 'lucide-react';
+
+export default function SolutionsPage() {
+  const strategicSolutions = [
     {
       title: 'Digital Transformation',
-      description: 'Modernize your business processes and technology stack for the digital age.',
+      icon: <RefreshCw className="w-10 h-10" />,
+      description: 'Process automation, legacy modernization, and cloud migration for business agility.',
       href: '/solutions/digital-transformation',
-      features: ['Process Automation', 'Cloud Migration', 'Legacy System Modernization', 'Digital Strategy']
-    }
+      features: ['Process Automation', 'Legacy Modernization', 'Cloud Migration', 'Digital Strategy'],
+      gradient: 'from-blue-500 to-cyan-500',
+    },
+    {
+      title: 'Data & Analytics',
+      icon: <Database className="w-10 h-10" />,
+      description: 'Business intelligence dashboards, predictive analytics, and data-driven decision making.',
+      href: '/solutions/data-analytics',
+      features: ['Business Intelligence', 'Predictive Analytics', 'Reporting Dashboards', 'Data Warehousing'],
+      gradient: 'from-emerald-500 to-green-500',
+    },
+    {
+      title: 'Cybersecurity Strategy',
+      icon: <Shield className="w-10 h-10" />,
+      description: 'Risk management, penetration testing, compliance, and security governance.',
+      href: '/solutions/cybersecurity-strategy',
+      features: ['Risk Management', 'Penetration Testing', 'Compliance', 'Security Governance'],
+      gradient: 'from-violet-500 to-purple-500',
+    },
+    {
+      title: 'Custom IT Solutions',
+      icon: <Wrench className="w-10 h-10" />,
+      description: 'Tailored packages and bespoke technology solutions for unique business needs.',
+      href: '/solutions/custom-it-solutions',
+      features: ['Tailored Packages', 'Bespoke Solutions', 'Integration Services', 'Custom Development'],
+      gradient: 'from-amber-500 to-orange-500',
+    },
   ];
 
+  const websiteOptimization = {
+    title: 'Website Optimization & Growth Consulting',
+    icon: <Globe className="w-10 h-10" />,
+    description: 'Website creation, enhancement, and growth strategies for client success.',
+    services: [
+      {
+        name: 'Website Creation',
+        description: 'Custom websites for client businesses',
+        icon: <Wrench className="w-6 h-6" />,
+      },
+      {
+        name: 'Feature Implementation',
+        description: 'Custom functionality and integrations',
+        icon: <Zap className="w-6 h-6" />,
+      },
+      {
+        name: 'UX Enhancements',
+        description: 'User experience design and optimization',
+        icon: <Gauge className="w-6 h-6" />,
+      },
+      {
+        name: 'SEO Strategy',
+        description: 'Search engine optimization and visibility',
+        icon: <Search className="w-6 h-6" />,
+      },
+      {
+        name: 'Site Traffic Growth',
+        description: 'Marketing and traffic generation strategies',
+        icon: <TrendingUp className="w-6 h-6" />,
+      },
+      {
+        name: 'Analytics & Conversion Tracking',
+        description: 'Data-driven optimization and reporting',
+        icon: <Database className="w-6 h-6" />,
+      },
+    ],
+    gradient: 'from-indigo-500 to-blue-500',
+  };
+
   return (
-    <>
-      <Head>
-        <title>Solutions | W1 IT Solutions</title>
-        <meta name="description" content="Explore our comprehensive IT solutions designed to transform your business operations and drive growth." />
-      </Head>
-      <div className="bg-brand-gray-light py-20">
+    <div className="overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 bg-gradient-dark text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse-subtle" />
+
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="font-heading font-bold text-h1 text-brand-navy mb-4">Our Solutions</h1>
-            <p className="text-body-lg text-brand-gray-mid">
-              Tailored IT solutions designed to address your specific business challenges and drive measurable results.
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
+              <RefreshCw className="w-4 h-4" />
+              <span className="font-inter">Strategic Solutions</span>
+            </div>
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+              Strategic
+              <span className="block text-gradient-primary mt-2">IT Solutions</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              Outcome-focused technology solutions designed to solve complex business challenges and drive measurable growth.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {solutions.map((solution) => (
-              <div key={solution.title} className="bg-white border border-[#E2E8F0] rounded-card p-8 shadow-card hover:shadow-lg transition-shadow">
-                <h2 className="font-heading font-bold text-h2 text-brand-navy mb-3">{solution.title}</h2>
-                <p className="text-body-md text-brand-gray-mid mb-6">{solution.description}</p>
-
-                <ul className="space-y-2 mb-8">
-                  {solution.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-body-md text-brand-gray-mid">
-                      <span className="w-2 h-2 bg-brand-blue rounded-full mr-3"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href={solution.href}
-                  className="inline-block bg-brand-blue text-white font-body text-base font-medium px-6 py-3 rounded-btn hover:opacity-90 transition-opacity"
-                >
-                  Learn More
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="max-w-3xl mx-auto mt-16 text-center">
-            <h2 className="font-heading font-bold text-h2 text-brand-navy mb-4">Need a Custom Solution?</h2>
-            <p className="text-body-lg text-brand-gray-mid mb-8">
-              Every business is unique. Contact us to discuss how we can create a tailored solution for your specific needs.
-            </p>
-            <Link
-              href="/contact"
-              className="bg-brand-navy text-white font-body text-base font-medium px-8 py-4 rounded-btn hover:opacity-90 transition-opacity"
-            >
-              Schedule a Consultation
-            </Link>
+            <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+                Explore Strategic Solutions
+                <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
+              </Button>
+            </div>
           </div>
         </Container>
-      </div>
-    </>
-  );
-};
+      </section>
 
-export default SolutionsPage;
+      {/* Strategic Solutions */}
+      <section className="py-24 bg-neutral-50">
+        <Container>
+          <div className="text-center mb-20">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+              Strategic Solutions
+            </div>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              Outcome-Focused Technology
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+              Our solutions focus on strategic outcomes, not just technical services. We help you achieve business goals through technology.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {strategicSolutions.map((solution, index) => (
+              <Card
+                key={index}
+                hoverable
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className={`bg-gradient-to-br ${solution.gradient} p-8 text-white rounded-t-2xl`}>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                      {solution.icon}
+                    </div>
+                  </div>
+                  <h3 className="font-display font-bold text-2xl mb-4">
+                    {solution.title}
+                  </h3>
+                  <p className="text-white/90 font-inter">
+                    {solution.description}
+                  </p>
+                </div>
+                <div className="p-8">
+                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
+                    Key Features
+                  </h4>
+                  <div className="space-y-3 mb-6">
+                    {solution.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-3">
+                        <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                        <span className="text-neutral-700 font-inter">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button
+                    href={solution.href}
+                    variant="outline"
+                    className="w-full"
+                  >
+                    Learn More About {solution.title}
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Website Optimization Section */}
+      <section className="py-24 bg-white">
+        <Container>
+          <div className="text-center mb-20">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+              New Service Area
+            </div>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              Website Optimization & Growth Consulting
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+              A comprehensive service area focused on building, enhancing, and growing client websites for maximum impact.
+            </p>
+          </div>
+
+          <Card className="border-2 border-indigo-200">
+            <div className={`bg-gradient-to-br ${websiteOptimization.gradient} p-8 text-white rounded-t-2xl`}>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center">
+                  {websiteOptimization.icon}
+                </div>
+              </div>
+              <h3 className="font-display font-bold text-2xl mb-4">
+                {websiteOptimization.title}
+              </h3>
+              <p className="text-white/90 font-inter">
+                {websiteOptimization.description}
+              </p>
+            </div>
+            <div className="p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {websiteOptimization.services.map((service, idx) => (
+                  <div key={idx} className="flex items-start space-x-4 p-4 bg-neutral-50 rounded-lg hover:bg-white transition-colors">
+                    <div className="text-indigo-500 mt-1 flex-shrink-0">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h5 className="font-display font-semibold text-neutral-900">
+                        {service.name}
+                      </h5>
+                      <p className="text-neutral-600 text-sm font-inter mt-1">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 text-center">
+                <Button href="/contact" size="lg" className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white">
+                  Start Your Website Transformation
+                </Button>
+              </div>
+            </div>
+          </Card>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-primary text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
+        <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+
+        <Container size="lg">
+          <div className="text-center relative z-10">
+            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+              Not Sure What Fits?
+            </h2>
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+              Schedule a free consultation to discuss your specific business challenges and discover the perfect strategic solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button
+                href="/contact"
+                variant="secondary"
+                size="xl"
+                className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Schedule Free Consultation
+              </Button>
+              <Button
+                href="/services"
+                variant="outline"
+                size="xl"
+                className="border-white text-white hover:bg-white/10"
+              >
+                Browse All Services
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </div>
+  );
+}

@@ -31,6 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/industries`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
       changeFrequency: 'yearly' as const,
@@ -65,6 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const solutionPages = [
     '/solutions/data-analytics',
     '/solutions/digital-transformation',
+    '/solutions/cybersecurity-strategy',
+    '/solutions/custom-it-solutions',
   ].map(path => ({
     url: `${baseUrl}${path}`,
     lastModified: currentDate,
