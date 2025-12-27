@@ -150,6 +150,14 @@ export default function Home() {
       quote: 'Their structured approach to automation significantly reduced our maintenance overhead.',
       author: 'Operations Director, Manufacturing Firm',
     },
+    {
+      quote: 'Victor\'s attention to detail and clear documentation made our cloud migration seamless and stress-free.',
+      author: 'IT Manager, Financial Services',
+    },
+    {
+      quote: 'The website optimization work resulted in a 40% increase in page load speed and better user engagement.',
+      author: 'Marketing Director, E-commerce Company',
+    },
   ];
 
   return (
@@ -166,11 +174,11 @@ export default function Home() {
               <span className="font-inter">Operational Clarity</span>
             </div>
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
-              Operational clarity
-              <span className="block text-gradient-primary mt-2">for modern IT.</span>
+              Modern IT Infrastructure
+              <span className="block text-gradient-primary mt-2">Built for Clarity & Growth</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Infrastructure, automation, and website optimization — delivered with precision and built for long‑term stability.
+              We help Seattle businesses transform IT chaos into operational clarity. From infrastructure modernization to website optimization — we deliver precision, resilience, and measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
@@ -186,9 +194,9 @@ export default function Home() {
       </section>
 
       {/* Value Pillars */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <Container>
-          <div className="text-center mb-20">
+          <div className="text-center mb-24">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
               Our Foundation
             </div>
@@ -200,11 +208,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {valuePillars.map((pillar, index) => (
               <Card
                 key={index}
-                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300"
+                hoverable
+                className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className={`bg-gradient-to-br ${pillar.gradient} p-8 text-white rounded-t-2xl`}>
@@ -229,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* Core Services Overview */}
-      <section className="py-24 bg-gradient-to-b from-neutral-50 to-white">
+      <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -291,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* Feature Highlights */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -307,9 +316,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featureHighlights.map((feature, index) => (
-              <div
+              <Card
                 key={index}
-                className="animate-fade-in-up p-8 border-2 border-neutral-200 rounded-2xl hover:border-primary-300 hover:shadow-lg transition-all duration-300"
+                hoverable
+                padding="lg"
+                className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -325,14 +336,14 @@ export default function Home() {
                 <p className="text-neutral-600 font-inter leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </Card>
             ))}
           </div>
         </Container>
       </section>
 
       {/* Industries Served */}
-      <section className="py-24 bg-gradient-to-b from-neutral-50 to-white">
+      <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -346,11 +357,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {industries.map((industry, index) => (
-              <div
+              <Card
                 key={index}
-                className="animate-fade-in-up p-6 border-2 border-neutral-200 rounded-2xl hover:border-primary-300 hover:shadow-lg transition-all duration-300 text-center"
+                hoverable
+                padding="lg"
+                className="animate-fade-in-up text-center"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 <div className={`${industry.color} mb-4 flex justify-center`}>
@@ -359,7 +372,7 @@ export default function Home() {
                 <h3 className="font-display font-semibold text-lg text-neutral-900">
                   {industry.name}
                 </h3>
-              </div>
+              </Card>
             ))}
           </div>
 
@@ -372,7 +385,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -390,7 +403,8 @@ export default function Home() {
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
-                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300"
+                hoverable
+                className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="p-8">
@@ -413,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-24 bg-gradient-primary text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-primary text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-white/5 rounded-full blur-3xl" />

@@ -277,10 +277,13 @@ export default function ServicesPage() {
             <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               At W1IT, we deliver modern IT solutions that combine deep technical expertise with strategic clarity. Whether you're optimizing infrastructure, launching a new website, or solving persistent network issues, we bring precision, resilience, and results.
             </p>
-            <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
               <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Schedule a Free Consultation
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
+              </Button>
+              <Button href="/solutions" variant="outline" size="xl" className="border-white text-white hover:bg-white/10">
+                Explore Strategic Solutions
               </Button>
             </div>
           </div>
@@ -288,7 +291,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Enhanced Services Section */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -399,7 +402,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Strategic Solutions Section */}
-      <section className="py-24 bg-gradient-to-b from-neutral-50 to-white">
+      <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -474,7 +477,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Why W1IT Section */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <Container>
           <div className="text-center mb-20">
             <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
@@ -515,7 +518,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 bg-gradient-primary text-white relative overflow-hidden">
+      <section className="py-32 bg-gradient-primary text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
