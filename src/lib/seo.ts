@@ -50,7 +50,7 @@ export function generateSEO(config: SEOConfig): Metadata {
       url,
       siteName: defaultSEO.siteName,
       locale: 'en_US',
-      type: (openGraph.type as any) || 'website',
+      type: (openGraph.type as 'website' | 'article') || 'website',
       images: openGraph.images || [
         {
           url: defaultSEO.defaultImage,

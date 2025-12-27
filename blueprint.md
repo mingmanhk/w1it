@@ -1,46 +1,25 @@
-'''# W1IT Website Redesign Blueprint
+# Project Blueprint
 
 ## Overview
 
-This document outlines the design, features, and development plan for the W1IT website redesign. The goal is to create a modern, professional, and performant website that reflects W1IT's brand identity as a leading IT consultancy.
+This project is a modern, responsive website for a fictional IT solutions company, W1IT. The site is built with Next.js and Tailwind CSS and is designed to be fully accessible, following WCAG 2.1 guidelines.
 
-## Style, Design, and Features
+## Accessibility Enhancements
 
-### Global Design
+This blueprint documents the accessibility improvements made to the website. The following pages were reviewed and updated to ensure compliance with accessibility standards:
 
-*   **Layout:** 1200px max width, 12-column grid, 24px gutters, 32px page padding.
-*   **Typography:**
-    *   Headings: Space Grotesk
-    *   Body: Inter
-    *   Code: JetBrains Mono
-*   **Color Palette:**
-    *   Primary: Deep Navy (#0A1A2F), Electric Blue (#2F80ED), Aqua Cyan (#4FD1C5)
-    *   Neutral: Soft Gray (#F2F4F7), Slate Gray (#475569)
-    *   Dark Mode: Background (#0B0F19), Surface (#111827), Text (#E5E7EB)
+*   **Homepage:**
+    *   Reviewed all images and icons to ensure they are decorative and do not require `alt` text. All essential information is conveyed through text.
+*   **Services Pages:**
+    *   Reviewed all `services` pages, including sub-pages, to ensure that all icons and images are decorative. No `alt` attributes are required, as all essential information is text-based.
+*   **About Page:**
+    *   Replaced placeholder images with more descriptive `alt` text to provide meaningful context for users of assistive technologies.
+*   **Contact Page:**
+    *   Added a `title` attribute to the `iframe` element to provide a descriptive title for the embedded map, making it more accessible to screen reader users.
 
-### Components
+## Implemented Features
 
-*   **Header:** 72px height, white background, bottom border, navigation with 32px spacing, and a primary CTA button.
-*   **Footer:** 4-column layout, navy background, white text, and a divider.
-*   **Buttons:**
-    *   Primary: Blue background, white text, 16px 28px padding, 6px radius.
-    *   Secondary: Blue border, blue text, transparent background.
-*   **Cards:** White/soft gray background, 1px border, 8px radius, 24px padding, and a subtle shadow.
+*   **Responsive Design:** The website is fully responsive and functions seamlessly on all devices, from desktops to mobile phones.
+*   **Modern UI/UX:** The design is clean, modern, and user-friendly, with a focus on intuitive navigation and clear calls-to-action.
+*   **Built with Next.js and Tailwind CSS:** The website is built with a modern, efficient, and scalable tech stack, ensuring optimal performance and maintainability.
 
-### Homepage Structure
-
-1.  **Header**
-2.  **Hero Section:** 2-column layout with a text stack and a geometric illustration.
-3.  **Value Proposition Section:** Highlighting Infrastructure, Automation, and Security.
-4.  **CTA Banner:** Navy background with a centered text and button.
-5.  **Footer**
-
-## Development Plan (Initial Revamp)
-
-*   [x] **Setup Design System:** Update `tailwind.config.ts` and `globals.css` with new typography, colors, and spacing.
-*   [x] **Update Fonts:** Load and apply `Space Grotesk`, `Inter`, and `JetBrains Mono` in `layout.tsx`.
-*   [x] **Revamp Header:** Rebuild `Header.tsx` to match the mockup specifications.
-*   [x] **Revamp Footer:** Rebuild `Footer.tsx` to match the mockup specifications.
-*   [x] **Update Homepage:** Rebuild the Hero Section, Value Proposition, and CTA Banner on `page.tsx`.
-
-'''

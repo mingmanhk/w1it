@@ -13,7 +13,6 @@ import {
   Database,
   Globe,
   TrendingUp,
-  Users,
 } from 'lucide-react';
 
 export default function CloudSolutionsPage() {

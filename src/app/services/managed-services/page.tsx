@@ -6,11 +6,9 @@ import Button from '@/components/Button';
 import {
   Cpu,
   Headphones,
-  Zap,
   CheckCircle2,
   ArrowRight,
   Shield,
-  TrendingUp,
   Users,
   Globe,
   Database,

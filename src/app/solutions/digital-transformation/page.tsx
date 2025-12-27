@@ -5,8 +5,6 @@ import Container from '@/components/Container';
 import Button from '@/components/Button';
 import {
   Rocket,
-  Zap,
-  TrendingUp,
   CheckCircle2,
   ArrowRight,
   Cloud,

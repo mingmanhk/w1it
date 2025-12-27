@@ -8,7 +8,6 @@ import {
   Cpu,
   Code,
   Server,
-  Database,
   Zap,
   CheckCircle2,
   ArrowRight,

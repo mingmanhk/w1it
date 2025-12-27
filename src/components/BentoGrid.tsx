@@ -2,8 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Users, Award, TrendingUp, Sparkles, Cpu, Shield, Server, Cloud, BarChart3, Code } from 'lucide-react';
-import Card from './Card';
+import { ArrowRight, Users, Award, TrendingUp, Sparkles, Cpu, Shield, Cloud, BarChart3, Code } from 'lucide-react';
 
 interface BentoItem {
   title: string;

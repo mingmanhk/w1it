@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Container from './Container';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 
@@ -55,9 +56,11 @@ export default function Footer() {
           {/* Enhanced Company Info */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center space-x-3 mb-6">
-              <img
+              <Image
                 src="/images/optimized/Logo.webp"
                 alt="W1IT Solutions Logo"
+                width={48}
+                height={48}
                 className="h-12 w-auto object-contain"
               />
               <span className="font-heading font-bold text-3xl text-white">W1IT Solutions</span>

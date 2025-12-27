@@ -1,188 +1,147 @@
 'use client';
 
-import { useState } from 'react';
+import { useFormState, useFormStatus } from 'react-dom';
+import { saveContact } from '@/app/contact/actions';
 import Container from '@/components/Container';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '@/components/Button';
-import Card from '@/components/Card';
 
-export default function Contact() {
-  const [result, setResult] = useState('');
-
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    setResult('Sending....');
-    const formData = new FormData(event.currentTarget);
-
-    try {
-      const response = await fetch('/api/contact/submit', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setResult('Form Submitted Successfully');
-        event.currentTarget.reset();
-      } else {
-        setResult('Error: ' + (data.message || 'Submission failed'));
-      }
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setResult('Error: Network or server issue');
-    }
-  };
+function SubmitButton() {
+  const { pending } = useFormStatus();
 
   return (
-    <Container>
-      <div className="py-20 md:py-32">
-        <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6 text-center">
-          Contact & Availability
-        </h1>
-        <p className="text-lg md:text-xl text-gray-medium max-w-2xl mx-auto mb-8 font-inter text-center">
-          Get in touch for IT consulting, project inquiries, or technical support. I typically respond within 2 hours during business hours.
-        </p>
+    <Button type="submit" disabled={pending} className="w-full">
+      {pending ? 'Submitting...' : 'Send Message'}
+    </Button>
+  );
+}
 
-        {/* Availability Information */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <Card className="p-6 text-center">
-              <div className="text-rose mb-3">
-                <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Business Hours</h3>
-              <p className="font-inter text-gray-medium">
-                Monday - Friday<br />
-                9:00 AM - 6:00 PM PST
-              </p>
-            </Card>
-            <Card className="p-6 text-center">
-              <div className="text-rose mb-3">
-                <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-              </div>
-              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Response Time</h3>
-              <p className="font-inter text-gray-medium">
-                Within 2 hours during business hours<br />
-                24/7 emergency support for clients
-              </p>
-            </Card>
-            <Card className="p-6 text-center">
-              <div className="text-rose mb-3">
-                <svg className="w-8 h-8 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                </svg>
-              </div>
-              <h3 className="font-display font-bold text-xl text-charcoal mb-2">Consultation Slots</h3>
-              <p className="font-inter text-gray-medium">
-                Available within 24-48 hours<br />
-                Virtual or in-person (Seattle area)
-              </p>
-            </Card>
+export default function ContactPage() {
+  const [state, formAction] = useFormState(saveContact, null)
+
+  return (
+    <div className="overflow-hidden py-20 md:py-32 bg-white">
+      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark text-white overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+        <Container>
+          <div className="max-w-4xl mx-auto text-center relative z-10">
+            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+              Contact Us
+            </h1>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              We&apos;re here to help. Get in touch with us to discuss your IT needs.
+            </p>
           </div>
+        </Container>
+      </section>
 
-          <div className="bg-gray-bg rounded-xl p-6 mb-8">
-            <h3 className="font-display font-bold text-2xl text-charcoal mb-4">Best Ways to Reach Me</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-display font-semibold text-lg text-charcoal mb-2">For Project Inquiries</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Use the form below with project details</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Include timeline and budget if available</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Attach relevant documents/specifications</span>
-                  </li>
-                </ul>
+      <section className="py-32 bg-white">
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="animate-fade-in-up">
+              <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Get in Touch</h2>
+              <p className="text-lg text-neutral-600 font-inter leading-relaxed mb-8">
+                Have a question or need a quote? Fill out the form below and we&apos;ll get back to you as soon as possible.
+              </p>
+              <form action={formAction}>
+                <div className="grid grid-cols-1 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 font-inter mb-2">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-inter"
+                      required
+                    />
+                    {state?.errors?.name && <p className="text-sm text-red-500 mt-2">{state.errors.name[0]}</p>}
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 font-inter mb-2">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-inter"
+                      required
+                    />
+                    {state?.errors?.email && <p className="text-sm text-red-500 mt-2">{state.errors.email[0]}</p>}
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-neutral-700 font-inter mb-2">Company (Optional)</label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-inter"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-neutral-700 font-inter mb-2">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={5}
+                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-inter"
+                      required
+                    ></textarea>
+                    {state?.errors?.message && <p className="text-sm text-red-500 mt-2">{state.errors.message[0]}</p>}
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <SubmitButton />
+                </div>
+                {state?.message && <p className="text-sm text-green-500 mt-4">{state.message}</p>}
+              </form>
+            </div>
+            <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+              <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Contact Information</h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
+                    <Phone className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 font-inter">Phone</h3>
+                    <p className="text-neutral-600 font-inter">(206) 555-1234</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
+                    <Mail className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 font-inter">Email</h3>
+                    <p className="text-neutral-600 font-inter">hello@w1it.com</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-neutral-900 font-inter">Address</h3>
+                    <p className="text-neutral-600 font-inter">1234 First Ave, Seattle, WA 98101</p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h4 className="font-display font-semibold text-lg text-charcoal mb-2">For Existing Clients</h4>
-                <ul className="space-y-2">
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Use your dedicated support channel</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Emergency: Call/text provided number</span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="text-rose mr-2">•</span>
-                    <span className="font-inter text-gray-medium">Schedule meetings via calendar link</span>
-                  </li>
-                </ul>
+              <div className="mt-12">
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe
+                    title="Google Maps location of Pike Place Market in Seattle"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.626573523732!2d-122.340072!3d47.609714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab2d3f0f0f3%3A0x8a3d4e4b5e7d4d4f!2sPike%20Place%20Market!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <Card className="max-w-2xl mx-auto">
-          <form onSubmit={onSubmit}>
-            <div className="grid grid-cols-1 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-charcoal font-inter font-medium mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-rose focus:border-rose"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-charcoal font-inter font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-rose focus:border-rose"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-charcoal font-inter font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-rose focus:border-rose"
-                  required
-                ></textarea>
-              </div>
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
-              </Button>
-              {result && (
-                <p
-                  className={`text-center font-inter font-medium ${
-                    result === 'Form Submitted Successfully'
-                      ? 'text-green-600'
-                      : result === 'Error'
-                      ? 'text-red-600'
-                      : 'text-gray-medium'
-                  }`}
-                >
-                  {result}
-                </p>
-              )}
-            </div>
-          </form>
-        </Card>
-      </div>
-    </Container>
+        </Container>
+      </section>
+    </div>
   );
 }

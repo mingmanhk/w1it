@@ -3,7 +3,7 @@ import { generateSEO } from '@/lib/seo';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
-import { BookOpen, MessageSquare, ArrowRight, Sparkles, Calendar, Clock, TrendingUp, Zap, Shield, Globe, Database, FileText } from 'lucide-react';
+import { BookOpen, MessageSquare, ArrowRight, Sparkles, Calendar, Clock, TrendingUp, Shield, Globe, Database, FileText } from 'lucide-react';
 
 export const metadata: Metadata = generateSEO({
   title: 'IT Insights & Tech Blog - Seattle IT Tips',

@@ -3,14 +3,6 @@
 import { useEffect } from 'react';
 import { useReportWebVitals } from 'next/web-vitals';
 
-interface PerformanceMetrics {
-  CLS: number;
-  FID: number;
-  FCP: number;
-  LCP: number;
-  TTFB: number;
-}
-
 export default function PerformanceMonitor() {
   // Report Web Vitals to Google Analytics or other analytics service
   useReportWebVitals((metric) => {
@@ -18,8 +10,9 @@ export default function PerformanceMonitor() {
     console.log('Web Vitals:', metric);
 
     // Example: Send to Google Analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', metric.name, {
+    const windowWithGtag = window as typeof window & { gtag?: (...args: unknown[]) => void };
+    if (typeof window !== 'undefined' && windowWithGtag.gtag) {
+      windowWithGtag.gtag('event', metric.name, {
         value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
         event_label: metric.id,
         non_interaction: true,
@@ -52,13 +45,14 @@ export default function PerformanceMonitor() {
 
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
-      const clsEntries: any[] = [];
+      const clsEntries: PerformanceEntry[] = [];
 
       const clsObserver = new PerformanceObserver((entryList) => {
         for (const entry of entryList.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
             clsEntries.push(entry);
-            clsValue += (entry as any).value;
+            clsValue += layoutShiftEntry.value || 0;
             console.log('CLS:', clsValue);
           }
         }

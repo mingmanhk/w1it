@@ -8,11 +8,9 @@ import {
   Lock,
   Eye,
   AlertTriangle,
-  CheckCircle2,
   ArrowRight,
   Users,
   Globe,
-  Zap,
   Database,
 } from 'lucide-react';
 

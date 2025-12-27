@@ -6,15 +6,12 @@ import Button from '@/components/Button';
 import {
   Database,
   BarChart3,
-  TrendingUp,
   CheckCircle2,
   ArrowRight,
   Cloud,
   Cpu,
   Shield,
   Zap,
-  Users,
-  Globe,
 } from 'lucide-react';
 
 export default function DataAnalyticsPage() {
