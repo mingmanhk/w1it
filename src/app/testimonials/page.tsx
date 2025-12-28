@@ -6,52 +6,12 @@ import Card from '@/components/Card';
 
 const testimonials = [
   {
-    quote: 'W1IT provided the clarity and expertise we needed to stabilize our systems and scale confidently. Their structured approach transformed our chaotic IT environment into a reliable foundation for growth.',
-    author: 'Michael Chen',
-    role: 'CTO',
-    company: 'HealthTech Innovations',
-    logo: '🏥',
-    results: ['Reduced system downtime by 85%', 'Improved team productivity by 40%'],
-  },
-  {
-    quote: 'Their structured approach to automation significantly reduced our maintenance overhead. What used to take days now takes hours, allowing our team to focus on strategic initiatives instead of firefighting.',
-    author: 'Sarah Johnson',
-    role: 'Operations Director',
-    company: 'Precision Manufacturing Co.',
-    logo: '🏭',
-    results: ['Cut maintenance time by 70%', 'Increased operational efficiency by 35%'],
-  },
-  {
-    quote: 'Victor\'s attention to detail and clear documentation made our cloud migration seamless and stress-free. The transition was so smooth that our team barely noticed the changeover.',
-    author: 'David Rodriguez',
-    role: 'IT Manager',
-    company: 'Northwest Financial Group',
-    logo: '💼',
-    results: ['Zero downtime during migration', 'Reduced cloud costs by 25%'],
-  },
-  {
-    quote: 'The website optimization work resulted in a 40% increase in page load speed and better user engagement. Our conversion rates improved significantly, directly impacting our bottom line.',
-    author: 'Jennifer Lee',
-    role: 'Marketing Director',
-    company: 'Urban E-commerce Collective',
-    logo: '🛒',
-    results: ['40% faster page loads', '28% increase in conversions'],
-  },
-  {
-    quote: 'The team at W1IT is incredibly responsive and knowledgeable. They are a true partner in our success.',
-    author: 'Samantha Green',
-    role: 'CEO',
-    company: 'GreenLeaf Organics',
-    logo: '🌿',
-    results: ['Improved IT response time by 90%', 'Increased employee satisfaction with IT support'],
-  },
-  {
-    quote: 'W1IT helped us develop a clear IT roadmap that aligns with our business goals. We now have a solid plan for the future.',
-    author: 'Tom Wilson',
-    role: 'President',
-    company: 'Wilson Construction',
-    logo: '🏗️',
-    results: ['Developed a 3-year IT roadmap', 'Aligned IT budget with strategic priorities'],
+    quote: 'W1IT transformed our outdated website into a modern, professional platform that truly represents our 40+ years of expertise. They implemented advanced analytics, live chat support, and multilingual capabilities that have significantly improved our customer engagement.',
+    author: 'Kam Ling Trading Team',
+    role: 'International Trading Company',
+    company: 'Kam Ling International Trading Co.',
+    logo: '🌏',
+    results: ['Modern website with SEO optimization', 'Integrated analytics and live chat support', 'Multilingual support for global customers'],
   },
 ];
 
@@ -74,7 +34,7 @@ export default function TestimonialsPage() {
 
       <section className="py-32 bg-white">
         <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}

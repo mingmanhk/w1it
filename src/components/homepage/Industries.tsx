@@ -1,11 +1,9 @@
 import Container from '@/components/Container';
 import Card from '@/components/Card';
 import Button from '@/components/Button';
-import { Heart, Briefcase, Factory, Building, Rocket, Users } from 'lucide-react';
+import { Factory, Building, Rocket, Users } from 'lucide-react';
 
 const industries = [
-  { name: 'Healthcare', icon: <Heart className="w-8 h-8" />, color: 'text-rose-500' },
-  { name: 'Finance', icon: <Briefcase className="w-8 h-8" />, color: 'text-emerald-500' },
   { name: 'Manufacturing', icon: <Factory className="w-8 h-8" />, color: 'text-amber-500' },
   { name: 'Small Business', icon: <Building className="w-8 h-8" />, color: 'text-blue-500' },
   { name: 'Startups', icon: <Rocket className="w-8 h-8" />, color: 'text-violet-500' },
@@ -24,7 +22,7 @@ export default function Industries() {
             Supporting Small Businesses Across Industries
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-            From healthcare to finance, we understand the unique challenges facing small businesses in every sector.
+            From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
 
