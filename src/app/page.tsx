@@ -10,7 +10,7 @@ import CtaBanner from '@/components/homepage/CtaBanner';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <ValuePillars />
       <CoreServices />
@@ -18,6 +18,6 @@ export default function Home() {
       <Industries />
       <Testimonials />
       <CtaBanner />
-    </div>
+    </>
   );
 }
