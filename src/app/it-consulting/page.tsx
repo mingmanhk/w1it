@@ -126,10 +126,10 @@ export default function ITConsulting() {
       <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
         <Container>
           <div className="text-center animate-fade-in">
-            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
               IT Consulting Services
             </h1>
-            <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-inter">
+            <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-body">
               Smart IT Consulting — Clear Strategies for Secure, Scalable Growth. Need hands-on support? Explore our <a href="/it-services" className="text-rose hover:underline">managed IT services</a>.
             </p>
             <Button href="/contact" size="lg">
@@ -143,7 +143,7 @@ export default function ITConsulting() {
       <section className="py-20 md:py-32">
         <Container>
           <Card>
-            <p className="text-gray-medium font-inter text-lg leading-relaxed">
+            <p className="text-gray-medium font-body text-lg leading-relaxed">
               Beyond hands-on IT management, I provide consulting services that help businesses
               make informed, strategic technology decisions. My consulting approach blends
               technical expertise with clear communication, ensuring that every recommendation is
@@ -156,10 +156,10 @@ export default function ITConsulting() {
       {/* What I Offer Section */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
             What I Offer
           </h2>
-          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
+          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-body">
             Strategic consulting services designed to help your business make smarter technology
             decisions.
           </p>
@@ -172,10 +172,10 @@ export default function ITConsulting() {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{service.description}</p>
+                <p className="text-gray-medium font-body">{service.description}</p>
               </Card>
             ))}
           </div>
@@ -185,7 +185,7 @@ export default function ITConsulting() {
       {/* How Clients Benefit Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             How Clients Benefit
           </h2>
 
@@ -197,10 +197,10 @@ export default function ITConsulting() {
                 className="animate-fade-in-up text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{benefit.description}</p>
+                <p className="text-gray-medium font-body">{benefit.description}</p>
               </Card>
             ))}
           </div>
@@ -211,10 +211,10 @@ export default function ITConsulting() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Make Smarter IT Decisions?
             </h2>
-            <p className="text-lg text-gray-medium mb-8 font-inter">
+            <p className="text-lg text-gray-medium mb-8 font-body">
               Let&apos;s discuss how strategic IT consulting can help your business grow securely
               and efficiently.
             </p>

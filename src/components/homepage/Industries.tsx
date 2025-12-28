@@ -15,13 +15,13 @@ export default function Industries() {
     <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
       <Container>
         <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+          <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
             Who We Serve
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-dark-text mb-6">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl text-dark-text mb-6">
             Supporting Small Businesses Across Industries
           </h2>
-          <p className="text-xl text-dark-text/80 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-dark-text/80 max-w-3xl mx-auto font-body">
             From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function Industries() {
               <div className={`${industry.color} mb-4 flex justify-center`}>
                 {industry.icon}
               </div>
-              <h3 className="font-display font-semibold text-lg text-dark-text">
+              <h3 className="font-heading font-semibold text-lg text-dark-text">
                 {industry.name}
               </h3>
             </Card>

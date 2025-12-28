@@ -96,13 +96,13 @@ export default function CaseStudiesPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <TrendingUp className="w-4 h-4" />
-              <span className="font-inter">Success Stories</span>
+              <span className="font-body">Success Stories</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Client
               <span className="block text-gradient-primary mt-2">Success Stories</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Discover how we&apos;ve helped businesses transform their technology and achieve remarkable results.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -119,13 +119,13 @@ export default function CaseStudiesPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Featured Projects
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Transformative Technology Solutions
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               Real-world examples of how we&apos;ve helped clients achieve their technology goals.
             </p>
           </div>
@@ -143,22 +143,22 @@ export default function CaseStudiesPage() {
                       {study.icon}
                     </div>
                   </div>
-                  <h3 className="font-display font-bold text-2xl mb-4">
+                  <h3 className="font-heading font-bold text-2xl mb-4">
                     {study.title}
                   </h3>
-                  <p className="text-white/90 font-inter">
+                  <p className="text-white/90 font-body">
                     {study.description}
                   </p>
                 </div>
                 <div className="p-8 flex-grow">
-                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-4">
+                  <h4 className="font-heading font-semibold text-lg text-neutral-900 mb-4">
                     Key Results
                   </h4>
                   <div className="space-y-3 mb-6">
                     {study.results.map((result, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{result}</span>
+                        <span className="text-neutral-700 font-body">{result}</span>
                       </div>
                     ))}
                   </div>
@@ -183,13 +183,13 @@ export default function CaseStudiesPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               By The Numbers
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Proven Results
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               Our track record of delivering exceptional value to clients across industries.
             </p>
           </div>
@@ -202,10 +202,10 @@ export default function CaseStudiesPage() {
               { value: '50+', label: 'Enterprise Clients' },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-5xl font-bold text-primary-600 font-display mb-4">
+                <div className="text-5xl font-bold text-primary-600 font-heading mb-4">
                   {stat.value}
                 </div>
-                <div className="text-lg text-neutral-700 font-inter">
+                <div className="text-lg text-neutral-700 font-body">
                   {stat.label}
                 </div>
               </div>
@@ -221,10 +221,10 @@ export default function CaseStudiesPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Partner with us to achieve transformative results with innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

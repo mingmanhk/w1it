@@ -75,10 +75,10 @@ export default function SolutionsPage() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
               IT Solutions for Small Business Success
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               From managed IT to migrations, we provide the complete technology solutions your business needs to thrive.
             </p>
           </div>
@@ -101,22 +101,22 @@ export default function SolutionsPage() {
                       {solution.icon}
                     </div>
                   </div>
-                  <h3 className="font-display font-bold text-2xl mb-4">
+                  <h3 className="font-heading font-bold text-2xl mb-4">
                     {solution.title}
                   </h3>
-                  <p className="text-white/90 font-inter">
+                  <p className="text-white/90 font-body">
                     {solution.description}
                   </p>
                 </div>
                 <div className="p-8">
-                  <h4 className="font-display font-semibold text-lg text-neutral-900 mb-5">
+                  <h4 className="font-heading font-semibold text-lg text-neutral-900 mb-5">
                     Key Outcomes:
                   </h4>
                   <ul className="space-y-3">
                     {solution.outcomes.map((outcome, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                        <span className="text-neutral-700 font-inter">{outcome}</span>
+                        <span className="text-neutral-700 font-body">{outcome}</span>
                       </li>
                     ))}
                   </ul>

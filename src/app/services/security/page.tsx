@@ -68,13 +68,13 @@ export default function SecurityPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Shield className="w-4 h-4" />
-              <span className="font-inter">Cybersecurity</span>
+              <span className="font-body">Cybersecurity</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Enterprise
               <span className="block text-gradient-emerald mt-2">Security Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -91,7 +91,7 @@ export default function SecurityPage() {
       <section className="py-16 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-8">
+            <h3 className="font-heading font-semibold text-2xl text-neutral-900 mb-8">
               Compliance & Standards
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -100,10 +100,10 @@ export default function SecurityPage() {
                   key={index}
                   className="p-4 bg-emerald-50 rounded-xl text-center"
                 >
-                  <div className="text-lg font-bold text-emerald-700 font-display mb-1">
+                  <div className="text-lg font-bold text-emerald-700 font-heading mb-1">
                     {standard.name}
                   </div>
-                  <div className="text-sm text-emerald-600 font-inter">
+                  <div className="text-sm text-emerald-600 font-body">
                     {standard.description}
                   </div>
                 </div>
@@ -117,13 +117,13 @@ export default function SecurityPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Services
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Security Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               End-to-end cybersecurity solutions to protect your business from evolving threats.
             </p>
           </div>
@@ -138,10 +138,10 @@ export default function SecurityPage() {
                 <div className="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-emerald-600">{service.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -154,10 +154,10 @@ export default function SecurityPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Modern Threats
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Protecting Against Evolving Threats
             </h2>
           </div>
@@ -189,10 +189,10 @@ export default function SecurityPage() {
                 <div className="w-16 h-16 bg-emerald-50 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-emerald-600">{threat.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {threat.title}
                 </h3>
-                <p className="text-neutral-600 font-inter">
+                <p className="text-neutral-600 font-body">
                   {threat.description}
                 </p>
               </div>
@@ -208,10 +208,10 @@ export default function SecurityPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Secure Your Business?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Partner with cybersecurity experts to build robust defenses against evolving threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

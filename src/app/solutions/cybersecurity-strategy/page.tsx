@@ -84,13 +84,13 @@ export default function CybersecurityStrategyPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Shield className="w-4 h-4" />
-              <span className="font-inter">Security Solution</span>
+              <span className="font-body">Security Solution</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Cybersecurity
               <span className="block text-gradient-primary mt-2">Strategy</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Comprehensive security strategy services including risk management, penetration testing, compliance, and security governance.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -108,17 +108,17 @@ export default function CybersecurityStrategyPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
                 Strategic Security
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
                 Beyond Basic Security
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-6 font-body leading-relaxed">
                 Cybersecurity strategy goes beyond installing antivirus software. It&apos;s about creating a comprehensive
                 framework that protects your business assets, ensures regulatory compliance, and builds customer trust.
               </p>
-              <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 font-body leading-relaxed">
                 Our strategic approach combines risk assessment, technical controls, policy development, and ongoing
                 governance to create a security posture that evolves with your business and the threat landscape.
               </p>
@@ -131,10 +131,10 @@ export default function CybersecurityStrategyPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="font-display font-bold text-2xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-bold text-2xl text-neutral-900 mb-4">
                   Security Maturity Assessment
                 </h3>
-                <p className="text-neutral-600 font-inter">
+                <p className="text-neutral-600 font-body">
                   We evaluate your current security posture across five key domains:
                 </p>
               </div>
@@ -144,7 +144,7 @@ export default function CybersecurityStrategyPage() {
                     <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-primary-600" />
                     </div>
-                    <span className="font-inter font-medium text-neutral-900">{domain}</span>
+                    <span className="font-body font-medium text-neutral-900">{domain}</span>
                   </div>
                 ))}
               </div>
@@ -157,13 +157,13 @@ export default function CybersecurityStrategyPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Approach
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Security Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               We provide end-to-end cybersecurity strategy services tailored to your business needs and risk profile.
             </p>
           </div>
@@ -180,17 +180,17 @@ export default function CybersecurityStrategyPage() {
                   <div className="w-14 h-14 bg-violet-100 rounded-xl flex items-center justify-center mb-6">
                     <div className="text-violet-600">{service.icon}</div>
                   </div>
-                  <h3 className="font-display font-bold text-2xl text-neutral-900 mb-4">
+                  <h3 className="font-heading font-bold text-2xl text-neutral-900 mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-600 mb-6 font-inter leading-relaxed">
+                  <p className="text-neutral-600 mb-6 font-body leading-relaxed">
                     {service.description}
                   </p>
                   <div className="space-y-3">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-violet-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{feature}</span>
+                        <span className="text-neutral-700 font-body">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -205,13 +205,13 @@ export default function CybersecurityStrategyPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Business Benefits
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Why Invest in Cybersecurity Strategy?
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               A strategic approach to cybersecurity delivers measurable business value beyond just protection.
             </p>
           </div>
@@ -226,10 +226,10 @@ export default function CybersecurityStrategyPage() {
                 <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-6 h-6 text-primary-600" />
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   Benefit {index + 1}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {benefit}
                 </p>
               </div>
@@ -245,10 +245,10 @@ export default function CybersecurityStrategyPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Strengthen Your Security Posture?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Contact us for a comprehensive security assessment and strategic roadmap tailored to your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

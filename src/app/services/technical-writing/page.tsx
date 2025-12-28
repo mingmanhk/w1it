@@ -103,10 +103,10 @@ export default function TechnicalWriting() {
         <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
           <Container>
             <div className="text-center animate-fade-in">
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Bilingual Technical Writing
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-inter">
+              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-body">
                 Professional technical documentation in English and Chinese. Bridge the communication gap for
                 international teams and global businesses.
               </p>
@@ -120,16 +120,16 @@ export default function TechnicalWriting() {
         {/* Why Bilingual Documentation Matters */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-6">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-6">
               Why Bilingual Documentation Matters
             </h2>
             <Card className="mb-8">
-              <p className="text-gray-medium font-inter text-lg leading-relaxed mb-4">
+              <p className="text-gray-medium font-body text-lg leading-relaxed mb-4">
                 In today&apos;s global economy, businesses increasingly operate across English and Chinese-speaking
                 markets. Effective technical communication isn&apos;t just about translation—it requires deep
                 understanding of both technical concepts and cultural context.
               </p>
-              <p className="text-gray-medium font-inter text-lg leading-relaxed">
+              <p className="text-gray-medium font-body text-lg leading-relaxed">
                 Whether you&apos;re a Seattle-based company expanding to Asian markets, or an international team
                 needing documentation in both languages, professional bilingual technical writing ensures
                 clarity, accuracy, and consistency across all your technical communications.
@@ -141,10 +141,10 @@ export default function TechnicalWriting() {
         {/* Services Offered */}
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Documentation Services
             </h2>
-            <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
+            <p className="text-gray-medium text-lg mb-12 max-w-3xl font-body">
               Comprehensive technical writing services tailored to your needs.
             </p>
 
@@ -156,10 +156,10 @@ export default function TechnicalWriting() {
                   className="animate-fade-in-up"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-medium font-inter">{service.description}</p>
+                  <p className="text-gray-medium font-body">{service.description}</p>
                 </Card>
               ))}
             </div>
@@ -169,7 +169,7 @@ export default function TechnicalWriting() {
         {/* Benefits Section */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               What Sets Us Apart
             </h2>
 
@@ -182,10 +182,10 @@ export default function TechnicalWriting() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-medium font-inter">{benefit.description}</p>
+                  <p className="text-gray-medium font-body">{benefit.description}</p>
                 </Card>
               ))}
             </div>
@@ -195,46 +195,46 @@ export default function TechnicalWriting() {
         {/* Use Cases */}
         <section className="py-20 md:py-32 bg-blush">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-12">
               Common Use Cases
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   For Seattle Businesses Going Global
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   You&apos;re expanding to China or working with Chinese partners. You need product documentation,
                   user guides, or technical specs that work for both English and Chinese-speaking audiences.
                 </p>
               </Card>
 
               <Card>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   For International Teams
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   Your development team spans multiple countries. You need consistent technical documentation
                   that serves both your US-based engineers and your Chinese development center.
                 </p>
               </Card>
 
               <Card>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   For Software Companies
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   You&apos;re selling software in both markets and need API docs, SDKs, and integration guides that
                   work seamlessly in English and Chinese.
                 </p>
               </Card>
 
               <Card>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   For Enterprise IT Teams
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   Your company has offices in Seattle and Asia. You need IT documentation, procedures, and
                   training materials that work across all locations.
                 </p>
@@ -247,10 +247,10 @@ export default function TechnicalWriting() {
         <section className="py-20 md:py-32">
           <Container size="sm">
             <div className="text-center">
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Ready to Improve Your Global Communication?
               </h2>
-              <p className="text-lg text-gray-medium mb-8 font-inter">
+              <p className="text-lg text-gray-medium mb-8 font-body">
                 Let&apos;s discuss how bilingual technical documentation can support your business goals.
               </p>
               <Button href="/contact" size="lg">

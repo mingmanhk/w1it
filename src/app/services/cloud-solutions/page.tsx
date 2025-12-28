@@ -67,13 +67,13 @@ export default function CloudSolutionsPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Cloud className="w-4 h-4" />
-              <span className="font-inter">Cloud Solutions</span>
+              <span className="font-body">Cloud Solutions</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Enterprise
               <span className="block text-gradient-blue mt-2">Cloud Excellence</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Transform your infrastructure with scalable, secure, and cost-effective cloud solutions from certified experts.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -90,14 +90,14 @@ export default function CloudSolutionsPage() {
       <section className="py-16 bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-6">
+            <h3 className="font-heading font-semibold text-2xl text-neutral-900 mb-6">
               Certified Cloud Partners
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
               {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className={`px-8 py-4 bg-gradient-to-r ${platform.color} text-white rounded-xl font-display font-bold text-lg`}
+                  className={`px-8 py-4 bg-gradient-to-r ${platform.color} text-white rounded-xl font-heading font-bold text-lg`}
                 >
                   {platform.name}
                 </div>
@@ -111,13 +111,13 @@ export default function CloudSolutionsPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Services
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Cloud Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               End-to-end cloud solutions designed to accelerate your digital transformation.
             </p>
           </div>
@@ -132,10 +132,10 @@ export default function CloudSolutionsPage() {
                 <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-blue-600">{service.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -148,10 +148,10 @@ export default function CloudSolutionsPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Cloud Benefits
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Why Move to the Cloud?
             </h2>
           </div>
@@ -183,10 +183,10 @@ export default function CloudSolutionsPage() {
                 <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-blue-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-neutral-600 font-inter">
+                <p className="text-neutral-600 font-body">
                   {benefit.description}
                 </p>
               </div>
@@ -202,10 +202,10 @@ export default function CloudSolutionsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready for Cloud Transformation?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Partner with certified cloud experts to build scalable, secure, and innovative cloud solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

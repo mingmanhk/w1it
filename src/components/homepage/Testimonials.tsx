@@ -19,13 +19,13 @@ export default function Testimonials() {
     <section className="py-40 bg-gradient-to-b from-white to-neutral-50">
       <Container>
         <div className="text-center mb-32">
-          <div className="inline-block px-5 py-2.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-inter">
+          <div className="inline-block px-5 py-2.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-body">
             Client Success Stories
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark-text mb-8">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-dark-text mb-8">
             Trusted by Small Businesses Across Bellevue & Seattle
           </h2>
-          <p className="text-xl md:text-2xl text-dark-text/80 max-w-3xl mx-auto font-inter leading-relaxed">
+          <p className="text-xl md:text-2xl text-dark-text/80 max-w-3xl mx-auto font-body leading-relaxed">
             Real results from real businesses. See how we&apos;ve helped small businesses like yours solve tech challenges and achieve measurable growth.
           </p>
         </div>
@@ -45,30 +45,30 @@ export default function Testimonials() {
                     {testimonial.logo}
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-xl text-dark-text">
+                    <h3 className="font-heading font-bold text-xl text-dark-text">
                       {testimonial.company}
                     </h3>
-                    <p className="text-dark-text/70 font-inter text-sm">
+                    <p className="text-dark-text/70 font-body text-sm">
                       {testimonial.role || 'Technology Solutions'}
                     </p>
                   </div>
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-dark-text/90 font-inter text-lg leading-relaxed mb-8 italic">
+                <blockquote className="text-dark-text/90 font-body text-lg leading-relaxed mb-8 italic">
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
 
                 {/* Results */}
                 <div className="mb-8">
-                  <h4 className="font-display font-semibold text-lg text-dark-text mb-4">
+                  <h4 className="font-heading font-semibold text-lg text-dark-text mb-4">
                     Measurable Results:
                   </h4>
                   <div className="space-y-3">
                     {testimonial.results.map((result, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                        <span className="text-dark-text/80 font-inter">{result}</span>
+                        <span className="text-dark-text/80 font-body">{result}</span>
                       </div>
                     ))}
                   </div>
@@ -76,10 +76,10 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="pt-6 border-t border-neutral-200">
-                  <div className="font-display font-bold text-dark-text">
+                  <div className="font-heading font-bold text-dark-text">
                     {testimonial.author}
                   </div>
-                  <div className="text-dark-text/70 font-inter">
+                  <div className="text-dark-text/70 font-body">
                     {testimonial.role}, {testimonial.company}
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function Testimonials() {
 
         {/* Testimonials CTA */}
         <div className="text-center mt-20 pt-16 border-t border-neutral-200">
-          <p className="text-xl text-dark-text/80 mb-8 font-inter">
+          <p className="text-xl text-dark-text/80 mb-8 font-body">
             Ready to become our next success story?
           </p>
           <Button

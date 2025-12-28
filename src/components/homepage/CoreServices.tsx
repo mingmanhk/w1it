@@ -63,13 +63,13 @@ export default function CoreServices() {
     <section className="py-40 bg-gradient-to-b from-neutral-50 to-white">
       <Container>
         <div className="text-center mb-32">
-          <div className="inline-block px-5 py-2.5 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-6 font-inter">
+          <div className="inline-block px-5 py-2.5 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-6 font-body">
             What We Offer
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark-text mb-8">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-dark-text mb-8">
             Complete IT Support Designed for Small Businesses
           </h2>
-          <p className="text-xl md:text-2xl text-dark-text/80 max-w-3xl mx-auto font-inter leading-relaxed">
+          <p className="text-xl md:text-2xl text-dark-text/80 max-w-3xl mx-auto font-body leading-relaxed">
             From day-to-day tech support to strategic planning — everything you need to work smarter, faster, and safer.
           </p>
         </div>
@@ -88,22 +88,22 @@ export default function CoreServices() {
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="font-display font-bold text-3xl mb-6">
+                <h3 className="font-heading font-bold text-3xl mb-6">
                   {service.title}
                 </h3>
-                <p className="text-white/90 font-inter text-lg">
+                <p className="text-white/90 font-body text-lg">
                   {service.description}
                 </p>
               </div>
               <div className="p-10">
-                <h4 className="font-display font-semibold text-xl text-dark-text mb-6">
+                <h4 className="font-heading font-semibold text-xl text-dark-text mb-6">
                   What&apos;s Included:
                 </h4>
                 <div className="space-y-4 mb-8">
                   {service.includes.map((item, idx) => (
                     <div key={idx} className="flex items-start space-x-4 p-3 bg-neutral-50 rounded-lg hover:bg-white transition-colors">
                       <CheckCircle2 className="w-6 h-6 text-emerald-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-dark-text/90 font-inter text-lg">{item}</span>
+                      <span className="text-dark-text/90 font-body text-lg">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -121,7 +121,7 @@ export default function CoreServices() {
 
         {/* Services CTA */}
         <div className="text-center mt-20 pt-16 border-t border-neutral-200">
-          <p className="text-xl text-dark-text/80 mb-8 font-inter">
+          <p className="text-xl text-dark-text/80 mb-8 font-body">
             Not sure which services you need? Let&apos;s build a custom plan for your business.
           </p>
           <Button

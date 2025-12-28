@@ -37,14 +37,14 @@ export default function ScreenGrabber() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
               <div className="mb-4">
-                <span className="text-xs font-inter font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
+                <span className="text-xs font-body font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
                   macOS • Productivity
                 </span>
               </div>
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 ScreenGrabber
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium mb-8 font-inter">
+              <p className="text-lg md:text-xl text-gray-medium mb-8 font-body">
                 ScreenGrabber revolutionizes how you capture, organize, and manage screenshots on
                 macOS. With native SwiftUI interface, global hotkey support, intelligent
                 organization, and seamless menu bar integration, capturing and sharing screenshots
@@ -56,7 +56,7 @@ export default function ScreenGrabber() {
                 </Button>
                 <div className="text-center sm:text-left">
                   <div className="inline-block px-4 py-2 bg-blue-100 rounded-lg">
-                    <span className="text-sm font-inter font-medium text-blue-700">
+                    <span className="text-sm font-body font-medium text-blue-700">
                       November 2025
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function ScreenGrabber() {
       {/* Features Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Powerful Screenshot Features
           </h2>
 
@@ -97,10 +97,10 @@ export default function ScreenGrabber() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{feature.description}</p>
+                <p className="text-gray-medium font-body">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -111,10 +111,10 @@ export default function ScreenGrabber() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Capture Screenshots Like a Pro
             </h2>
-            <p className="text-lg text-gray-medium mb-8 font-inter">
+            <p className="text-lg text-gray-medium mb-8 font-body">
               Download ScreenGrabber and experience the most powerful screenshot tool for macOS.
             </p>
             <Button href="#" size="lg">

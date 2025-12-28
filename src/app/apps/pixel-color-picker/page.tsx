@@ -37,14 +37,14 @@ export default function PixelColorPicker() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
               <div className="mb-4">
-                <span className="text-xs font-inter font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
+                <span className="text-xs font-body font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
                   macOS • Design Tools
                 </span>
               </div>
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Pixel Color Picker
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium mb-8 font-inter">
+              <p className="text-lg md:text-xl text-gray-medium mb-8 font-body">
                 Transform your creative workflow with Pixel Color Picker – the fastest, most
                 elegant way to capture, explore, and copy colors on macOS. Whether you&apos;re
                 designing a website, creating digital art, or perfecting your brand palette, get
@@ -56,7 +56,7 @@ export default function PixelColorPicker() {
                 </Button>
                 <div className="text-center sm:text-left">
                   <div className="inline-block px-4 py-2 bg-green-100 rounded-lg">
-                    <span className="text-sm font-inter font-medium text-green-700">
+                    <span className="text-sm font-body font-medium text-green-700">
                       Available now
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function PixelColorPicker() {
       {/* Features Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Everything You Need
           </h2>
 
@@ -97,10 +97,10 @@ export default function PixelColorPicker() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{feature.description}</p>
+                <p className="text-gray-medium font-body">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -111,10 +111,10 @@ export default function PixelColorPicker() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Transform Your Workflow?
             </h2>
-            <p className="text-lg text-gray-medium mb-8 font-inter">
+            <p className="text-lg text-gray-medium mb-8 font-body">
               Download Pixel Color Picker today and experience the fastest way to work with colors
               on macOS.
             </p>

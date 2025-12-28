@@ -31,20 +31,20 @@ export default function NetworkSecurityRemoteTeams() {
       <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-white to-blush">
         <Container size="sm">
           <div className="animate-fade-in">
-            <span className="text-xs font-inter font-medium text-rose bg-white px-3 py-1 rounded-full">
+            <span className="text-xs font-body font-medium text-rose bg-white px-3 py-1 rounded-full">
               Security
             </span>
-            <h1 className="font-display font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">
               Network Security Essentials for Remote Teams
             </h1>
-            <div className="flex items-center gap-4 text-sm text-gray-medium font-inter mb-6">
+            <div className="flex items-center gap-4 text-sm text-gray-medium font-body mb-6">
               <span>December 1, 2024</span>
               <span>•</span>
               <span>7 min read</span>
               <span>•</span>
               <span>Security</span>
             </div>
-            <p className="text-lg text-gray-medium font-inter">
+            <p className="text-lg text-gray-medium font-body">
               The shift to remote work opened up incredible opportunities for Seattle businesses—but it also created new security vulnerabilities. Here&apos;s how to protect your team.
             </p>
           </div>
@@ -56,24 +56,24 @@ export default function NetworkSecurityRemoteTeams() {
         <Container size="sm">
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
-              <p className="text-gray-medium font-inter leading-relaxed">
+              <p className="text-gray-medium font-body leading-relaxed">
                 When COVID-19 forced businesses to go remote almost overnight, security often took a back seat to simply keeping operations running. Now that remote work is here to stay, it&apos;s time to shore up those security gaps. Whether your team is scattered across Seattle or truly worldwide, these security essentials will help keep your business protected.
               </p>
             </Card>
 
             {/* Section 1: The Remote Work Security Challenge */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 The Remote Work Security Challenge
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 In the office, your network perimeter was your castle wall. Now? Your employees are accessing company resources from coffee shops, home networks, airports, and who knows where else. Each connection point is a potential vulnerability.
               </p>
               <Card className="bg-rose/5">
-                <p className="text-charcoal font-inter font-semibold mb-3">
+                <p className="text-charcoal font-body font-semibold mb-3">
                   Common Security Risks with Remote Teams:
                 </p>
-                <ul className="space-y-2 text-gray-medium font-inter">
+                <ul className="space-y-2 text-gray-medium font-body">
                   <li className="flex items-start gap-2">
                     <span className="text-rose mt-1">•</span>
                     <span>Unsecured home WiFi networks</span>
@@ -100,20 +100,20 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 2: Essential #1 - VPN */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Essential #1: Business-Grade VPN
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 A Virtual Private Network (VPN) creates an encrypted tunnel between your employee&apos;s device and your company network. Think of it as a secure, private highway for your data.
               </p>
 
-              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                 Why Consumer VPNs Aren&apos;t Enough
               </h3>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 While consumer VPNs like NordVPN or ExpressVPN are fine for personal use, businesses need more:
               </p>
-              <ul className="space-y-2 text-gray-medium font-inter mb-6">
+              <ul className="space-y-2 text-gray-medium font-body mb-6">
                 <li className="flex items-start gap-2">
                   <span className="text-rose mt-1">•</span>
                   <span><strong>Centralized management</strong> to control who has access</span>
@@ -133,10 +133,10 @@ export default function NetworkSecurityRemoteTeams() {
               </ul>
 
               <Card className="bg-blush">
-                <p className="text-charcoal font-inter mb-2">
+                <p className="text-charcoal font-body mb-2">
                   <strong>Recommended Solutions for Seattle Businesses:</strong>
                 </p>
-                <ul className="space-y-2 text-gray-medium font-inter">
+                <ul className="space-y-2 text-gray-medium font-body">
                   <li>• WireGuard (open-source, fast, modern)</li>
                   <li>• Cisco AnyConnect (enterprise-grade)</li>
                   <li>• OpenVPN (flexible, widely supported)</li>
@@ -147,17 +147,17 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 3: Essential #2 - Zero Trust */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Essential #2: Zero Trust Architecture
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 The old security model was &quot;trust but verify.&quot; The new model is &quot;never trust, always verify.&quot; With Zero Trust, every user and device must prove they are who they claim to be—every single time.
               </p>
 
-              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                 Implementing Zero Trust for Small Businesses
               </h3>
-              <ol className="space-y-4 text-gray-medium font-inter mb-6">
+              <ol className="space-y-4 text-gray-medium font-body mb-6">
                 <li className="flex items-start gap-3">
                   <span className="font-semibold text-charcoal">1.</span>
                   <div>
@@ -187,19 +187,19 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 4: Essential #3 - Endpoint Security */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Essential #3: Endpoint Security
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 Every laptop, phone, and tablet your team uses is an endpoint—and a potential entry point for attackers.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <Card>
-                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
                     Must-Have Protections
                   </h3>
-                  <ul className="space-y-2 text-gray-medium font-inter text-sm">
+                  <ul className="space-y-2 text-gray-medium font-body text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-rose mt-1">✓</span>
                       <span>Next-gen antivirus/EDR</span>
@@ -220,10 +220,10 @@ export default function NetworkSecurityRemoteTeams() {
                 </Card>
 
                 <Card>
-                  <h3 className="font-display font-semibold text-lg text-charcoal mb-3">
+                  <h3 className="font-heading font-semibold text-lg text-charcoal mb-3">
                     Device Management
                   </h3>
-                  <ul className="space-y-2 text-gray-medium font-inter text-sm">
+                  <ul className="space-y-2 text-gray-medium font-body text-sm">
                     <li className="flex items-start gap-2">
                       <span className="text-rose mt-1">✓</span>
                       <span>MDM/MAM solutions</span>
@@ -247,18 +247,18 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 5: Essential #4 - Secure Communication */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Essential #4: Secure Communication Channels
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 Not all communication tools are created equal. Your team needs secure ways to collaborate without exposing sensitive information.
               </p>
 
               <Card className="mb-6">
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   Communication Security Checklist
                 </h3>
-                <ul className="space-y-3 text-gray-medium font-inter">
+                <ul className="space-y-3 text-gray-medium font-body">
                   <li className="flex items-start gap-3">
                     <span className="text-rose mt-1">✓</span>
                     <span><strong>End-to-end encryption</strong> for messaging (Signal, WhatsApp Business, Slack Enterprise)</span>
@@ -281,17 +281,17 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 6: Essential #5 - Security Training */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Essential #5: Ongoing Security Training
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 Here&apos;s the hard truth: your employees are both your best defense and your biggest vulnerability. Remote workers face unique security challenges, and they need training that reflects that reality.
               </p>
 
-              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                 What to Train On
               </h3>
-              <ul className="space-y-3 text-gray-medium font-inter mb-6">
+              <ul className="space-y-3 text-gray-medium font-body mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
                   <span><strong>Recognizing phishing:</strong> Remote workers are prime targets for sophisticated phishing attacks</span>
@@ -311,7 +311,7 @@ export default function NetworkSecurityRemoteTeams() {
               </ul>
 
               <Card className="bg-blush">
-                <p className="text-charcoal font-inter">
+                <p className="text-charcoal font-body">
                   <strong>Pro Tip:</strong> Make security training engaging and practical. Use real-world examples, run phishing simulations, and reward employees who report suspicious emails. Make security part of your culture, not just a checkbox.
                 </p>
               </Card>
@@ -319,13 +319,13 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Section 7: Seattle-Specific Considerations */}
             <div className="mb-16">
-              <h2 className="font-display font-bold text-3xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
                 Seattle-Specific Considerations
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 Working with remote teams across the Seattle area and beyond? Keep these local factors in mind:
               </p>
-              <ul className="space-y-3 text-gray-medium font-inter mb-6">
+              <ul className="space-y-3 text-gray-medium font-body mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-rose mt-1">•</span>
                   <span><strong>Time zone coordination:</strong> If your team spans Seattle to Asia-Pacific, ensure security updates don&apos;t disrupt anyone&apos;s workday</span>
@@ -343,23 +343,23 @@ export default function NetworkSecurityRemoteTeams() {
 
             {/* Conclusion */}
             <Card className="bg-blush mb-12">
-              <h2 className="font-display font-bold text-2xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-2xl text-charcoal mb-4">
                 The Bottom Line
               </h2>
-              <p className="text-gray-medium font-inter leading-relaxed mb-4">
+              <p className="text-gray-medium font-body leading-relaxed mb-4">
                 Remote work isn&apos;t going away—and neither are the security challenges that come with it. The good news? With the right tools and training, you can build a security posture that&apos;s just as strong (or stronger) than when everyone was in the office.
               </p>
-              <p className="text-gray-medium font-inter leading-relaxed">
+              <p className="text-gray-medium font-body leading-relaxed">
                 Start with these five essentials, and you&apos;ll be well on your way to protecting your remote team and your business.
               </p>
             </Card>
 
             {/* CTA */}
             <div className="text-center">
-              <h3 className="font-display font-semibold text-2xl text-charcoal mb-4">
+              <h3 className="font-heading font-semibold text-2xl text-charcoal mb-4">
                 Need Help Securing Your Remote Team?
               </h3>
-              <p className="text-gray-medium font-inter mb-6">
+              <p className="text-gray-medium font-body mb-6">
                 We help Seattle businesses implement comprehensive security solutions for distributed teams.
               </p>
               <Button href="/contact" size="lg">
@@ -373,13 +373,13 @@ export default function NetworkSecurityRemoteTeams() {
       {/* Related Articles */}
       <section className="py-16 md:py-24 bg-gray-bg">
         <Container>
-          <h2 className="font-display font-bold text-3xl text-charcoal mb-8">
+          <h2 className="font-heading font-bold text-3xl text-charcoal mb-8">
             Related Articles
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card hoverable>
-              <span className="text-xs font-inter font-medium text-rose mb-2 block">Business IT</span>
-              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+              <span className="text-xs font-body font-medium text-rose mb-2 block">Business IT</span>
+              <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
               <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
@@ -387,8 +387,8 @@ export default function NetworkSecurityRemoteTeams() {
               </Button>
             </Card>
             <Card hoverable>
-              <span className="text-xs font-inter font-medium text-rose mb-2 block">Networking</span>
-              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+              <span className="text-xs font-body font-medium text-rose mb-2 block">Networking</span>
+              <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 WiFi Setup Guide for Seattle Homes and Offices
               </h3>
               <Button variant="secondary" href="/blog/wifi-setup-guide-seattle" className="w-full mt-4">
@@ -396,8 +396,8 @@ export default function NetworkSecurityRemoteTeams() {
               </Button>
             </Card>
             <Card hoverable>
-              <span className="text-xs font-inter font-medium text-rose mb-2 block">Best Practices</span>
-              <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+              <span className="text-xs font-body font-medium text-rose mb-2 block">Best Practices</span>
+              <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
               <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">

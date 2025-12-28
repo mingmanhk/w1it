@@ -13,12 +13,12 @@ export default function CtaBanner() {
         <div className="text-center relative z-10">
           <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
             <MessageSquare className="w-4 h-4" />
-            <span className="font-inter">Ready to Get Started?</span>
+            <span className="font-body">Ready to Get Started?</span>
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
             Let&apos;s Build Your Success Story Together
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
             Talk to us about your goals, your challenges, and how W1IT can help you build a stronger, smarter foundation for growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

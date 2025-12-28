@@ -69,13 +69,13 @@ export default function DigitalTransformationPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Rocket className="w-4 h-4" />
-              <span className="font-inter">Digital Transformation</span>
+              <span className="font-body">Digital Transformation</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Accelerate Your
               <span className="block text-gradient-primary mt-2">Digital Journey</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Transform your business with strategic technology adoption, process optimization, and innovative digital solutions.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -93,16 +93,16 @@ export default function DigitalTransformationPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-inter">
+              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-body">
                 Our Approach
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
                 Strategic Digital Transformation
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-6 font-body leading-relaxed">
                 Digital transformation is more than just technology adoption—it&apos;s a fundamental rethinking of how your organization uses technology, people, and processes to fundamentally change business performance.
               </p>
-              <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 font-body leading-relaxed">
                 We take a holistic approach that aligns technology investments with business objectives, ensuring measurable ROI and sustainable growth.
               </p>
               <Button href="/contact" className="group">
@@ -111,12 +111,12 @@ export default function DigitalTransformationPage() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl p-8 text-white">
-              <h3 className="font-display font-bold text-2xl mb-6">Key Benefits</h3>
+              <h3 className="font-heading font-bold text-2xl mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                    <span className="font-inter">{benefit}</span>
+                    <span className="font-body">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -129,13 +129,13 @@ export default function DigitalTransformationPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Services
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Transformation Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               End-to-end digital transformation solutions tailored to your business needs.
             </p>
           </div>
@@ -150,10 +150,10 @@ export default function DigitalTransformationPage() {
                 <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-primary-600">{service.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -166,13 +166,13 @@ export default function DigitalTransformationPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-accent-50 text-accent-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-accent-50 text-accent-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Process
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Structured Transformation Methodology
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               A proven approach to ensure successful digital transformation outcomes.
             </p>
           </div>
@@ -185,13 +185,13 @@ export default function DigitalTransformationPage() {
               { step: '04', title: 'Optimization', description: 'Continuous improvement and value realization' },
             ].map((phase, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-primary text-white rounded-full flex items-center justify-center text-2xl font-bold font-display mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-primary text-white rounded-full flex items-center justify-center text-2xl font-bold font-heading mx-auto mb-6">
                   {phase.step}
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {phase.title}
                 </h3>
-                <p className="text-neutral-600 font-inter">
+                <p className="text-neutral-600 font-body">
                   {phase.description}
                 </p>
               </div>
@@ -207,10 +207,10 @@ export default function DigitalTransformationPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Begin Your Transformation?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Partner with us to build a digital future that drives growth, innovation, and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

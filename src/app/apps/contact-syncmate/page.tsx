@@ -38,14 +38,14 @@ export default function ContactSyncMate() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
               <div className="mb-4">
-                <span className="text-xs font-inter font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
+                <span className="text-xs font-body font-medium text-rose bg-blush px-3 py-1.5 rounded-full">
                   macOS • Utilities
                 </span>
               </div>
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Contact SyncMate
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium mb-8 font-inter">
+              <p className="text-lg md:text-xl text-gray-medium mb-8 font-body">
                 Contact SyncMate is a privacy-first macOS application that keeps your Google
                 Contacts and Apple Contacts (iCloud / On My Mac) perfectly synchronized. With
                 intelligent 2-way and 1-way sync options, manual control with full preview, and
@@ -58,7 +58,7 @@ export default function ContactSyncMate() {
                 </Button>
                 <div className="text-center sm:text-left">
                   <div className="inline-block px-4 py-2 bg-blue-100 rounded-lg">
-                    <span className="text-sm font-inter font-medium text-blue-700">
+                    <span className="text-sm font-body font-medium text-blue-700">
                       ETA November 2025
                     </span>
                   </div>
@@ -67,14 +67,14 @@ export default function ContactSyncMate() {
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm">
                 <Link
                   href="/privacy"
-                  className="text-rose hover:text-charcoal font-inter font-medium transition-colors"
+                  className="text-rose hover:text-charcoal font-body font-medium transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <span className="text-gray-medium">•</span>
                 <Link
                   href="/terms"
-                  className="text-rose hover:text-charcoal font-inter font-medium transition-colors"
+                  className="text-rose hover:text-charcoal font-body font-medium transition-colors"
                 >
                   Terms of Service
                 </Link>
@@ -101,7 +101,7 @@ export default function ContactSyncMate() {
       {/* Features Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Sync Contacts Your Way
           </h2>
 
@@ -114,10 +114,10 @@ export default function ContactSyncMate() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{feature.description}</p>
+                <p className="text-gray-medium font-body">{feature.description}</p>
               </Card>
             ))}
           </div>
@@ -128,10 +128,10 @@ export default function ContactSyncMate() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Keep Your Contacts in Perfect Sync
             </h2>
-            <p className="text-lg text-gray-medium mb-8 font-inter">
+            <p className="text-lg text-gray-medium mb-8 font-body">
               Download Contact SyncMate and never worry about managing contacts across platforms
               again.
             </p>

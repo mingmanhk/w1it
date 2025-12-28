@@ -63,10 +63,10 @@ export default function IndustriesPage() {
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
               Industries We Serve
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Tailored IT solutions for the unique challenges of your industry.
             </p>
           </div>
@@ -88,14 +88,14 @@ export default function IndustriesPage() {
                     <div className={`${industry.color}`}>
                       {industry.icon}
                     </div>
-                    <h3 className="font-display font-bold text-2xl text-neutral-900">{industry.name}</h3>
+                    <h3 className="font-heading font-bold text-2xl text-neutral-900">{industry.name}</h3>
                   </div>
-                  <p className="text-neutral-600 font-inter mb-6">{industry.description}</p>
+                  <p className="text-neutral-600 font-body mb-6">{industry.description}</p>
                   <ul className="space-y-3">
                     {industry.services.map((service, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                        <span className="text-neutral-700 font-inter">{service}</span>
+                        <span className="text-neutral-700 font-body">{service}</span>
                       </li>
                     ))}
                   </ul>

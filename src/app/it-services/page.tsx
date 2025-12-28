@@ -137,10 +137,10 @@ export default function ITServices() {
       <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
         <Container>
           <div className="text-center animate-fade-in">
-            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
               Managed IT Services
             </h1>
-            <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-inter">
+            <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-body">
               Comprehensive IT service management tailored to businesses that need reliable,
               scalable, and secure solutions. Available remotely worldwide and locally in the
               Greater Seattle area. Looking for strategic guidance? See our <a href="/it-consulting" className="text-rose hover:underline">IT consulting services</a>.
@@ -155,11 +155,11 @@ export default function ITServices() {
       {/* About Me Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-6">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-6">
             About Me
           </h2>
           <Card className="mb-8">
-            <p className="text-gray-medium font-inter text-lg leading-relaxed">
+            <p className="text-gray-medium font-body text-lg leading-relaxed">
               I am an experienced IT consultant and strategist with a proven track record in
               managing complex systems and delivering clear, actionable solutions. My background
               spans system administration, network monitoring, and technical documentation,
@@ -174,10 +174,10 @@ export default function ITServices() {
       {/* IT Experience Section */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
             My IT Experience
           </h2>
-          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
+          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-body">
             Years of hands-on experience across diverse IT environments, from infrastructure
             management to international team collaboration.
           </p>
@@ -190,10 +190,10 @@ export default function ITServices() {
                 className="animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{item.description}</p>
+                <p className="text-gray-medium font-body">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -203,10 +203,10 @@ export default function ITServices() {
       {/* IT Services Section */}
       <section className="py-20 md:py-32">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
             IT Services I Offer
           </h2>
-          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-inter">
+          <p className="text-gray-medium text-lg mb-12 max-w-3xl font-body">
             I provide comprehensive IT service management tailored to businesses that need
             reliable, scalable, and secure solutions.
           </p>
@@ -216,12 +216,12 @@ export default function ITServices() {
               {services.map((service, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <span className="text-rose text-xl font-bold mt-1">✓</span>
-                  <span className="text-gray-medium font-inter text-lg">{service}</span>
+                  <span className="text-gray-medium font-body text-lg">{service}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-8 p-4 bg-blush rounded-lg">
-              <p className="text-charcoal font-inter text-sm">
+              <p className="text-charcoal font-body text-sm">
                 Services are available remotely worldwide and locally in the Greater Seattle area,
                 offering flexibility for both on-site and virtual support.
               </p>
@@ -233,7 +233,7 @@ export default function ITServices() {
       {/* Why Work With Me Section */}
       <section className="py-20 md:py-32 bg-gray-bg">
         <Container>
-          <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
             Why Work With Me
           </h2>
 
@@ -245,10 +245,10 @@ export default function ITServices() {
                 className="animate-fade-in-up text-center"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   {item.title}
                 </h3>
-                <p className="text-gray-medium font-inter">{item.description}</p>
+                <p className="text-gray-medium font-body">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -259,10 +259,10 @@ export default function ITServices() {
       <section className="py-20 md:py-32 bg-blush">
         <Container size="sm">
           <div className="text-center">
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Optimize Your IT Infrastructure?
             </h2>
-            <p className="text-lg text-gray-medium mb-8 font-inter">
+            <p className="text-lg text-gray-medium mb-8 font-body">
               Let&apos;s discuss how I can help streamline your IT operations and support your
               business goals.
             </p>

@@ -84,20 +84,20 @@ export default function RemoteSupport() {
         <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
           <Container>
             <div className="text-center animate-fade-in">
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
                 Remote IT Support
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-inter">
+              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-body">
                 Fast, secure remote troubleshooting from Seattle. Available worldwide.
               </p>
               <div className="flex flex-wrap justify-center gap-3 mb-8">
-                <span className="text-sm font-inter bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
+                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
                   ⚡ Same-Day Support Available
                 </span>
-                <span className="text-sm font-inter bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
+                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
                   🔒 Secure Connections
                 </span>
-                <span className="text-sm font-inter bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
+                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
                   🌐 Bilingual (English/Chinese)
                 </span>
               </div>
@@ -111,47 +111,47 @@ export default function RemoteSupport() {
         {/* How It Works */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               How Remote Support Works
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <Card className="text-center">
                 <div className="text-4xl mb-4">1️⃣</div>
-                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                   Contact Us
                 </h3>
-                <p className="text-gray-medium font-inter text-sm">
+                <p className="text-gray-medium font-body text-sm">
                   Email or call to describe your issue
                 </p>
               </Card>
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">2️⃣</div>
-                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                   Schedule Session
                 </h3>
-                <p className="text-gray-medium font-inter text-sm">
+                <p className="text-gray-medium font-body text-sm">
                   We&apos;ll find a time that works for you
                 </p>
               </Card>
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">3️⃣</div>
-                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                   Secure Connection
                 </h3>
-                <p className="text-gray-medium font-inter text-sm">
+                <p className="text-gray-medium font-body text-sm">
                   We connect remotely via secure tools
                 </p>
               </Card>
 
               <Card className="text-center">
                 <div className="text-4xl mb-4">4️⃣</div>
-                <h3 className="font-display font-semibold text-lg text-charcoal mb-2">
+                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                   Problem Solved
                 </h3>
-                <p className="text-gray-medium font-inter text-sm">
+                <p className="text-gray-medium font-body text-sm">
                   We fix the issue while you watch
                 </p>
               </Card>
@@ -162,7 +162,7 @@ export default function RemoteSupport() {
         {/* Services */}
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-12">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-12">
               Remote Support Services
             </h2>
 
@@ -175,10 +175,10 @@ export default function RemoteSupport() {
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                  <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-medium font-inter">{service.description}</p>
+                  <p className="text-gray-medium font-body">{service.description}</p>
                 </Card>
               ))}
             </div>
@@ -188,44 +188,44 @@ export default function RemoteSupport() {
         {/* Benefits */}
         <section className="py-20 md:py-32">
           <Container>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
               Why Choose Remote Support
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card hoverable>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   ⚡ Faster Response
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   No need to wait for an on-site visit. We can start helping you within hours, not days.
                 </p>
               </Card>
 
               <Card hoverable>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   💰 More Affordable
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   No travel time or trip charges. You only pay for the time spent solving your problem.
                 </p>
               </Card>
 
               <Card hoverable>
-                <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                   🌍 Available Anywhere
                 </h3>
-                <p className="text-gray-medium font-inter">
+                <p className="text-gray-medium font-body">
                   Whether you&apos;re in Seattle or working remotely from anywhere in the world.
                 </p>
               </Card>
             </div>
 
             <Card className="bg-blush">
-              <h3 className="font-display font-semibold text-xl text-charcoal mb-3">
+              <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
                 Perfect for Remote Workers
               </h3>
-              <p className="text-gray-medium font-inter">
+              <p className="text-gray-medium font-body">
                 Working from home in the Seattle area or anywhere else? We specialize in supporting remote workers
                 with home office setup, VPN configuration, video conferencing troubleshooting, and productivity tool
                 support. Get back to work faster with expert remote assistance.
@@ -238,15 +238,15 @@ export default function RemoteSupport() {
         <section className="py-20 md:py-32 bg-gray-bg">
           <Container size="sm">
             <Card>
-              <h2 className="font-display font-bold text-2xl text-charcoal mb-4 text-center">
+              <h2 className="font-heading font-bold text-2xl text-charcoal mb-4 text-center">
                 🔒 Secure & Private
               </h2>
-              <p className="text-gray-medium font-inter mb-4">
+              <p className="text-gray-medium font-body mb-4">
                 Your security is our priority. We use industry-standard remote support tools with end-to-end
                 encryption. You control the session and can see everything we do. We never access your system
                 without your explicit permission.
               </p>
-              <ul className="space-y-2 text-gray-medium font-inter">
+              <ul className="space-y-2 text-gray-medium font-body">
                 <li className="flex items-start gap-2">
                   <span className="text-rose">✓</span>
                   <span>Encrypted remote connections</span>
@@ -272,10 +272,10 @@ export default function RemoteSupport() {
         <section className="py-20 md:py-32">
           <Container size="sm">
             <div className="text-center">
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Need IT Help Right Now?
               </h2>
-              <p className="text-lg text-gray-medium mb-8 font-inter">
+              <p className="text-lg text-gray-medium mb-8 font-body">
                 Contact us for fast, secure remote support. Available for Seattle locals and worldwide clients.
               </p>
               <Button href="/contact" size="lg">

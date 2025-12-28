@@ -89,11 +89,11 @@ export default function AppsPage() {
 
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Innovative
               <span className="block text-gradient-primary mt-2">Applications</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Cutting-edge software solutions designed to solve real-world problems and enhance productivity.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -110,13 +110,13 @@ export default function AppsPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Applications
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Featured Software Solutions
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               Discover our portfolio of innovative applications built with modern technologies and best practices.
             </p>
           </div>
@@ -134,15 +134,15 @@ export default function AppsPage() {
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.gradient} flex items-center justify-center shadow-lg`}>
                       <div className="text-white">{app.icon}</div>
                     </div>
-                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium font-inter">
+                    <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium font-body">
                       {app.status}
                     </span>
                   </div>
 
-                  <h3 className="font-display font-semibold text-2xl text-neutral-900 mb-4">
+                  <h3 className="font-heading font-semibold text-2xl text-neutral-900 mb-4">
                     {app.title}
                   </h3>
-                  <p className="text-neutral-600 mb-6 font-inter leading-relaxed">
+                  <p className="text-neutral-600 mb-6 font-body leading-relaxed">
                     {app.description}
                   </p>
 
@@ -150,7 +150,7 @@ export default function AppsPage() {
                     {app.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{feature}</span>
+                        <span className="text-neutral-700 font-body">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -170,13 +170,13 @@ export default function AppsPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               Development Excellence
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Why Our Apps Stand Out
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               We combine technical expertise with user-centered design to create exceptional applications.
             </p>
           </div>
@@ -191,10 +191,10 @@ export default function AppsPage() {
                 <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-primary-600">{benefit.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {benefit.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -211,10 +211,10 @@ export default function AppsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Need a Custom Solution?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               We specialize in building bespoke applications tailored to your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -235,7 +235,7 @@ export default function AppsPage() {
                 View Our Services
               </Button>
             </div>
-            <p className="text-sm text-white/70 mt-8 font-inter">
+            <p className="text-sm text-white/70 mt-8 font-body">
               Free consultation • Detailed proposal • Agile development process
             </p>
           </div>

@@ -122,13 +122,13 @@ export default function CustomITSolutionsPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Wrench className="w-4 h-4" />
-              <span className="font-inter">Bespoke Solutions</span>
+              <span className="font-body">Bespoke Solutions</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Custom
               <span className="block text-gradient-primary mt-2">IT Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Tailored packages and bespoke technology solutions designed specifically for your unique business needs and challenges.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -146,17 +146,17 @@ export default function CustomITSolutionsPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+              <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
                 Tailored Approach
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
                 When Standard Solutions Don&apos;t Fit
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-6 font-body leading-relaxed">
                 Every business is unique, with specific processes, challenges, and goals that off-the-shelf solutions
                 often can&apos;t address. That&apos;s where our custom IT solutions come in.
               </p>
-              <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 font-body leading-relaxed">
                 We combine our deep technical expertise with a thorough understanding of your business to create
                 technology solutions that fit your exact requirements—whether that means customizing existing services
                 or building something entirely new.
@@ -175,7 +175,7 @@ export default function CustomITSolutionsPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Wrench className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="font-display font-bold text-2xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-bold text-2xl text-neutral-900 mb-4">
                   Ideal For Businesses That Need:
                 </h3>
               </div>
@@ -192,7 +192,7 @@ export default function CustomITSolutionsPage() {
                     <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
                       <CheckCircle2 className="w-4 h-4 text-amber-600" />
                     </div>
-                    <span className="font-inter font-medium text-neutral-900">{need}</span>
+                    <span className="font-body font-medium text-neutral-900">{need}</span>
                   </div>
                 ))}
               </div>
@@ -205,13 +205,13 @@ export default function CustomITSolutionsPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Custom Solutions
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Types of Custom Solutions
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               From tailored service packages to completely bespoke development, we offer multiple approaches to custom solutions.
             </p>
           </div>
@@ -228,17 +228,17 @@ export default function CustomITSolutionsPage() {
                   <div className="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
                     <div className="text-amber-600">{solution.icon}</div>
                   </div>
-                  <h3 className="font-display font-bold text-2xl text-neutral-900 mb-4">
+                  <h3 className="font-heading font-bold text-2xl text-neutral-900 mb-4">
                     {solution.title}
                   </h3>
-                  <p className="text-neutral-600 mb-6 font-inter leading-relaxed">
+                  <p className="text-neutral-600 mb-6 font-body leading-relaxed">
                     {solution.description}
                   </p>
                   <div className="space-y-3">
                     {solution.examples.map((example, idx) => (
                       <div key={idx} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-amber-500 rounded-full mt-2 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{example}</span>
+                        <span className="text-neutral-700 font-body">{example}</span>
                       </div>
                     ))}
                   </div>
@@ -253,13 +253,13 @@ export default function CustomITSolutionsPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Process
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               How We Build Custom Solutions
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               A structured, collaborative approach to ensure your custom solution delivers maximum value.
             </p>
           </div>
@@ -272,15 +272,15 @@ export default function CustomITSolutionsPage() {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="font-display font-bold text-2xl text-white">{step.step}</span>
+                  <span className="font-heading font-bold text-2xl text-white">{step.step}</span>
                 </div>
                 <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-amber-600">{step.icon}</div>
                 </div>
-                <h3 className="font-display font-bold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-bold text-xl text-neutral-900 mb-4">
                   {step.title}
                 </h3>
-                <p className="text-neutral-600 font-inter">
+                <p className="text-neutral-600 font-body">
                   {step.description}
                 </p>
               </div>
@@ -296,10 +296,10 @@ export default function CustomITSolutionsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Have Unique Technology Needs?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Let&apos;s discuss your specific requirements and explore how custom IT solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -68,13 +68,13 @@ export default function ManagedServicesPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Cpu className="w-4 h-4" />
-              <span className="font-inter">Managed IT Services</span>
+              <span className="font-body">Managed IT Services</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Proactive
               <span className="block text-gradient-violet mt-2">IT Management</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Comprehensive IT management with 24/7 monitoring, strategic consulting, and dedicated support for your business.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -92,16 +92,16 @@ export default function ManagedServicesPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-6 font-inter">
+              <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-6 font-body">
                 Complete IT Management
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
                 Your Dedicated IT Team
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-6 font-body leading-relaxed">
                 Managed IT Services provide a comprehensive solution for businesses that want to focus on their core operations while leaving technology management to experts.
               </p>
-              <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 font-body leading-relaxed">
                 We act as an extension of your team, providing proactive monitoring, strategic guidance, and rapid support to ensure your technology drives business success.
               </p>
               <Button href="/contact" className="group">
@@ -110,12 +110,12 @@ export default function ManagedServicesPage() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h3 className="font-display font-bold text-2xl mb-6">Key Benefits</h3>
+              <h3 className="font-heading font-bold text-2xl mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                    <span className="font-inter">{benefit}</span>
+                    <span className="font-body">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -128,13 +128,13 @@ export default function ManagedServicesPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-violet-50 text-violet-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Services
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Managed Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               End-to-end IT management solutions tailored to your business needs.
             </p>
           </div>
@@ -149,10 +149,10 @@ export default function ManagedServicesPage() {
                 <div className="w-14 h-14 bg-violet-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-violet-600">{service.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -165,13 +165,13 @@ export default function ManagedServicesPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Service Tiers
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Flexible Service Plans
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               Choose the level of service that matches your business requirements and budget.
             </p>
           </div>
@@ -202,15 +202,15 @@ export default function ManagedServicesPage() {
                 className="border border-neutral-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 <div className={`bg-gradient-to-r ${tier.color} text-white p-8 text-center`}>
-                  <h3 className="font-display font-bold text-2xl mb-2">{tier.name}</h3>
-                  <p className="font-inter">{tier.description}</p>
+                  <h3 className="font-heading font-bold text-2xl mb-2">{tier.name}</h3>
+                  <p className="font-body">{tier.description}</p>
                 </div>
                 <div className="p-8">
                   <div className="space-y-4 mb-8">
                     {tier.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle2 className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                        <span className="text-neutral-700 font-inter">{feature}</span>
+                        <span className="text-neutral-700 font-body">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -231,10 +231,10 @@ export default function ManagedServicesPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Simplify Your IT Management?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Partner with us to build scalable, secure, and innovative IT solutions that drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -255,7 +255,7 @@ export default function ManagedServicesPage() {
                 View All Services
               </Button>
             </div>
-            <p className="text-sm text-white/70 mt-8 font-inter">
+            <p className="text-sm text-white/70 mt-8 font-body">
               No commitment required • 30-minute discovery call • Custom service proposal
             </p>
           </div>

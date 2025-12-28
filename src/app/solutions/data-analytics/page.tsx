@@ -68,13 +68,13 @@ export default function DataAnalyticsPage() {
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
               <Database className="w-4 h-4" />
-              <span className="font-inter">Data & Analytics</span>
+              <span className="font-body">Data & Analytics</span>
             </div>
-            <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
+            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight animate-fade-in-up">
               Transform Data into
               <span className="block text-gradient-amber mt-2">Actionable Insights</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
               Unlock the power of your data with modern analytics platforms, AI-driven insights, and strategic data solutions.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -92,16 +92,16 @@ export default function DataAnalyticsPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-full text-sm font-medium mb-6 font-inter">
+              <div className="inline-block px-4 py-2 bg-amber-50 text-amber-700 rounded-full text-sm font-medium mb-6 font-body">
                 Data-Driven Excellence
               </div>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
+              <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-8">
                 Modern Analytics Solutions
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-6 font-body leading-relaxed">
                 In today&apos;s data-rich environment, organizations that effectively leverage their data gain significant competitive advantages. Our data analytics solutions transform raw data into strategic assets.
               </p>
-              <p className="text-lg text-neutral-600 mb-8 font-inter leading-relaxed">
+              <p className="text-lg text-neutral-600 mb-8 font-body leading-relaxed">
                 We help you build scalable data platforms, implement advanced analytics, and create data-driven cultures that drive innovation and growth.
               </p>
               <Button href="/contact" className="group">
@@ -110,12 +110,12 @@ export default function DataAnalyticsPage() {
               </Button>
             </div>
             <div className="bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl p-8 text-white">
-              <h3 className="font-display font-bold text-2xl mb-6">Key Benefits</h3>
+              <h3 className="font-heading font-bold text-2xl mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle2 className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-                    <span className="font-inter">{benefit}</span>
+                    <span className="font-body">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -128,13 +128,13 @@ export default function DataAnalyticsPage() {
       <section className="py-24 bg-neutral-50">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
               Our Services
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Comprehensive Analytics Services
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               End-to-end data and analytics solutions tailored to your business objectives.
             </p>
           </div>
@@ -149,10 +149,10 @@ export default function DataAnalyticsPage() {
                 <div className="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mb-6">
                   <div className="text-amber-600">{service.icon}</div>
                 </div>
-                <h3 className="font-display font-semibold text-xl text-neutral-900 mb-4">
+                <h3 className="font-heading font-semibold text-xl text-neutral-900 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-neutral-600 font-inter leading-relaxed">
+                <p className="text-neutral-600 font-body leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -165,13 +165,13 @@ export default function DataAnalyticsPage() {
       <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-20">
-            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
+            <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-body">
               Technology Stack
             </div>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
               Modern Analytics Platforms
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-body">
               We work with leading technologies to deliver best-in-class analytics solutions.
             </p>
           </div>
@@ -191,10 +191,10 @@ export default function DataAnalyticsPage() {
                 key={index}
                 className="text-center p-6 rounded-2xl border border-neutral-200 hover:shadow-lg transition-all duration-300"
               >
-                <div className="text-2xl font-bold text-neutral-900 font-display mb-2">
+                <div className="text-2xl font-bold text-neutral-900 font-heading mb-2">
                   {tech.name}
                 </div>
-                <div className="text-sm text-neutral-600 font-inter">
+                <div className="text-sm text-neutral-600 font-body">
                   {tech.category}
                 </div>
               </div>
@@ -210,10 +210,10 @@ export default function DataAnalyticsPage() {
 
         <Container size="lg">
           <div className="text-center relative z-10">
-            <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Unlock Your Data&apos;s Potential?
             </h2>
-            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
+            <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
               Transform your data into strategic assets that drive innovation, efficiency, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
