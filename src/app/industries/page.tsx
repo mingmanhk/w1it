@@ -60,7 +60,7 @@ export default function IndustriesPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816] overflow-hidden">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div
