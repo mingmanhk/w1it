@@ -16,7 +16,7 @@ export default function Footer() {
   const footerLinks = {
     services: [
       { name: 'Managed IT', href: '/services/managed-services' },
-      { name: 'IT Automation', href: '/services' },
+      { name: 'IT Automation', href: '/services/it-automation' },
       { name: 'Cloud Migration', href: '/services/cloud-solutions' },
     ],
     company: [
