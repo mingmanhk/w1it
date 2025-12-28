@@ -65,7 +65,7 @@ export default function Footer() {
               />
               <span className="font-heading font-bold text-3xl text-white">W1IT Solutions</span>
             </Link>
-            <p className="text-body-md text-brand-gray-mid mb-6 max-w-sm leading-relaxed">
+            <p className="text-body-md text-dark-text mb-6 max-w-sm leading-relaxed">
               Modern IT consultancy delivering clarity, resilience, and performance for Seattle businesses. We transform IT chaos into operational excellence.
             </p>
 
@@ -75,21 +75,21 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-brand-cyan mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-body-sm text-white font-medium">Seattle, Washington</p>
-                  <p className="text-body-sm text-brand-gray-mid">Serving the Greater Seattle Area</p>
+                  <p className="text-body-sm text-dark-text">Serving the Greater Seattle Area</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-brand-cyan mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-body-sm text-white font-medium">hello@w1it.com</p>
-                  <p className="text-body-sm text-brand-gray-mid">General inquiries</p>
+                  <p className="text-body-sm text-dark-text">General inquiries</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-brand-cyan mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-body-sm text-white font-medium">(206) 123-4567</p>
-                  <p className="text-body-sm text-brand-gray-mid">Mon-Fri, 9am-6pm PST</p>
+                  <p className="text-body-sm text-dark-text">Mon-Fri, 9am-6pm PST</p>
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -144,7 +144,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -158,7 +158,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -172,7 +172,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -186,7 +186,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.contact.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -200,7 +200,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-body-md text-brand-gray-mid hover:text-white transition-colors">
+                  <Link href={link.href} className="text-body-md text-dark-text hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -213,30 +213,30 @@ export default function Footer() {
         <div className="border-t border-[#1E293B] py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
-              <p className="text-body-sm text-brand-gray-mid">
+              <p className="text-body-sm text-dark-text">
                 &copy; {currentYear} W1IT Solutions. All rights reserved.
               </p>
-              <p className="text-body-xs text-brand-gray-mid/70 mt-2">
+              <p className="text-body-xs text-dark-text/70 mt-2">
                 Seattle-based IT consultancy serving businesses across Washington
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
-              <a href="/privacy" className="text-body-sm text-brand-gray-mid hover:text-white transition-colors">
+              <a href="/privacy" className="text-body-sm text-dark-text hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-body-sm text-brand-gray-mid hover:text-white transition-colors">
+              <a href="/terms" className="text-body-sm text-dark-text hover:text-white transition-colors">
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-body-sm text-brand-gray-mid hover:text-white transition-colors">
+              <a href="/cookies" className="text-body-sm text-dark-text hover:text-white transition-colors">
                 Cookie Policy
               </a>
-              <a href="/sla" className="text-body-sm text-brand-gray-mid hover:text-white transition-colors">
+              <a href="/sla" className="text-body-sm text-dark-text hover:text-white transition-colors">
                 Service Level Agreement
               </a>
             </div>
           </div>
           <div className="text-center mt-6 pt-6 border-t border-[#1E293B]/50">
-            <p className="text-body-xs text-brand-gray-mid/60">
+            <p className="text-body-xs text-dark-text/60">
               W1IT Solutions is a registered IT consultancy specializing in infrastructure modernization, website optimization, and strategic IT consulting for Seattle businesses.
             </p>
           </div>

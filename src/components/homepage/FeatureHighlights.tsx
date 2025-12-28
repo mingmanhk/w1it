@@ -31,10 +31,10 @@ export default function FeatureHighlights() {
           <div className="inline-block px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-4 font-inter">
             What Sets Us Apart
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-dark-text mb-6">
             Feature Highlights
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-dark-text/80 max-w-3xl mx-auto font-inter">
             Our approach combines technical excellence with operational clarity.
           </p>
         </div>
@@ -54,11 +54,11 @@ export default function FeatureHighlights() {
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="font-display font-bold text-xl text-neutral-900">
+                <h3 className="font-display font-bold text-xl text-dark-text">
                   {feature.title}
                 </h3>
               </div>
-              <p className="text-neutral-600 font-inter leading-relaxed">
+              <p className="text-dark-text/80 font-inter leading-relaxed">
                 {feature.description}
               </p>
             </Card>

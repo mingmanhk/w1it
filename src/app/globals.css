@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-brand-gray-mid;
+    @apply bg-white text-dark-text;
   }
 
   h1, h2, h3, h4, h5, h6 {

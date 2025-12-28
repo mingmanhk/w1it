@@ -4,10 +4,10 @@ import Button from '@/components/Button';
 import { Factory, Building, Rocket, Users } from 'lucide-react';
 
 const industries = [
-  { name: 'Manufacturing', icon: <Factory className="w-8 h-8" />, color: 'text-amber-500' },
-  { name: 'Small Business', icon: <Building className="w-8 h-8" />, color: 'text-blue-500' },
-  { name: 'Startups', icon: <Rocket className="w-8 h-8" />, color: 'text-violet-500' },
-  { name: 'Professional Services', icon: <Users className="w-8 h-8" />, color: 'text-indigo-500' },
+  { name: 'Manufacturing', icon: <Factory className="w-8 h-8" />, color: 'text-secondary-500' },
+  { name: 'Small Business', icon: <Building className="w-8 h-8" />, color: 'text-primary-500' },
+  { name: 'Startups', icon: <Rocket className="w-8 h-8" />, color: 'text-accent-500' },
+  { name: 'Professional Services', icon: <Users className="w-8 h-8" />, color: 'text-primary-700' },
 ];
 
 export default function Industries() {
@@ -18,10 +18,10 @@ export default function Industries() {
           <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
             Who We Serve
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
+          <h2 className="font-display font-bold text-4xl md:text-5xl text-dark-text mb-6">
             Supporting Small Businesses Across Industries
           </h2>
-          <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
+          <p className="text-xl text-dark-text/80 max-w-3xl mx-auto font-inter">
             From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
@@ -38,7 +38,7 @@ export default function Industries() {
               <div className={`${industry.color} mb-4 flex justify-center`}>
                 {industry.icon}
               </div>
-              <h3 className="font-display font-semibold text-lg text-neutral-900">
+              <h3 className="font-display font-semibold text-lg text-dark-text">
                 {industry.name}
               </h3>
             </Card>

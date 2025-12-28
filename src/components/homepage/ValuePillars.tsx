@@ -31,10 +31,10 @@ export default function ValuePillars() {
           <div className="inline-block px-5 py-2.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-inter">
             Our Approach
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-neutral-900 mb-8">
+          <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-dark-text mb-8">
             Give Your Business the 3 C&apos;s
           </h2>
-          <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
+          <p className="text-xl md:text-2xl text-dark-text/80 max-w-3xl mx-auto font-inter leading-relaxed">
             We give small businesses the confidence, clarity, and control they need to thrive in today&apos;s digital world.
           </p>
         </div>
@@ -58,19 +58,19 @@ export default function ValuePillars() {
                 </h3>
               </div>
               <div className="p-10">
-                <p className="text-neutral-700 font-inter text-lg leading-relaxed">
+                <p className="text-dark-text/90 font-inter text-lg leading-relaxed">
                   {pillar.description}
                 </p>
                 <div className="mt-8 pt-6 border-t border-neutral-100">
-                  <p className="text-sm text-neutral-500 font-inter mb-3">How this benefits you:</p>
+                  <p className="text-sm text-dark-text/70 font-inter mb-3">How this benefits you:</p>
                   <ul className="space-y-2">
                     {pillar.title === 'Confidence' && (
                       <>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
                           <span>Peace of mind with 24/7 monitoring and support</span>
                         </li>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
                           <span>Reliable systems that work when you need them</span>
                         </li>
@@ -78,11 +78,11 @@ export default function ValuePillars() {
                     )}
                     {pillar.title === 'Clarity' && (
                       <>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
                           <span>No surprise bills or hidden fees</span>
                         </li>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
                           <span>Understand exactly what you&apos;re paying for</span>
                         </li>
@@ -90,11 +90,11 @@ export default function ValuePillars() {
                     )}
                     {pillar.title === 'Control' && (
                       <>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-violet-500 rounded-full"></div>
                           <span>Stop firefighting — prevent issues proactively</span>
                         </li>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                        <li className="flex items-center space-x-2 text-sm text-dark-text/80">
                           <div className="w-1.5 h-1.5 bg-violet-500 rounded-full"></div>
                           <span>Your technology works for you, not against you</span>
                         </li>

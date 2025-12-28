@@ -19,7 +19,7 @@ export default function Hero() {
             Enterprise-Grade IT Support
             <span className="block text-gradient-primary mt-3">Built for Small Business Success</span>
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-300 mb-14 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+          <p className="text-xl md:text-2xl text-dark-text mb-14 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
             Small businesses deserve powerful IT solutions without the complexity. We solve your tech problems and prevent future disruptions — so you can focus on growing your business, not troubleshooting it.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
@@ -36,23 +36,23 @@ export default function Hero() {
 
           {/* Trust Indicators */}
           <div className="mt-20 pt-10 border-t border-white/10 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <p className="text-sm text-neutral-400 font-inter mb-6">Trusted by small businesses across Bellevue and the Seattle Metro Area</p>
+            <p className="text-sm text-dark-text/80 font-inter mb-6">Trusted by small businesses across Bellevue and the Seattle Metro Area</p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">10+</div>
-                <div className="text-xs text-neutral-400 font-inter">Years Experience</div>
+                <div className="text-xs text-dark-text/80 font-inter">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">200+</div>
-                <div className="text-xs text-neutral-400 font-inter">Projects Delivered</div>
+                <div className="text-xs text-dark-text/80 font-inter">Projects Delivered</div>
               </div>
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">99.9%</div>
-                <div className="text-xs text-neutral-400 font-inter">Uptime Guarantee</div>
+                <div className="text-xs text-dark-text/80 font-inter">Uptime Guarantee</div>
               </div>
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">24/7</div>
-                <div className="text-xs text-neutral-400 font-inter">Support Available</div>
+                <div className="text-xs text-dark-text/80 font-inter">Support Available</div>
               </div>
             </div>
           </div>
