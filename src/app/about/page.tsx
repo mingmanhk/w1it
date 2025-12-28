@@ -52,8 +52,8 @@ export default function AboutPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url(/images/optimized/hero-graphic.webp)' }}
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-[#050816]/80" />
+          {/* Light overlay for text readability */}
+          <div className="absolute inset-0 bg-[#050816]/30" />
         </div>
 
         {/* Content */}
