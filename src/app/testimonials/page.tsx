@@ -1,8 +1,10 @@
 'use client';
 
-import Container from '@/components/Container';
-import { CheckCircle2 } from 'lucide-react';
-import Card from '@/components/Card';
+/**
+ * W1IT Testimonials Page
+ * Matches: W1IT Design System
+ * Specs: Clean layout, W1IT colors, typography, spacing
+ */
 
 const testimonials = [
   {
@@ -17,74 +19,71 @@ const testimonials = [
 
 export default function TestimonialsPage() {
   return (
-    <div className="overflow-hidden py-20 md:py-32 bg-white">
-      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <Container>
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-display text-white mb-6">
               Client Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
               Real stories from businesses we&apos;ve helped to succeed.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section className="py-32 bg-white">
-        <Container>
+      {/* Testimonials Section */}
+      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+        <div className="max-w-content mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card
+              <div
                 key={index}
-                hoverable
-                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300 hover:shadow-2xl"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-white rounded-card p-8 border-2 border-[#D9D9D9]"
               >
-                <div className="p-8">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl flex items-center justify-center text-2xl">
-                      {testimonial.logo}
-                    </div>
-                    <div>
-                      <h3 className="font-heading font-bold text-xl text-neutral-900">
-                        {testimonial.company}
-                      </h3>
-                      <p className="text-neutral-500 font-body text-sm">
-                        {testimonial.role || 'Technology Solutions'}
-                      </p>
-                    </div>
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-14 h-14 bg-[#3A81F7] rounded-card flex items-center justify-center text-2xl">
+                    {testimonial.logo}
                   </div>
-                  <blockquote className="text-neutral-700 font-body text-lg leading-relaxed mb-6 italic">
-                    &quot;{testimonial.quote}&quot;
-                  </blockquote>
-                  <div className="mb-6">
-                    <h4 className="font-heading font-semibold text-lg text-neutral-900 mb-4">
-                      Measurable Results:
-                    </h4>
-                    <ul className="space-y-3">
-                      {testimonial.results.map((result, idx) => (
-                        <li key={idx} className="flex items-center space-x-3">
-                          <CheckCircle2 className="w-5 h-5 text-emerald-500 flex-shrink-0" />
-                          <span className="text-neutral-600 font-body">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="pt-6 border-t border-neutral-200">
-                    <div className="font-heading font-bold text-neutral-900">
-                      {testimonial.author}
-                    </div>
-                    <div className="text-neutral-500 font-body">
-                      {testimonial.role}, {testimonial.company}
-                    </div>
+                  <div>
+                    <h3 className="text-heading-md text-[#050816]">
+                      {testimonial.company}
+                    </h3>
+                    <p className="text-caption text-[#4A4A4A]">
+                      {testimonial.role || 'Technology Solutions'}
+                    </p>
                   </div>
                 </div>
-              </Card>
+                <blockquote className="text-body text-[#4A4A4A] leading-relaxed mb-6 italic">
+                  &quot;{testimonial.quote}&quot;
+                </blockquote>
+                <div className="mb-6">
+                  <h4 className="text-body font-bold text-[#050816] mb-4">
+                    Measurable Results:
+                  </h4>
+                  <ul className="space-y-3">
+                    {testimonial.results.map((result, idx) => (
+                      <li key={idx} className="flex items-start space-x-3">
+                        <span className="inline-block w-1.5 h-1.5 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
+                        <span className="text-body text-[#4A4A4A]">{result}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="pt-6 border-t border-[#D9D9D9]">
+                  <div className="text-body font-bold text-[#050816]">
+                    {testimonial.author}
+                  </div>
+                  <div className="text-caption text-[#4A4A4A]">
+                    {testimonial.role}, {testimonial.company}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );

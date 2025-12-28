@@ -2,15 +2,20 @@
 
 import { useFormState, useFormStatus } from 'react-dom';
 import { saveContact } from '@/app/contact/actions';
-import Container from '@/components/Container';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '@/components/Button';
+
+/**
+ * W1IT Contact Page
+ * Matches: W1IT Design System
+ * Specs: Clean layout, W1IT colors, typography, spacing
+ */
 
 function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" disabled={pending} className="w-full">
+    <Button type="submit" disabled={pending} variant="primary" className="w-full">
       {pending ? 'Submitting...' : 'Send Message'}
     </Button>
   );
@@ -20,123 +25,127 @@ export default function ContactPage() {
   const [state, formAction] = useFormState(saveContact, null)
 
   return (
-    <div className="overflow-hidden py-20 md:py-32 bg-white">
-      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <Container>
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-display text-white mb-6">
               Ready to Get Started?
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
               Contact us today and let&apos;s build your success story together.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section className="py-32 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div className="animate-fade-in-up">
-              <h2 className="font-heading font-bold text-4xl text-neutral-900 mb-6">Get in Touch</h2>
-              <p className="text-lg text-neutral-600 font-body leading-relaxed mb-8">
+      {/* Contact Form Section */}
+      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-heading-lg text-[#050816] mb-6">Get in Touch</h2>
+              <p className="text-body text-[#4A4A4A] leading-relaxed mb-8">
                 Have questions about our services? Need help with a tech challenge? Fill out the form below and we&apos;ll respond within 24 hours.
               </p>
-              <form action={formAction}>
+              <form action={formAction} className="bg-white p-8 rounded-card">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral-700 font-body mb-2">Name</label>
+                    <label htmlFor="name" className="block text-body font-bold text-[#050816] mb-2">Name</label>
                     <input
                       type="text"
                       id="name"
                       name="name"
-                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-body"
+                      className="block w-full px-4 py-3 border border-[#D9D9D9] rounded-card focus:ring-[#3A81F7] focus:border-[#3A81F7] text-body text-[#050816]"
                       required
                     />
-                    {state?.errors?.name && <p className="text-sm text-red-500 mt-2">{state.errors.name[0]}</p>}
+                    {state?.errors?.name && <p className="text-body text-red-500 mt-2">{state.errors.name[0]}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral-700 font-body mb-2">Email</label>
+                    <label htmlFor="email" className="block text-body font-bold text-[#050816] mb-2">Email</label>
                     <input
                       type="email"
                       id="email"
                       name="email"
-                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-body"
+                      className="block w-full px-4 py-3 border border-[#D9D9D9] rounded-card focus:ring-[#3A81F7] focus:border-[#3A81F7] text-body text-[#050816]"
                       required
                     />
-                    {state?.errors?.email && <p className="text-sm text-red-500 mt-2">{state.errors.email[0]}</p>}
+                    {state?.errors?.email && <p className="text-body text-red-500 mt-2">{state.errors.email[0]}</p>}
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-neutral-700 font-body mb-2">Company (Optional)</label>
+                    <label htmlFor="company" className="block text-body font-bold text-[#050816] mb-2">Company (Optional)</label>
                     <input
                       type="text"
                       id="company"
                       name="company"
-                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-body"
+                      className="block w-full px-4 py-3 border border-[#D9D9D9] rounded-card focus:ring-[#3A81F7] focus:border-[#3A81F7] text-body text-[#050816]"
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-neutral-700 font-body mb-2">Message</label>
+                    <label htmlFor="message" className="block text-body font-bold text-[#050816] mb-2">Message</label>
                     <textarea
                       id="message"
                       name="message"
                       rows={5}
-                      className="block w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-primary-500 focus:border-primary-500 font-body"
+                      className="block w-full px-4 py-3 border border-[#D9D9D9] rounded-card focus:ring-[#3A81F7] focus:border-[#3A81F7] text-body text-[#050816]"
                       required
                     ></textarea>
-                    {state?.errors?.message && <p className="text-sm text-red-500 mt-2">{state.errors.message[0]}</p>}
+                    {state?.errors?.message && <p className="text-body text-red-500 mt-2">{state.errors.message[0]}</p>}
                   </div>
                 </div>
                 <div className="mt-6">
                   <SubmitButton />
                 </div>
-                {state?.message && <p className="text-sm text-green-500 mt-4">{state.message}</p>}
+                {state?.message && <p className="text-body text-[#00A878] mt-4">{state.message}</p>}
               </form>
             </div>
-            <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              <h2 className="font-heading font-bold text-4xl text-neutral-900 mb-6">Contact Information</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6" />
+
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-heading-lg text-[#050816] mb-6">Contact Information</h2>
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start space-x-4 bg-white p-6 rounded-card">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] rounded-card flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 font-body">Phone</h3>
-                    <p className="text-neutral-600 font-body">(832) 472-7991</p>
+                    <h3 className="text-body font-bold text-[#050816] mb-2">Phone</h3>
+                    <p className="text-body text-[#4A4A4A]">(832) 472-7991</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6" />
+                <div className="flex items-start space-x-4 bg-white p-6 rounded-card">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] rounded-card flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 font-body">Email</h3>
-                    <p className="text-neutral-600 font-body">contact@w1it.com</p>
+                    <h3 className="text-body font-bold text-[#050816] mb-2">Email</h3>
+                    <p className="text-body text-[#4A4A4A]">contact@w1it.com</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary-100 text-primary-600 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6" />
+                <div className="flex items-start space-x-4 bg-white p-6 rounded-card">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] rounded-card flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-neutral-900 font-body">Service Area</h3>
-                    <p className="text-neutral-600 font-body">Seattle Metropolitan Area & Remote Nationwide</p>
+                    <h3 className="text-body font-bold text-[#050816] mb-2">Service Area</h3>
+                    <p className="text-body text-[#4A4A4A]">Seattle Metropolitan Area & Remote Nationwide</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-12 p-8 bg-gradient-to-br from-primary-50 to-cyan-50 rounded-2xl border border-primary-100">
-                <h3 className="text-xl font-heading font-bold text-neutral-900 mb-3">Your Local IT Partner</h3>
-                <p className="text-neutral-600 font-body mb-4">
+              <div className="bg-white p-8 rounded-card border-2 border-[#3A81F7]">
+                <h3 className="text-heading-md text-[#050816] mb-3">Your Local IT Partner</h3>
+                <p className="text-body text-[#4A4A4A] mb-4">
                   Based in Bellevue, WA, we proudly serve small businesses throughout the Seattle Metro Area with on-site support and remote assistance nationwide.
                 </p>
-                <p className="text-sm text-neutral-500 font-body">
-                  <strong className="text-neutral-700">Service Areas:</strong> Bellevue, Seattle, Redmond, Kirkland, Issaquah, Sammamish, and surrounding communities.
+                <p className="text-caption text-[#4A4A4A]">
+                  <strong className="text-[#050816]">Service Areas:</strong> Bellevue, Seattle, Redmond, Kirkland, Issaquah, Sammamish, and surrounding communities.
                 </p>
               </div>
             </div>
           </div>
-        </Container>
+        </div>
       </section>
     </div>
   );

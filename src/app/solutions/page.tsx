@@ -1,16 +1,19 @@
 'use client';
 
-import Container from '@/components/Container';
-import { ArrowRight, CheckCircle2, Cpu, Shield, Globe, BarChart3, Sliders } from 'lucide-react';
-import Card from '@/components/Card';
+import { Cpu, Shield, Globe, BarChart3, Sliders } from 'lucide-react';
 import Button from '@/components/Button';
+
+/**
+ * W1IT Solutions Page
+ * Matches: W1IT Design System
+ * Specs: Clean layout, W1IT colors, typography, spacing
+ */
 
 const solutions = [
   {
     title: 'Managed IT Solutions',
     description: 'Comprehensive IT management and support designed to keep your small business running smoothly 24/7.',
-    icon: <Cpu className="w-10 h-10" />,
-    gradient: 'from-blue-500 to-cyan-500',
+    icon: Cpu,
     outcomes: [
       'Proactive monitoring and maintenance',
       '24/7 help desk support',
@@ -21,8 +24,7 @@ const solutions = [
   {
     title: 'Hardware & Software Integration',
     description: 'Seamlessly integrate new hardware and software into your existing infrastructure for optimal performance.',
-    icon: <Sliders className="w-10 h-10" />,
-    gradient: 'from-emerald-500 to-green-500',
+    icon: Sliders,
     outcomes: [
       'Smooth integration with minimal disruption',
       'Improved system compatibility',
@@ -33,8 +35,7 @@ const solutions = [
   {
     title: 'Migration & Deployment',
     description: 'Expert migration services to move your systems, data, and applications with zero downtime.',
-    icon: <Globe className="w-10 h-10" />,
-    gradient: 'from-violet-500 to-purple-500',
+    icon: Globe,
     outcomes: [
       'Zero-downtime migrations',
       'Cloud and on-premise deployments',
@@ -45,8 +46,7 @@ const solutions = [
   {
     title: 'Cybersecurity & Protection',
     description: 'Protect your business from evolving cyber threats with comprehensive security solutions.',
-    icon: <Shield className="w-10 h-10" />,
-    gradient: 'from-rose-500 to-red-500',
+    icon: Shield,
     outcomes: [
       'Multi-layered security protection',
       'Regular security assessments',
@@ -57,8 +57,7 @@ const solutions = [
   {
     title: 'Business Continuity Planning',
     description: 'Ensure your business stays operational with robust backup, recovery, and disaster recovery solutions.',
-    icon: <BarChart3 className="w-10 h-10" />,
-    gradient: 'from-indigo-500 to-blue-500',
+    icon: BarChart3,
     outcomes: [
       'Automated backup solutions',
       'Quick disaster recovery',
@@ -70,67 +69,84 @@ const solutions = [
 
 export default function SolutionsPage() {
   return (
-    <div className="overflow-hidden py-20 md:py-32 bg-white">
-      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <Container>
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-display text-white mb-6">
               IT Solutions for Small Business Success
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
               From managed IT to migrations, we provide the complete technology solutions your business needs to thrive.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section className="py-32 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {solutions.map((solution, index) => (
-              <Card
-                key={index}
-                hoverable
-                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300 hover:shadow-2xl"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`bg-gradient-to-br ${solution.gradient} p-8 text-white rounded-t-2xl`}>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      {solution.icon}
+      {/* Solutions Grid */}
+      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => {
+              const Icon = solution.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-card overflow-hidden"
+                >
+                  {/* Card Header */}
+                  <div className="bg-[#050816] p-8">
+                    <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] rounded-card mb-6">
+                      <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
+                    <h3 className="text-heading-md text-white mb-4">
+                      {solution.title}
+                    </h3>
+                    <p className="text-body text-[#D9D9D9]">
+                      {solution.description}
+                    </p>
                   </div>
-                  <h3 className="font-heading font-bold text-2xl mb-4">
-                    {solution.title}
-                  </h3>
-                  <p className="text-white/90 font-body">
-                    {solution.description}
-                  </p>
-                </div>
-                <div className="p-8">
-                  <h4 className="font-heading font-semibold text-lg text-neutral-900 mb-5">
-                    Key Outcomes:
-                  </h4>
-                  <ul className="space-y-3">
-                    {solution.outcomes.map((outcome, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                        <span className="text-neutral-700 font-body">{outcome}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-8 pt-6 border-t border-neutral-100">
-                    <Button href="/contact" className="w-full group">
+
+                  {/* Card Body */}
+                  <div className="p-8">
+                    <h4 className="text-body font-bold text-[#050816] mb-4">
+                      Key Outcomes:
+                    </h4>
+                    <ul className="space-y-3 mb-8">
+                      {solution.outcomes.map((outcome, idx) => (
+                        <li key={idx} className="flex items-start space-x-3">
+                          <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="text-body text-[#4A4A4A]">{outcome}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button href="/contact" variant="primary" className="w-full">
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </div>
                 </div>
-              </Card>
-            ))}
+              );
+            })}
           </div>
-        </Container>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-content mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-heading-lg text-[#050816] mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-body text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+              Let's discuss how our solutions can help your business succeed.
+            </p>
+            <Button href="/contact" variant="primary">
+              Get Started
+            </Button>
+          </div>
+        </div>
       </section>
     </div>
   );

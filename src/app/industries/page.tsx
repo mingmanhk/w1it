@@ -1,15 +1,18 @@
 'use client';
 
-import Container from '@/components/Container';
-import { Factory, Building, Rocket, Users, CheckCircle2 } from 'lucide-react';
-import Card from '@/components/Card';
+import { Factory, Building, Rocket, Users } from 'lucide-react';
 import Button from '@/components/Button';
+
+/**
+ * W1IT Industries Page
+ * Matches: W1IT Design System
+ * Specs: Clean layout, W1IT colors, typography, spacing
+ */
 
 const industries = [
   {
     name: 'Manufacturing',
-    icon: <Factory className="w-10 h-10" />,
-    color: 'text-amber-500',
+    icon: Factory,
     description: 'Efficient and scalable IT solutions for the manufacturing sector.',
     services: [
       'Factory automation and IoT solutions',
@@ -20,8 +23,7 @@ const industries = [
   },
   {
     name: 'Small Business',
-    icon: <Building className="w-10 h-10" />,
-    color: 'text-blue-500',
+    icon: Building,
     description: 'Affordable and effective IT solutions for small businesses.',
     services: [
       'Managed IT services',
@@ -32,8 +34,7 @@ const industries = [
   },
   {
     name: 'Startups',
-    icon: <Rocket className="w-10 h-10" />,
-    color: 'text-violet-500',
+    icon: Rocket,
     description: 'Scalable and agile IT solutions to fuel startup growth.',
     services: [
       'Cloud infrastructure setup (AWS, Azure, GCP)',
@@ -44,8 +45,7 @@ const industries = [
   },
   {
     name: 'Professional Services',
-    icon: <Users className="w-10 h-10" />,
-    color: 'text-indigo-500',
+    icon: Users,
     description: 'Reliable and efficient IT for professional service firms.',
     services: [
       'Client relationship management (CRM) systems',
@@ -58,57 +58,84 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <div className="overflow-hidden py-20 md:py-32 bg-white">
-      <section className="relative pt-28 pb-24 md:pt-40 md:pb-32 bg-gradient-dark text-white overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <Container>
-          <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-display text-white mb-6">
               Industries We Serve
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-body animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
               Tailored IT solutions for the unique challenges of your industry.
             </p>
           </div>
-        </Container>
+        </div>
       </section>
 
-      <section className="py-32 bg-white">
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            {industries.map((industry, index) => (
-              <Card
-                key={index}
-                hoverable
-                className="animate-fade-in-up border-2 border-neutral-200 hover:border-primary-300 transition-all duration-300 hover:shadow-2xl"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className={`p-8 rounded-t-2xl`}>
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className={`${industry.color}`}>
-                      {industry.icon}
+      {/* Industries Grid */}
+      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+        <div className="max-w-content mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index) => {
+              const Icon = industry.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-card overflow-hidden"
+                >
+                  {/* Card Header */}
+                  <div className="bg-[#050816] p-8">
+                    <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] rounded-card mb-6">
+                      <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="font-heading font-bold text-2xl text-neutral-900">{industry.name}</h3>
+                    <h3 className="text-heading-md text-white mb-4">
+                      {industry.name}
+                    </h3>
+                    <p className="text-body text-[#D9D9D9]">
+                      {industry.description}
+                    </p>
                   </div>
-                  <p className="text-neutral-600 font-body mb-6">{industry.description}</p>
-                  <ul className="space-y-3">
-                    {industry.services.map((service, idx) => (
-                      <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle2 className="w-5 h-5 text-emerald-500" />
-                        <span className="text-neutral-700 font-body">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-8 pt-6 border-t border-neutral-100">
-                    <Button href="/contact" className="w-full">
+
+                  {/* Card Body */}
+                  <div className="p-8">
+                    <h4 className="text-body font-bold text-[#050816] mb-4">
+                      Our Services:
+                    </h4>
+                    <ul className="space-y-3 mb-8">
+                      {industry.services.map((service, idx) => (
+                        <li key={idx} className="flex items-start space-x-3">
+                          <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
+                          <span className="text-body text-[#4A4A4A]">{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button href="/contact" variant="primary" className="w-full">
                       Inquire Now
                     </Button>
                   </div>
                 </div>
-              </Card>
-            ))}
+              );
+            })}
           </div>
-        </Container>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-content mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-heading-lg text-[#050816] mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-body text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can support your industry's specific needs.
+            </p>
+            <Button href="/contact" variant="primary">
+              Contact Us
+            </Button>
+          </div>
+        </div>
       </section>
     </div>
   );
