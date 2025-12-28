@@ -37,7 +37,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white z-50">
+    <header className="fixed top-0 left-0 w-full bg-white z-[9998]">
       <div className="max-w-content mx-auto">
         {/* Desktop Header */}
         <div className="flex items-center justify-between h-header px-6">
@@ -94,29 +94,29 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu - Header / Mobile / Default */}
-      {isOpen && (
-        <div className="md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-60 overflow-y-auto">
-          <div className="px-6 py-8 flex flex-col min-h-full">
-            <nav className="flex flex-col gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`text-heading-md text-center py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
-            <div className="mt-auto pt-8 pb-8">
-              <Button href="/contact" variant="secondary" className="w-full" onClick={() => setIsOpen(false)}>
-                Get in Touch
-              </Button>
-            </div>
+      <div 
+        className={`md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-[9999] overflow-y-auto transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        <div className="px-6 py-8 flex flex-col min-h-full">
+          <nav className="flex flex-col gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-heading-md text-center py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="mt-auto pt-8 pb-8">
+            <Button href="/contact" variant="secondary" className="w-full" onClick={() => setIsOpen(false)}>
+              Get in Touch
+            </Button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
