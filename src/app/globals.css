@@ -25,18 +25,18 @@
 }
 
 @layer utilities {
-  /* Hero backgrounds */
+  /* Hero backgrounds - optimized for different viewports */
   .bg-hero-desktop {
     background-image: url('/images/optimized/mockup_new.png');
     background-size: cover;
-    background-position: center;
+    background-position: center right;
     background-repeat: no-repeat;
   }
 
   .bg-hero-mobile {
     background-image: url('/images/optimized/mockup_new.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
   }
 
