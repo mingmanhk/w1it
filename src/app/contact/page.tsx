@@ -26,10 +26,10 @@ export default function ContactPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
-              Contact Us
+              Ready to Get Started?
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              We&apos;re here to help. Get in touch with us to discuss your IT needs.
+              Contact us today and let&apos;s build your success story together.
             </p>
           </div>
         </Container>
@@ -41,7 +41,7 @@ export default function ContactPage() {
             <div className="animate-fade-in-up">
               <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Get in Touch</h2>
               <p className="text-lg text-neutral-600 font-inter leading-relaxed mb-8">
-                Have a question or need a quote? Fill out the form below and we&apos;ll get back to you as soon as possible.
+                Have questions about our services? Need help with a tech challenge? Fill out the form below and we&apos;ll respond within 24 hours.
               </p>
               <form action={formAction}>
                 <div className="grid grid-cols-1 gap-6">
@@ -126,9 +126,12 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="mt-12 p-8 bg-gradient-to-br from-primary-50 to-cyan-50 rounded-2xl border border-primary-100">
-                <h3 className="text-xl font-display font-bold text-neutral-900 mb-3">Serving Seattle & Beyond</h3>
-                <p className="text-neutral-600 font-inter">
-                  We provide on-site IT services throughout the Greater Seattle area, including Bellevue, Redmond, Kirkland, and surrounding communities. Remote support available nationwide for businesses across the United States.
+                <h3 className="text-xl font-display font-bold text-neutral-900 mb-3">Your Local IT Partner</h3>
+                <p className="text-neutral-600 font-inter mb-4">
+                  Based in Bellevue, WA, we proudly serve small businesses throughout the Seattle Metro Area with on-site support and remote assistance nationwide.
+                </p>
+                <p className="text-sm text-neutral-500 font-inter">
+                  <strong className="text-neutral-700">Service Areas:</strong> Bellevue, Seattle, Redmond, Kirkland, Issaquah, Sammamish, and surrounding communities.
                 </p>
               </div>
             </div>

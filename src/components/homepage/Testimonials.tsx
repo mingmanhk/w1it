@@ -47,10 +47,10 @@ export default function Testimonials() {
             Client Success Stories
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-neutral-900 mb-8">
-            Trusted by Seattle Businesses
+            Trusted by Small Businesses Across Bellevue & Seattle
           </h2>
           <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
-            See how we&apos;ve helped businesses across industries achieve measurable results and operational excellence.
+            Real results from real businesses. See how we&apos;ve helped small businesses like yours solve tech challenges and achieve measurable growth.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export default function Testimonials() {
         {/* Testimonials CTA */}
         <div className="text-center mt-20 pt-16 border-t border-neutral-200">
           <p className="text-xl text-neutral-600 mb-8 font-inter">
-            Ready to join our satisfied clients?
+            Ready to become our next success story?
           </p>
           <Button
             href="/testimonials"

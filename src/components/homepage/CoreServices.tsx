@@ -6,53 +6,54 @@ import { Server, BarChart3, Globe, Database, CheckCircle2, Calendar } from 'luci
 const coreServices = [
   {
     title: 'Managed IT Services',
-    description: 'Proactive monitoring, help desk support, and on‑site/remote troubleshooting.',
+    description: 'Proactive monitoring, updates, and support to keep your systems running smoothly.',
     icon: <Server className="w-10 h-10" />,
     gradient: 'from-blue-500 to-cyan-500',
     includes: [
-      'Network setup',
-      'Device configuration',
-      'Windows repair',
-      'Co‑managed IT',
-      'Monitoring & maintenance',
+      '24/7 system monitoring',
+      'Help desk support',
+      'Network management',
+      'Software updates & patches',
+      'Remote & on-site support',
     ],
   },
   {
-    title: 'IT Consulting & Strategy',
-    description: 'Clarity‑first consulting for infrastructure, cloud, and cybersecurity.',
+    title: 'Security & Protection',
+    description: 'Keep your business safe from viruses, malware, and cyber threats.',
     icon: <BarChart3 className="w-10 h-10" />,
     gradient: 'from-emerald-500 to-green-500',
     includes: [
-      'Infrastructure planning',
-      'Cloud migration',
-      'Cybersecurity audits',
-      'Process optimization',
-      'Technical documentation',
+      'Virus removal & prevention',
+      'Security assessments',
+      'Data backup & recovery',
+      'Disaster recovery planning',
+      'Business continuity solutions',
     ],
   },
   {
-    title: 'Website Development & Optimization',
-    description: 'Client websites built for performance, usability, and measurable growth.',
+    title: 'Device Support & Mobility',
+    description: 'Full lifecycle support for Windows, Apple, and mobile devices.',
     icon: <Globe className="w-10 h-10" />,
     gradient: 'from-violet-500 to-purple-500',
     includes: [
-      'Website creation',
-      'Feature implementation',
-      'UX improvements',
-      'SEO & traffic growth',
-      'Analytics & conversion optimization',
+      'Microsoft Windows support',
+      'Apple device management',
+      'Mobile device solutions',
+      'Remote work enablement',
+      'Device procurement',
     ],
   },
   {
-    title: 'Data & Analytics',
-    description: 'Turn raw data into decisions with modern analytics.',
+    title: 'Strategic IT Consulting',
+    description: 'Expert guidance to align your technology with your business goals.',
     icon: <Database className="w-10 h-10" />,
     gradient: 'from-indigo-500 to-blue-500',
     includes: [
-      'BI dashboards',
-      'Predictive analytics',
-      'Reporting automation',
-      'Data cleanup',
+      'IT planning & strategy',
+      'Infrastructure assessments',
+      'Technology procurement',
+      'IT staffing solutions',
+      'Custom service plans',
     ],
   },
 ];
@@ -63,13 +64,13 @@ export default function CoreServices() {
       <Container>
         <div className="text-center mb-32">
           <div className="inline-block px-5 py-2.5 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-6 font-inter">
-            Core Services
+            What We Offer
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-neutral-900 mb-8">
-            Comprehensive IT Solutions for Modern Businesses
+            Complete IT Support Designed for Small Businesses
           </h2>
           <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
-            From proactive infrastructure management to strategic consulting — everything your Seattle business needs to thrive in today&apos;s digital landscape.
+            From day-to-day tech support to strategic planning — everything you need to work smarter, faster, and safer.
           </p>
         </div>
 
@@ -121,7 +122,7 @@ export default function CoreServices() {
         {/* Services CTA */}
         <div className="text-center mt-20 pt-16 border-t border-neutral-200">
           <p className="text-xl text-neutral-600 mb-8 font-inter">
-            Need a custom solution or have specific requirements?
+            Not sure which services you need? Let&apos;s build a custom plan for your business.
           </p>
           <Button
             href="/contact"
@@ -129,7 +130,7 @@ export default function CoreServices() {
             className="bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
           >
             <Calendar className="w-6 h-6 mr-3" />
-            Schedule Custom Consultation
+            Get Your Free Consultation
           </Button>
         </div>
       </Container>

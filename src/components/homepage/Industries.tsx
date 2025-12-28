@@ -18,13 +18,13 @@ export default function Industries() {
       <Container>
         <div className="text-center mb-20">
           <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-inter">
-            Industry Expertise
+            Who We Serve
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-neutral-900 mb-6">
-            Industries We Serve
+            Supporting Small Businesses Across Industries
           </h2>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto font-inter">
-            Tailored solutions for diverse business environments.
+            From healthcare to finance, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
 

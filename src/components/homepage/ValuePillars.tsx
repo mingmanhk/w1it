@@ -4,20 +4,20 @@ import { Target, Shield, TrendingUp } from 'lucide-react';
 
 const valuePillars = [
   {
-    title: 'Clarity',
-    description: 'Clean, predictable systems designed with operational discipline.',
+    title: 'Confidence',
+    description: 'Technology solutions that give you the confidence to focus on what matters most — growing your business.',
     icon: <Target className="w-10 h-10" />,
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
-    title: 'Resilience',
-    description: 'Modern, fault‑tolerant infrastructure built for uptime and stability.',
+    title: 'Clarity',
+    description: 'Clear communication, transparent pricing, and straightforward solutions without the technical jargon.',
     icon: <Shield className="w-10 h-10" />,
     gradient: 'from-emerald-500 to-green-500',
   },
   {
-    title: 'Performance',
-    description: 'Evidence‑driven upgrades that eliminate ambiguity and guesswork.',
+    title: 'Control',
+    description: 'Take control of your IT with proactive support that prevents problems before they disrupt your business.',
     icon: <TrendingUp className="w-10 h-10" />,
     gradient: 'from-violet-500 to-purple-500',
   },
@@ -29,13 +29,13 @@ export default function ValuePillars() {
       <Container>
         <div className="text-center mb-32">
           <div className="inline-block px-5 py-2.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium mb-6 font-inter">
-            Our Foundation
+            Our Approach
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-neutral-900 mb-8">
-            Built on Three Pillars of Excellence
+            Give Your Business the 3 C&apos;s
           </h2>
           <p className="text-xl md:text-2xl text-neutral-600 max-w-3xl mx-auto font-inter leading-relaxed">
-            Every solution we deliver is grounded in these core principles that define our approach to modern IT.
+            We give small businesses the confidence, clarity, and control they need to thrive in today&apos;s digital world.
           </p>
         </div>
 
@@ -64,39 +64,39 @@ export default function ValuePillars() {
                 <div className="mt-8 pt-6 border-t border-neutral-100">
                   <p className="text-sm text-neutral-500 font-inter mb-3">How this benefits you:</p>
                   <ul className="space-y-2">
+                    {pillar.title === 'Confidence' && (
+                      <>
+                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
+                          <span>Peace of mind with 24/7 monitoring and support</span>
+                        </li>
+                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
+                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
+                          <span>Reliable systems that work when you need them</span>
+                        </li>
+                      </>
+                    )}
                     {pillar.title === 'Clarity' && (
                       <>
                         <li className="flex items-center space-x-2 text-sm text-neutral-600">
-                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
-                          <span>Reduced confusion and faster decision-making</span>
-                        </li>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
-                          <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
-                          <span>Clear documentation and processes</span>
-                        </li>
-                      </>
-                    )}
-                    {pillar.title === 'Resilience' && (
-                      <>
-                        <li className="flex items-center space-x-2 text-sm text-neutral-600">
                           <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                          <span>Minimized downtime and business disruption</span>
+                          <span>No surprise bills or hidden fees</span>
                         </li>
                         <li className="flex items-center space-x-2 text-sm text-neutral-600">
                           <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
-                          <span>Robust systems that withstand challenges</span>
+                          <span>Understand exactly what you&apos;re paying for</span>
                         </li>
                       </>
                     )}
-                    {pillar.title === 'Performance' && (
+                    {pillar.title === 'Control' && (
                       <>
                         <li className="flex items-center space-x-2 text-sm text-neutral-600">
                           <div className="w-1.5 h-1.5 bg-violet-500 rounded-full"></div>
-                          <span>Faster systems and improved productivity</span>
+                          <span>Stop firefighting — prevent issues proactively</span>
                         </li>
                         <li className="flex items-center space-x-2 text-sm text-neutral-600">
                           <div className="w-1.5 h-1.5 bg-violet-500 rounded-full"></div>
-                          <span>Data-driven improvements and optimizations</span>
+                          <span>Your technology works for you, not against you</span>
                         </li>
                       </>
                     )}

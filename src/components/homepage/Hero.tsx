@@ -13,14 +13,14 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-10 animate-fade-in">
             <Zap className="w-4 h-4" />
-            <span className="font-inter">Operational Clarity for Seattle Businesses</span>
+            <span className="font-inter">Your Technology Partner in Bellevue, WA</span>
           </div>
           <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-10 leading-tight animate-fade-in-up">
-            Transform IT Chaos Into
-            <span className="block text-gradient-primary mt-3">Operational Excellence</span>
+            Enterprise-Grade IT Support
+            <span className="block text-gradient-primary mt-3">Built for Small Business Success</span>
           </h1>
           <p className="text-xl md:text-2xl text-neutral-300 mb-14 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-            We help Seattle businesses modernize infrastructure, optimize websites, and solve complex IT challenges with precision and clarity. Stop fighting technology — start leveraging it for growth.
+            Small businesses deserve powerful IT solutions without the complexity. We solve your tech problems and prevent future disruptions — so you can focus on growing your business, not troubleshooting it.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
             <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
@@ -36,7 +36,7 @@ export default function Hero() {
 
           {/* Trust Indicators */}
           <div className="mt-20 pt-10 border-t border-white/10 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <p className="text-sm text-neutral-400 font-inter mb-6">Trusted by Seattle businesses across industries</p>
+            <p className="text-sm text-neutral-400 font-inter mb-6">Trusted by small businesses across Bellevue and the Seattle Metro Area</p>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80">
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">10+</div>
@@ -48,11 +48,11 @@ export default function Hero() {
               </div>
               <div className="text-center">
                 <div className="font-display font-bold text-3xl text-white mb-1">99.9%</div>
-                <div className="text-xs text-neutral-400 font-inter">Client Satisfaction</div>
+                <div className="text-xs text-neutral-400 font-inter">Uptime Guarantee</div>
               </div>
               <div className="text-center">
-                <div className="font-display font-bold text-3xl text-white mb-1">50+</div>
-                <div className="text-xs text-neutral-400 font-inter">Clients Served</div>
+                <div className="font-display font-bold text-3xl text-white mb-1">24/7</div>
+                <div className="text-xs text-neutral-400 font-inter">Support Available</div>
               </div>
             </div>
           </div>

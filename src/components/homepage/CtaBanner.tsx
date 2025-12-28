@@ -13,13 +13,13 @@ export default function CtaBanner() {
         <div className="text-center relative z-10">
           <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
             <MessageSquare className="w-4 h-4" />
-            <span className="font-inter">Ready to Modernize?</span>
+            <span className="font-inter">Ready to Get Started?</span>
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">
-            Ready to modernize your infrastructure?
+            Let&apos;s Build Your Success Story Together
           </h2>
           <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-inter">
-            Schedule a consultation to discuss how we can help transform your IT operations.
+            Talk to us about your goals, your challenges, and how W1IT can help you build a stronger, smarter foundation for growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
@@ -29,16 +29,16 @@ export default function CtaBanner() {
               className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-3" />
-              Schedule a Consultation
+              Get Your Free Consultation
             </Button>
             <Button
-              href="/solutions"
+              href="/services"
               variant="outline"
               size="xl"
               className="border-white text-white hover:bg-white/10"
             >
               <Rocket className="w-5 h-5 mr-3" />
-              Explore Strategic Solutions
+              View All Services
             </Button>
           </div>
         </div>

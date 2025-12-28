@@ -7,33 +7,34 @@ import Image from 'next/image';
 export default function AboutPage() {
   const values = [
     {
-      name: 'Clarity',
-      description: 'We believe in clear communication, transparent processes, and straightforward solutions.',
+      name: 'Confidence',
+      description: 'We give small businesses the confidence to embrace technology and drive growth.',
       icon: <Target className="w-8 h-8" />,
     },
     {
-      name: 'Resilience',
-      description: 'We build robust systems and processes that withstand challenges and ensure business continuity.',
+      name: 'Clarity',
+      description: 'We believe in clear communication, transparent pricing, and straightforward solutions.',
       icon: <Shield className="w-8 h-8" />,
     },
     {
-      name: 'Partnership',
-      description: 'We work as an extension of your team, dedicated to your success.',
+      name: 'Control',
+      description: 'We empower you with the tools and knowledge to take control of your technology.',
       icon: <Users className="w-8 h-8" />,
     },
     {
-      name: 'Innovation',
-      description: 'We constantly explore new technologies and methodologies to deliver cutting-edge solutions.',
+      name: 'Partnership',
+      description: 'We don&apos;t believe in one-size-fits-all. Every business is unique — and so is our approach.',
       icon: <Rocket className="w-8 h-8" />,
     },
   ];
 
   const whyChooseUs = [
-    'Expertise in modern IT infrastructure and cloud technologies.',
-    'A proactive approach to problem-solving and support.',
-    'A commitment to understanding your business and its unique needs.',
-    'A track record of delivering measurable results.',
-    'Transparent pricing and a focus on long-term value.',
+    'Expert support tailored specifically for small business needs.',
+    'Proactive monitoring and prevention — stop problems before they start.',
+    'Fast, friendly help desk services when you need us most.',
+    'Transparent pricing with custom plans that fit your budget.',
+    'Strategic IT consulting to help you grow smarter, not just bigger.',
+    'Enterprise-grade security without enterprise-level complexity.',
   ];
 
   return (
@@ -46,7 +47,7 @@ export default function AboutPage() {
               About W1IT
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Your trusted partner in navigating the complexities of modern IT.
+              Empowering small businesses with enterprise-grade IT solutions — without the complexity or overhead.
             </p>
           </div>
         </Container>
@@ -58,10 +59,10 @@ export default function AboutPage() {
             <div className="animate-fade-in-up">
               <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Our Mission</h2>
               <p className="text-lg text-neutral-600 font-inter leading-relaxed mb-6">
-                Our mission is to empower businesses with clear, resilient, and high-performing IT solutions. We strive to demystify technology, enabling our clients to focus on their core business while we handle the complexities of their IT infrastructure.
+                At W1IT, we believe small businesses deserve enterprise-grade IT support without the complexity or overhead. Whether you&apos;re just starting out or scaling fast, our mission is simple: help you succeed by making your technology work smarter, faster, and safer.
               </p>
               <p className="text-lg text-neutral-600 font-inter leading-relaxed">
-                We are committed to building long-term partnerships based on trust, transparency, and a deep understanding of our clients&apos; needs.
+                We specialize in solving everyday tech issues and preventing future disruptions — so you can focus on growing your business, not troubleshooting it.
               </p>
             </div>
             <div className="animate-fade-in-up" style={{ animationDelay: '100ms' }}>
@@ -112,12 +113,12 @@ export default function AboutPage() {
               />
             </div>
             <div className="animate-fade-in-up order-1 md:order-2" style={{ animationDelay: '100ms' }}>
-              <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Founder Story</h2>
+              <h2 className="font-display font-bold text-4xl text-neutral-900 mb-6">Built for Small Business Success</h2>
               <p className="text-lg text-neutral-600 font-inter leading-relaxed mb-6">
-                W1IT was founded by Victor, a seasoned IT professional with over a decade of experience in building and managing complex IT systems. Frustrated by the lack of clarity and transparency in the industry, he set out to create a different kind of IT consultancy – one that prioritizes partnership, clear communication, and a relentless focus on client success.
+                W1IT was founded by Victor, a seasoned IT professional with over a decade of experience in building and managing complex IT systems. Frustrated by seeing small businesses struggle with overpriced, overcomplicated IT support, he set out to create something different — a consultancy that treats small businesses like valued partners, not ticket numbers.
               </p>
               <p className="text-lg text-neutral-600 font-inter leading-relaxed">
-                Today, W1IT is a trusted partner for businesses across Seattle, helping them navigate the ever-changing technology landscape with confidence.
+                Today, W1IT is a trusted technology partner for small businesses across Bellevue and the Seattle Metro Area. We&apos;re here to help you build a stronger, smarter foundation for growth — one where technology empowers you instead of holding you back.
               </p>
             </div>
           </div>

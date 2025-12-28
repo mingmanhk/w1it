@@ -227,13 +227,42 @@ export function generateOrganizationSchema(): object {
     url: 'https://w1it.com',
     logo: 'https://w1it.com/images/optimized/Logo.webp',
     description:
-      'Expert computer repair services and IT solutions for small and midsize businesses in Bellevue, WA. We help maximize performance, prevent disruptions, and build resilient systems that scale with your business.',
+      'Enterprise-grade IT support for small businesses in Bellevue, WA. Managed services, 24/7 monitoring, security, help desk support, and IT consulting designed specifically for small business success. Serving Seattle Metro Area.',
+    telephone: '(832) 472-7991',
+    email: 'contact@w1it.com',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Bellevue',
+      addressRegion: 'WA',
+      addressCountry: 'US',
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Bellevue',
+      },
+      {
+        '@type': 'City',
+        name: 'Seattle',
+      },
+      {
+        '@type': 'City',
+        name: 'Redmond',
+      },
+      {
+        '@type': 'City',
+        name: 'Kirkland',
+      },
+    ],
+    priceRange: '$$',
     sameAs: [
       // Add social media links here when available
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
+      telephone: '(832) 472-7991',
+      email: 'contact@w1it.com',
       areaServed: 'US',
       availableLanguage: ['English'],
     },
