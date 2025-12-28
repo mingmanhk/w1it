@@ -91,7 +91,7 @@ export default function CloudSolutionsPage() {
               Enterprise Cloud Excellence
             </h1>
             <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto mb-8">
-              Transform your infrastructure with scalable, secure, and cost-effective cloud solutions from certified experts.
+              Transform your infrastructure with scalable, secure, and cost-effective cloud solutions.
             </p>
             <Button href="/contact" variant="primary">
               Start Cloud Journey
@@ -105,7 +105,7 @@ export default function CloudSolutionsPage() {
         <div className="max-w-content mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-heading-md text-[#050816] mb-6">
-              Certified Cloud Partners
+              Cloud Platforms We Support
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
               {platforms.map((platform, index) => (
@@ -192,7 +192,7 @@ export default function CloudSolutionsPage() {
               Ready for Cloud Transformation?
             </h2>
             <p className="text-body text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
-              Partner with certified cloud experts to build scalable, secure, and innovative cloud solutions.
+              Partner with experienced cloud specialists to build scalable, secure, and innovative cloud solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Button href="/contact" variant="primary">
