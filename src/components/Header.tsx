@@ -41,8 +41,8 @@ export default function Header() {
       <div className="max-w-content mx-auto">
         {/* Desktop Header */}
         <div className="flex items-center justify-between h-header px-6">
-          {/* Logo / W1IT */}
-          <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+          {/* Logo / W1IT SOLUTIONS */}
+          <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
             <Image
               src="/images/optimized/Logo.webp"
               alt="W1IT Solutions Logo"
@@ -50,7 +50,16 @@ export default function Header() {
               height={40}
               priority
             />
-            <span className="text-heading-md text-[#050816]">W1IT</span>
+            <div className="flex items-baseline gap-3">
+              <span className="inline-flex items-baseline gap-0.5" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif', fontSize: '20px', fontWeight: 700, letterSpacing: '0.02em' }}>
+                <span className="text-[#050816]">W</span>
+                <span className="text-[#00A878]">1</span>
+                <span className="text-[#050816]">IT</span>
+              </span>
+              <span className="text-[#050816] uppercase" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif', fontSize: '20px', fontWeight: 700, letterSpacing: '0.12em' }}>
+                Solutions
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
