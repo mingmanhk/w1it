@@ -95,21 +95,21 @@ export default function Header() {
 
       {/* Mobile Menu - Header / Mobile / Default */}
       {isOpen && (
-        <div className="md:hidden bg-white fixed top-0 left-0 w-full h-screen pt-24 z-40">
-          <div className="px-6 py-8 flex flex-col h-full">
+        <div className="md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-40 overflow-y-auto">
+          <div className="px-6 py-8 flex flex-col min-h-full">
             <nav className="flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-heading-md text-center ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                  className={`text-heading-md text-center py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
-            <div className="mt-auto pb-16">
+            <div className="mt-auto pt-8 pb-8">
               <Button href="/contact" variant="secondary" className="w-full" onClick={() => setIsOpen(false)}>
                 Get in Touch
               </Button>
