@@ -45,8 +45,19 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: 'url(/images/optimized/hero-graphic.png)' }}
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-[#050816]/80" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-content mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-display text-white mb-6">
               About{' '}
