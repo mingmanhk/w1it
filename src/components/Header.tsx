@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
@@ -43,9 +44,16 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-lg z-50 shadow-sm">
       <Container className="flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
-          <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">W</span>
+        <Link href="/" className="flex items-center space-x-3 z-10 relative" onClick={() => setIsOpen(false)}>
+          <div className="w-10 h-10 relative">
+            <Image
+              src="/images/optimized/Logo.webp"
+              alt="W1IT Solutions Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+              priority
+            />
           </div>
           <span className="font-display font-bold text-2xl text-neutral-900">W1IT</span>
         </Link>
@@ -69,9 +77,13 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation Toggle */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="p-2 z-50 relative">
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        <div className="md:hidden z-50 relative">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          >
+            {isOpen ? <X className="w-6 h-6 text-neutral-900" /> : <Menu className="w-6 h-6 text-neutral-900" />}
           </button>
         </div>
       </Container>
@@ -84,7 +96,7 @@ export default function Header() {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:hidden bg-white/95 backdrop-blur-lg absolute top-0 left-0 w-full h-screen pt-20"
+            className="md:hidden bg-white/95 backdrop-blur-lg fixed top-0 left-0 w-full h-screen pt-20 z-40"
           >
             <Container className="py-6 flex flex-col h-full">
               <nav className="flex flex-col space-y-6">

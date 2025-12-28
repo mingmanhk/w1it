@@ -5,6 +5,14 @@ import { CheckCircle2, Sparkles } from 'lucide-react';
 
 const testimonials = [
   {
+    quote: 'W1IT transformed our outdated website into a modern, professional platform that truly represents our 40+ years of expertise. They implemented advanced analytics, live chat support, and multilingual capabilities that have significantly improved our customer engagement.',
+    author: 'Kam Ling Trading Team',
+    role: 'International Trading Company',
+    company: 'Kam Ling International Trading Co.',
+    logo: '🌏',
+    results: ['Modern website with SEO optimization', 'Integrated analytics and live chat support', 'Multilingual support for global customers'],
+  },
+  {
     quote: 'W1IT provided the clarity and expertise we needed to stabilize our systems and scale confidently. Their structured approach transformed our chaotic IT environment into a reliable foundation for growth.',
     author: 'Michael Chen',
     role: 'CTO',
@@ -19,14 +27,6 @@ const testimonials = [
     company: 'Precision Manufacturing Co.',
     logo: '🏭',
     results: ['Cut maintenance time by 70%', 'Increased operational efficiency by 35%'],
-  },
-  {
-    quote: 'Victor\'s attention to detail and clear documentation made our cloud migration seamless and stress-free. The transition was so smooth that our team barely noticed the changeover.',
-    author: 'David Rodriguez',
-    role: 'IT Manager',
-    company: 'Northwest Financial Group',
-    logo: '💼',
-    results: ['Zero downtime during migration', 'Reduced cloud costs by 25%'],
   },
   {
     quote: 'The website optimization work resulted in a 40% increase in page load speed and better user engagement. Our conversion rates improved significantly, directly impacting our bottom line.',
