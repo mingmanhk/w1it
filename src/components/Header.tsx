@@ -95,7 +95,7 @@ export default function Header() {
 
       {/* Mobile Menu - Header / Mobile / Default */}
       {isOpen && (
-        <div className="md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-40 overflow-y-auto">
+        <div className="md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-60 overflow-y-auto">
           <div className="px-6 py-8 flex flex-col min-h-full">
             <nav className="flex flex-col gap-6">
               {navLinks.map((link) => (
