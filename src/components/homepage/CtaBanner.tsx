@@ -1,48 +1,44 @@
-import Container from '@/components/Container';
 import Button from '@/components/Button';
-import { MessageSquare, Calendar, Rocket } from 'lucide-react';
+
+/**
+ * W1IT CTA Component
+ * Matches: Section / CTA
+ * Specs: Padding 96px top/bottom, Center alignment, Background Gray100
+ * Typography: Heading/32 Bold, Heading/20 Bold, Body/18 Regular
+ * Spacing: 32px between text blocks, 24px between buttons
+ */
 
 export default function CtaBanner() {
   return (
-    <section className="py-32 bg-gradient-primary text-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
-      <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-
-      <Container>
-        <div className="text-center relative z-10">
-          <div className="inline-flex items-center space-x-2 glass px-6 py-3 rounded-full text-sm font-medium mb-8 animate-fade-in">
-            <MessageSquare className="w-4 h-4" />
-            <span className="font-body">Ready to Get Started?</span>
-          </div>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
-            Let&apos;s Build Your Success Story Together
+    <section className="py-24 bg-[#F5F5F5]">
+      <div className="max-w-content mx-auto px-6">
+        <div className="text-center">
+          {/* Title - Heading / 32 Bold */}
+          <h2 className="text-heading-lg text-[#050816] mb-8">
+            Ready to Get Started?
           </h2>
-          <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto font-body">
+
+          {/* Subtitle - Heading / 20 Bold - Spacing 32px */}
+          <h3 className="text-heading-md text-[#050816] mb-8">
+            Let&apos;s Build Your Success Story Together
+          </h3>
+
+          {/* Body - Body / 18 Regular - Spacing 32px */}
+          <p className="text-body-lg text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
             Talk to us about your goals, your challenges, and how W1IT can help you build a stronger, smarter foundation for growth.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button
-              href="/contact"
-              variant="secondary"
-             
-              className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              <Calendar className="w-5 h-5 mr-3" />
+
+          {/* CTA Buttons - Spacing 24px */}
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <Button href="/contact" variant="primary">
               Get Your Free Consultation
             </Button>
-            <Button
-              href="/services"
-              variant="secondary"
-             
-              className="border-white text-white hover:bg-white/10"
-            >
-              <Rocket className="w-5 h-5 mr-3" />
+            <Button href="/services" variant="secondary">
               View All Services
             </Button>
           </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -1,56 +1,61 @@
-import Container from '@/components/Container';
-import Card from '@/components/Card';
 import Button from '@/components/Button';
 import { Factory, Building, Rocket, Users } from 'lucide-react';
 
+/**
+ * W1IT Industries Component
+ * Matches: Section / Industries
+ * Specs: Grid layout with industry cards, centered icons 48x48, Heading 20px, W1IT colors
+ */
+
 const industries = [
-  { name: 'Manufacturing', icon: <Factory className="w-8 h-8" />, color: 'text-secondary-500' },
-  { name: 'Small Business', icon: <Building className="w-8 h-8" />, color: 'text-primary-500' },
-  { name: 'Startups', icon: <Rocket className="w-8 h-8" />, color: 'text-accent-500' },
-  { name: 'Professional Services', icon: <Users className="w-8 h-8" />, color: 'text-primary-700' },
+  { name: 'Manufacturing', icon: Factory },
+  { name: 'Small Business', icon: Building },
+  { name: 'Startups', icon: Rocket },
+  { name: 'Professional Services', icon: Users },
 ];
 
 export default function Industries() {
   return (
-    <section className="py-32 bg-gradient-to-b from-neutral-50 to-white">
-      <Container>
-        <div className="text-center mb-20">
-          <div className="inline-block px-4 py-2 bg-secondary-50 text-secondary-700 rounded-full text-sm font-medium mb-4 font-body">
-            Who We Serve
-          </div>
-          <h2 className="font-heading font-bold text-4xl md:text-5xl text-dark-text mb-6">
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-content mx-auto px-6">
+        {/* SectionHeader / Default */}
+        <div className="text-center mb-16">
+          <h2 className="text-heading-lg text-[#050816] mb-4">
             Supporting Small Businesses Across Industries
           </h2>
-          <p className="text-xl text-dark-text/80 max-w-3xl mx-auto font-body">
+          <p className="text-body text-[#4A4A4A] max-w-3xl mx-auto">
             From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-          {industries.map((industry, index) => (
-            <Card
-              key={index}
-              hoverable
-              padding="lg"
-              className="animate-fade-in-up text-center"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <div className={`${industry.color} mb-4 flex justify-center`}>
-                {industry.icon}
+        {/* Industry Cards Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          {industries.map((industry, index) => {
+            const Icon = industry.icon;
+            return (
+              <div
+                key={index}
+                className="bg-[#F5F5F5] p-8 rounded-card text-center"
+              >
+                {/* Centered Icon 48x48 */}
+                <div className="flex justify-center items-center mb-4">
+                  <Icon className="w-12 h-12 text-[#3A81F7]" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-heading-md text-[#050816]">
+                  {industry.name}
+                </h3>
               </div>
-              <h3 className="font-heading font-semibold text-lg text-dark-text">
-                {industry.name}
-              </h3>
-            </Card>
-          ))}
+            );
+          })}
         </div>
 
-        <div className="text-center mt-12">
+        {/* CTA Button */}
+        <div className="text-center">
           <Button href="/industries" variant="secondary">
             Explore All Industries
           </Button>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
