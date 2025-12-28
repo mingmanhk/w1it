@@ -5,7 +5,7 @@ import { CheckCircle2, Sparkles } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: 'W1IT transformed our outdated website into a modern, professional platform that truly represents our company's legacy. They implemented advanced analytics, live chat support, and multilingual capabilities that have significantly improved our customer engagement.',
+    quote: 'W1IT transformed our outdated website into a modern, professional platform that truly represents our company\'s legacy. They implemented advanced analytics, live chat support, and multilingual capabilities that have significantly improved our customer engagement.',
     author: 'Kam Ling Trading Team',
     role: 'International Trading Company',
     company: 'Kam Ling International Trading Co.',
