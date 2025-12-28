@@ -2,128 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/**
+ * W1IT Design System - Global Styles
+ * STRICT COMPLIANCE - Minimal, clean, no gradients or shadows unless specified
+ */
+
 @layer base {
   body {
-    @apply bg-white text-neutral-900 font-body antialiased;
+    @apply bg-white text-[#050816] font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
-  }
-
-  h1 {
-    @apply text-h1 leading-h1;
-  }
-
-  h2 {
-    @apply text-h2 leading-h2;
-  }
-
-  h3 {
-    @apply text-h3 leading-h3;
-  }
-}
-
-@layer utilities {
-  /* Hero backgrounds - optimized for different viewports */
-  .bg-hero-desktop {
-    background-image: url('/images/optimized/mockup_new.png');
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
-  }
-
-  .bg-hero-mobile {
-    background-image: url('/images/optimized/mockup_new.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  /* Gradient utilities */
-  .bg-gradient-dark {
-    background: linear-gradient(135deg, #0A1A2F 0%, #1a365d 100%);
-  }
-
-  .bg-gradient-primary {
-    background: linear-gradient(135deg, #2F80ED 0%, #4FD1C5 100%);
-  }
-
-  .text-gradient-primary {
-    @apply bg-gradient-to-r from-primary-500 to-secondary-400 bg-clip-text text-transparent;
-  }
-
-  /* Pattern backgrounds */
-  .bg-grid-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-
-  .bg-dot-pattern {
-    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
-  }
-
-  /* Glass morphism effect */
-  .glass {
-    @apply bg-white/80 backdrop-blur-lg border border-white/20;
-  }
-
-  /* Animation utilities */
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out;
-  }
-
-  .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.4s ease-out;
-  }
-
-  .animate-pulse-subtle {
-    animation: pulseSubtle 3s ease-in-out infinite;
-  }
-}
-
-/* Keyframe animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes pulseSubtle {
-  0%, 100% {
-    opacity: 0.6;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.05);
+    @apply font-sans;
   }
 }

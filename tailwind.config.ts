@@ -1,5 +1,10 @@
 import type { Config } from 'tailwindcss'
 
+/**
+ * W1IT Design System - Tailwind Configuration
+ * STRICT COMPLIANCE - Matches exact W1IT specification
+ */
+
 const config: Config = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -7,117 +12,100 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // ========================================
+      // W1IT COLOR TOKENS
+      // ========================================
       colors: {
-        // Brand colors - core identity
-        'brand-navy': '#0A1A2F',
-        'brand-blue': '#2F80ED',
-        'brand-cyan': '#4FD1C5',
-        'brand-gray-light': '#F2F4F7',
-        'brand-gray-mid': '#475569',
-
-        // Primary palette - brand-blue based
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#2F80ED',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        w1it: {
+          navy: '#050816',
+          blue: '#3A81F7',
+          green: '#00A878',
+          white: '#FFFFFF',
+          gray: {
+            600: '#4A4A4A',
+            300: '#D9D9D9',
+            100: '#F5F5F5',
+          },
         },
-
-        // Secondary palette - brand-cyan based
-        secondary: {
-          50: '#ecfeff',
-          100: '#cffafe',
-          200: '#a5f3fc',
-          300: '#67e8f9',
-          400: '#4FD1C5',
-          500: '#06b6d4',
-          600: '#0891b2',
-          700: '#0e7490',
-          800: '#155e75',
-          900: '#164e63',
-        },
-
-        // Accent palette - complementary colors
-        accent: {
-          50: '#faf5ff',
-          100: '#f3e8ff',
-          200: '#e9d5ff',
-          300: '#d8b4fe',
-          400: '#c084fc',
-          500: '#a855f7',
-          600: '#9333ea',
-          700: '#7e22ce',
-          800: '#6b21a8',
-          900: '#581c87',
-        },
-
-        // Neutral palette - grays and text colors
-        neutral: {
-          50: '#F2F4F7',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        },
-
-        // Semantic/legacy color mappings
-        charcoal: '#1e293b',
-        rose: '#f43f5e',
-        blush: '#fdf2f8',
-        'gray-medium': '#64748b',
-        'gray-bg': '#F2F4F7',
-
-        // Dark mode colors
-        'dark-bg': '#0B0F19',
-        'dark-surface': '#111827',
-        'dark-text': '#E5E7EB',
       },
+
+      // ========================================
+      // TYPOGRAPHY
+      // ========================================
       fontFamily: {
-        heading: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
-        code: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Inter', 'sans-serif'], // W1IT uses single font family
       },
       fontSize: {
-        'h1': '56px',
-        'h2': '40px',
-        'h3': '32px',
-        'body-lg': '18px',
-        'body-md': '16px',
-        'body-sm': '14px',
+        'display': ['48px', { lineHeight: '110%', fontWeight: '700' }],
+        'heading-lg': ['32px', { lineHeight: '110%', fontWeight: '700' }],
+        'heading-md': ['20px', { lineHeight: '110%', fontWeight: '700' }],
+        'body-lg': ['18px', { lineHeight: '150%', fontWeight: '400' }],
+        'body': ['16px', { lineHeight: '150%', fontWeight: '400' }],
+        'caption': ['14px', { lineHeight: '150%', fontWeight: '400' }],
       },
-      lineHeight: {
-        'h1': '1.1',
-        'h2': '1.2',
-        'h3': '1.25',
-        'body': '1.5',
-      },
-      maxWidth: {
-        'container': '1200px',
-      },
+
+      // ========================================
+      // SPACING (8px scale)
+      // ========================================
       spacing: {
-        'gutter': '24px',
-        'page-padding': '32px',
+        '2': '8px',
+        '4': '16px',
+        '6': '24px',
+        '8': '32px',
+        '12': '48px',
+        '16': '64px',
+        '24': '96px',
+        '32': '128px',
       },
+
+      // ========================================
+      // SHADOWS (Only specified ones)
+      // ========================================
       boxShadow: {
-        'card': '0px 4px 12px rgba(0,0,0,0.06)',
+        'soft': '0px 2px 8px rgba(0, 0, 0, 0.08)',
+        'card': '0px 4px 16px rgba(0, 0, 0, 0.12)',
       },
+
+      // ========================================
+      // BORDER RADIUS
+      // ========================================
       borderRadius: {
-        'card': '8px',
-        'btn': '6px',
+        'card': '12px',
+        'button': '8px',
+      },
+
+      // ========================================
+      // GRID & CONTAINER
+      // ========================================
+      maxWidth: {
+        'desktop': '1440px',
+        'content': '1200px',
+      },
+
+      // ========================================
+      // COMPONENT-SPECIFIC SIZES
+      // ========================================
+      height: {
+        'header': '96px',
+      },
+      width: {
+        'hero-left': '520px',
+        'service-card': '360px',
+        'testimonial': '800px',
+        'footer-column': '200px',
+      },
+      gap: {
+        'header': '32px',
+        'hero': '64px',
+        'foundation-1': '16px',
+        'foundation-2': '12px',
+        'footer-column': '48px',
+        'footer-link': '12px',
       },
     },
   },
   plugins: [],
 }
+
 export default config

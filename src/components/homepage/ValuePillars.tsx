@@ -1,5 +1,11 @@
-import Container from '@/components/Container';
 import { Circle, Shield, TrendingUp } from 'lucide-react';
+
+/**
+ * W1IT Foundation Component (Three Pillars)
+ * Matches: Section / Foundation
+ * Components: PillarCard / Clarity, Resilience, Optimization
+ * Specs: Three columns, Icon 64x64, Heading 20 bold, Description 16 regular, Spacing 16px then 12px
+ */
 
 const valuePillars = [
   {
@@ -24,40 +30,43 @@ const valuePillars = [
 
 export default function ValuePillars() {
   return (
-    <section className="py-20 md:py-32 bg-[#050816]">
-      <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+    <section className="py-16 md:py-24 bg-[#050816]">
+      <div className="max-w-content mx-auto px-6">
+        {/* SectionHeader / Default */}
+        <div className="text-center mb-16">
+          <h2 className="text-heading-lg text-white mb-4">Our Foundation</h2>
+          <p className="text-body text-[#D9D9D9]">The three pillars that guide everything we do</p>
+        </div>
+
+        {/* Three Columns - PillarCards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {valuePillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
-              <div
-                key={index}
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Icon */}
-                <div className="flex justify-center mb-8">
+              <div key={index} className="text-center">
+                {/* Icon 64x64 */}
+                <div className="flex justify-center mb-4">
                   <Icon
-                    className="w-16 h-16 md:w-20 md:h-20"
-                    strokeWidth={1}
+                    className="w-16 h-16"
+                    strokeWidth={1.5}
                     style={{ color: pillar.color }}
                   />
                 </div>
 
-                {/* Heading */}
-                <h3 className="font-heading font-bold text-2xl md:text-3xl text-white mb-6">
+                {/* Heading 20 bold - Spacing 16px */}
+                <h3 className="text-heading-md text-white mb-3">
                   {pillar.title}
                 </h3>
 
-                {/* Description */}
-                <p className="font-body text-base md:text-lg text-white/90 leading-relaxed max-w-sm mx-auto">
+                {/* Description 16 regular - Spacing 12px */}
+                <p className="text-body text-[#D9D9D9] max-w-sm mx-auto">
                   {pillar.description}
                 </p>
               </div>
             );
           })}
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

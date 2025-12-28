@@ -1,98 +1,144 @@
 /**
- * Design Tokens
- * Centralized design system tokens for consistent styling across the application
+ * W1IT Design System Tokens
+ * STRICT COMPLIANCE - Do not modify without design system approval
  */
 
-// Spacing tokens for consistent section padding
-export const spacing = {
-  section: 'py-20 md:py-32',
-  sectionLarge: 'py-32 md:py-40',
-  sectionSmall: 'py-16 md:py-24',
-  container: 'px-4 sm:px-6 lg:px-8',
-  heroTop: 'pt-28 md:pt-40',
-  heroBottom: 'pb-24 md:pb-32',
+// ========================================
+// COLOR TOKENS (EXACT W1IT SPECIFICATION)
+// ========================================
+export const colors = {
+  navy: '#050816',
+  blue: '#3A81F7',
+  green: '#00A878',
+  white: '#FFFFFF',
+  gray600: '#4A4A4A',
+  gray300: '#D9D9D9',
+  gray100: '#F5F5F5',
 } as const;
 
-// Shadow tokens
+// ========================================
+// SPACING TOKENS (8px BASE SCALE)
+// ========================================
+export const spacing = {
+  xs: '8px',
+  sm: '16px',
+  md: '24px',
+  lg: '32px',
+  xl: '48px',
+  '2xl': '64px',
+  '3xl': '96px',
+  '4xl': '128px',
+} as const;
+
+// ========================================
+// TYPOGRAPHY TOKENS
+// ========================================
+export const typography = {
+  display: 'text-[48px] font-bold leading-[110%]',
+  headingLarge: 'text-[32px] font-bold leading-[110%]',
+  headingMedium: 'text-[20px] font-bold leading-[110%]',
+  bodyLarge: 'text-[18px] font-normal leading-[150%]',
+  body: 'text-[16px] font-normal leading-[150%]',
+  caption: 'text-[14px] font-normal leading-[150%]',
+} as const;
+
+// ========================================
+// SHADOW TOKENS
+// ========================================
 export const shadows = {
-  card: 'shadow-sm hover:shadow-xl transition-shadow duration-300',
-  elevated: 'shadow-lg',
-  soft: 'shadow-md',
+  soft: 'shadow-[0px_2px_8px_rgba(0,0,0,0.08)]',
+  card: 'shadow-[0px_4px_16px_rgba(0,0,0,0.12)]',
   none: 'shadow-none',
 } as const;
 
-// Border radius tokens
+// ========================================
+// BORDER RADIUS TOKENS
+// ========================================
 export const radius = {
-  sm: 'rounded-lg',
-  md: 'rounded-xl',
-  lg: 'rounded-2xl',
-  xl: 'rounded-3xl',
-  full: 'rounded-full',
-  card: 'rounded-2xl',
-  button: 'rounded-lg',
+  card: 'rounded-[12px]',
+  button: 'rounded-[8px]',
+  none: 'rounded-none',
 } as const;
 
-// Typography tokens
-export const typography = {
-  h1: 'font-heading font-bold text-5xl md:text-6xl lg:text-7xl',
-  h2: 'font-heading font-bold text-4xl md:text-5xl lg:text-6xl',
-  h3: 'font-heading font-bold text-3xl md:text-4xl lg:text-5xl',
-  h4: 'font-heading font-bold text-2xl md:text-3xl',
-  h5: 'font-heading font-bold text-xl md:text-2xl',
-  h6: 'font-heading font-bold text-lg md:text-xl',
-  bodyLg: 'font-body text-xl md:text-2xl',
-  body: 'font-body text-base md:text-lg',
-  bodySm: 'font-body text-sm md:text-base',
-  caption: 'font-body text-xs md:text-sm',
-} as const;
-
-// Gradient tokens
-export const gradients = {
-  primary: 'bg-gradient-to-r from-primary-500 to-secondary-400',
-  dark: 'bg-gradient-dark',
-  subtle: 'bg-gradient-to-b from-neutral-50 to-white',
-} as const;
-
-// Animation tokens
-export const animations = {
-  fadeIn: 'animate-fade-in',
-  fadeInUp: 'animate-fade-in-up',
-  scaleIn: 'animate-scale-in',
-  pulseSubtle: 'animate-pulse-subtle',
-} as const;
-
-// Container sizes
+// ========================================
+// GRID & CONTAINER TOKENS
+// ========================================
 export const containers = {
-  sm: 'max-w-3xl',
-  md: 'max-w-5xl',
-  lg: 'max-w-7xl',
-  xl: 'max-w-screen-2xl',
+  desktop: 'max-w-[1440px]',
+  content: 'max-w-[1200px]',
   full: 'max-w-full',
 } as const;
 
-// Helper function to combine token classes
+// ========================================
+// COMPONENT SPACING
+// ========================================
+export const componentSpacing = {
+  header: {
+    padding: 'p-6',
+    height: 'h-24',
+    gap: 'gap-8',
+  },
+  hero: {
+    gap: 'gap-16',
+    paddingY: 'py-24',
+    leftColumn: 'w-[520px]',
+  },
+  foundation: {
+    iconSize: 'w-16 h-16',
+    gap1: 'gap-4',
+    gap2: 'gap-3',
+  },
+  serviceCard: {
+    width: 'w-[360px]',
+    padding: 'p-8',
+    iconSize: 'w-12 h-12',
+  },
+  testimonial: {
+    width: 'w-[800px]',
+    padding: 'p-8',
+    starSize: 'w-5 h-5',
+  },
+  footer: {
+    columnWidth: 'w-[200px]',
+    columnGap: 'gap-12',
+    linkGap: 'gap-3',
+  },
+} as const;
+
+// ========================================
+// COLOR UTILITIES
+// ========================================
+export const colorClasses = {
+  text: {
+    navy: 'text-[#050816]',
+    blue: 'text-[#3A81F7]',
+    green: 'text-[#00A878]',
+    white: 'text-white',
+    gray600: 'text-[#4A4A4A]',
+    gray300: 'text-[#D9D9D9]',
+    gray100: 'text-[#F5F5F5]',
+  },
+  bg: {
+    navy: 'bg-[#050816]',
+    blue: 'bg-[#3A81F7]',
+    green: 'bg-[#00A878]',
+    white: 'bg-white',
+    gray600: 'bg-[#4A4A4A]',
+    gray300: 'bg-[#D9D9D9]',
+    gray100: 'bg-[#F5F5F5]',
+  },
+  border: {
+    navy: 'border-[#050816]',
+    blue: 'border-[#3A81F7]',
+    green: 'border-[#00A878]',
+    white: 'border-white',
+    gray600: 'border-[#4A4A4A]',
+    gray300: 'border-[#D9D9D9]',
+    gray100: 'border-[#F5F5F5]',
+  },
+} as const;
+
+// Helper function to combine classes
 export function cn(...classes: (string | undefined | false)[]): string {
   return classes.filter(Boolean).join(' ');
 }
-
-// Semantic color tokens
-export const semanticColors = {
-  text: {
-    primary: 'text-neutral-900',
-    secondary: 'text-neutral-600',
-    tertiary: 'text-neutral-500',
-    inverse: 'text-white',
-    link: 'text-primary-600 hover:text-primary-700',
-  },
-  background: {
-    primary: 'bg-white',
-    secondary: 'bg-neutral-50',
-    dark: 'bg-dark-bg',
-    surface: 'bg-neutral-100',
-  },
-  border: {
-    light: 'border-neutral-200',
-    medium: 'border-neutral-300',
-    dark: 'border-neutral-400',
-  },
-} as const;
