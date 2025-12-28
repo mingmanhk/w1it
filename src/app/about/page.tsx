@@ -49,7 +49,14 @@ export default function AboutPage() {
         <div className="max-w-content mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-display text-white mb-6">
-              About W1IT
+              About{' '}
+              <span className="inline-flex items-baseline gap-1" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif' }}>
+                <span>W</span>
+                <span className="text-[#00A878]">1</span>
+                <span>IT</span>
+              </span>
+              {' '}
+              <span style={{ letterSpacing: '0.12em' }}>SOLUTIONS</span>
             </h1>
             <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
               Empowering small businesses with enterprise-grade IT solutions — without the complexity or overhead.
