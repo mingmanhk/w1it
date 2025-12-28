@@ -1,4 +1,5 @@
 import Button from '@/components/Button';
+import Image from 'next/image';
 
 /**
  * W1IT Hero Component
@@ -32,9 +33,15 @@ export default function Hero() {
 
           {/* Right Column - Image / HeroBackdrop */}
           <div className="hidden md:block">
-            <div className="w-full h-[400px] bg-[#F5F5F5] rounded-card flex items-center justify-center">
-              {/* Hero graphic placeholder - replace with actual image */}
-              <span className="text-caption text-[#4A4A4A]">Hero Graphic</span>
+            <div className="w-full h-[400px] bg-[#F5F5F5] rounded-card overflow-hidden">
+              <Image
+                src="/images/optimized/hero-graphic.png"
+                alt="W1IT IT Solutions Hero Graphic"
+                width={600}
+                height={400}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
