@@ -10,7 +10,7 @@ import CtaBanner from '@/components/homepage/CtaBanner';
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
+    <div>
       <Hero />
       <ValuePillars />
       <CoreServices />
