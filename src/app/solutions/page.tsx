@@ -7,63 +7,63 @@ import Button from '@/components/Button';
 
 const solutions = [
   {
-    title: 'Digital Transformation',
-    description: 'Modernize your business from the ground up with our comprehensive digital transformation solutions.',
+    title: 'Managed IT Solutions',
+    description: 'Comprehensive IT management and support designed to keep your small business running smoothly 24/7.',
     icon: <Cpu className="w-10 h-10" />,
     gradient: 'from-blue-500 to-cyan-500',
     outcomes: [
-      'Increased operational efficiency',
-      'Enhanced customer experience',
-      'Improved data-driven decision making',
-      'Greater business agility and scalability',
+      'Proactive monitoring and maintenance',
+      '24/7 help desk support',
+      'Reduced downtime and IT costs',
+      'Predictable monthly budgeting',
     ],
   },
   {
-    title: 'Cybersecurity & Risk Management',
-    description: 'Protect your business from evolving cyber threats with our proactive and strategic cybersecurity solutions.',
-    icon: <Shield className="w-10 h-10" />,
+    title: 'Hardware & Software Integration',
+    description: 'Seamlessly integrate new hardware and software into your existing infrastructure for optimal performance.',
+    icon: <Sliders className="w-10 h-10" />,
     gradient: 'from-emerald-500 to-green-500',
     outcomes: [
-      'Reduced risk of data breaches and cyber attacks',
-      'Improved compliance with industry regulations',
-      'Enhanced brand reputation and customer trust',
-      'Increased business resilience',
+      'Smooth integration with minimal disruption',
+      'Improved system compatibility',
+      'Enhanced productivity and efficiency',
+      'Expert configuration and setup',
     ],
   },
   {
-    title: 'Website Optimization & Growth',
-    description: 'Transform your website into a powerful engine for growth with our optimization and analytics services.',
+    title: 'Migration & Deployment',
+    description: 'Expert migration services to move your systems, data, and applications with zero downtime.',
     icon: <Globe className="w-10 h-10" />,
     gradient: 'from-violet-500 to-purple-500',
     outcomes: [
-      'Increased website traffic and lead generation',
-      'Improved user engagement and conversion rates',
-      'Enhanced brand visibility and online presence',
-      'Data-driven insights for continuous improvement',
+      'Zero-downtime migrations',
+      'Cloud and on-premise deployments',
+      'Data integrity and security',
+      'Complete testing and validation',
     ],
   },
   {
-    title: 'Data & Analytics Solutions',
-    description: 'Leverage the power of data to gain a competitive edge and drive business growth.',
+    title: 'Cybersecurity & Protection',
+    description: 'Protect your business from evolving cyber threats with comprehensive security solutions.',
+    icon: <Shield className="w-10 h-10" />,
+    gradient: 'from-rose-500 to-red-500',
+    outcomes: [
+      'Multi-layered security protection',
+      'Regular security assessments',
+      'Virus and malware prevention',
+      'Compliance and risk management',
+    ],
+  },
+  {
+    title: 'Business Continuity Planning',
+    description: 'Ensure your business stays operational with robust backup, recovery, and disaster recovery solutions.',
     icon: <BarChart3 className="w-10 h-10" />,
     gradient: 'from-indigo-500 to-blue-500',
     outcomes: [
-      'Actionable insights from your data',
-      'Improved decision-making at all levels',
-      'Enhanced operational efficiency',
-      'New revenue streams and business opportunities',
-    ],
-  },
-  {
-    title: 'Custom IT Solutions',
-    description: 'Bespoke IT solutions designed to meet your unique business challenges and goals.',
-    icon: <Sliders className="w-10 h-10" />,
-    gradient: 'from-amber-500 to-orange-500',
-    outcomes: [
-      'Solutions tailored to your specific needs',
-      'Increased efficiency and productivity',
-      'Competitive advantage in your industry',
-      'Long-term value and ROI',
+      'Automated backup solutions',
+      'Quick disaster recovery',
+      'Business continuity planning',
+      'Minimal data loss protection',
     ],
   },
 ];
@@ -76,10 +76,10 @@ export default function SolutionsPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl mb-6 leading-tight animate-fade-in-up">
-              Strategic Solutions
+              IT Solutions for Small Business Success
             </h1>
             <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-3xl mx-auto leading-relaxed font-inter animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-              Outcome-focused solutions to solve your most complex business challenges.
+              From managed IT to migrations, we provide the complete technology solutions your business needs to thrive.
             </p>
           </div>
         </Container>
