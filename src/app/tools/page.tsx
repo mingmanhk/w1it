@@ -36,10 +36,10 @@ export default function ToolsPage() {
               We&apos;re developing free IT tools including network calculators, security scanners, and performance analyzers. Stay tuned!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/apps" size="lg">
+              <Button href="/apps">
                 View Our Apps
               </Button>
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button href="/contact" variant="secondary">
                 Suggest a Tool
               </Button>
             </div>

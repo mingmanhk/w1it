@@ -36,10 +36,10 @@ export default function KnowledgeBasePage() {
               We&apos;re building a comprehensive knowledge base with IT guides, troubleshooting tips, and best practices. Check back soon!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/blog" size="lg">
+              <Button href="/blog">
                 Read Our Blog
               </Button>
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button href="/contact" variant="secondary">
                 Contact Support
               </Button>
             </div>

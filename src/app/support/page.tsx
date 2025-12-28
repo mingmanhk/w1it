@@ -124,7 +124,7 @@ export default function SupportPage() {
             <p className="text-xl mb-8 opacity-90">
               Upgrade to our managed services for 24/7 support and proactive monitoring
             </p>
-            <Button href="/services/managed-services" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/services/managed-services" className="bg-white text-brand-blue hover:bg-gray-100">
               Learn About Managed Services
             </Button>
           </div>

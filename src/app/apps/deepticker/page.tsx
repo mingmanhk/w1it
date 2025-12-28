@@ -51,7 +51,7 @@ export default function DeepTicker() {
                 Apollo, Chart.js, and Material-UI for a seamless trading experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#" size="lg">
+                <Button href="#">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
@@ -109,7 +109,7 @@ export default function DeepTicker() {
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Stay Ahead of the Market
@@ -118,7 +118,7 @@ export default function DeepTicker() {
               Download DeepTicker and get professional-grade stock market tools right in your
               pocket.
             </p>
-            <Button href="#" size="lg">
+            <Button href="#">
               Download for iOS ↗
             </Button>
           </div>

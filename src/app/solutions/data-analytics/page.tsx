@@ -78,7 +78,7 @@ export default function DataAnalyticsPage() {
               Unlock the power of your data with modern analytics platforms, AI-driven insights, and strategic data solutions.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-amber hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" className="group bg-gradient-amber hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Explore Solutions
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -208,7 +208,7 @@ export default function DataAnalyticsPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
 
-        <Container size="lg">
+        <Container>
           <div className="text-center relative z-10">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Unlock Your Data&apos;s Potential?
@@ -220,15 +220,15 @@ export default function DataAnalyticsPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                size="xl"
+               
                 className="bg-white text-amber-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Start Data Assessment
               </Button>
               <Button
                 href="/services"
-                variant="outline"
-                size="xl"
+                variant="secondary"
+               
                 className="border-white text-white hover:bg-white/10"
               >
                 View All Services

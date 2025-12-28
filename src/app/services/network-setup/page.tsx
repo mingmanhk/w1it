@@ -114,7 +114,7 @@ export default function NetworkSetup() {
               <p className="text-md text-gray-medium max-w-2xl mx-auto mb-8 font-body">
                 Fast, reliable network setup for homes and businesses. Same-day service available.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Schedule Network Setup
               </Button>
             </div>
@@ -215,7 +215,7 @@ export default function NetworkSetup() {
                 <p className="text-sm text-gray-medium font-body mb-6">
                   Remote support also available for network configuration and troubleshooting
                 </p>
-                <Button href="/contact" size="lg">
+                <Button href="/contact">
                   Get Network Help Today
                 </Button>
               </div>
@@ -263,7 +263,7 @@ export default function NetworkSetup() {
 
         {/* CTA */}
         <section className="py-20 md:py-32">
-          <Container size="sm">
+          <Container>
             <div className="text-center">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Ready for Better Network Performance?
@@ -271,7 +271,7 @@ export default function NetworkSetup() {
               <p className="text-lg text-gray-medium mb-8 font-body">
                 Contact us today for fast, professional network setup in the Seattle area.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Schedule Service
               </Button>
             </div>

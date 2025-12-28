@@ -51,7 +51,7 @@ export default function ScreenGrabber() {
                 has never been easier.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#" size="lg">
+                <Button href="#">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
@@ -109,7 +109,7 @@ export default function ScreenGrabber() {
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Capture Screenshots Like a Pro
@@ -117,7 +117,7 @@ export default function ScreenGrabber() {
             <p className="text-lg text-gray-medium mb-8 font-body">
               Download ScreenGrabber and experience the most powerful screenshot tool for macOS.
             </p>
-            <Button href="#" size="lg">
+            <Button href="#">
               Download for macOS ↗
             </Button>
           </div>

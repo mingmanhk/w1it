@@ -116,12 +116,12 @@ export default function Blog() {
               Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+              <Button href="/contact" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
                 <MessageSquare className="w-5 h-5 mr-3" />
                 Subscribe to Newsletter
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
-              <Button href="#featured" variant="outline" size="xl" className="border-primary-500 text-primary-600 hover:bg-primary-50 transition-all duration-300">
+              <Button href="#featured" variant="secondary" className="border-primary-500 text-primary-600 hover:bg-primary-50 transition-all duration-300">
                 <Sparkles className="w-5 h-5 mr-3" />
                 Read Featured Article
               </Button>
@@ -207,7 +207,7 @@ export default function Blog() {
                 <Button
                   href="/blog/top-it-mistakes-small-businesses"
                   variant="secondary"
-                  size="lg"
+                 
                   className="bg-white text-primary-600 hover:bg-neutral-100 w-fit"
                 >
                   Read Full Article
@@ -309,7 +309,7 @@ export default function Blog() {
 
       {/* Newsletter CTA */}
       <section className="py-20 md:py-32">
-        <Container size="sm">
+        <Container>
           <Card className="bg-blush text-center">
             <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
               Stay Updated
@@ -317,7 +317,7 @@ export default function Blog() {
             <p className="text-gray-medium font-body mb-6">
               Get the latest IT insights, tips, and Seattle tech news delivered to your inbox.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact">
               Subscribe to Newsletter
             </Button>
           </Card>

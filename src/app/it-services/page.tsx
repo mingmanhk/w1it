@@ -145,7 +145,7 @@ export default function ITServices() {
               scalable, and secure solutions. Available remotely worldwide and locally in the
               Greater Seattle area. Looking for strategic guidance? See our <a href="/it-consulting" className="text-rose hover:underline">IT consulting services</a>.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact">
               Get in Touch
             </Button>
           </div>
@@ -257,7 +257,7 @@ export default function ITServices() {
 
       {/* Final CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Optimize Your IT Infrastructure?
@@ -266,7 +266,7 @@ export default function ITServices() {
               Let&apos;s discuss how I can help streamline your IT operations and support your
               business goals.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact">
               Contact Me Today
             </Button>
           </div>

@@ -132,7 +132,7 @@ export default function ITConsulting() {
             <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-body">
               Smart IT Consulting — Clear Strategies for Secure, Scalable Growth. Need hands-on support? Explore our <a href="/it-services" className="text-rose hover:underline">managed IT services</a>.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact">
               Schedule a Consultation
             </Button>
           </div>
@@ -209,7 +209,7 @@ export default function ITConsulting() {
 
       {/* Final CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Make Smarter IT Decisions?
@@ -218,7 +218,7 @@ export default function ITConsulting() {
               Let&apos;s discuss how strategic IT consulting can help your business grow securely
               and efficiently.
             </p>
-            <Button href="/contact" size="lg">
+            <Button href="/contact">
               Get Started Today
             </Button>
           </div>

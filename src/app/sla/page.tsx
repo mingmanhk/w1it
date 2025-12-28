@@ -160,10 +160,10 @@ export default function SLAPage() {
               Contact our team to discuss custom SLA requirements for your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+              <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
                 Contact Sales
               </Button>
-              <Button href="/services/managed-services" size="lg" className="bg-brand-navy text-white hover:bg-opacity-90">
+              <Button href="/services/managed-services" className="bg-brand-navy text-white hover:bg-opacity-90">
                 View Managed Services
               </Button>
             </div>

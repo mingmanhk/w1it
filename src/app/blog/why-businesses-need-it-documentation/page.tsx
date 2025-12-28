@@ -29,7 +29,7 @@ export default function WhyITDocumentation() {
     <div>
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-white to-blush">
-        <Container size="sm">
+        <Container>
           <div className="animate-fade-in">
             <span className="text-xs font-body font-medium text-rose bg-white px-3 py-1 rounded-full">
               Best Practices
@@ -53,7 +53,7 @@ export default function WhyITDocumentation() {
 
       {/* Article Content */}
       <section className="py-16 md:py-24">
-        <Container size="sm">
+        <Container>
           <div className="prose prose-lg max-w-none">
             <Card className="mb-12">
               <p className="text-gray-medium font-body leading-relaxed">
@@ -427,7 +427,7 @@ export default function WhyITDocumentation() {
               <p className="text-gray-medium font-body mb-6">
                 We provide professional technical writing services to help Seattle businesses create clear, comprehensive IT documentation.
               </p>
-              <Button href="/services/technical-writing" size="lg">
+              <Button href="/services/technical-writing">
                 Learn About Documentation Services
               </Button>
             </div>

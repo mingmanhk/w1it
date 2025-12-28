@@ -101,7 +101,7 @@ export default function RemoteSupport() {
                   🌐 Bilingual (English/Chinese)
                 </span>
               </div>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Get Help Now
               </Button>
             </div>
@@ -236,7 +236,7 @@ export default function RemoteSupport() {
 
         {/* Security */}
         <section className="py-20 md:py-32 bg-gray-bg">
-          <Container size="sm">
+          <Container>
             <Card>
               <h2 className="font-heading font-bold text-2xl text-charcoal mb-4 text-center">
                 🔒 Secure & Private
@@ -270,7 +270,7 @@ export default function RemoteSupport() {
 
         {/* CTA */}
         <section className="py-20 md:py-32">
-          <Container size="sm">
+          <Container>
             <div className="text-center">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Need IT Help Right Now?
@@ -278,7 +278,7 @@ export default function RemoteSupport() {
               <p className="text-lg text-gray-medium mb-8 font-body">
                 Contact us for fast, secure remote support. Available for Seattle locals and worldwide clients.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Request Remote Support
               </Button>
             </div>

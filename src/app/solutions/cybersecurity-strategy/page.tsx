@@ -94,7 +94,7 @@ export default function CybersecurityStrategyPage() {
               Comprehensive security strategy services including risk management, penetration testing, compliance, and security governance.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Get Security Assessment
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -122,7 +122,7 @@ export default function CybersecurityStrategyPage() {
                 Our strategic approach combines risk assessment, technical controls, policy development, and ongoing
                 governance to create a security posture that evolves with your business and the threat landscape.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Schedule Security Consultation
               </Button>
             </div>
@@ -243,7 +243,7 @@ export default function CybersecurityStrategyPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
 
-        <Container size="lg">
+        <Container>
           <div className="text-center relative z-10">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Strengthen Your Security Posture?
@@ -255,15 +255,15 @@ export default function CybersecurityStrategyPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                size="xl"
+               
                 className="bg-white text-violet-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Schedule Security Assessment
               </Button>
               <Button
                 href="/services/security"
-                variant="outline"
-                size="xl"
+                variant="secondary"
+               
                 className="border-white text-white hover:bg-white/10"
               >
                 View Security Services

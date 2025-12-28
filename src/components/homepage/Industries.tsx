@@ -46,7 +46,7 @@ export default function Industries() {
         </div>
 
         <div className="text-center mt-12">
-          <Button href="/industries" variant="outline" size="lg">
+          <Button href="/industries" variant="secondary">
             Explore All Industries
           </Button>
         </div>

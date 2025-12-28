@@ -93,4 +93,4 @@ next-env.d.ts
 
 # Misc
 .turbo
-*.pem
+*.pemfirebase-tools/

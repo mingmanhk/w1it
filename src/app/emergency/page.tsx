@@ -25,7 +25,7 @@ export default function EmergencyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="tel:8324727991"
-                size="lg"
+               
                 className="bg-white text-red-700 hover:bg-gray-100 text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
@@ -33,7 +33,7 @@ export default function EmergencyPage() {
               </Button>
               <Button
                 href="mailto:contact@w1it.com"
-                size="lg"
+               
                 className="bg-red-900 text-white hover:bg-red-950 text-lg"
               >
                 Email Emergency Team
@@ -123,7 +123,7 @@ export default function EmergencyPage() {
             <p className="text-xl mb-8 opacity-90">
               Proactive monitoring and maintenance to prevent critical issues before they happen
             </p>
-            <Button href="/services/managed-services" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/services/managed-services" className="bg-white text-brand-blue hover:bg-gray-100">
               Learn About Managed Services
             </Button>
           </div>

@@ -73,7 +73,7 @@ export default function WebsiteOptimizationPage() {
             <p className="text-xl md:text-2xl text-white/90 mb-8">
               Transform your website into a high-performance, conversion-focused powerhouse
             </p>
-            <Button href="/contact" size="lg" className="bg-white text-brand-navy hover:bg-gray-100">
+            <Button href="/contact" className="bg-white text-brand-navy hover:bg-gray-100">
               Get Free Audit
             </Button>
           </div>
@@ -144,7 +144,7 @@ export default function WebsiteOptimizationPage() {
             <p className="text-xl mb-8 opacity-90">
               Get a free performance audit and discover optimization opportunities
             </p>
-            <Button href="/contact" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
               Request Free Audit
             </Button>
           </div>

@@ -153,10 +153,10 @@ export default function SalesPage() {
               Get a free consultation and custom quote for your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+              <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
                 Request Quote
               </Button>
-              <Button href="/services" size="lg" className="bg-brand-navy text-white hover:bg-opacity-90">
+              <Button href="/services" className="bg-brand-navy text-white hover:bg-opacity-90">
                 View Services
               </Button>
             </div>

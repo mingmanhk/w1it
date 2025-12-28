@@ -36,10 +36,10 @@ export default function DocumentationPage() {
               We&apos;re preparing comprehensive technical documentation for our services and APIs. Stay tuned!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/services" size="lg">
+              <Button href="/services">
                 View Services
               </Button>
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button href="/contact" variant="secondary">
                 Contact Us
               </Button>
             </div>

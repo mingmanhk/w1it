@@ -36,10 +36,10 @@ export default function ChecklistsPage() {
               We&apos;re preparing comprehensive IT checklists for security, maintenance, onboarding, and disaster recovery. Check back soon for free downloads!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/blog" size="lg">
+              <Button href="/blog">
                 Read IT Best Practices
               </Button>
-              <Button href="/contact" size="lg" variant="secondary">
+              <Button href="/contact" variant="secondary">
                 Request Custom Checklist
               </Button>
             </div>

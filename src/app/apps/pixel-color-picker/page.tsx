@@ -51,7 +51,7 @@ export default function PixelColorPicker() {
                 instant access to any color on your screen with pixel-perfect precision.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#" size="lg">
+                <Button href="#">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
@@ -109,7 +109,7 @@ export default function PixelColorPicker() {
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Ready to Transform Your Workflow?
@@ -118,7 +118,7 @@ export default function PixelColorPicker() {
               Download Pixel Color Picker today and experience the fastest way to work with colors
               on macOS.
             </p>
-            <Button href="#" size="lg">
+            <Button href="#">
               Download for macOS ↗
             </Button>
           </div>

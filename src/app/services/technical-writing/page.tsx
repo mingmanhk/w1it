@@ -110,7 +110,7 @@ export default function TechnicalWriting() {
                 Professional technical documentation in English and Chinese. Bridge the communication gap for
                 international teams and global businesses.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Request a Quote
               </Button>
             </div>
@@ -245,7 +245,7 @@ export default function TechnicalWriting() {
 
         {/* CTA Section */}
         <section className="py-20 md:py-32">
-          <Container size="sm">
+          <Container>
             <div className="text-center">
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
                 Ready to Improve Your Global Communication?
@@ -253,7 +253,7 @@ export default function TechnicalWriting() {
               <p className="text-lg text-gray-medium mb-8 font-body">
                 Let&apos;s discuss how bilingual technical documentation can support your business goals.
               </p>
-              <Button href="/contact" size="lg">
+              <Button href="/contact">
                 Get Started
               </Button>
             </div>

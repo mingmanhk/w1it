@@ -29,7 +29,7 @@ export default function BilingualDocumentation() {
     <div>
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-white to-blush">
-        <Container size="sm">
+        <Container>
           <div className="animate-fade-in">
             <span className="text-xs font-body font-medium text-rose bg-white px-3 py-1 rounded-full">
               Documentation
@@ -53,7 +53,7 @@ export default function BilingualDocumentation() {
 
       {/* Article Content */}
       <section className="py-16 md:py-24">
-        <Container size="sm">
+        <Container>
           <div className="prose prose-lg max-w-none">
             {/* Introduction */}
             <Card className="mb-12">
@@ -281,10 +281,10 @@ export default function BilingualDocumentation() {
                 We provide professional bilingual technical writing services for Seattle businesses and international teams.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/services/technical-writing" size="lg">
+                <Button href="/services/technical-writing">
                   Learn About Our Services
                 </Button>
-                <Button href="/contact" variant="secondary" size="lg">
+                <Button href="/contact" variant="secondary">
                   Schedule Consultation
                 </Button>
               </div>

@@ -53,7 +53,7 @@ export default function ContactSyncMate() {
                 easier.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6">
-                <Button href="#" size="lg">
+                <Button href="#">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
@@ -126,7 +126,7 @@ export default function ContactSyncMate() {
 
       {/* CTA Section */}
       <section className="py-20 md:py-32 bg-blush">
-        <Container size="sm">
+        <Container>
           <div className="text-center">
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
               Keep Your Contacts in Perfect Sync
@@ -135,7 +135,7 @@ export default function ContactSyncMate() {
               Download Contact SyncMate and never worry about managing contacts across platforms
               again.
             </p>
-            <Button href="#" size="lg">
+            <Button href="#">
               Download for macOS ↗
             </Button>
           </div>

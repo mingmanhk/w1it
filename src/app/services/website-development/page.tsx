@@ -65,7 +65,7 @@ export default function WebsiteDevelopmentPage() {
             <p className="text-xl md:text-2xl text-white/90 mb-8">
               Build fast, beautiful, and conversion-focused websites that drive business growth
             </p>
-            <Button href="/contact" size="lg" className="bg-white text-brand-navy hover:bg-gray-100">
+            <Button href="/contact" className="bg-white text-brand-navy hover:bg-gray-100">
               Start Your Project
             </Button>
           </div>
@@ -136,7 +136,7 @@ export default function WebsiteDevelopmentPage() {
             <p className="text-xl mb-8 opacity-90">
               Let&apos;s discuss your project and create a website that exceeds expectations
             </p>
-            <Button href="/contact" size="lg" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
               Schedule a Consultation
             </Button>
           </div>

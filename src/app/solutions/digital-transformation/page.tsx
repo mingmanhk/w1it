@@ -79,7 +79,7 @@ export default function DigitalTransformationPage() {
               Transform your business with strategic technology adoption, process optimization, and innovative digital solutions.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-              <Button href="/contact" size="xl" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button href="/contact" className="group bg-gradient-primary hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
                 Start Transformation
                 <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" />
               </Button>
@@ -205,7 +205,7 @@ export default function DigitalTransformationPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-dot-pattern opacity-10" />
         <div className="absolute -top-32 -right-32 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
 
-        <Container size="lg">
+        <Container>
           <div className="text-center relative z-10">
             <h2 className="font-heading font-bold text-4xl md:text-5xl mb-8">
               Ready to Begin Your Transformation?
@@ -217,15 +217,15 @@ export default function DigitalTransformationPage() {
               <Button
                 href="/contact"
                 variant="secondary"
-                size="xl"
+               
                 className="bg-white text-primary-600 hover:bg-neutral-100 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
               >
                 Start Your Journey
               </Button>
               <Button
                 href="/services"
-                variant="outline"
-                size="xl"
+                variant="secondary"
+               
                 className="border-white text-white hover:bg-white/10"
               >
                 View All Services
