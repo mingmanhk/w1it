@@ -12,30 +12,6 @@ const testimonials = [
     logo: '🌏',
     results: ['Modern website with SEO optimization', 'Integrated analytics and live chat support', 'Multilingual support for global customers'],
   },
-  {
-    quote: 'W1IT provided the clarity and expertise we needed to stabilize our systems and scale confidently. Their structured approach transformed our chaotic IT environment into a reliable foundation for growth.',
-    author: 'Michael Chen',
-    role: 'CTO',
-    company: 'HealthTech Innovations',
-    logo: '🏥',
-    results: ['Reduced system downtime by 85%', 'Improved team productivity by 40%'],
-  },
-  {
-    quote: 'Their structured approach to automation significantly reduced our maintenance overhead. What used to take days now takes hours, allowing our team to focus on strategic initiatives instead of firefighting.',
-    author: 'Sarah Johnson',
-    role: 'Operations Director',
-    company: 'Precision Manufacturing Co.',
-    logo: '🏭',
-    results: ['Cut maintenance time by 70%', 'Increased operational efficiency by 35%'],
-  },
-  {
-    quote: 'The website optimization work resulted in a 40% increase in page load speed and better user engagement. Our conversion rates improved significantly, directly impacting our bottom line.',
-    author: 'Jennifer Lee',
-    role: 'Marketing Director',
-    company: 'Urban E-commerce Collective',
-    logo: '🛒',
-    results: ['40% faster page loads', '28% increase in conversions'],
-  },
 ];
 
 export default function Testimonials() {
@@ -54,7 +30,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
