@@ -1,10 +1,11 @@
 import { Server, Shield, Cloud } from 'lucide-react';
 
 /**
- * W1IT Services Component
- * Matches: Section / Services
- * Components: ServiceCard / ManagedIT, Automation, Migration
- * Specs: Cards 360px width, Padding 32px, Radius 12px, Icon 48x48, Heading 20 bold, Description 16 regular
+ * W1IT Services Component - STRICT Design System Compliance
+ * NO gradients, NO rounded-card, NO shadows
+ * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
+ * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
+ * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
  */
 
 const coreServices = [
@@ -27,12 +28,12 @@ const coreServices = [
 
 export default function CoreServices() {
   return (
-    <section className="py-16 md:py-24 bg-[#F5F5F5]">
-      <div className="max-w-content mx-auto px-6">
+    <section className="py-24 md:py-32 bg-[#F5F5F5]">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-16">
-          <h2 className="text-heading-lg text-[#050816] mb-4">Our Services</h2>
-          <p className="text-body text-[#4A4A4A]">Complete IT solutions designed for small businesses</p>
+          <h2 className="text-[32px] font-bold text-[#050816] mb-4">Our Services</h2>
+          <p className="text-[16px] text-[#4A4A4A]">Complete IT solutions designed for small businesses</p>
         </div>
 
         {/* Service Cards Grid */}
@@ -42,7 +43,7 @@ export default function CoreServices() {
             return (
               <div
                 key={index}
-                className="bg-white p-8 rounded-card w-full md:w-service-card"
+                className="bg-white p-8"
               >
                 {/* Icon 48x48 */}
                 <div className="mb-6">
@@ -50,12 +51,12 @@ export default function CoreServices() {
                 </div>
 
                 {/* Heading 20 bold */}
-                <h3 className="text-heading-md text-[#050816] mb-4">
+                <h3 className="text-[20px] font-bold text-[#050816] mb-4">
                   {service.title}
                 </h3>
 
                 {/* Description 16 regular */}
-                <p className="text-body text-[#4A4A4A]">
+                <p className="text-[16px] text-[#4A4A4A]">
                   {service.description}
                 </p>
               </div>

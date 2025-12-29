@@ -1,10 +1,11 @@
 import { Star } from 'lucide-react';
 
 /**
- * W1IT Industry Expertise Component (Testimonials)
- * Matches: Section / IndustryExpertise
- * Components: TestimonialCard / Default
- * Specs: Width 800px, Padding 32px, Radius 12px, Stars 20px, Quote 18 italic, Attribution 16 medium, Shadow / Card
+ * W1IT Industry Expertise Component - STRICT Design System Compliance
+ * NO gradients, NO rounded-card, NO shadows
+ * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
+ * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
+ * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
  */
 
 const testimonials = [
@@ -18,12 +19,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-content mx-auto px-6">
+    <section className="py-24 md:py-32 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-16">
-          <h2 className="text-heading-lg text-[#050816] mb-4">Industry Expertise</h2>
-          <p className="text-body text-[#4A4A4A]">Trusted by businesses across diverse industries</p>
+          <h2 className="text-[32px] font-bold text-[#050816] mb-4">Industry Expertise</h2>
+          <p className="text-[16px] text-[#4A4A4A]">Trusted by businesses across diverse industries</p>
         </div>
 
         {/* TestimonialCard / Default */}
@@ -31,7 +32,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="w-full md:w-testimonial bg-white p-8 rounded-card shadow-card"
+              className="w-full md:max-w-[800px] bg-white p-8 border-2 border-[#D9D9D9]"
             >
               {/* Stars - 20px */}
               <div className="flex gap-1 mb-6">

@@ -1,10 +1,11 @@
 import { Circle, Shield, TrendingUp } from 'lucide-react';
 
 /**
- * W1IT Foundation Component (Three Pillars)
- * Matches: Section / Foundation
- * Components: PillarCard / Clarity, Resilience, Optimization
- * Specs: Three columns, Icon 64x64, Heading 20 bold, Description 16 regular, Spacing 16px then 12px
+ * W1IT Foundation Component - STRICT Design System Compliance
+ * NO gradients, NO rounded-card, NO shadows
+ * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
+ * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
+ * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
  */
 
 const valuePillars = [
@@ -30,12 +31,12 @@ const valuePillars = [
 
 export default function ValuePillars() {
   return (
-    <section className="py-16 md:py-24 bg-[#050816]">
-      <div className="max-w-content mx-auto px-6">
+    <section className="py-24 md:py-32 bg-[#050816]">
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-16">
-          <h2 className="text-heading-lg text-white mb-4">Our Foundation</h2>
-          <p className="text-body text-[#D9D9D9]">The three pillars that guide everything we do</p>
+          <h2 className="text-[32px] font-bold text-white mb-4">Our Foundation</h2>
+          <p className="text-[16px] text-[#D9D9D9]">The three pillars that guide everything we do</p>
         </div>
 
         {/* Three Columns - PillarCards */}
@@ -53,13 +54,13 @@ export default function ValuePillars() {
                   />
                 </div>
 
-                {/* Heading 20 bold - Spacing 16px */}
-                <h3 className="text-heading-md text-white mb-3">
+                {/* Heading 20 bold */}
+                <h3 className="text-[20px] font-bold text-white mb-3">
                   {pillar.title}
                 </h3>
 
-                {/* Description 16 regular - Spacing 12px */}
-                <p className="text-body text-[#D9D9D9] max-w-sm mx-auto">
+                {/* Description 16 regular */}
+                <p className="text-[16px] text-[#D9D9D9] max-w-sm mx-auto">
                   {pillar.description}
                 </p>
               </div>
