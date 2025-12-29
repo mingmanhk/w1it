@@ -4,13 +4,13 @@ import { useFormState, useFormStatus } from 'react-dom';
 import { saveContact } from '@/app/contact/actions';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '@/components/Button';
+import Image from 'next/image';
 
 /**
- * W1IT Contact Page - STRICT Design System Compliance
- * NO gradients, NO rounded-card, NO shadows
- * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
- * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16, Caption/14
- * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
+ * W1IT Contact Page - LIGHT-MODE Design System
+ * Colors: navy #050816, green #00A878, blue #3A81F7, surface-0 #FFFFFF, surface-1 #F8FAFC, surface-2 #F1F5F9
+ * Typography: Display/42 Bold, Heading/28 Bold, Heading/20 Semibold, Body/17 Regular, Body/16 Regular
+ * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
 function SubmitButton() {
@@ -27,15 +27,25 @@ export default function ContactPage() {
   const [state, formAction] = useFormState(saveContact, null)
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#FFFFFF]">
       {/* Section / Hero */}
-      <section className="bg-[#050816] py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="Contact W1IT Solutions"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
+        </div>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[48px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-white mb-6">
               Ready to Get Started?
             </h1>
-            <p className="text-[18px] text-[#D9D9D9]">
+            <p className="text-[17px] text-white/90">
               Contact us today and let&apos;s build your success story together.
             </p>
           </div>
@@ -43,16 +53,16 @@ export default function ContactPage() {
       </section>
 
       {/* Section / ContactForm */}
-      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+      <section className="py-16 bg-[#F8FAFC]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="text-[32px] font-bold text-[#050816] mb-6">Get in Touch</h2>
+              <h2 className="text-[28px] font-bold text-[#050816] mb-6">Get in Touch</h2>
               <p className="text-[16px] text-[#4A4A4A] leading-relaxed mb-8">
                 Have questions about our services? Need help with a tech challenge? Fill out the form below and we&apos;ll respond within 24 hours.
               </p>
-              <form action={formAction} className="bg-white p-8">
+              <form action={formAction} className="bg-[#FFFFFF] p-8">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-[16px] font-bold text-[#050816] mb-2">Name</label>
@@ -106,9 +116,9 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-[32px] font-bold text-[#050816] mb-6">Contact Information</h2>
+              <h2 className="text-[28px] font-bold text-[#050816] mb-6">Contact Information</h2>
               <div className="space-y-6 mb-8">
-                <div className="flex items-start gap-4 bg-white p-6">
+                <div className="flex items-start gap-4 bg-[#FFFFFF] p-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
@@ -117,7 +127,7 @@ export default function ContactPage() {
                     <p className="text-[16px] text-[#4A4A4A]">(832) 472-7991</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 bg-white p-6">
+                <div className="flex items-start gap-4 bg-[#FFFFFF] p-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
@@ -126,7 +136,7 @@ export default function ContactPage() {
                     <p className="text-[16px] text-[#4A4A4A]">contact@w1it.com</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 bg-white p-6">
+                <div className="flex items-start gap-4 bg-[#FFFFFF] p-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
@@ -136,8 +146,8 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white p-8 border-2 border-[#3A81F7]">
-                <h3 className="text-[20px] font-bold text-[#050816] mb-3">Your Local IT Partner</h3>
+              <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
+                <h3 className="text-[20px] font-semibold text-[#050816] mb-3">Your Local IT Partner</h3>
                 <p className="text-[16px] text-[#4A4A4A] mb-4">
                   Based in Bellevue, WA, we proudly serve small businesses throughout the Seattle Metro Area with on-site support and remote assistance nationwide.
                 </p>

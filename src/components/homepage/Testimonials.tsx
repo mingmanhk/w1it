@@ -1,11 +1,10 @@
 import { Star } from 'lucide-react';
 
 /**
- * W1IT Industry Expertise Component - STRICT Design System Compliance
- * NO gradients, NO rounded-card, NO shadows
- * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
- * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
- * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
+ * W1IT Industry Expertise Component - LIGHT-MODE Design System
+ * Colors: navy #050816, green #00A878, blue #3A81F7, surface-0 #FFFFFF, surface-1 #F8FAFC, surface-2 #F1F5F9
+ * Typography: Display/42 Bold, Heading/28 Bold, Heading/20 Semibold, Body/17 Regular, Body/16 Regular
+ * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
 const testimonials = [
@@ -19,11 +18,11 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 md:py-32 bg-white">
+    <section className="py-16 bg-[#F8FAFC]">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
-        <div className="text-center mb-16">
-          <h2 className="text-[32px] font-bold text-[#050816] mb-4">Industry Expertise</h2>
+        <div className="text-center mb-12">
+          <h2 className="text-[28px] font-bold text-[#050816] mb-4">Industry Expertise</h2>
           <p className="text-[16px] text-[#4A4A4A]">Trusted by businesses across diverse industries</p>
         </div>
 
@@ -32,7 +31,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="w-full md:max-w-[800px] bg-white p-8 border-2 border-[#D9D9D9]"
+              className="w-full md:max-w-[800px] bg-[#FFFFFF] p-8 border-2 border-[#D9D9D9]"
             >
               {/* Stars - 20px */}
               <div className="flex gap-1 mb-6">
@@ -41,8 +40,8 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              {/* Quote - 18 italic */}
-              <blockquote className="text-[18px] italic leading-[150%] text-[#050816] mb-6">
+              {/* Quote - 17 italic */}
+              <blockquote className="text-[17px] italic leading-[150%] text-[#050816] mb-6">
                 &quot;{testimonial.quote}&quot;
               </blockquote>
 
