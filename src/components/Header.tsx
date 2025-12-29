@@ -7,6 +7,13 @@ import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
+/**
+ * W1IT Header Component - LIGHT-MODE Design System
+ * Typography: Body/16 for nav links, Body/17 for CTA
+ * Colors: Navy #050816, Blue #3A81F7, Gray #4A4A4A, Surface #FFFFFF
+ * Spacing: 8px gaps, 16px padding, 32px container padding
+ */
+
 const navLinks = [
     {
         href: '/services',
@@ -46,7 +53,6 @@ const navLinks = [
     { href: '/case-studies', label: 'Case Studies' },
     { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -66,10 +72,15 @@ export default function Header() {
     }, [isOpen]);
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white z-[9998]">
-            <div className="max-w-content mx-auto">
-                <div className="flex items-center justify-between h-header px-6">
-                    <Link href="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
+        <header className="fixed top-0 left-0 w-full bg-[#FFFFFF] border-b border-[#E5E7EB] z-[9998]">
+            <div className="max-w-[1200px] mx-auto">
+                <div className="flex items-center justify-between h-[80px] px-6">
+                    {/* Logo */}
+                    <Link
+                        href="/"
+                        className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+                        onClick={() => setIsOpen(false)}
+                    >
                         <Image
                             src="/images/optimized/Logo.webp"
                             alt="W1IT Solutions Logo"
@@ -78,18 +89,35 @@ export default function Header() {
                             priority
                         />
                         <div className="flex items-baseline gap-3">
-                            <span className="inline-flex items-baseline gap-0.5" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif', fontSize: '20px', fontWeight: 700, letterSpacing: '0.02em' }}>
+                            <span
+                                className="inline-flex items-baseline gap-0.5"
+                                style={{
+                                    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif',
+                                    fontSize: '20px',
+                                    fontWeight: 700,
+                                    letterSpacing: '0.02em'
+                                }}
+                            >
                                 <span className="text-[#050816]">W</span>
                                 <span className="text-[#00A878]">1</span>
                                 <span className="text-[#050816]">IT</span>
                             </span>
-                            <span className="text-[#050816] uppercase" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif', fontSize: '20px', fontWeight: 700, letterSpacing: '0.12em' }}>
+                            <span
+                                className="text-[#050816] uppercase hidden sm:inline-flex"
+                                style={{
+                                    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif',
+                                    fontSize: '20px',
+                                    fontWeight: 700,
+                                    letterSpacing: '0.12em'
+                                }}
+                            >
                                 Solutions
                             </span>
                         </div>
                     </Link>
 
-                    <nav className="hidden md:flex items-center gap-8">
+                    {/* Desktop Navigation */}
+                    <nav className="hidden lg:flex items-center gap-8">
                         {navLinks.map((link) => (
                             <div
                                 key={link.href}
@@ -101,18 +129,26 @@ export default function Header() {
                                     <>
                                         <Link
                                             href={link.href}
-                                            className={`text-body flex items-center gap-1 ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
+                                            className={`text-[16px] font-medium flex items-center gap-1 ${
+                                                pathname.startsWith(link.href)
+                                                    ? 'text-[#3A81F7]'
+                                                    : 'text-[#4A4A4A]'
+                                            } hover:text-[#3A81F7] transition-colors`}
                                         >
                                             {link.label}
-                                            <ChevronDown className="w-4 h-4" />
+                                            <ChevronDown className="w-4 h-4" strokeWidth={2} />
                                         </Link>
                                         {activeDropdown === link.href && (
-                                            <div className="absolute top-full left-0 mt-2 bg-white border-2 border-[#D9D9D9] min-w-[240px] z-50">
+                                            <div className="absolute top-full left-0 mt-2 bg-[#FFFFFF] border border-[#D9D9D9] min-w-[240px] z-50 shadow-sm">
                                                 {link.dropdown.map((item) => (
                                                     <Link
                                                         key={item.href}
                                                         href={item.href}
-                                                        className={`block px-6 py-3 text-[16px] ${pathname === item.href ? 'text-[#3A81F7] bg-[#F8FAFC]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] hover:bg-[#F8FAFC] transition-colors`}
+                                                        className={`block px-6 py-3 text-[16px] border-b border-[#E5E7EB] last:border-b-0 ${
+                                                            pathname === item.href
+                                                                ? 'text-[#3A81F7] bg-[#F8FAFC] font-medium'
+                                                                : 'text-[#4A4A4A]'
+                                                        } hover:text-[#3A81F7] hover:bg-[#F8FAFC] transition-colors`}
                                                     >
                                                         {item.label}
                                                     </Link>
@@ -123,7 +159,11 @@ export default function Header() {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-body ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
+                                        className={`text-[16px] font-medium ${
+                                            pathname.startsWith(link.href)
+                                                ? 'text-[#3A81F7]'
+                                                : 'text-[#4A4A4A]'
+                                        } hover:text-[#3A81F7] transition-colors`}
                                     >
                                         {link.label}
                                     </Link>
@@ -132,43 +172,62 @@ export default function Header() {
                         ))}
                     </nav>
 
-                    <div className="hidden md:block">
-                        <Button href="/contact" variant="secondary">Get in Touch</Button>
+                    {/* Desktop CTA Button */}
+                    <div className="hidden lg:block">
+                        <Button href="/contact" variant="primary">
+                            Get Started
+                        </Button>
                     </div>
 
-                    <div className="md:hidden">
+                    {/* Mobile Menu Toggle */}
+                    <div className="lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="p-2"
+                            className="p-2 hover:bg-[#F8FAFC] transition-colors"
                             aria-label={isOpen ? 'Close menu' : 'Open menu'}
                         >
-                            {isOpen ? <X className="w-6 h-6 text-[#050816]" /> : <Menu className="w-6 h-6 text-[#050816]" />}
+                            {isOpen ? (
+                                <X className="w-6 h-6 text-[#050816]" strokeWidth={2} />
+                            ) : (
+                                <Menu className="w-6 h-6 text-[#050816]" strokeWidth={2} />
+                            )}
                         </button>
                     </div>
                 </div>
             </div>
 
+            {/* Mobile Navigation */}
             <div
-                className={`md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-[9999] overflow-y-auto transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+                className={`lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB] transition-all duration-300 ease-in-out ${
+                    isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                }`}
             >
                 <div className="px-6 py-8 flex flex-col min-h-full">
-                    <nav className="flex flex-col gap-4">
+                    <nav className="flex flex-col gap-2">
                         {navLinks.map((link) => (
-                            <div key={link.href}>
+                            <div key={link.href} className="border-b border-[#E5E7EB] last:border-b-0">
                                 <Link
                                     href={link.href}
-                                    className={`text-heading-md text-center block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
-                                    onClick={() => setIsOpen(false)}
+                                    className={`text-[20px] font-semibold block py-4 ${
+                                        pathname === link.href
+                                            ? 'text-[#3A81F7]'
+                                            : 'text-[#050816]'
+                                    }`}
+                                    onClick={() => !link.dropdown && setIsOpen(false)}
                                 >
                                     {link.label}
                                 </Link>
                                 {link.dropdown && (
-                                    <div className="flex flex-col gap-2 mt-2 pl-4">
+                                    <div className="flex flex-col gap-0 pb-4">
                                         {link.dropdown.map((item) => (
                                             <Link
                                                 key={item.href}
                                                 href={item.href}
-                                                className={`text-[16px] text-center block py-2 ${pathname === item.href ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'}`}
+                                                className={`text-[16px] block py-3 pl-4 ${
+                                                    pathname === item.href
+                                                        ? 'text-[#3A81F7] font-medium'
+                                                        : 'text-[#4A4A4A]'
+                                                }`}
                                                 onClick={() => setIsOpen(false)}
                                             >
                                                 {item.label}
@@ -179,9 +238,16 @@ export default function Header() {
                             </div>
                         ))}
                     </nav>
-                    <div className="mt-auto pt-8 pb-8">
-                        <Button href="/contact" variant="secondary" className="w-full" onClick={() => setIsOpen(false)}>
-                            Get in Touch
+
+                    {/* Mobile CTA Button */}
+                    <div className="mt-auto pt-8">
+                        <Button
+                            href="/contact"
+                            variant="primary"
+                            className="w-full"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            Get Started
                         </Button>
                     </div>
                 </div>
