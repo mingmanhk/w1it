@@ -2,12 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import Button from '@/components/Button';
 
+interface App {
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
 // Component for a single app card
-const AppCard = ({ app }) => (
+const AppCard = ({ app }: { app: App }) => (
   <div className="bg-surface-2 p-8">
     <div className="mb-6">
       <Image src={app.icon} alt={`${app.title} icon`} width={48} height={48} />
@@ -22,7 +28,7 @@ const AppCard = ({ app }) => (
 
 // Main Apps Page Component
 export default function AppsPage() {
-  const apps = [
+  const apps: App[] = [
     {
       icon: '/images/optimized/Logo-AppIcon-Original.webp',
       title: 'Contact SyncMate',

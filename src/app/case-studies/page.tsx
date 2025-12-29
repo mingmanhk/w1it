@@ -2,11 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/Button';
 
-const CaseStudyCard = ({ study }) => (
+interface CaseStudy {
+  icon: string;
+  title: string;
+  description: string;
+  results: string[];
+  link: string | null;
+}
+
+const CaseStudyCard = ({ study }: { study: CaseStudy }) => (
   <div className="bg-surface-2 p-8">
     <div className="mb-6">
       <Image src={study.icon} alt={`${study.title} icon`} width={48} height={48} />
@@ -30,7 +37,7 @@ const CaseStudyCard = ({ study }) => (
 );
 
 export default function CaseStudiesPage() {
-  const caseStudies = [
+  const caseStudies: CaseStudy[] = [
     {
       icon: '/images/optimized/Logo-AppIcon-Original.webp',
       title: 'Healthcare Provider Cloud Migration',
