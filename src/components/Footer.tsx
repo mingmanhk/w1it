@@ -15,14 +15,26 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'Managed IT', href: '/services/managed-services' },
-      { name: 'IT Automation', href: '/services/it-automation' },
-      { name: 'Cloud Migration', href: '/services/cloud-solutions' },
+      { name: 'Managed Services', href: '/services/managed-services' },
+      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+      { name: 'Network Setup', href: '/services/network-setup' },
+      { name: 'Remote Support', href: '/services/remote-support' },
+      { name: 'Security', href: '/services/security' },
+      { name: 'Technical Writing', href: '/services/technical-writing' },
+    ],
+    solutions: [
+      { name: 'Data Analytics', href: '/solutions/data-analytics' },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+      { name: 'Cybersecurity Strategy', href: '/solutions/cybersecurity-strategy' },
+      { name: 'Custom IT Solutions', href: '/solutions/custom-it-solutions' },
     ],
     company: [
       { name: 'About', href: '/about' },
+      { name: 'Industries', href: '/industries' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Apps', href: '/apps' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Testimonials', href: '/testimonials' },
     ],
     legal: [
       { name: 'Privacy', href: '/privacy' },
@@ -34,10 +46,10 @@ export default function Footer() {
   return (
     <footer className="bg-[#050816] text-white py-16">
       <div className="max-w-content mx-auto px-6">
-        {/* Four Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-footer-column mb-12">
+        {/* Five Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Logo / W1IT */}
-          <div className="w-footer-column">
+          <div>
             <Link href="/" className="flex items-center gap-2 mb-6">
               <Image
                 src="/images/optimized/Logo.webp"
@@ -48,17 +60,31 @@ export default function Footer() {
               <span className="text-heading-md text-white">W1IT</span>
             </Link>
             <p className="text-caption text-[#D9D9D9]">
-              Modern IT consultancy for Seattle businesses.
+              Professional IT solutions for Seattle businesses and beyond.
             </p>
           </div>
 
           {/* FooterColumn / Services */}
-          <div className="w-footer-column">
+          <div>
             <h3 className="text-body font-bold text-white mb-4">Services</h3>
-            <ul className="flex flex-col gap-footer-link">
+            <ul className="flex flex-col gap-3">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white">
+                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* FooterColumn / Solutions */}
+          <div>
+            <h3 className="text-body font-bold text-white mb-4">Solutions</h3>
+            <ul className="flex flex-col gap-3">
+              {footerLinks.solutions.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -67,12 +93,12 @@ export default function Footer() {
           </div>
 
           {/* FooterColumn / Company */}
-          <div className="w-footer-column">
+          <div>
             <h3 className="text-body font-bold text-white mb-4">Company</h3>
-            <ul className="flex flex-col gap-footer-link">
+            <ul className="flex flex-col gap-3">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white">
+                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -81,12 +107,12 @@ export default function Footer() {
           </div>
 
           {/* FooterColumn / Legal + Social */}
-          <div className="w-footer-column">
+          <div>
             <h3 className="text-body font-bold text-white mb-4">Legal</h3>
-            <ul className="flex flex-col gap-footer-link mb-6">
+            <ul className="flex flex-col gap-3 mb-6">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white">
+                  <Link href={link.href} className="text-caption text-[#D9D9D9] hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -99,7 +125,8 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/mingmanhk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D9D9D9] hover:text-white"
+                className="text-[#D9D9D9] hover:text-white transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
@@ -107,7 +134,8 @@ export default function Footer() {
                 href="https://github.com/mingmanhk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D9D9D9] hover:text-white"
+                className="text-[#D9D9D9] hover:text-white transition-colors"
+                aria-label="GitHub"
               >
                 <Github size={20} />
               </a>

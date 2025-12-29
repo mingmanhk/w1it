@@ -5,18 +5,53 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const navLinks = [
-    { href: '/services', label: 'Services' },
-    { href: '/solutions', label: 'Solutions' },
+    {
+        href: '/services',
+        label: 'Services',
+        dropdown: [
+            { href: '/services/managed-services', label: 'Managed IT Services' },
+            { href: '/services/cloud-solutions', label: 'Cloud Solutions' },
+            { href: '/services/network-setup', label: 'Network Setup' },
+            { href: '/services/remote-support', label: 'Remote Support' },
+            { href: '/services/security', label: 'Security' },
+            { href: '/services/technical-writing', label: 'Technical Writing' },
+            { href: '/it-services', label: 'IT Services' },
+            { href: '/it-consulting', label: 'IT Consulting' },
+        ]
+    },
+    {
+        href: '/solutions',
+        label: 'Solutions',
+        dropdown: [
+            { href: '/solutions/data-analytics', label: 'Data Analytics' },
+            { href: '/solutions/digital-transformation', label: 'Digital Transformation' },
+            { href: '/solutions/cybersecurity-strategy', label: 'Cybersecurity Strategy' },
+            { href: '/solutions/custom-it-solutions', label: 'Custom IT Solutions' },
+        ]
+    },
+    {
+        href: '/apps',
+        label: 'Apps',
+        dropdown: [
+            { href: '/apps/contact-syncmate', label: 'Contact SyncMate' },
+            { href: '/apps/deepticker', label: 'DeepTicker' },
+            { href: '/apps/pixel-color-picker', label: 'Pixel Color Picker' },
+            { href: '/apps/screengrabber', label: 'ScreenGrabber' },
+        ]
+    },
     { href: '/industries', label: 'Industries' },
+    { href: '/case-studies', label: 'Case Studies' },
+    { href: '/blog', label: 'Blog' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -56,13 +91,44 @@ export default function Header() {
 
                     <nav className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <Link
+                            <div
                                 key={link.href}
-                                href={link.href}
-                                className={`text-body ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
+                                className="relative"
+                                onMouseEnter={() => link.dropdown && setActiveDropdown(link.href)}
+                                onMouseLeave={() => setActiveDropdown(null)}
                             >
-                                {link.label}
-                            </Link>
+                                {link.dropdown ? (
+                                    <>
+                                        <Link
+                                            href={link.href}
+                                            className={`text-body flex items-center gap-1 ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
+                                        >
+                                            {link.label}
+                                            <ChevronDown className="w-4 h-4" />
+                                        </Link>
+                                        {activeDropdown === link.href && (
+                                            <div className="absolute top-full left-0 mt-2 bg-white border-2 border-[#D9D9D9] min-w-[240px] z-50">
+                                                {link.dropdown.map((item) => (
+                                                    <Link
+                                                        key={item.href}
+                                                        href={item.href}
+                                                        className={`block px-6 py-3 text-[16px] ${pathname === item.href ? 'text-[#3A81F7] bg-[#F8FAFC]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] hover:bg-[#F8FAFC] transition-colors`}
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </>
+                                ) : (
+                                    <Link
+                                        href={link.href}
+                                        className={`text-body ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )}
+                            </div>
                         ))}
                     </nav>
 
@@ -88,14 +154,29 @@ export default function Header() {
                 <div className="px-6 py-8 flex flex-col min-h-full">
                     <nav className="flex flex-col gap-4">
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={`text-heading-md text-center block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {link.label}
-                            </Link>
+                            <div key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    className={`text-heading-md text-center block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {link.label}
+                                </Link>
+                                {link.dropdown && (
+                                    <div className="flex flex-col gap-2 mt-2 pl-4">
+                                        {link.dropdown.map((item) => (
+                                            <Link
+                                                key={item.href}
+                                                href={item.href}
+                                                className={`text-[16px] text-center block py-2 ${pathname === item.href ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'}`}
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
                         ))}
                     </nav>
                     <div className="mt-auto pt-8 pb-8">
