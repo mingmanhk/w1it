@@ -194,61 +194,59 @@ export default function Header() {
             </div>
 
             {/* Mobile Navigation */}
-            <div
-                className={`lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB] transition-all duration-300 ease-in-out ${
-                    isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-                }`}
-            >
-                <div className="px-6 py-8 flex flex-col min-h-full">
-                    <nav className="flex flex-col gap-2">
-                        {navLinks.map((link) => (
-                            <div key={link.href} className="border-b border-[#E5E7EB] last:border-b-0">
-                                <Link
-                                    href={link.href}
-                                    className={`text-[20px] font-semibold block py-4 ${
-                                        pathname === link.href
-                                            ? 'text-[#3A81F7]'
-                                            : 'text-[#050816]'
-                                    }`}
-                                    onClick={() => !link.dropdown && setIsOpen(false)}
-                                >
-                                    {link.label}
-                                </Link>
-                                {link.dropdown && (
-                                    <div className="flex flex-col gap-0 pb-4">
-                                        {link.dropdown.map((item) => (
-                                            <Link
-                                                key={item.href}
-                                                href={item.href}
-                                                className={`text-[16px] block py-3 pl-4 ${
-                                                    pathname === item.href
-                                                        ? 'text-[#3A81F7] font-medium'
-                                                        : 'text-[#4A4A4A]'
-                                                }`}
-                                                onClick={() => setIsOpen(false)}
-                                            >
-                                                {item.label}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                    </nav>
+            {isOpen && (
+                <div className="lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB]">
+                    <div className="px-6 py-8 flex flex-col min-h-full">
+                        <nav className="flex flex-col gap-2">
+                            {navLinks.map((link) => (
+                                <div key={link.href} className="border-b border-[#E5E7EB] last:border-b-0">
+                                    <Link
+                                        href={link.href}
+                                        className={`text-[20px] font-semibold block py-4 ${
+                                            pathname === link.href
+                                                ? 'text-[#3A81F7]'
+                                                : 'text-[#050816]'
+                                        }`}
+                                        onClick={() => !link.dropdown && setIsOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                    {link.dropdown && (
+                                        <div className="flex flex-col gap-0 pb-4">
+                                            {link.dropdown.map((item) => (
+                                                <Link
+                                                    key={item.href}
+                                                    href={item.href}
+                                                    className={`text-[16px] block py-3 pl-4 ${
+                                                        pathname === item.href
+                                                            ? 'text-[#3A81F7] font-medium'
+                                                            : 'text-[#4A4A4A]'
+                                                    }`}
+                                                    onClick={() => setIsOpen(false)}
+                                                >
+                                                    {item.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </nav>
 
-                    {/* Mobile CTA Button */}
-                    <div className="mt-auto pt-8">
-                        <Button
-                            href="/contact"
-                            variant="primary"
-                            className="w-full"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Get Started
-                        </Button>
+                        {/* Mobile CTA Button */}
+                        <div className="mt-auto pt-8">
+                            <Button
+                                href="/contact"
+                                variant="primary"
+                                className="w-full"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Get Started
+                            </Button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            )}
         </header>
     );
 }
