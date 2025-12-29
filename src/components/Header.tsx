@@ -5,34 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
-    {
-        href: '/services',
-        label: 'Services',
-        children: [
-            { href: '/services/managed-services', label: 'Managed Services' },
-            { href: '/services/cloud-solutions', label: 'Cloud Solutions' },
-            { href: '/services/security', label: 'Cybersecurity' },
-            { href: '/services/network-setup', label: 'Network Setup' },
-            { href: '/services/remote-support', label: 'Remote Support' },
-            { href: '/services/technical-writing', label: 'Technical Writing' },
-            { href: '/services/website-development', label: 'Website Development' },
-            { href: '/services/it-automation', label: 'IT Automation' },
-        ],
-    },
-    {
-        href: '/solutions',
-        label: 'Solutions',
-        children: [
-            { href: '/solutions/custom-it-solutions', label: 'Custom IT Solutions' },
-            { href: '/solutions/cybersecurity-strategy', label: 'Cybersecurity Strategy' },
-            { href: '/solutions/data-analytics', label: 'Data Analytics' },
-            { href: '/solutions/digital-transformation', label: 'Digital Transformation' },
-            { href: '/solutions/website-optimization', label: 'Website Optimization' },
-        ],
-    },
+    { href: '/services', label: 'Services' },
+    { href: '/solutions', label: 'Solutions' },
     { href: '/industries', label: 'Industries' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
@@ -40,8 +17,6 @@ const navLinks = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-    const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -79,37 +54,15 @@ export default function Header() {
                         </div>
                     </Link>
 
-                    <nav className="hidden md:flex items-center gap-header">
+                    <nav className="hidden md:flex items-center gap-8">
                         {navLinks.map((link) => (
-                            <div
+                            <Link
                                 key={link.href}
-                                className="relative py-2"
-                                onMouseEnter={() => link.children && setOpenDropdown(link.href)}
-                                onMouseLeave={() => link.children && setOpenDropdown(null)}
+                                href={link.href}
+                                className={`text-body ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7] transition-colors`}
                             >
-                                <Link
-                                    href={link.href}
-                                    className={`text-body flex items-center gap-1 ${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'} hover:text-[#3A81F7]`}
-                                >
-                                    {link.label}
-                                    {link.children && <ChevronDown size={16} />}
-                                </Link>
-                                {link.children && openDropdown === link.href && (
-                                    <div className="absolute top-full left-0 pt-2 w-48 z-50">
-                                        <div className="bg-white rounded-md shadow-lg py-2 border border-gray-200">
-                                            {link.children.map((child) => (
-                                                <Link
-                                                    key={child.href}
-                                                    href={child.href}
-                                                    className="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-gray-100 hover:text-[#3A81F7]"
-                                                >
-                                                    {child.label}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
+                                {link.label}
+                            </Link>
                         ))}
                     </nav>
 
@@ -135,41 +88,14 @@ export default function Header() {
                 <div className="px-6 py-8 flex flex-col min-h-full">
                     <nav className="flex flex-col gap-4">
                         {navLinks.map((link) => (
-                            <div key={link.href}>
-                                {link.children ? (
-                                    <div>
-                                        <div 
-                                            className="flex justify-between items-center text-heading-md text-center py-3 cursor-pointer"
-                                            onClick={() => setOpenMobileSubmenu(openMobileSubmenu === link.href ? null : link.href)}
-                                        >
-                                            <span className={`${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#050816]'}`}>{link.label}</span>
-                                            <ChevronDown size={20} className={`transition-transform ${openMobileSubmenu === link.href ? 'rotate-180' : ''}`} />
-                                        </div>
-                                        {openMobileSubmenu === link.href && (
-                                            <div className="pl-4 pt-2 pb-2 flex flex-col gap-2">
-                                                {link.children.map((child) => (
-                                                    <Link
-                                                        key={child.href}
-                                                        href={child.href}
-                                                        className={`text-lg text-left py-2 ${pathname === child.href ? 'text-[#3A81F7]' : 'text-[#4A4A4A]'}`}
-                                                        onClick={() => setIsOpen(false)}
-                                                    >
-                                                        {child.label}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <Link
-                                        href={link.href}
-                                        className={`text-heading-md text-center block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
-                                        onClick={() => setIsOpen(false)}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                )}
-                            </div>
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={`text-heading-md text-center block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {link.label}
+                            </Link>
                         ))}
                     </nav>
                     <div className="mt-auto pt-8 pb-8">
