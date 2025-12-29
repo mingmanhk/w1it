@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 import { generateSEO, generateServiceSchema } from '@/lib/seo';
-import Container from '@/components/Container';
 import Button from '@/components/Button';
-import Card from '@/components/Card';
+import Image from 'next/image';
+import {
+  Monitor,
+  Settings,
+  Zap,
+  Lock,
+  Mail,
+  Lightbulb,
+} from 'lucide-react';
+
+/**
+ * W1IT Remote Support Page - LIGHT-MODE Design System
+ * Colors: navy #050816, green #00A878, blue #3A81F7, surface-0 #FFFFFF, surface-1 #F8FAFC, surface-2 #F1F5F9
+ * Typography: Display/42 Bold, Heading/28 Bold, Heading/20 Semibold, Body/17 Regular, Body/16 Regular
+ * Spacing: 8, 16, 24, 32, 48, 64, 96px only
+ */
 
 export const metadata: Metadata = generateSEO({
   title: 'Remote IT Support & Troubleshooting - Seattle & Worldwide',
@@ -40,35 +54,80 @@ export default function RemoteSupport() {
 
   const services = [
     {
-      icon: '🖥️',
+      icon: Monitor,
       title: 'Remote Desktop Support',
       description: 'Secure remote access to diagnose and fix issues on your computer in real-time.',
     },
     {
-      icon: '🔧',
+      icon: Settings,
       title: 'Software Troubleshooting',
       description: 'Fix application errors, installation problems, and software configuration issues.',
     },
     {
-      icon: '⚡',
+      icon: Zap,
       title: 'System Performance',
       description: 'Optimize slow computers, clean up systems, and improve overall performance.',
     },
     {
-      icon: '🔒',
+      icon: Lock,
       title: 'Security Updates',
       description: 'Ensure systems are updated, secure, and protected from vulnerabilities.',
     },
     {
-      icon: '📧',
+      icon: Mail,
       title: 'Email & Cloud Setup',
       description: 'Configure email clients, cloud storage, and productivity tools.',
     },
     {
-      icon: '💡',
+      icon: Lightbulb,
       title: 'User Training',
       description: 'Remote training sessions on software, tools, and best practices.',
     },
+  ];
+
+  const howItWorks = [
+    {
+      step: '1',
+      title: 'Contact Us',
+      description: 'Email or call to describe your issue',
+    },
+    {
+      step: '2',
+      title: 'Schedule Session',
+      description: 'We\'ll find a time that works for you',
+    },
+    {
+      step: '3',
+      title: 'Secure Connection',
+      description: 'We connect remotely via secure tools',
+    },
+    {
+      step: '4',
+      title: 'Problem Solved',
+      description: 'We fix the issue while you watch',
+    },
+  ];
+
+  const benefits = [
+    {
+      title: 'Faster Response',
+      description: 'No need to wait for an on-site visit. We can start helping you within hours, not days.',
+    },
+    {
+      title: 'More Affordable',
+      description: 'No travel time or trip charges. You only pay for the time spent solving your problem.',
+    },
+    {
+      title: 'Available Anywhere',
+      description: 'Whether you\'re in Seattle or working remotely from anywhere in the world.',
+    },
+  ];
+
+  const securityFeatures = [
+    'Encrypted remote connections',
+    'You approve every action',
+    'Session recordings available on request',
+    'No persistent access to your systems',
   ];
 
   return (
@@ -79,210 +138,166 @@ export default function RemoteSupport() {
           __html: JSON.stringify(serviceSchema),
         }}
       />
-      <div>
+      <div className="bg-[#FFFFFF]">
         {/* Hero Section */}
-        <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
-          <Container>
-            <div className="text-center animate-fade-in">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/optimized/hero-graphic.webp"
+              alt="Remote IT Support"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
+          </div>
+          <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+            <div className="max-w-[800px] mx-auto text-center">
+              <h1 className="text-[42px] font-bold text-white mb-6">
                 Remote IT Support
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-body">
-                Fast, secure remote troubleshooting from Seattle. Available worldwide.
+              <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
+                Fast, secure remote troubleshooting from Seattle. Available worldwide. Same-day support available with secure connections and bilingual service (English/Chinese).
               </p>
-              <div className="flex flex-wrap justify-center gap-3 mb-8">
-                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
-                  ⚡ Same-Day Support Available
-                </span>
-                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
-                  🔒 Secure Connections
-                </span>
-                <span className="text-sm font-body bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
-                  🌐 Bilingual (English/Chinese)
-                </span>
-              </div>
-              <Button href="/contact">
+              <Button href="/contact" variant="primary">
                 Get Help Now
               </Button>
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* How It Works */}
-        <section className="py-20 md:py-32">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+        {/* How It Works Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
               How Remote Support Works
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <Card className="text-center">
-                <div className="text-4xl mb-4">1️⃣</div>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Contact Us
-                </h3>
-                <p className="text-gray-medium font-body text-sm">
-                  Email or call to describe your issue
-                </p>
-              </Card>
-
-              <Card className="text-center">
-                <div className="text-4xl mb-4">2️⃣</div>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Schedule Session
-                </h3>
-                <p className="text-gray-medium font-body text-sm">
-                  We&apos;ll find a time that works for you
-                </p>
-              </Card>
-
-              <Card className="text-center">
-                <div className="text-4xl mb-4">3️⃣</div>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Secure Connection
-                </h3>
-                <p className="text-gray-medium font-body text-sm">
-                  We connect remotely via secure tools
-                </p>
-              </Card>
-
-              <Card className="text-center">
-                <div className="text-4xl mb-4">4️⃣</div>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Problem Solved
-                </h3>
-                <p className="text-gray-medium font-body text-sm">
-                  We fix the issue while you watch
-                </p>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {howItWorks.map((item, index) => (
+                <div key={index} className="bg-[#F8FAFC] p-8 text-center">
+                  <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6 mx-auto">
+                    <span className="text-[24px] font-bold text-white">{item.step}</span>
+                  </div>
+                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* Services */}
-        <section className="py-20 md:py-32 bg-gray-bg">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-12">
+        {/* Services Section */}
+        <section className="py-16 bg-[#F8FAFC]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="text-[28px] font-bold text-[#050816] mb-12">
               Remote Support Services
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card
-                  key={index}
-                  hoverable
-                  className="animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-medium font-body">{service.description}</p>
-                </Card>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="bg-[#FFFFFF]">
+                    <div className="bg-[#F1F5F9] p-8">
+                      <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
+                        <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                        {service.title}
+                      </h3>
+                      <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* Benefits */}
-        <section className="py-20 md:py-32">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+        {/* Benefits Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
               Why Choose Remote Support
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card hoverable>
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  ⚡ Faster Response
-                </h3>
-                <p className="text-gray-medium font-body">
-                  No need to wait for an on-site visit. We can start helping you within hours, not days.
-                </p>
-              </Card>
-
-              <Card hoverable>
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  💰 More Affordable
-                </h3>
-                <p className="text-gray-medium font-body">
-                  No travel time or trip charges. You only pay for the time spent solving your problem.
-                </p>
-              </Card>
-
-              <Card hoverable>
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  🌍 Available Anywhere
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Whether you&apos;re in Seattle or working remotely from anywhere in the world.
-                </p>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-[#F8FAFC] p-8">
+                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
             </div>
 
-            <Card className="bg-blush">
-              <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
+            <div className="bg-[#F1F5F9] p-8">
+              <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
                 Perfect for Remote Workers
               </h3>
-              <p className="text-gray-medium font-body">
+              <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
                 Working from home in the Seattle area or anywhere else? We specialize in supporting remote workers
                 with home office setup, VPN configuration, video conferencing troubleshooting, and productivity tool
                 support. Get back to work faster with expert remote assistance.
               </p>
-            </Card>
-          </Container>
+            </div>
+          </div>
         </section>
 
-        {/* Security */}
-        <section className="py-20 md:py-32 bg-gray-bg">
-          <Container>
-            <Card>
-              <h2 className="font-heading font-bold text-2xl text-charcoal mb-4 text-center">
-                🔒 Secure & Private
+        {/* Security Section */}
+        <section className="py-16 bg-[#F8FAFC]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
+              <h2 className="text-[28px] font-bold text-[#050816] mb-4 text-center">
+                Secure & Private
               </h2>
-              <p className="text-gray-medium font-body mb-4">
+              <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
                 Your security is our priority. We use industry-standard remote support tools with end-to-end
                 encryption. You control the session and can see everything we do. We never access your system
                 without your explicit permission.
               </p>
-              <ul className="space-y-2 text-gray-medium font-body">
-                <li className="flex items-start gap-2">
-                  <span className="text-rose">✓</span>
-                  <span>Encrypted remote connections</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-rose">✓</span>
-                  <span>You approve every action</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-rose">✓</span>
-                  <span>Session recordings available on request</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-rose">✓</span>
-                  <span>No persistent access to your systems</span>
-                </li>
-              </ul>
-            </Card>
-          </Container>
+              <div className="space-y-4">
+                {securityFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="text-[16px] text-[#4A4A4A]">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-20 md:py-32">
-          <Container>
+        {/* CTA Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
                 Need IT Help Right Now?
               </h2>
-              <p className="text-lg text-gray-medium mb-8 font-body">
+              <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
                 Contact us for fast, secure remote support. Available for Seattle locals and worldwide clients.
               </p>
-              <Button href="/contact">
-                Request Remote Support
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button href="/contact" variant="primary">
+                  Request Remote Support
+                </Button>
+                <Button href="/services" variant="secondary">
+                  View All Services
+                </Button>
+              </div>
             </div>
-          </Container>
+          </div>
         </section>
       </div>
     </>

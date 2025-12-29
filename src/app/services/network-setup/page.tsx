@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
 import { generateSEO, generateServiceSchema, generateLocalBusinessSchema } from '@/lib/seo';
-import Container from '@/components/Container';
 import Button from '@/components/Button';
-import Card from '@/components/Card';
+import Image from 'next/image';
+import {
+  Wifi,
+  Settings,
+  Lock,
+  Building2,
+  Search,
+  Activity,
+} from 'lucide-react';
+
+/**
+ * W1IT Network Setup Page - LIGHT-MODE Design System
+ * Colors: navy #050816, green #00A878, blue #3A81F7, surface-0 #FFFFFF, surface-1 #F8FAFC, surface-2 #F1F5F9
+ * Typography: Display/42 Bold, Heading/28 Bold, Heading/20 Semibold, Body/17 Regular, Body/16 Regular
+ * Spacing: 8, 16, 24, 32, 48, 64, 96px only
+ */
 
 export const metadata: Metadata = generateSEO({
   title: 'Network Setup & Configuration Services Seattle',
@@ -55,34 +69,68 @@ export default function NetworkSetup() {
 
   const services = [
     {
-      icon: '📡',
+      icon: Wifi,
       title: 'WiFi Installation & Optimization',
       description: 'Professional WiFi setup with optimal coverage, security configuration, and performance tuning for homes and offices.',
     },
     {
-      icon: '🔧',
+      icon: Settings,
       title: 'Router & Switch Configuration',
       description: 'Expert configuration of routers, switches, and network equipment including Meraki, Ubiquiti, and enterprise solutions.',
     },
     {
-      icon: '🔒',
+      icon: Lock,
       title: 'VPN Setup & Security',
       description: 'Secure VPN configuration for remote work, site-to-site connections, and secure access to company resources.',
     },
     {
-      icon: '🏢',
+      icon: Building2,
       title: 'Business Network Design',
       description: 'Complete network infrastructure design for small businesses and growing companies in the Seattle area.',
     },
     {
-      icon: '🔍',
+      icon: Search,
       title: 'Network Troubleshooting',
       description: 'Fast diagnosis and resolution of network issues, slow connections, and connectivity problems.',
     },
     {
-      icon: '⚡',
+      icon: Activity,
       title: 'Network Monitoring Setup',
       description: 'PRTG, Meraki dashboard, and SNMP monitoring configuration to keep your network healthy.',
+    },
+  ];
+
+  const commonIssues = [
+    {
+      title: 'Slow WiFi or Dead Zones',
+      description: 'We\'ll analyze your space and install access points or mesh systems for perfect coverage throughout your home or office.',
+    },
+    {
+      title: 'Unreliable Internet Connection',
+      description: 'Diagnose and fix connectivity issues, optimize router settings, and ensure stable internet for remote work.',
+    },
+    {
+      title: 'Network Security Concerns',
+      description: 'Implement proper security: WPA3 encryption, firewall configuration, guest networks, and VPN access.',
+    },
+    {
+      title: 'Can\'t Connect Devices',
+      description: 'Troubleshoot device connectivity, configure network settings, and ensure all your devices work seamlessly.',
+    },
+  ];
+
+  const whyChoose = [
+    {
+      title: 'Fast Response',
+      description: 'Same-day or next-day service available. We understand network issues can\'t wait.',
+    },
+    {
+      title: 'Expert Configuration',
+      description: 'Years of experience with Meraki, PRTG, enterprise routers, and home networking solutions.',
+    },
+    {
+      title: 'Clear Communication',
+      description: 'No tech jargon. We explain what we\'re doing and why, in plain English (or Chinese).',
     },
   ];
 
@@ -100,182 +148,162 @@ export default function NetworkSetup() {
           __html: JSON.stringify(serviceSchema),
         }}
       />
-      <div>
+      <div className="bg-[#FFFFFF]">
         {/* Hero Section */}
-        <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
-          <Container>
-            <div className="text-center animate-fade-in">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/optimized/hero-graphic.webp"
+              alt="Network Setup & Configuration"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
+          </div>
+          <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+            <div className="max-w-[800px] mx-auto text-center">
+              <h1 className="text-[42px] font-bold text-white mb-6">
                 Network Setup & Configuration
               </h1>
-              <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-4 font-body">
-                Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie.
+              <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
+                Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available.
               </p>
-              <p className="text-md text-gray-medium max-w-2xl mx-auto mb-8 font-body">
-                Fast, reliable network setup for homes and businesses. Same-day service available.
-              </p>
-              <Button href="/contact">
+              <Button href="/contact" variant="primary">
                 Schedule Network Setup
               </Button>
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 md:py-32">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
-              Network Services We Offer
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card
-                  key={index}
-                  hoverable
-                  className="animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-medium font-body">{service.description}</p>
-                </Card>
-              ))}
+        {/* Services Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+                Network Services We Offer
+              </h2>
+              <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+                Complete network solutions tailored to your business needs.
+              </p>
             </div>
-          </Container>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="bg-[#FFFFFF]">
+                    <div className="bg-[#F1F5F9] p-8">
+                      <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
+                        <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                        {service.title}
+                      </h3>
+                      <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </section>
 
-        {/* Common Issues We Solve */}
-        <section className="py-20 md:py-32 bg-gray-bg">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-12">
+        {/* Common Issues Section */}
+        <section className="py-16 bg-[#F8FAFC]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="text-[28px] font-bold text-[#050816] mb-12">
               Common Network Problems We Solve
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Slow WiFi or Dead Zones
-                </h3>
-                <p className="text-gray-medium font-body">
-                  We&apos;ll analyze your space and install access points or mesh systems for perfect coverage throughout your home or office.
-                </p>
-              </Card>
-
-              <Card>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Unreliable Internet Connection
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Diagnose and fix connectivity issues, optimize router settings, and ensure stable internet for remote work.
-                </p>
-              </Card>
-
-              <Card>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Network Security Concerns
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Implement proper security: WPA3 encryption, firewall configuration, guest networks, and VPN access.
-                </p>
-              </Card>
-
-              <Card>
-                <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
-                  Can&apos;t Connect Devices
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Troubleshoot device connectivity, configure network settings, and ensure all your devices work seamlessly.
-                </p>
-              </Card>
+              {commonIssues.map((issue, index) => (
+                <div key={index} className="bg-[#FFFFFF] p-8">
+                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    {issue.title}
+                  </h3>
+                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                    {issue.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* Service Area */}
-        <section className="py-20 md:py-32">
-          <Container>
-            <div className="bg-blush p-8 md:p-12 rounded-2xl">
+        {/* Service Area Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <div className="bg-[#F1F5F9] p-12">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="font-heading font-bold text-3xl text-charcoal mb-4">
+                <h2 className="text-[28px] font-bold text-[#050816] mb-4">
                   Serving Greater Seattle
                 </h2>
-                <p className="text-gray-medium font-body text-lg mb-6">
+                <p className="text-[17px] text-[#4A4A4A] mb-6">
                   On-site network installation and support in:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                   {['Seattle', 'Bellevue', 'Issaquah', 'Snoqualmie', 'Redmond', 'Tacoma'].map((city) => (
-                    <div key={city} className="bg-white px-4 py-3 rounded-lg shadow-sm">
-                      <span className="font-body font-semibold text-charcoal">{city}</span>
+                    <div key={city} className="bg-[#FFFFFF] px-4 py-3 border-2 border-[#D9D9D9]">
+                      <span className="text-[16px] font-semibold text-[#050816]">{city}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-sm text-gray-medium font-body mb-6">
+                <p className="text-[16px] text-[#4A4A4A] mb-6">
                   Remote support also available for network configuration and troubleshooting
                 </p>
-                <Button href="/contact">
+                <Button href="/contact" variant="primary">
                   Get Network Help Today
                 </Button>
               </div>
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-20 md:py-32 bg-gray-bg">
-          <Container>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal text-center mb-16">
+        {/* Why Choose Us Section */}
+        <section className="py-16 bg-[#F8FAFC]">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
               Why Choose w1IT for Network Setup
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card hoverable className="text-center">
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  Fast Response
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Same-day or next-day service available. We understand network issues can&apos;t wait.
-                </p>
-              </Card>
-
-              <Card hoverable className="text-center">
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  Expert Configuration
-                </h3>
-                <p className="text-gray-medium font-body">
-                  Years of experience with Meraki, PRTG, enterprise routers, and home networking solutions.
-                </p>
-              </Card>
-
-              <Card hoverable className="text-center">
-                <h3 className="font-heading font-semibold text-xl text-charcoal mb-3">
-                  Clear Communication
-                </h3>
-                <p className="text-gray-medium font-body">
-                  No tech jargon. We explain what we&apos;re doing and why, in plain English (or Chinese).
-                </p>
-              </Card>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {whyChoose.map((item, index) => (
+                <div key={index} className="bg-[#FFFFFF] p-8 text-center">
+                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
-          </Container>
+          </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-20 md:py-32">
-          <Container>
+        {/* CTA Section */}
+        <section className="py-16 bg-[#FFFFFF]">
+          <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center">
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-charcoal mb-4">
+              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
                 Ready for Better Network Performance?
               </h2>
-              <p className="text-lg text-gray-medium mb-8 font-body">
+              <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
                 Contact us today for fast, professional network setup in the Seattle area.
               </p>
-              <Button href="/contact">
-                Schedule Service
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button href="/contact" variant="primary">
+                  Schedule Service
+                </Button>
+                <Button href="/services" variant="secondary">
+                  View All Services
+                </Button>
+              </div>
             </div>
-          </Container>
+          </div>
         </section>
       </div>
     </>
