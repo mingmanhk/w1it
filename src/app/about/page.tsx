@@ -4,11 +4,10 @@ import { Target, Shield, Users, Rocket } from 'lucide-react';
 import Image from 'next/image';
 
 /**
- * W1IT About Page - STRICT Design System Compliance
- * NO gradients, NO shadows, NO rounded-card (not approved)
- * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
- * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
- * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
+ * W1IT About Page - LIGHT-MODE Design System
+ * Colors: navy #050816, green #00A878, blue #3A81F7, surface-0 #FFFFFF, surface-1 #F8FAFC, surface-2 #F1F5F9
+ * Typography: Display/42 Bold, Heading/28 Bold, Heading/20 Semibold, Body/17 Regular, Body/16 Regular
+ * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
 export default function AboutPage() {
@@ -45,15 +44,25 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#FFFFFF]">
       {/* Section / Hero */}
-      <section className="bg-[#050816] py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="About W1IT Solutions"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
+        </div>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[48px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-white mb-6">
               About W1IT Solutions
             </h1>
-            <p className="text-[18px] text-[#D9D9D9]">
+            <p className="text-[17px] text-white/90">
               Enterprise-grade IT support designed for small businesses—without the complexity or overhead.
             </p>
           </div>
@@ -61,25 +70,25 @@ export default function AboutPage() {
       </section>
 
       {/* Section / Foundation (Values) */}
-      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+      <section className="py-16 bg-[#F8FAFC]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[32px] font-bold text-[#050816] mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
               Our Values
             </h2>
-            <p className="text-[18px] text-[#4A4A4A] max-w-[700px] mx-auto">
+            <p className="text-[17px] text-[#4A4A4A] max-w-[700px] mx-auto">
               The principles that guide everything we do.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="text-center p-8 bg-white">
+                <div key={index} className="text-center p-8 bg-[#FFFFFF]">
                   <div className="flex justify-center items-center w-16 h-16 bg-[#3A81F7] mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-bold text-[#050816] mb-4">{value.name}</h3>
+                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">{value.name}</h3>
                   <p className="text-[16px] text-[#4A4A4A]">{value.description}</p>
                 </div>
               );
@@ -89,12 +98,12 @@ export default function AboutPage() {
       </section>
 
       {/* Section / Story */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-16 bg-[#FFFFFF]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[32px] font-bold text-[#050816] mb-6">Our Mission</h2>
-              <p className="text-[18px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <h2 className="text-[28px] font-bold text-[#050816] mb-6">Our Mission</h2>
+              <p className="text-[17px] text-[#4A4A4A] mb-6 leading-relaxed">
                 W1IT provides small businesses with enterprise-grade IT support—minus the complexity. We solve everyday tech problems and prevent future disruptions so you can focus on growth, not troubleshooting.
               </p>
               <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
@@ -114,15 +123,15 @@ export default function AboutPage() {
       </section>
 
       {/* Section / WhyChooseUs */}
-      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+      <section className="py-16 bg-[#F8FAFC]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-[32px] font-bold text-[#050816] mb-4">Why Choose W1IT?</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-[28px] font-bold text-[#050816] mb-4">Why Choose W1IT?</h2>
           </div>
           <div className="max-w-[900px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whyChooseUs.map((reason, index) => (
-                <div key={index} className="flex items-start gap-3 p-6 bg-white">
+                <div key={index} className="flex items-start gap-3 p-6 bg-[#FFFFFF]">
                   <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
                   <p className="text-[16px] text-[#4A4A4A]">{reason}</p>
                 </div>
@@ -133,13 +142,13 @@ export default function AboutPage() {
       </section>
 
       {/* Section / CTA */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-16 bg-[#FFFFFF]">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[32px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-[18px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+            <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
               Let's build a stronger IT foundation for your business.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
