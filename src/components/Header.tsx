@@ -197,12 +197,13 @@ export default function Header() {
             {isOpen && (
                 <div className="lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB]">
                     <div className="px-6 py-8 flex flex-col min-h-full">
-                        <nav className="flex flex-col gap-2">
+                        <nav className="flex flex-col gap-6">
+                            {/* Main Navigation Links with Dropdowns */}
                             {navLinks.map((link) => (
-                                <div key={link.href} className="border-b border-[#E5E7EB] last:border-b-0">
+                                <div key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className={`text-[20px] font-semibold block py-4 ${
+                                        className={`text-[20px] font-semibold block pb-3 ${
                                             pathname === link.href
                                                 ? 'text-[#3A81F7]'
                                                 : 'text-[#050816]'
@@ -212,12 +213,12 @@ export default function Header() {
                                         {link.label}
                                     </Link>
                                     {link.dropdown && (
-                                        <div className="flex flex-col gap-0 pb-4">
+                                        <div className="flex flex-col gap-2 mt-2 pl-4 pt-2 border-l-2 border-[#E5E7EB]">
                                             {link.dropdown.map((item) => (
                                                 <Link
                                                     key={item.href}
                                                     href={item.href}
-                                                    className={`text-[16px] block py-3 pl-4 ${
+                                                    className={`text-[16px] block py-2 ${
                                                         pathname === item.href
                                                             ? 'text-[#3A81F7] font-medium'
                                                             : 'text-[#4A4A4A]'
@@ -231,10 +232,11 @@ export default function Header() {
                                     )}
                                 </div>
                             ))}
-                        </nav>
 
-                        {/* Mobile CTA Button */}
-                        <div className="mt-auto pt-8">
+                            {/* Divider */}
+                            <div className="border-t border-[#E5E7EB] my-4"></div>
+
+                            {/* CTA Button */}
                             <Button
                                 href="/contact"
                                 variant="primary"
@@ -243,7 +245,7 @@ export default function Header() {
                             >
                                 Get Started
                             </Button>
-                        </div>
+                        </nav>
                     </div>
                 </div>
             )}
