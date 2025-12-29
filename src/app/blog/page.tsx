@@ -38,7 +38,7 @@ export default function Blog() {
     {
       title: 'Case Study: Transforming a Fragmented IT Environment Into a Documented, Standardized, and Automated Infrastructure',
       slug: 'fragmented-it-standardized-infrastructure',
-      excerpt: 'Learn how we transformed a mid‑sized corporate client's fragmented IT environment into a documented, standardized, and automated infrastructure with centralized management.',
+      excerpt: 'Learn how we transformed a mid‑sized corporate client\'s fragmented IT environment into a documented, standardized, and automated infrastructure with centralized management.',
       category: 'Case Study',
       readTime: '7 min read',
       date: 'Dec 26, 2024',
@@ -104,9 +104,9 @@ export default function Blog() {
   const latestArticles = articles.slice(1);
 
   return (
-    <div>
+    <div className="bg-surface-0">
       {/* Hero Section */}
-      <section className="relative bg-[#050816] py-24">
+      <section className="relative bg-navy text-white py-24">
         <div className="absolute inset-0">
           <Image
             src="/images/optimized/hero-graphic.webp"
@@ -115,70 +115,72 @@ export default function Blog() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/80 to-[#050816]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 to-navy/90" />
         </div>
-        <div className="relative mx-auto max-w-[1200px] px-8 text-center">
-          <h1 className="font-bold text-[42px] leading-tight text-[#FFFFFF] mb-6">
+        <div className="relative max-w-[1200px] mx-auto px-8 text-center">
+          <h1 className="text-4xl font-bold leading-tight text-white mb-6">
             IT Insights & Resources
           </h1>
-          <p className="text-[17px] text-[#F8FAFC] max-w-[800px] mx-auto">
+          <p className="text-lg text-gray-100 max-w-3xl mx-auto">
             Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age.
           </p>
         </div>
       </section>
 
       {/* Featured Article */}
-      <section className="py-16 bg-[#FFFFFF]">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <h2 className="font-bold text-[28px] text-[#050816] mb-8">
+      <section className="py-16 bg-surface-0">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <h2 className="text-3xl font-bold text-navy mb-8">
             Featured Article
           </h2>
 
-          <article className="bg-[#F8FAFC] p-8">
-            <div className="relative mb-6 h-64 w-full">
-              <Image
-                src={featuredArticle.image}
-                alt={featuredArticle.title}
-                fill
-                className="object-cover rounded-md"
-              />
-            </div>
-            <div className="mb-6">
-              <span className="inline-block text-[16px] font-semibold text-[#00A878] mb-4">
-                {featuredArticle.category}
-              </span>
-              <h3 className="font-semibold text-[20px] text-[#050816] mb-4">
-                {featuredArticle.title}
-              </h3>
-              <p className="text-[17px] text-[#4A4A4A] mb-6 leading-relaxed">
-                {featuredArticle.excerpt}
-              </p>
-              <div className="flex items-center gap-6 text-[16px] text-[#4A4A4A] mb-8">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <span>{featuredArticle.date}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{featuredArticle.readTime}</span>
-                </div>
+          <article className="bg-surface-1 p-8 rounded-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="relative h-64 w-full lg:h-full min-h-[300px]">
+                <Image
+                  src={featuredArticle.image}
+                  alt={featuredArticle.title}
+                  fill
+                  className="object-cover rounded-md"
+                />
               </div>
-              <Button
-                href={`/blog/${featuredArticle.slug}`}
-                className="inline-flex items-center gap-2"
-              >
-                Read Full Article
-                <ArrowRight className="w-5 h-5" />
-              </Button>
+              <div>
+                <span className="inline-block text-base font-semibold text-green mb-4">
+                  {featuredArticle.category}
+                </span>
+                <h3 className="text-2xl font-semibold text-navy mb-4">
+                  {featuredArticle.title}
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  {featuredArticle.excerpt}
+                </p>
+                <div className="flex items-center gap-6 text-base text-gray-600 mb-8">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>{featuredArticle.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="w-4 h-4" />
+                    <span>{featuredArticle.readTime}</span>
+                  </div>
+                </div>
+                <Button
+                  href={`/blog/${featuredArticle.slug}`}
+                  className="inline-flex items-center gap-2"
+                >
+                  Read Full Article
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </div>
             </div>
           </article>
         </div>
       </section>
 
       {/* Latest Articles Grid */}
-      <section className="py-16 bg-[#F1F5F9]">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <h2 className="font-bold text-[28px] text-[#050816] mb-8">
+      <section className="py-16 bg-surface-1">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <h2 className="text-3xl font-bold text-navy mb-8">
             Latest Articles
           </h2>
 
@@ -186,9 +188,9 @@ export default function Blog() {
             {latestArticles.map((article) => (
               <article
                 key={article.slug}
-                className="bg-[#F8FAFC] p-8 flex flex-col"
+                className="bg-surface-0 p-8 flex flex-col rounded-lg shadow-sm"
               >
-                <div className="relative mb-4 h-48 w-full">
+                <div className="relative mb-6 h-48 w-full">
                   <Image
                     src={article.image}
                     alt={article.title}
@@ -196,18 +198,18 @@ export default function Blog() {
                     className="object-cover rounded-md"
                   />
                 </div>
-                <span className="inline-block text-[16px] font-semibold text-[#00A878] mb-4">
+                <span className="inline-block text-base font-semibold text-green mb-4">
                   {article.category}
                 </span>
-                <h3 className="font-semibold text-[20px] text-[#050816] mb-4">
+                <h3 className="text-xl font-semibold text-navy mb-4 line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-[16px] text-[#4A4A4A] mb-6 flex-grow leading-relaxed">
+                <p className="text-base text-gray-600 mb-6 flex-grow leading-relaxed line-clamp-3">
                   {article.excerpt}
                 </p>
-                <div className="flex items-center gap-4 text-[16px] text-[#4A4A4A] mb-6">
+                <div className="flex items-center gap-4 text-sm text-gray-600 mb-6">
                   <span>{article.date}</span>
-                  <span className="text-[#D9D9D9]">•</span>
+                  <span className="text-gray-300">•</span>
                   <span>{article.readTime}</span>
                 </div>
                 <Button
@@ -225,13 +227,13 @@ export default function Blog() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-16 bg-[#FFFFFF]">
-        <div className="mx-auto max-w-[1200px] px-8">
-          <div className="bg-[#F8FAFC] p-8 text-center">
-            <h2 className="font-bold text-[28px] text-[#050816] mb-4">
+      <section className="py-16 bg-surface-0">
+        <div className="max-w-[1200px] mx-auto px-8">
+          <div className="bg-surface-1 p-12 text-center rounded-lg">
+            <h2 className="text-3xl font-bold text-navy mb-4">
               Stay Updated
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Get the latest IT insights, tips, and Seattle tech news delivered to your inbox.
             </p>
             <Button href="/contact" className="inline-flex items-center gap-2">
