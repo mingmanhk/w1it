@@ -57,7 +57,6 @@ const navLinks = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -121,9 +120,7 @@ export default function Header() {
                         {navLinks.map((link) => (
                             <div
                                 key={link.href}
-                                className="relative"
-                                onMouseEnter={() => link.dropdown && setActiveDropdown(link.href)}
-                                onMouseLeave={() => setActiveDropdown(null)}
+                                className="relative group"
                             >
                                 {link.dropdown ? (
                                     <>
@@ -138,8 +135,8 @@ export default function Header() {
                                             {link.label}
                                             <ChevronDown className="w-4 h-4" strokeWidth={2} />
                                         </Link>
-                                        {activeDropdown === link.href && (
-                                            <div className="absolute top-full left-0 mt-2 bg-[#FFFFFF] border border-[#D9D9D9] min-w-[240px] z-50 shadow-sm">
+                                        <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                            <div className="bg-[#FFFFFF] border border-[#D9D9D9] min-w-[240px] shadow-sm">
                                                 {link.dropdown.map((item) => (
                                                     <Link
                                                         key={item.href}
@@ -154,7 +151,7 @@ export default function Header() {
                                                     </Link>
                                                 ))}
                                             </div>
-                                        )}
+                                        </div>
                                     </>
                                 ) : (
                                     <Link
