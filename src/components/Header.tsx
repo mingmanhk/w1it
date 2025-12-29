@@ -83,7 +83,7 @@ export default function Header() {
                         {navLinks.map((link) => (
                             <div
                                 key={link.href}
-                                className="relative"
+                                className="relative py-2"
                                 onMouseEnter={() => link.children && setOpenDropdown(link.href)}
                                 onMouseLeave={() => link.children && setOpenDropdown(null)}
                             >
@@ -95,16 +95,18 @@ export default function Header() {
                                     {link.children && <ChevronDown size={16} />}
                                 </Link>
                                 {link.children && openDropdown === link.href && (
-                                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">
-                                        {link.children.map((child) => (
-                                            <Link
-                                                key={child.href}
-                                                href={child.href}
-                                                className="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-gray-100"
-                                            >
-                                                {child.label}
-                                            </Link>
-                                        ))}
+                                    <div className="absolute top-full left-0 pt-2 w-48 z-50">
+                                        <div className="bg-white rounded-md shadow-lg py-2 border border-gray-200">
+                                            {link.children.map((child) => (
+                                                <Link
+                                                    key={child.href}
+                                                    href={child.href}
+                                                    className="block px-4 py-2 text-sm text-[#4A4A4A] hover:bg-gray-100 hover:text-[#3A81F7]"
+                                                >
+                                                    {child.label}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 )}
                             </div>
