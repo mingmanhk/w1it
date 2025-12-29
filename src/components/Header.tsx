@@ -128,7 +128,7 @@ export default function Header() {
             </div>
 
             <div
-                className={`md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-[9999] overflow-y-auto transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`md:hidden bg-white fixed top-[96px] left-0 w-full h-[calc(100vh-96px)] z-[9999] overflow-y-auto transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
             >
                 <div className="px-6 py-8 flex flex-col min-h-full">
                     <nav className="flex flex-col gap-4">

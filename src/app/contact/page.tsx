@@ -34,8 +34,8 @@ export default function ContactPage() {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: 'url(/images/optimized/hero-graphic.webp)' }}
           />
-          {/* Light overlay for text readability */}
-          <div className="absolute inset-0 bg-[#050816]/30" />
+          {/* Very light overlay for text readability - reduced to 15% */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/20 to-[#050816]/40" />
         </div>
 
         {/* Content */}

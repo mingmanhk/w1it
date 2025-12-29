@@ -35,7 +35,7 @@ export default function Hero() {
           <div className="hidden md:block">
             <div className="w-full h-[400px] bg-[#F5F5F5] rounded-card overflow-hidden">
               <Image
-                src="/images/optimized/hero-graphic.png"
+                src="/images/optimized/hero-graphic.webp"
                 alt="W1IT IT Solutions Hero Graphic"
                 width={600}
                 height={400}
