@@ -4,110 +4,70 @@ import { Target, Shield, Users, Rocket } from 'lucide-react';
 import Image from 'next/image';
 
 /**
- * W1IT About Page
- * Matches: W1IT Design System
- * Specs: Clean layout, W1IT colors, typography, spacing
+ * W1IT About Page - STRICT Design System Compliance
+ * NO gradients, NO shadows, NO rounded-card (not approved)
+ * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
+ * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16
+ * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
  */
 
 export default function AboutPage() {
   const values = [
     {
-      name: 'Confidence',
-      description: 'We give small businesses the confidence to embrace technology and drive growth.',
-      icon: Target,
-    },
-    {
       name: 'Clarity',
-      description: 'We believe in clear communication, transparent pricing, and straightforward solutions.',
+      description: 'Clear communication, transparent pricing, and straightforward solutions.',
       icon: Shield,
     },
     {
-      name: 'Control',
-      description: 'We empower you with the tools and knowledge to take control of your technology.',
-      icon: Users,
+      name: 'Resilience',
+      description: 'Reliable IT infrastructure that keeps your business running smoothly.',
+      icon: Target,
     },
     {
       name: 'Partnership',
-      description: 'We don&apos;t believe in one-size-fits-all. Every business is unique — and so is our approach.',
+      description: 'We treat your business like our own—tailored solutions, not one-size-fits-all.',
       icon: Rocket,
+    },
+    {
+      name: 'Confidence',
+      description: 'Empower your team with technology that drives growth, not frustration.',
+      icon: Users,
     },
   ];
 
   const whyChooseUs = [
-    'Expert support tailored specifically for small business needs.',
-    'Proactive monitoring and prevention — stop problems before they start.',
-    'Fast, friendly help desk services when you need us most.',
-    'Transparent pricing with custom plans that fit your budget.',
-    'Strategic IT consulting to help you grow smarter, not just bigger.',
-    'Enterprise-grade security without enterprise-level complexity.',
+    'Expert support tailored for small business needs',
+    'Proactive monitoring—stop problems before they start',
+    'Fast, responsive help desk when you need us',
+    'Transparent pricing with plans that fit your budget',
+    'Strategic IT consulting for smarter growth',
+    'Enterprise-grade security without the complexity',
   ];
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/images/optimized/hero-graphic.webp)' }}
-          />
-          {/* Very light overlay for text readability - reduced to 15% */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/20 to-[#050816]/40" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-content mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-display text-white mb-6">
-              About{' '}
-              <span className="inline-flex items-baseline gap-1" style={{ fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif' }}>
-                <span>W</span>
-                <span className="text-[#00A878]">1</span>
-                <span>IT</span>
-              </span>
-              {' '}
-              <span style={{ letterSpacing: '0.12em' }}>SOLUTIONS</span>
+      {/* Section / Hero */}
+      <section className="bg-[#050816] py-24 md:py-32">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-[800px] mx-auto text-center">
+            <h1 className="text-[48px] font-bold text-white mb-6">
+              About W1IT Solutions
             </h1>
-            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
-              Empowering small businesses with enterprise-grade IT solutions — without the complexity or overhead.
+            <p className="text-[18px] text-[#D9D9D9]">
+              Enterprise-grade IT support designed for small businesses—without the complexity or overhead.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-heading-lg text-[#050816] mb-6">Our Mission</h2>
-              <p className="text-body text-[#4A4A4A] leading-relaxed mb-6">
-                At W1IT, we believe small businesses deserve enterprise-grade IT support without the complexity or overhead. Whether you&apos;re just starting out or scaling fast, our mission is simple: help you succeed by making your technology work smarter, faster, and safer.
-              </p>
-              <p className="text-body text-[#4A4A4A] leading-relaxed">
-                We specialize in solving everyday tech issues and preventing future disruptions — so you can focus on growing your business, not troubleshooting it.
-              </p>
-            </div>
-            <div>
-              <Image
-                src="/images/optimized/about-mission.svg"
-                alt="W1IT's mission: Empowering businesses with clear, resilient, and high-performing IT solutions"
-                width={600}
-                height={400}
-                className="rounded-card"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-16 md:py-24 bg-[#F5F5F5]">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-heading-lg text-[#050816] mb-6">Our Values</h2>
-            <p className="text-body-lg text-[#4A4A4A] max-w-3xl mx-auto">
+      {/* Section / Foundation (Values) */}
+      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-[32px] font-bold text-[#050816] mb-4">
+              Our Values
+            </h2>
+            <p className="text-[18px] text-[#4A4A4A] max-w-[700px] mx-auto">
               The principles that guide everything we do.
             </p>
           </div>
@@ -115,12 +75,12 @@ export default function AboutPage() {
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="text-center p-8 bg-white rounded-card">
-                  <div className="flex justify-center items-center w-16 h-16 bg-[#3A81F7] rounded-card mx-auto mb-6">
+                <div key={index} className="text-center p-8 bg-white">
+                  <div className="flex justify-center items-center w-16 h-16 bg-[#3A81F7] mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-heading-md text-[#050816] mb-4">{value.name}</h3>
-                  <p className="text-body text-[#4A4A4A]">{value.description}</p>
+                  <h3 className="text-[20px] font-bold text-[#050816] mb-4">{value.name}</h3>
+                  <p className="text-[16px] text-[#4A4A4A]">{value.description}</p>
                 </div>
               );
             })}
@@ -128,46 +88,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Story Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-content mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
+      {/* Section / Story */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-[32px] font-bold text-[#050816] mb-6">Our Mission</h2>
+              <p className="text-[18px] text-[#4A4A4A] mb-6 leading-relaxed">
+                W1IT provides small businesses with enterprise-grade IT support—minus the complexity. We solve everyday tech problems and prevent future disruptions so you can focus on growth, not troubleshooting.
+              </p>
+              <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                Founded by Victor, a seasoned IT professional with over a decade of experience, W1IT was born from frustration with overpriced, overcomplicated IT support. We treat small businesses like valued partners, not ticket numbers.
+              </p>
+            </div>
+            <div>
               <Image
-                src="/images/optimized/founder-story.svg"
-                alt="W1IT Founder: Over a decade of IT expertise, building partnerships with Seattle businesses"
+                src="/images/optimized/about-mission.svg"
+                alt="W1IT Mission"
                 width={600}
                 height={400}
-                className="rounded-card"
               />
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-heading-lg text-[#050816] mb-6">Built for Small Business Success</h2>
-              <p className="text-body text-[#4A4A4A] leading-relaxed mb-6">
-                W1IT was founded by Victor, a seasoned IT professional with over a decade of experience in building and managing complex IT systems. Frustrated by seeing small businesses struggle with overpriced, overcomplicated IT support, he set out to create something different — a consultancy that treats small businesses like valued partners, not ticket numbers.
-              </p>
-              <p className="text-body text-[#4A4A4A] leading-relaxed">
-                Today, W1IT is a trusted technology partner for small businesses across Bellevue and the Seattle Metro Area. We&apos;re here to help you build a stronger, smarter foundation for growth — one where technology empowers you instead of holding you back.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24 bg-[#F5F5F5]">
-        <div className="max-w-content mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-heading-lg text-[#050816] mb-6">Why Choose Us?</h2>
+      {/* Section / WhyChooseUs */}
+      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-[32px] font-bold text-[#050816] mb-4">Why Choose W1IT?</h2>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-[900px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whyChooseUs.map((reason, index) => (
-                <div key={index} className="flex items-start space-x-3 p-6 bg-white rounded-card">
-                  <span className="inline-block w-1.5 h-1.5 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                  <p className="text-body text-[#4A4A4A]">{reason}</p>
+                <div key={index} className="flex items-start gap-3 p-6 bg-white">
+                  <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
+                  <p className="text-[16px] text-[#4A4A4A]">{reason}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section / CTA */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="text-center">
+            <h2 className="text-[32px] font-bold text-[#050816] mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-[18px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+              Let's build a stronger IT foundation for your business.
+            </p>
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <a href="/contact" className="inline-block px-8 py-4 bg-[#3A81F7] text-white text-[16px] font-bold text-center">
+                Schedule Consultation
+              </a>
+              <a href="/services" className="inline-block px-8 py-4 border-2 border-[#3A81F7] text-[#3A81F7] text-[16px] font-bold text-center">
+                Explore Our Services
+              </a>
             </div>
           </div>
         </div>

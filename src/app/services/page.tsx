@@ -4,15 +4,17 @@ import { Server, BarChart3, Globe, Database, HelpCircle } from 'lucide-react';
 import Button from '@/components/Button';
 
 /**
- * W1IT Services Page
- * Matches: W1IT Design System
- * Specs: Clean layout, W1IT colors, typography, spacing
+ * W1IT Services Page - STRICT Design System Compliance
+ * NO gradients, NO shadows, NO custom spacing
+ * Colors: navy, blue, green, white, gray-600, gray-300, gray-100
+ * Typography: Display/48, Heading/32, Heading/20, Body/18, Body/16, Caption/14
+ * Spacing: 8, 16, 24, 32, 48, 64, 96, 128px only
  */
 
 const serviceCategories = [
   {
     title: 'Managed IT Services',
-    description: 'Proactive, comprehensive IT support to ensure your systems are always running at peak performance.',
+    description: 'Proactive IT support that keeps your systems running smoothly and your team productive.',
     icon: Server,
     features: [
       '24/7 monitoring and maintenance',
@@ -24,49 +26,49 @@ const serviceCategories = [
   },
   {
     title: 'IT Consulting & Strategy',
-    description: 'Expert guidance to align your technology with your business goals and drive growth.',
+    description: 'Expert guidance to align technology with business goals and drive measurable growth.',
     icon: BarChart3,
     features: [
       'IT roadmap and strategy development',
       'Cloud strategy and migration planning',
-      'Cybersecurity assessments and planning',
-      'IT budget and cost optimization',
+      'Cybersecurity assessments',
+      'IT budget optimization',
       'Digital transformation consulting',
     ],
   },
   {
     title: 'Website Development & Optimization',
-    description: 'High-performance websites designed to deliver exceptional user experiences and drive conversions.',
+    description: 'High-performance websites that deliver results and exceptional user experiences.',
     icon: Globe,
     features: [
       'Custom website design and development',
       'E-commerce solutions',
-      'Performance and speed optimization',
+      'Performance optimization',
       'Search engine optimization (SEO)',
-      'Analytics and conversion rate optimization',
+      'Analytics and conversion tracking',
     ],
   },
   {
     title: 'Data & Analytics',
-    description: 'Unlock the power of your data to make smarter, data-driven decisions.',
+    description: 'Turn your data into actionable insights for smarter business decisions.',
     icon: Database,
     features: [
-      'Business intelligence (BI) dashboards',
+      'Business intelligence dashboards',
       'Data warehousing and ETL',
-      'Predictive analytics and machine learning',
-      'Data governance and quality',
+      'Predictive analytics',
+      'Data governance',
       'Reporting and visualization',
     ],
   },
   {
     title: 'On-Demand IT Support',
-    description: 'Flexible, as-needed IT support to resolve immediate issues and keep your business moving.',
+    description: 'Flexible support when you need it—no long-term commitments required.',
     icon: HelpCircle,
     features: [
       'Pay-as-you-go hourly support',
       'Remote and on-site assistance',
-      'Troubleshooting and issue resolution',
-      'Software installation and configuration',
+      'Troubleshooting and resolution',
+      'Software installation',
       'Hardware repair and upgrades',
     ],
   },
@@ -75,65 +77,54 @@ const serviceCategories = [
 export default function ServicesPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: 'url(/images/optimized/hero-graphic.webp)' }}
-          />
-          {/* Very light overlay for text readability - reduced to 15% */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/20 to-[#050816]/40" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-content mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-display text-white mb-6">
+      {/* Section / Hero */}
+      <section className="bg-[#050816] py-24 md:py-32">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-[800px] mx-auto text-center">
+            <h1 className="text-[48px] font-bold text-white mb-6">
               Our Services
             </h1>
-            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
-              Comprehensive IT solutions to meet the needs of modern businesses.
+            <p className="text-[18px] text-[#D9D9D9]">
+              Enterprise-grade IT solutions designed for small business success.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 md:py-24 bg-[#F5F5F5]">
-        <div className="max-w-content mx-auto px-6">
+      {/* Section / Services */}
+      <section className="py-24 md:py-32 bg-[#F5F5F5]">
+        <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => {
               const Icon = category.icon;
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-card overflow-hidden"
+                  className="bg-white"
                 >
                   {/* Card Header */}
                   <div className="bg-[#050816] p-8">
-                    <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] rounded-card mb-6">
+                    <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] mb-6">
                       <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-heading-md text-white mb-4">
+                    <h3 className="text-[20px] font-bold text-white mb-4">
                       {category.title}
                     </h3>
-                    <p className="text-body text-[#D9D9D9]">
+                    <p className="text-[16px] text-[#D9D9D9]">
                       {category.description}
                     </p>
                   </div>
 
                   {/* Card Body */}
                   <div className="p-8">
-                    <h4 className="text-body font-bold text-[#050816] mb-4">
+                    <h4 className="text-[16px] font-bold text-[#050816] mb-4">
                       Key Features:
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {category.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                          <span className="text-body text-[#4A4A4A]">{feature}</span>
+                          <span className="text-[16px] text-[#4A4A4A]">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -148,15 +139,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-content mx-auto px-6">
+      {/* Section / CTA */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-heading-lg text-[#050816] mb-6">
-              Ready to Transform Your IT?
+            <h2 className="text-[32px] font-bold text-[#050816] mb-6">
+              Ready to Get Started?
             </h2>
-            <p className="text-body text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can help your business thrive.
+            <p className="text-[18px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+              We help small businesses succeed with reliable, enterprise-grade IT solutions.
             </p>
             <Button href="/contact" variant="primary">
               Get in Touch
