@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 /**
  * W1IT Testimonials Page
  * Matches: W1IT Design System
@@ -12,6 +14,7 @@ const testimonials = [
     author: 'Kam Ling Trading Team',
     role: 'International Trading Company',
     company: 'Kam Ling International Trading Co.',
+    url: 'https://kamlingtrading.com',
     logo: '🌏',
     results: ['Modern website with SEO optimization', 'Integrated analytics and live chat support', 'Multilingual support for global customers'],
   },
@@ -49,7 +52,18 @@ export default function TestimonialsPage() {
                   </div>
                   <div>
                     <h3 className="text-heading-md text-[#050816]">
-                      {testimonial.company}
+                      {testimonial.url ? (
+                        <Link 
+                          href={testimonial.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="hover:text-[#3A81F7] transition-colors"
+                        >
+                          {testimonial.company}
+                        </Link>
+                      ) : (
+                        testimonial.company
+                      )}
                     </h3>
                     <p className="text-caption text-[#4A4A4A]">
                       {testimonial.role || 'Technology Solutions'}
