@@ -91,10 +91,10 @@ export default function CaseStudiesPage() {
             src="/images/optimized/hero-graphic.webp"
             alt="W1IT Case Studies Hero"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/80 to-navy/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         </div>
         <div className="relative max-w-[1200px] mx-auto px-8 text-center">
           <h1 className="text-4xl font-bold leading-tight text-white mb-6">
