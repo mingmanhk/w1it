@@ -7,13 +7,6 @@ import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-/**
- * W1IT Header Component - LIGHT-MODE Design System
- * Typography: Body/16 for nav links, Body/17 for CTA
- * Colors: Navy #050816, Blue #3A81F7, Gray #4A4A4A, Surface #FFFFFF
- * Spacing: 8px gaps, 16px padding, 32px container padding
- */
-
 const navLinks = [
     {
         href: '/services',
@@ -57,6 +50,7 @@ const navLinks = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -194,61 +188,55 @@ export default function Header() {
             </div>
 
             {/* Mobile Navigation */}
-            {isOpen && (
-                <div className="lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB]">
-                    <div className="px-6 py-8 flex flex-col min-h-full">
-                        <nav className="flex flex-col gap-6">
-                            {/* Main Navigation Links with Dropdowns */}
-                            {navLinks.map((link) => (
-                                <div key={link.href}>
+            <div
+                className={`lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="px-6 py-8 flex flex-col min-h-full">
+                    <nav className="flex flex-col gap-4">
+                        {navLinks.map((link) => (
+                            <div key={link.href}>
+                                {link.dropdown ? (
+                                    <div>
+                                        <div 
+                                            className="flex justify-between items-center text-[20px] font-semibold py-3 cursor-pointer"
+                                            onClick={() => setOpenMobileSubmenu(openMobileSubmenu === link.href ? null : link.href)}
+                                        >
+                                            <span className={`${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#050816]'}`}>{link.label}</span>
+                                            <ChevronDown size={20} className={`transition-transform ${openMobileSubmenu === link.href ? 'rotate-180' : ''}`} />
+                                        </div>
+                                        {openMobileSubmenu === link.href && (
+                                            <div className="pl-4 pt-2 pb-2 flex flex-col gap-2 border-l-2 border-[#E5E7EB]">
+                                                {link.dropdown.map((item) => (
+                                                    <Link
+                                                        key={item.href}
+                                                        href={item.href}
+                                                        className={`text-[16px] block py-2 ${pathname === item.href ? 'text-[#3A81F7] font-medium' : 'text-[#4A4A4A]'}`}
+                                                        onClick={() => setIsOpen(false)}
+                                                    >
+                                                        {item.label}
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-[20px] font-semibold block pb-3 ${
-                                            pathname === link.href
-                                                ? 'text-[#3A81F7]'
-                                                : 'text-[#050816]'
-                                        }`}
-                                        onClick={() => !link.dropdown && setIsOpen(false)}
+                                        className={`text-[20px] font-semibold block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                                        onClick={() => setIsOpen(false)}
                                     >
                                         {link.label}
                                     </Link>
-                                    {link.dropdown && (
-                                        <div className="flex flex-col gap-2 mt-2 pl-4 pt-2 border-l-2 border-[#E5E7EB]">
-                                            {link.dropdown.map((item) => (
-                                                <Link
-                                                    key={item.href}
-                                                    href={item.href}
-                                                    className={`text-[16px] block py-2 ${
-                                                        pathname === item.href
-                                                            ? 'text-[#3A81F7] font-medium'
-                                                            : 'text-[#4A4A4A]'
-                                                    }`}
-                                                    onClick={() => setIsOpen(false)}
-                                                >
-                                                    {item.label}
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-
-                            {/* Divider */}
-                            <div className="border-t border-[#E5E7EB] my-4"></div>
-
-                            {/* CTA Button */}
-                            <Button
-                                href="/contact"
-                                variant="primary"
-                                className="w-full"
-                                onClick={() => setIsOpen(false)}
-                            >
-                                Get Started
-                            </Button>
-                        </nav>
+                                )}
+                            </div>
+                        ))}
+                    </nav>
+                    <div className="mt-auto pt-8">
+                        <Button href="/contact" variant="primary" className="w-full" onClick={() => setIsOpen(false)}>
+                            Get Started
+                        </Button>
                     </div>
                 </div>
-            )}
+            </div>
         </header>
     );
 }
