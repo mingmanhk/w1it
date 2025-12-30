@@ -2,6 +2,7 @@
 
 import Button from '@/components/Button';
 import Image from 'next/image';
+import Hero from '@/components/Hero';
 import {
   Cloud,
   Server,
@@ -85,32 +86,16 @@ export default function CloudSolutionsPage() {
 
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="Cloud Solutions"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
-              Enterprise Cloud Excellence
-            </h1>
-            <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-              Transform your infrastructure with scalable, secure, and cost-effective cloud solutions.
-            </p>
-            <Button href="/contact" variant="primary">
-              Start Cloud Journey
-            </Button>
-          </div>
-        </div>
-      </section>
+        <Hero
+            title="Enterprise Cloud Excellence"
+            subtitle="Transform your infrastructure with scalable, secure, and cost-effective cloud solutions."
+            imageSrc="/images/optimized/hero-graphic.webp"
+            imageAlt="Cloud Solutions"
+            ctaButton={{
+                href: '/contact',
+                text: 'Start Cloud Journey',
+            }}
+        />
 
       {/* Platforms Section */}
       <section className="py-16 bg-[#FFFFFF]">

@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import { AlertTriangle, Phone, Clock, Shield } from 'lucide-react'
@@ -14,16 +13,7 @@ export default function EmergencyPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-24 md:py-32">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="Emergency IT Support"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-red-600/60 to-red-800/80" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         <div className="relative max-w-4xl mx-auto text-center px-8">
             <AlertTriangle className="w-24 h-24 mx-auto mb-6 animate-pulse text-white" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">

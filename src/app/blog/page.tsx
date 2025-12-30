@@ -3,6 +3,7 @@ import { generateSEO } from '@/lib/seo';
 import Button from '@/components/Button';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Hero from '@/components/Hero';
 
 export const metadata: Metadata = generateSEO({
   title: 'IT Insights & Tech Blog - Seattle IT Tips',
@@ -105,27 +106,11 @@ export default function Blog() {
 
   return (
     <div className="bg-surface-0">
-      {/* Hero Section */}
-      <section className="relative bg-navy text-white py-24">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="W1IT Blog Hero"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
-        </div>
-        <div className="relative max-w-[1200px] mx-auto px-8 text-center">
-          <h1 className="text-4xl font-bold leading-tight text-black mb-6">
-            IT Insights & Resources
-          </h1>
-          <p className="text-lg text-black max-w-3xl mx-auto">
-            Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age.
-          </p>
-        </div>
-      </section>
+        <Hero
+            title="IT Insights & Resources"
+            subtitle="Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age."
+            imageAlt="W1IT Blog Hero"
+        />
 
       {/* Featured Article */}
       <section className="py-16 bg-surface-0">

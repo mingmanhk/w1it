@@ -2,7 +2,7 @@
 
 import { RefreshCw, Zap, Clock, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 
 /**
  * W1IT IT Automation Page - LIGHT-MODE Design System
@@ -70,32 +70,12 @@ const automationBenefits = [
 export default function ITAutomationPage() {
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="IT Automation Services"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
-              IT Automation Services
-            </h1>
-            <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-              Streamline your operations with automated workflows and intelligent systems that work for you 24/7.
-            </p>
-            <Button href="/contact" variant="primary">
-              Get Started
-            </Button>
-          </div>
-        </div>
-      </section>
+        <Hero
+            title="IT Automation Services"
+            subtitle="Streamline your operations with automated workflows and intelligent systems that work for you 24/7."
+            imageAlt="IT Automation Services"
+            ctaButton={{ href: "/contact", text: "Get Started" }}
+        />
 
       {/* Introduction Section */}
       <section className="py-16 bg-[#FFFFFF]">

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { generateSEO, generateServiceSchema } from '@/lib/seo';
 import Button from '@/components/Button';
-import Image from 'next/image';
 import {
   Monitor,
   Settings,
@@ -10,6 +9,7 @@ import {
   Mail,
   Lightbulb,
 } from 'lucide-react';
+import Hero from '@/components/Hero';
 
 /**
  * W1IT Remote Support Page - LIGHT-MODE Design System
@@ -139,32 +139,12 @@ export default function RemoteSupport() {
         }}
       />
       <div className="bg-[#FFFFFF]">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/optimized/hero-graphic.webp"
-              alt="Remote IT Support"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-          </div>
-          <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-            <div className="max-w-[800px] mx-auto text-center">
-              <h1 className="text-[42px] font-bold text-white mb-6">
-                Remote IT Support
-              </h1>
-              <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-                Fast, secure remote troubleshooting from Seattle. Available worldwide. Same-day support available with secure connections and bilingual service (English/Chinese).
-              </p>
-              <Button href="/contact" variant="primary">
-                Get Help Now
-              </Button>
-            </div>
-          </div>
-        </section>
+        <Hero
+            title="Remote IT Support"
+            subtitle="Fast, secure remote troubleshooting from Seattle. Available worldwide. Same-day support available with secure connections and bilingual service (English/Chinese)."
+            imageAlt="Remote IT Support"
+            ctaButton={{ href: "/contact", text: "Get Help Now" }}
+        />
 
         {/* How It Works Section */}
         <section className="py-16 bg-[#FFFFFF]">

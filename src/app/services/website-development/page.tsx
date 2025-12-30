@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '@/components/Button';
-import Image from 'next/image';
 import { Code, Smartphone, Zap, Globe, Search, TrendingUp } from 'lucide-react';
 
 /**
@@ -60,19 +59,10 @@ export default function WebsiteDevelopmentPage() {
     <div className="bg-[#FFFFFF]">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="Website Development & Optimization"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-black mb-6">
               Website Development & Optimization
             </h1>
             <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">

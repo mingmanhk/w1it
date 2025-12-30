@@ -1,7 +1,8 @@
 'use client';
 
 import { Target, Shield, Users, Rocket } from 'lucide-react';
-import Image from 'next/image';
+import Button from '@/components/Button';
+import Hero from '@/components/Hero';
 
 /**
  * W1IT About Page - LIGHT-MODE Design System
@@ -45,29 +46,11 @@ export default function AboutPage() {
 
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Section / Hero */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="About W1IT Solutions"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-black mb-6">
-              About W1IT Solutions
-            </h1>
-            <p className="text-[17px] text-black/90">
-              Enterprise-grade IT support designed for small businesses—without the complexity or overhead.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="About W1IT Solutions"
+        subtitle="Enterprise-grade IT support designed for small businesses—without the complexity or overhead."
+        imageAlt="About W1IT Solutions"
+      />
 
       {/* Section / Foundation (Values) */}
       <section className="py-16 bg-[#F8FAFC]">
@@ -111,7 +94,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <Image
+              <img
                 src="/images/optimized/about-mission.svg"
                 alt="W1IT Mission"
                 width={600}
@@ -152,12 +135,12 @@ export default function AboutPage() {
               Let's build a stronger IT foundation for your business.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <a href="/contact" className="inline-block px-8 py-4 bg-[#3A81F7] text-white text-[16px] font-bold text-center">
+              <Button href="/contact" variant="primary">
                 Schedule Consultation
-              </a>
-              <a href="/services" className="inline-block px-8 py-4 border-2 border-[#3A81F7] text-[#3A81F7] text-[16px] font-bold text-center">
+              </Button>
+              <Button href="/services" variant="secondary">
                 Explore Our Services
-              </a>
+              </Button>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { generateSEO, generateServiceSchema, generateLocalBusinessSchema } from '@/lib/seo';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 import {
   Wifi,
   Settings,
@@ -149,32 +149,16 @@ export default function NetworkSetup() {
         }}
       />
       <div className="bg-[#FFFFFF]">
-        {/* Hero Section */}
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/images/optimized/hero-graphic.webp"
-              alt="Network Setup & Configuration"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-          </div>
-          <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-            <div className="max-w-[800px] mx-auto text-center">
-              <h1 className="text-[42px] font-bold text-white mb-6">
-                Network Setup & Configuration
-              </h1>
-              <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-                Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available.
-              </p>
-              <Button href="/contact" variant="primary">
-                Schedule Network Setup
-              </Button>
-            </div>
-          </div>
-        </section>
+        <Hero
+            title="Network Setup & Configuration"
+            subtitle="Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available."
+            imageSrc="/images/optimized/hero-graphic.webp"
+            imageAlt="Network Setup & Configuration"
+            ctaButton={{
+                href: '/contact',
+                text: 'Schedule Network Setup',
+            }}
+        />
 
         {/* Services Section */}
         <section className="py-16 bg-[#FFFFFF]">

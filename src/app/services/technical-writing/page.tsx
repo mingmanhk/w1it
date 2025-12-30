@@ -2,7 +2,7 @@
 
 import type { Metadata } from 'next';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 import {
   FileText,
   BookOpen,
@@ -97,32 +97,16 @@ export default function TechnicalWriting() {
 
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="Bilingual Technical Writing Services"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
-              Bilingual Technical Writing
-            </h1>
-            <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-              Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses.
-            </p>
-            <Button href="/contact" variant="primary">
-              Request a Quote
-            </Button>
-          </div>
-        </div>
-      </section>
+        <Hero
+            title="Bilingual Technical Writing"
+            subtitle="Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses."
+            imageSrc="/images/optimized/hero-graphic.webp"
+            imageAlt="Bilingual Technical Writing Services"
+            ctaButton={{
+                href: '/contact',
+                text: 'Request a Quote',
+            }}
+        />
 
       {/* Why Bilingual Documentation Matters */}
       <section className="py-16 bg-[#F8FAFC]">

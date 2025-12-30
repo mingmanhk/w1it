@@ -1,7 +1,7 @@
 'use client';
 
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 import {
   Shield,
   Lock,
@@ -87,32 +87,14 @@ export default function SecurityPage() {
 
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="Cybersecurity Services"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-black mb-6">
-              Enterprise Security Solutions
-            </h1>
-            <p className="text-[17px] text-black/90 max-w-3xl mx-auto mb-8">
-              Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management.
-            </p>
-            <Button href="/contact" variant="primary">
-              Security Assessment
-            </Button>
-          </div>
-        </div>
-      </section>
+        <Hero
+            title="Enterprise Security Solutions"
+            subtitle="Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management."
+            ctaButton={{
+                href: '/contact',
+                text: 'Security Assessment',
+            }}
+        />
 
       {/* Compliance Section */}
       <section className="py-16 bg-[#F8FAFC]">

@@ -2,7 +2,7 @@
 
 import { Server, BarChart3, Globe, Database, HelpCircle } from 'lucide-react';
 import Button from '@/components/Button';
-import Image from 'next/image';
+import Hero from '@/components/Hero';
 
 /**
  * W1IT Services Page - LIGHT-MODE Design System
@@ -78,33 +78,10 @@ const serviceCategories = [
 export default function ServicesPage() {
   return (
     <div className="bg-[#FFFFFF]">
-      {/* Section / Hero */}
-      <section className="relative py-24 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="W1IT Services Hero"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Light overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-black mb-6">
-              Our Services
-            </h1>
-            <p className="text-[17px] text-black/90">
-              Enterprise-grade IT solutions designed for small business success.
-            </p>
-          </div>
-        </div>
-      </section>
+        <Hero
+            title="Our Services"
+            subtitle="Enterprise-grade IT solutions designed for small business success."
+        />
 
       {/* Section / Services */}
       <section className="py-16 bg-[#F8FAFC]">

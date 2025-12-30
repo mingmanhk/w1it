@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import { CheckSquare, Download } from 'lucide-react'
@@ -13,16 +12,7 @@ export default function ChecklistsPage() {
   return (
     <div className="min-h-screen">
       <section className="relative py-24 md:py-32">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/optimized/hero-graphic.webp"
-            alt="IT Checklists"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         <div className="relative max-w-4xl mx-auto text-center px-8">
             <CheckSquare className="w-20 h-20 mx-auto mb-6 opacity-90 text-white" />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
