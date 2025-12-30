@@ -50,7 +50,7 @@ export const mainNavigation: NavigationItem[] = [
   {
     name: 'Contact',
     href: '/contact',
-    iconName: 'Phone',
+iconName: 'Phone',
   },
 ];
 
@@ -166,10 +166,6 @@ export const quickLinks: NavigationItem[] = [
     href: '/contact',
     iconName: 'Phone',
     badge: 'Free',
-  },
-  {
-    name: 'Case Studies',
-    href: '/case-studies',
   },
   {
     name: 'Testimonials',
