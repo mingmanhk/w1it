@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import { AlertTriangle, Phone, Clock, Shield } from 'lucide-react'
@@ -12,20 +13,28 @@ export default function EmergencyPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white py-24 md:py-32">
-        <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <AlertTriangle className="w-24 h-24 mx-auto mb-6 animate-pulse" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+      <section className="relative py-24 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="Emergency IT Support"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-red-600/60 to-red-800/80" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center px-8">
+            <AlertTriangle className="w-24 h-24 mx-auto mb-6 animate-pulse text-white" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
               Emergency IT Support
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-xl md:text-2xl text-black/90 mb-8">
               Critical IT issues? We&apos;re here to help 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="tel:8324727991"
-               
                 className="bg-white text-red-700 hover:bg-gray-100 text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
@@ -33,14 +42,12 @@ export default function EmergencyPage() {
               </Button>
               <Button
                 href="mailto:contact@w1it.com"
-               
                 className="bg-red-900 text-white hover:bg-red-950 text-lg"
               >
                 Email Emergency Team
               </Button>
             </div>
-          </div>
-        </Container>
+        </div>
       </section>
 
       {/* What Qualifies as Emergency */}

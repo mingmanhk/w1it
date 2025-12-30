@@ -70,10 +70,10 @@ export default function AppsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         </div>
         <div className="relative max-w-[1200px] mx-auto px-8 text-center">
-          <h1 className="text-4xl font-bold leading-tight text-white mb-6">
+          <h1 className="text-4xl font-bold leading-tight text-black mb-6">
             W1IT Applications
           </h1>
-          <p className="text-lg text-gray-100 max-w-3xl mx-auto">
+          <p className="text-lg text-black max-w-3xl mx-auto">
             We build powerful, user-focused applications to streamline your workflows and solve critical business challenges.
           </p>
         </div>

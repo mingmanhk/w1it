@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import { CheckSquare, Download } from 'lucide-react'
@@ -11,18 +12,26 @@ export const metadata: Metadata = {
 export default function ChecklistsPage() {
   return (
     <div className="min-h-screen">
-      <section className="bg-gradient-to-br from-brand-navy via-brand-blue to-brand-cyan text-white py-24 md:py-32">
-        <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <CheckSquare className="w-20 h-20 mx-auto mb-6 opacity-90" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+      <section className="relative py-24 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="IT Checklists"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center px-8">
+            <CheckSquare className="w-20 h-20 mx-auto mb-6 opacity-90 text-white" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
               IT Checklists
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-xl md:text-2xl text-black/90 mb-8">
               Free downloadable IT checklists for your business
             </p>
-          </div>
-        </Container>
+        </div>
       </section>
 
       <section className="py-20 md:py-32">

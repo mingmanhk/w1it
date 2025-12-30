@@ -118,10 +118,10 @@ export default function Blog() {
           <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
         </div>
         <div className="relative max-w-[1200px] mx-auto px-8 text-center">
-          <h1 className="text-4xl font-bold leading-tight text-white mb-6">
+          <h1 className="text-4xl font-bold leading-tight text-black mb-6">
             IT Insights & Resources
           </h1>
-          <p className="text-lg text-gray-100 max-w-3xl mx-auto">
+          <p className="text-lg text-black max-w-3xl mx-auto">
             Expert advice on IT management, network security, and technology best practices to help your Seattle business thrive in the digital age.
           </p>
         </div>

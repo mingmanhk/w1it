@@ -101,10 +101,10 @@ export default function SecurityPage() {
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-black mb-6">
               Enterprise Security Solutions
             </h1>
-            <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
+            <p className="text-[17px] text-black/90 max-w-3xl mx-auto mb-8">
               Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management.
             </p>
             <Button href="/contact" variant="primary">

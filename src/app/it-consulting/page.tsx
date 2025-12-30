@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { generateSEO, generateServiceSchema, generateLocalBusinessSchema } from '@/lib/seo';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
@@ -123,13 +124,23 @@ export default function ITConsulting() {
       />
       <div>
       {/* Hero Section */}
-      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
+      <section className="relative pt-16 pb-24 md:pt-32 md:pb-40">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="IT Consulting"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
+        </div>
         <Container>
-          <div className="text-center animate-fade-in">
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">
+          <div className="relative text-center animate-fade-in">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-black mb-6">
               IT Consulting Services
             </h1>
-            <p className="text-lg md:text-xl text-gray-medium max-w-3xl mx-auto mb-8 font-body">
+            <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto mb-8 font-body">
               Smart IT Consulting — Clear Strategies for Secure, Scalable Growth. Need hands-on support? Explore our <a href="/it-services" className="text-rose hover:underline">managed IT services</a>.
             </p>
             <Button href="/contact">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 /**
  * W1IT Cookie Policy Page
@@ -15,13 +16,23 @@ export default function CookiePolicy() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#050816]">
-        <div className="max-w-content mx-auto px-6">
+      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="Cookie Policy"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
+        </div>
+        <div className="relative max-w-content mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-display text-white mb-6">
+            <h1 className="text-display text-black mb-6">
               Cookie Policy
             </h1>
-            <p className="text-body-lg text-[#D9D9D9] max-w-3xl mx-auto">
+            <p className="text-body-lg text-black/90 max-w-3xl mx-auto">
               Last updated: December 25, 2025
             </p>
           </div>

@@ -96,10 +96,10 @@ export default function ServicesPage() {
         {/* Content */}
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-black mb-6">
               Our Services
             </h1>
-            <p className="text-[17px] text-white/90">
+            <p className="text-[17px] text-black/90">
               Enterprise-grade IT solutions designed for small business success.
             </p>
           </div>

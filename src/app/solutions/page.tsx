@@ -86,10 +86,10 @@ export default function SolutionsPage() {
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
-            <h1 className="text-[42px] font-bold text-white mb-6">
+            <h1 className="text-[42px] font-bold text-black mb-6">
               IT Solutions for Small Business Success
             </h1>
-            <p className="text-[17px] text-white/90">
+            <p className="text-[17px] text-black/90">
               Complete technology solutions designed to help your business thrive.
             </p>
           </div>

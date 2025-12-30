@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import { Users, Phone, Mail, Calendar } from 'lucide-react'
@@ -12,18 +13,26 @@ export default function SalesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-navy via-brand-blue to-brand-cyan text-white py-24 md:py-32">
-        <Container>
-          <div className="max-w-4xl mx-auto text-center">
-            <Users className="w-20 h-20 mx-auto mb-6 opacity-90" />
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+      <section className="relative py-24 md:py-32">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/optimized/hero-graphic.webp"
+            alt="Sales Inquiries"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
+        </div>
+        <div className="relative max-w-4xl mx-auto text-center px-8">
+            <Users className="w-20 h-20 mx-auto mb-6 opacity-90 text-white" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-black mb-6">
               Sales Inquiries
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
+            <p className="text-xl md:text-2xl text-black/90 mb-8">
               Let&apos;s discuss how W1IT Solutions can transform your IT infrastructure
             </p>
-          </div>
-        </Container>
+        </div>
       </section>
 
       {/* Contact Options Section */}
@@ -99,7 +108,7 @@ export default function SalesPage() {
                   <div>
                     <h4 className="font-heading font-bold text-neutral-900 mb-2">Discovery Call</h4>
                     <p className="text-neutral-600">
-                      We&apos;ll discuss your business needs, current challenges, and goals
+                      We&apos;s discuss your business needs, current challenges, and goals
                     </p>
                   </div>
                 </div>
