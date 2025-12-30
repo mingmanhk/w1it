@@ -12,7 +12,6 @@ interface HeroProps {
     href: string;
     text: string;
   };
-  children?: React.ReactNode;
 }
 
 export default function Hero({
@@ -21,7 +20,6 @@ export default function Hero({
   imageSrc = "/images/optimized/hero-graphic.webp",
   imageAlt = "Hero background",
   ctaButton,
-  children,
 }: HeroProps) {
   return (
     <section className="relative py-24 overflow-hidden">
@@ -48,7 +46,6 @@ export default function Hero({
                 </Button>
             </div>
           )}
-          {children && <div className="mt-8">{children}</div>}
         </div>
       </div>
     </section>
