@@ -32,7 +32,6 @@ export default function Footer() {
     company: [
       { name: 'About', href: '/about' },
       { name: 'Industries', href: '/industries' },
-      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
       { name: 'Apps', href: '/apps' },
       { name: 'Contact', href: '/contact' },
