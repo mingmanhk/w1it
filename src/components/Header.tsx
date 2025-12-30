@@ -49,7 +49,7 @@ const navLinks = [
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null);
+    const [openDropdown, setOpenDropdown] = useState<string | null>(null);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -63,97 +63,70 @@ export default function Header() {
         };
     }, [isOpen]);
 
+    const handleDropdown = (href: string) => {
+        if (openDropdown === href) {
+            setOpenDropdown(null);
+        } else {
+            setOpenDropdown(href);
+        }
+    };
+
     return (
-        <header className="fixed top-0 left-0 w-full bg-[#FFFFFF] border-b border-[#E5E7EB] z-[9998]">
-            <div className="max-w-[1200px] mx-auto">
-                <div className="flex items-center justify-between h-[80px] px-6">
+        <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[999]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    <Link
-                        href="/"
-                        className="flex items-center gap-3 hover:opacity-80 transition-opacity"
-                        onClick={() => setIsOpen(false)}
-                    >
-                        <Image
-                            src="/images/optimized/Logo.webp"
-                            alt="W1IT Solutions Logo"
-                            width={40}
-                            height={40}
-                            priority
-                        />
-                        <div className="flex items-baseline gap-3">
-                            <span
-                                className="inline-flex items-baseline gap-0.5"
-                                style={{
-                                    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif',
-                                    fontSize: '20px',
-                                    fontWeight: 700,
-                                    letterSpacing: '0.02em'
-                                }}
-                            >
-                                <span className="text-[#050816]">W</span>
-                                <span className="text-[#00A878]">1</span>
-                                <span className="text-[#050816]">IT</span>
-                            </span>
-                            <span
-                                className="text-[#050816] uppercase hidden sm:inline-flex"
-                                style={{
-                                    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", sans-serif',
-                                    fontSize: '20px',
-                                    fontWeight: 700,
-                                    letterSpacing: '0.12em'
-                                }}
-                            >
-                                Solutions
-                            </span>
-                        </div>
-                    </Link>
+                    <div className="flex-shrink-0">
+                        <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                            <Image
+                                src="/images/optimized/Logo.webp"
+                                alt="W1IT Solutions Logo"
+                                width={40}
+                                height={40}
+                                priority
+                            />
+                            <span className="text-xl font-bold text-gray-800">W1IT Solutions</span>
+                        </Link>
+                    </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center gap-8">
+                    <nav className="hidden lg:flex items-center space-x-8">
                         {navLinks.map((link) => (
-                            <div
-                                key={link.href}
-                                className="relative group"
-                            >
+                            <div key={link.href} className="relative">
                                 {link.dropdown ? (
                                     <>
-                                        <Link
-                                            href={link.href}
-                                            className={`text-[16px] font-medium flex items-center gap-1 ${
-                                                pathname.startsWith(link.href)
-                                                    ? 'text-[#3A81F7]'
-                                                    : 'text-[#4A4A4A]'
-                                            } hover:text-[#3A81F7] transition-colors`}
+                                        <button
+                                            onClick={() => handleDropdown(link.href)}
+                                            className="flex items-center text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none"
                                         >
-                                            {link.label}
-                                            <ChevronDown className="w-4 h-4" strokeWidth={2} />
-                                        </Link>
-                                        <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                            <div className="bg-[#FFFFFF] border border-[#D9D9D9] min-w-[240px] shadow-sm">
-                                                {link.dropdown.map((item) => (
-                                                    <Link
-                                                        key={item.href}
-                                                        href={item.href}
-                                                        className={`block px-6 py-3 text-[16px] border-b border-[#E5E7EB] last:border-b-0 ${
-                                                            pathname === item.href
-                                                                ? 'text-[#3A81F7] bg-[#F8FAFC] font-medium'
-                                                                : 'text-[#4A4A4A]'
-                                                        } hover:text-[#3A81F7] hover:bg-[#F8FAFC] transition-colors`}
-                                                    >
-                                                        {item.label}
-                                                    </Link>
-                                                ))}
+                                            <span>{link.label}</span>
+                                            <ChevronDown className={`ml-2 h-5 w-5 ${openDropdown === link.href ? 'transform rotate-180' : ''}`} />
+                                        </button>
+                                        {openDropdown === link.href && (
+                                            <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                                                <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                                                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                                        {link.dropdown.map((item) => (
+                                                            <Link
+                                                                key={item.href}
+                                                                href={item.href}
+                                                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                                                onClick={() => setOpenDropdown(null)}
+                                                            >
+                                                                <div className="ml-4">
+                                                                    <p className="text-base font-medium text-gray-900">{item.label}</p>
+                                                                </div>
+                                                            </Link>
+                                                        ))}
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
+                                        )}
                                     </>
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-[16px] font-medium ${
-                                            pathname.startsWith(link.href)
-                                                ? 'text-[#3A81F7]'
-                                                : 'text-[#4A4A4A]'
-                                        } hover:text-[#3A81F7] transition-colors`}
+                                        className="text-base font-medium text-gray-500 hover:text-gray-900"
                                     >
                                         {link.label}
                                     </Link>
@@ -163,64 +136,62 @@ export default function Header() {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden lg:block">
+                    <div className="hidden lg:flex items-center">
                         <Button href="/contact" variant="primary">
                             Get Started
                         </Button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="lg:hidden">
+                    <div className="-mr-2 flex items-center lg:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="p-2 hover:bg-[#F8FAFC] transition-colors"
-                            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                            className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         >
-                            {isOpen ? (
-                                <X className="w-6 h-6 text-[#050816]" strokeWidth={2} />
-                            ) : (
-                                <Menu className="w-6 h-6 text-[#050816]" strokeWidth={2} />
-                            )}
+                            <span className="sr-only">Open main menu</span>
+                            {isOpen ? <X className="block h-6 w-6" aria-hidden="true" /> : <Menu className="block h-6 w-6" aria-hidden="true" />}
                         </button>
                     </div>
                 </div>
             </div>
 
             {/* Mobile Navigation */}
-            <div
-                className={`lg:hidden bg-[#FFFFFF] fixed top-[80px] left-0 w-full h-[calc(100vh-80px)] z-[9999] overflow-y-auto border-t border-[#E5E7EB] transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                <div className="px-6 py-8 flex flex-col min-h-full">
-                    <nav className="flex flex-col gap-4">
+            {isOpen && (
+                <div className="lg:hidden">
+                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => (
                             <div key={link.href}>
                                 {link.dropdown ? (
-                                    <div>
-                                        <div 
-                                            className="flex justify-between items-center text-[20px] font-semibold py-3 cursor-pointer"
-                                            onClick={() => setOpenMobileSubmenu(openMobileSubmenu === link.href ? null : link.href)}
+                                    <>
+                                        <button
+                                            onClick={() => handleDropdown(link.href)}
+                                            className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                                         >
-                                            <span className={`${pathname.startsWith(link.href) ? 'text-[#3A81F7]' : 'text-[#050816]'}`}>{link.label}</span>
-                                            <ChevronDown size={20} className={`transition-transform ${openMobileSubmenu === link.href ? 'rotate-180' : ''}`} />
-                                        </div>
-                                        {openMobileSubmenu === link.href && (
-                                            <div className="pl-4 pt-2 pb-2 flex flex-col gap-2 border-l-2 border-[#E5E7EB]">
+                                            <span>{link.label}</span>
+                                            <ChevronDown className={`ml-2 h-5 w-5 ${openDropdown === link.href ? 'transform rotate-180' : ''}`} />
+                                        </button>
+                                        {openDropdown === link.href && (
+                                            <div className="px-3 pt-2 pb-3 space-y-1">
                                                 {link.dropdown.map((item) => (
                                                     <Link
                                                         key={item.href}
                                                         href={item.href}
-                                                        className={`text-[16px] block py-2 ${pathname === item.href ? 'text-[#3A81F7] font-medium' : 'text-[#4A4A4A]'}`}
-                                                        onClick={() => setIsOpen(false)}
+                                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                                                        onClick={() => {
+                                                            setIsOpen(false);
+                                                            setOpenDropdown(null);
+                                                        }}
                                                     >
                                                         {item.label}
                                                     </Link>
                                                 ))}
                                             </div>
                                         )}
-                                    </div>
+                                    </>
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-[20px] font-semibold block py-3 ${pathname === link.href ? 'text-[#3A81F7]' : 'text-[#050816]'}`}
+                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.label}
@@ -228,14 +199,14 @@ export default function Header() {
                                 )}
                             </div>
                         ))}
-                    </nav>
-                    <div className="mt-auto pt-8">
+                    </div>
+                    <div className="py-3 px-5">
                         <Button href="/contact" variant="primary" className="w-full" onClick={() => setIsOpen(false)}>
                             Get Started
                         </Button>
                     </div>
                 </div>
-            </div>
+            )}
         </header>
     );
 }
