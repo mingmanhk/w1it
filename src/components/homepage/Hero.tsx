@@ -15,15 +15,10 @@ export default function HomeHero() {
         subtitle="Small businesses deserve powerful IT solutions without the complexity. We solve your tech problems and prevent future disruptions — so you can focus on growing your business, not troubleshooting it."
         imageSrc="/images/optimized/hero-graphic.webp"
         imageAlt="W1IT IT Solutions Hero Graphic"
-    >
-        <div className="flex flex-col md:flex-row gap-4">
-            <Button href="/contact" variant="primary">
-                Schedule Free Consultation
-            </Button>
-            <Button href="/services" variant="secondary">
-                Explore Our Services
-            </Button>
-        </div>
-    </Hero>
+        ctaButton={{
+          href: "/contact",
+          text: "Schedule Free Consultation"
+        }}
+    />
   );
 }
