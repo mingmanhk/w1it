@@ -12,19 +12,19 @@ export default function BellevuePage() {
       <p className="text-lg mb-6">
         W1IT Solutions provides comprehensive IT managed services for businesses in Bellevue, Washington. 
         Our local team offers expert IT support, cybersecurity, cloud solutions, and network management 
-        tailored to Bellevue's technology-focused business community.
+        tailored to Bellevue&apos;s diverse business landscape.
       </p>
       
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Our Bellevue IT Services</h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Managed IT Services</li>
-            <li>Cybersecurity Solutions</li>
-            <li>Cloud Infrastructure</li>
+            <li>IT Support & Maintenance</li>
             <li>Network Security</li>
-            <li>Business Continuity Planning</li>
-            <li>IT Compliance & Auditing</li>
+            <li>Data Backup Solutions</li>
+            <li>Cloud Services</li>
+            <li>Hardware Management</li>
+            <li>Software Support</li>
           </ul>
         </div>
         
@@ -32,13 +32,13 @@ export default function BellevuePage() {
           <h2 className="text-2xl font-semibold mb-4">Serving Bellevue Areas</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Downtown Bellevue</li>
-            <li>Bel-Red Corridor</li>
-            <li>Factoria</li>
+            <li>Bellevue Downtown Park</li>
             <li>Crossroads</li>
-            <li>Lake Hills</li>
-            <li>Wilburton</li>
+            <li>Factoria</li>
             <li>Eastgate</li>
-            <li>Newport Hills</li>
+            <li>Wilburton</li>
+            <li>Bridle Trails</li>
+            <li>Medina</li>
           </ul>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function BellevuePage() {
       <div className="mt-8 p-6 bg-gray-50 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">Contact Our Bellevue Team</h2>
         <p className="mb-4">
-          Ready to enhance your Bellevue business's technology infrastructure? Contact our local Bellevue team today.
+          Ready to optimize your Bellevue business&apos;s IT systems? Contact our local Bellevue team today.
         </p>
         <a 
           href="/contact" 

@@ -145,7 +145,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT Infrastructure?</h2>
           <p className="text-lg mb-6">
-            Like what you see in our case studies? Let's discuss how we can apply these proven strategies to your business.
+            Like what you see in our case studies? Let&apos;s discuss how we can apply these proven strategies to your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -185,7 +185,7 @@ export default function CaseStudiesPage() {
           <h3 className="text-2xl font-semibold mt-8 mb-4">Serving Washington Businesses</h3>
           <p className="mb-4">
             With locations serving Seattle, Bellevue, Tacoma, and surrounding areas, W1IT Solutions provides localized IT support 
-            with enterprise-grade expertise. Whether you're a small business in downtown Seattle or a government agency in Lakewood, 
+            with enterprise-grade expertise. Whether you&apos;re a small business in downtown Seattle or a government agency in Lakewood, 
             our team has the experience to optimize your IT infrastructure.
           </p>
         </div>

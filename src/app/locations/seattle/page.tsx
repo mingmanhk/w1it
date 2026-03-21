@@ -12,19 +12,19 @@ export default function SeattlePage() {
       <p className="text-lg mb-6">
         W1IT Solutions provides comprehensive IT managed services for businesses in Seattle, Washington. 
         Our local team offers expert IT support, cybersecurity, cloud solutions, and network management 
-        tailored to Seattle's unique business environment.
+        tailored to Seattle&apos;s diverse business landscape.
       </p>
       
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Our Seattle IT Services</h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>24/7 IT Support & Help Desk</li>
-            <li>Cybersecurity & Threat Protection</li>
-            <li>Cloud Migration & Management</li>
-            <li>Network Infrastructure</li>
-            <li>Data Backup & Disaster Recovery</li>
-            <li>IT Consulting & Strategy</li>
+            <li>IT Support & Maintenance</li>
+            <li>Network Security</li>
+            <li>Data Backup Solutions</li>
+            <li>Cloud Services</li>
+            <li>Hardware Management</li>
+            <li>Software Support</li>
           </ul>
         </div>
         
@@ -32,13 +32,13 @@ export default function SeattlePage() {
           <h2 className="text-2xl font-semibold mb-4">Serving Seattle Areas</h2>
           <ul className="list-disc pl-5 space-y-2">
             <li>Downtown Seattle</li>
-            <li>South Lake Union</li>
             <li>Belltown</li>
-            <li>Queen Anne</li>
+            <li>South Lake Union</li>
             <li>Capitol Hill</li>
+            <li>Queen Anne</li>
             <li>Ballard</li>
             <li>Fremont</li>
-            <li>West Seattle</li>
+            <li>University District</li>
           </ul>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function SeattlePage() {
       <div className="mt-8 p-6 bg-gray-50 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">Contact Our Seattle Team</h2>
         <p className="mb-4">
-          Ready to improve your Seattle business's IT infrastructure? Contact our local Seattle team today.
+          Ready to optimize your Seattle business&apos;s IT systems? Contact our local Seattle team today.
         </p>
         <a 
           href="/contact" 

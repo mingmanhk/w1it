@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Button from '@/components/Button';
+import Image from 'next/image';
 
 interface HeroProps {
   title: string;
@@ -24,10 +25,12 @@ export default function Hero({
   return (
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src={imageSrc}
           alt={imageAlt}
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#050816]/60 to-[#050816]/80" />
       </div>

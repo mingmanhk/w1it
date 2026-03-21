@@ -12,7 +12,7 @@ export default function TacomaPage() {
       <p className="text-lg mb-6">
         W1IT Solutions provides comprehensive IT managed services for businesses in Tacoma, Washington. 
         Our local team offers expert IT support, cybersecurity, cloud solutions, and network management 
-        tailored to Tacoma's diverse business landscape.
+        tailored to Tacoma&apos;s diverse business landscape.
       </p>
       
       <div className="grid md:grid-cols-2 gap-8">
@@ -46,7 +46,7 @@ export default function TacomaPage() {
       <div className="mt-8 p-6 bg-gray-50 rounded-lg">
         <h2 className="text-2xl font-semibold mb-4">Contact Our Tacoma Team</h2>
         <p className="mb-4">
-          Ready to optimize your Tacoma business's IT systems? Contact our local Tacoma team today.
+          Ready to optimize your Tacoma business&apos;s IT systems? Contact our local Tacoma team today.
         </p>
         <a 
           href="/contact" 
