@@ -13,33 +13,11 @@ const caseStudies = [
     title: "Modernizing Multi‑Site Veeam + VMware Backup Architecture",
     excerpt: "Consolidated complex backup infrastructure for a municipal government, reducing complexity by 40% and eliminating snapshot failures.",
     category: "Backup & Disaster Recovery",
-    client: "City Government",
-    location: "Lakewood, Washington",
+    client: "Municipal Government",
+    location: "Washington State",
     duration: "3 months",
     technologies: ["VMware vSphere", "Veeam Backup", "Dell Storage", "PRTG Monitoring"],
     slug: "modernizing-multi-site-veeam-vmware-backup-architecture",
-  },
-  {
-    id: "ups-modernization-power-continuity-strategy",
-    title: "UPS Modernization & Power Continuity Strategy",
-    excerpt: "Standardized UPS deployment across critical infrastructure, achieving 100% visibility and predictable lifecycle management.",
-    category: "Infrastructure",
-    client: "Municipal Facilities",
-    location: "Washington State",
-    duration: "2 months",
-    technologies: ["VMware ESXi", "SNMP Monitoring", "UPS Management", "Power Protection"],
-    slug: "ups-modernization-power-continuity-strategy",
-  },
-  {
-    id: "hardware-lifecycle-maintenance-strategy",
-    title: "Hardware Lifecycle & Maintenance Strategy",
-    excerpt: "Created unified 5-year hardware lifecycle plan with 100% asset visibility and predictable budget forecasting.",
-    category: "Asset Management",
-    client: "Multi-Department City",
-    location: "Pacific Northwest",
-    duration: "4 months",
-    technologies: ["VMware", "Storage Arrays", "Network Switches", "Asset Management"],
-    slug: "hardware-lifecycle-maintenance-strategy",
   },
   {
     id: "vmware-snapshot-governance-high-io-workload-protection",
@@ -51,28 +29,6 @@ const caseStudies = [
     duration: "1 month",
     technologies: ["VMware vSphere", "Veeam", "ReFS", "Performance Monitoring"],
     slug: "vmware-snapshot-governance-high-io-workload-protection",
-  },
-  {
-    id: "cloud-forward-system-architecture-proposal",
-    title: "Cloud‑Forward System Architecture Proposal",
-    excerpt: "Designed hybrid cloud architecture with Entra ID integration and security enhancements for modern IT infrastructure.",
-    category: "Cloud & Security",
-    client: "Public Sector",
-    location: "Washington State",
-    duration: "3 months",
-    technologies: ["Entra ID", "Hybrid Identity", "MFA", "Windows 11 Migration"],
-    slug: "cloud-forward-system-architecture-proposal",
-  },
-  {
-    id: "standardizing-system-administration-governance",
-    title: "Standardizing System Administration & Operational Governance",
-    excerpt: "Created comprehensive System Administration Plan with clear modernization goals and operational roadmaps.",
-    category: "IT Governance",
-    client: "Government IT Department",
-    location: "Lakewood, WA",
-    duration: "2 months",
-    technologies: ["Windows Server", "Group Policy", "OS Audits", "IT Governance"],
-    slug: "standardizing-system-administration-governance",
   },
 ];
 
@@ -89,7 +45,7 @@ export default function CaseStudiesPage() {
       <div className="mb-8">
         <h2 className="text-3xl font-semibold mb-6">Our Expertise Areas</h2>
         <div className="flex flex-wrap gap-3">
-          {["Backup & Disaster Recovery", "Infrastructure", "Asset Management", "Virtualization", "Cloud & Security", "IT Governance"].map((area) => (
+          {["Backup & Disaster Recovery", "Virtualization"].map((area) => (
             <span key={area} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
               {area}
             </span>
@@ -97,7 +53,7 @@ export default function CaseStudiesPage() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
         {caseStudies.map((study) => (
           <div key={study.id} className="border rounded-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
             <div className="p-6">
@@ -185,7 +141,7 @@ export default function CaseStudiesPage() {
           <h3 className="text-2xl font-semibold mt-8 mb-4">Serving Washington Businesses</h3>
           <p className="mb-4">
             With locations serving Seattle, Bellevue, Tacoma, and surrounding areas, W1IT Solutions provides localized IT support 
-            with enterprise-grade expertise. Whether you&apos;re a small business in downtown Seattle or a government agency in Lakewood, 
+            with enterprise-grade expertise. Whether you&apos;re a small business in downtown Seattle or a government agency in Washington State, 
             our team has the experience to optimize your IT infrastructure.
           </p>
         </div>

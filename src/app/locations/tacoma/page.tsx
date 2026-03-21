@@ -38,7 +38,7 @@ export default function TacomaPage() {
             <li>East Side</li>
             <li>University Place</li>
             <li>Fircrest</li>
-            <li>Lakewood</li>
+            <li>Ruston</li>
           </ul>
         </div>
       </div>
