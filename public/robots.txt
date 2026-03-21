@@ -1,34 +1,12 @@
-# robots.txt for W1 IT Solutions (w1it.com)
 User-agent: *
 Allow: /
-
-# Sitemaps
-Sitemap: https://w1it.com/sitemap.xml
-
-# Disallow crawling of API routes and admin areas
-Disallow: /api/
 Disallow: /admin/
-Disallow: /dashboard/
 Disallow: /private/
 
-# Allow crawling of all public pages
-Allow: /about
-Allow: /contact
-Allow: /services/
-Allow: /solutions/
-Allow: /apps/
-Allow: /blog/
-Allow: /case-studies
-Allow: /it-consulting
-Allow: /it-services
+Sitemap: https://w1it.com/sitemap.xml
 
-# Legal pages
-Allow: /privacy
-Allow: /terms
-Allow: /cookies
+# Crawl delay
+Crawl-delay: 10
 
-# Crawl delay for search engines (optional)
-Crawl-delay: 2
-
-# Preferred host (www vs non-www)
+# Preferred host
 Host: https://w1it.com
