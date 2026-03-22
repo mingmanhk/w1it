@@ -24,7 +24,7 @@ export default function CaseStudiesPage() {
             <div className="md:w-2/3">
               <h2 className="text-2xl font-bold mb-3">Featured Technical Article</h2>
               <h3 className="text-xl font-semibold mb-3">
-                VMware & Veeam Backup Architecture for Financial Services
+                VMware & Veeam Backup Modernization for Ferry Company
               </h3>
               <p className="text-gray-700 mb-4">
                 Discover how we transformed backup infrastructure for a financial trading company,
@@ -42,7 +42,7 @@ export default function CaseStudiesPage() {
                 </span>
               </div>
               <Link
-                href="/blog/vmware-veeam-backup-architecture-financial-services"
+                href="/blog/vmware-veeam-backup-modernization-ferry-company"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Read Full Article
