@@ -34,7 +34,7 @@ export default function BlogPost() {
             <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
               Transportation & Logistics
             </span>
-            <span className="text-gray-500">• March 21, 2026</span>
+            <span className="text-gray-500">• March 15, 2026</span>
           </div>
           
           <h1 className="text-4xl font-bold mb-6">
