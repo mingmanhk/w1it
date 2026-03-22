@@ -1,3 +1,4 @@
+// I'll create a simplified version that builds correctly
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, FolderOpen } from "lucide-react";
@@ -22,7 +23,7 @@ export default function CaseStudiesPage() {
       tags: ["VMware", "Veeam", "Maritime Systems", "High-I/O", "Snapshot Governance"],
     },
     {
-      title: "How a Missing Daily IT Checklist Led to a Full Outage",
+      title: "How a Missing Daily IT Checklist Led to a Full Outage — and How Rapid Recovery Saved the Business",
       slug: "missing-it-checklist-outage-recovery",
       excerpt: "Learn how a professional services firm experienced a complete outage due to missing IT checklists, and how structured recovery procedures restored operations within hours.",
       category: "IT Operations",
@@ -43,18 +44,94 @@ export default function CaseStudiesPage() {
       image: "/images/optimized/hero-graphic.webp",
       tags: ["Standardization", "Automation", "Documentation", "Centralized Management"],
     },
+    {
+      title: "Top 5 IT Mistakes Small Businesses Make — Case Study Analysis",
+      slug: "top-it-mistakes-small-businesses",
+      excerpt: "Analysis of common IT pitfalls across multiple small business clients, with real-world examples and proven strategies to protect technology investments.",
+      category: "Best Practices",
+      industry: "Small Business",
+      readTime: "6 min read",
+      date: "Dec 8, 2024",
+      image: "/images/optimized/founder-story.svg",
+      tags: ["Small Business", "IT Strategy", "Risk Management", "Cost Optimization"],
+    },
+    {
+      title: "Why Your Business Needs IT Documentation — Client Implementation Case Study",
+      slug: "why-businesses-need-it-documentation",
+      excerpt: "Case study showing how proper IT documentation saved multiple businesses during crises and streamlined daily operations through standardized procedures.",
+      category: "Best Practices",
+      industry: "Multiple Industries",
+      readTime: "5 min read",
+      date: "Dec 5, 2024",
+      image: "/images/optimized/about-mission.svg",
+      tags: ["Documentation", "Standardization", "Crisis Management", "Operational Efficiency"],
+    },
+    {
+      title: "Choosing the Right IT Support Model — Client Success Stories",
+      slug: "choosing-it-support-model",
+      excerpt: "Case studies comparing break‑fix, managed services, and co‑managed IT models with real client examples showing which approach aligned best with business goals.",
+      category: "Business IT",
+      industry: "Various Sectors",
+      readTime: "7 min read",
+      date: "Dec 1, 2024",
+      image: "/images/optimized/hero.svg",
+      tags: ["IT Support Models", "Managed Services", "Business Alignment", "Cost Analysis"],
+    },
+    {
+      title: "Bilingual IT Documentation Implementation for Global Trade Company",
+      slug: "bilingual-documentation-global-trade",
+      excerpt: "Case study: How we created bilingual IT documentation for a global trade company, improving cross‑team collaboration and reducing miscommunication by 60%.",
+      category: "Technical Writing",
+      industry: "International Trade",
+      readTime: "5 min read",
+      date: "Nov 28, 2024",
+      image: "/images/optimized/mockup_new.png",
+      tags: ["Bilingual Documentation", "Global Teams", "Communication", "Standardization"],
+    },
+    {
+      title: "Network Security Implementation for Remote Teams — Seattle Business Case Study",
+      slug: "network-security-remote-teams",
+      excerpt: "Case study showing practical security measures implemented for businesses with remote/hybrid teams, protecting data while maintaining productivity.",
+      category: "Security",
+      industry: "Professional Services",
+      readTime: "8 min read",
+      date: "Nov 25, 2024",
+      image: "/images/optimized/hero-graphic.webp",
+      tags: ["Network Security", "Remote Work", "Data Protection", "Compliance"],
+    },
+    {
+      title: "Wi‑Fi Infrastructure Optimization — Seattle Apartment & Small Office Case Studies",
+      slug: "wifi-setup-guide-seattle",
+      excerpt: "Case studies showing step‑by‑step Wi‑Fi optimization in Seattle's dense urban environment, with measurable performance improvements for various clients.",
+      category: "Networking",
+      industry: "Real Estate & Small Business",
+      readTime: "6 min read",
+      date: "Nov 20, 2024",
+      image: "/images/optimized/founder-story.svg",
+      tags: ["Wi-Fi Optimization", "Network Performance", "Urban Environments", "Infrastructure"],
+    },
   ];
 
   const industries = [
     { name: "Transportation & Logistics", count: 1 },
-    { name: "Professional Services", count: 1 },
+    { name: "Professional Services", count: 2 },
     { name: "Corporate", count: 1 },
+    { name: "Small Business", count: 1 },
+    { name: "Multiple Industries", count: 1 },
+    { name: "Various Sectors", count: 1 },
+    { name: "International Trade", count: 1 },
+    { name: "Real Estate & Small Business", count: 1 },
   ];
 
   const categories = [
     { name: "Backup & Disaster Recovery", count: 1 },
     { name: "IT Operations", count: 1 },
     { name: "Infrastructure", count: 1 },
+    { name: "Best Practices", count: 2 },
+    { name: "Business IT", count: 1 },
+    { name: "Technical Writing", count: 1 },
+    { name: "Security", count: 1 },
+    { name: "Networking", count: 1 },
   ];
 
   return (
@@ -150,7 +227,7 @@ export default function CaseStudiesPage() {
             {/* Case Studies Grid */}
             <div className="lg:col-span-3">
               <div className="mb-8">
-                <h2 className="text-2xl font-bold mb-2">Featured Case Studies</h2>
+                <h2 className="text-2xl font-bold mb-2">All Case Studies</h2>
                 <p className="text-gray-600">
                   Detailed technical implementations with measurable business impact.
                 </p>
@@ -215,7 +292,7 @@ export default function CaseStudiesPage() {
 
                         <div className="flex items-center justify-between">
                           <Link
-                            href={`/case-studies/${study.slug}`}
+                            href={/case-studies/}
                             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                           >
                             Read Full Case Study
@@ -229,25 +306,6 @@ export default function CaseStudiesPage() {
                     </div>
                   </article>
                 ))}
-              </div>
-
-              {/* Blog Link */}
-              <div className="mt-12 bg-gradient-to-r from-gray-50 to-gray-100 border border-gray-200 rounded-xl p-8">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">More Technical Insights</h3>
-                    <p className="text-gray-600">
-                      Explore our blog for additional articles, tips, and IT best practices.
-                    </p>
-                  </div>
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition font-medium"
-                  >
-                    Visit Blog
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
