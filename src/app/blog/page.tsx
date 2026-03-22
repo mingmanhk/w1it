@@ -34,7 +34,7 @@ export default function Blog() {
       category: 'Case Study',
       readTime: '10 min read',
       date: 'Mar 15, 2026',
-      image: '/images/optimized/hero-graphic.webp',
+      image: '/images/optimized/mockup_new.png',
     },
     {
       title: 'Case Study: How a Missing Daily IT Checklist Led to a Full Outage — and How Rapid Recovery Saved the Business',
@@ -52,7 +52,7 @@ export default function Blog() {
       category: 'Case Study',
       readTime: '7 min read',
       date: 'Dec 26, 2024',
-      image: '/images/optimized/hero-graphic.webp',
+      image: '/images/optimized/mockup_new.png',
     },
     {
       title: 'Top 5 IT Mistakes Small Businesses Make',
@@ -97,7 +97,7 @@ export default function Blog() {
       category: 'Security',
       readTime: '8 min read',
       date: 'Nov 25, 2024',
-      image: '/images/optimized/hero-graphic.webp',
+      image: '/images/optimized/mockup_new.png',
     },
     {
       title: 'Wi‑Fi Setup Guide for Seattle Apartments and Small Offices',
