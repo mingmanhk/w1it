@@ -21,6 +21,9 @@ const config: Config = {
           blue: '#3A81F7',
           green: '#00A878',
           white: '#FFFFFF',
+          // Additional colors for apps
+          charcoal: '#1A1A1A',
+          'gray-medium': '#666666',
           gray: {
             600: '#4A4A4A',
             300: '#D9D9D9',
