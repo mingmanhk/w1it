@@ -292,7 +292,7 @@ export default function CaseStudiesPage() {
 
                         <div className="flex items-center justify-between">
                           <Link
-                            href={/case-studies/}
+                            href="/case-studies"
                             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                           >
                             Read Full Case Study
