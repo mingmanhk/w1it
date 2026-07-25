@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Case Study: How a Missing Daily IT Checklist Led to a Full Outage — and How Rapid Recovery Saved the Business - Seattle IT Case Study',
   description:
-    'Learn how a professional services firm in Seattle experienced a complete outage due to missing IT checklists, and how structured recovery procedures restored operations within hours.',
+    'How a Seattle firm hit a complete outage due to missing IT checklists, and how structured recovery procedures restored operations in hours.',
   keywords: [
     'IT checklist case study',
     'Seattle IT outage recovery',
@@ -17,7 +17,7 @@ export const metadata: Metadata = generateSEO({
     'IT disaster recovery',
     'Seattle professional services IT',
   ],
-  canonical: '/blog/missing-it-checklist-outage-recovery',
+  canonical: '/case-studies/missing-it-checklist-outage-recovery',
   openGraph: {
     title: 'Case Study: Missing IT Checklist Leads to Full Outage & Rapid Recovery',
     description: 'How structured recovery procedures saved a Seattle business from complete IT failure.',
@@ -481,7 +481,7 @@ export default function MissingITChecklistOutageRecovery() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Transforming Fragmented IT into Standardized Infrastructure
               </h3>
-              <Button variant="secondary" href="/blog/fragmented-it-standardized-infrastructure" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/fragmented-it-standardized-infrastructure" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -490,7 +490,7 @@ export default function MissingITChecklistOutageRecovery() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -499,7 +499,7 @@ export default function MissingITChecklistOutageRecovery() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

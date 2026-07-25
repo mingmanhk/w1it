@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'How Bilingual Documentation Improves Global Trade - English & Chinese',
   description:
-    'Why professional bilingual technical documentation matters for global business. Learn how English-Chinese documentation bridges markets, reduces errors, and accelerates international expansion.',
+    'Why bilingual technical documentation matters for global business: English-Chinese docs bridge markets, reduce errors, and speed expansion.',
   keywords: [
     'bilingual documentation',
     'global trade documentation',
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateSEO({
     'cross-cultural documentation',
     'global business communication',
   ],
-  canonical: '/blog/bilingual-documentation-global-trade',
+  canonical: '/case-studies/bilingual-documentation-global-trade',
   openGraph: {
     title: 'How Bilingual Documentation Improves Global Trade',
     description: 'The business case for professional bilingual technical documentation in international trade.',
@@ -305,7 +305,7 @@ export default function BilingualDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -314,7 +314,7 @@ export default function BilingualDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -323,7 +323,7 @@ export default function BilingualDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 WiFi Setup Guide for Seattle Homes and Offices
               </h3>
-              <Button variant="secondary" href="/blog/wifi-setup-guide-seattle" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/wifi-setup-guide-seattle" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

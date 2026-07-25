@@ -31,7 +31,7 @@ export default function CookieConsent() {
           <p className="font-medium">We use cookies to improve your experience</p>
           <p className="text-gray-400 text-xs mt-1">
             By clicking Accept, you agree to our use of cookies. 
-            <a href="/privacy-policy" className="underline hover:text-blue-400 ml-1">Learn more</a>
+            <a href="/privacy" className="underline hover:text-blue-400 ml-1">Learn more</a>
           </p>
         </div>
         <div className="flex gap-3">

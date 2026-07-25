@@ -4,7 +4,7 @@ import { generateSEO } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'Contact w1IT - IT Services & App Support',
   description:
-    'Get in touch with w1IT for IT services, consulting, or app support. Based in Seattle, WA. Bilingual support available (English/Chinese). Contact us for managed IT services, remote troubleshooting, or questions about our apps.',
+    'Contact W1IT in Seattle, WA for managed IT services, consulting, or app support. Bilingual support available in English and Chinese.',
   keywords: [
     'contact w1IT',
     'IT support contact',

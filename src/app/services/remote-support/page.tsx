@@ -21,7 +21,7 @@ import Hero from '@/components/Hero';
 export const metadata: Metadata = generateSEO({
   title: 'Remote IT Support & Troubleshooting - Seattle & Worldwide',
   description:
-    'Fast remote IT support and troubleshooting from Seattle. Secure remote desktop support, system diagnostics, software troubleshooting, and technical assistance available worldwide.',
+    'Fast, secure remote IT support from Seattle. Remote desktop support, system diagnostics, and software troubleshooting available worldwide.',
   keywords: [
     'remote IT support Seattle',
     'remote troubleshooting',

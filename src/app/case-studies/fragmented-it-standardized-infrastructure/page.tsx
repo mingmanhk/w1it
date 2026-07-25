@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Case Study: Transforming Fragmented IT into Documented, Standardized Infrastructure - Seattle IT Consulting',
   description:
-    'Learn how we transformed a mid‑sized corporate client’s fragmented IT environment into a documented, standardized, and automated infrastructure with centralized management.',
+    'How we transformed a client\'s fragmented IT environment into a documented, standardized, automated infrastructure with central management.',
   keywords: [
     'IT standardization case study',
     'Seattle IT consulting',
@@ -17,7 +17,7 @@ export const metadata: Metadata = generateSEO({
     'IT process improvement',
     'corporate IT modernization',
   ],
-  canonical: '/blog/fragmented-it-standardized-infrastructure',
+  canonical: '/case-studies/fragmented-it-standardized-infrastructure',
   openGraph: {
     title: 'Case Study: Transforming Fragmented IT into Standardized Infrastructure',
     description: 'How we brought order to chaos for a mid‑sized corporate client with fragmented IT systems.',
@@ -448,7 +448,7 @@ export default function FragmentedITStandardizedInfrastructure() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Missing IT Checklist Leads to Full Outage & Rapid Recovery
               </h3>
-              <Button variant="secondary" href="/blog/missing-it-checklist-outage-recovery" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/missing-it-checklist-outage-recovery" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -457,7 +457,7 @@ export default function FragmentedITStandardizedInfrastructure() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -466,7 +466,7 @@ export default function FragmentedITStandardizedInfrastructure() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
-              <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/choosing-it-support-model" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

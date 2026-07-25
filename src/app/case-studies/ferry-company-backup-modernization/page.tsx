@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "VMware & Veeam Backup Modernization for European Ferry Company | W1IT Solutions",
-  description: "Case study: How W1IT Solutions modernized multi-site backup infrastructure and implemented snapshot governance for a European ferry company, reducing complexity by 40% and eliminating critical failures.",
+  description: "How W1IT modernized multi-site backup infrastructure for a European ferry company, cutting complexity 40% and eliminating critical failures.",
   keywords: "VMware backup, Veeam architecture, ferry company IT, maritime systems, high-I/O workloads, snapshot governance, disaster recovery, virtualization management",
 };
 
@@ -151,13 +151,13 @@ export default function BlogPost() {
                 Schedule Maritime IT Consultation
               </a>
               <a 
-                href="/services/backup-disaster-recovery" 
+                href="/services/managed-services" 
                 className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition"
               >
                 Explore Our BDR Solutions
               </a>
               <a 
-                href="/industries/transportation-logistics" 
+                href="/industries" 
                 className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
               >
                 Transportation IT Services
@@ -194,16 +194,16 @@ export default function BlogPost() {
             <div className="bg-blue-50 p-6 rounded-lg">
               <h4 className="font-semibold mb-2">Related Services</h4>
               <ul className="space-y-2">
-                <li><a href="/services/backup-disaster-recovery" className="text-blue-600 hover:underline">Backup & Disaster Recovery</a></li>
-                <li><a href="/services/virtualization" className="text-blue-600 hover:underline">Virtualization Services</a></li>
-                <li><a href="/services/network-infrastructure" className="text-blue-600 hover:underline">Network Infrastructure</a></li>
+                <li><a href="/services/managed-services" className="text-blue-600 hover:underline">Backup & Disaster Recovery</a></li>
+                <li><a href="/services/cloud-solutions" className="text-blue-600 hover:underline">Virtualization Services</a></li>
+                <li><a href="/services/network-setup" className="text-blue-600 hover:underline">Network Infrastructure</a></li>
               </ul>
             </div>
             <div className="bg-green-50 p-6 rounded-lg">
               <h4 className="font-semibold mb-2">Industry Expertise</h4>
               <ul className="space-y-2">
-                <li><a href="/industries/transportation-logistics" className="text-green-700 hover:underline">Transportation & Logistics</a></li>
-                <li><a href="/industries/maritime" className="text-green-700 hover:underline">Maritime & Shipping</a></li>
+                <li><a href="/industries" className="text-green-700 hover:underline">Transportation & Logistics</a></li>
+                <li><a href="/industries" className="text-green-700 hover:underline">Maritime & Shipping</a></li>
                 <li><a href="/industries" className="text-green-700 hover:underline">All Industries</a></li>
               </ul>
             </div>

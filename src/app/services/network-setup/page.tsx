@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = generateSEO({
   title: 'Network Setup & Configuration Services Seattle',
   description:
-    'Professional network setup and configuration services in Seattle, Bellevue, Issaquah. WiFi installation, router configuration, VPN setup, and network troubleshooting for homes and businesses.',
+    'Professional network setup in Seattle, Bellevue, and Issaquah. WiFi installation, router configuration, VPN setup, and troubleshooting.',
   keywords: [
     'network setup Seattle',
     'WiFi installation Bellevue',

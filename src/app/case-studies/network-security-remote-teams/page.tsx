@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Network Security Essentials for Remote Teams - Seattle IT Security',
   description:
-    'Protect your remote workforce with these essential network security practices. VPN setup, secure access protocols, and cybersecurity best practices for Seattle businesses with distributed teams.',
+    'Essential network security for remote teams: VPN setup, secure access protocols, and cybersecurity best practices for Seattle businesses.',
   keywords: [
     'remote team security',
     'VPN setup Seattle',
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateSEO({
     'secure remote access',
     'work from home security',
   ],
-  canonical: '/blog/network-security-remote-teams',
+  canonical: '/case-studies/network-security-remote-teams',
   openGraph: {
     title: 'Network Security Essentials for Remote Teams',
     description: 'Essential security practices for Seattle businesses with remote workers.',
@@ -382,7 +382,7 @@ export default function NetworkSecurityRemoteTeams() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -391,7 +391,7 @@ export default function NetworkSecurityRemoteTeams() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 WiFi Setup Guide for Seattle Homes and Offices
               </h3>
-              <Button variant="secondary" href="/blog/wifi-setup-guide-seattle" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/wifi-setup-guide-seattle" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -400,7 +400,7 @@ export default function NetworkSecurityRemoteTeams() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

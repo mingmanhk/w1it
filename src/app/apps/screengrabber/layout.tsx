@@ -4,7 +4,7 @@ import { generateSEO, generateSoftwareApplicationSchema } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'ScreenGrabber - Modern macOS Screenshot App',
   description:
-    'Powerful, modern macOS screenshot application with global hotkey support and intelligent organization. Capture, annotate, and organize screenshots effortlessly. Coming November 2025.',
+    'Modern macOS screenshot app with global hotkey support and intelligent organization. Capture, annotate, and organize screenshots effortlessly.',
   keywords: [
     'screenshot app macOS',
     'screen capture macOS',

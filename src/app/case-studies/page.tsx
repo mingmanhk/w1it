@@ -5,7 +5,7 @@ import { ArrowRight, Calendar, Clock, FolderOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "IT Case Studies | W1IT Solutions - Bellevue IT Managed Services",
-  description: "Explore our technical expertise through detailed case studies showcasing real-world IT solutions for businesses in transportation, finance, and enterprise sectors.",
+  description: "Detailed case studies showcasing real-world IT solutions for businesses in transportation, finance, and enterprise sectors.",
   keywords: "IT case studies, technical solutions, VMware, Veeam, backup solutions, Bellevue IT services, transportation IT, maritime systems",
 };
 

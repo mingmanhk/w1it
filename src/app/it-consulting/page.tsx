@@ -8,7 +8,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'IT Consulting Services Seattle - Strategic Technology Planning',
   description:
-    'Expert IT consulting services in Seattle. Technology strategy, network architecture, process optimization, security compliance guidance, and bilingual technical writing (English/Chinese). Remote and local consulting available.',
+    'Expert IT consulting in Seattle: technology strategy, network architecture, security compliance, and bilingual technical writing. Remote and local.',
   keywords: [
     'IT consulting Seattle',
     'technology strategy Seattle',

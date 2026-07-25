@@ -5,7 +5,7 @@ import { Calendar, Clock, User, ArrowRight, Search, BookOpen, TrendingUp } from 
 
 export const metadata: Metadata = {
   title: "IT Case Studies & Tech Insights | W1IT Solutions - Seattle IT Expertise",
-  description: "Expert IT case studies, technology insights, and practical guides for Seattle businesses. Real-world solutions for backup, security, networking, and IT operations.",
+  description: "Expert IT case studies, technology insights, and practical guides for Seattle businesses: backup, security, networking, and IT operations.",
   keywords: "IT case studies, technology insights, Seattle IT solutions, business technology, cybersecurity, backup solutions, networking, IT documentation",
 };
 

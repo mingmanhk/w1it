@@ -16,22 +16,34 @@ export const metadata: Metadata = {
     default: "W1IT Solutions | Professional IT Managed Services Provider",
     template: "%s | W1IT Solutions"
   },
-  description: "W1IT Solutions provides comprehensive IT managed services, cybersecurity solutions, cloud infrastructure, and digital transformation consulting for businesses in Washington State.",
+  description: "IT managed services, cybersecurity, cloud infrastructure, and digital transformation consulting for businesses across Washington State.",
   keywords: "IT managed services, cybersecurity, cloud infrastructure, network management, Washington IT support, Seattle IT services, Bellevue IT support",
   authors: [{ name: "W1IT Solutions" }],
   metadataBase: new URL("https://w1it.com"),
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://w1it.com",
+    url: "./",
     title: "W1IT Solutions | Professional IT Managed Services Provider",
     description: "Comprehensive IT managed services, cybersecurity, and cloud solutions for Washington businesses.",
     siteName: "W1IT Solutions",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "W1IT Solutions — Professional IT Managed Services",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "W1IT Solutions | Professional IT Managed Services Provider",
     description: "Comprehensive IT managed services, cybersecurity, and cloud solutions for Washington businesses.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -87,11 +99,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#1a202c" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

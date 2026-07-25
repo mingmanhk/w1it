@@ -16,7 +16,7 @@ export const metadata: Metadata = generateSEO({
     'systems documentation',
     'IT best practices',
   ],
-  canonical: '/blog/why-businesses-need-it-documentation',
+  canonical: '/case-studies/why-businesses-need-it-documentation',
   openGraph: {
     title: 'Why Your Business Needs IT Documentation',
     description: 'Understanding the critical role of IT documentation in business success.',
@@ -447,7 +447,7 @@ export default function WhyITDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -456,7 +456,7 @@ export default function WhyITDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 How Bilingual Documentation Improves Global Trade
               </h3>
-              <Button variant="secondary" href="/blog/bilingual-documentation-global-trade" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/bilingual-documentation-global-trade" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -465,7 +465,7 @@ export default function WhyITDocumentation() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
-              <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/choosing-it-support-model" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

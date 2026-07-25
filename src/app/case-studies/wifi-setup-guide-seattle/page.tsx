@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'WiFi Setup Guide for Seattle Homes and Offices - Professional Tips',
   description:
-    'Complete WiFi setup guide for Seattle area homes and offices. Learn about router placement, mesh networks, channel selection, and optimizing coverage in Seattle buildings.',
+    'Complete WiFi setup guide for Seattle homes and offices: router placement, mesh networks, channel selection, and coverage optimization.',
   keywords: [
     'WiFi setup Seattle',
     'mesh network Seattle',
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateSEO({
     'WiFi coverage optimization',
     'router placement tips',
   ],
-  canonical: '/blog/wifi-setup-guide-seattle',
+  canonical: '/case-studies/wifi-setup-guide-seattle',
   openGraph: {
     title: 'WiFi Setup Guide for Seattle Homes and Offices',
     description: 'Professional WiFi setup tips for optimal coverage in Seattle area buildings.',
@@ -450,7 +450,7 @@ export default function WiFiSetupGuide() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Network Security Essentials for Remote Teams
               </h3>
-              <Button variant="secondary" href="/blog/network-security-remote-teams" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/network-security-remote-teams" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -459,7 +459,7 @@ export default function WiFiSetupGuide() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -468,7 +468,7 @@ export default function WiFiSetupGuide() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
-              <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/choosing-it-support-model" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

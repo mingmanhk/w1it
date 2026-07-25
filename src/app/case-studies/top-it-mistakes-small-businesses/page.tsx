@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Top 5 IT Mistakes Small Businesses Make - Seattle IT Guide',
   description:
-    'Avoid costly IT mistakes! Learn the top 5 IT pitfalls Seattle small businesses face and how to prevent them. Expert advice on backups, security, documentation, and IT planning.',
+    'The top 5 IT pitfalls Seattle small businesses face and how to prevent them: backups, security, documentation, and IT planning.',
   keywords: [
     'small business IT mistakes',
     'Seattle small business IT',
@@ -15,7 +15,7 @@ export const metadata: Metadata = generateSEO({
     'business technology errors',
     'IT best practices',
   ],
-  canonical: '/blog/top-it-mistakes-small-businesses',
+  canonical: '/case-studies/top-it-mistakes-small-businesses',
   openGraph: {
     title: 'Top 5 IT Mistakes Small Businesses Make',
     description: 'Essential IT advice for Seattle small businesses. Avoid these common costly mistakes.',
@@ -293,7 +293,7 @@ export default function TopITMistakes() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Network Security Essentials for Remote Teams
               </h3>
-              <Button variant="secondary" href="/blog/network-security-remote-teams" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/network-security-remote-teams" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -302,7 +302,7 @@ export default function TopITMistakes() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -311,7 +311,7 @@ export default function TopITMistakes() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Choosing the Right IT Support Model
               </h3>
-              <Button variant="secondary" href="/blog/choosing-it-support-model" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/choosing-it-support-model" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Choosing the Right IT Support Model for Your Seattle Business',
   description:
-    'Compare managed services, on-demand support, and IT consulting to find the best approach for your Seattle business. Cost breakdowns, pros and cons, and when each model makes sense.',
+    'Compare managed services, on-demand support, and IT consulting for your Seattle business: costs, pros and cons, and when each fits.',
   keywords: [
     'IT support models',
     'managed IT services Seattle',
@@ -16,7 +16,7 @@ export const metadata: Metadata = generateSEO({
     'MSP Seattle',
     'break-fix IT support',
   ],
-  canonical: '/blog/choosing-it-support-model',
+  canonical: '/case-studies/choosing-it-support-model',
   openGraph: {
     title: 'Choosing the Right IT Support Model for Your Seattle Business',
     description: 'Find the best IT support approach for your business needs and budget.',
@@ -434,7 +434,7 @@ export default function ChoosingITSupportModel() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Top 5 IT Mistakes Small Businesses Make
               </h3>
-              <Button variant="secondary" href="/blog/top-it-mistakes-small-businesses" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/top-it-mistakes-small-businesses" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -443,7 +443,7 @@ export default function ChoosingITSupportModel() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Why Your Business Needs IT Documentation
               </h3>
-              <Button variant="secondary" href="/blog/why-businesses-need-it-documentation" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/why-businesses-need-it-documentation" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>
@@ -452,7 +452,7 @@ export default function ChoosingITSupportModel() {
               <h3 className="font-heading font-semibold text-lg text-charcoal mb-2">
                 Network Security Essentials for Remote Teams
               </h3>
-              <Button variant="secondary" href="/blog/network-security-remote-teams" className="w-full mt-4">
+              <Button variant="secondary" href="/case-studies/network-security-remote-teams" className="w-full mt-4">
                 Read More →
               </Button>
             </Card>

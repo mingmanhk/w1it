@@ -4,7 +4,7 @@ import { generateSEO, generateSoftwareApplicationSchema } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'Pixel Color Picker - Fast macOS Color Picker App',
   description:
-    'The fastest, most elegant macOS color picker app. Pick colors with pixel-perfect precision, interactive color wheel, format conversion, and smart history. Free, offline, open-source. Perfect for designers and developers.',
+    'The fastest, most elegant macOS color picker. Pixel-perfect precision, color wheel, format conversion, and smart history. Free and open-source.',
   keywords: [
     'color picker macOS',
     'pixel color picker',

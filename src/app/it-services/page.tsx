@@ -7,7 +7,7 @@ import Card from '@/components/Card';
 export const metadata: Metadata = generateSEO({
   title: 'Seattle IT Support & Managed IT Services',
   description:
-    'Professional managed IT services in Seattle, WA. Remote IT troubleshooting, network monitoring, system administration, and bilingual technical support (English/Chinese) available worldwide and locally in Greater Seattle.',
+    'Managed IT services in Seattle, WA: remote troubleshooting, network monitoring, system administration, and bilingual support (English/Chinese).',
   keywords: [
     'Seattle IT support',
     'managed IT services Seattle',

@@ -4,7 +4,7 @@ import { generateSEO, generateSoftwareApplicationSchema } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'Contact SyncMate - Google & Apple Contacts Sync macOS',
   description:
-    'Keep your Google Contacts and Apple Contacts in perfect sync with powerful 2-way sync capabilities. Never lose contact information again. macOS app coming November 2025.',
+    'Keep Google Contacts and Apple Contacts in perfect sync with powerful 2-way sync. Never lose contact information again. macOS app coming soon.',
   keywords: [
     'contact sync macOS',
     'Google Contacts sync',

@@ -4,7 +4,7 @@ import { generateSEO, generateSoftwareApplicationSchema } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'DeepTicker - Stock Search & Watchlist iOS App',
   description:
-    'Powerful iOS stock search app with real-time performance tracking and intelligent watchlist management. Track stocks, analyze trends, and manage your portfolio on the go. Coming November 2025.',
+    'Powerful iOS stock search app with real-time performance tracking and intelligent watchlist management. Track stocks and trends on the go.',
   keywords: [
     'stock app iOS',
     'stock search app',
