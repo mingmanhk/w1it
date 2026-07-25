@@ -16,6 +16,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only hydration guard, runs once
     setMounted(true);
     const stored = localStorage.getItem("theme") as Theme | null;
     if (stored) {

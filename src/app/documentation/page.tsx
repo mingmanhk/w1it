@@ -42,7 +42,7 @@ export default function DocumentationPage() {
               Coming Soon
             </h2>
             <p className="text-lg text-neutral-600 mb-8">
-              We're preparing comprehensive technical documentation for our services and APIs. Stay tuned!
+              We&apos;re preparing comprehensive technical documentation for our services and APIs. Stay tuned!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/services">

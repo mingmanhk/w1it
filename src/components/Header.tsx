@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import Button from '@/components/Button';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
@@ -43,14 +42,25 @@ const navLinks = [
         ]
     },
     { href: '/industries', label: 'Industries' },
-    { href: '/blog', label: 'Blog' },
+    {
+        href: '/case-studies',
+        label: 'Resources',
+        dropdown: [
+            { href: '/case-studies', label: 'Case Studies' },
+            { href: '/blog', label: 'Blog' },
+            { href: '/knowledge-base', label: 'Knowledge Base' },
+            { href: '/checklists', label: 'IT Checklists' },
+            { href: '/tools', label: 'Free Tools' },
+            { href: '/testimonials', label: 'Testimonials' },
+            { href: '/support', label: 'Support' },
+        ]
+    },
     { href: '/about', label: 'About' },
 ];
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-    const pathname = usePathname();
 
     useEffect(() => {
         if (isOpen) {

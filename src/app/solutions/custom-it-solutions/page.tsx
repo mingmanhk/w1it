@@ -138,10 +138,10 @@ export default function CustomITSolutionsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-[28px] font-bold text-[#050816] mb-6">
-                When Standard Solutions Don't Fit
+                When Standard Solutions Don&apos;t Fit
               </h2>
               <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
-                Every business is unique, with specific processes, challenges, and goals that off-the-shelf solutions often can't address. That's where our custom IT solutions come in.
+                Every business is unique, with specific processes, challenges, and goals that off-the-shelf solutions often can&apos;t address. That&apos;s where our custom IT solutions come in.
               </p>
               <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
                 We combine our deep technical expertise with a thorough understanding of your business to create technology solutions that fit your exact requirements—whether that means customizing existing services or building something entirely new.
@@ -262,7 +262,7 @@ export default function CustomITSolutionsPage() {
               Have Unique Technology Needs?
             </h2>
             <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
-              Let's discuss your specific requirements and explore how custom IT solutions can drive your business forward.
+              Let&apos;s discuss your specific requirements and explore how custom IT solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">

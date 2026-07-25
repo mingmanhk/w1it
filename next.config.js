@@ -47,6 +47,18 @@ const nextConfig = {
   // Security headers
   headers: async () => [
     {
+      source: '/images/:path*',
+      headers: [
+        { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+      ],
+    },
+    {
+      source: '/:file(og-image.png|favicon.ico|favicon-16x16.png|favicon-32x32.png|apple-touch-icon.png|android-chrome-192x192.png|android-chrome-512x512.png)',
+      headers: [
+        { key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' },
+      ],
+    },
+    {
       source: '/(.*)',
       headers: [
         {

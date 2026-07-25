@@ -3,7 +3,6 @@
 import Button from '@/components/Button';
 import Image from 'next/image';
 import {
-  Rocket,
   Cloud,
   Database,
   Smartphone,
@@ -107,7 +106,7 @@ export default function DigitalTransformationPage() {
                 Strategic Digital Transformation
               </h2>
               <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
-                Digital transformation is more than just technology adoption—it's a fundamental rethinking of how your organization uses technology, people, and processes to fundamentally change business performance.
+                Digital transformation is more than just technology adoption—it&apos;s a fundamental rethinking of how your organization uses technology, people, and processes to fundamentally change business performance.
               </p>
               <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
                 We take a holistic approach that aligns technology investments with business objectives, ensuring measurable ROI and sustainable growth.

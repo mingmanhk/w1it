@@ -1,6 +1,5 @@
 'use client';
 
-import type { Metadata } from 'next';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
 import {

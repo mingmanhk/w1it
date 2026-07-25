@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "VMware & Veeam Backup Modernization for European Ferry Company | W1IT Solutions",
@@ -13,9 +13,9 @@ export default function BlogPost() {
       {/* Breadcrumb Navigation */}
       <nav className="mb-8">
         <ol className="flex items-center space-x-2 text-sm">
-          <li><a href="/" className="text-blue-600 hover:underline">Home</a></li>
+          <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
           <li className="text-gray-400">/</li>
-          <li><a href="/case-studies" className="text-blue-600 hover:underline">Case Studies</a></li>
+          <li><Link href="/case-studies" className="text-blue-600 hover:underline">Case Studies</Link></li>
           <li className="text-gray-400">/</li>
           <li className="text-gray-600">VMware & Veeam Backup Modernization</li>
         </ol>

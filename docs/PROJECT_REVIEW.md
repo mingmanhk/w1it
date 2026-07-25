@@ -4,6 +4,8 @@ Comprehensive audit of the W1IT website. Sections marked **[APPLIED]** were impl
 
 Reviewed: July 2026 · Stack: Next.js 16 / TypeScript 5 / Tailwind / Vercel
 
+> **Implementation update (2026-07-25):** the following recommendations have since been executed — CI workflow + Dependabot (§8), rate limiting + input validation + generic API errors (§7.2/7.3), skip-link + reduced-motion + breadcrumbs w/ BreadcrumbList JSON-LD (§4.2, §3.2), Resources nav dropdown (§4.1), immutable asset caching + metadata icons (§6.1/6.5), unused Drizzle/Postgres layer removed (§5.4/§9.4), all 29 lint errors/warnings fixed, Inter font now actually applied to body. Still open: MDX content migration, i18n, PWA, per-page OG images, Sentry, Playwright e2e, real street address in JSON-LD.
+
 ---
 
 ## 1. Documentation **[APPLIED]**

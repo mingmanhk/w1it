@@ -87,7 +87,6 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         message: 'Failed to process Bing Webmaster submission',
-        error: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     );

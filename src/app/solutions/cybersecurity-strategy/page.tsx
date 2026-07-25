@@ -93,7 +93,7 @@ export default function CybersecurityStrategyPage() {
                 Beyond Basic Security
               </h2>
               <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
-                Cybersecurity strategy goes beyond installing antivirus software. It's about creating a comprehensive framework that protects your business assets, ensures regulatory compliance, and builds customer trust.
+                Cybersecurity strategy goes beyond installing antivirus software. It&apos;s about creating a comprehensive framework that protects your business assets, ensures regulatory compliance, and builds customer trust.
               </p>
               <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
                 Our strategic approach combines risk assessment, technical controls, policy development, and ongoing governance to create a security posture that evolves with your business and the threat landscape.

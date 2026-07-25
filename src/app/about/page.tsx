@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Target, Shield, Users, Rocket } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
@@ -94,7 +95,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <img
+              <Image
                 src="/images/optimized/about-mission.svg"
                 alt="W1IT Mission"
                 width={600}
@@ -132,7 +133,7 @@ export default function AboutPage() {
               Ready to Get Started?
             </h2>
             <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
-              Let's build a stronger IT foundation for your business.
+              Let&apos;s build a stronger IT foundation for your business.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">

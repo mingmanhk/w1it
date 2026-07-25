@@ -44,6 +44,39 @@ export function requireApiSecret(request: NextRequest): NextResponse | null {
 }
 
 /**
+ * Lightweight fixed-window rate limiter (per edge isolate, in-memory).
+ * Not a substitute for a shared store (Upstash/WAF) under real attack
+ * traffic, but stops naive scripted abuse at zero infra cost.
+ */
+const rlBuckets = new Map<string, { count: number; resetAt: number }>();
+
+export function rateLimit(
+  request: NextRequest,
+  { limit = 5, windowMs = 60_000 }: { limit?: number; windowMs?: number } = {}
+): NextResponse | null {
+  const ip =
+    request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+    request.headers.get('x-real-ip') ||
+    'unknown';
+  const now = Date.now();
+  const bucket = rlBuckets.get(ip);
+  if (!bucket || now > bucket.resetAt) {
+    // opportunistic cleanup to bound memory
+    if (rlBuckets.size > 10_000) rlBuckets.clear();
+    rlBuckets.set(ip, { count: 1, resetAt: now + windowMs });
+    return null;
+  }
+  if (bucket.count >= limit) {
+    return NextResponse.json(
+      { success: false, message: 'Too many requests. Please try again later.' },
+      { status: 429, headers: { 'Retry-After': String(Math.ceil((bucket.resetAt - now) / 1000)) } }
+    );
+  }
+  bucket.count += 1;
+  return null;
+}
+
+/**
  * Verify the request originates from our own site (Origin or Referer).
  * Used by the public contact endpoint to reject cross-site/scripted spam
  * that bypasses the browser form.

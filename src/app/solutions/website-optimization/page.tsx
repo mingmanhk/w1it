@@ -126,7 +126,7 @@ export default function WebsiteOptimizationPage() {
               Optimization Services
             </h2>
             <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
-              Comprehensive solutions to maximize your website's potential
+              Comprehensive solutions to maximize your website&apos;s potential
             </p>
           </div>
 

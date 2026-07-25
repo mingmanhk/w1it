@@ -1,6 +1,6 @@
 'use client';
 
-import { RefreshCw, Zap, Clock, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
+import { RefreshCw, Zap, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
 
@@ -85,7 +85,7 @@ export default function ITAutomationPage() {
               Automation That Works for You
             </h2>
             <p className="text-[16px] text-[#4A4A4A] leading-relaxed mb-6">
-              In today's fast-paced business environment, manual processes slow you down and increase the risk of errors. Our IT automation solutions help small businesses reduce manual overhead, increase efficiency, and scale operations without adding headcount.
+              In today&apos;s fast-paced business environment, manual processes slow you down and increase the risk of errors. Our IT automation solutions help small businesses reduce manual overhead, increase efficiency, and scale operations without adding headcount.
             </p>
             <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
               From workflow automation to infrastructure management, we implement predictable, repeatable automation that lets you focus on growing your business instead of managing routine tasks.
@@ -242,7 +242,7 @@ export default function ITAutomationPage() {
               Ready to Automate Your Business?
             </h2>
             <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
-              Let's discuss how automation can transform your operations and free your team to focus on what matters most.
+              Let&apos;s discuss how automation can transform your operations and free your team to focus on what matters most.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">

@@ -123,7 +123,7 @@ export default function IndustriesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
-              Let's discuss how we can support your industry's specific needs.
+              Let&apos;s discuss how we can support your industry&apos;s specific needs.
             </p>
             <Button href="/contact" variant="primary">
               Contact Us
