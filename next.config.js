@@ -28,6 +28,12 @@ const nextConfig = {
       },
     ],
   },
+  redirects: async () => [
+    { source: "/services/custom-it-solutions", destination: "/solutions/custom-it-solutions", permanent: true },
+    { source: "/services/data-analytics", destination: "/solutions/data-analytics", permanent: true },
+    { source: "/services/digital-transformation", destination: "/solutions/digital-transformation", permanent: true },
+  ],
+
   compress: true,
   poweredByHeader: false,
   generateEtags: true,

@@ -24,9 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Service pages
   const servicePages = [
     '/services/cloud-solutions',
-    '/services/custom-it-solutions',
-    '/services/data-analytics',
-    '/services/digital-transformation',
     '/services/it-automation',
     '/services/managed-services',
     '/services/network-setup',

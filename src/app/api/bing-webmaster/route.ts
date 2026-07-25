@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { submitUrlToBing, submitContentToBing } from '@/lib/bing';
+import { isOwnSiteUrl, requireApiSecret } from '@/lib/api-security';
 
 export const runtime = 'edge';
 
@@ -14,14 +15,17 @@ const SITE_URL = 'https://w1it.com';
  * - Content submission: { "url": "https://w1it.com/blog/new-post", "httpMessage": "...", "type": "content" }
  */
 export async function POST(request: NextRequest) {
+  const authError = requireApiSecret(request);
+  if (authError) return authError;
+
   try {
     const body = await request.json();
 
-    if (!body.url) {
+    if (!body.url || !isOwnSiteUrl(body.url)) {
       return NextResponse.json(
         {
           success: false,
-          message: 'URL is required',
+          message: 'A valid https://w1it.com URL is required',
         },
         { status: 400 }
       );

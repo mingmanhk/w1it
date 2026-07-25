@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isAllowedOrigin } from '@/lib/api-security';
 
 export async function POST(request: NextRequest) {
+  if (!isAllowedOrigin(request)) {
+    return NextResponse.json(
+      { success: false, message: 'Forbidden' },
+      { status: 403 }
+    );
+  }
+
   try {
     const formData = await request.formData();
 

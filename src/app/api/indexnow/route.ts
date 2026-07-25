@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { submitUrlToIndexNow, submitBatchToIndexNow } from '@/lib/indexnow';
+import { isOwnSiteUrl, requireApiSecret } from '@/lib/api-security';
 
 export const runtime = 'edge';
 
@@ -12,11 +13,20 @@ export const runtime = 'edge';
  * - Multiple URLs: { "urls": ["https://w1it.com/page1", "https://w1it.com/page2"] }
  */
 export async function POST(request: NextRequest) {
+  const authError = requireApiSecret(request);
+  if (authError) return authError;
+
   try {
     const body = await request.json();
 
     // Single URL submission
     if (body.url) {
+      if (!isOwnSiteUrl(body.url)) {
+        return NextResponse.json(
+          { success: false, message: 'URL must be a https://w1it.com URL' },
+          { status: 400 }
+        );
+      }
       const result = await submitUrlToIndexNow(body.url);
 
       if (result.success) {
@@ -52,11 +62,21 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      if (body.urls.length > 10000) {
+      if (body.urls.length > 100) {
         return NextResponse.json(
           {
             success: false,
-            message: 'Maximum 10,000 URLs allowed per batch',
+            message: 'Maximum 100 URLs allowed per batch',
+          },
+          { status: 400 }
+        );
+      }
+
+      if (!body.urls.every(isOwnSiteUrl)) {
+        return NextResponse.json(
+          {
+            success: false,
+            message: 'All URLs must be https://w1it.com URLs',
           },
           { status: 400 }
         );

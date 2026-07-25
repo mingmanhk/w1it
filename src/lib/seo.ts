@@ -38,7 +38,9 @@ export function generateSEO(config: SEOConfig): Metadata {
     : defaultSEO.siteUrl;
 
   return {
-    title: fullTitle,
+    // absolute: bypass the root layout's "%s | W1IT Solutions" template,
+    // otherwise the suffix is appended twice
+    title: { absolute: fullTitle },
     description,
     keywords,
     alternates: {
