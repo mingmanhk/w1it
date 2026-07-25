@@ -67,14 +67,12 @@ const jsonLd = {
   "name": "W1IT Solutions",
   "image": "https://w1it.com/images/logo.png",
   "url": "https://w1it.com",
-  "telephone": "+1-206-123-4567",
+  "telephone": "(832) 472-7991",
   "email": "info@w1it.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "1234 Tech Street",
     "addressLocality": "Seattle",
     "addressRegion": "WA",
-    "postalCode": "98101",
     "addressCountry": "US"
   },
   "geo": {

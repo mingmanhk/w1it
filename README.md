@@ -1,231 +1,168 @@
-# W1IT Solutions - Professional IT Managed Services Website
+# W1IT Solutions — Company Website
 
-A modern, high-performance website built with Next.js 16, TypeScript 5, and Tailwind CSS for W1IT Solutions, a leading IT managed service provider. Featuring enhanced UI/UX design, comprehensive SEO optimization, and enterprise-grade performance.
+Marketing and services website for [W1IT Solutions](https://w1it.com), an IT managed services provider in Seattle, WA. Built with Next.js (App Router), TypeScript, and Tailwind CSS; deployed on Vercel.
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-w1it.com-blue)](https://w1it.com)
-[![Built with Next.js](https://img.shields.io/badge/Built%20with-Next.js-000000)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-06B6D4)](https://tailwindcss.com/)
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000)](https://vercel.com)
-
-## 🚀 Live Demo
-
-**Production Site:** [https://w1it.com](https://w1it.com)
-
-## ✨ Modern Features
-
-### 🎨 Enhanced UI/UX Design
-- **Modern Glassmorphism Effects** - Sleek frosted glass components with backdrop blur
-- **Smooth Micro-Interactions** - Hover effects, transitions, and loading animations
-- **Dark/Light Mode Ready** - Built with theming support
-- **Responsive Typography** - Fluid type scaling across all devices
-- **Accessibility First** - WCAG 2.1 AA compliant with semantic HTML
-- **Modern Component Library** - Reusable, type-safe components
-
-### ⚡ Performance Optimized
-- **Next.js 16 App Router** - Latest features with Turbopack for faster development
-- **Image Optimization** - Automatic WebP, AVIF with Next.js Image component
-- **Code Splitting** - Automatic route-based code splitting
-- **Minimal Bundle Size** - Tree-shaking and dead code elimination
-- **Fast Build Times** - Turbopack for lightning-fast HMR
-- **PWA Ready** - Service worker and offline capabilities
-
-### 🔍 SEO & Analytics
-- **Comprehensive SEO** - Meta tags, Open Graph, Twitter Cards, JSON-LD
-- **Auto-generated Sitemap** - Dynamic sitemap generation on build
-- **Structured Data** - Schema.org markup for better search visibility
-- **Analytics Integration** - Vercel Analytics and Google Analytics
-- **Performance Monitoring** - Core Web Vitals optimization
-- **Local SEO** - Location pages with LocalBusiness schema
-
-### 🛡️ Reliability & Security
-- **Type Safety** - Full TypeScript implementation with strict mode
-- **Error Boundary** - Graceful error handling with user-friendly fallback UI
-- **Input Validation** - Form validation and sanitization
-- **Security Headers** - CSP, XSS protection, and HTTPS enforcement
-- **Code Quality** - ESLint, Prettier, and TypeScript strict mode
-- **Automated Testing** - Jest and React Testing Library setup
-
-## 📱 Responsive Design
-
-| Breakpoint | Device | Features |
-|------------|--------|----------|
-| < 640px | Mobile | Mobile-first design, touch-optimized |
-| 640px - 768px | Tablet | Adaptive layouts, enhanced navigation |
-| 768px - 1024px | Small Desktop | Full feature set, optimized spacing |
-| > 1024px | Desktop | Advanced layouts, hover interactions |
-
-## 🏗️ Project Structure
-
-`
-w1it/
-├── src/
-│   ├── app/                    # Next.js 16 App Router
-│   │   ├── layout.tsx         # Root layout with metadata
-│   │   ├── page.tsx           # Home page
-│   │   ├── about/             # About page
-│   │   ├── services/          # Services pages
-│   │   ├── locations/         # Location pages (SEO optimized)
-│   │   ├── case-studies/      # Case studies
-│   │   └── contact/           # Contact page
-│   ├── components/            # Reusable components
-│   │   ├── ui/               # UI components (Button, Card, etc.)
-│   │   ├── layout/           # Layout components
-│   │   ├── sections/         # Page sections
-│   │   └── shared/           # Shared components
-│   ├── lib/                  # Utility functions
-│   │   ├── utils.ts          # Helper functions
-│   │   └── constants.ts      # Constants and configuration
-│   └── styles/               # Global styles
-├── public/                   # Static assets
-├── drizzle/                  # Database schema
-├── scripts/                  # Build and utility scripts
-└── package.json              # Dependencies and scripts
-`
-
-## 🎯 Services Showcase
-
-### **IT Managed Services**
-- 24/7 Monitoring & Support
-- Cybersecurity Solutions
-- Cloud Infrastructure
-- Network Management
-- Data Backup & Recovery
-
-### **Consulting Services**
-- Digital Transformation
-- IT Strategy & Planning
-- Compliance & Security Audits
-- Technology Assessment
-- Vendor Management
-
-### **Case Studies**
-- European Ferry Company - Infrastructure Modernization
-- Financial Trading Company - Cybersecurity Enhancement
-- Bellevue Business District - Local IT Support
-
-## 🛠️ Technology Stack
-
-### Core Framework
-- **Next.js 16.1.1** - React framework with App Router and Turbopack
-- **React 19.2.1** - UI library with latest features
-- **TypeScript 5** - Type-safe JavaScript
-
-### Styling & UI
-- **Tailwind CSS 3.4** - Utility-first CSS framework
-- **CSS Modules** - Component-scoped styles
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
-
-### Development Tools
-- **ESLint** - Code quality and consistency
-- **Prettier** - Code formatting
-- **TypeScript** - Static type checking
-- **Git** - Version control
-- **Vercel** - Deployment and hosting
-
-### Performance & SEO
-- **Next.js Image** - Automatic image optimization
-- **Next.js Font** - Font optimization
-- **Next.js Metadata** - SEO optimization
-- **Sitemap Generation** - Automatic sitemap
-- **Structured Data** - JSON-LD schema markup
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ and npm/yarn/pnpm
-
-### Installation
-`ash
-# Clone the repository
-git clone https://github.com/mingmanhk/w1it.git
-cd w1it
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-`
-
-### Available Scripts
-- 
-pm run dev - Start development server with hot reload
-- 
-pm run build - Build for production
-- 
-pm start - Start production server
-- 
-pm run lint - Run ESLint for code quality
-- 
-pm run format - Format code with Prettier
-- 
-pm run type-check - Run TypeScript type checking
-
-## 📈 Performance Metrics
-
-| Metric | Target | Current Status |
-|--------|--------|----------------|
-| Largest Contentful Paint (LCP) | < 2.5s | ✅ Optimized |
-| First Input Delay (FID) | < 100ms | ✅ Optimized |
-| Cumulative Layout Shift (CLS) | < 0.1 | ✅ Optimized |
-| Time to Interactive (TTI) | < 3.5s | ✅ Optimized |
-| Bundle Size | < 200KB | ✅ Optimized |
-| Core Web Vitals | All Passing | ✅ Optimized |
-
-## 🔧 Configuration
-
-### Environment Variables
-Create a .env.local file in the root directory:
-`nv
-NEXT_PUBLIC_SITE_URL=https://w1it.com
-NEXT_PUBLIC_SITE_NAME=W1IT Solutions
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
-`
-
-### Build Configuration
-- **Image Optimization**: Automatic WebP/AVIF conversion
-- **Code Splitting**: Automatic route-based splitting
-- **Minification**: CSS and JavaScript minification
-- **Source Maps**: Production source maps for debugging
-- **Bundle Analysis**: @next/bundle-analyzer integration
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (git checkout -b feature/AmazingFeature)
-3. Commit changes (git commit -m 'Add some AmazingFeature')
-4. Push to branch (git push origin feature/AmazingFeature)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is proprietary and confidential. All rights reserved.
-
-## 📞 Contact
-
-W1IT Solutions - [Website](https://w1it.com) - [Email](mailto:info@w1it.com) - [Phone](tel:+12535550101)
-
-Project Link: [https://github.com/mingmanhk/w1it](https://github.com/mingmanhk/w1it)
-
-## 🙏 Acknowledgments
-
-- [Next.js Documentation](https://nextjs.org/docs)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vercel Platform](https://vercel.com)
-- [React Documentation](https://reactjs.org/)
-- All contributors and supporters
+[![Live Site](https://img.shields.io/badge/live-w1it.com-blue)](https://w1it.com)
+[![Next.js](https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-deployed-000000?logo=vercel)](https://vercel.com)
+[![License](https://img.shields.io/badge/license-private-lightgrey)](#license)
 
 ---
 
-**Last Updated:** March 21, 2026  
-**Version:** 3.0.0  
-**Status:** 🟢 Production Ready  
-**Live URL:** https://w1it.com
+## Table of Contents
+
+- [Overview](#overview)
+- [Tech Stack](#tech-stack)
+- [Architecture](#architecture)
+- [Folder Structure](#folder-structure)
+- [Getting Started](#getting-started)
+- [Environment Variables](#environment-variables)
+- [Scripts](#scripts)
+- [SEO](#seo)
+- [API Routes](#api-routes)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
+
+A statically-rendered marketing site with ~54 pages: service and solution pages, case studies, industry pages, productivity-app landing pages, and support/legal resources. All pages are prerendered at build time; three edge API routes handle contact-form submission and search-engine URL submission.
+
+## Tech Stack
+
+| Layer      | Technology                                             |
+| ---------- | ------------------------------------------------------ |
+| Framework  | Next.js 16 (App Router, static prerendering)           |
+| Language   | TypeScript 5 (strict)                                  |
+| Styling    | Tailwind CSS + design tokens (`src/styles/tokens.ts`)  |
+| UI         | React 19, Framer Motion, Lucide icons                  |
+| Forms      | React Hook Form + Zod, Web3Forms delivery              |
+| Database   | Drizzle ORM + Vercel Postgres (contact submissions)    |
+| Analytics  | Vercel Analytics                                       |
+| Hosting    | Vercel (edge runtime for API routes)                   |
+
+## Architecture
+
+```
+┌────────────────────────────────────────────────────────┐
+│                        Vercel                          │
+│  ┌──────────────────┐      ┌────────────────────────┐  │
+│  │  Static pages     │      │  Edge API routes       │  │
+│  │  (prerendered     │      │  /api/contact/submit   │  │
+│  │   at build time)  │      │  /api/indexnow         │  │
+│  │                   │      │  /api/bing-webmaster   │  │
+│  └──────────────────┘      └───────────┬────────────┘  │
+│  Middleware: 301 /blog/* → /case-studies/*             │
+└────────────────────────────────────────┼───────────────┘
+                                         ▼
+                       Web3Forms · IndexNow · Bing Webmaster
+```
+
+- **Metadata**: every route exports metadata (directly or via a route `layout.tsx`); `src/lib/seo.ts` centralizes titles, descriptions, canonicals, Open Graph, and JSON-LD. The root layout emits a per-page self-referencing canonical.
+- **Redirects**: legacy `/blog/<slug>` URLs 301 to `/case-studies/<slug>` (middleware); retired thin pages 301 in `next.config.js`.
+- **Security**: strict security headers + CSP in `next.config.js`; submission APIs require an `x-api-key` shared secret and only accept `w1it.com` URLs (`src/lib/api-security.ts`).
+
+## Folder Structure
+
+```
+├── docs/                  # Design-system, audit, and reference docs
+├── drizzle/               # Generated DB migrations
+├── public/                # Static assets (icons, og-image, manifest)
+│   └── images/optimized/  # Pre-optimized WebP/PNG assets
+├── scripts/               # One-off maintenance scripts
+├── src/
+│   ├── app/               # App Router pages, layouts, API routes
+│   │   ├── api/           # Edge API routes
+│   │   ├── case-studies/  # Case-study pages (canonical content URLs)
+│   │   ├── services/      # Service pages
+│   │   ├── solutions/     # Solution pages
+│   │   ├── layout.tsx     # Root layout: global metadata, JSON-LD, chrome
+│   │   ├── sitemap.ts     # Generated /sitemap.xml
+│   │   └── robots.ts      # Generated /robots.txt
+│   ├── components/        # Shared UI components (+ homepage/ sections)
+│   ├── lib/               # seo.ts, api-security.ts, db/, integrations
+│   └── styles/            # Design tokens
+├── middleware.ts          # Legacy-URL redirects
+├── next.config.js         # Headers, redirects, image config
+└── tailwind.config.ts
+```
+
+## Getting Started
+
+**Prerequisites**: Node.js 20+, npm 10+.
+
+```bash
+git clone https://github.com/mingmanhk/w1it.git
+cd w1it
+npm install
+cp .env.example .env.local   # fill in values (see below)
+npm run dev                  # http://localhost:3000
+```
+
+Production build:
+
+```bash
+npm run build && npm start
+```
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local`. None are required for local UI development; APIs degrade gracefully.
+
+| Variable                          | Purpose                                             |
+| --------------------------------- | --------------------------------------------------- |
+| `WEB3FORMS_API_KEY`               | Contact-form delivery (server-side)                 |
+| `SUBMIT_API_SECRET`               | Shared secret gating the URL-submission API routes  |
+| `INDEXNOW_API_KEY`                | IndexNow key (public by protocol design)            |
+| `BING_URL_SUBMISSION_API_KEY`     | Bing Webmaster URL submission                       |
+| `BING_CONTENT_SUBMISSION_API_KEY` | Bing Webmaster content submission                   |
+| `POSTGRES_URL`                    | Vercel Postgres connection (contact storage)        |
+
+Never commit `.env*` files — only `.env.example` with placeholders.
+
+## Scripts
+
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start dev server                  |
+| `npm run build` | Production build (54 static pages)|
+| `npm start`     | Serve the production build        |
+| `npm run lint`  | ESLint                            |
+
+## SEO
+
+- `/sitemap.xml` and `/robots.txt` are generated from `src/app/sitemap.ts` / `robots.ts` — update the route lists there when adding pages; do **not** add static copies under `public/`.
+- Every page needs a unique `title`, `description` (≤160 chars), and canonical — use `generateSEO()` from `src/lib/seo.ts`. Client-component pages get a sibling `layout.tsx` for metadata.
+- Old URLs must 301 to their replacement (middleware or `next.config.js`) and be swapped in the sitemap.
+
+## API Routes
+
+| Route                  | Method | Auth                      | Purpose                          |
+| ---------------------- | ------ | ------------------------- | -------------------------------- |
+| `/api/contact/submit`  | POST   | Same-origin check         | Proxy contact form to Web3Forms  |
+| `/api/indexnow`        | POST   | `x-api-key` shared secret | Submit URLs to IndexNow          |
+| `/api/bing-webmaster`  | POST   | `x-api-key` shared secret | Submit URLs/content to Bing      |
+
+Submission routes return `503` until `SUBMIT_API_SECRET` is configured, and only accept `https://w1it.com` URLs.
+
+## Deployment
+
+Pushing to `main` triggers a Vercel production deployment. Checklist for releases:
+
+1. `npm run build` passes locally with no new warnings.
+2. New pages: metadata + sitemap entry + at least one internal link (no orphans).
+3. Removed/moved pages: 301 redirect in place, sitemap updated.
+4. Environment variable changes mirrored in Vercel project settings and `.env.example`.
+
+## Contributing
+
+1. Branch from `main` (`feat/…`, `fix/…`).
+2. Keep commits scoped; follow the [Conventional Commits](https://www.conventionalcommits.org/) style used in history (`feat:`, `fix:`).
+3. Run `npm run lint` and `npm run build` before opening a PR.
+4. PRs should describe user-visible impact (pages affected, SEO implications).
+
+## License
+
+Private — © W1IT Solutions. All rights reserved.
