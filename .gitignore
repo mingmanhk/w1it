@@ -57,9 +57,9 @@ test-results/
 
 # --- IDE / editor -------------------------------------------------------------
 .idea/
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
+# .vscode/settings.json has held live DB credentials before (Dec 2025 incident) — keep the whole
+# directory ignored rather than carving out exceptions that invite it to happen again.
+.vscode/
 *.swp
 *.swo
 *~
