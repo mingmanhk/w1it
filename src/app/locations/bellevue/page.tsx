@@ -47,7 +47,7 @@ export default function BellevuePage() {
         <h2 className="text-3xl font-bold mb-6 text-center">Serving Bellevue Business Districts</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {["Downtown Bellevue", "Bellevue Downtown Park", "Crossroads", "Factoria", "Eastgate", "Wilburton", "Bridle Trails", "Medina"].map((area) => (
-            <div key={area} className="bg-white p-4 rounded-lg text-center shadow-sm">
+            <div key={area} className="bg-surface-0 p-4 rounded-lg text-center shadow-sm">
               <span className="font-medium">{area}</span>
             </div>
           ))}
@@ -64,13 +64,13 @@ export default function BellevuePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="/contact" 
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-100 transition text-center"
+              className="inline-block bg-surface-0 text-blue-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-surface-1 transition text-center"
             >
               Get Bellevue IT Support
             </a>
             <a 
               href="tel:+14258889999" 
-              className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-white/10 transition text-center"
+              className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-surface-0/10 transition text-center"
             >
               Call: (425) 888-9999
             </a>
@@ -85,21 +85,21 @@ export default function BellevuePage() {
       <div className="mt-16">
         <h2 className="text-3xl font-bold mb-6">IT Solutions for Bellevue Industries</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white border rounded-xl p-6">
+          <div className="bg-surface-0 border rounded-xl p-6">
             <h3 className="text-xl font-semibold mb-3">Technology Companies</h3>
-            <p className="text-gray-600">
+            <p className="text-fg-muted">
               Specialized IT support for Bellevue&apos;s growing tech sector, including startups and established software companies.
             </p>
           </div>
-          <div className="bg-white border rounded-xl p-6">
+          <div className="bg-surface-0 border rounded-xl p-6">
             <h3 className="text-xl font-semibold mb-3">Financial Services</h3>
-            <p className="text-gray-600">
+            <p className="text-fg-muted">
               Secure, compliant IT solutions for Bellevue&apos;s finance and investment firms with regulatory expertise.
             </p>
           </div>
-          <div className="bg-white border rounded-xl p-6">
+          <div className="bg-surface-0 border rounded-xl p-6">
             <h3 className="text-xl font-semibold mb-3">Healthcare & Professional Services</h3>
-            <p className="text-gray-600">
+            <p className="text-fg-muted">
               HIPAA-compliant IT solutions for Bellevue healthcare providers and professional service firms.
             </p>
           </div>

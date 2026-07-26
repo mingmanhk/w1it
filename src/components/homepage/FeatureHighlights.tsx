@@ -27,12 +27,12 @@ const featureHighlights = [
 
 export default function FeatureHighlights() {
   return (
-    <section className="py-16 bg-[#F8FAFC]">
+    <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-4">What Sets Us Apart</h2>
-          <p className="text-[16px] text-[#4A4A4A] max-w-3xl mx-auto">
+          <h2 className="text-[28px] font-bold text-fg mb-4">What Sets Us Apart</h2>
+          <p className="text-[16px] text-fg-muted max-w-3xl mx-auto">
             Our approach combines technical excellence with operational clarity.
           </p>
         </div>
@@ -51,12 +51,12 @@ export default function FeatureHighlights() {
                 </div>
 
                 {/* Heading 20 semibold */}
-                <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <h3 className="text-[20px] font-semibold text-fg mb-4">
                   {feature.title}
                 </h3>
 
                 {/* Description 16 regular */}
-                <p className="text-[16px] text-[#4A4A4A] max-w-sm mx-auto">
+                <p className="text-[16px] text-fg-muted max-w-sm mx-auto">
                   {feature.description}
                 </p>
               </div>

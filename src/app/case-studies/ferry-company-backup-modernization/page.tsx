@@ -14,10 +14,10 @@ export default function BlogPost() {
       <nav className="mb-8">
         <ol className="flex items-center space-x-2 text-sm">
           <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-          <li className="text-gray-400">/</li>
+          <li className="text-fg-subtle">/</li>
           <li><Link href="/case-studies" className="text-blue-600 hover:underline">Case Studies</Link></li>
-          <li className="text-gray-400">/</li>
-          <li className="text-gray-600">VMware & Veeam Backup Modernization</li>
+          <li className="text-fg-subtle">/</li>
+          <li className="text-fg-muted">VMware & Veeam Backup Modernization</li>
         </ol>
       </nav>
 
@@ -34,20 +34,20 @@ export default function BlogPost() {
             <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
               Transportation & Logistics
             </span>
-            <span className="text-gray-500">• March 15, 2026</span>
+            <span className="text-fg-muted">• March 15, 2026</span>
           </div>
           
           <h1 className="text-4xl font-bold mb-6">
             VMware & Veeam Backup Modernization for European Ferry Company
           </h1>
           
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-fg-muted mb-8">
             How W1IT Solutions transformed critical backup infrastructure for a major European ferry operator, 
             reducing complexity by 40% and eliminating snapshot failures across their maritime systems.
           </p>
           
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-surface-1 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4">Project Overview</h3>
               <ul className="space-y-3">
                 <li className="flex justify-between">
@@ -136,7 +136,7 @@ export default function BlogPost() {
 
           {/* ... rest of the article content ... */}
           
-          <div className="bg-gray-50 p-6 rounded-lg mt-12">
+          <div className="bg-surface-1 p-6 rounded-lg mt-12">
             <h3 className="text-2xl font-bold mb-4">Transform Your Transportation IT Infrastructure</h3>
             <p className="mb-4">
               Whether you operate ferries, logistics networks, or any 24/7 transportation service, 
@@ -152,7 +152,7 @@ export default function BlogPost() {
               </a>
               <a 
                 href="/services/managed-services" 
-                className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition"
+                className="bg-surface-2 text-fg px-6 py-3 rounded-lg hover:bg-gray-300 transition"
               >
                 Explore Our BDR Solutions
               </a>
@@ -167,11 +167,11 @@ export default function BlogPost() {
         </article>
 
         {/* Navigation Footer */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
+        <div className="mt-12 pt-8 border-t border-line">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
               <h3 className="text-lg font-semibold mb-2">Explore More Case Studies</h3>
-              <p className="text-gray-600">Browse our collection of technical implementations.</p>
+              <p className="text-fg-muted">Browse our collection of technical implementations.</p>
             </div>
             <div className="flex gap-4">
               <a
@@ -182,7 +182,7 @@ export default function BlogPost() {
               </a>
               <a
                 href="/contact"
-                className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition font-medium"
+                className="bg-surface-2 text-fg px-6 py-3 rounded-lg hover:bg-gray-300 transition font-medium"
               >
                 Schedule Consultation
               </a>

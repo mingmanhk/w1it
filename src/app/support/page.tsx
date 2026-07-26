@@ -75,7 +75,7 @@ export default function SupportPage() {
             {supportOptions.map((option) => (
               <div
                 key={option.title}
-                className="bg-white p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center"
+                className="bg-surface-0 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center"
               >
                 <option.icon className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-bold text-neutral-900 mb-3">
@@ -98,7 +98,7 @@ export default function SupportPage() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-8 text-center">
               Business Hours
             </h2>
-            <div className="bg-white rounded-xl p-8 border border-neutral-200">
+            <div className="bg-surface-0 rounded-xl p-8 border border-neutral-200">
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-neutral-100">
                   <span className="font-medium text-neutral-700">Monday - Friday</span>
@@ -133,7 +133,7 @@ export default function SupportPage() {
             <p className="text-xl mb-8 opacity-90">
               Upgrade to our managed services for 24/7 support and proactive monitoring
             </p>
-            <Button href="/services/managed-services" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/services/managed-services" className="bg-surface-0 text-brand-blue hover:bg-surface-1">
               Learn About Managed Services
             </Button>
           </div>

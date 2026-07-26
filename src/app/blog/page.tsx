@@ -140,14 +140,14 @@ const caseStudies = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-surface-0">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-surface-0/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <BookOpen className="w-5 h-5" />
               <span className="font-medium">Expert IT Case Studies</span>
             </div>
@@ -163,11 +163,11 @@ export default function BlogPage() {
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-fg-subtle w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search case studies, solutions, or IT topics..."
-                  className="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 rounded-xl bg-surface-0/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-transparent"
                 />
               </div>
             </div>
@@ -181,7 +181,7 @@ export default function BlogPage() {
           {/* Featured Case Studies */}
           <div className="mb-16">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-gray-900">Featured Case Studies</h2>
+              <h2 className="text-3xl font-bold text-fg">Featured Case Studies</h2>
               <div className="flex items-center gap-2 text-blue-600">
                 <TrendingUp className="w-5 h-5" />
                 <span className="font-medium">Most Popular</span>
@@ -191,7 +191,7 @@ export default function BlogPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {caseStudies.filter(post => post.featured).map((post) => (
                 <article key={post.id} className="group">
-                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
+                  <div className="bg-surface-0 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-blue-700/20"></div>
@@ -208,7 +208,7 @@ export default function BlogPage() {
                     
                     {/* Content */}
                     <div className="p-8">
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <div className="flex items-center gap-4 text-sm text-fg-muted mb-4">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           {post.date}
@@ -227,7 +227,7 @@ export default function BlogPage() {
                         {post.title}
                       </h3>
                       
-                      <p className="text-gray-600 mb-6">
+                      <p className="text-fg-muted mb-6">
                         {post.excerpt}
                       </p>
                       
@@ -236,7 +236,7 @@ export default function BlogPage() {
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm hover:bg-gray-200 transition"
+                            className="px-3 py-1 bg-surface-1 text-fg-muted rounded-full text-sm hover:bg-surface-2 transition"
                           >
                             {tag}
                           </span>
@@ -259,12 +259,12 @@ export default function BlogPage() {
 
           {/* All Case Studies */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">All Case Studies</h2>
+            <h2 className="text-3xl font-bold text-fg mb-8">All Case Studies</h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {caseStudies.filter(post => !post.featured).map((post) => (
                 <article key={post.id} className="group">
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="bg-surface-0 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 h-full">
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden">
                       <div 
@@ -280,7 +280,7 @@ export default function BlogPage() {
                     
                     {/* Content */}
                     <div className="p-6">
-                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                      <div className="flex items-center gap-3 text-xs text-fg-muted mb-3">
                         <span>{post.date}</span>
                         <span>•</span>
                         <span>{post.readTime}</span>
@@ -290,7 +290,7 @@ export default function BlogPage() {
                         {post.title}
                       </h3>
                       
-                      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                      <p className="text-fg-muted text-sm mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
                       
@@ -311,10 +311,10 @@ export default function BlogPage() {
           {/* Newsletter CTA */}
           <div className="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 md:p-12">
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              <h3 className="text-3xl font-bold text-fg mb-4">
                 Stay Updated with IT Insights
               </h3>
-              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+              <p className="text-fg-muted mb-8 max-w-2xl mx-auto">
                 Get weekly IT tips, security updates, and case studies delivered to your inbox. 
                 Perfect for Seattle business owners and IT decision-makers.
               </p>
@@ -330,7 +330,7 @@ export default function BlogPage() {
                     Subscribe
                   </button>
                 </div>
-                <p className="text-gray-500 text-sm mt-3">
+                <p className="text-fg-muted text-sm mt-3">
                   No spam. Unsubscribe anytime. Seattle-focused content.
                 </p>
               </div>

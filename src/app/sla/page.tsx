@@ -50,7 +50,7 @@ export default function SLAPage() {
               </p>
 
               {/* Response Times */}
-              <div className="bg-white rounded-xl p-8 border border-neutral-200 mb-8">
+              <div className="bg-surface-0 rounded-xl p-8 border border-neutral-200 mb-8">
                 <div className="flex items-center mb-6">
                   <Clock className="w-8 h-8 text-brand-blue mr-3" />
                   <h3 className="text-2xl font-heading font-bold text-neutral-900">
@@ -90,7 +90,7 @@ export default function SLAPage() {
               </div>
 
               {/* Uptime Guarantee */}
-              <div className="bg-white rounded-xl p-8 border border-neutral-200 mb-8">
+              <div className="bg-surface-0 rounded-xl p-8 border border-neutral-200 mb-8">
                 <div className="flex items-center mb-6">
                   <CheckCircle className="w-8 h-8 text-brand-blue mr-3" />
                   <h3 className="text-2xl font-heading font-bold text-neutral-900">
@@ -114,7 +114,7 @@ export default function SLAPage() {
               </div>
 
               {/* Support Hours */}
-              <div className="bg-white rounded-xl p-8 border border-neutral-200 mb-8">
+              <div className="bg-surface-0 rounded-xl p-8 border border-neutral-200 mb-8">
                 <div className="flex items-center mb-6">
                   <AlertCircle className="w-8 h-8 text-brand-blue mr-3" />
                   <h3 className="text-2xl font-heading font-bold text-neutral-900">
@@ -169,7 +169,7 @@ export default function SLAPage() {
               Contact our team to discuss custom SLA requirements for your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
+              <Button href="/contact" className="bg-surface-0 text-brand-blue hover:bg-surface-1">
                 Contact Sales
               </Button>
               <Button href="/services/managed-services" className="bg-brand-navy text-white hover:bg-opacity-90">

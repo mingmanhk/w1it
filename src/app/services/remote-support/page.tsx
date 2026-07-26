@@ -138,7 +138,7 @@ export default function RemoteSupport() {
           __html: JSON.stringify(serviceSchema),
         }}
       />
-      <div className="bg-[#FFFFFF]">
+      <div className="bg-surface-0">
         <Hero
             title="Remote IT Support"
             subtitle="Fast, secure remote troubleshooting from Seattle. Available worldwide. Same-day support available with secure connections and bilingual service (English/Chinese)."
@@ -147,22 +147,22 @@ export default function RemoteSupport() {
         />
 
         {/* How It Works Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
+            <h2 className="text-[28px] font-bold text-fg text-center mb-12">
               How Remote Support Works
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {howItWorks.map((item, index) => (
-                <div key={index} className="bg-[#F8FAFC] p-8 text-center">
+                <div key={index} className="bg-surface-1 p-8 text-center">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6 mx-auto">
                     <span className="text-[24px] font-bold text-white">{item.step}</span>
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -172,9 +172,9 @@ export default function RemoteSupport() {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 bg-[#F8FAFC]">
+        <section className="py-16 bg-surface-1">
           <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-12">
+            <h2 className="text-[28px] font-bold text-fg mb-12">
               Remote Support Services
             </h2>
 
@@ -182,15 +182,15 @@ export default function RemoteSupport() {
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
-                  <div key={index} className="bg-[#FFFFFF]">
-                    <div className="bg-[#F1F5F9] p-8">
+                  <div key={index} className="bg-surface-0">
+                    <div className="bg-surface-2 p-8">
                       <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                         <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                       </div>
-                      <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                      <h3 className="text-[20px] font-semibold text-fg mb-4">
                         {service.title}
                       </h3>
-                      <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                      <p className="text-[16px] text-fg-muted leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -202,30 +202,30 @@ export default function RemoteSupport() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
+            <h2 className="text-[28px] font-bold text-fg text-center mb-12">
               Why Choose Remote Support
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-[#F8FAFC] p-8">
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <div key={index} className="bg-surface-1 p-8">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {benefit.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="bg-[#F1F5F9] p-8">
-              <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+            <div className="bg-surface-2 p-8">
+              <h3 className="text-[20px] font-semibold text-fg mb-4">
                 Perfect for Remote Workers
               </h3>
-              <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+              <p className="text-[16px] text-fg-muted leading-relaxed">
                 Working from home in the Seattle area or anywhere else? We specialize in supporting remote workers
                 with home office setup, VPN configuration, video conferencing troubleshooting, and productivity tool
                 support. Get back to work faster with expert remote assistance.
@@ -235,13 +235,13 @@ export default function RemoteSupport() {
         </section>
 
         {/* Security Section */}
-        <section className="py-16 bg-[#F8FAFC]">
+        <section className="py-16 bg-surface-1">
           <div className="max-w-[1200px] mx-auto px-6">
-            <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
-              <h2 className="text-[28px] font-bold text-[#050816] mb-4 text-center">
+            <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
+              <h2 className="text-[28px] font-bold text-fg mb-4 text-center">
                 Secure & Private
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-6 leading-relaxed">
                 Your security is our priority. We use industry-standard remote support tools with end-to-end
                 encryption. You control the session and can see everything we do. We never access your system
                 without your explicit permission.
@@ -250,7 +250,7 @@ export default function RemoteSupport() {
                 {securityFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-[16px] text-[#4A4A4A]">{feature}</span>
+                    <span className="text-[16px] text-fg-muted">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -259,13 +259,13 @@ export default function RemoteSupport() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center">
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+              <h2 className="text-[28px] font-bold text-fg mb-6">
                 Need IT Help Right Now?
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+              <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
                 Contact us for fast, secure remote support. Available for Seattle locals and worldwide clients.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

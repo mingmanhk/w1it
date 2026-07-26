@@ -56,7 +56,7 @@ export default function CybersecurityStrategyPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -85,32 +85,32 @@ export default function CybersecurityStrategyPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+              <h2 className="text-[28px] font-bold text-fg mb-6">
                 Beyond Basic Security
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-6 leading-relaxed">
                 Cybersecurity strategy goes beyond installing antivirus software. It&apos;s about creating a comprehensive framework that protects your business assets, ensures regulatory compliance, and builds customer trust.
               </p>
-              <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-8 leading-relaxed">
                 Our strategic approach combines risk assessment, technical controls, policy development, and ongoing governance to create a security posture that evolves with your business and the threat landscape.
               </p>
               <Button href="/contact" variant="primary">
                 Schedule Security Consultation
               </Button>
             </div>
-            <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
+            <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
               <div className="text-center mb-8">
                 <div className="w-20 h-20 bg-[#3A81F7] flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-10 h-10 text-white" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <h3 className="text-[20px] font-semibold text-fg mb-4">
                   Security Maturity Assessment
                 </h3>
-                <p className="text-[16px] text-[#4A4A4A]">
+                <p className="text-[16px] text-fg-muted">
                   We evaluate your current security posture across five key domains:
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function CybersecurityStrategyPage() {
                 {['Governance & Risk Management', 'Technical Controls', 'Compliance', 'Incident Response', 'Security Awareness'].map((domain, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-[16px] text-[#4A4A4A]">{domain}</span>
+                    <span className="text-[16px] text-fg-muted">{domain}</span>
                   </div>
                 ))}
               </div>
@@ -128,13 +128,13 @@ export default function CybersecurityStrategyPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Comprehensive Security Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               We provide end-to-end cybersecurity strategy services tailored to your business needs and risk profile.
             </p>
           </div>
@@ -143,21 +143,21 @@ export default function CybersecurityStrategyPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8 border-2 border-[#D9D9D9]">
+                <div key={index} className="bg-surface-1 p-8 border-2 border-line">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
+                  <p className="text-[16px] text-fg-muted mb-6 leading-relaxed">
                     {service.description}
                   </p>
                   <div className="space-y-3">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <span className="inline-block w-2 h-2 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-[16px] text-[#4A4A4A]">{feature}</span>
+                        <span className="text-[16px] text-fg-muted">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -169,24 +169,24 @@ export default function CybersecurityStrategyPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Why Invest in Cybersecurity Strategy?
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               A strategic approach to cybersecurity delivers measurable business value beyond just protection.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-[#FFFFFF] p-8 border-2 border-[#D9D9D9]">
+              <div key={index} className="bg-surface-0 p-8 border-2 border-line">
                 <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                   <BarChart3 className="w-6 h-6 text-white" strokeWidth={1.5} />
                 </div>
-                <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                <p className="text-[16px] text-fg-muted leading-relaxed">
                   {benefit}
                 </p>
               </div>
@@ -196,13 +196,13 @@ export default function CybersecurityStrategyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Strengthen Your Security Posture?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Contact us for a comprehensive security assessment and strategic roadmap tailored to your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

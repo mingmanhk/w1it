@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = generateSEO({
   title: 'Network Setup & Configuration Services Seattle',
   description:
-    'Professional network setup in Seattle, Bellevue, and Issaquah. WiFi installation, router configuration, VPN setup, and troubleshooting.',
+    'Network design, build-outs, and architecture optimization in Greater Seattle. WiFi, VPN, structured cabling - and audits that cut recurring network costs.',
   keywords: [
     'network setup Seattle',
     'WiFi installation Bellevue',
@@ -148,7 +148,7 @@ export default function NetworkSetup() {
           __html: JSON.stringify(serviceSchema),
         }}
       />
-      <div className="bg-[#FFFFFF]">
+      <div className="bg-surface-0">
         <Hero
             title="Network Setup & Configuration"
             subtitle="Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available."
@@ -161,13 +161,13 @@ export default function NetworkSetup() {
         />
 
         {/* Services Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center mb-12">
-              <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+              <h2 className="text-[28px] font-bold text-fg mb-4">
                 Network Services We Offer
               </h2>
-              <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+              <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
                 Complete network solutions tailored to your business needs.
               </p>
             </div>
@@ -176,15 +176,15 @@ export default function NetworkSetup() {
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (
-                  <div key={index} className="bg-[#FFFFFF]">
-                    <div className="bg-[#F1F5F9] p-8">
+                  <div key={index} className="bg-surface-0">
+                    <div className="bg-surface-2 p-8">
                       <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                         <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                       </div>
-                      <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                      <h3 className="text-[20px] font-semibold text-fg mb-4">
                         {service.title}
                       </h3>
-                      <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                      <p className="text-[16px] text-fg-muted leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -196,19 +196,19 @@ export default function NetworkSetup() {
         </section>
 
         {/* Common Issues Section */}
-        <section className="py-16 bg-[#F8FAFC]">
+        <section className="py-16 bg-surface-1">
           <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-12">
+            <h2 className="text-[28px] font-bold text-fg mb-12">
               Common Network Problems We Solve
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {commonIssues.map((issue, index) => (
-                <div key={index} className="bg-[#FFFFFF] p-8">
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <div key={index} className="bg-surface-0 p-8">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {issue.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {issue.description}
                   </p>
                 </div>
@@ -218,24 +218,24 @@ export default function NetworkSetup() {
         </section>
 
         {/* Service Area Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
-            <div className="bg-[#F1F5F9] p-12">
+            <div className="bg-surface-2 p-12">
               <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+                <h2 className="text-[28px] font-bold text-fg mb-4">
                   Serving Greater Seattle
                 </h2>
-                <p className="text-[17px] text-[#4A4A4A] mb-6">
+                <p className="text-[17px] text-fg-muted mb-6">
                   On-site network installation and support in:
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                   {['Seattle', 'Bellevue', 'Issaquah', 'Snoqualmie', 'Redmond', 'Tacoma'].map((city) => (
-                    <div key={city} className="bg-[#FFFFFF] px-4 py-3 border-2 border-[#D9D9D9]">
-                      <span className="text-[16px] font-semibold text-[#050816]">{city}</span>
+                    <div key={city} className="bg-surface-0 px-4 py-3 border-2 border-line">
+                      <span className="text-[16px] font-semibold text-fg">{city}</span>
                     </div>
                   ))}
                 </div>
-                <p className="text-[16px] text-[#4A4A4A] mb-6">
+                <p className="text-[16px] text-fg-muted mb-6">
                   Remote support also available for network configuration and troubleshooting
                 </p>
                 <Button href="/contact" variant="primary">
@@ -247,19 +247,19 @@ export default function NetworkSetup() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-[#F8FAFC]">
+        <section className="py-16 bg-surface-1">
           <div className="max-w-[1200px] mx-auto px-6">
-            <h2 className="text-[28px] font-bold text-[#050816] text-center mb-12">
+            <h2 className="text-[28px] font-bold text-fg text-center mb-12">
               Why Choose w1IT for Network Setup
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {whyChoose.map((item, index) => (
-                <div key={index} className="bg-[#FFFFFF] p-8 text-center">
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <div key={index} className="bg-surface-0 p-8 text-center">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -268,14 +268,53 @@ export default function NetworkSetup() {
           </div>
         </section>
 
+        {/* Network Architecture Optimization */}
+        <section className="py-16 bg-surface-1">
+          <div className="max-w-[1200px] mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-[28px] font-bold text-fg mb-4">
+                Network Architecture Optimization — Spend Less, Run Faster
+              </h2>
+              <p className="text-[16px] text-fg-muted">
+                Most business networks grow by accretion: gear gets added, licenses renew on autopilot,
+                and nobody removes what is no longer needed. We audit what you actually run, redesign the
+                architecture around what your business needs today, and cut the recurring costs that come with the excess.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-surface-0 p-8 rounded-card shadow-soft">
+                <h3 className="text-[20px] font-semibold text-fg mb-3">Cost Audit</h3>
+                <p className="text-[16px] text-fg-muted">
+                  Inventory of hardware, licensing, circuits, and cloud spend — with every
+                  over-provisioned or duplicated item flagged and priced.
+                </p>
+              </div>
+              <div className="bg-surface-0 p-8 rounded-card shadow-soft">
+                <h3 className="text-[20px] font-semibold text-fg mb-3">Right-Sized Redesign</h3>
+                <p className="text-[16px] text-fg-muted">
+                  A simplified target architecture: fewer devices, consolidated vendors,
+                  and capacity matched to real usage — typically 20-40% lower recurring cost.
+                </p>
+              </div>
+              <div className="bg-surface-0 p-8 rounded-card shadow-soft">
+                <h3 className="text-[20px] font-semibold text-fg mb-3">Migration Plan</h3>
+                <p className="text-[16px] text-fg-muted">
+                  A phased, low-risk path from current to target state, scheduled around your
+                  business hours — no big-bang cutovers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 bg-[#FFFFFF]">
+        <section className="py-16 bg-surface-0">
           <div className="max-w-[1200px] mx-auto px-6">
             <div className="text-center">
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+              <h2 className="text-[28px] font-bold text-fg mb-6">
                 Ready for Better Network Performance?
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+              <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
                 Contact us today for fast, professional network setup in the Seattle area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

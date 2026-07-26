@@ -49,7 +49,7 @@ export default function SalesPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-white p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
+              <div className="bg-surface-0 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
                 <Phone className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-bold text-neutral-900 mb-3">
                   Call Sales
@@ -65,7 +65,7 @@ export default function SalesPage() {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
+              <div className="bg-surface-0 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
                 <Mail className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-bold text-neutral-900 mb-3">
                   Email Sales
@@ -81,7 +81,7 @@ export default function SalesPage() {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
+              <div className="bg-surface-0 p-8 rounded-xl border border-neutral-200 hover:shadow-lg transition-shadow text-center">
                 <Calendar className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <h3 className="text-xl font-heading font-bold text-neutral-900 mb-3">
                   Schedule Demo
@@ -152,7 +152,7 @@ export default function SalesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-32 bg-surface-0">
         <Container>
           <div className="bg-gradient-to-r from-brand-blue to-brand-cyan rounded-2xl p-12 md:p-16 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
@@ -162,7 +162,7 @@ export default function SalesPage() {
               Get a free consultation and custom quote for your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/contact" className="bg-white text-brand-blue hover:bg-gray-100">
+              <Button href="/contact" className="bg-surface-0 text-brand-blue hover:bg-surface-1">
                 Request Quote
               </Button>
               <Button href="/services" className="bg-brand-navy text-white hover:bg-opacity-90">

@@ -4,7 +4,7 @@ import { generateSEO } from '@/lib/seo';
 export const metadata: Metadata = generateSEO({
   title: 'Cybersecurity Services',
   description:
-    'Protect your business with security assessments, endpoint protection, firewall management, and employee security training from Seattle experts.',
+    'Network security assessments, endpoint protection, firewall management, and security training from Seattle experts. Prioritized fixes, not scare reports.',
   canonical: '/services/security',
 });
 

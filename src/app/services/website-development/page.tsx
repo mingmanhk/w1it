@@ -56,7 +56,7 @@ export default function WebsiteDevelopmentPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-navy/60 to-navy/80" />
@@ -76,13 +76,13 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               What We Offer
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               Comprehensive web development services tailored to your business needs
             </p>
           </div>
@@ -91,12 +91,12 @@ export default function WebsiteDevelopmentPage() {
             {features.map((feature) => {
               const Icon = feature.icon;
               return (
-                <div key={feature.title} className="bg-[#F8FAFC] p-8">
+                <div key={feature.title} className="bg-surface-1 p-8">
                   <Icon className="w-16 h-16 text-[#3A81F7] mb-6" strokeWidth={1.5} />
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -107,13 +107,13 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Modern Technology Stack
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               We use industry-leading technologies to build robust, scalable websites
             </p>
           </div>
@@ -122,7 +122,7 @@ export default function WebsiteDevelopmentPage() {
             {technologies.map((tech) => (
               <div
                 key={tech}
-                className="bg-[#FFFFFF] px-6 py-3 border-2 border-[#3A81F7] text-[#050816] text-[16px] font-bold"
+                className="bg-surface-0 px-6 py-3 border-2 border-[#3A81F7] text-fg text-[16px] font-bold"
               >
                 {tech}
               </div>
@@ -132,13 +132,13 @@ export default function WebsiteDevelopmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Build Your Website?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss your project and create a website that exceeds expectations
             </p>
             <Button href="/contact" variant="primary">

@@ -60,7 +60,7 @@ const industries = [
 
 export default function IndustriesPage() {
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       <Hero 
         title="Industries We Serve"
         subtitle="Tailored IT solutions for the unique challenges of your industry."
@@ -68,7 +68,7 @@ export default function IndustriesPage() {
       />
 
       {/* Section / WhoWeServe */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {industries.map((industry, index) => {
@@ -76,31 +76,31 @@ export default function IndustriesPage() {
               return (
                 <div
                   key={index}
-                  className="bg-[#FFFFFF]"
+                  className="bg-surface-0"
                 >
                   {/* Card Header */}
-                  <div className="bg-[#F1F5F9] p-8">
+                  <div className="bg-surface-2 p-8">
                     <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] mb-6">
                       <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    <h3 className="text-[20px] font-semibold text-fg mb-4">
                       {industry.name}
                     </h3>
-                    <p className="text-[16px] text-[#4A4A4A]">
+                    <p className="text-[16px] text-fg-muted">
                       {industry.description}
                     </p>
                   </div>
 
                   {/* Card Body */}
                   <div className="p-8">
-                    <h4 className="text-[16px] font-semibold text-[#050816] mb-4">
+                    <h4 className="text-[16px] font-semibold text-fg mb-4">
                       Our Services:
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {industry.services.map((service, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <span className="inline-block w-2 h-2 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                          <span className="text-[16px] text-[#4A4A4A]">{service}</span>
+                          <span className="text-[16px] text-fg-muted">{service}</span>
                         </li>
                       ))}
                     </ul>
@@ -116,13 +116,13 @@ export default function IndustriesPage() {
       </section>
 
       {/* Section / CTA */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+            <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
               Let&apos;s discuss how we can support your industry&apos;s specific needs.
             </p>
             <Button href="/contact" variant="primary">

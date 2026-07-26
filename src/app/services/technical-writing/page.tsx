@@ -95,7 +95,7 @@ export default function TechnicalWriting() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
         <Hero
             title="Bilingual Technical Writing"
             subtitle="Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses."
@@ -108,16 +108,16 @@ export default function TechnicalWriting() {
         />
 
       {/* Why Bilingual Documentation Matters */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+          <h2 className="text-[28px] font-bold text-fg mb-6">
             Why Bilingual Documentation Matters
           </h2>
-          <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
-            <p className="text-[16px] text-[#4A4A4A] leading-relaxed mb-6">
+          <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
+            <p className="text-[16px] text-fg-muted leading-relaxed mb-6">
               In today&apos;s global economy, businesses increasingly operate across English and Chinese-speaking markets. Effective technical communication isn&apos;t just about translation—it requires deep understanding of both technical concepts and cultural context.
             </p>
-            <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+            <p className="text-[16px] text-fg-muted leading-relaxed">
               Whether you&apos;re a Seattle-based company expanding to Asian markets, or an international team needing documentation in both languages, professional bilingual technical writing ensures clarity, accuracy, and consistency across all your technical communications.
             </p>
           </div>
@@ -125,13 +125,13 @@ export default function TechnicalWriting() {
       </section>
 
       {/* Services Offered */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Documentation Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               Comprehensive technical writing services tailored to your needs.
             </p>
           </div>
@@ -140,14 +140,14 @@ export default function TechnicalWriting() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8">
+                <div key={index} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -158,10 +158,10 @@ export default function TechnicalWriting() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               What Sets Us Apart
             </h2>
           </div>
@@ -170,14 +170,14 @@ export default function TechnicalWriting() {
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-[#FFFFFF] p-8 text-center">
+                <div key={index} className="bg-surface-0 p-8 text-center">
                   <div className="w-16 h-16 bg-[#00A878] flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {benefit.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
@@ -188,21 +188,21 @@ export default function TechnicalWriting() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Common Use Cases
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-[#F8FAFC] p-8">
-                <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+              <div key={index} className="bg-surface-1 p-8">
+                <h3 className="text-[20px] font-semibold text-fg mb-4">
                   {useCase.title}
                 </h3>
-                <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                <p className="text-[16px] text-fg-muted leading-relaxed">
                   {useCase.description}
                 </p>
               </div>
@@ -212,13 +212,13 @@ export default function TechnicalWriting() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Improve Your Global Communication?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how bilingual technical documentation can support your business goals.
             </p>
             <Button href="/contact" variant="primary">

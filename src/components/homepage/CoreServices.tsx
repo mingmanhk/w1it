@@ -1,4 +1,4 @@
-import { Server, Shield, Cloud } from 'lucide-react';
+import { Server, Shield, Cloud, Network, DollarSign, SearchCheck } from 'lucide-react';
 
 /**
  * W1IT Services Component - LIGHT-MODE Design System
@@ -9,30 +9,45 @@ import { Server, Shield, Cloud } from 'lucide-react';
 
 const coreServices = [
   {
+    title: 'Network Architecture Optimization',
+    description: 'We audit your current network, eliminate over-provisioned hardware and licensing, and redesign the architecture — most clients cut recurring IT costs by 20-40%.',
+    icon: DollarSign,
+  },
+  {
+    title: 'Network Design & Build',
+    description: 'Complete network build-outs for offices, warehouses, and multi-site businesses: structured cabling plans, WiFi coverage, VPN, and vendor-neutral hardware selection.',
+    icon: Network,
+  },
+  {
+    title: 'Network Security Assessment',
+    description: 'A practical, prioritized review of your firewall rules, access controls, patching, and exposure — with a remediation plan ranked by risk, not a scare report.',
+    icon: SearchCheck,
+  },
+  {
     title: 'Managed IT Services',
-    description: 'Proactive monitoring, updates, and support to keep your systems running smoothly.',
+    description: 'Proactive monitoring, patching, and helpdesk support with predictable monthly pricing — problems fixed before they interrupt your team.',
     icon: Server,
   },
   {
-    title: 'IT Automation',
-    description: 'Streamline your operations with automated workflows and intelligent systems.',
-    icon: Shield,
+    title: 'Cloud Migration',
+    description: 'Structured moves to cloud infrastructure with minimal downtime — and honest advice when staying on-prem is the cheaper, better answer.',
+    icon: Cloud,
   },
   {
-    title: 'Cloud Migration',
-    description: 'Seamless transition to cloud infrastructure with minimal downtime.',
-    icon: Cloud,
+    title: 'IT Automation',
+    description: 'Replace repetitive manual work with reliable automated workflows: onboarding, backups, monitoring, and reporting that run themselves.',
+    icon: Shield,
   },
 ];
 
 export default function CoreServices() {
   return (
-    <section className="py-16 bg-[#FFFFFF]">
+    <section className="py-16 bg-surface-0">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-4">Our Services</h2>
-          <p className="text-[16px] text-[#4A4A4A]">Complete IT solutions designed for small businesses</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">Our Services</h2>
+          <p className="text-[16px] text-fg-muted">Complete IT solutions designed for small businesses</p>
         </div>
 
         {/* Service Cards Grid */}
@@ -42,7 +57,7 @@ export default function CoreServices() {
             return (
               <div
                 key={index}
-                className="bg-[#F8FAFC] p-8"
+                className="bg-surface-1 p-8"
               >
                 {/* Icon 48x48 */}
                 <div className="mb-6">
@@ -50,12 +65,12 @@ export default function CoreServices() {
                 </div>
 
                 {/* Heading 20 semibold */}
-                <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                <h3 className="text-[20px] font-semibold text-fg mb-4">
                   {service.title}
                 </h3>
 
                 {/* Description 16 regular */}
-                <p className="text-[16px] text-[#4A4A4A]">
+                <p className="text-[16px] text-fg-muted">
                   {service.description}
                 </p>
               </div>

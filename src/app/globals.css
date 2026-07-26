@@ -7,9 +7,33 @@
  * STRICT COMPLIANCE - Minimal, clean, no gradients or shadows unless specified
  */
 
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --surface-0: #ffffff;
+  --surface-1: #f8fafc;
+  --surface-2: #f1f5f9;
+  --fg: #050816;
+  --fg-muted: #4a5568;
+  --fg-subtle: #64748b;
+  --line: #e2e8f0;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --surface-0: #0b1120;
+  --surface-1: #111a2e;
+  --surface-2: #1a2540;
+  --fg: #f1f5f9;
+  --fg-muted: #aab7cc;
+  --fg-subtle: #7c8aa5;
+  --line: #26324f;
+}
+
 @layer base {
   body {
-    @apply bg-white text-[#050816] font-sans antialiased;
+    @apply bg-surface-0 text-fg font-sans antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {

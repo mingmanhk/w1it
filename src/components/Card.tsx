@@ -25,7 +25,7 @@ export default function Card({
   style,
 }: CardProps) {
   const baseClasses = `
-    bg-white rounded-2xl border-2 border-neutral-200 shadow-sm
+    bg-surface-0 rounded-2xl border-2 border-neutral-200 shadow-sm
     ${paddingClasses[padding]}
     ${hoverable ? 'transition-all duration-300 hover:shadow-lg hover:border-primary-300 hover:-translate-y-1' : ''}
     ${onClick ? 'cursor-pointer' : ''}

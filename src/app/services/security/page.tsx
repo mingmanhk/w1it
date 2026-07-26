@@ -86,7 +86,7 @@ export default function SecurityPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
         <Hero
             title="Enterprise Security Solutions"
             subtitle="Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management."
@@ -97,22 +97,22 @@ export default function SecurityPage() {
         />
 
       {/* Compliance Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-8">
+            <h2 className="text-[28px] font-bold text-fg mb-8">
               Compliance & Standards
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {compliance.map((standard, index) => (
                 <div
                   key={index}
-                  className="bg-[#FFFFFF] p-6 text-center border-2 border-[#3A81F7]"
+                  className="bg-surface-0 p-6 text-center border-2 border-[#3A81F7]"
                 >
-                  <div className="text-[20px] font-semibold text-[#050816] mb-2">
+                  <div className="text-[20px] font-semibold text-fg mb-2">
                     {standard.name}
                   </div>
-                  <div className="text-[16px] text-[#4A4A4A]">
+                  <div className="text-[16px] text-fg-muted">
                     {standard.description}
                   </div>
                 </div>
@@ -123,13 +123,13 @@ export default function SecurityPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Comprehensive Security Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               End-to-end cybersecurity solutions to protect your business from evolving threats.
             </p>
           </div>
@@ -138,14 +138,14 @@ export default function SecurityPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8">
+                <div key={index} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -156,13 +156,13 @@ export default function SecurityPage() {
       </section>
 
       {/* Threat Landscape */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Protecting Against Evolving Threats
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               Modern cybersecurity challenges require comprehensive defense strategies.
             </p>
           </div>
@@ -171,14 +171,14 @@ export default function SecurityPage() {
             {threats.map((threat, index) => {
               const Icon = threat.icon;
               return (
-                <div key={index} className="bg-[#FFFFFF] p-8 text-center">
+                <div key={index} className="bg-surface-0 p-8 text-center">
                   <div className="w-16 h-16 bg-[#00A878] flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {threat.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {threat.description}
                   </p>
                 </div>
@@ -188,14 +188,50 @@ export default function SecurityPage() {
         </div>
       </section>
 
+      {/* Network Security Assessment */}
+      <section className="py-16 bg-surface-1">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
+              Network Security Assessment
+            </h2>
+            <p className="text-[16px] text-fg-muted">
+              A fixed-scope, practical review of how exposed your business actually is — delivered as a
+              prioritized remediation plan your team (or ours) can execute, not a 60-page scare report.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
+              <h3 className="text-[18px] font-semibold text-fg mb-2">Perimeter &amp; Firewall</h3>
+              <p className="text-[14px] text-fg-muted">Rule review, exposed services, VPN configuration, and remote-access hygiene.</p>
+            </div>
+            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
+              <h3 className="text-[18px] font-semibold text-fg mb-2">Access &amp; Identity</h3>
+              <p className="text-[14px] text-fg-muted">MFA coverage, stale accounts, privilege sprawl, and password policy reality-check.</p>
+            </div>
+            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
+              <h3 className="text-[18px] font-semibold text-fg mb-2">Patch &amp; Endpoint</h3>
+              <p className="text-[14px] text-fg-muted">OS and firmware patch levels, endpoint protection status, and unmanaged devices.</p>
+            </div>
+            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
+              <h3 className="text-[18px] font-semibold text-fg mb-2">Backup &amp; Recovery</h3>
+              <p className="text-[14px] text-fg-muted">Backup coverage, restore testing, and ransomware resilience — verified, not assumed.</p>
+            </div>
+          </div>
+          <p className="text-center text-[14px] text-fg-subtle mt-8">
+            Findings ranked by real-world risk, each with effort estimate and cost impact — so you fix what matters first.
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Secure Your Business?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Partner with cybersecurity experts to build robust defenses against evolving threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

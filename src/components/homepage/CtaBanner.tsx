@@ -9,21 +9,21 @@ import Button from '@/components/Button';
 
 export default function CtaBanner() {
   return (
-    <section className="py-16 bg-[#FFFFFF]">
+    <section className="py-16 bg-surface-0">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center">
           {/* Title - Heading / 28 Bold */}
-          <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+          <h2 className="text-[28px] font-bold text-fg mb-6">
             Ready to Get Started?
           </h2>
 
           {/* Subtitle - Heading / 20 Semibold */}
-          <h3 className="text-[20px] font-semibold text-[#050816] mb-6">
+          <h3 className="text-[20px] font-semibold text-fg mb-6">
             Let&apos;s Build Your Success Story Together
           </h3>
 
           {/* Body - Body / 17 Regular */}
-          <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+          <p className="text-[17px] text-fg-muted mb-8 max-w-2xl mx-auto">
             Talk to us about your goals, your challenges, and how W1IT can help you build a stronger, smarter foundation for growth.
           </p>
 

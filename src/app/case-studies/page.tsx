@@ -135,7 +135,7 @@ export default function CaseStudiesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-surface-1">
       {/* Hero Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="container mx-auto px-4">
@@ -148,13 +148,13 @@ export default function CaseStudiesPage() {
               for businesses across various industries.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="bg-surface-0/20 backdrop-blur-sm rounded-lg px-4 py-2">
                 <span className="font-semibold">{caseStudies.length}</span> Case Studies
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="bg-surface-0/20 backdrop-blur-sm rounded-lg px-4 py-2">
                 <span className="font-semibold">{industries.length}</span> Industries
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+              <div className="bg-surface-0/20 backdrop-blur-sm rounded-lg px-4 py-2">
                 <span className="font-semibold">{categories.length}</span> Categories
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function CaseStudiesPage() {
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
                 {/* Industries Filter */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="bg-surface-0 rounded-xl shadow-sm border border-line p-6">
                   <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                     <FolderOpen className="w-5 h-5" />
                     Industries
@@ -179,9 +179,9 @@ export default function CaseStudiesPage() {
                   <ul className="space-y-2">
                     {industries.map((industry) => (
                       <li key={industry.name}>
-                        <button className="flex justify-between items-center w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 transition">
+                        <button className="flex justify-between items-center w-full text-left px-3 py-2 rounded-lg hover:bg-surface-1 transition">
                           <span>{industry.name}</span>
-                          <span className="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">
+                          <span className="bg-surface-2 text-fg-muted text-xs px-2 py-1 rounded-full">
                             {industry.count}
                           </span>
                         </button>
@@ -191,14 +191,14 @@ export default function CaseStudiesPage() {
                 </div>
 
                 {/* Categories Filter */}
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="bg-surface-0 rounded-xl shadow-sm border border-line p-6">
                   <h3 className="text-lg font-semibold mb-4">Categories</h3>
                   <ul className="space-y-2">
                     {categories.map((category) => (
                       <li key={category.name}>
-                        <button className="flex justify-between items-center w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 transition">
+                        <button className="flex justify-between items-center w-full text-left px-3 py-2 rounded-lg hover:bg-surface-1 transition">
                           <span>{category.name}</span>
-                          <span className="bg-gray-200 text-gray-700 text-xs px-2 py-1 rounded-full">
+                          <span className="bg-surface-2 text-fg-muted text-xs px-2 py-1 rounded-full">
                             {category.count}
                           </span>
                         </button>
@@ -210,7 +210,7 @@ export default function CaseStudiesPage() {
                 {/* Contact CTA */}
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
                   <h3 className="text-lg font-semibold mb-3">Need Similar Solutions?</h3>
-                  <p className="text-gray-700 mb-4 text-sm">
+                  <p className="text-fg-muted mb-4 text-sm">
                     Our team specializes in custom IT solutions for businesses of all sizes.
                   </p>
                   <Link
@@ -228,7 +228,7 @@ export default function CaseStudiesPage() {
             <div className="lg:col-span-3">
               <div className="mb-8">
                 <h2 className="text-2xl font-bold mb-2">All Case Studies</h2>
-                <p className="text-gray-600">
+                <p className="text-fg-muted">
                   Detailed technical implementations with measurable business impact.
                 </p>
               </div>
@@ -237,7 +237,7 @@ export default function CaseStudiesPage() {
                 {caseStudies.map((study) => (
                   <article
                     key={study.slug}
-                    className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition"
+                    className="bg-surface-0 rounded-xl shadow-sm border border-line overflow-hidden hover:shadow-md transition"
                   >
                     <div className="md:flex">
                       {/* Image */}
@@ -256,7 +256,7 @@ export default function CaseStudiesPage() {
 
                       {/* Content */}
                       <div className="md:w-2/3 p-6">
-                        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-3">
+                        <div className="flex flex-wrap items-center gap-4 text-sm text-fg-muted mb-3">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             {study.date}
@@ -265,7 +265,7 @@ export default function CaseStudiesPage() {
                             <Clock className="w-4 h-4" />
                             {study.readTime}
                           </div>
-                          <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                          <div className="bg-surface-1 text-fg-muted px-3 py-1 rounded-full text-sm">
                             {study.industry}
                           </div>
                         </div>
@@ -274,7 +274,7 @@ export default function CaseStudiesPage() {
                           {study.title}
                         </h3>
 
-                        <p className="text-gray-600 mb-4">
+                        <p className="text-fg-muted mb-4">
                           {study.excerpt}
                         </p>
 
@@ -283,7 +283,7 @@ export default function CaseStudiesPage() {
                           {study.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                              className="bg-surface-1 text-fg-muted px-3 py-1 rounded-full text-sm"
                             >
                               {tag}
                             </span>
@@ -298,7 +298,7 @@ export default function CaseStudiesPage() {
                             Read Full Case Study
                             <ArrowRight className="w-4 h-4 ml-2" />
                           </Link>
-                          <span className="text-sm text-gray-500">
+                          <span className="text-sm text-fg-muted">
                             Detailed technical analysis
                           </span>
                         </div>

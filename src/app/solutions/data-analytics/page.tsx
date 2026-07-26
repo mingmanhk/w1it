@@ -73,7 +73,7 @@ export default function DataAnalyticsPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -102,30 +102,30 @@ export default function DataAnalyticsPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+              <h2 className="text-[28px] font-bold text-fg mb-6">
                 Modern Analytics Solutions
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-6 leading-relaxed">
                 In today&apos;s data-rich environment, organizations that effectively leverage their data gain significant competitive advantages. Our data analytics solutions transform raw data into strategic assets.
               </p>
-              <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-8 leading-relaxed">
                 We help you build scalable data platforms, implement advanced analytics, and create data-driven cultures that drive innovation and growth.
               </p>
               <Button href="/contact" variant="primary">
                 Schedule Assessment
               </Button>
             </div>
-            <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
-              <h3 className="text-[20px] font-semibold text-[#050816] mb-6">Key Benefits</h3>
+            <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
+              <h3 className="text-[20px] font-semibold text-fg mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-[16px] text-[#4A4A4A]">{benefit}</span>
+                    <span className="text-[16px] text-fg-muted">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -135,13 +135,13 @@ export default function DataAnalyticsPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Comprehensive Analytics Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               End-to-end data and analytics solutions tailored to your business objectives.
             </p>
           </div>
@@ -150,14 +150,14 @@ export default function DataAnalyticsPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8">
+                <div key={index} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -168,24 +168,24 @@ export default function DataAnalyticsPage() {
       </section>
 
       {/* Technology Stack */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Modern Analytics Platforms
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               We work with leading technologies to deliver best-in-class analytics solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
-              <div key={index} className="text-center p-8 bg-[#FFFFFF] border-2 border-[#D9D9D9]">
-                <div className="text-[20px] font-semibold text-[#050816] mb-2">
+              <div key={index} className="text-center p-8 bg-surface-0 border-2 border-line">
+                <div className="text-[20px] font-semibold text-fg mb-2">
                   {tech.name}
                 </div>
-                <div className="text-[16px] text-[#4A4A4A]">
+                <div className="text-[16px] text-fg-muted">
                   {tech.category}
                 </div>
               </div>
@@ -195,13 +195,13 @@ export default function DataAnalyticsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Unlock Your Data&apos;s Potential?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Transform your data into strategic assets that drive innovation, efficiency, and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

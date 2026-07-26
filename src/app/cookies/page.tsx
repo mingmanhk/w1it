@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function CookiePolicy() {
   return (
-    <div className="bg-white">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="absolute inset-0">
@@ -40,10 +40,10 @@ export default function CookiePolicy() {
       </section>
 
       {/* Content Section */}
-      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+      <section className="py-16 md:py-24 bg-surface-2">
         <div className="max-w-content mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-white rounded-card p-8 md:p-12">
-            <p className="text-body text-[#4A4A4A] leading-relaxed mb-8">
+          <div className="max-w-4xl mx-auto bg-surface-0 rounded-card p-8 md:p-12">
+            <p className="text-body text-fg-muted leading-relaxed mb-8">
               This Cookie Policy explains how W1 IT Solutions uses cookies and similar tracking
               technologies on our website w1it.com. By using our website, you consent to the use
               of cookies as described in this policy.
@@ -52,8 +52,8 @@ export default function CookiePolicy() {
             <div className="space-y-10">
               {/* Section 1 */}
               <section>
-                <h2 className="text-heading-md text-[#050816] mb-4">1. What Are Cookies?</h2>
-                <p className="text-body text-[#4A4A4A] leading-relaxed">
+                <h2 className="text-heading-md text-fg mb-4">1. What Are Cookies?</h2>
+                <p className="text-body text-fg-muted leading-relaxed">
                   Cookies are small text files that are placed on your device (computer, tablet,
                   or mobile phone) when you visit a website. They are widely used to make websites
                   work more efficiently and provide information to website owners.
@@ -62,62 +62,62 @@ export default function CookiePolicy() {
 
               {/* Section 2 */}
               <section>
-                <h2 className="text-heading-md text-[#050816] mb-4">2. Types of Cookies We Use</h2>
+                <h2 className="text-heading-md text-fg mb-4">2. Types of Cookies We Use</h2>
                 <div className="space-y-6">
-                  <div className="bg-[#F5F5F5] p-6 rounded-card">
-                    <h3 className="text-body font-bold text-[#050816] mb-2">Essential Cookies</h3>
-                    <p className="text-body text-[#4A4A4A] mb-4">
+                  <div className="bg-surface-2 p-6 rounded-card">
+                    <h3 className="text-body font-bold text-fg mb-2">Essential Cookies</h3>
+                    <p className="text-body text-fg-muted mb-4">
                       These cookies are necessary for the website to function properly. They enable
                       basic functions like page navigation and access to secure areas of the website.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Session management and authentication</span>
+                        <span className="text-body text-fg-muted">Session management and authentication</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Security and fraud prevention</span>
+                        <span className="text-body text-fg-muted">Security and fraud prevention</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Load balancing and performance</span>
+                        <span className="text-body text-fg-muted">Load balancing and performance</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-[#F5F5F5] p-6 rounded-card">
-                    <h3 className="text-body font-bold text-[#050816] mb-2">Analytics Cookies</h3>
-                    <p className="text-body text-[#4A4A4A] mb-4">
+                  <div className="bg-surface-2 p-6 rounded-card">
+                    <h3 className="text-body font-bold text-fg mb-2">Analytics Cookies</h3>
+                    <p className="text-body text-fg-muted mb-4">
                       These cookies help us understand how visitors interact with our website by
                       collecting and reporting information anonymously.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Google Analytics for traffic analysis</span>
+                        <span className="text-body text-fg-muted">Google Analytics for traffic analysis</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Vercel Analytics for performance monitoring</span>
+                        <span className="text-body text-fg-muted">Vercel Analytics for performance monitoring</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-[#F5F5F5] p-6 rounded-card">
-                    <h3 className="text-body font-bold text-[#050816] mb-2">Preference Cookies</h3>
-                    <p className="text-body text-[#4A4A4A] mb-4">
+                  <div className="bg-surface-2 p-6 rounded-card">
+                    <h3 className="text-body font-bold text-fg mb-2">Preference Cookies</h3>
+                    <p className="text-body text-fg-muted mb-4">
                       These cookies enable the website to remember information that changes the way
                       the website behaves or looks, like your preferred language or region.
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Language and regional preferences</span>
+                        <span className="text-body text-fg-muted">Language and regional preferences</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">Cookie consent preferences</span>
+                        <span className="text-body text-fg-muted">Cookie consent preferences</span>
                       </li>
                     </ul>
                   </div>
@@ -126,69 +126,69 @@ export default function CookiePolicy() {
 
               {/* Section 3 */}
               <section>
-                <h2 className="text-heading-md text-[#050816] mb-4">3. Managing Your Cookie Preferences</h2>
-                <p className="text-body text-[#4A4A4A] leading-relaxed mb-4">
+                <h2 className="text-heading-md text-fg mb-4">3. Managing Your Cookie Preferences</h2>
+                <p className="text-body text-fg-muted leading-relaxed mb-4">
                   Most web browsers allow you to control cookies through their settings. You can:
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-body text-[#4A4A4A]">Delete existing cookies</span>
+                    <span className="text-body text-fg-muted">Delete existing cookies</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-body text-[#4A4A4A]">Block all or specific cookies</span>
+                    <span className="text-body text-fg-muted">Block all or specific cookies</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-body text-[#4A4A4A]">Set preferences for different websites</span>
+                    <span className="text-body text-fg-muted">Set preferences for different websites</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="inline-block w-1.5 h-1.5 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-body text-[#4A4A4A]">Receive notifications when cookies are set</span>
+                    <span className="text-body text-fg-muted">Receive notifications when cookies are set</span>
                   </li>
                 </ul>
-                <p className="text-caption text-[#4A4A4A] mt-4">
+                <p className="text-caption text-fg-muted mt-4">
                   Note: Blocking cookies may affect your ability to use certain features of our website.
                 </p>
               </section>
 
               {/* Section 4 */}
               <section>
-                <h2 className="text-heading-md text-[#050816] mb-4">4. Contact Us</h2>
-                <p className="text-body text-[#4A4A4A] leading-relaxed mb-4">
+                <h2 className="text-heading-md text-fg mb-4">4. Contact Us</h2>
+                <p className="text-body text-fg-muted leading-relaxed mb-4">
                   If you have any questions about our use of cookies or this Cookie Policy, please
                   contact us:
                 </p>
                 <div className="space-y-2">
-                  <p className="text-body text-[#4A4A4A]">
-                    <strong className="text-[#050816]">Email:</strong>{' '}
+                  <p className="text-body text-fg-muted">
+                    <strong className="text-fg">Email:</strong>{' '}
                     <a href="mailto:privacy@w1it.com" className="text-[#3A81F7] hover:underline font-bold">
                       privacy@w1it.com
                     </a>
                   </p>
-                  <p className="text-body text-[#4A4A4A]">
-                    <strong className="text-[#050816]">Address:</strong> W1 IT Solutions, Seattle, WA
+                  <p className="text-body text-fg-muted">
+                    <strong className="text-fg">Address:</strong> W1 IT Solutions, Seattle, WA
                   </p>
-                  <p className="text-body text-[#4A4A4A]">
-                    <strong className="text-[#050816]">Phone:</strong> 832 472 7991
+                  <p className="text-body text-fg-muted">
+                    <strong className="text-fg">Phone:</strong> 832 472 7991
                   </p>
                 </div>
               </section>
 
               {/* Related Policies */}
-              <div className="pt-8 border-t border-[#D9D9D9]">
-                <h3 className="text-heading-md text-[#050816] mb-4">Related Policies</h3>
+              <div className="pt-8 border-t border-line">
+                <h3 className="text-heading-md text-fg mb-4">Related Policies</h3>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/privacy"
-                    className="px-6 py-3 bg-[#F5F5F5] hover:bg-[#D9D9D9] text-[#050816] rounded-card transition-colors text-body font-bold"
+                    className="px-6 py-3 bg-surface-2 hover:bg-line text-fg rounded-card transition-colors text-body font-bold"
                   >
                     Privacy Policy
                   </Link>
                   <Link
                     href="/terms"
-                    className="px-6 py-3 bg-[#F5F5F5] hover:bg-[#D9D9D9] text-[#050816] rounded-card transition-colors text-body font-bold"
+                    className="px-6 py-3 bg-surface-2 hover:bg-line text-fg rounded-card transition-colors text-body font-bold"
                   >
                     Terms of Service
                   </Link>

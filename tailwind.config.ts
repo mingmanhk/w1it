@@ -6,6 +6,7 @@ import type { Config } from 'tailwindcss'
  */
 
 const config: Config = {
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,6 +17,30 @@ const config: Config = {
       // W1IT COLOR TOKENS
       // ========================================
       colors: {
+        // Semantic theme tokens (CSS variables switch with [data-theme])
+        surface: {
+          0: 'var(--surface-0)',
+          1: 'var(--surface-1)',
+          2: 'var(--surface-2)',
+        },
+        fg: {
+          DEFAULT: 'var(--fg)',
+          muted: 'var(--fg-muted)',
+          subtle: 'var(--fg-subtle)',
+        },
+        line: 'var(--line)',
+        // Brand constants (identical in both themes)
+        navy: '#050816',
+        brand: {
+          blue: '#3A81F7',
+          green: '#00A878',
+        },
+        // Legacy palette names used across pages, remapped to the token system
+        charcoal: 'var(--fg)',
+        'gray-medium': 'var(--fg-muted)',
+        rose: '#3A81F7',
+        blush: 'var(--surface-1)',
+        cream: 'var(--surface-1)',
         w1it: {
           navy: '#050816',
           blue: '#3A81F7',

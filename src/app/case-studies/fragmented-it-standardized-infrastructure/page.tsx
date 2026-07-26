@@ -29,10 +29,10 @@ export default function FragmentedITStandardizedInfrastructure() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-white to-blush">
+      <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-surface-0 to-blush">
         <Container>
           <div className="animate-fade-in">
-            <span className="text-xs font-body font-medium text-rose bg-white px-3 py-1 rounded-full">
+            <span className="text-xs font-body font-medium text-rose bg-surface-0 px-3 py-1 rounded-full">
               Case Study
             </span>
             <h1 className="font-heading font-bold text-4xl md:text-5xl text-charcoal mb-6 mt-4">

@@ -23,7 +23,7 @@ const testimonials = [
 
 export default function TestimonialsPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="absolute inset-0">
@@ -49,20 +49,20 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-[#F5F5F5]">
+      <section className="py-16 md:py-24 bg-surface-2">
         <div className="max-w-content mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-white rounded-card p-8 border-2 border-[#D9D9D9]"
+                className="bg-surface-0 rounded-card p-8 border-2 border-line"
               >
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-14 h-14 bg-[#3A81F7] rounded-card flex items-center justify-center text-2xl">
                     {testimonial.logo}
                   </div>
                   <div>
-                    <h3 className="text-heading-md text-[#050816]">
+                    <h3 className="text-heading-md text-fg">
                       {testimonial.url ? (
                         <Link 
                           href={testimonial.url} 
@@ -76,32 +76,32 @@ export default function TestimonialsPage() {
                         testimonial.company
                       )}
                     </h3>
-                    <p className="text-caption text-[#4A4A4A]">
+                    <p className="text-caption text-fg-muted">
                       {testimonial.role || 'Technology Solutions'}
                     </p>
                   </div>
                 </div>
-                <blockquote className="text-body text-[#4A4A4A] leading-relaxed mb-6 italic">
+                <blockquote className="text-body text-fg-muted leading-relaxed mb-6 italic">
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="mb-6">
-                  <h4 className="text-body font-bold text-[#050816] mb-4">
+                  <h4 className="text-body font-bold text-fg mb-4">
                     Measurable Results:
                   </h4>
                   <ul className="space-y-3">
                     {testimonial.results.map((result, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
                         <span className="inline-block w-1.5 h-1.5 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-body text-[#4A4A4A]">{result}</span>
+                        <span className="text-body text-fg-muted">{result}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="pt-6 border-t border-[#D9D9D9]">
-                  <div className="text-body font-bold text-[#050816]">
+                <div className="pt-6 border-t border-line">
+                  <div className="text-body font-bold text-fg">
                     {testimonial.author}
                   </div>
-                  <div className="text-caption text-[#4A4A4A]">
+                  <div className="text-caption text-fg-muted">
                     {testimonial.role}, {testimonial.company}
                   </div>
                 </div>

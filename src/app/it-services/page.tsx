@@ -134,7 +134,7 @@ export default function ITServices() {
       />
       <div>
       {/* Hero Section */}
-      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
+      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-surface-0 to-blush">
         <Container>
           <div className="text-center animate-fade-in">
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-charcoal mb-6">

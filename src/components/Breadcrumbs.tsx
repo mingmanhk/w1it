@@ -48,18 +48,18 @@ export default function Breadcrumbs() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
+      <ol className="flex flex-wrap items-center gap-1 text-sm text-fg-muted">
         {crumbs.map((c, i) => {
           const last = i === crumbs.length - 1;
           return (
             <li key={c.href} className="flex items-center gap-1">
               {i > 0 && <ChevronRight className="h-4 w-4 shrink-0" aria-hidden="true" />}
               {last ? (
-                <span aria-current="page" className="font-medium text-gray-700 dark:text-gray-200 line-clamp-1">
+                <span aria-current="page" className="font-medium text-fg-muted line-clamp-1">
                   {c.name}
                 </span>
               ) : (
-                <Link href={c.href} className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                <Link href={c.href} className="hover:text-fg transition-colors">
                   {c.name}
                 </Link>
               )}

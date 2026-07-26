@@ -65,7 +65,7 @@ export default function WebsiteOptimizationPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -94,24 +94,24 @@ export default function WebsiteOptimizationPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Proven Results
             </h2>
-            <p className="text-[17px] text-[#4A4A4A]">
+            <p className="text-[17px] text-fg-muted">
               Real performance improvements from our optimization services
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit) => (
-              <div key={benefit.metric} className="text-center bg-[#FFFFFF] p-8 border-2 border-[#D9D9D9]">
+              <div key={benefit.metric} className="text-center bg-surface-0 p-8 border-2 border-line">
                 <div className="text-[42px] font-bold text-[#3A81F7] mb-2">
                   {benefit.metric}
                 </div>
-                <p className="text-[16px] text-[#4A4A4A]">{benefit.description}</p>
+                <p className="text-[16px] text-fg-muted">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -119,13 +119,13 @@ export default function WebsiteOptimizationPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Optimization Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               Comprehensive solutions to maximize your website&apos;s potential
             </p>
           </div>
@@ -134,14 +134,14 @@ export default function WebsiteOptimizationPage() {
             {services.map((service) => {
               const Icon = service.icon;
               return (
-                <div key={service.title} className="bg-[#F8FAFC] p-8">
+                <div key={service.title} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">{service.description}</p>
+                  <p className="text-[16px] text-fg-muted leading-relaxed">{service.description}</p>
                 </div>
               );
             })}
@@ -150,13 +150,13 @@ export default function WebsiteOptimizationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Optimize Your Website?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Get a free performance audit and discover optimization opportunities for your website.
             </p>
             <Button href="/contact" variant="primary">

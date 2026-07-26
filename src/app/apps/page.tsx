@@ -19,7 +19,7 @@ const AppCard = ({ app }: { app: App }) => (
       <Image src={app.icon} alt={`${app.title} icon`} width={48} height={48} />
     </div>
     <h3 className="text-2xl font-semibold mb-4 text-navy">{app.title}</h3>
-    <p className="text-gray-600 mb-6">{app.description}</p>
+    <p className="text-fg-muted mb-6">{app.description}</p>
     <Button href={app.href} variant="secondary" className="w-full">
       Learn More <ArrowRight className="w-4 h-4 ml-2" />
     </Button>
@@ -94,7 +94,7 @@ export default function AppsPage() {
       <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-8 text-center">
           <h2 className="text-3xl font-bold text-navy mb-4">Why Our Apps Stand Out</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+          <p className="text-lg text-fg-muted max-w-3xl mx-auto mb-12">
             We combine technical expertise with user-centered design to create applications that are both powerful and easy to use.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -113,7 +113,7 @@ export default function AppsPage() {
             }].map((benefit, index) => (
               <div key={index} className="bg-surface-2 p-8">
                 <h3 className="text-xl font-semibold text-navy mb-4">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <p className="text-fg-muted">{benefit.description}</p>
               </div>
             ))}
           </div>

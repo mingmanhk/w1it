@@ -25,7 +25,7 @@ export default function EmergencyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 href="tel:8324727991"
-                className="bg-white text-red-700 hover:bg-gray-100 text-lg"
+                className="bg-surface-0 text-red-700 hover:bg-surface-1 text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call (832) 472-7991
@@ -47,7 +47,7 @@ export default function EmergencyPage() {
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 mb-8 text-center">
               What Qualifies as an Emergency?
             </h2>
-            <div className="bg-white rounded-xl p-8 border-2 border-red-200">
+            <div className="bg-surface-0 rounded-xl p-8 border-2 border-red-200">
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <AlertTriangle className="w-6 h-6 text-red-600 mr-3 flex-shrink-0 mt-1" />
@@ -90,17 +90,17 @@ export default function EmergencyPage() {
               Emergency Response Times
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl text-center border border-neutral-200">
+              <div className="bg-surface-0 p-6 rounded-xl text-center border border-neutral-200">
                 <Clock className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <div className="text-4xl font-bold text-brand-blue mb-2">15 min</div>
                 <p className="text-neutral-600">Initial Response</p>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center border border-neutral-200">
+              <div className="bg-surface-0 p-6 rounded-xl text-center border border-neutral-200">
                 <Shield className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <div className="text-4xl font-bold text-brand-blue mb-2">24/7</div>
                 <p className="text-neutral-600">Availability</p>
               </div>
-              <div className="bg-white p-6 rounded-xl text-center border border-neutral-200">
+              <div className="bg-surface-0 p-6 rounded-xl text-center border border-neutral-200">
                 <Phone className="w-12 h-12 text-brand-blue mx-auto mb-4" />
                 <div className="text-4xl font-bold text-brand-blue mb-2">1 hour</div>
                 <p className="text-neutral-600">On-Site (if needed)</p>
@@ -120,7 +120,7 @@ export default function EmergencyPage() {
             <p className="text-xl mb-8 opacity-90">
               Proactive monitoring and maintenance to prevent critical issues before they happen
             </p>
-            <Button href="/services/managed-services" className="bg-white text-brand-blue hover:bg-gray-100">
+            <Button href="/services/managed-services" className="bg-surface-0 text-brand-blue hover:bg-surface-1">
               Learn About Managed Services
             </Button>
           </div>

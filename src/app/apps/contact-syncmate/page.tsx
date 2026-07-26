@@ -33,7 +33,7 @@ export default function ContactSyncMate() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-white to-blush">
+      <section className="pt-16 pb-24 md:pt-32 md:pb-40 bg-gradient-to-b from-surface-0 to-blush">
         <Container>
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="flex-1 text-center lg:text-left">
@@ -81,7 +81,7 @@ export default function ContactSyncMate() {
               </div>
             </div>
             <div className="flex-1">
-              <div className="bg-gradient-to-br from-blush to-white rounded-2xl p-8 shadow-xl">
+              <div className="bg-gradient-to-br from-blush to-surface-0 rounded-2xl p-8 shadow-xl">
                 <div className="relative aspect-square w-full max-w-[800px] mx-auto">
                   <Image
                     src="/Contact SyncMate Icon.webp"

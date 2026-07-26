@@ -80,7 +80,7 @@ export default function ManagedServicesPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       <Hero
         title="Proactive IT Management"
         subtitle="Comprehensive IT management with 24/7 monitoring, strategic consulting, and dedicated support for your business."
@@ -91,30 +91,30 @@ export default function ManagedServicesPage() {
       />
 
       {/* Overview Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+              <h2 className="text-[28px] font-bold text-fg mb-6">
                 Your Dedicated IT Team
               </h2>
-              <p className="text-[16px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-6 leading-relaxed">
                 Managed IT Services provide a comprehensive solution for businesses that want to focus on their core operations while leaving technology management to experts.
               </p>
-              <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed">
+              <p className="text-[16px] text-fg-muted mb-8 leading-relaxed">
                 We act as an extension of your team, providing proactive monitoring, strategic guidance, and rapid support to ensure your technology drives business success.
               </p>
               <Button href="/contact" variant="primary">
                 Schedule Consultation
               </Button>
             </div>
-            <div className="bg-[#FFFFFF] p-8 border-2 border-[#3A81F7]">
-              <h3 className="text-[20px] font-semibold text-[#050816] mb-6">Key Benefits</h3>
+            <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
+              <h3 className="text-[20px] font-semibold text-fg mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-[16px] text-[#4A4A4A]">{benefit}</span>
+                    <span className="text-[16px] text-fg-muted">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -124,13 +124,13 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Comprehensive Managed Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               End-to-end IT management solutions tailored to your business needs.
             </p>
           </div>
@@ -139,14 +139,14 @@ export default function ManagedServicesPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8">
+                <div key={index} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -157,30 +157,30 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* Service Levels */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Flexible Service Plans
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               Choose the level of service that matches your business requirements and budget.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {tiers.map((tier, index) => (
-              <div key={index} className="bg-[#FFFFFF] border-2 border-[#D9D9D9]">
-                <div className="bg-[#F1F5F9] p-8 text-center">
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-2">{tier.name}</h3>
-                  <p className="text-[16px] text-[#4A4A4A]">{tier.description}</p>
+              <div key={index} className="bg-surface-0 border-2 border-line">
+                <div className="bg-surface-2 p-8 text-center">
+                  <h3 className="text-[20px] font-semibold text-fg mb-2">{tier.name}</h3>
+                  <p className="text-[16px] text-fg-muted">{tier.description}</p>
                 </div>
                 <div className="p-8">
                   <div className="space-y-4 mb-8">
                     {tier.features.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-3">
                         <span className="inline-block w-2 h-2 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                        <span className="text-[16px] text-[#4A4A4A]">{feature}</span>
+                        <span className="text-[16px] text-fg-muted">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -195,13 +195,13 @@ export default function ManagedServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Simplify Your IT Management?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Partner with us to build scalable, secure, and innovative IT solutions that drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

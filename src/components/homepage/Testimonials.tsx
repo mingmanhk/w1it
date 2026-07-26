@@ -18,12 +18,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-16 bg-[#F8FAFC]">
+    <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-4">Industry Expertise</h2>
-          <p className="text-[16px] text-[#4A4A4A]">Trusted by businesses across diverse industries</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">Industry Expertise</h2>
+          <p className="text-[16px] text-fg-muted">Trusted by businesses across diverse industries</p>
         </div>
 
         {/* TestimonialCard / Default */}
@@ -31,7 +31,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="w-full md:max-w-[800px] bg-[#FFFFFF] p-8 border-2 border-[#D9D9D9]"
+              className="w-full md:max-w-[800px] bg-surface-0 p-8 border-2 border-line"
             >
               {/* Stars - 20px */}
               <div className="flex gap-1 mb-6">
@@ -41,16 +41,16 @@ export default function Testimonials() {
               </div>
 
               {/* Quote - 17 italic */}
-              <blockquote className="text-[17px] italic leading-[150%] text-[#050816] mb-6">
+              <blockquote className="text-[17px] italic leading-[150%] text-fg mb-6">
                 &quot;{testimonial.quote}&quot;
               </blockquote>
 
               {/* Attribution - 16 medium */}
               <div>
-                <div className="text-[16px] font-medium text-[#050816]">
+                <div className="text-[16px] font-medium text-fg">
                   {testimonial.author}
                 </div>
-                <div className="text-[16px] text-[#4A4A4A]">
+                <div className="text-[16px] text-fg-muted">
                   {testimonial.company}
                 </div>
               </div>

@@ -17,14 +17,14 @@ const industries = [
 
 export default function Industries() {
   return (
-    <section className="py-16 bg-[#FFFFFF]">
+    <section className="py-16 bg-surface-0">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+          <h2 className="text-[28px] font-bold text-fg mb-4">
             Supporting Small Businesses Across Industries
           </h2>
-          <p className="text-[16px] text-[#4A4A4A] max-w-3xl mx-auto">
+          <p className="text-[16px] text-fg-muted max-w-3xl mx-auto">
             From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
           </p>
         </div>
@@ -36,13 +36,13 @@ export default function Industries() {
             return (
               <div
                 key={index}
-                className="bg-[#F8FAFC] p-8 text-center"
+                className="bg-surface-1 p-8 text-center"
               >
                 {/* Centered Icon 48x48 */}
                 <div className="flex justify-center items-center mb-4">
                   <Icon className="w-12 h-12 text-[#3A81F7]" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-[20px] font-semibold text-[#050816]">
+                <h3 className="text-[20px] font-semibold text-fg">
                   {industry.name}
                 </h3>
               </div>

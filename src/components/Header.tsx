@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { useTheme } from '@/components/ThemeProvider';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 
 const navLinks = [
     {
@@ -59,6 +60,7 @@ const navLinks = [
 ];
 
 export default function Header() {
+    const { theme, toggleTheme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -82,7 +84,7 @@ export default function Header() {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white border-b border-gray-200 z-[999]">
+        <header className="fixed top-0 left-0 w-full bg-surface-0/90 backdrop-blur border-b border-line z-[999]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
@@ -95,7 +97,7 @@ export default function Header() {
                                 height={40}
                                 priority
                             />
-                            <span className="text-xl font-bold text-gray-800">W1IT Solutions</span>
+                            <span className="text-xl font-bold text-fg">W1IT Solutions</span>
                         </Link>
                     </div>
 
@@ -107,7 +109,7 @@ export default function Header() {
                                     <>
                                         <button
                                             onClick={() => handleDropdown(link.href)}
-                                            className="flex items-center text-base font-medium text-gray-500 hover:text-gray-900 focus:outline-none"
+                                            className="flex items-center text-base font-medium text-fg-muted hover:text-fg focus:outline-none"
                                         >
                                             <span>{link.label}</span>
                                             <ChevronDown className={`ml-2 h-5 w-5 ${openDropdown === link.href ? 'transform rotate-180' : ''}`} />
@@ -115,16 +117,16 @@ export default function Header() {
                                         {openDropdown === link.href && (
                                             <div className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                                                 <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                                                    <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                                                    <div className="relative grid gap-6 bg-surface-0 px-5 py-6 sm:gap-8 sm:p-8">
                                                         {link.dropdown.map((item) => (
                                                             <Link
                                                                 key={item.href}
                                                                 href={item.href}
-                                                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
+                                                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-surface-1"
                                                                 onClick={() => setOpenDropdown(null)}
                                                             >
                                                                 <div className="ml-4">
-                                                                    <p className="text-base font-medium text-gray-900">{item.label}</p>
+                                                                    <p className="text-base font-medium text-fg">{item.label}</p>
                                                                 </div>
                                                             </Link>
                                                         ))}
@@ -136,7 +138,7 @@ export default function Header() {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className="text-base font-medium text-gray-500 hover:text-gray-900"
+                                        className="text-base font-medium text-fg-muted hover:text-fg"
                                     >
                                         {link.label}
                                     </Link>
@@ -146,17 +148,31 @@ export default function Header() {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden lg:flex items-center">
+                    <div className="hidden lg:flex items-center gap-4">
+                        <button
+                            onClick={toggleTheme}
+                            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                            className="p-2 rounded-lg text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                        </button>
                         <Button href="/contact" variant="primary">
                             Get Started
                         </Button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
-                    <div className="-mr-2 flex items-center lg:hidden">
+                    <div className="-mr-2 flex items-center gap-1 lg:hidden">
+                        <button
+                            onClick={toggleTheme}
+                            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                            className="p-2 rounded-lg text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                        </button>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            className="bg-surface-0 rounded-md p-2 inline-flex items-center justify-center text-fg-subtle hover:text-fg-muted hover:bg-surface-1 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                         >
                             <span className="sr-only">Open main menu</span>
                             {isOpen ? <X className="block h-6 w-6" aria-hidden="true" /> : <Menu className="block h-6 w-6" aria-hidden="true" />}
@@ -175,7 +191,7 @@ export default function Header() {
                                     <>
                                         <button
                                             onClick={() => handleDropdown(link.href)}
-                                            className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                                            className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-fg-muted hover:text-fg hover:bg-surface-1"
                                         >
                                             <span>{link.label}</span>
                                             <ChevronDown className={`ml-2 h-5 w-5 ${openDropdown === link.href ? 'transform rotate-180' : ''}`} />
@@ -186,7 +202,7 @@ export default function Header() {
                                                     <Link
                                                         key={item.href}
                                                         href={item.href}
-                                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                                                        className="block px-3 py-2 rounded-md text-base font-medium text-fg-muted hover:text-fg hover:bg-surface-1"
                                                         onClick={() => {
                                                             setIsOpen(false);
                                                             setOpenDropdown(null);
@@ -201,7 +217,7 @@ export default function Header() {
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                                        className="block px-3 py-2 rounded-md text-base font-medium text-fg-muted hover:text-fg hover:bg-surface-1"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {link.label}

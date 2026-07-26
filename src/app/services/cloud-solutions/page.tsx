@@ -84,7 +84,7 @@ export default function CloudSolutionsPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
         <Hero
             title="Enterprise Cloud Excellence"
             subtitle="Transform your infrastructure with scalable, secure, and cost-effective cloud solutions."
@@ -97,10 +97,10 @@ export default function CloudSolutionsPage() {
         />
 
       {/* Platforms Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h3 className="text-[20px] font-semibold text-[#050816] mb-6">
+            <h3 className="text-[20px] font-semibold text-fg mb-6">
               Cloud Platforms We Support
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
@@ -118,13 +118,13 @@ export default function CloudSolutionsPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Comprehensive Cloud Services
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-3xl mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
               End-to-end cloud solutions designed to accelerate your digital transformation.
             </p>
           </div>
@@ -133,14 +133,14 @@ export default function CloudSolutionsPage() {
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
-                <div key={index} className="bg-[#F8FAFC] p-8">
+                <div key={index} className="bg-surface-1 p-8">
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+                  <p className="text-[16px] text-fg-muted leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -151,10 +151,10 @@ export default function CloudSolutionsPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Why Move to the Cloud?
             </h2>
           </div>
@@ -167,10 +167,10 @@ export default function CloudSolutionsPage() {
                   <div className="w-16 h-16 bg-[#3A81F7] flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">
                     {benefit.title}
                   </h3>
-                  <p className="text-[16px] text-[#4A4A4A]">
+                  <p className="text-[16px] text-fg-muted">
                     {benefit.description}
                   </p>
                 </div>
@@ -181,13 +181,13 @@ export default function CloudSolutionsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready for Cloud Transformation?
             </h2>
-            <p className="text-[16px] text-[#4A4A4A] mb-8 max-w-2xl mx-auto">
+            <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
               Partner with experienced cloud specialists to build scalable, secure, and innovative cloud solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

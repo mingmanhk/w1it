@@ -46,7 +46,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       <Hero
         title="About W1IT Solutions"
         subtitle="Enterprise-grade IT support designed for small businesses—without the complexity or overhead."
@@ -54,13 +54,13 @@ export default function AboutPage() {
       />
 
       {/* Section / Foundation (Values) */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">
+            <h2 className="text-[28px] font-bold text-fg mb-4">
               Our Values
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] max-w-[700px] mx-auto">
+            <p className="text-[17px] text-fg-muted max-w-[700px] mx-auto">
               The principles that guide everything we do.
             </p>
           </div>
@@ -68,12 +68,12 @@ export default function AboutPage() {
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="text-center p-8 bg-[#FFFFFF]">
+                <div key={index} className="text-center p-8 bg-surface-0">
                   <div className="flex justify-center items-center w-16 h-16 bg-[#3A81F7] mx-auto mb-6">
                     <Icon className="w-8 h-8 text-white" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[20px] font-semibold text-[#050816] mb-4">{value.name}</h3>
-                  <p className="text-[16px] text-[#4A4A4A]">{value.description}</p>
+                  <h3 className="text-[20px] font-semibold text-fg mb-4">{value.name}</h3>
+                  <p className="text-[16px] text-fg-muted">{value.description}</p>
                 </div>
               );
             })}
@@ -82,15 +82,15 @@ export default function AboutPage() {
       </section>
 
       {/* Section / Story */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[28px] font-bold text-[#050816] mb-6">Our Mission</h2>
-              <p className="text-[17px] text-[#4A4A4A] mb-6 leading-relaxed">
+              <h2 className="text-[28px] font-bold text-fg mb-6">Our Mission</h2>
+              <p className="text-[17px] text-fg-muted mb-6 leading-relaxed">
                 W1IT provides small businesses with enterprise-grade IT support—minus the complexity. We solve everyday tech problems and prevent future disruptions so you can focus on growth, not troubleshooting.
               </p>
-              <p className="text-[16px] text-[#4A4A4A] leading-relaxed">
+              <p className="text-[16px] text-fg-muted leading-relaxed">
                 Founded by Victor, a seasoned IT professional with over a decade of experience, W1IT was born from frustration with overpriced, overcomplicated IT support. We treat small businesses like valued partners, not ticket numbers.
               </p>
             </div>
@@ -107,17 +107,17 @@ export default function AboutPage() {
       </section>
 
       {/* Section / WhyChooseUs */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-4">Why Choose W1IT?</h2>
+            <h2 className="text-[28px] font-bold text-fg mb-4">Why Choose W1IT?</h2>
           </div>
           <div className="max-w-[900px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whyChooseUs.map((reason, index) => (
-                <div key={index} className="flex items-start gap-3 p-6 bg-[#FFFFFF]">
+                <div key={index} className="flex items-start gap-3 p-6 bg-surface-0">
                   <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
-                  <p className="text-[16px] text-[#4A4A4A]">{reason}</p>
+                  <p className="text-[16px] text-fg-muted">{reason}</p>
                 </div>
               ))}
             </div>
@@ -126,13 +126,13 @@ export default function AboutPage() {
       </section>
 
       {/* Section / CTA */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+            <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
               Let&apos;s build a stronger IT foundation for your business.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">

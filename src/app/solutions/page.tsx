@@ -71,7 +71,7 @@ const solutions = [
 
 export default function SolutionsPage() {
   return (
-    <div className="bg-[#FFFFFF]">
+    <div className="bg-surface-0">
       {/* Section / Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -97,7 +97,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Section / Services */}
-      <section className="py-16 bg-[#F8FAFC]">
+      <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {solutions.map((solution, index) => {
@@ -105,31 +105,31 @@ export default function SolutionsPage() {
               return (
                 <div
                   key={index}
-                  className="bg-[#FFFFFF]"
+                  className="bg-surface-0"
                 >
                   {/* Card Header */}
-                  <div className="bg-[#F1F5F9] p-8">
+                  <div className="bg-surface-2 p-8">
                     <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] mb-6">
                       <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-[20px] font-semibold text-[#050816] mb-4">
+                    <h3 className="text-[20px] font-semibold text-fg mb-4">
                       {solution.title}
                     </h3>
-                    <p className="text-[16px] text-[#4A4A4A]">
+                    <p className="text-[16px] text-fg-muted">
                       {solution.description}
                     </p>
                   </div>
 
                   {/* Card Body */}
                   <div className="p-8">
-                    <h4 className="text-[16px] font-semibold text-[#050816] mb-4">
+                    <h4 className="text-[16px] font-semibold text-fg mb-4">
                       Key Outcomes:
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {solution.outcomes.map((outcome, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <span className="inline-block w-2 h-2 bg-[#3A81F7] rounded-full mt-2 flex-shrink-0"></span>
-                          <span className="text-[16px] text-[#4A4A4A]">{outcome}</span>
+                          <span className="text-[16px] text-fg-muted">{outcome}</span>
                         </li>
                       ))}
                     </ul>
@@ -145,13 +145,13 @@ export default function SolutionsPage() {
       </section>
 
       {/* Section / CTA */}
-      <section className="py-16 bg-[#FFFFFF]">
+      <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-[28px] font-bold text-[#050816] mb-6">
+            <h2 className="text-[28px] font-bold text-fg mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-[17px] text-[#4A4A4A] mb-8 max-w-[600px] mx-auto">
+            <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
               We help small businesses succeed with reliable IT solutions.
             </p>
             <Button href="/contact" variant="primary">

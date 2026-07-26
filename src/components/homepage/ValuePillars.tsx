@@ -10,19 +10,19 @@ import { Circle, Shield, TrendingUp } from 'lucide-react';
 const valuePillars = [
   {
     title: 'Clarity',
-    description: 'Clean, predictable systems built on operational insight.',
+    description: 'Plain-English recommendations and documented systems — you always know what you run and what it costs.',
     icon: Circle,
     color: '#3A81F7', // Electric Blue
   },
   {
     title: 'Resilience',
-    description: 'Fault‑tolerant infrastructure engineered for uptime.',
+    description: 'Fault-tolerant networks engineered for uptime, with tested backups and a recovery plan that actually works.',
     icon: Shield,
     color: '#00A878', // Teal Green
   },
   {
     title: 'IT Optimization & Strategy',
-    description: 'Clarity‑first planning with scalable pathways forward.',
+    description: 'Architecture reviews that right-size your infrastructure — spend less on hardware, licensing, and rework.',
     icon: TrendingUp,
     color: '#FFFFFF', // White
   },
@@ -30,12 +30,12 @@ const valuePillars = [
 
 export default function ValuePillars() {
   return (
-    <section className="py-16 bg-[#F8FAFC]">
+    <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-[#050816] mb-4">Our Foundation</h2>
-          <p className="text-[16px] text-[#4A4A4A]">The three pillars that guide everything we do</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">Our Foundation</h2>
+          <p className="text-[16px] text-fg-muted">The three pillars that guide everything we do</p>
         </div>
 
         {/* Three Columns - PillarCards */}
@@ -43,7 +43,7 @@ export default function ValuePillars() {
           {valuePillars.map((pillar, index) => {
             const Icon = pillar.icon;
             return (
-              <div key={index} className="text-center p-8 bg-[#FFFFFF]">
+              <div key={index} className="text-center p-8 bg-surface-0">
                 {/* Icon 64x64 */}
                 <div className="flex justify-center mb-4">
                   <Icon
@@ -54,12 +54,12 @@ export default function ValuePillars() {
                 </div>
 
                 {/* Heading 20 semibold */}
-                <h3 className="text-[20px] font-semibold text-[#050816] mb-3">
+                <h3 className="text-[20px] font-semibold text-fg mb-3">
                   {pillar.title}
                 </h3>
 
                 {/* Description 16 regular */}
-                <p className="text-[16px] text-[#4A4A4A] max-w-sm mx-auto">
+                <p className="text-[16px] text-fg-muted max-w-sm mx-auto">
                   {pillar.description}
                 </p>
               </div>

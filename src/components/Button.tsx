@@ -19,7 +19,7 @@ interface ButtonProps {
 
 const variants = {
   primary: 'bg-[#3A81F7] text-white hover:bg-[#2968D8]',
-  secondary: 'bg-white text-[#050816] border border-[#D9D9D9] hover:border-[#3A81F7]',
+  secondary: 'bg-surface-0 text-fg border border-line hover:border-[#3A81F7]',
 };
 
 export default function Button({
