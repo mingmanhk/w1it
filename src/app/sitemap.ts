@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/case-studies/missing-it-checklist-outage-recovery',
     '/case-studies/network-security-remote-teams',
     '/case-studies/top-it-mistakes-small-businesses',
+    '/case-studies/vmware-to-hyperv-migration',
     '/case-studies/why-businesses-need-it-documentation',
     '/case-studies/wifi-setup-guide-seattle',
   ].map(path => ({

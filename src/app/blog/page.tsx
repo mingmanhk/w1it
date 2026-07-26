@@ -11,6 +11,20 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    id: 10,
+    title: "VMware to Hyper-V Migration: Escaping a 3x Licensing Renewal",
+    slug: "vmware-to-hyperv-migration",
+    excerpt: "A tripled VMware renewal quote, 90 days to decide, 40 production VMs. How we moved everything to Hyper-V with under 15 minutes of downtime per workload.",
+    category: "Virtualization",
+    categoryColor: "bg-blue-100 text-blue-800",
+    readTime: "9 min read",
+    date: "Jul 20, 2026",
+    image: "/images/brand/case-backup.png",
+    author: "W1IT Team",
+    featured: true,
+    tags: ["VMware", "Hyper-V", "Migration", "Cost Optimization"],
+  },
+  {
     id: 1,
     title: "VMware & Veeam Backup Modernization for European Ferry Company",
     slug: "ferry-company-backup-modernization",
@@ -21,7 +35,7 @@ const caseStudies = [
     date: "Mar 15, 2026",
     image: "/images/brand/case-backup.png",
     author: "W1IT Team",
-    featured: true,
+    featured: false,
     tags: ["Backup Solutions", "VMware", "Veeam", "Maritime IT"],
   },
   {
