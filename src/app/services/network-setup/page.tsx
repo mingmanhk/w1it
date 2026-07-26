@@ -152,7 +152,7 @@ export default function NetworkSetup() {
         <Hero
             title="Network Setup & Configuration"
             subtitle="Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available."
-            imageSrc="/images/optimized/hero-graphic.webp"
+            imageSrc="/images/brand/hero-graphic.webp"
             imageAlt="Network Setup & Configuration"
             ctaButton={{
                 href: '/contact',

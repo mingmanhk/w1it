@@ -99,7 +99,7 @@ export default function TechnicalWriting() {
         <Hero
             title="Bilingual Technical Writing"
             subtitle="Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses."
-            imageSrc="/images/optimized/hero-graphic.webp"
+            imageSrc="/images/brand/hero-graphic.webp"
             imageAlt="Bilingual Technical Writing Services"
             ctaButton={{
                 href: '/contact',

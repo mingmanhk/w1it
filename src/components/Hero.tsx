@@ -18,7 +18,7 @@ interface HeroProps {
 export default function Hero({
   title,
   subtitle,
-  imageSrc = "/images/optimized/hero-graphic.webp",
+  imageSrc = "/images/brand/hero-graphic.webp",
   imageAlt = "Hero background",
   ctaButton,
 }: HeroProps) {

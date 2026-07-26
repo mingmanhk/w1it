@@ -12,7 +12,7 @@ export default function HomeHero() {
     <Hero
         title="Enterprise-Grade IT Support Built for Small Business Success"
         subtitle="Small businesses deserve powerful IT solutions without the complexity. We solve your tech problems and prevent future disruptions — so you can focus on growing your business, not troubleshooting it."
-        imageSrc="/images/optimized/hero-graphic.webp"
+        imageSrc="/images/brand/hero-graphic.webp"
         imageAlt="W1IT IT Solutions Hero Graphic"
         ctaButton={{
           href: "/contact",

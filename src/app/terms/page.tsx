@@ -19,7 +19,7 @@ export default function TermsOfService() {
       <section className="relative pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="Terms of Service"
             fill
             className="object-cover"

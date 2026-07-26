@@ -89,7 +89,7 @@ export default function Header() {
                     <div className="flex-shrink-0">
                         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                             <Image
-                                src="/images/optimized/Logo.webp"
+                                src="/images/brand/logo.webp"
                                 alt="W1IT Solutions Logo"
                                 width={40}
                                 height={40}

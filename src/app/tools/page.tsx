@@ -15,7 +15,7 @@ export default function ToolsPage() {
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="Free IT Tools"
             fill
             className="object-cover"

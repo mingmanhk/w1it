@@ -64,7 +64,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-flex items-center gap-2 mb-6 hover:opacity-80 transition-opacity">
               <Image
-                src="/images/optimized/Logo.webp"
+                src="/images/brand/logo.webp"
                 alt="W1IT Logo"
                 width={32}
                 height={32}

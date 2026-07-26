@@ -96,7 +96,7 @@ export default function AboutPage() {
             </div>
             <div>
               <Image
-                src="/images/optimized/about-mission.svg"
+                src="/images/brand/about-mission.svg"
                 alt="W1IT Mission"
                 width={600}
                 height={400}

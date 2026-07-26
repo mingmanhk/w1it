@@ -30,25 +30,25 @@ const AppCard = ({ app }: { app: App }) => (
 export default function AppsPage() {
   const apps: App[] = [
     {
-      icon: '/images/optimized/Logo-AppIcon-Original.webp',
+      icon: '/images/brand/logo.webp',
       title: 'Contact SyncMate',
       description: 'Intelligent contact management and synchronization across all your devices and platforms.',
       href: '/apps/contact-syncmate',
     },
     {
-      icon: '/images/optimized/Logo-AppIcon-Original.webp',
+      icon: '/images/brand/logo.webp',
       title: 'Pixel Color Picker',
       description: 'Advanced color detection tool with palette generation and accessibility checking.',
       href: '/apps/pixel-color-picker',
     },
     {
-      icon: '/images/optimized/Logo-AppIcon-Original.webp',
+      icon: '/images/brand/logo.webp',
       title: 'ScreenGrabber',
       description: 'Professional screenshot and screen recording tool with annotation capabilities.',
       href: '/apps/screengrabber',
     },
     {
-      icon: '/images/optimized/Logo-AppIcon-Original.webp',
+      icon: '/images/brand/logo.webp',
       title: 'DeepTicker',
       description: 'Real-time financial data analysis and market insights platform.',
       href: '/apps/deepticker',
@@ -61,7 +61,7 @@ export default function AppsPage() {
       <section className="relative bg-navy text-white py-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="W1IT Applications Hero"
             fill
             className="object-cover"

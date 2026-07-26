@@ -127,7 +127,7 @@ export default function ITConsulting() {
       <section className="relative pt-16 pb-24 md:pt-32 md:pb-40">
         <div className="absolute inset-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="IT Consulting"
             fill
             className="object-cover"

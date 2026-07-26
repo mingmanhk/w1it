@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1128"/>
+      <stop offset="1" stop-color="#050816"/>
+    </linearGradient>
+    <linearGradient id="srv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16224A"/>
+      <stop offset="1" stop-color="#0C1533"/>
+    </linearGradient>
+    <radialGradient id="gg" cx="0.5" cy="0.42" r="0.55">
+      <stop offset="0" stop-color="#00A878" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#00A878" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1536" rx="48" fill="url(#panel)"/>
+  <rect width="1024" height="1536" rx="48" fill="url(#gg)"/>
+
+  <!-- primary site servers -->
+  <g transform="translate(300,470)">
+    <rect x="-120" y="-160" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <rect x="-120" y="-78" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <rect x="-120" y="4" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <g fill="#00A878">
+      <circle cx="-92" cy="-125" r="8"/>
+      <circle cx="-92" cy="-43" r="8"/>
+      <circle cx="-92" cy="39" r="8"/>
+    </g>
+    <g fill="#3A81F7" opacity="0.85">
+      <rect x="-56" y="-131" width="110" height="11" rx="5"/>
+      <rect x="-56" y="-49" width="140" height="11" rx="5"/>
+      <rect x="-56" y="33" width="86" height="11" rx="5"/>
+    </g>
+    <text x="0" y="130" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" fill="#7C8AA5">Site A</text>
+  </g>
+
+  <!-- replica site servers -->
+  <g transform="translate(724,470)">
+    <rect x="-120" y="-160" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <rect x="-120" y="-78" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <rect x="-120" y="4" width="240" height="70" rx="14" fill="url(#srv)"/>
+    <g fill="#00A878">
+      <circle cx="-92" cy="-125" r="8"/>
+      <circle cx="-92" cy="-43" r="8"/>
+      <circle cx="-92" cy="39" r="8"/>
+    </g>
+    <g fill="#3A81F7" opacity="0.85">
+      <rect x="-56" y="-131" width="120" height="11" rx="5"/>
+      <rect x="-56" y="-49" width="96" height="11" rx="5"/>
+      <rect x="-56" y="33" width="130" height="11" rx="5"/>
+    </g>
+    <text x="0" y="130" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" fill="#7C8AA5">Site B</text>
+  </g>
+
+  <!-- sync arrows between sites -->
+  <g stroke="#00A878" stroke-width="10" fill="none" stroke-linecap="round">
+    <path d="M448 380 C 500 340 548 340 600 380"/>
+    <path d="M600 480 C 548 520 500 520 448 480"/>
+  </g>
+  <path d="M596 356 L620 384 L584 396 Z" fill="#00A878"/>
+  <path d="M452 504 L428 476 L464 464 Z" fill="#00A878"/>
+
+  <!-- shield + clock card -->
+  <g transform="translate(512,900)">
+    <rect x="-300" y="-90" width="600" height="220" rx="28" fill="#0C1533" stroke="#3A81F7" stroke-opacity="0.3" stroke-width="3"/>
+    <g transform="translate(-180,20)">
+      <path d="M0 -66 L54 -44 V8 C54 48 28 74 0 86 C-28 74 -54 48 -54 8 V-44 Z" fill="#00A878"/>
+      <path d="M-20 6 L-6 22 L26 -18" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text x="-80" y="-10" font-family="DejaVu Sans, Arial, sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF">Backup verified</text>
+    <text x="-80" y="46" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" fill="#7C8AA5">RPO 15 min · RTO 1 hr</text>
+    <g transform="translate(248,24)">
+      <circle r="40" fill="none" stroke="#3A81F7" stroke-width="10"/>
+      <line x1="0" y1="0" x2="0" y2="-24" stroke="#3A81F7" stroke-width="10" stroke-linecap="round"/>
+      <line x1="0" y1="0" x2="16" y2="10" stroke="#00A878" stroke-width="10" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- snapshot timeline -->
+  <g transform="translate(512,1220)">
+    <line x1="-320" y1="0" x2="320" y2="0" stroke="#3A81F7" stroke-opacity="0.4" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#3A81F7">
+      <circle cx="-320" cy="0" r="14"/>
+      <circle cx="-160" cy="0" r="14"/>
+      <circle cx="0" cy="0" r="14"/>
+      <circle cx="160" cy="0" r="14"/>
+    </g>
+    <circle cx="320" cy="0" r="18" fill="#00A878"/>
+    <circle cx="320" cy="0" r="8" fill="#FFFFFF"/>
+    <text x="0" y="64" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" fill="#7C8AA5">Snapshot timeline</text>
+  </g>
+
+  <g fill="#3A81F7" opacity="0.3">
+    <circle cx="140" cy="180" r="8"/>
+    <circle cx="880" cy="160" r="10"/>
+    <circle cx="120" cy="1400" r="8"/>
+    <circle cx="900" cy="1410" r="8"/>
+  </g>
+</svg>

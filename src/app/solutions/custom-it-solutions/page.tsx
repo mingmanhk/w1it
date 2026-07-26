@@ -109,7 +109,7 @@ export default function CustomITSolutionsPage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="Custom IT Solutions"
             fill
             className="object-cover"

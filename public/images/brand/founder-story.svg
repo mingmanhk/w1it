@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="1" stop-color="#EEF3F9"/>
+    </linearGradient>
+    <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0C1533"/>
+      <stop offset="1" stop-color="#050816"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" rx="32" fill="url(#panel)"/>
+
+  <!-- desk -->
+  <rect x="90" y="440" width="620" height="18" rx="9" fill="#D9E2EE"/>
+
+  <!-- monitor -->
+  <g transform="translate(400,290)">
+    <rect x="-190" y="-140" width="380" height="250" rx="20" fill="url(#scr)"/>
+    <rect x="-30" y="110" width="60" height="34" fill="#C7D2E1"/>
+    <rect x="-90" y="144" width="180" height="16" rx="8" fill="#C7D2E1"/>
+    <!-- code lines -->
+    <g stroke-linecap="round">
+      <line x1="-150" y1="-92" x2="-60" y2="-92" stroke="#3A81F7" stroke-width="14"/>
+      <line x1="-150" y1="-56" x2="30" y2="-56" stroke="#D9D9D9" stroke-width="14" opacity="0.5"/>
+      <line x1="-150" y1="-20" x2="-20" y2="-20" stroke="#00A878" stroke-width="14"/>
+      <line x1="-150" y1="16" x2="60" y2="16" stroke="#D9D9D9" stroke-width="14" opacity="0.5"/>
+      <line x1="-150" y1="52" x2="-70" y2="52" stroke="#3A81F7" stroke-width="14"/>
+      <!-- brackets -->
+      <path d="M96 -70 L66 -30 L96 10" fill="none" stroke="#6FA6FF" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M126 -70 L156 -30 L126 10" fill="none" stroke="#6FA6FF" stroke-width="12" stroke-linejoin="round"/>
+    </g>
+    <circle cx="150" cy="-110" r="12" fill="#00A878"/>
+  </g>
+
+  <!-- coffee -->
+  <g transform="translate(660,400)">
+    <rect x="-26" y="-4" width="52" height="46" rx="10" fill="#FFFFFF" stroke="#C7D2E1" stroke-width="4"/>
+    <path d="M26 6 h14 a12 12 0 0 1 0 26 h-14" fill="none" stroke="#C7D2E1" stroke-width="4"/>
+    <path d="M-10 -16 q4 -10 0 -18 M8 -16 q4 -10 0 -18" fill="none" stroke="#C7D2E1" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- plant -->
+  <g transform="translate(140,392)">
+    <path d="M0 48 L-22 8 Q0 -34 6 -2 Q26 -26 14 10 Z" fill="#00A878"/>
+    <rect x="-22" y="44" width="44" height="30" rx="8" fill="#FFFFFF" stroke="#C7D2E1" stroke-width="4"/>
+  </g>
+
+  <!-- speech bubble EN/中 -->
+  <g transform="translate(614,150)">
+    <rect x="-84" y="-44" width="168" height="80" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="3"/>
+    <path d="M-20 36 L-6 60 L6 36 Z" fill="#FFFFFF"/>
+    <text x="-52" y="10" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="bold" fill="#3A81F7">EN</text>
+    <text x="10" y="12" font-family="DejaVu Sans, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="bold" fill="#00A878">中</text>
+  </g>
+
+  <g fill="#3A81F7" opacity="0.35">
+    <circle cx="120" cy="120" r="8"/>
+    <circle cx="210" cy="80" r="6"/>
+    <circle cx="700" cy="520" r="8"/>
+  </g>
+</svg>

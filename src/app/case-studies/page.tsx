@@ -19,7 +19,7 @@ export default function CaseStudiesPage() {
       industry: "Transportation & Logistics",
       readTime: "10 min read",
       date: "Mar 15, 2026",
-      image: "/images/optimized/mockup_new.png",
+      image: "/images/brand/case-backup.png",
       tags: ["VMware", "Veeam", "Maritime Systems", "High-I/O", "Snapshot Governance"],
     },
     {
@@ -30,7 +30,7 @@ export default function CaseStudiesPage() {
       industry: "Professional Services",
       readTime: "8 min read",
       date: "Dec 26, 2024",
-      image: "/images/optimized/mockup_new.png",
+      image: "/images/brand/case-backup.png",
       tags: ["Checklists", "Incident Response", "Documentation", "Recovery"],
     },
     {
@@ -41,7 +41,7 @@ export default function CaseStudiesPage() {
       industry: "Corporate",
       readTime: "7 min read",
       date: "Dec 26, 2024",
-      image: "/images/optimized/hero-graphic.webp",
+      image: "/images/brand/hero-graphic.webp",
       tags: ["Standardization", "Automation", "Documentation", "Centralized Management"],
     },
     {
@@ -52,7 +52,7 @@ export default function CaseStudiesPage() {
       industry: "Small Business",
       readTime: "6 min read",
       date: "Dec 8, 2024",
-      image: "/images/optimized/founder-story.svg",
+      image: "/images/brand/founder-story.svg",
       tags: ["Small Business", "IT Strategy", "Risk Management", "Cost Optimization"],
     },
     {
@@ -63,7 +63,7 @@ export default function CaseStudiesPage() {
       industry: "Multiple Industries",
       readTime: "5 min read",
       date: "Dec 5, 2024",
-      image: "/images/optimized/about-mission.svg",
+      image: "/images/brand/about-mission.svg",
       tags: ["Documentation", "Standardization", "Crisis Management", "Operational Efficiency"],
     },
     {
@@ -74,7 +74,7 @@ export default function CaseStudiesPage() {
       industry: "Various Sectors",
       readTime: "7 min read",
       date: "Dec 1, 2024",
-      image: "/images/optimized/hero.svg",
+      image: "/images/brand/hero.svg",
       tags: ["IT Support Models", "Managed Services", "Business Alignment", "Cost Analysis"],
     },
     {
@@ -85,7 +85,7 @@ export default function CaseStudiesPage() {
       industry: "International Trade",
       readTime: "5 min read",
       date: "Nov 28, 2024",
-      image: "/images/optimized/mockup_new.png",
+      image: "/images/brand/case-backup.png",
       tags: ["Bilingual Documentation", "Global Teams", "Communication", "Standardization"],
     },
     {
@@ -96,7 +96,7 @@ export default function CaseStudiesPage() {
       industry: "Professional Services",
       readTime: "8 min read",
       date: "Nov 25, 2024",
-      image: "/images/optimized/hero-graphic.webp",
+      image: "/images/brand/hero-graphic.webp",
       tags: ["Network Security", "Remote Work", "Data Protection", "Compliance"],
     },
     {
@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
       industry: "Real Estate & Small Business",
       readTime: "6 min read",
       date: "Nov 20, 2024",
-      image: "/images/optimized/founder-story.svg",
+      image: "/images/brand/founder-story.svg",
       tags: ["Wi-Fi Optimization", "Network Performance", "Urban Environments", "Infrastructure"],
     },
   ];

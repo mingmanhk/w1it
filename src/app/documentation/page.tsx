@@ -15,7 +15,7 @@ export default function DocumentationPage() {
       <section className="relative py-24 md:py-32">
         <div className="absolute inset-0">
           <Image
-            src="/images/optimized/hero-graphic.webp"
+            src="/images/brand/hero-graphic.webp"
             alt="Documentation"
             fill
             className="object-cover"

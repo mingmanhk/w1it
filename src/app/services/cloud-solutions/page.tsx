@@ -88,7 +88,7 @@ export default function CloudSolutionsPage() {
         <Hero
             title="Enterprise Cloud Excellence"
             subtitle="Transform your infrastructure with scalable, secure, and cost-effective cloud solutions."
-            imageSrc="/images/optimized/hero-graphic.webp"
+            imageSrc="/images/brand/hero-graphic.webp"
             imageAlt="Cloud Solutions"
             ctaButton={{
                 href: '/contact',

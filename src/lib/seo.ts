@@ -227,7 +227,7 @@ export function generateOrganizationSchema(): object {
     '@type': 'Organization',
     name: 'W1IT Solutions',
     url: 'https://w1it.com',
-    logo: 'https://w1it.com/images/optimized/Logo.webp',
+    logo: 'https://w1it.com/images/brand/logo.webp',
     description:
       'Enterprise-grade IT support for small businesses in Bellevue, WA. Managed services, 24/7 monitoring, security, help desk support, and IT consulting designed specifically for small business success. Serving Seattle Metro Area.',
     telephone: '(832) 472-7991',
