@@ -5,6 +5,7 @@ import { saveContact } from '@/app/contact/actions';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Contact Page - LIGHT-MODE Design System
@@ -13,24 +14,25 @@ import Hero from '@/components/Hero';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-function SubmitButton() {
+function SubmitButton({ submitLabel, submittingLabel }: { submitLabel: string; submittingLabel: string }) {
   const { pending } = useFormStatus();
 
   return (
     <Button type="submit" disabled={pending} variant="primary" className="w-full">
-      {pending ? 'Submitting...' : 'Send Message'}
+      {pending ? submittingLabel : submitLabel}
     </Button>
   );
 }
 
 export default function ContactPage() {
   const [state, formAction] = useFormState(saveContact, null)
+  const { dict } = useLanguage();
 
   return (
     <div className="bg-surface-0">
         <Hero
-            title="Ready to Get Started?"
-            subtitle="Contact us today and let's build your success story together."
+            title={dict.contact.hero.title}
+            subtitle={dict.contact.hero.subtitle}
             imageAlt="Contact W1IT"
         />
 
@@ -40,14 +42,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="text-[28px] font-bold text-fg mb-6">Get in Touch</h2>
+              <h2 className="text-[28px] font-bold text-fg mb-6">{dict.contact.form.heading}</h2>
               <p className="text-[16px] text-fg-muted leading-relaxed mb-8">
-                Have questions about our services? Need help with a tech challenge? Fill out the form below and we&apos;ll respond within 24 hours.
+                {dict.contact.form.intro}
               </p>
               <form action={formAction} className="bg-surface-0 p-8">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-[16px] font-bold text-fg mb-2">Name</label>
+                    <label htmlFor="name" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.name}</label>
                     <input
                       type="text"
                       id="name"
@@ -58,7 +60,7 @@ export default function ContactPage() {
                     {state?.errors?.name && <p className="text-[16px] text-red-500 mt-2">{state.errors.name[0]}</p>}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-[16px] font-bold text-fg mb-2">Email</label>
+                    <label htmlFor="email" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.email}</label>
                     <input
                       type="email"
                       id="email"
@@ -69,7 +71,7 @@ export default function ContactPage() {
                     {state?.errors?.email && <p className="text-[16px] text-red-500 mt-2">{state.errors.email[0]}</p>}
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-[16px] font-bold text-fg mb-2">Company (Optional)</label>
+                    <label htmlFor="company" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.company}</label>
                     <input
                       type="text"
                       id="company"
@@ -78,7 +80,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-[16px] font-bold text-fg mb-2">Message</label>
+                    <label htmlFor="message" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.message}</label>
                     <textarea
                       id="message"
                       name="message"
@@ -90,7 +92,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <SubmitButton />
+                  <SubmitButton submitLabel={dict.contact.form.submit} submittingLabel={dict.contact.form.submitting} />
                 </div>
                 {state?.message && <p className="text-[16px] text-[#00A878] mt-4">{state.message}</p>}
               </form>
@@ -98,14 +100,14 @@ export default function ContactPage() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-[28px] font-bold text-fg mb-6">Contact Information</h2>
+              <h2 className="text-[28px] font-bold text-fg mb-6">{dict.contact.info.heading}</h2>
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4 bg-surface-0 p-6">
                   <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-[16px] font-bold text-fg mb-2">Phone</h3>
+                    <h3 className="text-[16px] font-bold text-fg mb-2">{dict.contact.info.phoneLabel}</h3>
                     <p className="text-[16px] text-fg-muted">(832) 472-7991</p>
                   </div>
                 </div>
@@ -114,7 +116,7 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-[16px] font-bold text-fg mb-2">Email</h3>
+                    <h3 className="text-[16px] font-bold text-fg mb-2">{dict.contact.info.emailLabel}</h3>
                     <p className="text-[16px] text-fg-muted">contact@w1it.com</p>
                   </div>
                 </div>
@@ -123,18 +125,18 @@ export default function ContactPage() {
                     <MapPin className="w-6 h-6 text-white" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-[16px] font-bold text-fg mb-2">Service Area</h3>
-                    <p className="text-[16px] text-fg-muted">Seattle Metropolitan Area & Remote Nationwide</p>
+                    <h3 className="text-[16px] font-bold text-fg mb-2">{dict.contact.info.serviceAreaLabel}</h3>
+                    <p className="text-[16px] text-fg-muted">{dict.contact.info.serviceAreaValue}</p>
                   </div>
                 </div>
               </div>
               <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
-                <h3 className="text-[20px] font-semibold text-fg mb-3">Your Local IT Partner</h3>
+                <h3 className="text-[20px] font-semibold text-fg mb-3">{dict.contact.info.partnerHeading}</h3>
                 <p className="text-[16px] text-fg-muted mb-4">
-                  Based in Bellevue, WA, we proudly serve small businesses throughout the Seattle Metro Area with on-site support and remote assistance nationwide.
+                  {dict.contact.info.partnerBody}
                 </p>
                 <p className="text-[14px] text-fg-muted">
-                  <strong className="text-fg">Service Areas:</strong> Bellevue, Seattle, Redmond, Kirkland, Issaquah, Sammamish, and surrounding communities.
+                  <strong className="text-fg">{dict.contact.info.serviceAreasLabel}</strong> {dict.contact.info.serviceAreasValue}
                 </p>
               </div>
             </div>

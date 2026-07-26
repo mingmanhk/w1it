@@ -1,4 +1,7 @@
+'use client';
+
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Hero Component - LIGHT-MODE Design System
@@ -8,15 +11,17 @@ import Hero from '@/components/Hero';
  */
 
 export default function HomeHero() {
+  const { dict } = useLanguage();
+
   return (
     <Hero
-        title="Enterprise-Grade IT, Right-Sized for Your Business"
-        subtitle="We design, build, and secure networks that cost less to run. From network architecture optimization that cuts recurring spend, to full network build-outs and security assessments — we keep your business fast, safe, and focused on growth."
+        title={dict.home.hero.title}
+        subtitle={dict.home.hero.subtitle}
         imageSrc="/images/brand/hero-graphic.webp"
         imageAlt="W1IT IT Solutions Hero Graphic"
         ctaButton={{
           href: "/contact",
-          text: "Get a Free Network Assessment"
+          text: dict.home.hero.cta
         }}
     />
   );

@@ -1,4 +1,7 @@
+'use client';
+
 import { Circle, Shield, TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Foundation Component - LIGHT-MODE Design System
@@ -7,35 +10,23 @@ import { Circle, Shield, TrendingUp } from 'lucide-react';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const valuePillars = [
-  {
-    title: 'Clarity',
-    description: 'Plain-English recommendations and documented systems — you always know what you run and what it costs.',
-    icon: Circle,
-    color: '#3A81F7', // Electric Blue
-  },
-  {
-    title: 'Resilience',
-    description: 'Fault-tolerant networks engineered for uptime, with tested backups and a recovery plan that actually works.',
-    icon: Shield,
-    color: '#00A878', // Teal Green
-  },
-  {
-    title: 'IT Optimization & Strategy',
-    description: 'Architecture reviews that right-size your infrastructure — spend less on hardware, licensing, and rework.',
-    icon: TrendingUp,
-    color: '#FFFFFF', // White
-  },
+const pillarStyles = [
+  { icon: Circle, color: '#3A81F7' }, // Electric Blue
+  { icon: Shield, color: '#00A878' }, // Teal Green
+  { icon: TrendingUp, color: '#FFFFFF' }, // White
 ];
 
 export default function ValuePillars() {
+  const { dict } = useLanguage();
+  const valuePillars = dict.home.pillars.items.map((item, i) => ({ ...item, ...pillarStyles[i] }));
+
   return (
     <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-fg mb-4">Our Foundation</h2>
-          <p className="text-[16px] text-fg-muted">The three pillars that guide everything we do</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">{dict.home.pillars.heading}</h2>
+          <p className="text-[16px] text-fg-muted">{dict.home.pillars.subheading}</p>
         </div>
 
         {/* Three Columns - PillarCards */}

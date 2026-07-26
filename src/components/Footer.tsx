@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Linkedin, Github } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Footer Component - LIGHT-MODE Design System
@@ -13,45 +16,46 @@ import { Linkedin, Github } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { dict } = useLanguage();
 
   const footerLinks = {
     services: [
-      { name: 'Managed Services', href: '/services/managed-services' },
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-      { name: 'Network Setup', href: '/services/network-setup' },
-      { name: 'Remote Support', href: '/services/remote-support' },
-      { name: 'Security', href: '/services/security' },
-      { name: 'Technical Writing', href: '/services/technical-writing' },
-      { name: 'IT Support', href: '/support' },
-      { name: 'Emergency IT Help', href: '/emergency' },
+      { name: dict.footer.services.managedServices, href: '/services/managed-services' },
+      { name: dict.footer.services.cloudSolutions, href: '/services/cloud-solutions' },
+      { name: dict.footer.services.networkSetup, href: '/services/network-setup' },
+      { name: dict.footer.services.remoteSupport, href: '/services/remote-support' },
+      { name: dict.footer.services.security, href: '/services/security' },
+      { name: dict.footer.services.technicalWriting, href: '/services/technical-writing' },
+      { name: dict.footer.services.itSupport, href: '/support' },
+      { name: dict.footer.services.emergencyItHelp, href: '/emergency' },
     ],
     solutions: [
-      { name: 'Data Analytics', href: '/solutions/data-analytics' },
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-      { name: 'Cybersecurity Strategy', href: '/solutions/cybersecurity-strategy' },
-      { name: 'Custom IT Solutions', href: '/solutions/custom-it-solutions' },
-      { name: 'Website Optimization', href: '/solutions/website-optimization' },
-      { name: 'Knowledge Base', href: '/knowledge-base' },
-      { name: 'IT Checklists', href: '/checklists' },
-      { name: 'Free Tools', href: '/tools' },
+      { name: dict.footer.solutions.dataAnalytics, href: '/solutions/data-analytics' },
+      { name: dict.footer.solutions.digitalTransformation, href: '/solutions/digital-transformation' },
+      { name: dict.footer.solutions.cybersecurityStrategy, href: '/solutions/cybersecurity-strategy' },
+      { name: dict.footer.solutions.customItSolutions, href: '/solutions/custom-it-solutions' },
+      { name: dict.footer.solutions.websiteOptimization, href: '/solutions/website-optimization' },
+      { name: dict.footer.solutions.knowledgeBase, href: '/knowledge-base' },
+      { name: dict.footer.solutions.itChecklists, href: '/checklists' },
+      { name: dict.footer.solutions.freeTools, href: '/tools' },
     ],
     company: [
-      { name: 'About', href: '/about' },
-      { name: 'Industries', href: '/industries' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Testimonials', href: '/testimonials' },
-      { name: 'Documentation', href: '/documentation' },
-      { name: 'Bellevue IT Support', href: '/locations/bellevue' },
-      { name: 'Apps', href: '/apps' },
-      { name: 'Talk to Sales', href: '/sales' },
-      { name: 'Contact', href: '/contact' },
+      { name: dict.footer.company.about, href: '/about' },
+      { name: dict.footer.company.industries, href: '/industries' },
+      { name: dict.footer.company.blog, href: '/blog' },
+      { name: dict.footer.company.caseStudies, href: '/case-studies' },
+      { name: dict.footer.company.testimonials, href: '/testimonials' },
+      { name: dict.footer.company.documentation, href: '/documentation' },
+      { name: dict.footer.company.bellevueItSupport, href: '/locations/bellevue' },
+      { name: dict.footer.company.apps, href: '/apps' },
+      { name: dict.footer.company.talkToSales, href: '/sales' },
+      { name: dict.footer.company.contact, href: '/contact' },
     ],
     legal: [
-      { name: 'Privacy', href: '/privacy' },
-      { name: 'Terms', href: '/terms' },
-      { name: 'Cookies', href: '/cookies' },
-      { name: 'SLA', href: '/sla' },
+      { name: dict.footer.legal.privacy, href: '/privacy' },
+      { name: dict.footer.legal.terms, href: '/terms' },
+      { name: dict.footer.legal.cookies, href: '/cookies' },
+      { name: dict.footer.legal.sla, href: '/sla' },
     ],
   };
 
@@ -86,14 +90,14 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-[14px] text-[#D9D9D9] leading-relaxed">
-              Professional IT solutions for Seattle businesses and beyond.
+              {dict.footer.tagline}
             </p>
           </div>
 
           {/* Column 2: Services */}
           <div>
             <h3 className="text-[16px] font-bold text-white mb-4">
-              Services
+              {dict.footer.servicesHeading}
             </h3>
             <ul className="flex flex-col gap-3">
               {footerLinks.services.map((link) => (
@@ -112,7 +116,7 @@ export default function Footer() {
           {/* Column 3: Solutions */}
           <div>
             <h3 className="text-[16px] font-bold text-white mb-4">
-              Solutions
+              {dict.footer.solutionsHeading}
             </h3>
             <ul className="flex flex-col gap-3">
               {footerLinks.solutions.map((link) => (
@@ -131,7 +135,7 @@ export default function Footer() {
           {/* Column 4: Company */}
           <div>
             <h3 className="text-[16px] font-bold text-white mb-4">
-              Company
+              {dict.footer.companyHeading}
             </h3>
             <ul className="flex flex-col gap-3">
               {footerLinks.company.map((link) => (
@@ -150,7 +154,7 @@ export default function Footer() {
           {/* Column 5: Legal & Social */}
           <div>
             <h3 className="text-[16px] font-bold text-white mb-4">
-              Legal
+              {dict.footer.legalHeading}
             </h3>
             <ul className="flex flex-col gap-3 mb-8">
               {footerLinks.legal.map((link) => (
@@ -168,7 +172,7 @@ export default function Footer() {
             {/* Social Links */}
             <div>
               <h4 className="text-[14px] font-bold text-white mb-3">
-                Connect
+                {dict.footer.connectHeading}
               </h4>
               <div className="flex gap-4">
                 <a
@@ -197,7 +201,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#4A4A4A] pt-8">
           <p className="text-[14px] text-[#D9D9D9] text-center">
-            &copy; {currentYear} W1IT Solutions. All rights reserved.
+            &copy; {currentYear} {dict.footer.rightsReserved}
           </p>
         </div>
       </div>

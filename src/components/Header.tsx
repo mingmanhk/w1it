@@ -5,64 +5,66 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import { useTheme } from '@/components/ThemeProvider';
-import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
-
-const navLinks = [
-    {
-        href: '/services',
-        label: 'Services',
-        dropdown: [
-            { href: '/services/managed-services', label: 'Managed IT Services' },
-            { href: '/services/cloud-solutions', label: 'Cloud Solutions' },
-            { href: '/services/network-setup', label: 'Network Setup' },
-            { href: '/services/remote-support', label: 'Remote Support' },
-            { href: '/services/security', label: 'Security' },
-            { href: '/services/technical-writing', label: 'Technical Writing' },
-            { href: '/it-services', label: 'IT Services' },
-            { href: '/it-consulting', label: 'IT Consulting' },
-        ]
-    },
-    {
-        href: '/solutions',
-        label: 'Solutions',
-        dropdown: [
-            { href: '/solutions/data-analytics', label: 'Data Analytics' },
-            { href: '/solutions/digital-transformation', label: 'Digital Transformation' },
-            { href: '/solutions/cybersecurity-strategy', label: 'Cybersecurity Strategy' },
-            { href: '/solutions/custom-it-solutions', label: 'Custom IT Solutions' },
-        ]
-    },
-    {
-        href: '/apps',
-        label: 'Apps',
-        dropdown: [
-            { href: '/apps/contact-syncmate', label: 'Contact SyncMate' },
-            { href: '/apps/deepticker', label: 'DeepTicker' },
-            { href: '/apps/pixel-color-picker', label: 'Pixel Color Picker' },
-            { href: '/apps/screengrabber', label: 'ScreenGrabber' },
-        ]
-    },
-    { href: '/industries', label: 'Industries' },
-    {
-        href: '/case-studies',
-        label: 'Resources',
-        dropdown: [
-            { href: '/case-studies', label: 'Case Studies' },
-            { href: '/blog', label: 'Blog' },
-            { href: '/knowledge-base', label: 'Knowledge Base' },
-            { href: '/checklists', label: 'IT Checklists' },
-            { href: '/tools', label: 'Free Tools' },
-            { href: '/testimonials', label: 'Testimonials' },
-            { href: '/support', label: 'Support' },
-        ]
-    },
-    { href: '/about', label: 'About' },
-];
+import { useLanguage } from '@/components/LanguageProvider';
+import { Menu, X, ChevronDown, Sun, Moon, Languages } from 'lucide-react';
 
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
+    const { dict, lang, toggleLang } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+    const navLinks = [
+        {
+            href: '/services',
+            label: dict.nav.services,
+            dropdown: [
+                { href: '/services/managed-services', label: dict.nav.servicesDropdown.managedServices },
+                { href: '/services/cloud-solutions', label: dict.nav.servicesDropdown.cloudSolutions },
+                { href: '/services/network-setup', label: dict.nav.servicesDropdown.networkSetup },
+                { href: '/services/remote-support', label: dict.nav.servicesDropdown.remoteSupport },
+                { href: '/services/security', label: dict.nav.servicesDropdown.security },
+                { href: '/services/technical-writing', label: dict.nav.servicesDropdown.technicalWriting },
+                { href: '/it-services', label: dict.nav.servicesDropdown.itServices },
+                { href: '/it-consulting', label: dict.nav.servicesDropdown.itConsulting },
+            ]
+        },
+        {
+            href: '/solutions',
+            label: dict.nav.solutions,
+            dropdown: [
+                { href: '/solutions/data-analytics', label: dict.nav.solutionsDropdown.dataAnalytics },
+                { href: '/solutions/digital-transformation', label: dict.nav.solutionsDropdown.digitalTransformation },
+                { href: '/solutions/cybersecurity-strategy', label: dict.nav.solutionsDropdown.cybersecurityStrategy },
+                { href: '/solutions/custom-it-solutions', label: dict.nav.solutionsDropdown.customItSolutions },
+            ]
+        },
+        {
+            href: '/apps',
+            label: dict.nav.apps,
+            dropdown: [
+                { href: '/apps/contact-syncmate', label: dict.nav.appsDropdown.contactSyncMate },
+                { href: '/apps/deepticker', label: dict.nav.appsDropdown.deepTicker },
+                { href: '/apps/pixel-color-picker', label: dict.nav.appsDropdown.pixelColorPicker },
+                { href: '/apps/screengrabber', label: dict.nav.appsDropdown.screenGrabber },
+            ]
+        },
+        { href: '/industries', label: dict.nav.industries },
+        {
+            href: '/case-studies',
+            label: dict.nav.resources,
+            dropdown: [
+                { href: '/case-studies', label: dict.nav.resourcesDropdown.caseStudies },
+                { href: '/blog', label: dict.nav.resourcesDropdown.blog },
+                { href: '/knowledge-base', label: dict.nav.resourcesDropdown.knowledgeBase },
+                { href: '/checklists', label: dict.nav.resourcesDropdown.itChecklists },
+                { href: '/tools', label: dict.nav.resourcesDropdown.freeTools },
+                { href: '/testimonials', label: dict.nav.resourcesDropdown.testimonials },
+                { href: '/support', label: dict.nav.resourcesDropdown.support },
+            ]
+        },
+        { href: '/about', label: dict.nav.about },
+    ];
 
     useEffect(() => {
         if (isOpen) {
@@ -148,7 +150,15 @@ export default function Header() {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden lg:flex items-center gap-4">
+                    <div className="hidden lg:flex items-center gap-2">
+                        <button
+                            onClick={toggleLang}
+                            aria-label={lang === 'en' ? 'Switch to Traditional Chinese' : '切換為英文'}
+                            className="flex items-center gap-1 px-2 py-2 rounded-lg text-sm font-medium text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            <Languages className="h-5 w-5" />
+                            <span>{dict.common.langToggleLabel}</span>
+                        </button>
                         <button
                             onClick={toggleTheme}
                             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -157,12 +167,20 @@ export default function Header() {
                             {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                         </button>
                         <Button href="/contact" variant="primary">
-                            Get Started
+                            {dict.common.getStarted}
                         </Button>
                     </div>
 
                     {/* Mobile Menu Toggle */}
                     <div className="-mr-2 flex items-center gap-1 lg:hidden">
+                        <button
+                            onClick={toggleLang}
+                            aria-label={lang === 'en' ? 'Switch to Traditional Chinese' : '切換為英文'}
+                            className="flex items-center gap-0.5 px-1.5 py-2 rounded-lg text-xs font-medium text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            <Languages className="h-5 w-5" />
+                            <span>{dict.common.langToggleLabel}</span>
+                        </button>
                         <button
                             onClick={toggleTheme}
                             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
@@ -228,7 +246,7 @@ export default function Header() {
                     </div>
                     <div className="py-3 px-5">
                         <Button href="/contact" variant="primary" className="w-full" onClick={() => setIsOpen(false)}>
-                            Get Started
+                            {dict.common.getStarted}
                         </Button>
                     </div>
                 </div>

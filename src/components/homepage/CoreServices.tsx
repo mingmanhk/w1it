@@ -1,4 +1,7 @@
+'use client';
+
 import { Server, Shield, Cloud, Network, DollarSign, SearchCheck } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Services Component - LIGHT-MODE Design System
@@ -7,47 +10,19 @@ import { Server, Shield, Cloud, Network, DollarSign, SearchCheck } from 'lucide-
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const coreServices = [
-  {
-    title: 'Network Architecture Optimization',
-    description: 'We audit your current network, eliminate over-provisioned hardware and licensing, and redesign the architecture — most clients cut recurring IT costs by 20-40%.',
-    icon: DollarSign,
-  },
-  {
-    title: 'Network Design & Build',
-    description: 'Complete network build-outs for offices, warehouses, and multi-site businesses: structured cabling plans, WiFi coverage, VPN, and vendor-neutral hardware selection.',
-    icon: Network,
-  },
-  {
-    title: 'Network Security Assessment',
-    description: 'A practical, prioritized review of your firewall rules, access controls, patching, and exposure — with a remediation plan ranked by risk, not a scare report.',
-    icon: SearchCheck,
-  },
-  {
-    title: 'Managed IT Services',
-    description: 'Proactive monitoring, patching, and helpdesk support with predictable monthly pricing — problems fixed before they interrupt your team.',
-    icon: Server,
-  },
-  {
-    title: 'Cloud Migration',
-    description: 'Structured moves to cloud infrastructure with minimal downtime — and honest advice when staying on-prem is the cheaper, better answer.',
-    icon: Cloud,
-  },
-  {
-    title: 'IT Automation',
-    description: 'Replace repetitive manual work with reliable automated workflows: onboarding, backups, monitoring, and reporting that run themselves.',
-    icon: Shield,
-  },
-];
+const icons = [DollarSign, Network, SearchCheck, Server, Cloud, Shield];
 
 export default function CoreServices() {
+  const { dict } = useLanguage();
+  const coreServices = dict.home.services.items.map((item, i) => ({ ...item, icon: icons[i] }));
+
   return (
     <section className="py-16 bg-surface-0">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-fg mb-4">Our Services</h2>
-          <p className="text-[16px] text-fg-muted">Complete IT solutions designed for small businesses</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">{dict.home.services.heading}</h2>
+          <p className="text-[16px] text-fg-muted">{dict.home.services.subheading}</p>
         </div>
 
         {/* Service Cards Grid */}

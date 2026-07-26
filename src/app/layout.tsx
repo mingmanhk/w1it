@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import ThemeProvider from "@/components/ThemeProvider";
+import LanguageProvider from "@/components/LanguageProvider";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import CookieConsent from "@/components/CookieConsent";
@@ -120,18 +121,20 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased bg-surface-0 text-fg`}>
         <ThemeProvider>
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-0 focus:text-fg focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
-          >
-            Skip to main content
-          </a>
-          <ScrollProgress />
-          <Header />
-          <main id="main-content" className="min-h-screen pt-16">{children}</main>
-          <Footer />
-          <BackToTop />
-          <CookieConsent />
+          <LanguageProvider>
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-surface-0 focus:text-fg focus:px-4 focus:py-2 focus:rounded-md focus:shadow-lg"
+            >
+              Skip to main content
+            </a>
+            <ScrollProgress />
+            <Header />
+            <main id="main-content" className="min-h-screen pt-16">{children}</main>
+            <Footer />
+            <BackToTop />
+            <CookieConsent />
+          </LanguageProvider>
         </ThemeProvider>
         <Analytics />
       </body>
