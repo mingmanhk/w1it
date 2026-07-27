@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 const SITE_URL = 'https://w1it.com';
 
@@ -20,13 +21,17 @@ function humanize(segment: string): string {
  */
 export default function Breadcrumbs() {
   const pathname = usePathname();
+  const { dict, lang } = useLanguage();
   const segments = pathname.split('/').filter(Boolean);
   if (segments.length < 2) return null;
 
+  const homeLabel = lang === 'zh-TW' ? '首頁' : 'Home';
+  const label = (seg: string) => dict.breadcrumbSegments[seg] || humanize(seg);
+
   const crumbs = [
-    { name: 'Home', href: '/' },
+    { name: homeLabel, href: '/' },
     ...segments.map((seg, i) => ({
-      name: humanize(seg),
+      name: label(seg),
       href: '/' + segments.slice(0, i + 1).join('/'),
     })),
   ];

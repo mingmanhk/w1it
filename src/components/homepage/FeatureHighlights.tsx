@@ -1,4 +1,7 @@
+'use client';
+
 import { Cpu, RefreshCw, Wrench } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Feature Highlights Component - LIGHT-MODE Design System
@@ -7,33 +10,20 @@ import { Cpu, RefreshCw, Wrench } from 'lucide-react';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const featureHighlights = [
-  {
-    title: 'Modern Infrastructure, Built Right',
-    description: 'High availability, zero‑trust security, and scalable automation.',
-    icon: Cpu,
-  },
-  {
-    title: 'Automation That Works for You',
-    description: 'Reduce manual overhead with predictable, repeatable workflows.',
-    icon: RefreshCw,
-  },
-  {
-    title: 'Migration Without the Chaos',
-    description: 'Structured, step‑by‑step modernization with zero guesswork.',
-    icon: Wrench,
-  },
-];
+const icons = [Cpu, RefreshCw, Wrench];
 
 export default function FeatureHighlights() {
+  const { dict } = useLanguage();
+  const featureHighlights = dict.home.featureHighlights.items.map((item, i) => ({ ...item, icon: icons[i] }));
+
   return (
     <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-fg mb-4">What Sets Us Apart</h2>
+          <h2 className="text-[28px] font-bold text-fg mb-4">{dict.home.featureHighlights.heading}</h2>
           <p className="text-[16px] text-fg-muted max-w-3xl mx-auto">
-            Our approach combines technical excellence with operational clarity.
+            {dict.home.featureHighlights.subheading}
           </p>
         </div>
 

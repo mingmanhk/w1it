@@ -1,5 +1,8 @@
+'use client';
+
 import Button from '@/components/Button';
 import { Factory, Building, Rocket, Users } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Industries Component - LIGHT-MODE Design System
@@ -8,24 +11,22 @@ import { Factory, Building, Rocket, Users } from 'lucide-react';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const industries = [
-  { name: 'Manufacturing', icon: Factory },
-  { name: 'Small Business', icon: Building },
-  { name: 'Startups', icon: Rocket },
-  { name: 'Professional Services', icon: Users },
-];
+const icons = [Factory, Building, Rocket, Users];
 
 export default function Industries() {
+  const { dict } = useLanguage();
+  const industries = dict.home.industriesTeaser.items.map((item, i) => ({ ...item, icon: icons[i] }));
+
   return (
     <section className="py-16 bg-surface-0">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
           <h2 className="text-[28px] font-bold text-fg mb-4">
-            Supporting Small Businesses Across Industries
+            {dict.home.industriesTeaser.heading}
           </h2>
           <p className="text-[16px] text-fg-muted max-w-3xl mx-auto">
-            From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.
+            {dict.home.industriesTeaser.subheading}
           </p>
         </div>
 
@@ -53,7 +54,7 @@ export default function Industries() {
         {/* CTA Button */}
         <div className="text-center">
           <Button href="/industries" variant="secondary">
-            Explore All Industries
+            {dict.home.industriesTeaser.cta}
           </Button>
         </div>
       </div>

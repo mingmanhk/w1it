@@ -1,4 +1,7 @@
+'use client';
+
 import { Star } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Industry Expertise Component - LIGHT-MODE Design System
@@ -7,23 +10,19 @@ import { Star } from 'lucide-react';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const testimonials = [
-  {
-    quote: "W1IT transformed our outdated website into a modern, professional platform that truly represents our company's legacy.",
-    author: 'Kam Ling Trading Team',
-    company: 'Kam Ling International Trading Co.',
-    rating: 5,
-  },
-];
+const rating = 5;
 
 export default function Testimonials() {
+  const { dict } = useLanguage();
+  const testimonials = dict.home.testimonials.items.map(item => ({ ...item, rating }));
+
   return (
     <section className="py-16 bg-surface-1">
       <div className="max-w-[1200px] mx-auto px-6">
         {/* SectionHeader / Default */}
         <div className="text-center mb-12">
-          <h2 className="text-[28px] font-bold text-fg mb-4">Industry Expertise</h2>
-          <p className="text-[16px] text-fg-muted">Trusted by businesses across diverse industries</p>
+          <h2 className="text-[28px] font-bold text-fg mb-4">{dict.home.testimonials.heading}</h2>
+          <p className="text-[16px] text-fg-muted">{dict.home.testimonials.subheading}</p>
         </div>
 
         {/* TestimonialCard / Default */}

@@ -112,7 +112,32 @@ export interface Dictionary {
       subheading: string;
       items: { title: string; description: string }[];
     };
+    featureHighlights: {
+      heading: string;
+      subheading: string;
+      items: { title: string; description: string }[];
+    };
+    industriesTeaser: {
+      heading: string;
+      subheading: string;
+      items: { name: string }[];
+      cta: string;
+    };
+    testimonials: {
+      heading: string;
+      subheading: string;
+      items: { quote: string; author: string; company: string }[];
+    };
+    ctaBanner: {
+      heading: string;
+      subheading: string;
+      body: string;
+      ctaPrimary: string;
+      ctaSecondary: string;
+    };
   };
+  /** Flat slug -> label lookup used by the shared Breadcrumbs component. English falls back to auto Title Case. */
+  breadcrumbSegments: Record<string, string>;
   contact: {
     hero: { title: string; subtitle: string };
     form: {
@@ -294,7 +319,57 @@ export const en: Dictionary = {
         },
       ],
     },
+    featureHighlights: {
+      heading: 'What Sets Us Apart',
+      subheading: 'Our approach combines technical excellence with operational clarity.',
+      items: [
+        {
+          title: 'Modern Infrastructure, Built Right',
+          description: 'High availability, zero‑trust security, and scalable automation.',
+        },
+        {
+          title: 'Automation That Works for You',
+          description: 'Reduce manual overhead with predictable, repeatable workflows.',
+        },
+        {
+          title: 'Migration Without the Chaos',
+          description: 'Structured, step‑by‑step modernization with zero guesswork.',
+        },
+      ],
+    },
+    industriesTeaser: {
+      heading: 'Supporting Small Businesses Across Industries',
+      subheading:
+        'From manufacturing to professional services, we understand the unique challenges facing small businesses in every sector.',
+      items: [
+        { name: 'Manufacturing' },
+        { name: 'Small Business' },
+        { name: 'Startups' },
+        { name: 'Professional Services' },
+      ],
+      cta: 'Explore All Industries',
+    },
+    testimonials: {
+      heading: 'Industry Expertise',
+      subheading: 'Trusted by businesses across diverse industries',
+      items: [
+        {
+          quote:
+            "W1IT transformed our outdated website into a modern, professional platform that truly represents our company's legacy.",
+          author: 'Kam Ling Trading Team',
+          company: 'Kam Ling International Trading Co.',
+        },
+      ],
+    },
+    ctaBanner: {
+      heading: 'Ready to Get Started?',
+      subheading: "Let's Build Your Success Story Together",
+      body: "Talk to us about your goals, your challenges, and how W1IT can help you build a stronger, smarter foundation for growth.",
+      ctaPrimary: 'Get Your Free Consultation',
+      ctaSecondary: 'View All Services',
+    },
   },
+  breadcrumbSegments: {},
   contact: {
     hero: {
       title: 'Ready to Get Started?',
@@ -481,6 +556,108 @@ export const zhTW: Dictionary = {
         },
       ],
     },
+    featureHighlights: {
+      heading: '我們的與眾不同之處',
+      subheading: '我們將技術實力與清晰的營運管理結合在一起。',
+      items: [
+        {
+          title: '打造正確的現代化基礎架構',
+          description: '高可用性、零信任資安架構，以及可擴展的自動化流程。',
+        },
+        {
+          title: '真正為您服務的自動化',
+          description: '以可預測、可重複執行的流程，降低人工作業負擔。',
+        },
+        {
+          title: '井然有序的遷移流程，不再混亂',
+          description: '結構化、按步驟推進的現代化轉型，無需臆測。',
+        },
+      ],
+    },
+    industriesTeaser: {
+      heading: '服務各行各業的中小企業',
+      subheading:
+        '從製造業到專業服務業，我們深知每個產業的中小企業所面臨的獨特挑戰。',
+      items: [
+        { name: '製造業' },
+        { name: '中小企業' },
+        { name: '新創公司' },
+        { name: '專業服務業' },
+      ],
+      cta: '探索所有產業',
+    },
+    testimonials: {
+      heading: '產業專業經驗',
+      subheading: '深受各行各業企業信賴',
+      items: [
+        {
+          quote:
+            'W1IT 將我們過時的網站轉變為現代化、專業的平台，真正展現出我們公司的傳承與價值。',
+          author: 'Kam Ling Trading 團隊',
+          company: 'Kam Ling International Trading Co.',
+        },
+      ],
+    },
+    ctaBanner: {
+      heading: '準備好開始了嗎？',
+      subheading: '讓我們一起打造屬於您的成功案例',
+      body: '與我們聊聊您的目標與挑戰，看看 W1IT 如何協助您打造更穩健、更聰明的成長基礎。',
+      ctaPrimary: '預約免費諮詢',
+      ctaSecondary: '查看所有服務',
+    },
+  },
+  breadcrumbSegments: {
+    about: '關於我們',
+    apps: '應用程式',
+    'contact-syncmate': 'Contact SyncMate',
+    deepticker: 'DeepTicker',
+    'pixel-color-picker': 'Pixel Color Picker',
+    screengrabber: 'ScreenGrabber',
+    blog: '部落格',
+    'case-studies': '成功案例',
+    'bilingual-documentation-global-trade': '國際貿易雙語文件案例',
+    'choosing-it-support-model': '選擇合適的 IT 支援模式',
+    'ferry-company-backup-modernization': '渡輪公司備份現代化案例',
+    'fragmented-it-standardized-infrastructure': '整合分散式 IT 基礎架構',
+    'missing-it-checklist-outage-recovery': 'IT 檢核清單與斷線復原',
+    'network-security-remote-teams': '遠端團隊網路資安',
+    'top-it-mistakes-small-businesses': '中小企業常見 IT 錯誤',
+    'vmware-to-hyperv-migration': 'VMware 遷移至 Hyper-V',
+    'why-businesses-need-it-documentation': '企業為何需要 IT 文件化',
+    'wifi-setup-guide-seattle': '西雅圖 WiFi 建置指南',
+    checklists: 'IT 檢核清單',
+    contact: '聯絡我們',
+    cookies: 'Cookie 政策',
+    documentation: '技術文件',
+    emergency: '緊急 IT 支援',
+    industries: '產業別',
+    'it-consulting': 'IT 顧問諮詢',
+    'it-services': 'IT 服務總覽',
+    'knowledge-base': '知識庫',
+    locations: '服務據點',
+    bellevue: 'Bellevue',
+    privacy: '隱私權政策',
+    sales: '業務團隊',
+    services: '服務項目',
+    'cloud-solutions': '雲端解決方案',
+    'it-automation': 'IT 流程自動化',
+    'managed-services': '委外資訊管理服務',
+    'network-setup': '網路建置',
+    'remote-support': '遠端支援',
+    security: '資訊安全',
+    'technical-writing': '技術文件撰寫',
+    'website-development': '網站開發',
+    sla: '服務水準協議 (SLA)',
+    solutions: '解決方案',
+    'custom-it-solutions': '客製化 IT 解決方案',
+    'cybersecurity-strategy': '資安策略規劃',
+    'data-analytics': '數據分析',
+    'digital-transformation': '數位轉型',
+    'website-optimization': '網站優化',
+    support: '技術支援',
+    terms: '服務條款',
+    testimonials: '客戶推薦',
+    tools: '免費工具',
   },
   contact: {
     hero: {
