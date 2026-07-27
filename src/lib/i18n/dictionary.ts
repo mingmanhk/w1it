@@ -199,6 +199,116 @@ export interface Dictionary {
       serviceAreasValue: string;
     };
   };
+  servicesDetail: {
+    managedServices: {
+      hero: { title: string; subtitle: string; cta: string };
+      overview: {
+        heading: string;
+        paragraph1: string;
+        paragraph2: string;
+        cta: string;
+        benefitsHeading: string;
+        benefits: string[];
+      };
+      services: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      tiers: {
+        heading: string;
+        subheading: string;
+        items: { name: string; description: string; features: string[] }[];
+        getStarted: string;
+      };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    cloudSolutions: {
+      hero: { title: string; subtitle: string; cta: string };
+      platformsHeading: string;
+      services: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      benefits: { heading: string; items: { title: string; description: string }[] };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    networkSetup: {
+      hero: { title: string; subtitle: string; cta: string };
+      services: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      commonIssues: { heading: string; items: { title: string; description: string }[] };
+      serviceArea: { heading: string; intro: string; remoteNote: string; cta: string };
+      whyChoose: { heading: string; items: { title: string; description: string }[] };
+      architectureOptimization: {
+        heading: string;
+        body: string;
+        costAudit: { title: string; body: string };
+        rightSized: { title: string; body: string };
+        migrationPlan: { title: string; body: string };
+      };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    remoteSupport: {
+      hero: { title: string; subtitle: string; cta: string };
+      howItWorks: { heading: string; steps: { step: string; title: string; description: string }[] };
+      services: { heading: string; items: { title: string; description: string }[] };
+      benefits: {
+        heading: string;
+        items: { title: string; description: string }[];
+        perfectForRemoteWorkers: { title: string; body: string };
+      };
+      security: { title: string; body: string; features: string[] };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    security: {
+      hero: { title: string; subtitle: string; cta: string };
+      compliance: { heading: string; items: { name: string; description: string }[] };
+      services: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      threats: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      networkAssessment: {
+        heading: string;
+        body: string;
+        items: { title: string; body: string }[];
+        footer: string;
+      };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    technicalWriting: {
+      hero: { title: string; subtitle: string; cta: string };
+      whyMatters: { heading: string; paragraph1: string; paragraph2: string };
+      services: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      benefits: { heading: string; items: { title: string; description: string }[] };
+      useCases: { heading: string; items: { title: string; description: string }[] };
+      cta: { heading: string; body: string; cta: string };
+    };
+    itAutomation: {
+      hero: { title: string; subtitle: string; cta: string };
+      intro: { heading: string; paragraph1: string; paragraph2: string };
+      services: {
+        heading: string;
+        subheading: string;
+        benefitsLabel: string;
+        items: { title: string; description: string; benefits: string[] }[];
+      };
+      benefits: { heading: string; subheading: string; items: string[] };
+      process: { heading: string; steps: { number: string; title: string; description: string }[] };
+      cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+    };
+    websiteDevelopment: {
+      hero: { title: string; subtitle: string; cta: string };
+      features: { heading: string; subheading: string; items: { title: string; description: string }[] };
+      technologies: { heading: string; subheading: string };
+      cta: { heading: string; body: string; cta: string };
+    };
+  };
+  itConsulting: {
+    hero: { title: string; subtitleBeforeLink: string; linkText: string; subtitleAfterLink: string; cta: string };
+    intro: string;
+    offer: { heading: string; subheading: string; items: { title: string; description: string }[] };
+    benefits: { heading: string; items: { title: string; description: string }[] };
+    cta: { heading: string; body: string; cta: string };
+  };
+  itServices: {
+    hero: { title: string; subtitleBeforeLink: string; linkText: string; subtitleAfterLink: string; cta: string };
+    about: { heading: string; paragraph: string };
+    experience: { heading: string; subheading: string; items: { title: string; description: string }[] };
+    servicesOffered: { heading: string; subheading: string; items: string[]; note: string };
+    whyWorkWithMe: { heading: string; items: { title: string; description: string }[] };
+    cta: { heading: string; body: string; cta: string };
+  };
 }
 
 export const en: Dictionary = {
@@ -690,6 +800,497 @@ export const en: Dictionary = {
         'Based in Bellevue, WA, we proudly serve small businesses throughout the Seattle Metro Area with on-site support and remote assistance nationwide.',
       serviceAreasLabel: 'Service Areas:',
       serviceAreasValue: 'Bellevue, Seattle, Redmond, Kirkland, Issaquah, Sammamish, and surrounding communities.',
+    },
+  },
+  servicesDetail: {
+    managedServices: {
+      hero: {
+        title: 'Proactive IT Management',
+        subtitle:
+          'Comprehensive IT management with 24/7 monitoring, strategic consulting, and dedicated support for your business.',
+        cta: 'Get Started',
+      },
+      overview: {
+        heading: 'Your Dedicated IT Team',
+        paragraph1:
+          'Managed IT Services provide a comprehensive solution for businesses that want to focus on their core operations while leaving technology management to experts.',
+        paragraph2:
+          'We act as an extension of your team, providing proactive monitoring, strategic guidance, and rapid support to ensure your technology drives business success.',
+        cta: 'Schedule Consultation',
+        benefitsHeading: 'Key Benefits',
+        benefits: [
+          'Predictable monthly costs with no surprise expenses',
+          'Access to enterprise-grade expertise and tools',
+          'Proactive problem resolution before issues impact business',
+          'Scalable solutions that grow with your business',
+          'Compliance with industry standards and regulations',
+          'Focus on core business while we manage your IT',
+        ],
+      },
+      services: {
+        heading: 'Comprehensive Managed Services',
+        subheading: 'End-to-end IT management solutions tailored to your business needs.',
+        items: [
+          { title: 'Proactive Monitoring', description: '24/7 monitoring of your IT infrastructure with automated alerts.' },
+          { title: 'Help Desk Support', description: 'Dedicated technical support team for rapid issue resolution.' },
+          { title: 'Security Management', description: 'Comprehensive security services including patch management and threat detection.' },
+          { title: 'Backup & Recovery', description: 'Automated data backup and disaster recovery solutions.' },
+          { title: 'Network Management', description: 'Optimization and management of your network infrastructure.' },
+          { title: 'Strategic Consulting', description: 'IT strategy planning and technology roadmap development.' },
+        ],
+      },
+      tiers: {
+        heading: 'Flexible Service Plans',
+        subheading: 'Choose the level of service that matches your business requirements and budget.',
+        items: [
+          { name: 'Essential', description: 'Basic monitoring and support for small businesses', features: ['24/7 Monitoring', 'Help Desk Support', 'Basic Security'] },
+          { name: 'Professional', description: 'Comprehensive management for growing businesses', features: ['Proactive Maintenance', 'Advanced Security', 'Strategic Planning'] },
+          { name: 'Enterprise', description: 'Full-scale IT management for large organizations', features: ['Dedicated Team', 'Compliance Management', 'Business Continuity'] },
+        ],
+        getStarted: 'Get Started',
+      },
+      cta: {
+        heading: 'Ready to Simplify Your IT Management?',
+        body: 'Partner with us to build scalable, secure, and innovative IT solutions that drive business growth.',
+        ctaPrimary: 'Schedule Free Assessment',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    cloudSolutions: {
+      hero: {
+        title: 'Enterprise Cloud Excellence',
+        subtitle: 'Transform your infrastructure with scalable, secure, and cost-effective cloud solutions.',
+        cta: 'Start Cloud Journey',
+      },
+      platformsHeading: 'Cloud Platforms We Support',
+      services: {
+        heading: 'Comprehensive Cloud Services',
+        subheading: 'End-to-end cloud solutions designed to accelerate your digital transformation.',
+        items: [
+          { title: 'Cloud Migration', description: 'Seamless migration of applications and data to cloud platforms.' },
+          { title: 'Infrastructure as Code', description: 'Automated infrastructure provisioning and management.' },
+          { title: 'Cloud Database Solutions', description: 'Managed database services and data platform optimization.' },
+          { title: 'Cloud Security', description: 'Comprehensive security architecture and compliance management.' },
+          { title: 'Cost Optimization', description: 'Monitoring and optimization of cloud spending and resources.' },
+          { title: 'Multi-Cloud Strategy', description: 'Strategic planning and implementation across multiple cloud providers.' },
+        ],
+      },
+      benefits: {
+        heading: 'Why Move to the Cloud?',
+        items: [
+          { title: 'Scalability', description: 'Easily scale resources up or down based on demand' },
+          { title: 'Cost Efficiency', description: 'Pay only for what you use with flexible pricing models' },
+          { title: 'Security', description: 'Enterprise-grade security with continuous monitoring' },
+          { title: 'Innovation', description: 'Access to latest technologies and services' },
+        ],
+      },
+      cta: {
+        heading: 'Ready for Cloud Transformation?',
+        body: 'Partner with experienced cloud specialists to build scalable, secure, and innovative cloud solutions.',
+        ctaPrimary: 'Schedule Cloud Assessment',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    networkSetup: {
+      hero: {
+        title: 'Network Setup & Configuration',
+        subtitle:
+          'Professional network installation and support for Seattle, Bellevue, Issaquah, and Snoqualmie. Fast, reliable network setup for homes and businesses with same-day service available.',
+        cta: 'Schedule Network Setup',
+      },
+      services: {
+        heading: 'Network Services We Offer',
+        subheading: 'Complete network solutions tailored to your business needs.',
+        items: [
+          { title: 'WiFi Installation & Optimization', description: 'Professional WiFi setup with optimal coverage, security configuration, and performance tuning for homes and offices.' },
+          { title: 'Router & Switch Configuration', description: 'Expert configuration of routers, switches, and network equipment including Meraki, Ubiquiti, and enterprise solutions.' },
+          { title: 'VPN Setup & Security', description: 'Secure VPN configuration for remote work, site-to-site connections, and secure access to company resources.' },
+          { title: 'Business Network Design', description: 'Complete network infrastructure design for small businesses and growing companies in the Seattle area.' },
+          { title: 'Network Troubleshooting', description: 'Fast diagnosis and resolution of network issues, slow connections, and connectivity problems.' },
+          { title: 'Network Monitoring Setup', description: 'PRTG, Meraki dashboard, and SNMP monitoring configuration to keep your network healthy.' },
+        ],
+      },
+      commonIssues: {
+        heading: 'Common Network Problems We Solve',
+        items: [
+          { title: 'Slow WiFi or Dead Zones', description: "We'll analyze your space and install access points or mesh systems for perfect coverage throughout your home or office." },
+          { title: 'Unreliable Internet Connection', description: 'Diagnose and fix connectivity issues, optimize router settings, and ensure stable internet for remote work.' },
+          { title: 'Network Security Concerns', description: 'Implement proper security: WPA3 encryption, firewall configuration, guest networks, and VPN access.' },
+          { title: "Can't Connect Devices", description: 'Troubleshoot device connectivity, configure network settings, and ensure all your devices work seamlessly.' },
+        ],
+      },
+      serviceArea: {
+        heading: 'Serving Greater Seattle',
+        intro: 'On-site network installation and support in:',
+        remoteNote: 'Remote support also available for network configuration and troubleshooting',
+        cta: 'Get Network Help Today',
+      },
+      whyChoose: {
+        heading: 'Why Choose w1IT for Network Setup',
+        items: [
+          { title: 'Fast Response', description: "Same-day or next-day service available. We understand network issues can't wait." },
+          { title: 'Expert Configuration', description: 'Years of experience with Meraki, PRTG, enterprise routers, and home networking solutions.' },
+          { title: 'Clear Communication', description: "No tech jargon. We explain what we're doing and why, in plain English (or Chinese)." },
+        ],
+      },
+      architectureOptimization: {
+        heading: 'Network Architecture Optimization — Spend Less, Run Faster',
+        body: 'Most business networks grow by accretion: gear gets added, licenses renew on autopilot, and nobody removes what is no longer needed. We audit what you actually run, redesign the architecture around what your business needs today, and cut the recurring costs that come with the excess.',
+        costAudit: { title: 'Cost Audit', body: 'Inventory of hardware, licensing, circuits, and cloud spend — with every over-provisioned or duplicated item flagged and priced.' },
+        rightSized: { title: 'Right-Sized Redesign', body: 'A simplified target architecture: fewer devices, consolidated vendors, and capacity matched to real usage — typically 20-40% lower recurring cost.' },
+        migrationPlan: { title: 'Migration Plan', body: 'A phased, low-risk path from current to target state, scheduled around your business hours — no big-bang cutovers.' },
+      },
+      cta: {
+        heading: 'Ready for Better Network Performance?',
+        body: 'Contact us today for fast, professional network setup in the Seattle area.',
+        ctaPrimary: 'Schedule Service',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    remoteSupport: {
+      hero: {
+        title: 'Remote IT Support',
+        subtitle:
+          'Fast, secure remote troubleshooting from Seattle. Available worldwide. Same-day support available with secure connections and bilingual service (English/Chinese).',
+        cta: 'Get Help Now',
+      },
+      howItWorks: {
+        heading: 'How Remote Support Works',
+        steps: [
+          { step: '1', title: 'Contact Us', description: 'Email or call to describe your issue' },
+          { step: '2', title: 'Schedule Session', description: "We'll find a time that works for you" },
+          { step: '3', title: 'Secure Connection', description: 'We connect remotely via secure tools' },
+          { step: '4', title: 'Problem Solved', description: 'We fix the issue while you watch' },
+        ],
+      },
+      services: {
+        heading: 'Remote Support Services',
+        items: [
+          { title: 'Remote Desktop Support', description: 'Secure remote access to diagnose and fix issues on your computer in real-time.' },
+          { title: 'Software Troubleshooting', description: 'Fix application errors, installation problems, and software configuration issues.' },
+          { title: 'System Performance', description: 'Optimize slow computers, clean up systems, and improve overall performance.' },
+          { title: 'Security Updates', description: 'Ensure systems are updated, secure, and protected from vulnerabilities.' },
+          { title: 'Email & Cloud Setup', description: 'Configure email clients, cloud storage, and productivity tools.' },
+          { title: 'User Training', description: 'Remote training sessions on software, tools, and best practices.' },
+        ],
+      },
+      benefits: {
+        heading: 'Why Choose Remote Support',
+        items: [
+          { title: 'Faster Response', description: 'No need to wait for an on-site visit. We can start helping you within hours, not days.' },
+          { title: 'More Affordable', description: 'No travel time or trip charges. You only pay for the time spent solving your problem.' },
+          { title: 'Available Anywhere', description: "Whether you're in Seattle or working remotely from anywhere in the world." },
+        ],
+        perfectForRemoteWorkers: {
+          title: 'Perfect for Remote Workers',
+          body: 'Working from home in the Seattle area or anywhere else? We specialize in supporting remote workers with home office setup, VPN configuration, video conferencing troubleshooting, and productivity tool support. Get back to work faster with expert remote assistance.',
+        },
+      },
+      security: {
+        title: 'Secure & Private',
+        body: 'Your security is our priority. We use industry-standard remote support tools with end-to-end encryption. You control the session and can see everything we do. We never access your system without your explicit permission.',
+        features: [
+          'Encrypted remote connections',
+          'You approve every action',
+          'Session recordings available on request',
+          'No persistent access to your systems',
+        ],
+      },
+      cta: {
+        heading: 'Need IT Help Right Now?',
+        body: 'Contact us for fast, secure remote support. Available for Seattle locals and worldwide clients.',
+        ctaPrimary: 'Request Remote Support',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    security: {
+      hero: {
+        title: 'Enterprise Security Solutions',
+        subtitle: 'Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management.',
+        cta: 'Security Assessment',
+      },
+      compliance: {
+        heading: 'Compliance & Standards',
+        items: [
+          { name: 'SOC 2', description: 'Service organization controls' },
+          { name: 'ISO 27001', description: 'Information security management' },
+          { name: 'HIPAA', description: 'Healthcare data protection' },
+          { name: 'GDPR', description: 'Data privacy regulation' },
+          { name: 'PCI DSS', description: 'Payment card security' },
+          { name: 'NIST', description: 'Cybersecurity framework' },
+        ],
+      },
+      services: {
+        heading: 'Comprehensive Security Services',
+        subheading: 'End-to-end cybersecurity solutions to protect your business from evolving threats.',
+        items: [
+          { title: 'Security Assessment', description: 'Comprehensive evaluation of your security posture and vulnerabilities.' },
+          { title: 'Penetration Testing', description: 'Simulated attacks to identify security weaknesses in your systems.' },
+          { title: '24/7 Monitoring', description: 'Continuous security monitoring and threat detection services.' },
+          { title: 'Incident Response', description: 'Rapid response and recovery from security incidents and breaches.' },
+          { title: 'Data Protection', description: 'Encryption, access controls, and data loss prevention solutions.' },
+          { title: 'Network Security', description: 'Firewall management, intrusion detection, and network segmentation.' },
+        ],
+      },
+      threats: {
+        heading: 'Protecting Against Evolving Threats',
+        subheading: 'Modern cybersecurity challenges require comprehensive defense strategies.',
+        items: [
+          { title: 'Ransomware', description: 'Protection against encryption-based attacks and data extortion' },
+          { title: 'Phishing', description: 'Defense against social engineering and credential theft' },
+          { title: 'Zero-Day', description: 'Detection and mitigation of unknown vulnerabilities' },
+          { title: 'Insider Threats', description: 'Monitoring and prevention of internal security risks' },
+        ],
+      },
+      networkAssessment: {
+        heading: 'Network Security Assessment',
+        body: 'A fixed-scope, practical review of how exposed your business actually is — delivered as a prioritized remediation plan your team (or ours) can execute, not a 60-page scare report.',
+        items: [
+          { title: 'Perimeter & Firewall', body: 'Rule review, exposed services, VPN configuration, and remote-access hygiene.' },
+          { title: 'Access & Identity', body: 'MFA coverage, stale accounts, privilege sprawl, and password policy reality-check.' },
+          { title: 'Patch & Endpoint', body: 'OS and firmware patch levels, endpoint protection status, and unmanaged devices.' },
+          { title: 'Backup & Recovery', body: 'Backup coverage, restore testing, and ransomware resilience — verified, not assumed.' },
+        ],
+        footer: 'Findings ranked by real-world risk, each with effort estimate and cost impact — so you fix what matters first.',
+      },
+      cta: {
+        heading: 'Ready to Secure Your Business?',
+        body: 'Partner with cybersecurity experts to build robust defenses against evolving threats.',
+        ctaPrimary: 'Schedule Security Audit',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    technicalWriting: {
+      hero: {
+        title: 'Bilingual Technical Writing',
+        subtitle: 'Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses.',
+        cta: 'Request a Quote',
+      },
+      whyMatters: {
+        heading: 'Why Bilingual Documentation Matters',
+        paragraph1:
+          "In today's global economy, businesses increasingly operate across English and Chinese-speaking markets. Effective technical communication isn't just about translation—it requires deep understanding of both technical concepts and cultural context.",
+        paragraph2:
+          "Whether you're a Seattle-based company expanding to Asian markets, or an international team needing documentation in both languages, professional bilingual technical writing ensures clarity, accuracy, and consistency across all your technical communications.",
+      },
+      services: {
+        heading: 'Documentation Services',
+        subheading: 'Comprehensive technical writing services tailored to your needs.',
+        items: [
+          { title: 'IT Documentation', description: 'System architecture docs, runbooks, SOPs, and infrastructure documentation in English and Chinese.' },
+          { title: 'User Guides & Manuals', description: 'Clear, user-friendly documentation for software applications and technical products.' },
+          { title: 'API Documentation', description: 'Comprehensive API references, integration guides, and developer documentation.' },
+          { title: 'Release Notes', description: 'Professional release notes and changelog documentation for software updates.' },
+          { title: 'Training Materials', description: 'Technical training guides and educational content for teams and end users.' },
+          { title: 'Cross-Cultural Communication', description: 'Bridge technical and business communication for international teams working across English and Chinese-speaking markets.' },
+        ],
+      },
+      benefits: {
+        heading: 'What Sets Us Apart',
+        items: [
+          { title: 'True Bilingual Expertise', description: 'Native-level proficiency in both English and Chinese, not just translation.' },
+          { title: 'IT Industry Experience', description: 'Deep understanding of technical concepts, infrastructure, and software development.' },
+          { title: 'Clear & Structured', description: 'Documentation that follows industry best practices and is easy to maintain.' },
+          { title: 'Cultural Nuance', description: 'Understanding of business culture in both Western and Chinese markets.' },
+        ],
+      },
+      useCases: {
+        heading: 'Common Use Cases',
+        items: [
+          { title: 'For Seattle Businesses Going Global', description: "You're expanding to China or working with Chinese partners. You need product documentation, user guides, or technical specs that work for both English and Chinese-speaking audiences." },
+          { title: 'For International Teams', description: 'Your development team spans multiple countries. You need consistent technical documentation that serves both your US-based engineers and your Chinese development center.' },
+          { title: 'For Software Companies', description: "You're selling software in both markets and need API docs, SDKs, and integration guides that work seamlessly in English and Chinese." },
+          { title: 'For Enterprise IT Teams', description: 'Your company has offices in Seattle and Asia. You need IT documentation, procedures, and training materials that work across all locations.' },
+        ],
+      },
+      cta: {
+        heading: 'Ready to Improve Your Global Communication?',
+        body: "Let's discuss how bilingual technical documentation can support your business goals.",
+        cta: 'Get Started',
+      },
+    },
+    itAutomation: {
+      hero: {
+        title: 'IT Automation Services',
+        subtitle: 'Streamline your operations with automated workflows and intelligent systems that work for you 24/7.',
+        cta: 'Get Started',
+      },
+      intro: {
+        heading: 'Automation That Works for You',
+        paragraph1:
+          "In today's fast-paced business environment, manual processes slow you down and increase the risk of errors. Our IT automation solutions help small businesses reduce manual overhead, increase efficiency, and scale operations without adding headcount.",
+        paragraph2:
+          'From workflow automation to infrastructure management, we implement predictable, repeatable automation that lets you focus on growing your business instead of managing routine tasks.',
+      },
+      services: {
+        heading: 'Our Automation Services',
+        subheading: 'Comprehensive automation solutions tailored to your business needs.',
+        benefitsLabel: 'Key Benefits:',
+        items: [
+          {
+            title: 'Workflow Automation',
+            description: 'Automate repetitive tasks and streamline your business processes for maximum efficiency.',
+            benefits: ['Automated data entry and processing', 'Document generation and management', 'Email and communication automation', 'Task scheduling and reminders'],
+          },
+          {
+            title: 'IT Infrastructure Automation',
+            description: 'Automated monitoring, maintenance, and updates to keep your systems running smoothly.',
+            benefits: ['Automated patch management', 'System monitoring and alerts', 'Backup automation', 'Network configuration management'],
+          },
+          {
+            title: 'Process Optimization',
+            description: 'Identify bottlenecks and optimize workflows with intelligent automation solutions.',
+            benefits: ['Business process analysis', 'Workflow optimization', 'Performance monitoring', 'Continuous improvement automation'],
+          },
+          {
+            title: 'Security Automation',
+            description: 'Automated security monitoring and response to protect your business 24/7.',
+            benefits: ['Automated threat detection', 'Security patch deployment', 'Compliance monitoring', 'Incident response automation'],
+          },
+        ],
+      },
+      benefits: {
+        heading: 'Why Automate with W1IT?',
+        subheading: 'The benefits of intelligent automation for your small business.',
+        items: [
+          'Reduce manual overhead and human error',
+          'Increase productivity and efficiency',
+          'Save time and reduce operational costs',
+          'Scale operations without adding headcount',
+          'Improve accuracy and consistency',
+          'Free your team to focus on strategic work',
+        ],
+      },
+      process: {
+        heading: 'Our Automation Process',
+        steps: [
+          { number: '1', title: 'Assessment', description: 'We analyze your current workflows to identify automation opportunities and bottlenecks.' },
+          { number: '2', title: 'Strategy', description: 'We design a custom automation strategy aligned with your business goals and priorities.' },
+          { number: '3', title: 'Implementation', description: 'We build and deploy automation solutions with minimal disruption to your operations.' },
+          { number: '4', title: 'Optimization', description: 'We monitor, refine, and continuously improve your automation for maximum efficiency.' },
+        ],
+      },
+      cta: {
+        heading: 'Ready to Automate Your Business?',
+        body: "Let's discuss how automation can transform your operations and free your team to focus on what matters most.",
+        ctaPrimary: 'Schedule a Consultation',
+        ctaSecondary: 'View All Services',
+      },
+    },
+    websiteDevelopment: {
+      hero: {
+        title: 'Website Development & Optimization',
+        subtitle: 'Build fast, beautiful, and conversion-focused websites that drive business growth',
+        cta: 'Start Your Project',
+      },
+      features: {
+        heading: 'What We Offer',
+        subheading: 'Comprehensive web development services tailored to your business needs',
+        items: [
+          { title: 'Custom Development', description: 'Tailored websites built with modern frameworks like Next.js, React, and TypeScript for optimal performance.' },
+          { title: 'Responsive Design', description: 'Mobile-first approach ensuring your website looks perfect on all devices and screen sizes.' },
+          { title: 'Performance Optimization', description: 'Lightning-fast load times with optimized images, code splitting, and edge caching.' },
+          { title: 'SEO Optimization', description: 'Built-in SEO best practices with metadata, sitemaps, and structured data for better rankings.' },
+          { title: 'E-Commerce Solutions', description: 'Robust online stores with secure payment processing and inventory management.' },
+          { title: 'Analytics & Insights', description: 'Integrated analytics to track performance, user behavior, and conversion metrics.' },
+        ],
+      },
+      technologies: {
+        heading: 'Modern Technology Stack',
+        subheading: 'We use industry-leading technologies to build robust, scalable websites',
+      },
+      cta: {
+        heading: 'Ready to Build Your Website?',
+        body: "Let's discuss your project and create a website that exceeds expectations",
+        cta: 'Schedule a Consultation',
+      },
+    },
+  },
+  itConsulting: {
+    hero: {
+      title: 'IT Consulting Services',
+      subtitleBeforeLink: 'Smart IT Consulting — Clear Strategies for Secure, Scalable Growth. Need hands-on support? Explore our ',
+      linkText: 'managed IT services',
+      subtitleAfterLink: '.',
+      cta: 'Schedule a Consultation',
+    },
+    intro:
+      'Beyond hands-on IT management, I provide consulting services that help businesses make informed, strategic technology decisions. My consulting approach blends technical expertise with clear communication, ensuring that every recommendation is practical, scalable, and aligned with business goals.',
+    offer: {
+      heading: 'What I Offer',
+      subheading: 'Strategic consulting services designed to help your business make smarter technology decisions.',
+      items: [
+        { title: 'Technology Strategy & Roadmapping', description: 'Helping organizations plan IT investments, align infrastructure with business objectives, and prepare for future growth.' },
+        { title: 'System & Network Architecture Consulting', description: 'Advising on secure, efficient designs for networks, servers, and cloud environments, tailored to your operational needs.' },
+        { title: 'Process Optimization', description: 'Identifying inefficiencies in IT workflows and recommending automation or restructuring to improve productivity.' },
+        { title: 'Security & Compliance Guidance', description: 'Consulting on SSL/DNS configurations, MFA integration, and best practices to keep systems secure and compliant.' },
+        { title: 'Cross-Cultural Communication in IT', description: 'Supporting international teams with bilingual (English/Chinese) documentation and messaging to bridge technical and business communication gaps.' },
+      ],
+    },
+    benefits: {
+      heading: 'How Clients Benefit',
+      items: [
+        { title: 'Clarity in Decision-Making', description: 'Complex IT challenges explained in simple, actionable terms.' },
+        { title: 'Cost Efficiency', description: 'Strategic recommendations that reduce unnecessary spending and maximize ROI.' },
+        { title: 'Scalability', description: 'Solutions designed to grow with your business.' },
+        { title: 'Local & Remote Support', description: 'Available for consulting sessions both remotely worldwide and locally in the Greater Seattle area.' },
+      ],
+    },
+    cta: {
+      heading: 'Ready to Make Smarter IT Decisions?',
+      body: "Let's discuss how strategic IT consulting can help your business grow securely and efficiently.",
+      cta: 'Get Started Today',
+    },
+  },
+  itServices: {
+    hero: {
+      title: 'Managed IT Services',
+      subtitleBeforeLink: 'Comprehensive IT service management tailored to businesses that need reliable, scalable, and secure solutions. Available remotely worldwide and locally in the Greater Seattle area. Looking for strategic guidance? See our ',
+      linkText: 'IT consulting services',
+      subtitleAfterLink: '.',
+      cta: 'Get in Touch',
+    },
+    about: {
+      heading: 'About Me',
+      paragraph:
+        'I am an experienced IT consultant and strategist with a proven track record in managing complex systems and delivering clear, actionable solutions. My background spans system administration, network monitoring, and technical documentation, combined with strong skills in bilingual communication (English/Chinese) for international business contexts. I bring both technical rigor and creative problem-solving to every project.',
+    },
+    experience: {
+      heading: 'My IT Experience',
+      subheading: 'Years of hands-on experience across diverse IT environments, from infrastructure management to international team collaboration.',
+      items: [
+        { title: 'System Administration & Troubleshooting', description: 'Skilled in managing platforms such as Matrix42, Empirum, JIRA, Confluence, Meraki, and PRTG. I specialize in diagnosing and resolving SSL certificate chain issues, DNS/Cloudflare configurations, and MFA service integrations.' },
+        { title: 'Network Monitoring & Automation', description: 'Advanced workflow design for PRTG, Meraki, and SNMP, including PowerShell automation to streamline device management and monitoring.' },
+        { title: 'Documentation & Communication', description: 'Expert in creating clear, modular documentation for stakeholders, ensuring visibility and alignment across IT projects. I refine technical messaging for cross-cultural audiences, bridging communication between technical teams and business leaders.' },
+        { title: 'Project Management & Optimization', description: 'Proactive in aligning IT processes with business goals, optimizing workflows, and ensuring smooth stakeholder collaboration.' },
+      ],
+    },
+    servicesOffered: {
+      heading: 'IT Services I Offer',
+      subheading: 'I provide comprehensive IT service management tailored to businesses that need reliable, scalable, and secure solutions.',
+      items: [
+        'End-to-end IT infrastructure management',
+        'Network monitoring and workflow automation',
+        'SSL/DNS troubleshooting and secure configuration',
+        'Technical documentation and stakeholder communication',
+        'Cross-cultural IT messaging for international teams',
+      ],
+      note: 'Services are available remotely worldwide and locally in the Greater Seattle area, offering flexibility for both on-site and virtual support.',
+    },
+    whyWorkWithMe: {
+      heading: 'Why Work With Me',
+      items: [
+        { title: 'Clarity & Professionalism', description: 'I translate complex IT issues into clear, actionable steps.' },
+        { title: 'Reliability', description: 'I ensure systems run securely and efficiently, minimizing downtime.' },
+        { title: 'Global Perspective', description: 'My bilingual expertise supports international collaboration.' },
+        { title: 'Customization', description: 'I adapt solutions to fit your business needs, whether small-scale or enterprise-level.' },
+        { title: 'Local Presence', description: "Based in the Seattle area, I'm available for in-person consultations and hands-on support." },
+      ],
+    },
+    cta: {
+      heading: 'Ready to Optimize Your IT Infrastructure?',
+      body: "Let's discuss how I can help streamline your IT operations and support your business goals.",
+      cta: 'Contact Me Today',
     },
   },
 };
@@ -1235,6 +1836,486 @@ export const zhTW: Dictionary = {
         '我們總部位於華盛頓州 Bellevue，長期為大西雅圖都會區的中小企業提供現場與遠端技術支援，並可支援全美各地客戶。',
       serviceAreasLabel: '服務地區：',
       serviceAreasValue: 'Bellevue、Seattle、Redmond、Kirkland、Issaquah、Sammamish 及周邊社區。',
+    },
+  },
+  servicesDetail: {
+    managedServices: {
+      hero: {
+        title: '主動式 IT 管理服務',
+        subtitle: '提供全方位 IT 管理服務，包含 24/7 全天候監控、策略顧問諮詢，以及專屬支援團隊。',
+        cta: '立即開始',
+      },
+      overview: {
+        heading: '您的專屬 IT 團隊',
+        paragraph1: '委外資訊管理服務為想專注核心業務、將技術管理交給專家的企業，提供全方位解決方案。',
+        paragraph2: '我們如同您團隊的延伸，提供主動式監控、策略指導與快速支援，確保科技真正驅動您的業務成功。',
+        cta: '預約諮詢',
+        benefitsHeading: '主要優勢',
+        benefits: [
+          '固定月費，無隱藏額外支出',
+          '取得企業級專業技術與工具',
+          '在問題影響業務前主動排除',
+          '可隨業務成長彈性擴展的解決方案',
+          '符合產業標準與法規要求',
+          '專注核心業務，IT 交給我們管理',
+        ],
+      },
+      services: {
+        heading: '全方位委外管理服務',
+        subheading: '依您的業務需求量身打造的端到端 IT 管理解決方案。',
+        items: [
+          { title: '主動式監控', description: '24/7 全天候監控您的 IT 基礎架構，並提供自動化警示。' },
+          { title: '客服支援', description: '專屬技術支援團隊，快速排解各類問題。' },
+          { title: '資安管理', description: '全方位資安服務，涵蓋修補程式管理與威脅偵測。' },
+          { title: '備份與復原', description: '自動化數據備份與災難復原解決方案。' },
+          { title: '網路管理', description: '優化並管理您的網路基礎架構。' },
+          { title: '策略顧問諮詢', description: 'IT 策略規劃與技術發展藍圖擬定。' },
+        ],
+      },
+      tiers: {
+        heading: '彈性服務方案',
+        subheading: '選擇符合您業務需求與預算的服務等級。',
+        items: [
+          { name: '基礎方案', description: '為中小企業提供基本監控與支援', features: ['24/7 全天候監控', '客服支援', '基礎資安防護'] },
+          { name: '專業方案', description: '為成長中企業提供全方位管理', features: ['主動式維護', '進階資安防護', '策略規劃'] },
+          { name: '企業方案', description: '為大型組織提供全面 IT 管理', features: ['專屬服務團隊', '合規管理', '業務持續性規劃'] },
+        ],
+        getStarted: '立即開始',
+      },
+      cta: {
+        heading: '準備好簡化您的 IT 管理了嗎？',
+        body: '與我們合作，打造可擴展、安全且創新的 IT 解決方案，驅動業務成長。',
+        ctaPrimary: '預約免費健檢',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    cloudSolutions: {
+      hero: {
+        title: '企業級雲端服務',
+        subtitle: '以可擴展、安全且具成本效益的雲端解決方案，全面升級您的基礎架構。',
+        cta: '啟動雲端之旅',
+      },
+      platformsHeading: '我們支援的雲端平台',
+      services: {
+        heading: '全方位雲端服務',
+        subheading: '端到端雲端解決方案，加速您的數位轉型。',
+        items: [
+          { title: '雲端遷移', description: '將應用程式與數據無縫遷移至雲端平台。' },
+          { title: '基礎架構即程式碼', description: '自動化的基礎架構建置與管理。' },
+          { title: '雲端數據庫解決方案', description: '委外資料庫服務與數據平台優化。' },
+          { title: '雲端資安', description: '全方位資安架構與合規管理。' },
+          { title: '成本優化', description: '監控並優化雲端支出與資源配置。' },
+          { title: '多雲策略', description: '跨多家雲端服務供應商的策略規劃與導入。' },
+        ],
+      },
+      benefits: {
+        heading: '為什麼要導入雲端？',
+        items: [
+          { title: '可擴展性', description: '依需求輕鬆擴增或縮減資源' },
+          { title: '成本效益', description: '彈性計費模式，用多少付多少' },
+          { title: '資安防護', description: '企業級資安防護，持續監控' },
+          { title: '創新技術', description: '掌握最新技術與服務' },
+        ],
+      },
+      cta: {
+        heading: '準備好進行雲端轉型了嗎？',
+        body: '與經驗豐富的雲端專家合作，打造可擴展、安全且創新的雲端解決方案。',
+        ctaPrimary: '預約雲端健檢',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    networkSetup: {
+      hero: {
+        title: '網路建置與設定',
+        subtitle: '為 Seattle、Bellevue、Issaquah 及 Snoqualmie 提供專業網路安裝與支援。快速、可靠的住家與企業網路建置服務，並提供當日到府服務。',
+        cta: '預約網路建置',
+      },
+      services: {
+        heading: '我們提供的網路服務',
+        subheading: '依您的業務需求量身打造的完整網路解決方案。',
+        items: [
+          { title: 'WiFi 安裝與優化', description: '專業 WiFi 建置服務，提供最佳訊號涵蓋範圍、資安設定與效能調校，適用於住家與辦公室。' },
+          { title: '路由器與交換器設定', description: '專業設定路由器、交換器及網路設備，涵蓋 Meraki、Ubiquiti 及企業級解決方案。' },
+          { title: 'VPN 建置與資安', description: '為遠端工作、據點間連線及公司資源安全存取提供 VPN 安全設定。' },
+          { title: '企業網路架構設計', description: '為西雅圖地區中小企業及成長中企業提供完整網路基礎架構設計。' },
+          { title: '網路故障排除', description: '快速診斷並排除網路問題、連線緩慢及連通性障礙。' },
+          { title: '網路監控建置', description: 'PRTG、Meraki 儀表板及 SNMP 監控設定，確保網路穩定健全。' },
+        ],
+      },
+      commonIssues: {
+        heading: '我們協助解決的常見網路問題',
+        items: [
+          { title: 'WiFi 訊號慢或有死角', description: '我們會分析您的空間，安裝分點式基地台或 Mesh 系統，確保住家或辦公室全面涵蓋。' },
+          { title: '網路連線不穩定', description: '診斷並排除連線問題，優化路由器設定，確保遠端工作連線穩定。' },
+          { title: '網路資安疑慮', description: '導入完善資安防護：WPA3 加密、防火牆設定、訪客網路，以及 VPN 存取。' },
+          { title: '裝置無法連線', description: '排除裝置連線問題、設定網路參數，確保所有裝置順暢運作。' },
+        ],
+      },
+      serviceArea: {
+        heading: '服務大西雅圖地區',
+        intro: '提供現場網路安裝與支援的地區：',
+        remoteNote: '亦提供遠端網路設定與故障排除支援',
+        cta: '立即取得網路協助',
+      },
+      whyChoose: {
+        heading: '為什麼選擇 w1IT 進行網路建置',
+        items: [
+          { title: '快速回應', description: '提供當日或隔日到府服務。我們深知網路問題不能等。' },
+          { title: '專業設定', description: '在 Meraki、PRTG、企業級路由器及居家網路解決方案方面擁有多年經驗。' },
+          { title: '清楚溝通', description: '不使用艱澀術語。我們會用淺顯的中英文，清楚說明我們在做什麼、為什麼這麼做。' },
+        ],
+      },
+      architectureOptimization: {
+        heading: '網路架構優化——花更少，跑更快',
+        body: '多數企業網路是逐年累加而成：設備不斷增加、授權自動續約，卻沒有人移除已不再需要的項目。我們會稽核您實際運行的系統，依當前業務需求重新設計架構，並削減這些過度配置帶來的固定支出。',
+        costAudit: { title: '成本稽核', body: '盤點硬體、授權、線路與雲端支出——標示並估算每一項配置過度或重複的項目。' },
+        rightSized: { title: '合理規模重新設計', body: '精簡化的目標架構：更少設備、整合供應商，並讓容量符合實際使用需求——通常可降低 20% 至 40% 的固定支出。' },
+        migrationPlan: { title: '遷移計畫', body: '從現況到目標架構的分階段、低風險路徑，並配合您的營業時間排程——不會有一次到位的大規模停機。' },
+      },
+      cta: {
+        heading: '準備好提升網路效能了嗎？',
+        body: '立即聯繫我們，取得西雅圖地區快速、專業的網路建置服務。',
+        ctaPrimary: '預約服務',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    remoteSupport: {
+      hero: {
+        title: '遠端 IT 支援',
+        subtitle: '來自西雅圖的快速、安全遠端故障排除服務，服務範圍遍及全球。提供當日支援、安全連線，並提供中英雙語服務。',
+        cta: '立即取得協助',
+      },
+      howItWorks: {
+        heading: '遠端支援如何運作',
+        steps: [
+          { step: '1', title: '聯繫我們', description: '透過電子郵件或電話說明您的問題' },
+          { step: '2', title: '預約時段', description: '我們會為您安排合適的時間' },
+          { step: '3', title: '建立安全連線', description: '我們透過安全工具進行遠端連線' },
+          { step: '4', title: '問題解決', description: '我們在您眼前完成問題排除' },
+        ],
+      },
+      services: {
+        heading: '遠端支援服務',
+        items: [
+          { title: '遠端桌面支援', description: '安全的遠端存取，即時診斷並排除您電腦上的問題。' },
+          { title: '軟體故障排除', description: '排除應用程式錯誤、安裝問題及軟體設定疑難雜症。' },
+          { title: '系統效能優化', description: '優化運作緩慢的電腦，清理系統並整體提升效能。' },
+          { title: '資安更新', description: '確保系統保持更新、安全，並防範各類漏洞威脅。' },
+          { title: '電子郵件與雲端設定', description: '設定電子郵件用戶端、雲端儲存空間及生產力工具。' },
+          { title: '使用者訓練', description: '提供軟體、工具及最佳實務的遠端訓練課程。' },
+        ],
+      },
+      benefits: {
+        heading: '為什麼選擇遠端支援',
+        items: [
+          { title: '更快速的回應', description: '無需等待現場到府服務，我們可在數小時內（而非數天）開始為您提供協助。' },
+          { title: '更實惠的價格', description: '無需支付交通時間或到府費用，您只需為實際解決問題的時間付費。' },
+          { title: '隨處可得的服務', description: '無論您身在西雅圖，或在世界任何角落遠端工作，都能獲得協助。' },
+        ],
+        perfectForRemoteWorkers: {
+          title: '最適合遠端工作者',
+          body: '無論您是在西雅圖地區在家工作，還是身處世界其他地方，我們專精於協助遠端工作者，包括居家辦公環境建置、VPN 設定、視訊會議故障排除，以及生產力工具支援，讓您能更快回到工作崗位。',
+        },
+      },
+      security: {
+        title: '安全私密',
+        body: '您的資安是我們的首要考量。我們使用具備端對端加密的業界標準遠端支援工具，您能全程掌控連線並清楚看見我們所做的每一步操作，未經您明確授權，我們絕不會存取您的系統。',
+        features: [
+          '加密遠端連線',
+          '每項操作都需經您核准',
+          '可依需求提供連線紀錄',
+          '不保留對您系統的持續存取權限',
+        ],
+      },
+      cta: {
+        heading: '現在就需要 IT 協助嗎？',
+        body: '立即聯繫我們，取得快速、安全的遠端支援服務。服務範圍涵蓋西雅圖本地及全球客戶。',
+        ctaPrimary: '申請遠端支援',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    security: {
+      hero: {
+        title: '企業級資安解決方案',
+        subtitle: '以全方位資安解決方案、威脅偵測與合規管理，保護您的企業。',
+        cta: '資安評估',
+      },
+      compliance: {
+        heading: '合規與標準',
+        items: [
+          { name: 'SOC 2', description: '服務機構控制標準' },
+          { name: 'ISO 27001', description: '資訊安全管理標準' },
+          { name: 'HIPAA', description: '醫療數據保護法規' },
+          { name: 'GDPR', description: '數據隱私保護法規' },
+          { name: 'PCI DSS', description: '支付卡資安標準' },
+          { name: 'NIST', description: '網路資安框架' },
+        ],
+      },
+      services: {
+        heading: '全方位資安服務',
+        subheading: '端到端網路資安解決方案，保護您的企業免於不斷演變的威脅。',
+        items: [
+          { title: '資安評估', description: '全面評估您的資安現況與潛在漏洞。' },
+          { title: '滲透測試', description: '模擬攻擊情境，找出系統中的資安弱點。' },
+          { title: '24/7 全天候監控', description: '持續進行資安監控與威脅偵測服務。' },
+          { title: '事件應變處理', description: '快速應變並從資安事件與資料外洩中復原。' },
+          { title: '數據保護', description: '加密、存取控管與數據外洩防護解決方案。' },
+          { title: '網路資安', description: '防火牆管理、入侵偵測與網路區隔。' },
+        ],
+      },
+      threats: {
+        heading: '防範不斷演變的資安威脅',
+        subheading: '現代網路資安挑戰需要全方位的防禦策略。',
+        items: [
+          { title: '勒索軟體', description: '防範加密式攻擊與數據勒索' },
+          { title: '網路釣魚', description: '防範社交工程與憑證竊取' },
+          { title: '零時差漏洞', description: '偵測並緩解未知漏洞威脅' },
+          { title: '內部威脅', description: '監控並防範內部資安風險' },
+        ],
+      },
+      networkAssessment: {
+        heading: '網路資安評估',
+        body: '固定範圍、務實的評估，具體檢視您的企業實際曝險程度——最終交付的是可由您團隊（或我們團隊）執行的優先改善計畫，而非一份 60 頁的恐嚇式報告。',
+        items: [
+          { title: '邊界與防火牆', body: '規則檢視、暴露服務、VPN 設定，以及遠端存取安全習慣檢查。' },
+          { title: '存取與身分', body: 'MFA 覆蓋率、閒置帳號、權限氾濫問題，以及密碼政策實際落實情況檢視。' },
+          { title: '修補與端點', body: '作業系統與韌體修補程度、端點防護狀態，以及未受管理的裝置。' },
+          { title: '備份與復原', body: '備份覆蓋率、還原測試，以及勒索軟體韌性——經過實際驗證，而非假設。' },
+        ],
+        footer: '依實際風險排序的評估結果，每項均附上執行工時預估與成本影響，讓您優先處理最關鍵的問題。',
+      },
+      cta: {
+        heading: '準備好保護您的企業了嗎？',
+        body: '與網路資安專家合作，打造穩固防禦，抵禦不斷演變的威脅。',
+        ctaPrimary: '預約資安稽核',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    technicalWriting: {
+      hero: {
+        title: '雙語技術文件撰寫',
+        subtitle: '提供專業中英雙語技術文件服務，弭平國際團隊與全球企業間的溝通落差。',
+        cta: '索取報價',
+      },
+      whyMatters: {
+        heading: '為什麼雙語文件如此重要',
+        paragraph1: '在當今全球化經濟中，企業日益需要橫跨中英文市場運作。有效的技術溝通不只是翻譯而已——更需要對技術概念與文化脈絡具備深刻理解。',
+        paragraph2: '無論您是拓展亞洲市場的西雅圖企業，或是需要中英雙語文件的國際團隊，專業雙語技術寫作都能確保所有技術溝通的清晰度、準確性與一致性。',
+      },
+      services: {
+        heading: '文件撰寫服務',
+        subheading: '依您的需求量身打造的全方位技術寫作服務。',
+        items: [
+          { title: 'IT 技術文件', description: '以中英文提供系統架構文件、操作手冊、標準作業程序（SOP）及基礎架構文件。' },
+          { title: '使用者指南與操作手冊', description: '為軟體應用程式及技術產品提供清晰易懂的使用者文件。' },
+          { title: 'API 文件', description: '完整的 API 參考文件、整合指南及開發者文件。' },
+          { title: '版本發布說明', description: '為軟體更新提供專業的版本發布說明與變更紀錄文件。' },
+          { title: '訓練教材', description: '為團隊與終端使用者提供技術訓練指南與教育內容。' },
+          { title: '跨文化溝通', description: '為橫跨中英文市場運作的國際團隊，銜接技術與商業溝通落差。' },
+        ],
+      },
+      benefits: {
+        heading: '我們的與眾不同之處',
+        items: [
+          { title: '真正的雙語專業', description: '中英文皆具備母語等級的熟練度，而非僅止於翻譯。' },
+          { title: 'IT 產業經驗', description: '對技術概念、基礎架構與軟體開發具備深刻理解。' },
+          { title: '清晰且結構化', description: '遵循產業最佳實務、易於維護的文件內容。' },
+          { title: '文化細膩度', description: '深諳西方與華人市場的商業文化。' },
+        ],
+      },
+      useCases: {
+        heading: '常見應用情境',
+        items: [
+          { title: '拓展全球市場的西雅圖企業', description: '您正拓展至中國市場或與中國合作夥伴合作，需要能同時服務中英文讀者的產品文件、使用者指南或技術規格書。' },
+          { title: '跨國團隊', description: '您的開發團隊橫跨多個國家，需要一致的技術文件，同時服務美國工程師與中國開發中心。' },
+          { title: '軟體公司', description: '您同時在中英文市場銷售軟體，需要能在兩種語言間無縫運作的 API 文件、SDK 及整合指南。' },
+          { title: '企業 IT 團隊', description: '貴公司在西雅圖與亞洲皆設有據點，需要能跨所有據點通用的 IT 文件、作業程序與訓練教材。' },
+        ],
+      },
+      cta: {
+        heading: '準備好提升您的全球溝通了嗎？',
+        body: '讓我們一起討論雙語技術文件如何協助您達成業務目標。',
+        cta: '立即開始',
+      },
+    },
+    itAutomation: {
+      hero: {
+        title: 'IT 流程自動化服務',
+        subtitle: '透過自動化工作流程與智慧系統，全天候 24/7 為您精簡營運流程。',
+        cta: '立即開始',
+      },
+      intro: {
+        heading: '真正為您服務的自動化',
+        paragraph1: '在步調快速的現代商業環境中，人工作業流程會拖慢腳步並提高出錯風險。我們的 IT 自動化解決方案協助中小企業降低人工作業負擔、提升效率，並在不增加人力的情況下擴展營運規模。',
+        paragraph2: '從工作流程自動化到基礎架構管理，我們導入可預測、可重複執行的自動化機制，讓您能專注於企業成長，而非日常瑣事管理。',
+      },
+      services: {
+        heading: '我們的自動化服務',
+        subheading: '依您的業務需求量身打造的全方位自動化解決方案。',
+        benefitsLabel: '主要優勢：',
+        items: [
+          {
+            title: '工作流程自動化',
+            description: '自動化重複性工作，精簡您的業務流程，提升最大效率。',
+            benefits: ['自動化數據輸入與處理', '文件生成與管理', '電子郵件與通訊自動化', '任務排程與提醒'],
+          },
+          {
+            title: 'IT 基礎架構自動化',
+            description: '自動化監控、維護與更新，確保系統穩定運作。',
+            benefits: ['自動化修補程式管理', '系統監控與警示', '自動化備份', '網路設定管理'],
+          },
+          {
+            title: '流程優化',
+            description: '找出流程瓶頸，並透過智慧自動化解決方案優化工作流程。',
+            benefits: ['業務流程分析', '工作流程優化', '效能監控', '持續改善自動化'],
+          },
+          {
+            title: '資安自動化',
+            description: '自動化資安監控與應變處理，全天候 24/7 保護您的企業。',
+            benefits: ['自動化威脅偵測', '資安修補程式部署', '合規監控', '事件應變自動化'],
+          },
+        ],
+      },
+      benefits: {
+        heading: '為什麼選擇 W1IT 進行自動化？',
+        subheading: '智慧自動化為您的中小企業帶來的實際效益。',
+        items: [
+          '降低人工作業負擔與人為疏失',
+          '提升生產力與工作效率',
+          '節省時間並降低營運成本',
+          '無需增加人力即可擴展營運規模',
+          '提升準確度與一致性',
+          '讓團隊得以專注於策略性工作',
+        ],
+      },
+      process: {
+        heading: '我們的自動化流程',
+        steps: [
+          { number: '1', title: '需求評估', description: '我們分析您現有的工作流程，找出自動化機會與瓶頸所在。' },
+          { number: '2', title: '策略規劃', description: '我們依您的業務目標與優先順序，設計客製化自動化策略。' },
+          { number: '3', title: '導入實施', description: '我們建置並部署自動化解決方案，將對營運的干擾降到最低。' },
+          { number: '4', title: '持續優化', description: '我們持續監控、調整並改善您的自動化機制，達到最大效率。' },
+        ],
+      },
+      cta: {
+        heading: '準備好為您的企業導入自動化了嗎？',
+        body: '讓我們一起討論自動化如何轉型您的營運方式，讓團隊專注於最重要的事。',
+        ctaPrimary: '預約諮詢',
+        ctaSecondary: '查看所有服務',
+      },
+    },
+    websiteDevelopment: {
+      hero: {
+        title: '網站開發與優化',
+        subtitle: '打造快速、精美且以轉換率為導向的網站，驅動業務成長',
+        cta: '啟動您的專案',
+      },
+      features: {
+        heading: '我們提供的服務',
+        subheading: '依您的業務需求量身打造的全方位網站開發服務',
+        items: [
+          { title: '客製化開發', description: '採用 Next.js、React、TypeScript 等現代化框架打造的量身客製網站，效能表現最佳化。' },
+          { title: '響應式設計', description: '以行動裝置優先的設計理念，確保網站在各種裝置與螢幕尺寸上都完美呈現。' },
+          { title: '效能優化', description: '透過圖片優化、程式碼分割與邊緣快取技術，實現極速載入表現。' },
+          { title: 'SEO 搜尋引擎優化', description: '內建 SEO 最佳實務，包含中繼資料、網站地圖與結構化資料，提升搜尋排名。' },
+          { title: '電商解決方案', description: '穩健的線上商店，具備安全金流處理與庫存管理功能。' },
+          { title: '分析與洞察', description: '整合分析工具，追蹤效能表現、使用者行為與轉換率指標。' },
+        ],
+      },
+      technologies: {
+        heading: '現代化技術架構',
+        subheading: '我們採用業界領先技術，打造穩健、可擴展的網站',
+      },
+      cta: {
+        heading: '準備好打造您的網站了嗎？',
+        body: '讓我們一起討論您的專案，打造超越期待的網站',
+        cta: '預約諮詢',
+      },
+    },
+  },
+  itConsulting: {
+    hero: {
+      title: 'IT 顧問諮詢服務',
+      subtitleBeforeLink: '明智的 IT 顧問諮詢——為安全、可擴展的成長提供清晰策略。需要實際動手的支援嗎？歡迎瞭解我們的',
+      linkText: '委外資訊管理服務',
+      subtitleAfterLink: '。',
+      cta: '預約諮詢',
+    },
+    intro: '除了實際的 IT 管理服務外，我也提供顧問諮詢服務，協助企業做出明智的策略性科技決策。我的顧問方式結合技術專業與清晰溝通，確保每一項建議都務實可行、具擴展性，並與企業目標一致。',
+    offer: {
+      heading: '我提供的服務',
+      subheading: '專為協助您的企業做出更明智科技決策而設計的策略顧問服務。',
+      items: [
+        { title: '技術策略與發展藍圖規劃', description: '協助組織規劃 IT 投資、讓基礎架構與業務目標一致，並為未來成長做好準備。' },
+        { title: '系統與網路架構顧問', description: '針對網路、伺服器與雲端環境提供安全、高效的設計建議，依您的營運需求量身打造。' },
+        { title: '流程優化', description: '找出 IT 工作流程中的低效環節，並建議透過自動化或重新規劃來提升生產力。' },
+        { title: '資安與合規指導', description: '就 SSL/DNS 設定、多重要素驗證（MFA）整合及最佳實務提供顧問服務，確保系統安全合規。' },
+        { title: 'IT 跨文化溝通', description: '協助國際團隊提供中英雙語文件與溝通內容，銜接技術與商業溝通落差。' },
+      ],
+    },
+    benefits: {
+      heading: '客戶獲得的效益',
+      items: [
+        { title: '決策更清晰', description: '將複雜的 IT 挑戰化為簡單、可執行的具體步驟。' },
+        { title: '成本效益', description: '策略性建議可減少不必要的支出，並將投資報酬率最大化。' },
+        { title: '可擴展性', description: '解決方案可隨您的企業成長而擴展。' },
+        { title: '在地與遠端支援', description: '提供全球遠端顧問諮詢，以及大西雅圖地區在地諮詢服務。' },
+      ],
+    },
+    cta: {
+      heading: '準備好做出更明智的 IT 決策了嗎？',
+      body: '讓我們一起討論策略性 IT 顧問諮詢如何協助您的企業安全、高效地成長。',
+      cta: '立即開始',
+    },
+  },
+  itServices: {
+    hero: {
+      title: '委外資訊管理服務',
+      subtitleBeforeLink: '為需要可靠、可擴展且安全解決方案的企業，提供全方位 IT 服務管理。提供全球遠端服務，以及大西雅圖地區在地服務。需要策略性指導嗎？歡迎瞭解我們的',
+      linkText: 'IT 顧問諮詢服務',
+      subtitleAfterLink: '。',
+      cta: '立即聯繫',
+    },
+    about: {
+      heading: '關於我',
+      paragraph: '我是一位經驗豐富的 IT 顧問與策略規劃師，擁有管理複雜系統並提供清晰、可執行解決方案的實績。我的專業橫跨系統管理、網路監控與技術文件撰寫，並具備出色的中英雙語溝通能力，能勝任國際商業情境。我為每個專案帶來扎實的技術實力與創意的問題解決能力。',
+    },
+    experience: {
+      heading: '我的 IT 經驗',
+      subheading: '橫跨多元 IT 環境的多年實務經驗，從基礎架構管理到國際團隊協作皆有涉獵。',
+      items: [
+        { title: '系統管理與故障排除', description: '擅長管理 Matrix42、Empirum、JIRA、Confluence、Meraki 及 PRTG 等平台，專精於診斷並解決 SSL 憑證鏈問題、DNS/Cloudflare 設定，以及 MFA 服務整合。' },
+        { title: '網路監控與自動化', description: '為 PRTG、Meraki 及 SNMP 進行進階工作流程設計，並運用 PowerShell 自動化來簡化設備管理與監控作業。' },
+        { title: '文件撰寫與溝通', description: '擅長為利害關係人建立清晰、模組化的文件，確保 IT 專案的透明度與一致性。我會為跨文化受眾精煉技術訊息，銜接技術團隊與企業主管之間的溝通落差。' },
+        { title: '專案管理與優化', description: '主動讓 IT 流程與業務目標一致，優化工作流程，並確保利害關係人之間順暢協作。' },
+      ],
+    },
+    servicesOffered: {
+      heading: '我提供的 IT 服務',
+      subheading: '為需要可靠、可擴展且安全解決方案的企業，提供全方位 IT 服務管理。',
+      items: [
+        '端到端 IT 基礎架構管理',
+        '網路監控與工作流程自動化',
+        'SSL/DNS 故障排除與安全設定',
+        '技術文件撰寫與利害關係人溝通',
+        '為國際團隊提供跨文化 IT 溝通',
+      ],
+      note: '服務提供全球遠端支援，以及大西雅圖地區在地服務，兼顧現場與線上支援的彈性。',
+    },
+    whyWorkWithMe: {
+      heading: '為什麼與我合作',
+      items: [
+        { title: '清晰專業', description: '我會將複雜的 IT 問題，轉化為清楚、可執行的具體步驟。' },
+        { title: '可靠穩定', description: '我確保系統安全、高效運作，將停機時間降到最低。' },
+        { title: '國際視野', description: '我的雙語專業能力，有助於支援國際協作。' },
+        { title: '客製化服務', description: '無論規模大小，我都能依您的業務需求調整解決方案。' },
+        { title: '在地服務', description: '我常駐西雅圖地區，可提供實體諮詢與現場支援服務。' },
+      ],
+    },
+    cta: {
+      heading: '準備好優化您的 IT 基礎架構了嗎？',
+      body: '讓我們一起討論我能如何協助您精簡 IT 營運並達成業務目標。',
+      cta: '立即聯繫我',
     },
   },
 };

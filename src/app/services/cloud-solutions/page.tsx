@@ -2,6 +2,7 @@
 
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 import {
   Cloud,
   Server,
@@ -19,80 +20,26 @@ import {
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
+const serviceIcons = [Cloud, Server, Database, Shield, Zap, Globe];
+const benefitIcons = [TrendingUp, Zap, Shield, Cloud];
+const platforms = ['AWS', 'Azure', 'Google Cloud', 'IBM Cloud'];
+
 export default function CloudSolutionsPage() {
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless migration of applications and data to cloud platforms.',
-    },
-    {
-      icon: Server,
-      title: 'Infrastructure as Code',
-      description: 'Automated infrastructure provisioning and management.',
-    },
-    {
-      icon: Database,
-      title: 'Cloud Database Solutions',
-      description: 'Managed database services and data platform optimization.',
-    },
-    {
-      icon: Shield,
-      title: 'Cloud Security',
-      description: 'Comprehensive security architecture and compliance management.',
-    },
-    {
-      icon: Zap,
-      title: 'Cost Optimization',
-      description: 'Monitoring and optimization of cloud spending and resources.',
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Cloud Strategy',
-      description: 'Strategic planning and implementation across multiple cloud providers.',
-    },
-  ];
-
-  const platforms = [
-    { name: 'AWS' },
-    { name: 'Azure' },
-    { name: 'Google Cloud' },
-    { name: 'IBM Cloud' },
-  ];
-
-  const benefits = [
-    {
-      title: 'Scalability',
-      description: 'Easily scale resources up or down based on demand',
-      icon: TrendingUp,
-    },
-    {
-      title: 'Cost Efficiency',
-      description: 'Pay only for what you use with flexible pricing models',
-      icon: Zap,
-    },
-    {
-      title: 'Security',
-      description: 'Enterprise-grade security with continuous monitoring',
-      icon: Shield,
-    },
-    {
-      title: 'Innovation',
-      description: 'Access to latest technologies and services',
-      icon: Cloud,
-    },
-  ];
+  const { dict } = useLanguage();
+  const d = dict.servicesDetail.cloudSolutions;
+  const services = d.services.items.map((s, i) => ({ ...s, icon: serviceIcons[i] }));
+  const benefits = d.benefits.items.map((b, i) => ({ ...b, icon: benefitIcons[i] }));
 
   return (
     <div className="bg-surface-0">
         <Hero
-            title="Enterprise Cloud Excellence"
-            subtitle="Transform your infrastructure with scalable, secure, and cost-effective cloud solutions."
+            title={d.hero.title}
+            subtitle={d.hero.subtitle}
             imageSrc="/images/brand/hero-graphic.webp"
             imageAlt="Cloud Solutions"
             ctaButton={{
                 href: '/contact',
-                text: 'Start Cloud Journey',
+                text: d.hero.cta,
             }}
         />
 
@@ -101,7 +48,7 @@ export default function CloudSolutionsPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h3 className="text-[20px] font-semibold text-fg mb-6">
-              Cloud Platforms We Support
+              {d.platformsHeading}
             </h3>
             <div className="flex flex-wrap justify-center gap-6">
               {platforms.map((platform, index) => (
@@ -109,7 +56,7 @@ export default function CloudSolutionsPage() {
                   key={index}
                   className="px-8 py-4 bg-[#3A81F7] text-white text-[16px] font-bold"
                 >
-                  {platform.name}
+                  {platform}
                 </div>
               ))}
             </div>
@@ -122,10 +69,10 @@ export default function CloudSolutionsPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Comprehensive Cloud Services
+              {d.services.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              End-to-end cloud solutions designed to accelerate your digital transformation.
+              {d.services.subheading}
             </p>
           </div>
 
@@ -155,7 +102,7 @@ export default function CloudSolutionsPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Why Move to the Cloud?
+              {d.benefits.heading}
             </h2>
           </div>
 
@@ -185,17 +132,17 @@ export default function CloudSolutionsPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready for Cloud Transformation?
+              {d.cta.heading}
             </h2>
             <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
-              Partner with experienced cloud specialists to build scalable, secure, and innovative cloud solutions.
+              {d.cta.body}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">
-                Schedule Cloud Assessment
+                {d.cta.ctaPrimary}
               </Button>
               <Button href="/services" variant="secondary">
-                View All Services
+                {d.cta.ctaSecondary}
               </Button>
             </div>
           </div>

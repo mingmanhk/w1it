@@ -3,6 +3,7 @@
 import { RefreshCw, Zap, CheckCircle2, TrendingUp, Shield } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT IT Automation Page - LIGHT-MODE Design System
@@ -11,70 +12,20 @@ import Hero from '@/components/Hero';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const automationServices = [
-  {
-    title: 'Workflow Automation',
-    description: 'Automate repetitive tasks and streamline your business processes for maximum efficiency.',
-    icon: RefreshCw,
-    benefits: [
-      'Automated data entry and processing',
-      'Document generation and management',
-      'Email and communication automation',
-      'Task scheduling and reminders',
-    ],
-  },
-  {
-    title: 'IT Infrastructure Automation',
-    description: 'Automated monitoring, maintenance, and updates to keep your systems running smoothly.',
-    icon: Zap,
-    benefits: [
-      'Automated patch management',
-      'System monitoring and alerts',
-      'Backup automation',
-      'Network configuration management',
-    ],
-  },
-  {
-    title: 'Process Optimization',
-    description: 'Identify bottlenecks and optimize workflows with intelligent automation solutions.',
-    icon: TrendingUp,
-    benefits: [
-      'Business process analysis',
-      'Workflow optimization',
-      'Performance monitoring',
-      'Continuous improvement automation',
-    ],
-  },
-  {
-    title: 'Security Automation',
-    description: 'Automated security monitoring and response to protect your business 24/7.',
-    icon: Shield,
-    benefits: [
-      'Automated threat detection',
-      'Security patch deployment',
-      'Compliance monitoring',
-      'Incident response automation',
-    ],
-  },
-];
-
-const automationBenefits = [
-  'Reduce manual overhead and human error',
-  'Increase productivity and efficiency',
-  'Save time and reduce operational costs',
-  'Scale operations without adding headcount',
-  'Improve accuracy and consistency',
-  'Free your team to focus on strategic work',
-];
+const serviceIcons = [RefreshCw, Zap, TrendingUp, Shield];
 
 export default function ITAutomationPage() {
+  const { dict } = useLanguage();
+  const d = dict.servicesDetail.itAutomation;
+  const automationServices = d.services.items.map((s, i) => ({ ...s, icon: serviceIcons[i] }));
+
   return (
     <div className="bg-surface-0">
         <Hero
-            title="IT Automation Services"
-            subtitle="Streamline your operations with automated workflows and intelligent systems that work for you 24/7."
+            title={d.hero.title}
+            subtitle={d.hero.subtitle}
             imageAlt="IT Automation Services"
-            ctaButton={{ href: "/contact", text: "Get Started" }}
+            ctaButton={{ href: "/contact", text: d.hero.cta }}
         />
 
       {/* Introduction Section */}
@@ -82,13 +33,13 @@ export default function ITAutomationPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Automation That Works for You
+              {d.intro.heading}
             </h2>
             <p className="text-[16px] text-fg-muted leading-relaxed mb-6">
-              In today&apos;s fast-paced business environment, manual processes slow you down and increase the risk of errors. Our IT automation solutions help small businesses reduce manual overhead, increase efficiency, and scale operations without adding headcount.
+              {d.intro.paragraph1}
             </p>
             <p className="text-[16px] text-fg-muted leading-relaxed">
-              From workflow automation to infrastructure management, we implement predictable, repeatable automation that lets you focus on growing your business instead of managing routine tasks.
+              {d.intro.paragraph2}
             </p>
           </div>
         </div>
@@ -99,10 +50,10 @@ export default function ITAutomationPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Our Automation Services
+              {d.services.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              Comprehensive automation solutions tailored to your business needs.
+              {d.services.subheading}
             </p>
           </div>
 
@@ -130,7 +81,7 @@ export default function ITAutomationPage() {
                   {/* Card Body */}
                   <div className="p-8">
                     <h4 className="text-[16px] font-bold text-fg mb-4">
-                      Key Benefits:
+                      {d.services.benefitsLabel}
                     </h4>
                     <ul className="space-y-3">
                       {service.benefits.map((benefit, idx) => (
@@ -153,16 +104,16 @@ export default function ITAutomationPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Why Automate with W1IT?
+              {d.benefits.heading}
             </h2>
             <p className="text-[16px] text-fg-muted max-w-3xl mx-auto">
-              The benefits of intelligent automation for your small business.
+              {d.benefits.subheading}
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {automationBenefits.map((benefit, index) => (
+              {d.benefits.items.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3 p-6 bg-surface-1">
                   <CheckCircle2 className="w-6 h-6 text-[#00A878] mt-1 flex-shrink-0" strokeWidth={1.5} />
                   <p className="text-[16px] text-fg-muted">{benefit}</p>
@@ -178,57 +129,23 @@ export default function ITAutomationPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-[28px] font-bold text-fg mb-8 text-center">
-              Our Automation Process
+              {d.process.heading}
             </h2>
 
             <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
-                  <span className="text-[20px] font-semibold text-white font-bold">1</span>
+              {d.process.steps.map((step, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
+                    <span className="text-[20px] font-semibold text-white font-bold">{step.number}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-[20px] font-semibold text-fg mb-2">{step.title}</h3>
+                    <p className="text-[16px] text-fg-muted">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-[20px] font-semibold text-fg mb-2">Assessment</h3>
-                  <p className="text-[16px] text-fg-muted">
-                    We analyze your current workflows to identify automation opportunities and bottlenecks.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
-                  <span className="text-[20px] font-semibold text-white font-bold">2</span>
-                </div>
-                <div>
-                  <h3 className="text-[20px] font-semibold text-fg mb-2">Strategy</h3>
-                  <p className="text-[16px] text-fg-muted">
-                    We design a custom automation strategy aligned with your business goals and priorities.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
-                  <span className="text-[20px] font-semibold text-white font-bold">3</span>
-                </div>
-                <div>
-                  <h3 className="text-[20px] font-semibold text-fg mb-2">Implementation</h3>
-                  <p className="text-[16px] text-fg-muted">
-                    We build and deploy automation solutions with minimal disruption to your operations.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#3A81F7] flex items-center justify-center">
-                  <span className="text-[20px] font-semibold text-white font-bold">4</span>
-                </div>
-                <div>
-                  <h3 className="text-[20px] font-semibold text-fg mb-2">Optimization</h3>
-                  <p className="text-[16px] text-fg-muted">
-                    We monitor, refine, and continuously improve your automation for maximum efficiency.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -239,17 +156,17 @@ export default function ITAutomationPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Automate Your Business?
+              {d.cta.heading}
             </h2>
             <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how automation can transform your operations and free your team to focus on what matters most.
+              {d.cta.body}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">
-                Schedule a Consultation
+                {d.cta.ctaPrimary}
               </Button>
               <Button href="/services" variant="secondary">
-                View All Services
+                {d.cta.ctaSecondary}
               </Button>
             </div>
           </div>

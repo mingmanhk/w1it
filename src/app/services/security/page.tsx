@@ -2,6 +2,7 @@
 
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 import {
   Shield,
   Lock,
@@ -19,80 +20,23 @@ import {
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
+const serviceIcons = [Shield, Lock, Eye, AlertTriangle, Database, Globe];
+const threatIcons = [Lock, Users, AlertTriangle, Eye];
+
 export default function SecurityPage() {
-  const services = [
-    {
-      icon: Shield,
-      title: 'Security Assessment',
-      description: 'Comprehensive evaluation of your security posture and vulnerabilities.',
-    },
-    {
-      icon: Lock,
-      title: 'Penetration Testing',
-      description: 'Simulated attacks to identify security weaknesses in your systems.',
-    },
-    {
-      icon: Eye,
-      title: '24/7 Monitoring',
-      description: 'Continuous security monitoring and threat detection services.',
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Incident Response',
-      description: 'Rapid response and recovery from security incidents and breaches.',
-    },
-    {
-      icon: Database,
-      title: 'Data Protection',
-      description: 'Encryption, access controls, and data loss prevention solutions.',
-    },
-    {
-      icon: Globe,
-      title: 'Network Security',
-      description: 'Firewall management, intrusion detection, and network segmentation.',
-    },
-  ];
-
-  const compliance = [
-    { name: 'SOC 2', description: 'Service organization controls' },
-    { name: 'ISO 27001', description: 'Information security management' },
-    { name: 'HIPAA', description: 'Healthcare data protection' },
-    { name: 'GDPR', description: 'Data privacy regulation' },
-    { name: 'PCI DSS', description: 'Payment card security' },
-    { name: 'NIST', description: 'Cybersecurity framework' },
-  ];
-
-  const threats = [
-    {
-      icon: Lock,
-      title: 'Ransomware',
-      description: 'Protection against encryption-based attacks and data extortion',
-    },
-    {
-      icon: Users,
-      title: 'Phishing',
-      description: 'Defense against social engineering and credential theft',
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Zero-Day',
-      description: 'Detection and mitigation of unknown vulnerabilities',
-    },
-    {
-      icon: Eye,
-      title: 'Insider Threats',
-      description: 'Monitoring and prevention of internal security risks',
-    },
-  ];
+  const { dict } = useLanguage();
+  const d = dict.servicesDetail.security;
+  const services = d.services.items.map((s, i) => ({ ...s, icon: serviceIcons[i] }));
+  const threats = d.threats.items.map((t, i) => ({ ...t, icon: threatIcons[i] }));
 
   return (
     <div className="bg-surface-0">
         <Hero
-            title="Enterprise Security Solutions"
-            subtitle="Protect your business with comprehensive cybersecurity solutions, threat detection, and compliance management."
+            title={d.hero.title}
+            subtitle={d.hero.subtitle}
             ctaButton={{
                 href: '/contact',
-                text: 'Security Assessment',
+                text: d.hero.cta,
             }}
         />
 
@@ -101,10 +45,10 @@ export default function SecurityPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-8">
-              Compliance & Standards
+              {d.compliance.heading}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {compliance.map((standard, index) => (
+              {d.compliance.items.map((standard, index) => (
                 <div
                   key={index}
                   className="bg-surface-0 p-6 text-center border-2 border-[#3A81F7]"
@@ -127,10 +71,10 @@ export default function SecurityPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Comprehensive Security Services
+              {d.services.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              End-to-end cybersecurity solutions to protect your business from evolving threats.
+              {d.services.subheading}
             </p>
           </div>
 
@@ -160,10 +104,10 @@ export default function SecurityPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Protecting Against Evolving Threats
+              {d.threats.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              Modern cybersecurity challenges require comprehensive defense strategies.
+              {d.threats.subheading}
             </p>
           </div>
 
@@ -193,33 +137,22 @@ export default function SecurityPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Network Security Assessment
+              {d.networkAssessment.heading}
             </h2>
             <p className="text-[16px] text-fg-muted">
-              A fixed-scope, practical review of how exposed your business actually is — delivered as a
-              prioritized remediation plan your team (or ours) can execute, not a 60-page scare report.
+              {d.networkAssessment.body}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
-              <h3 className="text-[18px] font-semibold text-fg mb-2">Perimeter &amp; Firewall</h3>
-              <p className="text-[14px] text-fg-muted">Rule review, exposed services, VPN configuration, and remote-access hygiene.</p>
-            </div>
-            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
-              <h3 className="text-[18px] font-semibold text-fg mb-2">Access &amp; Identity</h3>
-              <p className="text-[14px] text-fg-muted">MFA coverage, stale accounts, privilege sprawl, and password policy reality-check.</p>
-            </div>
-            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
-              <h3 className="text-[18px] font-semibold text-fg mb-2">Patch &amp; Endpoint</h3>
-              <p className="text-[14px] text-fg-muted">OS and firmware patch levels, endpoint protection status, and unmanaged devices.</p>
-            </div>
-            <div className="bg-surface-0 p-6 rounded-card shadow-soft">
-              <h3 className="text-[18px] font-semibold text-fg mb-2">Backup &amp; Recovery</h3>
-              <p className="text-[14px] text-fg-muted">Backup coverage, restore testing, and ransomware resilience — verified, not assumed.</p>
-            </div>
+            {d.networkAssessment.items.map((item, index) => (
+              <div key={index} className="bg-surface-0 p-6 rounded-card shadow-soft">
+                <h3 className="text-[18px] font-semibold text-fg mb-2">{item.title}</h3>
+                <p className="text-[14px] text-fg-muted">{item.body}</p>
+              </div>
+            ))}
           </div>
           <p className="text-center text-[14px] text-fg-subtle mt-8">
-            Findings ranked by real-world risk, each with effort estimate and cost impact — so you fix what matters first.
+            {d.networkAssessment.footer}
           </p>
         </div>
       </section>
@@ -229,17 +162,17 @@ export default function SecurityPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Secure Your Business?
+              {d.cta.heading}
             </h2>
             <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
-              Partner with cybersecurity experts to build robust defenses against evolving threats.
+              {d.cta.body}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">
-                Schedule Security Audit
+                {d.cta.ctaPrimary}
               </Button>
               <Button href="/services" variant="secondary">
-                View All Services
+                {d.cta.ctaSecondary}
               </Button>
             </div>
           </div>

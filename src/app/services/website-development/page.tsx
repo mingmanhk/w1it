@@ -2,6 +2,7 @@
 
 import Button from '@/components/Button';
 import { Code, Smartphone, Zap, Globe, Search, TrendingUp } from 'lucide-react';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Website Development Page - LIGHT-MODE Design System
@@ -10,50 +11,13 @@ import { Code, Smartphone, Zap, Globe, Search, TrendingUp } from 'lucide-react';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-export default function WebsiteDevelopmentPage() {
-  const features = [
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored websites built with modern frameworks like Next.js, React, and TypeScript for optimal performance.',
-    },
-    {
-      icon: Smartphone,
-      title: 'Responsive Design',
-      description: 'Mobile-first approach ensuring your website looks perfect on all devices and screen sizes.',
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Lightning-fast load times with optimized images, code splitting, and edge caching.',
-    },
-    {
-      icon: Search,
-      title: 'SEO Optimization',
-      description: 'Built-in SEO best practices with metadata, sitemaps, and structured data for better rankings.',
-    },
-    {
-      icon: Globe,
-      title: 'E-Commerce Solutions',
-      description: 'Robust online stores with secure payment processing and inventory management.',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Analytics & Insights',
-      description: 'Integrated analytics to track performance, user behavior, and conversion metrics.',
-    },
-  ];
+const featureIcons = [Code, Smartphone, Zap, Search, Globe, TrendingUp];
+const technologies = ['Next.js 15+', 'React 19', 'TypeScript', 'Tailwind CSS', 'Node.js', 'PostgreSQL', 'Vercel', 'AWS'];
 
-  const technologies = [
-    'Next.js 15+',
-    'React 19',
-    'TypeScript',
-    'Tailwind CSS',
-    'Node.js',
-    'PostgreSQL',
-    'Vercel',
-    'AWS',
-  ];
+export default function WebsiteDevelopmentPage() {
+  const { dict } = useLanguage();
+  const d = dict.servicesDetail.websiteDevelopment;
+  const features = d.features.items.map((f, i) => ({ ...f, icon: featureIcons[i] }));
 
   return (
     <div className="bg-surface-0">
@@ -63,13 +27,13 @@ export default function WebsiteDevelopmentPage() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
             <h1 className="text-[42px] font-bold text-black mb-6">
-              Website Development & Optimization
+              {d.hero.title}
             </h1>
             <p className="text-[17px] text-white/90 max-w-3xl mx-auto mb-8">
-              Build fast, beautiful, and conversion-focused websites that drive business growth
+              {d.hero.subtitle}
             </p>
             <Button href="/contact" variant="primary">
-              Start Your Project
+              {d.hero.cta}
             </Button>
           </div>
         </div>
@@ -80,10 +44,10 @@ export default function WebsiteDevelopmentPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              What We Offer
+              {d.features.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              Comprehensive web development services tailored to your business needs
+              {d.features.subheading}
             </p>
           </div>
 
@@ -111,10 +75,10 @@ export default function WebsiteDevelopmentPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Modern Technology Stack
+              {d.technologies.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              We use industry-leading technologies to build robust, scalable websites
+              {d.technologies.subheading}
             </p>
           </div>
 
@@ -136,13 +100,13 @@ export default function WebsiteDevelopmentPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Build Your Website?
+              {d.cta.heading}
             </h2>
             <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your project and create a website that exceeds expectations
+              {d.cta.body}
             </p>
             <Button href="/contact" variant="primary">
-              Schedule a Consultation
+              {d.cta.cta}
             </Button>
           </div>
         </div>

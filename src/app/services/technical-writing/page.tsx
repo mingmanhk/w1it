@@ -2,6 +2,7 @@
 
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 import {
   FileText,
   BookOpen,
@@ -18,92 +19,25 @@ import {
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
+const serviceIcons = [FileText, BookOpen, Code, CheckCircle, GraduationCap, Globe];
+const benefitIcons = [Globe, FileText, CheckCircle, BookOpen];
+
 export default function TechnicalWriting() {
-  const services = [
-    {
-      icon: FileText,
-      title: 'IT Documentation',
-      description: 'System architecture docs, runbooks, SOPs, and infrastructure documentation in English and Chinese.',
-    },
-    {
-      icon: BookOpen,
-      title: 'User Guides & Manuals',
-      description: 'Clear, user-friendly documentation for software applications and technical products.',
-    },
-    {
-      icon: Code,
-      title: 'API Documentation',
-      description: 'Comprehensive API references, integration guides, and developer documentation.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Release Notes',
-      description: 'Professional release notes and changelog documentation for software updates.',
-    },
-    {
-      icon: GraduationCap,
-      title: 'Training Materials',
-      description: 'Technical training guides and educational content for teams and end users.',
-    },
-    {
-      icon: Globe,
-      title: 'Cross-Cultural Communication',
-      description: 'Bridge technical and business communication for international teams working across English and Chinese-speaking markets.',
-    },
-  ];
-
-  const benefits = [
-    {
-      icon: Globe,
-      title: 'True Bilingual Expertise',
-      description: 'Native-level proficiency in both English and Chinese, not just translation.',
-    },
-    {
-      icon: FileText,
-      title: 'IT Industry Experience',
-      description: 'Deep understanding of technical concepts, infrastructure, and software development.',
-    },
-    {
-      icon: CheckCircle,
-      title: 'Clear & Structured',
-      description: 'Documentation that follows industry best practices and is easy to maintain.',
-    },
-    {
-      icon: BookOpen,
-      title: 'Cultural Nuance',
-      description: 'Understanding of business culture in both Western and Chinese markets.',
-    },
-  ];
-
-  const useCases = [
-    {
-      title: 'For Seattle Businesses Going Global',
-      description: 'You\'re expanding to China or working with Chinese partners. You need product documentation, user guides, or technical specs that work for both English and Chinese-speaking audiences.',
-    },
-    {
-      title: 'For International Teams',
-      description: 'Your development team spans multiple countries. You need consistent technical documentation that serves both your US-based engineers and your Chinese development center.',
-    },
-    {
-      title: 'For Software Companies',
-      description: 'You\'re selling software in both markets and need API docs, SDKs, and integration guides that work seamlessly in English and Chinese.',
-    },
-    {
-      title: 'For Enterprise IT Teams',
-      description: 'Your company has offices in Seattle and Asia. You need IT documentation, procedures, and training materials that work across all locations.',
-    },
-  ];
+  const { dict } = useLanguage();
+  const d = dict.servicesDetail.technicalWriting;
+  const services = d.services.items.map((s, i) => ({ ...s, icon: serviceIcons[i] }));
+  const benefits = d.benefits.items.map((b, i) => ({ ...b, icon: benefitIcons[i] }));
 
   return (
     <div className="bg-surface-0">
         <Hero
-            title="Bilingual Technical Writing"
-            subtitle="Professional technical documentation in English and Chinese. Bridge the communication gap for international teams and global businesses."
+            title={d.hero.title}
+            subtitle={d.hero.subtitle}
             imageSrc="/images/brand/hero-graphic.webp"
             imageAlt="Bilingual Technical Writing Services"
             ctaButton={{
                 href: '/contact',
-                text: 'Request a Quote',
+                text: d.hero.cta,
             }}
         />
 
@@ -111,14 +45,14 @@ export default function TechnicalWriting() {
       <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <h2 className="text-[28px] font-bold text-fg mb-6">
-            Why Bilingual Documentation Matters
+            {d.whyMatters.heading}
           </h2>
           <div className="bg-surface-0 p-8 border-2 border-[#3A81F7]">
             <p className="text-[16px] text-fg-muted leading-relaxed mb-6">
-              In today&apos;s global economy, businesses increasingly operate across English and Chinese-speaking markets. Effective technical communication isn&apos;t just about translation—it requires deep understanding of both technical concepts and cultural context.
+              {d.whyMatters.paragraph1}
             </p>
             <p className="text-[16px] text-fg-muted leading-relaxed">
-              Whether you&apos;re a Seattle-based company expanding to Asian markets, or an international team needing documentation in both languages, professional bilingual technical writing ensures clarity, accuracy, and consistency across all your technical communications.
+              {d.whyMatters.paragraph2}
             </p>
           </div>
         </div>
@@ -129,10 +63,10 @@ export default function TechnicalWriting() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Documentation Services
+              {d.services.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-3xl mx-auto">
-              Comprehensive technical writing services tailored to your needs.
+              {d.services.subheading}
             </p>
           </div>
 
@@ -162,7 +96,7 @@ export default function TechnicalWriting() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              What Sets Us Apart
+              {d.benefits.heading}
             </h2>
           </div>
 
@@ -192,12 +126,12 @@ export default function TechnicalWriting() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Common Use Cases
+              {d.useCases.heading}
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[1200px] mx-auto">
-            {useCases.map((useCase, index) => (
+            {d.useCases.items.map((useCase, index) => (
               <div key={index} className="bg-surface-1 p-8">
                 <h3 className="text-[20px] font-semibold text-fg mb-4">
                   {useCase.title}
@@ -216,13 +150,13 @@ export default function TechnicalWriting() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Improve Your Global Communication?
+              {d.cta.heading}
             </h2>
             <p className="text-[16px] text-fg-muted mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how bilingual technical documentation can support your business goals.
+              {d.cta.body}
             </p>
             <Button href="/contact" variant="primary">
-              Get Started
+              {d.cta.cta}
             </Button>
           </div>
         </div>
