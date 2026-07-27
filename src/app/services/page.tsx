@@ -3,6 +3,7 @@
 import { Server, BarChart3, Globe, Database, HelpCircle } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Services Page - LIGHT-MODE Design System
@@ -12,75 +13,17 @@ import Hero from '@/components/Hero';
  * Hero sections: 96px top/bottom, Standard sections: 64px top/bottom
  */
 
-const serviceCategories = [
-  {
-    title: 'Managed IT Services',
-    description: 'Proactive IT support that keeps your systems running smoothly and your team productive.',
-    icon: Server,
-    features: [
-      '24/7 monitoring and maintenance',
-      'Help desk and end-user support',
-      'Network and server management',
-      'Security and patch management',
-      'Backup and disaster recovery',
-    ],
-  },
-  {
-    title: 'IT Consulting & Strategy',
-    description: 'Expert guidance to align technology with business goals and drive measurable growth.',
-    icon: BarChart3,
-    features: [
-      'IT roadmap and strategy development',
-      'Cloud strategy and migration planning',
-      'Cybersecurity assessments',
-      'IT budget optimization',
-      'Digital transformation consulting',
-    ],
-  },
-  {
-    title: 'Website Development & Optimization',
-    description: 'High-performance websites that deliver results and exceptional user experiences.',
-    icon: Globe,
-    features: [
-      'Custom website design and development',
-      'E-commerce solutions',
-      'Performance optimization',
-      'Search engine optimization (SEO)',
-      'Analytics and conversion tracking',
-    ],
-  },
-  {
-    title: 'Data & Analytics',
-    description: 'Turn your data into actionable insights for smarter business decisions.',
-    icon: Database,
-    features: [
-      'Business intelligence dashboards',
-      'Data warehousing and ETL',
-      'Predictive analytics',
-      'Data governance',
-      'Reporting and visualization',
-    ],
-  },
-  {
-    title: 'On-Demand IT Support',
-    description: 'Flexible support when you need it—no long-term commitments required.',
-    icon: HelpCircle,
-    features: [
-      'Pay-as-you-go hourly support',
-      'Remote and on-site assistance',
-      'Troubleshooting and resolution',
-      'Software installation',
-      'Hardware repair and upgrades',
-    ],
-  },
-];
+const icons = [Server, BarChart3, Globe, Database, HelpCircle];
 
 export default function ServicesPage() {
+  const { dict } = useLanguage();
+  const serviceCategories = dict.servicesHub.categories.map((c, i) => ({ ...c, icon: icons[i] }));
+
   return (
     <div className="bg-surface-0">
         <Hero
-            title="Our Services"
-            subtitle="Enterprise-grade IT solutions designed for small business success."
+            title={dict.servicesHub.hero.title}
+            subtitle={dict.servicesHub.hero.subtitle}
         />
 
       {/* Section / Services */}
@@ -110,7 +53,7 @@ export default function ServicesPage() {
                   {/* Card Body */}
                   <div className="p-8">
                     <h4 className="text-[16px] font-semibold text-fg mb-4">
-                      Key Features:
+                      {dict.servicesHub.keyFeaturesLabel}
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {category.features.map((feature, idx) => (
@@ -121,7 +64,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <Button href="/contact" variant="primary" className="w-full">
-                      Request a Quote
+                      {dict.servicesHub.requestQuote}
                     </Button>
                   </div>
                 </div>
@@ -136,13 +79,13 @@ export default function ServicesPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Get Started?
+              {dict.servicesHub.cta.heading}
             </h2>
             <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
-              We help small businesses succeed with reliable, enterprise-grade IT solutions.
+              {dict.servicesHub.cta.body}
             </p>
             <Button href="/contact" variant="primary">
-              Get in Touch
+              {dict.servicesHub.cta.cta}
             </Button>
           </div>
         </div>

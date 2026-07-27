@@ -3,6 +3,7 @@
 import { Factory, Building, Rocket, Users } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Industries Page - LIGHT-MODE Design System
@@ -11,59 +12,17 @@ import Hero from '@/components/Hero';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const industries = [
-  {
-    name: 'Manufacturing',
-    icon: Factory,
-    description: 'Efficient and scalable IT solutions for the manufacturing sector.',
-    services: [
-      'Factory automation and IoT solutions',
-      'Supply chain management systems',
-      'Enterprise Resource Planning (ERP) support',
-      'Process optimization and automation',
-    ],
-  },
-  {
-    name: 'Small Business',
-    icon: Building,
-    description: 'Affordable and effective IT solutions for small businesses.',
-    services: [
-      'Managed IT services',
-      'Cloud solutions (Office 365, Google Workspace)',
-      'Data backup and recovery',
-      'Website and email hosting',
-    ],
-  },
-  {
-    name: 'Startups',
-    icon: Rocket,
-    description: 'Scalable and agile IT solutions to fuel startup growth.',
-    services: [
-      'Cloud infrastructure setup (AWS, Azure, GCP)',
-      'DevOps and CI/CD automation',
-      'Scalable and secure application architecture',
-      'Cost-effective IT strategy and consulting',
-    ],
-  },
-  {
-    name: 'Professional Services',
-    icon: Users,
-    description: 'Reliable and efficient IT for professional service firms.',
-    services: [
-      'Client relationship management (CRM) systems',
-      'Secure document management',
-      'Remote work and collaboration tools',
-      'Time and billing software support',
-    ],
-  },
-];
+const icons = [Factory, Building, Rocket, Users];
 
 export default function IndustriesPage() {
+  const { dict } = useLanguage();
+  const industries = dict.industriesHub.items.map((item, i) => ({ ...item, icon: icons[i] }));
+
   return (
     <div className="bg-surface-0">
-      <Hero 
-        title="Industries We Serve"
-        subtitle="Tailored IT solutions for the unique challenges of your industry."
+      <Hero
+        title={dict.industriesHub.hero.title}
+        subtitle={dict.industriesHub.hero.subtitle}
         imageAlt="Industries We Serve"
       />
 
@@ -94,7 +53,7 @@ export default function IndustriesPage() {
                   {/* Card Body */}
                   <div className="p-8">
                     <h4 className="text-[16px] font-semibold text-fg mb-4">
-                      Our Services:
+                      {dict.industriesHub.ourServicesLabel}
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {industry.services.map((service, idx) => (
@@ -105,7 +64,7 @@ export default function IndustriesPage() {
                       ))}
                     </ul>
                     <Button href="/contact" variant="primary" className="w-full">
-                      Inquire Now
+                      {dict.industriesHub.inquireNow}
                     </Button>
                   </div>
                 </div>
@@ -120,13 +79,13 @@ export default function IndustriesPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Get Started?
+              {dict.industriesHub.cta.heading}
             </h2>
             <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
-              Let&apos;s discuss how we can support your industry&apos;s specific needs.
+              {dict.industriesHub.cta.body}
             </p>
             <Button href="/contact" variant="primary">
-              Contact Us
+              {dict.industriesHub.cta.cta}
             </Button>
           </div>
         </div>

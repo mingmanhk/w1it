@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Target, Shield, Users, Rocket } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT About Page - LIGHT-MODE Design System
@@ -12,44 +13,17 @@ import Hero from '@/components/Hero';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-export default function AboutPage() {
-  const values = [
-    {
-      name: 'Clarity',
-      description: 'Clear communication, transparent pricing, and straightforward solutions.',
-      icon: Shield,
-    },
-    {
-      name: 'Resilience',
-      description: 'Reliable IT infrastructure that keeps your business running smoothly.',
-      icon: Target,
-    },
-    {
-      name: 'Partnership',
-      description: 'We treat your business like our own—tailored solutions, not one-size-fits-all.',
-      icon: Rocket,
-    },
-    {
-      name: 'Confidence',
-      description: 'Empower your team with technology that drives growth, not frustration.',
-      icon: Users,
-    },
-  ];
+const valueIcons = [Shield, Target, Rocket, Users];
 
-  const whyChooseUs = [
-    'Expert support tailored for small business needs',
-    'Proactive monitoring—stop problems before they start',
-    'Fast, responsive help desk when you need us',
-    'Transparent pricing with plans that fit your budget',
-    'Strategic IT consulting for smarter growth',
-    'Enterprise-grade security without the complexity',
-  ];
+export default function AboutPage() {
+  const { dict } = useLanguage();
+  const values = dict.about.values.items.map((v, i) => ({ ...v, icon: valueIcons[i] }));
 
   return (
     <div className="bg-surface-0">
       <Hero
-        title="About W1IT Solutions"
-        subtitle="Enterprise-grade IT support designed for small businesses—without the complexity or overhead."
+        title={dict.about.hero.title}
+        subtitle={dict.about.hero.subtitle}
         imageAlt="About W1IT Solutions"
       />
 
@@ -58,10 +32,10 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-[28px] font-bold text-fg mb-4">
-              Our Values
+              {dict.about.values.heading}
             </h2>
             <p className="text-[17px] text-fg-muted max-w-[700px] mx-auto">
-              The principles that guide everything we do.
+              {dict.about.values.subheading}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -86,12 +60,12 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-[28px] font-bold text-fg mb-6">Our Mission</h2>
+              <h2 className="text-[28px] font-bold text-fg mb-6">{dict.about.mission.heading}</h2>
               <p className="text-[17px] text-fg-muted mb-6 leading-relaxed">
-                W1IT provides small businesses with enterprise-grade IT support—minus the complexity. We solve everyday tech problems and prevent future disruptions so you can focus on growth, not troubleshooting.
+                {dict.about.mission.paragraph1}
               </p>
               <p className="text-[16px] text-fg-muted leading-relaxed">
-                Founded by Victor, a seasoned IT professional with over a decade of experience, W1IT was born from frustration with overpriced, overcomplicated IT support. We treat small businesses like valued partners, not ticket numbers.
+                {dict.about.mission.paragraph2}
               </p>
             </div>
             <div>
@@ -110,11 +84,11 @@ export default function AboutPage() {
       <section className="py-16 bg-surface-1">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[28px] font-bold text-fg mb-4">Why Choose W1IT?</h2>
+            <h2 className="text-[28px] font-bold text-fg mb-4">{dict.about.whyChoose.heading}</h2>
           </div>
           <div className="max-w-[900px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {whyChooseUs.map((reason, index) => (
+              {dict.about.whyChoose.items.map((reason, index) => (
                 <div key={index} className="flex items-start gap-3 p-6 bg-surface-0">
                   <span className="inline-block w-2 h-2 bg-[#00A878] rounded-full mt-2 flex-shrink-0"></span>
                   <p className="text-[16px] text-fg-muted">{reason}</p>
@@ -130,17 +104,17 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Get Started?
+              {dict.about.cta.heading}
             </h2>
             <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
-              Let&apos;s build a stronger IT foundation for your business.
+              {dict.about.cta.body}
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Button href="/contact" variant="primary">
-                Schedule Consultation
+                {dict.about.cta.ctaPrimary}
               </Button>
               <Button href="/services" variant="secondary">
-                Explore Our Services
+                {dict.about.cta.ctaSecondary}
               </Button>
             </div>
           </div>

@@ -138,6 +138,43 @@ export interface Dictionary {
   };
   /** Flat slug -> label lookup used by the shared Breadcrumbs component. English falls back to auto Title Case. */
   breadcrumbSegments: Record<string, string>;
+  about: {
+    hero: { title: string; subtitle: string };
+    values: { heading: string; subheading: string; items: { name: string; description: string }[] };
+    mission: { heading: string; paragraph1: string; paragraph2: string };
+    whyChoose: { heading: string; items: string[] };
+    cta: { heading: string; body: string; ctaPrimary: string; ctaSecondary: string };
+  };
+  servicesHub: {
+    hero: { title: string; subtitle: string };
+    keyFeaturesLabel: string;
+    requestQuote: string;
+    categories: { title: string; description: string; features: string[] }[];
+    cta: { heading: string; body: string; cta: string };
+  };
+  solutionsHub: {
+    hero: { title: string; subtitle: string };
+    keyOutcomesLabel: string;
+    learnMore: string;
+    items: { title: string; description: string; outcomes: string[] }[];
+    cta: { heading: string; body: string; cta: string };
+  };
+  industriesHub: {
+    hero: { title: string; subtitle: string };
+    ourServicesLabel: string;
+    inquireNow: string;
+    items: { name: string; description: string; services: string[] }[];
+    cta: { heading: string; body: string; cta: string };
+  };
+  appsHub: {
+    hero: { title: string; subtitle: string };
+    learnMore: string;
+    apps: { title: string; description: string }[];
+    whyHeading: string;
+    whySubheading: string;
+    benefits: { title: string; description: string }[];
+    cta: { heading: string; body: string; cta: string };
+  };
   contact: {
     hero: { title: string; subtitle: string };
     form: {
@@ -370,6 +407,262 @@ export const en: Dictionary = {
     },
   },
   breadcrumbSegments: {},
+  about: {
+    hero: {
+      title: 'About W1IT Solutions',
+      subtitle: 'Enterprise-grade IT support designed for small businesses—without the complexity or overhead.',
+    },
+    values: {
+      heading: 'Our Values',
+      subheading: 'The principles that guide everything we do.',
+      items: [
+        { name: 'Clarity', description: 'Clear communication, transparent pricing, and straightforward solutions.' },
+        { name: 'Resilience', description: 'Reliable IT infrastructure that keeps your business running smoothly.' },
+        { name: 'Partnership', description: "We treat your business like our own—tailored solutions, not one-size-fits-all." },
+        { name: 'Confidence', description: 'Empower your team with technology that drives growth, not frustration.' },
+      ],
+    },
+    mission: {
+      heading: 'Our Mission',
+      paragraph1:
+        'W1IT provides small businesses with enterprise-grade IT support—minus the complexity. We solve everyday tech problems and prevent future disruptions so you can focus on growth, not troubleshooting.',
+      paragraph2:
+        'Founded by Victor, a seasoned IT professional with over a decade of experience, W1IT was born from frustration with overpriced, overcomplicated IT support. We treat small businesses like valued partners, not ticket numbers.',
+    },
+    whyChoose: {
+      heading: 'Why Choose W1IT?',
+      items: [
+        'Expert support tailored for small business needs',
+        "Proactive monitoring—stop problems before they start",
+        'Fast, responsive help desk when you need us',
+        'Transparent pricing with plans that fit your budget',
+        'Strategic IT consulting for smarter growth',
+        'Enterprise-grade security without the complexity',
+      ],
+    },
+    cta: {
+      heading: 'Ready to Get Started?',
+      body: "Let's build a stronger IT foundation for your business.",
+      ctaPrimary: 'Schedule Consultation',
+      ctaSecondary: 'Explore Our Services',
+    },
+  },
+  servicesHub: {
+    hero: {
+      title: 'Our Services',
+      subtitle: 'Enterprise-grade IT solutions designed for small business success.',
+    },
+    keyFeaturesLabel: 'Key Features:',
+    requestQuote: 'Request a Quote',
+    categories: [
+      {
+        title: 'Managed IT Services',
+        description: 'Proactive IT support that keeps your systems running smoothly and your team productive.',
+        features: [
+          '24/7 monitoring and maintenance',
+          'Help desk and end-user support',
+          'Network and server management',
+          'Security and patch management',
+          'Backup and disaster recovery',
+        ],
+      },
+      {
+        title: 'IT Consulting & Strategy',
+        description: 'Expert guidance to align technology with business goals and drive measurable growth.',
+        features: [
+          'IT roadmap and strategy development',
+          'Cloud strategy and migration planning',
+          'Cybersecurity assessments',
+          'IT budget optimization',
+          'Digital transformation consulting',
+        ],
+      },
+      {
+        title: 'Website Development & Optimization',
+        description: 'High-performance websites that deliver results and exceptional user experiences.',
+        features: [
+          'Custom website design and development',
+          'E-commerce solutions',
+          'Performance optimization',
+          'Search engine optimization (SEO)',
+          'Analytics and conversion tracking',
+        ],
+      },
+      {
+        title: 'Data & Analytics',
+        description: 'Turn your data into actionable insights for smarter business decisions.',
+        features: [
+          'Business intelligence dashboards',
+          'Data warehousing and ETL',
+          'Predictive analytics',
+          'Data governance',
+          'Reporting and visualization',
+        ],
+      },
+      {
+        title: 'On-Demand IT Support',
+        description: "Flexible support when you need it—no long-term commitments required.",
+        features: [
+          'Pay-as-you-go hourly support',
+          'Remote and on-site assistance',
+          'Troubleshooting and resolution',
+          'Software installation',
+          'Hardware repair and upgrades',
+        ],
+      },
+    ],
+    cta: {
+      heading: 'Ready to Get Started?',
+      body: 'We help small businesses succeed with reliable, enterprise-grade IT solutions.',
+      cta: 'Get in Touch',
+    },
+  },
+  solutionsHub: {
+    hero: {
+      title: 'IT Solutions for Small Business Success',
+      subtitle: 'Complete technology solutions designed to help your business thrive.',
+    },
+    keyOutcomesLabel: 'Key Outcomes:',
+    learnMore: 'Learn More',
+    items: [
+      {
+        title: 'Managed IT Solutions',
+        description: 'Proactive IT management keeps your business running smoothly 24/7.',
+        outcomes: [
+          'Proactive monitoring and maintenance',
+          '24/7 help desk support',
+          'Reduced downtime and IT costs',
+          'Predictable monthly budgeting',
+        ],
+      },
+      {
+        title: 'Hardware & Software Integration',
+        description: 'Seamless integration for new hardware and software without disruption.',
+        outcomes: [
+          'Minimal disruption to operations',
+          'Improved system compatibility',
+          'Enhanced productivity',
+          'Expert configuration',
+        ],
+      },
+      {
+        title: 'Migration & Deployment',
+        description: 'Expert migration services with zero downtime and complete data integrity.',
+        outcomes: [
+          'Zero-downtime migrations',
+          'Cloud and on-premise deployments',
+          'Data integrity guaranteed',
+          'Complete testing and validation',
+        ],
+      },
+      {
+        title: 'Cybersecurity & Protection',
+        description: 'Protect your business from cyber threats with comprehensive security.',
+        outcomes: [
+          'Multi-layered protection',
+          'Regular security assessments',
+          'Virus and malware prevention',
+          'Compliance and risk management',
+        ],
+      },
+      {
+        title: 'Business Continuity Planning',
+        description: 'Robust backup and disaster recovery to keep your business operational.',
+        outcomes: [
+          'Automated backup solutions',
+          'Quick disaster recovery',
+          'Business continuity planning',
+          'Minimal data loss protection',
+        ],
+      },
+    ],
+    cta: {
+      heading: 'Ready to Get Started?',
+      body: 'We help small businesses succeed with reliable IT solutions.',
+      cta: 'Schedule Consultation',
+    },
+  },
+  industriesHub: {
+    hero: {
+      title: 'Industries We Serve',
+      subtitle: 'Tailored IT solutions for the unique challenges of your industry.',
+    },
+    ourServicesLabel: 'Our Services:',
+    inquireNow: 'Inquire Now',
+    items: [
+      {
+        name: 'Manufacturing',
+        description: 'Efficient and scalable IT solutions for the manufacturing sector.',
+        services: [
+          'Factory automation and IoT solutions',
+          'Supply chain management systems',
+          'Enterprise Resource Planning (ERP) support',
+          'Process optimization and automation',
+        ],
+      },
+      {
+        name: 'Small Business',
+        description: 'Affordable and effective IT solutions for small businesses.',
+        services: [
+          'Managed IT services',
+          'Cloud solutions (Office 365, Google Workspace)',
+          'Data backup and recovery',
+          'Website and email hosting',
+        ],
+      },
+      {
+        name: 'Startups',
+        description: 'Scalable and agile IT solutions to fuel startup growth.',
+        services: [
+          'Cloud infrastructure setup (AWS, Azure, GCP)',
+          'DevOps and CI/CD automation',
+          'Scalable and secure application architecture',
+          'Cost-effective IT strategy and consulting',
+        ],
+      },
+      {
+        name: 'Professional Services',
+        description: 'Reliable and efficient IT for professional service firms.',
+        services: [
+          'Client relationship management (CRM) systems',
+          'Secure document management',
+          'Remote work and collaboration tools',
+          'Time and billing software support',
+        ],
+      },
+    ],
+    cta: {
+      heading: 'Ready to Get Started?',
+      body: "Let's discuss how we can support your industry's specific needs.",
+      cta: 'Contact Us',
+    },
+  },
+  appsHub: {
+    hero: {
+      title: 'W1IT Applications',
+      subtitle: 'We build powerful, user-focused applications to streamline your workflows and solve critical business challenges.',
+    },
+    learnMore: 'Learn More',
+    apps: [
+      { title: 'Contact SyncMate', description: 'Intelligent contact management and synchronization across all your devices and platforms.' },
+      { title: 'Pixel Color Picker', description: 'Advanced color detection tool with palette generation and accessibility checking.' },
+      { title: 'ScreenGrabber', description: 'Professional screenshot and screen recording tool with annotation capabilities.' },
+      { title: 'DeepTicker', description: 'Real-time financial data analysis and market insights platform.' },
+    ],
+    whyHeading: 'Why Our Apps Stand Out',
+    whySubheading: 'We combine technical expertise with user-centered design to create applications that are both powerful and easy to use.',
+    benefits: [
+      { title: 'User-Centric Design', description: 'Intuitive interfaces designed with user experience as the top priority.' },
+      { title: 'Cross-Platform', description: 'Applications that work seamlessly across web, mobile, and desktop platforms.' },
+      { title: 'Enterprise Security', description: 'Bank-level security with encryption, authentication, and compliance standards.' },
+      { title: 'Regular Updates', description: 'Continuous improvement with feature updates and performance enhancements.' },
+    ],
+    cta: {
+      heading: 'Have a Custom App Idea?',
+      body: "We specialize in building bespoke applications tailored to your unique business needs. Let's turn your vision into reality.",
+      cta: 'Start Your Project',
+    },
+  },
   contact: {
     hero: {
       title: 'Ready to Get Started?',
@@ -658,6 +951,262 @@ export const zhTW: Dictionary = {
     terms: '服務條款',
     testimonials: '客戶推薦',
     tools: '免費工具',
+  },
+  about: {
+    hero: {
+      title: '關於 W1IT Solutions',
+      subtitle: '專為中小企業打造的企業級 IT 支援服務——沒有複雜流程，沒有沉重負擔。',
+    },
+    values: {
+      heading: '我們的核心價值',
+      subheading: '引導我們一切作為的核心原則。',
+      items: [
+        { name: '清晰透明', description: '清楚的溝通、透明的收費，以及直截了當的解決方案。' },
+        { name: '穩定可靠', description: '可靠的 IT 基礎架構，讓您的業務持續順暢運作。' },
+        { name: '真誠夥伴', description: '我們像對待自己的事業一樣對待您的公司——量身打造，而非一體適用。' },
+        { name: '安心自信', description: '以真正助力成長的科技，賦能您的團隊，而非帶來挫折。' },
+      ],
+    },
+    mission: {
+      heading: '我們的使命',
+      paragraph1:
+        'W1IT 為中小企業提供企業級 IT 支援服務——同時去除不必要的複雜流程。我們解決日常技術問題並預防未來的中斷，讓您能專注於成長，而非疲於排除故障。',
+      paragraph2:
+        'W1IT 由擁有超過十年資歷的資深 IT 專業人士 Victor 創立，源於對過度昂貴、過度複雜 IT 支援服務的不滿。我們將中小企業視為珍貴的合作夥伴，而非一張張的服務單號。',
+    },
+    whyChoose: {
+      heading: '為什麼選擇 W1IT？',
+      items: [
+        '專為中小企業需求量身打造的專業支援',
+        '主動式監控——在問題發生前就先發現並處理',
+        '快速、反應迅速的客服支援團隊',
+        '透明收費，方案彈性符合您的預算',
+        '策略性 IT 顧問服務，協助您更聰明地成長',
+        '企業級資安防護，操作簡單不複雜',
+      ],
+    },
+    cta: {
+      heading: '準備好開始了嗎？',
+      body: '讓我們一起為您的企業打造更穩固的 IT 基礎。',
+      ctaPrimary: '預約諮詢',
+      ctaSecondary: '探索我們的服務',
+    },
+  },
+  servicesHub: {
+    hero: {
+      title: '我們的服務',
+      subtitle: '為中小企業成功打造的企業級 IT 解決方案。',
+    },
+    keyFeaturesLabel: '主要特色：',
+    requestQuote: '索取報價',
+    categories: [
+      {
+        title: '委外資訊管理服務',
+        description: '主動式 IT 支援，讓您的系統穩定運作、團隊保持高效生產力。',
+        features: [
+          '24/7 全天候監控與維護',
+          '客服支援與終端使用者協助',
+          '網路與伺服器管理',
+          '資安防護與修補程式管理',
+          '備份與災難復原',
+        ],
+      },
+      {
+        title: 'IT 顧問諮詢與策略規劃',
+        description: '專業指導，讓科技與企業目標一致，帶來可衡量的成長。',
+        features: [
+          'IT 發展藍圖與策略規劃',
+          '雲端策略與遷移規劃',
+          '資安風險評估',
+          'IT 預算優化',
+          '數位轉型顧問諮詢',
+        ],
+      },
+      {
+        title: '網站開發與優化',
+        description: '打造高效能網站，帶來實際成效與卓越使用者體驗。',
+        features: [
+          '客製化網站設計與開發',
+          '電商解決方案',
+          '效能優化',
+          '搜尋引擎優化（SEO）',
+          '分析追蹤與轉換率優化',
+        ],
+      },
+      {
+        title: '數據與分析',
+        description: '將您的數據轉化為可行的洞察，助您做出更明智的商業決策。',
+        features: [
+          '商業智慧儀表板',
+          '數據倉儲與 ETL 流程',
+          '預測性分析',
+          '數據治理',
+          '報表與視覺化呈現',
+        ],
+      },
+      {
+        title: '隨需 IT 支援',
+        description: '需要時才付費的彈性支援服務——無需長期合約。',
+        features: [
+          '按時計費、隨需使用的支援服務',
+          '遠端與現場協助',
+          '故障排除與問題解決',
+          '軟體安裝',
+          '硬體維修與升級',
+        ],
+      },
+    ],
+    cta: {
+      heading: '準備好開始了嗎？',
+      body: '我們以可靠的企業級 IT 解決方案，協助中小企業邁向成功。',
+      cta: '立即聯繫',
+    },
+  },
+  solutionsHub: {
+    hero: {
+      title: '助中小企業成功的 IT 解決方案',
+      subtitle: '完整的科技解決方案，助您的企業蓬勃發展。',
+    },
+    keyOutcomesLabel: '主要成效：',
+    learnMore: '了解更多',
+    items: [
+      {
+        title: '委外 IT 管理解決方案',
+        description: '主動式 IT 管理，讓您的企業 24/7 全天候順暢運作。',
+        outcomes: [
+          '主動式監控與維護',
+          '24/7 全天候客服支援',
+          '降低停機時間與 IT 成本',
+          '可預測的每月預算規劃',
+        ],
+      },
+      {
+        title: '硬體與軟體整合',
+        description: '新硬體與軟體的無縫整合，不影響營運。',
+        outcomes: [
+          '將營運中斷降到最低',
+          '提升系統相容性',
+          '提高工作效率',
+          '專業設定與配置',
+        ],
+      },
+      {
+        title: '遷移與部署',
+        description: '專業遷移服務，零停機時間、確保數據完整性。',
+        outcomes: [
+          '零停機時間遷移',
+          '雲端與地端部署',
+          '確保數據完整性',
+          '完整測試與驗證',
+        ],
+      },
+      {
+        title: '資安與防護',
+        description: '以全方位的資安防護，保護您的企業免於網路威脅。',
+        outcomes: [
+          '多層次防護機制',
+          '定期資安評估',
+          '病毒與惡意軟體防護',
+          '合規與風險管理',
+        ],
+      },
+      {
+        title: '業務持續性規劃',
+        description: '強健的備份與災難復原機制，確保企業持續運作。',
+        outcomes: [
+          '自動化備份解決方案',
+          '快速災難復原',
+          '業務持續性規劃',
+          '將數據遺失風險降到最低',
+        ],
+      },
+    ],
+    cta: {
+      heading: '準備好開始了嗎？',
+      body: '我們以可靠的 IT 解決方案，協助中小企業邁向成功。',
+      cta: '預約諮詢',
+    },
+  },
+  industriesHub: {
+    hero: {
+      title: '我們服務的產業',
+      subtitle: '針對您產業的獨特挑戰，量身打造 IT 解決方案。',
+    },
+    ourServicesLabel: '我們的服務：',
+    inquireNow: '立即諮詢',
+    items: [
+      {
+        name: '製造業',
+        description: '為製造業打造高效、可擴展的 IT 解決方案。',
+        services: [
+          '工廠自動化與物聯網（IoT）解決方案',
+          '供應鏈管理系統',
+          '企業資源規劃（ERP）支援',
+          '流程優化與自動化',
+        ],
+      },
+      {
+        name: '中小企業',
+        description: '為中小企業提供實惠且有效的 IT 解決方案。',
+        services: [
+          '委外資訊管理服務',
+          '雲端解決方案（Office 365、Google Workspace）',
+          '數據備份與復原',
+          '網站與電子郵件託管',
+        ],
+      },
+      {
+        name: '新創公司',
+        description: '可擴展、靈活的 IT 解決方案，助力新創公司成長。',
+        services: [
+          '雲端基礎架構建置（AWS、Azure、GCP）',
+          'DevOps 與 CI/CD 自動化',
+          '可擴展且安全的應用程式架構',
+          '具成本效益的 IT 策略與顧問諮詢',
+        ],
+      },
+      {
+        name: '專業服務業',
+        description: '為專業服務公司提供可靠、高效的 IT 服務。',
+        services: [
+          '客戶關係管理（CRM）系統',
+          '安全文件管理',
+          '遠端工作與協作工具',
+          '計時與計費軟體支援',
+        ],
+      },
+    ],
+    cta: {
+      heading: '準備好開始了嗎？',
+      body: '讓我們討論如何滿足您產業的特定需求。',
+      cta: '聯絡我們',
+    },
+  },
+  appsHub: {
+    hero: {
+      title: 'W1IT 應用程式',
+      subtitle: '我們打造強大、以使用者為核心的應用程式，簡化您的工作流程並解決關鍵業務挑戰。',
+    },
+    learnMore: '了解更多',
+    apps: [
+      { title: 'Contact SyncMate', description: '跨裝置與平台的智慧聯絡人管理與同步工具。' },
+      { title: 'Pixel Color Picker', description: '進階色彩偵測工具，具備調色盤生成與無障礙檢測功能。' },
+      { title: 'ScreenGrabber', description: '專業螢幕截圖與錄製工具，具備標註功能。' },
+      { title: 'DeepTicker', description: '即時財務數據分析與市場洞察平台。' },
+    ],
+    whyHeading: '我們的應用程式與眾不同之處',
+    whySubheading: '我們結合技術專業與以使用者為中心的設計理念，打造既強大又易於使用的應用程式。',
+    benefits: [
+      { title: '以使用者為核心的設計', description: '將使用者體驗列為首要考量的直覺化介面。' },
+      { title: '跨平台支援', description: '在網頁、行動裝置與桌面平台上無縫運作的應用程式。' },
+      { title: '企業級資安防護', description: '銀行等級的安全防護，具備加密、身分驗證與合規標準。' },
+      { title: '持續更新', description: '持續改善，不斷推出功能更新與效能優化。' },
+    ],
+    cta: {
+      heading: '有客製化應用程式的構想嗎？',
+      body: '我們專精於打造符合您獨特業務需求的客製化應用程式，讓我們一起將您的構想化為現實。',
+      cta: '啟動您的專案',
+    },
   },
   contact: {
     hero: {

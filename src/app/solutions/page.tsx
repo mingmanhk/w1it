@@ -3,6 +3,7 @@
 import { Cpu, Shield, Globe, BarChart3, Sliders } from 'lucide-react';
 import Button from '@/components/Button';
 import Image from 'next/image';
+import { useLanguage } from '@/components/LanguageProvider';
 
 /**
  * W1IT Solutions Page - LIGHT-MODE Design System
@@ -11,65 +12,12 @@ import Image from 'next/image';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-const solutions = [
-  {
-    title: 'Managed IT Solutions',
-    description: 'Proactive IT management keeps your business running smoothly 24/7.',
-    icon: Cpu,
-    outcomes: [
-      'Proactive monitoring and maintenance',
-      '24/7 help desk support',
-      'Reduced downtime and IT costs',
-      'Predictable monthly budgeting',
-    ],
-  },
-  {
-    title: 'Hardware & Software Integration',
-    description: 'Seamless integration for new hardware and software without disruption.',
-    icon: Sliders,
-    outcomes: [
-      'Minimal disruption to operations',
-      'Improved system compatibility',
-      'Enhanced productivity',
-      'Expert configuration',
-    ],
-  },
-  {
-    title: 'Migration & Deployment',
-    description: 'Expert migration services with zero downtime and complete data integrity.',
-    icon: Globe,
-    outcomes: [
-      'Zero-downtime migrations',
-      'Cloud and on-premise deployments',
-      'Data integrity guaranteed',
-      'Complete testing and validation',
-    ],
-  },
-  {
-    title: 'Cybersecurity & Protection',
-    description: 'Protect your business from cyber threats with comprehensive security.',
-    icon: Shield,
-    outcomes: [
-      'Multi-layered protection',
-      'Regular security assessments',
-      'Virus and malware prevention',
-      'Compliance and risk management',
-    ],
-  },
-  {
-    title: 'Business Continuity Planning',
-    description: 'Robust backup and disaster recovery to keep your business operational.',
-    icon: BarChart3,
-    outcomes: [
-      'Automated backup solutions',
-      'Quick disaster recovery',
-      'Business continuity planning',
-      'Minimal data loss protection',
-    ],
-  },
-];
+const icons = [Cpu, Sliders, Globe, Shield, BarChart3];
 
 export default function SolutionsPage() {
+  const { dict } = useLanguage();
+  const solutions = dict.solutionsHub.items.map((s, i) => ({ ...s, icon: icons[i] }));
+
   return (
     <div className="bg-surface-0">
       {/* Section / Hero */}
@@ -87,10 +35,10 @@ export default function SolutionsPage() {
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px] mx-auto text-center">
             <h1 className="text-[42px] font-bold text-black mb-6">
-              IT Solutions for Small Business Success
+              {dict.solutionsHub.hero.title}
             </h1>
             <p className="text-[17px] text-black/90">
-              Complete technology solutions designed to help your business thrive.
+              {dict.solutionsHub.hero.subtitle}
             </p>
           </div>
         </div>
@@ -123,7 +71,7 @@ export default function SolutionsPage() {
                   {/* Card Body */}
                   <div className="p-8">
                     <h4 className="text-[16px] font-semibold text-fg mb-4">
-                      Key Outcomes:
+                      {dict.solutionsHub.keyOutcomesLabel}
                     </h4>
                     <ul className="space-y-3 mb-8">
                       {solution.outcomes.map((outcome, idx) => (
@@ -134,7 +82,7 @@ export default function SolutionsPage() {
                       ))}
                     </ul>
                     <Button href="/contact" variant="primary" className="w-full">
-                      Learn More
+                      {dict.solutionsHub.learnMore}
                     </Button>
                   </div>
                 </div>
@@ -149,13 +97,13 @@ export default function SolutionsPage() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center">
             <h2 className="text-[28px] font-bold text-fg mb-6">
-              Ready to Get Started?
+              {dict.solutionsHub.cta.heading}
             </h2>
             <p className="text-[17px] text-fg-muted mb-8 max-w-[600px] mx-auto">
-              We help small businesses succeed with reliable IT solutions.
+              {dict.solutionsHub.cta.body}
             </p>
             <Button href="/contact" variant="primary">
-              Schedule Consultation
+              {dict.solutionsHub.cta.cta}
             </Button>
           </div>
         </div>
