@@ -63,6 +63,7 @@ export interface Dictionary {
     legalHeading: string;
     connectHeading: string;
     rightsReserved: string;
+    aboutFounder: string;
     services: Record<
       | 'managedServices'
       | 'cloudSolutions'
@@ -363,6 +364,7 @@ export const en: Dictionary = {
     legalHeading: 'Legal',
     connectHeading: 'Connect',
     rightsReserved: 'W1IT Solutions. All rights reserved.',
+    aboutFounder: 'About the founder, Victor Lam',
     services: {
       managedServices: 'Managed Services',
       cloudSolutions: 'Cloud Solutions',
@@ -1347,6 +1349,7 @@ export const zhTW: Dictionary = {
     legalHeading: '法律聲明',
     connectHeading: '聯繫我們',
     rightsReserved: 'W1IT Solutions. 版權所有，翻印必究。',
+    aboutFounder: '關於創辦人 Victor Lam',
     services: {
       managedServices: '委外資訊管理服務',
       cloudSolutions: '雲端解決方案',

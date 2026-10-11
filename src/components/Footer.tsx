@@ -203,6 +203,17 @@ export default function Footer() {
           <p className="text-[14px] text-[#D9D9D9] text-center">
             &copy; {currentYear} {dict.footer.rightsReserved}
           </p>
+          {/* Links the brand to the founder's portfolio; also a relevant backlink for search. */}
+          <p className="text-[14px] text-center mt-3">
+            <a
+              href="https://mingmanhk.github.io/React-Portfolio/"
+              target="_blank"
+              rel="noopener"
+              className="text-[#D9D9D9] hover:text-white underline underline-offset-4 transition-colors"
+            >
+              {dict.footer.aboutFounder}
+            </a>
+          </p>
         </div>
       </div>
     </footer>
