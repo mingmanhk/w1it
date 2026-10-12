@@ -110,7 +110,7 @@ export default function MissingITChecklistOutageRecovery() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-rose mt-1">•</span>
-                  <span>No routine failover or power‑loss drills (演练) had ever been performed</span>
+                  <span>No routine failover or power‑loss drills had ever been performed</span>
                 </li>
               </ul>
               <p className="text-gray-medium font-body leading-relaxed">
@@ -339,7 +339,7 @@ export default function MissingITChecklistOutageRecovery() {
               </ul>
 
               <h3 className="font-heading font-semibold text-2xl text-charcoal mb-3">
-                2. Routine Testing (演练)
+                2. Routine Testing
               </h3>
               <p className="text-gray-medium font-body leading-relaxed mb-4">
                 We introduced:
