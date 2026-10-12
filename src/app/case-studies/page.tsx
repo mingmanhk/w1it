@@ -12,6 +12,17 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
+      title: "Building an In-House Private AI Assistant: Why We Run Our Own Models Instead of the Cloud",
+      slug: "building-in-house-private-ai-assistant",
+      excerpt: "We handle the same kind of sensitive data our clients trust us with - credentials, network details, incident notes - so we built our own on-prem AI assistant instead of using a commercial cloud tool. Two open-weight models, 53 skills, zero data ever sent off our own hardware.",
+      category: "Internal Tooling",
+      industry: "W1IT (Internal)",
+      readTime: "9 min read",
+      date: "Oct 12, 2026",
+      image: "/images/brand/hero-graphic.webp",
+      tags: ["On-Prem AI", "Local LLM", "Data Confidentiality", "Self-Hosted", "Internal Tooling"],
+    },
+    {
       title: "Building a Unified, AI-Assisted NOC: From Six Disconnected Tools to One Dashboard",
       slug: "ai-noc-unified-security-monitoring",
       excerpt: "Firewall analytics, infrastructure monitoring, SNMP, an EDR platform, an MDM platform, and a cloud identity suite were all deployed but never talked to each other. We correlated all six into a Linux SIEM and added a local LLM on an on-prem NAS+GPU for AI-assisted threat triage - entirely on-premises.",
