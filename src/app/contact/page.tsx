@@ -1,7 +1,6 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { saveContact } from '@/app/contact/actions';
+import { useState, type FormEvent } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '@/components/Button';
 import Hero from '@/components/Hero';
@@ -14,19 +13,35 @@ import { useLanguage } from '@/components/LanguageProvider';
  * Spacing: 8, 16, 24, 32, 48, 64, 96px only
  */
 
-function SubmitButton({ submitLabel, submittingLabel }: { submitLabel: string; submittingLabel: string }) {
-  const { pending } = useFormStatus();
-
-  return (
-    <Button type="submit" disabled={pending} variant="primary" className="w-full">
-      {pending ? submittingLabel : submitLabel}
-    </Button>
-  );
-}
+type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 export default function ContactPage() {
-  const [state, formAction] = useFormState(saveContact, null)
   const { dict } = useLanguage();
+  const [status, setStatus] = useState<Status>('idle');
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('/api/contact/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data?.success !== false) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
 
   return (
     <div className="bg-surface-0">
@@ -46,7 +61,7 @@ export default function ContactPage() {
               <p className="text-[16px] text-fg-muted leading-relaxed mb-8">
                 {dict.contact.form.intro}
               </p>
-              <form action={formAction} className="bg-surface-0 p-8">
+              <form onSubmit={handleSubmit} className="bg-surface-0 p-8">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.name}</label>
@@ -54,10 +69,10 @@ export default function ContactPage() {
                       type="text"
                       id="name"
                       name="name"
+                      minLength={2}
                       className="block w-full px-4 py-3 border border-line focus:ring-[#3A81F7] focus:border-[#3A81F7] text-[16px] text-fg"
                       required
                     />
-                    {state?.errors?.name && <p className="text-[16px] text-red-500 mt-2">{state.errors.name[0]}</p>}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.email}</label>
@@ -68,7 +83,6 @@ export default function ContactPage() {
                       className="block w-full px-4 py-3 border border-line focus:ring-[#3A81F7] focus:border-[#3A81F7] text-[16px] text-fg"
                       required
                     />
-                    {state?.errors?.email && <p className="text-[16px] text-red-500 mt-2">{state.errors.email[0]}</p>}
                   </div>
                   <div>
                     <label htmlFor="company" className="block text-[16px] font-bold text-fg mb-2">{dict.contact.form.company}</label>
@@ -85,16 +99,19 @@ export default function ContactPage() {
                       id="message"
                       name="message"
                       rows={5}
+                      minLength={10}
                       className="block w-full px-4 py-3 border border-line focus:ring-[#3A81F7] focus:border-[#3A81F7] text-[16px] text-fg"
                       required
                     ></textarea>
-                    {state?.errors?.message && <p className="text-[16px] text-red-500 mt-2">{state.errors.message[0]}</p>}
                   </div>
                 </div>
                 <div className="mt-6">
-                  <SubmitButton submitLabel={dict.contact.form.submit} submittingLabel={dict.contact.form.submitting} />
+                  <Button type="submit" disabled={status === 'submitting'} variant="primary" className="w-full">
+                    {status === 'submitting' ? dict.contact.form.submitting : dict.contact.form.submit}
+                  </Button>
                 </div>
-                {state?.message && <p className="text-[16px] text-[#00A878] mt-4">{state.message}</p>}
+                {status === 'success' && <p className="text-[16px] text-[#00A878] mt-4">{dict.contact.form.success}</p>}
+                {status === 'error' && <p className="text-[16px] text-red-500 mt-4">{dict.contact.form.error}</p>}
               </form>
             </div>
 

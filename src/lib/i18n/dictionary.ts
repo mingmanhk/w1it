@@ -187,6 +187,8 @@ export interface Dictionary {
       message: string;
       submit: string;
       submitting: string;
+      success: string;
+      error: string;
     };
     info: {
       heading: string;
@@ -790,6 +792,8 @@ export const en: Dictionary = {
       message: 'Message',
       submit: 'Send Message',
       submitting: 'Submitting...',
+      success: "Thank you for your message! We'll get back to you within 24 hours.",
+      error: 'Something went wrong sending your message. Please try again, or email us directly at contact@w1it.com.',
     },
     info: {
       heading: 'Contact Information',
@@ -1827,6 +1831,8 @@ export const zhTW: Dictionary = {
       message: '訊息內容',
       submit: '送出訊息',
       submitting: '傳送中...',
+      success: '感謝您的訊息！我們將於 24 小時內回覆您。',
+      error: '訊息傳送時發生問題，請再試一次，或直接寄信至 contact@w1it.com 與我們聯繫。',
     },
     info: {
       heading: '聯絡資訊',
