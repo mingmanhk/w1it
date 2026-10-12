@@ -47,9 +47,9 @@ export default function CloudSolutionsPage() {
       <section className="py-16 bg-surface-0">
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="text-center mb-12">
-            <h3 className="text-[20px] font-semibold text-fg mb-6">
+            <h2 className="text-[20px] font-semibold text-fg mb-6">
               {d.platformsHeading}
-            </h3>
+            </h2>
             <div className="flex flex-wrap justify-center gap-6">
               {platforms.map((platform, index) => (
                 <div

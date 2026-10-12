@@ -26,16 +26,7 @@ export const metadata: Metadata = generateSEO({
 export default function VmwareToHypervMigration() {
   return (
     <div className="container mx-auto px-4 py-12">
-      {/* Breadcrumb Navigation */}
-      <nav className="mb-8">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li><Link href="/" className="text-blue-600 hover:underline">Home</Link></li>
-          <li className="text-fg-subtle">/</li>
-          <li><Link href="/case-studies" className="text-blue-600 hover:underline">Case Studies</Link></li>
-          <li className="text-fg-subtle">/</li>
-          <li className="text-fg-muted">VMware to Hyper-V Migration</li>
-        </ol>
-      </nav>
+      {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}

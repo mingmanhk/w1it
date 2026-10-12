@@ -20,7 +20,7 @@ const AppCard = ({ app }: { app: App }) => (
     <div className="mb-6">
       <Image src={app.icon} alt={`${app.title} icon`} width={48} height={48} />
     </div>
-    <h3 className="text-2xl font-semibold mb-4 text-navy">{app.title}</h3>
+    <h2 className="text-2xl font-semibold mb-4 text-navy">{app.title}</h2>
     <p className="text-fg-muted mb-6">{app.description}</p>
     <Button href={app.href} variant="secondary" className="w-full">
       {app.learnMore} <ArrowRight className="w-4 h-4 ml-2" />

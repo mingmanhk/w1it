@@ -42,9 +42,9 @@ export default function ServicesPage() {
                     <div className="flex items-center justify-center w-16 h-16 bg-[#3A81F7] mb-6">
                       <Icon className="w-10 h-10 text-white" strokeWidth={1.5} />
                     </div>
-                    <h3 className="text-[20px] font-semibold text-fg mb-4">
+                    <h2 className="text-[20px] font-semibold text-fg mb-4">
                       {category.title}
-                    </h3>
+                    </h2>
                     <p className="text-[16px] text-fg-muted">
                       {category.description}
                     </p>
@@ -52,9 +52,9 @@ export default function ServicesPage() {
 
                   {/* Card Body */}
                   <div className="p-8">
-                    <h4 className="text-[16px] font-semibold text-fg mb-4">
+                    <h3 className="text-[16px] font-semibold text-fg mb-4">
                       {dict.servicesHub.keyFeaturesLabel}
-                    </h4>
+                    </h3>
                     <ul className="space-y-3 mb-8">
                       {category.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start gap-3">

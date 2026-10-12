@@ -62,7 +62,7 @@ export default function TestimonialsPage() {
                     {testimonial.logo}
                   </div>
                   <div>
-                    <h3 className="text-heading-md text-fg">
+                    <h2 className="text-heading-md text-fg">
                       {testimonial.url ? (
                         <Link 
                           href={testimonial.url} 
@@ -75,7 +75,7 @@ export default function TestimonialsPage() {
                       ) : (
                         testimonial.company
                       )}
-                    </h3>
+                    </h2>
                     <p className="text-caption text-fg-muted">
                       {testimonial.role || 'Technology Solutions'}
                     </p>
@@ -85,9 +85,9 @@ export default function TestimonialsPage() {
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="mb-6">
-                  <h4 className="text-body font-bold text-fg mb-4">
+                  <h3 className="text-body font-bold text-fg mb-4">
                     Measurable Results:
-                  </h4>
+                  </h3>
                   <ul className="space-y-3">
                     {testimonial.results.map((result, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
