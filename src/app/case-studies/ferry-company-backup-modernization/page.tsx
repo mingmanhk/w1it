@@ -1,10 +1,29 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import { generateSEO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "VMware & Veeam Backup Modernization for European Ferry Company | W1IT Solutions",
-  description: "How W1IT modernized multi-site backup infrastructure for a European ferry company, cutting complexity 40% and eliminating critical failures.",
-  keywords: "VMware backup, Veeam architecture, ferry company IT, maritime systems, high-I/O workloads, snapshot governance, disaster recovery, virtualization management",
-};
+// generateSEO adds canonical + per-page Open Graph tags; without them link
+// previews (LinkedIn, Slack) fall back to the generic site card.
+export const metadata: Metadata = generateSEO({
+  title: "VMware & Veeam Backup Modernization for European Ferry Company",
+  description:
+    "How W1IT modernized multi-site backup infrastructure for a European ferry company, cutting complexity 40% and eliminating critical failures.",
+  keywords: [
+    "VMware backup",
+    "Veeam architecture",
+    "ferry company IT",
+    "maritime systems",
+    "high-I/O workloads",
+    "snapshot governance",
+    "disaster recovery",
+    "virtualization management",
+  ],
+  canonical: "/case-studies/ferry-company-backup-modernization",
+  openGraph: {
+    title: "Case Study: VMware & Veeam Backup Modernization for a European Ferry Operator",
+    description: "40% less backup complexity, 90% fewer snapshot issues, and 99.95% uptime across 3 data centers.",
+    type: "article",
+  },
+});
 
 export default function BlogPost() {
   return (
