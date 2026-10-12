@@ -4,24 +4,24 @@ import { generateSEO } from '@/lib/seo';
 export const metadata = generateSEO({
   title: 'Building a Unified, AI-Assisted NOC',
   description:
-    'How we tied Check_MK, SNMP, CrowdStrike, a Linux SIEM, Office 365, FortiAnalyzer, and Intune into one real-time security baseline - with a local, on-prem LLM on a QNAP NAS+GPU assisting threat prediction.',
+    'How we correlated six previously disconnected tools - firewall analytics, infrastructure monitoring, SNMP polling, an EDR platform, an MDM platform, and a cloud identity and email suite - into one real-time security baseline through a new Linux SIEM, with a local, on-prem LLM on a NAS appliance with GPU acceleration assisting threat prediction.',
   keywords: [
     'NOC modernization',
-    'Check_MK monitoring',
-    'CrowdStrike EDR integration',
+    'infrastructure monitoring platform',
+    'EDR integration',
     'SIEM correlation',
-    'FortiAnalyzer',
-    'Microsoft Intune',
+    'firewall analytics platform',
+    'MDM device management',
     'local LLM security',
     'on-prem AI threat detection',
-    'QNAP NAS GPU',
+    'NAS GPU appliance',
     'security baseline defense in depth',
   ],
   canonical: '/case-studies/ai-noc-unified-security-monitoring',
   openGraph: {
     title: 'Unified, AI-Assisted NOC Case Study',
     description:
-      'Seven disconnected monitoring tools, one real-time dashboard - with a local, on-prem LLM assisting threat prediction instead of sending data to the cloud.',
+      'Six disconnected monitoring tools, one real-time dashboard - with a local, on-prem LLM assisting threat prediction instead of sending data to the cloud.',
     type: 'article',
   },
 });
@@ -48,18 +48,19 @@ export default function AiNocUnifiedSecurityMonitoring() {
           </div>
 
           <h1 className="text-4xl font-bold mb-6">
-            Building a Unified, AI-Assisted NOC: From Seven Disconnected Tools to One Real-Time Dashboard
+            Building a Unified, AI-Assisted NOC: From Six Disconnected Tools to One Real-Time Dashboard
           </h1>
 
           <p className="text-xl text-fg-muted mb-8">
             Good monitoring tools scattered across an environment don&apos;t add up to good
-            monitoring. This client had real capability — Check_MK, SNMP, CrowdStrike, Office 365,
-            FortiAnalyzer, and Intune were all deployed — but each one only saw its own slice, and
-            nothing talked to anything else. We tied all seven into a single Linux-hosted SIEM,
-            arranged them into layered security baseline rings, and added a local LLM running on a
-            QNAP NAS with GPU acceleration to turn correlated alerts into plain-language,
-            predictive threat summaries — entirely on-premises, with no security data ever leaving
-            the building.
+            monitoring. This client had real capability — a firewall analytics platform, an
+            infrastructure monitoring platform, SNMP polling across network gear, an EDR platform,
+            an MDM platform, and a cloud identity and email suite were all deployed — but each one
+            only saw its own slice, and nothing talked to anything else. We tied all six into a
+            new, self-hosted Linux SIEM, arranged them into layered security baseline rings, and
+            added a local LLM running on an on-premises NAS appliance with GPU acceleration to turn
+            correlated alerts into plain-language, predictive threat summaries — entirely
+            on-premises, with no security data ever leaving the building.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -72,7 +73,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Starting Point:</span>
-                  <span>7 disconnected monitoring tools</span>
+                  <span>6 disconnected monitoring tools</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Correlation Layer:</span>
@@ -80,7 +81,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">AI Compute:</span>
-                  <span>QNAP NAS + GPU, on-prem LLM</span>
+                  <span>On-Prem NAS + GPU, on-prem LLM</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Data Residency:</span>
@@ -94,7 +95,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
               <ul className="space-y-3">
                 <li className="flex justify-between">
                   <span className="font-medium">Visibility:</span>
-                  <span className="text-brand-green font-semibold">7 Consoles → 1 Dashboard</span>
+                  <span className="text-brand-green font-semibold">6 Consoles → 1 Dashboard</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Mean Time to Detect (MTTD):</span>
@@ -120,12 +121,12 @@ export default function AiNocUnifiedSecurityMonitoring() {
         {/* Architecture diagram */}
         <div className="mb-12 bg-surface-1 rounded-lg p-6 overflow-x-auto">
           <h2 className="text-lg font-semibold mb-4 text-center">How the Five Rings Feed One Dashboard</h2>
-          <svg viewBox="0 0 1040 400" className="w-full min-w-[720px]" role="img" aria-label="Diagram: Perimeter (FortiAnalyzer), Network (Check_MK and SNMP), Endpoint (CrowdStrike and Intune), and Identity (Office 365) all feed into a central SIEM with a local LLM on a QNAP NAS and GPU, which outputs to a real-time NOC dashboard">
+          <svg viewBox="0 0 1040 400" className="w-full min-w-[720px]" role="img" aria-label="Diagram: Perimeter (firewall analytics), Network (infrastructure monitoring and SNMP), Endpoint (EDR and MDM), and Identity (cloud identity and email suite) all feed into a central SIEM with a local LLM on an on-premises NAS and GPU, which outputs to a real-time NOC dashboard">
             {[
-              { ring: 'Ring 1 — Perimeter', tools: 'FortiAnalyzer', y: 20 },
-              { ring: 'Ring 2 — Network', tools: 'Check_MK + SNMP', y: 110 },
-              { ring: 'Ring 3 — Endpoint', tools: 'CrowdStrike + Intune', y: 200 },
-              { ring: 'Ring 4 — Identity', tools: 'Office 365', y: 290 },
+              { ring: 'Ring 1 — Perimeter', tools: 'Firewall Analytics', y: 20 },
+              { ring: 'Ring 2 — Network', tools: 'Infra Monitoring + SNMP', y: 110 },
+              { ring: 'Ring 3 — Endpoint', tools: 'EDR + MDM', y: 200 },
+              { ring: 'Ring 4 — Identity', tools: 'Identity & Email Suite', y: 290 },
             ].map((layer) => (
               <g key={layer.ring}>
                 <rect x={20} y={layer.y} width={260} height={80} rx={10} className="fill-surface-0" stroke="#3A81F7" strokeWidth={1.5} />
@@ -141,7 +142,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <text x={580} y={178} textAnchor="middle" fontSize="15" fontWeight="700" fill="currentColor">Ring 5</text>
             <text x={580} y={198} textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor">SIEM Correlation</text>
             <text x={580} y={218} textAnchor="middle" fontSize="12" fill="currentColor" opacity={0.75}>+ Local LLM</text>
-            <text x={580} y={236} textAnchor="middle" fontSize="11" fill="currentColor" opacity={0.6}>QNAP NAS + GPU</text>
+            <text x={580} y={236} textAnchor="middle" fontSize="11" fill="currentColor" opacity={0.6}>On-Prem NAS + GPU</text>
 
             <path d="M 690 200 L 760 200" stroke="#00A878" strokeWidth={3} markerEnd="url(#arrow2)" />
 
@@ -157,7 +158,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             </defs>
           </svg>
           <p className="text-center text-sm text-fg-muted mt-3">
-            Nothing was replaced — all four source tools keep doing their original job. The SIEM and local LLM are the new correlation layer, running entirely on-premises.
+            Nothing was replaced — all six source tools, grouped into four rings, keep doing their original job. The SIEM and local LLM in Ring 5 are the new correlation layer, running entirely on-premises.
           </p>
         </div>
 
@@ -167,15 +168,16 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <h2 className="text-2xl font-bold mb-4">The Problem: Good Tools, No Single Picture</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
               This is one of the most common gaps we find in mid-sized environments, and it rarely
-              looks like a budget problem. The client already owned strong individual tools:
-              Check_MK for infrastructure and service monitoring, SNMP polling across network gear,
-              CrowdStrike for endpoint detection and response, Microsoft 365 and Intune for cloud
-              identity and device management, and FortiAnalyzer logging firewall traffic. Each tool
-              did its job well — in isolation.
+              looks like a budget problem. The client already owned strong individual tools: an
+              infrastructure monitoring platform for service and infrastructure health, SNMP
+              polling across network gear, an EDR platform for endpoint detection and response, a
+              cloud identity and email suite plus an MDM platform for device management, and a
+              firewall analytics platform logging perimeter traffic. Each tool did its job well —
+              in isolation.
             </p>
             <p className="text-fg-muted leading-relaxed">
               The risk in that setup isn&apos;t any single blind spot; it&apos;s the seams between tools.
-              An unusual Office 365 sign-in, a CrowdStrike detection on the same laptop an hour
+              An unusual cloud identity sign-in, an EDR detection on the same laptop an hour
               later, and a spike in outbound traffic on the firewall look like three unrelated
               low-priority events to three different consoles. Looked at together, in sequence,
               they tell the story of an account compromise moving from cloud identity to endpoint
@@ -193,35 +195,36 @@ export default function AiNocUnifiedSecurityMonitoring() {
             </p>
             <div className="space-y-6">
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Ring 1 — Perimeter: FortiAnalyzer</h3>
+                <h3 className="text-lg font-semibold mb-2">Ring 1 — Perimeter: Firewall Analytics</h3>
                 <p className="text-fg-muted leading-relaxed">
                   Centralized, retained firewall and traffic analytics covering what crosses the
                   network edge — the outermost ring, and the first place an external threat shows up.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Ring 2 — Network &amp; Infrastructure: Check_MK + SNMP</h3>
+                <h3 className="text-lg font-semibold mb-2">Ring 2 — Network &amp; Infrastructure: Monitoring + SNMP</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  Check_MK watches service and infrastructure health; SNMP polling covers switches,
-                  routers, and core hardware state continuously. Together they answer &quot;is the
+                  The infrastructure monitoring platform watches service and infrastructure health;
+                  SNMP polling covers switches, routers, and core hardware state continuously.
+                  Together they answer &quot;is the
                   network itself behaving normally&quot; independent of what&apos;s happening at the edge
                   or on endpoints.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Ring 3 — Endpoint: CrowdStrike + Intune</h3>
+                <h3 className="text-lg font-semibold mb-2">Ring 3 — Endpoint: EDR + MDM</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  CrowdStrike supplies endpoint detection and response telemetry; Intune supplies
-                  device compliance and configuration state. Together they cover both &quot;is this
+                  The EDR platform supplies endpoint detection and response telemetry; the MDM
+                  platform supplies device compliance and configuration state. Together they cover both &quot;is this
                   device compromised&quot; and &quot;is this device configured the way policy says it
                   should be.&quot;
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">Ring 4 — Identity &amp; Cloud: Office 365</h3>
+                <h3 className="text-lg font-semibold mb-2">Ring 4 — Identity &amp; Cloud: Email &amp; Identity Suite</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  Sign-in logs, conditional access events, and mail-flow anomalies from Office 365
-                  feed in as the identity layer — covering account-level risk that never touches a
+                  Sign-in logs, conditional access events, and mail-flow anomalies from the cloud
+                  identity and email suite feed in as the identity layer — covering account-level risk that never touches a
                   physical device or network segment at all.
                 </p>
               </div>
@@ -242,7 +245,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <p className="text-fg-muted leading-relaxed mb-4">
               Security logs are some of the most sensitive data an organization holds, so sending
               them to a third-party cloud AI service to get summarized was never on the table. Instead,
-              we built the AI layer entirely on-premises: a QNAP NAS with GPU acceleration runs a
+              we built the AI layer entirely on-premises: a NAS appliance with GPU acceleration runs a
               local large language model directly against the SIEM&apos;s correlated event stream — no
               log data, baseline profile, or alert content ever leaves the building.
             </p>
@@ -267,7 +270,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <p className="text-fg-muted leading-relaxed mb-4">
               The output is a real-time, dynamic NOC dashboard that reflects all five rings
               simultaneously — perimeter, network, endpoint, identity, and the AI-generated
-              incident summaries sitting on top. What used to require checking five or six separate
+              incident summaries sitting on top. What used to require checking six separate
               consoles, by hand, after something had already been noticed, now surfaces as one
               correlated, prioritized view the moment a pattern across data sources emerges.
             </p>
@@ -283,7 +286,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <h2 className="text-2xl font-bold mb-4">Do Your Tools Talk to Each Other?</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
               If your organization already runs endpoint protection, a firewall analytics tool,
-              network monitoring, and Microsoft 365 — but each one lives in its own console and
+              network monitoring, and a cloud identity and email suite — but each one lives in its own console and
               nobody is correlating them — you likely have the same seam risk this client had. The
               fix is rarely &quot;buy more tools.&quot; It&apos;s building the correlation and baseline layer
               that makes the tools you already own work together.

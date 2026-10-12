@@ -4,7 +4,7 @@ import { generateSEO } from '@/lib/seo';
 export const metadata = generateSEO({
   title: 'FortiGate FortiBleed Incident Response',
   description:
-    'FortiBleed was a credential-based attack campaign against exposed FortiGate admin and SSL-VPN logins, not a patchable CVE. How we locked down exposure, rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and Check_MK.',
+    'FortiBleed was a credential-based attack campaign against exposed FortiGate admin and SSL-VPN logins, not a patchable CVE. How we locked down exposure, rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and an infrastructure monitoring platform.',
   keywords: [
     'FortiGate FortiBleed',
     'FortiGate credential attack',
@@ -12,7 +12,7 @@ export const metadata = generateSEO({
     'MFA enforcement',
     'FortiAnalyzer',
     'SIEM implementation',
-    'Check_MK monitoring',
+    'infrastructure monitoring platform',
     'network security incident response',
     'Seattle cybersecurity consulting',
   ],
@@ -118,14 +118,14 @@ export default function FortiGateFortiBleedIncidentResponse() {
         {/* Response flow diagram */}
         <div className="mb-12 bg-surface-1 rounded-lg p-6 overflow-x-auto">
           <h2 className="text-lg font-semibold mb-4 text-center">Response Sequence — Credentials First, Not Firmware</h2>
-          <svg viewBox="0 0 1040 220" className="w-full min-w-[720px]" role="img" aria-label="Six-step response flow: limit exposure, revoke and rotate credentials, enforce MFA, review logs, deploy FortiAnalyzer, correlate with SIEM and Check_MK">
+          <svg viewBox="0 0 1040 220" className="w-full min-w-[720px]" role="img" aria-label="Six-step response flow: limit exposure, revoke and rotate credentials, enforce MFA, review logs, deploy FortiAnalyzer, correlate with a SIEM and an infrastructure monitoring platform">
             {[
               { n: '1', t: 'Limit', s: 'Lock down VPN &', s2: 'admin exposure' },
               { n: '2', t: 'Revoke & Rotate', s: 'Every credential —', s2: 'admin, VPN, AD, API' },
               { n: '3', t: 'Enforce MFA', s: 'Close the gap a', s2: 'patch can’t close' },
               { n: '4', t: 'Review Logs', s: 'Hunt for anomalous', s2: 'logins, no CVE to match' },
               { n: '5', t: 'FortiAnalyzer', s: 'Centralize &', s2: 'retain every log' },
-              { n: '6', t: 'SIEM + Check_MK', s: 'Correlate &', s2: 'monitor going forward' },
+              { n: '6', t: 'SIEM + Monitoring', s: 'Correlate &', s2: 'monitor going forward' },
             ].map((step, i) => {
               const x = 20 + i * 170;
               return (
@@ -233,10 +233,11 @@ export default function FortiGateFortiBleedIncidentResponse() {
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">6. SIEM + Check_MK — Correlate and Monitor Going Forward</h3>
+                <h3 className="text-lg font-semibold mb-2">6. SIEM + Infrastructure Monitoring — Correlate and Monitor Going Forward</h3>
                 <p className="text-fg-muted leading-relaxed">
                   A SIEM now correlates FortiAnalyzer&apos;s authentication events with broader network
-                  signals, while Check_MK monitors servers and services network-wide. Together they
+                  signals, while an infrastructure monitoring platform watches servers and services
+                  network-wide. Together they
                   catch the pattern a credential attack actually looks like — repeated logins from
                   unfamiliar locations, failed-then-successful auth sequences — rather than waiting
                   on a vendor advisory that, in this case, never existed.
@@ -250,7 +251,7 @@ export default function FortiGateFortiBleedIncidentResponse() {
             <p className="text-fg-muted leading-relaxed mb-4">
               The lesson this incident reinforced is that the perimeter isn&apos;t only firmware
               version numbers — it&apos;s every credential that can authenticate to it. FortiAnalyzer
-              and Check_MK are the sensors; the SIEM is what correlates authentication behavior
+              and the infrastructure monitoring platform are the sensors; the SIEM is what correlates authentication behavior
               into a signal worth acting on. None of that replaces rotating credentials and
               enforcing MFA — it&apos;s what keeps the fix from quietly expiring the next time a
               password turns up in a leaked-credential dump somewhere else entirely.

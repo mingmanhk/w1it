@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      title: "Building a Unified, AI-Assisted NOC: From Seven Disconnected Tools to One Dashboard",
+      title: "Building a Unified, AI-Assisted NOC: From Six Disconnected Tools to One Dashboard",
       slug: "ai-noc-unified-security-monitoring",
-      excerpt: "Check_MK, SNMP, CrowdStrike, Office 365, FortiAnalyzer, and Intune were all deployed but never talked to each other. We correlated all seven into a Linux SIEM and added a local LLM on a QNAP NAS+GPU for AI-assisted threat triage - entirely on-premises.",
+      excerpt: "Firewall analytics, infrastructure monitoring, SNMP, an EDR platform, an MDM platform, and a cloud identity suite were all deployed but never talked to each other. We correlated all six into a Linux SIEM and added a local LLM on an on-prem NAS+GPU for AI-assisted threat triage - entirely on-premises.",
       category: "Security",
       industry: "Corporate",
       readTime: "11 min read",
       date: "Oct 12, 2026",
       image: "/images/brand/hero-graphic.webp",
-      tags: ["NOC Modernization", "SIEM", "CrowdStrike", "Check_MK", "Local LLM", "Defense in Depth"],
+      tags: ["NOC Modernization", "SIEM", "EDR", "Infrastructure Monitoring", "Local LLM", "Defense in Depth"],
     },
     {
       title: "FortiGate FortiBleed Response: Why This Wasn't a Patch Problem",
       slug: "fortigate-fortibleed-incident-response",
-      excerpt: "FortiBleed wasn't a patchable CVE - it was a credential attack against exposed FortiGate admin and SSL-VPN logins. How we rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and Check_MK.",
+      excerpt: "FortiBleed wasn't a patchable CVE - it was a credential attack against exposed FortiGate admin and SSL-VPN logins. How we rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and infrastructure monitoring.",
       category: "Security",
       industry: "Professional Services",
       readTime: "10 min read",
