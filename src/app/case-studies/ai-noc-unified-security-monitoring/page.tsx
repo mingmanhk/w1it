@@ -252,7 +252,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
             <p className="text-fg-muted leading-relaxed mb-4">
               In practice, the local model does two things well. First, it turns a correlated,
               multi-source incident into a plain-language summary an analyst can read in seconds
-              instead of reconstructing from five raw log sources. Second, it continuously compares
+              instead of reconstructing from six raw log sources. Second, it continuously compares
               current activity against the environment&apos;s established baseline — normal login
               geographies, normal traffic volumes, normal process behavior — and flags deviations
               as they emerge, rather than waiting for a static rule to trigger after the fact.
