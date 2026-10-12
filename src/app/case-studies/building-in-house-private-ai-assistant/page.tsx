@@ -268,6 +268,44 @@ export default function BuildingInHousePrivateAiAssistant() {
             </p>
           </section>
 
+          <section className="bg-surface-1 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">What&apos;s Next: From Assistant to Knowledge Platform</h2>
+            <p className="text-fg-muted leading-relaxed mb-6">
+              Today the assistant and the internal wiki are connected but separate — the model
+              reaches into the wiki over MCP when asked, and that&apos;s it. The next phase is
+              closing that loop so the two grow into something closer to a Confluence-style
+              workspace with the LLM built in as a first-class collaborator, not a bolt-on
+              lookup.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-surface-0 p-5 rounded-lg border border-line">
+                <h3 className="text-base font-semibold mb-2">Real Retrieval, Not Just Lookups</h3>
+                <p className="text-fg-muted text-sm leading-relaxed">
+                  Replace one-off MCP queries with proper retrieval over the wiki&apos;s full
+                  history, so the assistant can cite the specific page and section an answer
+                  came from — the same way a good internal search bar should, but conversational.
+                </p>
+              </div>
+              <div className="bg-surface-0 p-5 rounded-lg border border-line">
+                <h3 className="text-base font-semibold mb-2">AI-Drafted, Human-Approved Pages</h3>
+                <p className="text-fg-muted text-sm leading-relaxed">
+                  Let the assistant draft or update a wiki page directly from a conversation —
+                  a runbook, a decision log, a how-to — and route it for review instead of
+                  letting documentation quietly go stale between people remembering to write it
+                  down.
+                </p>
+              </div>
+              <div className="bg-surface-0 p-5 rounded-lg border border-line">
+                <h3 className="text-base font-semibold mb-2">Confluence-Style Collaboration</h3>
+                <p className="text-fg-muted text-sm leading-relaxed">
+                  Structured spaces, page history, and cross-linking — but with the assistant able
+                  to summarize a space, surface related pages, and keep structure consistent as
+                  the knowledge base grows, all still running entirely on our own hardware.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* CTA */}
           <section className="text-center py-8">
             <h2 className="text-2xl font-bold mb-4">Have Data That Can&apos;t Go Through a Commercial AI Tool?</h2>
