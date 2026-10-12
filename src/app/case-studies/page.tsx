@@ -12,6 +12,17 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
+      title: "FortiGate FortiBleed Response: From Unauthorized-Access Risk to a Real-Time NOC",
+      slug: "fortigate-fortibleed-incident-response",
+      excerpt: "A critical FortiOS SSL-VPN vulnerability put unauthenticated remote access on the table. We patched, hunted for compromise in the logs, then rebuilt monitoring around FortiAnalyzer, SNMP, a SIEM, and Check_MK into one real-time threat-prediction and alerting picture.",
+      category: "Security",
+      industry: "Professional Services",
+      readTime: "10 min read",
+      date: "Oct 12, 2026",
+      image: "/images/brand/hero-graphic.webp",
+      tags: ["FortiGate", "FortiBleed", "Incident Response", "SIEM", "Network Monitoring", "Risk Management"],
+    },
+    {
       title: "VMware to Hyper-V Migration: Escaping a 3x Licensing Renewal",
       slug: "vmware-to-hyperv-migration",
       excerpt: "A 3x VMware renewal quote gave this distribution company 90 days to decide. We migrated all 40 production VMs to Hyper-V in six weeks - 60% lower costs, zero data loss.",
@@ -123,27 +134,19 @@ export default function CaseStudiesPage() {
     },
   ];
 
-  const industries = [
-    { name: "Transportation & Logistics", count: 1 },
-    { name: "Professional Services", count: 2 },
-    { name: "Corporate", count: 1 },
-    { name: "Small Business", count: 1 },
-    { name: "Multiple Industries", count: 1 },
-    { name: "Various Sectors", count: 1 },
-    { name: "International Trade", count: 1 },
-    { name: "Real Estate & Small Business", count: 1 },
-  ];
+  // Derived from caseStudies so these counts can never drift out of sync
+  // with the actual list (a prior hand-maintained version silently fell
+  // out of date every time a case study was added).
+  const countBy = (key: "industry" | "category") => {
+    const counts = new Map<string, number>();
+    for (const study of caseStudies) {
+      counts.set(study[key], (counts.get(study[key]) ?? 0) + 1);
+    }
+    return Array.from(counts, ([name, count]) => ({ name, count }));
+  };
 
-  const categories = [
-    { name: "Backup & Disaster Recovery", count: 1 },
-    { name: "IT Operations", count: 1 },
-    { name: "Infrastructure", count: 1 },
-    { name: "Best Practices", count: 2 },
-    { name: "Business IT", count: 1 },
-    { name: "Technical Writing", count: 1 },
-    { name: "Security", count: 1 },
-    { name: "Networking", count: 1 },
-  ];
+  const industries = countBy("industry");
+  const categories = countBy("category");
 
   return (
     <div className="min-h-screen bg-surface-1">
@@ -183,10 +186,10 @@ export default function CaseStudiesPage() {
               <div className="sticky top-24 space-y-6">
                 {/* Industries Filter */}
                 <div className="bg-surface-0 rounded-xl shadow-sm border border-line p-6">
-                  <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                  <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                     <FolderOpen className="w-5 h-5" />
                     Industries
-                  </h3>
+                  </h2>
                   <ul className="space-y-2">
                     {industries.map((industry) => (
                       <li key={industry.name}>
@@ -203,7 +206,7 @@ export default function CaseStudiesPage() {
 
                 {/* Categories Filter */}
                 <div className="bg-surface-0 rounded-xl shadow-sm border border-line p-6">
-                  <h3 className="text-lg font-semibold mb-4">Categories</h3>
+                  <h2 className="text-lg font-semibold mb-4">Categories</h2>
                   <ul className="space-y-2">
                     {categories.map((category) => (
                       <li key={category.name}>
@@ -220,7 +223,7 @@ export default function CaseStudiesPage() {
 
                 {/* Contact CTA */}
                 <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold mb-3">Need Similar Solutions?</h3>
+                  <h2 className="text-lg font-semibold mb-3">Need Similar Solutions?</h2>
                   <p className="text-fg-muted mb-4 text-sm">
                     Our team specializes in custom IT solutions for businesses of all sizes.
                   </p>
@@ -303,7 +306,7 @@ export default function CaseStudiesPage() {
 
                         <div className="flex items-center justify-between">
                           <Link
-                            href="/case-studies"
+                            href={`/case-studies/${study.slug}`}
                             className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
                           >
                             Read Full Case Study
