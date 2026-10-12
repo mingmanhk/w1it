@@ -54,8 +54,9 @@ export default function FortiGateFortiBleedIncidentResponse() {
             FortiBleed is often assumed to be a single software vulnerability you patch and move
             on from. It isn&apos;t. The 2026 FortiBleed campaign targeted exposed FortiGate admin
             interfaces and SSL-VPN logins with reused, leaked credentials and password spraying —
-            no exploit, no CVE, nothing a firmware update fixes on its own. Fortinet said as much
-            directly: you can&apos;t patch your way out of a credential attack. The fix is credential
+            no exploit, no CVE, nothing a firmware update fixes on its own. Fortinet itself described
+            it as &quot;not a newly disclosed Fortinet vulnerability,&quot; and as researchers put it,
+            you can&apos;t patch your way out of a credential attack. The fix is credential
             hygiene first, then the monitoring to make sure it stays fixed.
           </p>
 
