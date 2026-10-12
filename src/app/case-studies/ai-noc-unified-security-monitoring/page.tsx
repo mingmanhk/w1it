@@ -1,0 +1,324 @@
+import Link from 'next/link';
+import { generateSEO } from '@/lib/seo';
+
+export const metadata = generateSEO({
+  title: 'Building a Unified, AI-Assisted NOC',
+  description:
+    'How we tied Check_MK, SNMP, CrowdStrike, a Linux SIEM, Office 365, FortiAnalyzer, and Intune into one real-time security baseline - with a local, on-prem LLM on a QNAP NAS+GPU assisting threat prediction.',
+  keywords: [
+    'NOC modernization',
+    'Check_MK monitoring',
+    'CrowdStrike EDR integration',
+    'SIEM correlation',
+    'FortiAnalyzer',
+    'Microsoft Intune',
+    'local LLM security',
+    'on-prem AI threat detection',
+    'QNAP NAS GPU',
+    'security baseline defense in depth',
+  ],
+  canonical: '/case-studies/ai-noc-unified-security-monitoring',
+  openGraph: {
+    title: 'Unified, AI-Assisted NOC Case Study',
+    description:
+      'Seven disconnected monitoring tools, one real-time dashboard - with a local, on-prem LLM assisting threat prediction instead of sending data to the cloud.',
+    type: 'article',
+  },
+});
+
+export default function AiNocUnifiedSecurityMonitoring() {
+  return (
+    <div className="container mx-auto px-4 py-12">
+      {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+              Security
+            </span>
+            <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+              Network Monitoring
+            </span>
+            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+              AI &amp; Automation
+            </span>
+            <span className="text-fg-muted">• October 12, 2026</span>
+          </div>
+
+          <h1 className="text-4xl font-bold mb-6">
+            Building a Unified, AI-Assisted NOC: From Seven Disconnected Tools to One Real-Time Dashboard
+          </h1>
+
+          <p className="text-xl text-fg-muted mb-8">
+            Good monitoring tools scattered across an environment don&apos;t add up to good
+            monitoring. This client had real capability — Check_MK, SNMP, CrowdStrike, Office 365,
+            FortiAnalyzer, and Intune were all deployed — but each one only saw its own slice, and
+            nothing talked to anything else. We tied all seven into a single Linux-hosted SIEM,
+            arranged them into layered security baseline rings, and added a local LLM running on a
+            QNAP NAS with GPU acceleration to turn correlated alerts into plain-language,
+            predictive threat summaries — entirely on-premises, with no security data ever leaving
+            the building.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-surface-1 p-6 rounded-lg">
+              <h2 className="text-xl font-semibold mb-4">Project Overview</h2>
+              <ul className="space-y-3">
+                <li className="flex justify-between">
+                  <span className="font-medium">Client:</span>
+                  <span>Multi-Site Corporate Environment</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Starting Point:</span>
+                  <span>7 disconnected monitoring tools</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Correlation Layer:</span>
+                  <span>Self-hosted, Linux SIEM</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">AI Compute:</span>
+                  <span>QNAP NAS + GPU, on-prem LLM</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Data Residency:</span>
+                  <span>100% on-premises</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-surface-1 p-6 rounded-lg border border-brand-green/30">
+              <h2 className="text-xl font-semibold mb-4">Key Results</h2>
+              <ul className="space-y-3">
+                <li className="flex justify-between">
+                  <span className="font-medium">Visibility:</span>
+                  <span className="text-brand-green font-semibold">7 Consoles → 1 Dashboard</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Mean Time to Detect (MTTD):</span>
+                  <span className="text-brand-green font-semibold">Hours → Minutes</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Mean Triage Time per Incident:</span>
+                  <span className="text-brand-green font-semibold">~40 Min → ~10 Min</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Security Data Sent to Third-Party Cloud:</span>
+                  <span className="text-brand-green font-semibold">Zero</span>
+                </li>
+                <li className="flex justify-between">
+                  <span className="font-medium">Monitoring Tools Replaced:</span>
+                  <span className="text-brand-green font-semibold">Zero (All Integrated)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Architecture diagram */}
+        <div className="mb-12 bg-surface-1 rounded-lg p-6 overflow-x-auto">
+          <h2 className="text-lg font-semibold mb-4 text-center">How the Five Rings Feed One Dashboard</h2>
+          <svg viewBox="0 0 1040 400" className="w-full min-w-[720px]" role="img" aria-label="Diagram: Perimeter (FortiAnalyzer), Network (Check_MK and SNMP), Endpoint (CrowdStrike and Intune), and Identity (Office 365) all feed into a central SIEM with a local LLM on a QNAP NAS and GPU, which outputs to a real-time NOC dashboard">
+            {[
+              { ring: 'Ring 1 — Perimeter', tools: 'FortiAnalyzer', y: 20 },
+              { ring: 'Ring 2 — Network', tools: 'Check_MK + SNMP', y: 110 },
+              { ring: 'Ring 3 — Endpoint', tools: 'CrowdStrike + Intune', y: 200 },
+              { ring: 'Ring 4 — Identity', tools: 'Office 365', y: 290 },
+            ].map((layer) => (
+              <g key={layer.ring}>
+                <rect x={20} y={layer.y} width={260} height={80} rx={10} className="fill-surface-0" stroke="#3A81F7" strokeWidth={1.5} />
+                <text x={150} y={layer.y + 32} textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor">{layer.ring}</text>
+                <text x={150} y={layer.y + 54} textAnchor="middle" fontSize="12" fill="currentColor" opacity={0.75}>{layer.tools}</text>
+                <path d={`M 282 ${layer.y + 40} L 420 ${layer.y + 40} L 420 200`} fill="none" stroke="#00A878" strokeWidth={2} />
+              </g>
+            ))}
+            <path d="M 420 200 L 460 200" stroke="#00A878" strokeWidth={3} markerEnd="url(#arrow2)" />
+
+            {/* Center: SIEM + Local LLM */}
+            <circle cx={580} cy={200} r={110} className="fill-surface-0" stroke="#3A81F7" strokeWidth={2} />
+            <text x={580} y={178} textAnchor="middle" fontSize="15" fontWeight="700" fill="currentColor">Ring 5</text>
+            <text x={580} y={198} textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor">SIEM Correlation</text>
+            <text x={580} y={218} textAnchor="middle" fontSize="12" fill="currentColor" opacity={0.75}>+ Local LLM</text>
+            <text x={580} y={236} textAnchor="middle" fontSize="11" fill="currentColor" opacity={0.6}>QNAP NAS + GPU</text>
+
+            <path d="M 690 200 L 760 200" stroke="#00A878" strokeWidth={3} markerEnd="url(#arrow2)" />
+
+            <rect x={770} y={150} width={250} height={100} rx={10} className="fill-surface-0" stroke="#00A878" strokeWidth={2} />
+            <text x={895} y={190} textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor">Real-Time NOC</text>
+            <text x={895} y={210} textAnchor="middle" fontSize="13" fontWeight="700" fill="currentColor">Dashboard</text>
+            <text x={895} y={230} textAnchor="middle" fontSize="11" fill="currentColor" opacity={0.6}>Monitoring + Alerting</text>
+
+            <defs>
+              <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#00A878" />
+              </marker>
+            </defs>
+          </svg>
+          <p className="text-center text-sm text-fg-muted mt-3">
+            Nothing was replaced — all four source tools keep doing their original job. The SIEM and local LLM are the new correlation layer, running entirely on-premises.
+          </p>
+        </div>
+
+        {/* Article Body */}
+        <article className="space-y-10">
+          <section>
+            <h2 className="text-2xl font-bold mb-4">The Problem: Good Tools, No Single Picture</h2>
+            <p className="text-fg-muted leading-relaxed mb-4">
+              This is one of the most common gaps we find in mid-sized environments, and it rarely
+              looks like a budget problem. The client already owned strong individual tools:
+              Check_MK for infrastructure and service monitoring, SNMP polling across network gear,
+              CrowdStrike for endpoint detection and response, Microsoft 365 and Intune for cloud
+              identity and device management, and FortiAnalyzer logging firewall traffic. Each tool
+              did its job well — in isolation.
+            </p>
+            <p className="text-fg-muted leading-relaxed">
+              The risk in that setup isn&apos;t any single blind spot; it&apos;s the seams between tools.
+              An unusual Office 365 sign-in, a CrowdStrike detection on the same laptop an hour
+              later, and a spike in outbound traffic on the firewall look like three unrelated
+              low-priority events to three different consoles. Looked at together, in sequence,
+              they tell the story of an account compromise moving from cloud identity to endpoint
+              to network egress. Without correlation, that story never gets told until after
+              something has already gone wrong.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">The Approach: Defense in Concentric Rings</h2>
+            <p className="text-fg-muted leading-relaxed mb-6">
+              Rather than replacing any of the existing tools, we built a security baseline around
+              them, organized as layered rings — each ring covering a different part of the
+              environment, all of them reporting into one correlation point.
+            </p>
+            <div className="space-y-6">
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Ring 1 — Perimeter: FortiAnalyzer</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  Centralized, retained firewall and traffic analytics covering what crosses the
+                  network edge — the outermost ring, and the first place an external threat shows up.
+                </p>
+              </div>
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Ring 2 — Network &amp; Infrastructure: Check_MK + SNMP</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  Check_MK watches service and infrastructure health; SNMP polling covers switches,
+                  routers, and core hardware state continuously. Together they answer &quot;is the
+                  network itself behaving normally&quot; independent of what&apos;s happening at the edge
+                  or on endpoints.
+                </p>
+              </div>
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Ring 3 — Endpoint: CrowdStrike + Intune</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  CrowdStrike supplies endpoint detection and response telemetry; Intune supplies
+                  device compliance and configuration state. Together they cover both &quot;is this
+                  device compromised&quot; and &quot;is this device configured the way policy says it
+                  should be.&quot;
+                </p>
+              </div>
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Ring 4 — Identity &amp; Cloud: Office 365</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  Sign-in logs, conditional access events, and mail-flow anomalies from Office 365
+                  feed in as the identity layer — covering account-level risk that never touches a
+                  physical device or network segment at all.
+                </p>
+              </div>
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">Ring 5 — Correlation: The Linux SIEM</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  All four rings feed into a self-hosted, Linux-based SIEM, which is where the real
+                  value shows up: an identity anomaly, an endpoint detection, and a traffic spike
+                  that each look minor alone get correlated into a single, prioritized incident
+                  when they involve the same user, device, or time window.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-surface-1 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">The Local AI Layer: Prediction Without Sending Data to the Cloud</h2>
+            <p className="text-fg-muted leading-relaxed mb-4">
+              Security logs are some of the most sensitive data an organization holds, so sending
+              them to a third-party cloud AI service to get summarized was never on the table. Instead,
+              we built the AI layer entirely on-premises: a QNAP NAS with GPU acceleration runs a
+              local large language model directly against the SIEM&apos;s correlated event stream — no
+              log data, baseline profile, or alert content ever leaves the building.
+            </p>
+            <p className="text-fg-muted leading-relaxed mb-4">
+              In practice, the local model does two things well. First, it turns a correlated,
+              multi-source incident into a plain-language summary an analyst can read in seconds
+              instead of reconstructing from five raw log sources. Second, it continuously compares
+              current activity against the environment&apos;s established baseline — normal login
+              geographies, normal traffic volumes, normal process behavior — and flags deviations
+              as they emerge, rather than waiting for a static rule to trigger after the fact.
+            </p>
+            <p className="text-fg-muted leading-relaxed">
+              We&apos;re explicit with clients about what this is and isn&apos;t: it is a prediction and
+              triage assistant that makes a human analyst faster and catches drift a fixed rule set
+              would miss. It is not an autonomous system making block/allow decisions on its own —
+              every action it informs still goes through a person.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">The Result: One Dashboard, Live</h2>
+            <p className="text-fg-muted leading-relaxed mb-4">
+              The output is a real-time, dynamic NOC dashboard that reflects all five rings
+              simultaneously — perimeter, network, endpoint, identity, and the AI-generated
+              incident summaries sitting on top. What used to require checking five or six separate
+              consoles, by hand, after something had already been noticed, now surfaces as one
+              correlated, prioritized view the moment a pattern across data sources emerges.
+            </p>
+            <p className="text-fg-muted leading-relaxed">
+              Just as important: every tool the client already owned is still doing its original
+              job. Nothing was ripped out. What changed is that the seams between them — where risk
+              used to hide — are now actively watched, in real time, by a system that runs entirely
+              on hardware the client controls.
+            </p>
+          </section>
+
+          <section className="bg-surface-1 p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">Do Your Tools Talk to Each Other?</h2>
+            <p className="text-fg-muted leading-relaxed mb-4">
+              If your organization already runs endpoint protection, a firewall analytics tool,
+              network monitoring, and Microsoft 365 — but each one lives in its own console and
+              nobody is correlating them — you likely have the same seam risk this client had. The
+              fix is rarely &quot;buy more tools.&quot; It&apos;s building the correlation and baseline layer
+              that makes the tools you already own work together.
+            </p>
+            <p className="text-fg-muted leading-relaxed">
+              We start with a monitoring and visibility assessment: what you have, what it already
+              sees, where the seams are, and whether a correlation layer — with or without a local
+              AI component — is the right next step for your environment and budget.
+            </p>
+          </section>
+
+          {/* CTA */}
+          <section className="text-center py-8">
+            <h2 className="text-2xl font-bold mb-4">Running Monitoring Tools That Don&apos;t Talk to Each Other?</h2>
+            <p className="text-fg-muted mb-6 max-w-2xl mx-auto">
+              Get a visibility assessment: an inventory of what your current tools actually cover,
+              where the correlation gaps are, and a concrete plan for a unified, real-time view.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-brand-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#2968D8] transition-colors"
+              >
+                Request a Visibility Assessment
+              </Link>
+              <Link
+                href="/case-studies"
+                className="border border-line text-fg px-8 py-3 rounded-lg font-semibold hover:bg-surface-1 transition-colors"
+              >
+                More Case Studies
+              </Link>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  );
+}

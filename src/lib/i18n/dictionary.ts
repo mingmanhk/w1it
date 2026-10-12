@@ -1516,6 +1516,7 @@ export const zhTW: Dictionary = {
     screengrabber: 'ScreenGrabber',
     blog: '部落格',
     'case-studies': '成功案例',
+    'ai-noc-unified-security-monitoring': 'AI 整合式 NOC 資安監控',
     'fortigate-fortibleed-incident-response': 'FortiGate FortiBleed 資安事件回應',
     'bilingual-documentation-global-trade': '國際貿易雙語文件案例',
     'choosing-it-support-model': '選擇合適的 IT 支援模式',

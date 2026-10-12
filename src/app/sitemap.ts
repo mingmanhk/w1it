@@ -56,6 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Case study pages (final URLs — old /blog/<slug> URLs 301 here)
   const caseStudyPages = [
+    '/case-studies/ai-noc-unified-security-monitoring',
     '/case-studies/fortigate-fortibleed-incident-response',
     '/case-studies/bilingual-documentation-global-trade',
     '/case-studies/choosing-it-support-model',

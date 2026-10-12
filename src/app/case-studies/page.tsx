@@ -12,15 +12,26 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      title: "FortiGate FortiBleed Response: From Unauthorized-Access Risk to a Real-Time NOC",
+      title: "Building a Unified, AI-Assisted NOC: From Seven Disconnected Tools to One Dashboard",
+      slug: "ai-noc-unified-security-monitoring",
+      excerpt: "Check_MK, SNMP, CrowdStrike, Office 365, FortiAnalyzer, and Intune were all deployed but never talked to each other. We correlated all seven into a Linux SIEM and added a local LLM on a QNAP NAS+GPU for AI-assisted threat triage - entirely on-premises.",
+      category: "Security",
+      industry: "Corporate",
+      readTime: "11 min read",
+      date: "Oct 12, 2026",
+      image: "/images/brand/hero-graphic.webp",
+      tags: ["NOC Modernization", "SIEM", "CrowdStrike", "Check_MK", "Local LLM", "Defense in Depth"],
+    },
+    {
+      title: "FortiGate FortiBleed Response: Why This Wasn't a Patch Problem",
       slug: "fortigate-fortibleed-incident-response",
-      excerpt: "A critical FortiOS SSL-VPN vulnerability put unauthenticated remote access on the table. We patched, hunted for compromise in the logs, then rebuilt monitoring around FortiAnalyzer, SNMP, a SIEM, and Check_MK into one real-time threat-prediction and alerting picture.",
+      excerpt: "FortiBleed wasn't a patchable CVE - it was a credential attack against exposed FortiGate admin and SSL-VPN logins. How we rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and Check_MK.",
       category: "Security",
       industry: "Professional Services",
       readTime: "10 min read",
       date: "Oct 12, 2026",
       image: "/images/brand/hero-graphic.webp",
-      tags: ["FortiGate", "FortiBleed", "Incident Response", "SIEM", "Network Monitoring", "Risk Management"],
+      tags: ["FortiGate", "FortiBleed", "Credential Security", "MFA", "SIEM", "Network Monitoring"],
     },
     {
       title: "VMware to Hyper-V Migration: Escaping a 3x Licensing Renewal",
