@@ -12,6 +12,17 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
+      title: "Asymmetric Traffic in a FortiGate Active-Active Cluster: The HA Setup That Fought Itself",
+      slug: "fortigate-active-active-asymmetric-traffic-troubleshooting",
+      excerpt: "A field lesson from early in a networking career: an active-active FortiGate cluster showed healthy HA status the entire time while quietly resetting live sessions, because the upstream network and the cluster were load-balancing the same traffic two different ways.",
+      category: "Networking",
+      industry: "Lessons From the Field",
+      readTime: "8 min read",
+      date: "Oct 15, 2026",
+      image: "/images/brand/hero-graphic.webp",
+      tags: ["FortiGate", "High Availability", "FGCP", "Asymmetric Routing", "Troubleshooting"],
+    },
+    {
       title: "Building an In-House Private AI Assistant: Why We Run Our Own Models Instead of the Cloud",
       slug: "building-in-house-private-ai-assistant",
       excerpt: "We handle the same kind of sensitive data our clients trust us with - credentials, network details, incident notes - so we built our own on-prem AI assistant instead of using a commercial cloud tool. Two open-weight models, 53 skills, zero data ever sent off our own hardware.",
