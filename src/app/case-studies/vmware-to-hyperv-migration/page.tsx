@@ -49,10 +49,10 @@ export default function VmwareToHypervMigration() {
           </h1>
 
           <p className="text-xl text-fg-muted mb-8">
-            When a distribution company&apos;s VMware renewal came back at three times the previous
-            price, they had 90 days to decide: pay, or move. W1IT migrated all 40 production VMs
-            to Microsoft Hyper-V in six weeks — with under 15 minutes of downtime per workload
-            and a 60% reduction in three-year virtualization costs.
+            When one of my clients&apos; VMware renewal came back at three times the previous
+            price, they had 90 days to decide: pay, or move. I led the migration of all 40
+            production VMs to Microsoft Hyper-V in six weeks — with under 15 minutes of
+            downtime per workload and a 60% reduction in three-year virtualization costs.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -115,16 +115,16 @@ export default function VmwareToHypervMigration() {
           <section>
             <h2 className="text-2xl font-bold mb-4">The Challenge: A Renewal That Changed the Math</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              For years, the client&apos;s three-host vSphere cluster had been the safe, boring choice —
+              For years, my client&apos;s three-host vSphere cluster had been the safe, boring choice —
               exactly what production virtualization should be. Then the renewal quote arrived:
               per-core subscription licensing had replaced their perpetual licenses, and the
               three-year cost had roughly tripled. For a 40-VM environment running standard Windows
               and Linux workloads, the premium no longer bought anything they used.
             </p>
             <p className="text-fg-muted leading-relaxed">
-              The client asked us the right question: not &quot;how do we leave VMware?&quot; but
+              My client asked me the right question: not &quot;how do we leave VMware?&quot; but
               &quot;what is the cheapest platform that runs our workloads at the same reliability?&quot;
-              We modeled three options — renewing, moving to Hyper-V, and moving to Proxmox.
+              I modeled three options — renewing, moving to Hyper-V, and moving to Proxmox.
               Because every host already ran Windows Server Datacenter (which includes Hyper-V and
               unlimited Windows guest licensing), Hyper-V won on licensing they already owned,
               admin skills they already had, and native compatibility with their Veeam backup estate.
@@ -137,16 +137,17 @@ export default function VmwareToHypervMigration() {
               <div className="bg-surface-1 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-2">Week 1-2: Assessment &amp; Dependency Mapping</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  Full inventory of all 40 VMs: OS versions, vCPU/RAM/storage footprints, VMware Tools
-                  dependencies, snapshot debt, and application interdependencies. Each VM was assigned
-                  to a migration wave based on risk — file and print servers first, the ERP database last.
-                  Two VMs with hard vSphere dependencies were flagged for rebuild instead of conversion.
+                  I started with a full inventory of all 40 VMs: OS versions, vCPU/RAM/storage
+                  footprints, VMware Tools dependencies, snapshot debt, and application
+                  interdependencies. I assigned each VM to a migration wave based on risk — file
+                  and print servers first, the ERP database last. Two VMs with hard vSphere
+                  dependencies got flagged for rebuild instead of conversion.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-2">Week 3: Pilot Cluster &amp; Backup Continuity</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  We rebuilt one freed-up host as a Hyper-V node with Switch Embedded Teaming matching
+                  I rebuilt one freed-up host as a Hyper-V node with Switch Embedded Teaming matching
                   the existing VLAN design, then used Veeam&apos;s restore-to-Hyper-V capability to migrate
                   pilot VMs directly from existing backups — proving the conversion path and validating
                   that backup jobs, RPOs, and restore tests carried over unchanged.
@@ -155,11 +156,11 @@ export default function VmwareToHypervMigration() {
               <div className="bg-surface-1 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-2">Week 4-6: Production Waves</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  Three overnight migration windows, roughly a dozen VMs each: final incremental backup,
-                  restore to Hyper-V, swap VMware Tools for Hyper-V integration services, re-IP checks,
-                  and application smoke tests signed off by department owners before morning. One ERP
-                  reporting VM failed its smoke test and was rolled back to vSphere in 20 minutes as
-                  planned — the driver issue was fixed and it migrated cleanly in the final wave.
+                  I ran three overnight migration windows, roughly a dozen VMs each: final incremental
+                  backup, restore to Hyper-V, swap VMware Tools for Hyper-V integration services, re-IP
+                  checks, and application smoke tests signed off by department owners before morning.
+                  One ERP reporting VM failed its smoke test and I rolled it back to vSphere in 20
+                  minutes as planned — I fixed the driver issue and it migrated cleanly in the final wave.
                 </p>
               </div>
             </div>
@@ -168,7 +169,7 @@ export default function VmwareToHypervMigration() {
           <section>
             <h2 className="text-2xl font-bold mb-4">The Results</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              The final vSphere host was decommissioned seven weeks after kickoff. Licensing spend
+              I decommissioned the final vSphere host seven weeks after kickoff. Licensing spend
               dropped to the Windows Server Datacenter subscriptions the client already carried, plus
               existing Veeam licensing — a 60% reduction in three-year virtualization TCO. Management
               moved to Windows Admin Center and Hyper-V Manager, tools the internal team already knew.
@@ -189,7 +190,7 @@ export default function VmwareToHypervMigration() {
               the cost — especially when you already pay for Windows Server Datacenter.
             </p>
             <p className="text-fg-muted leading-relaxed">
-              We start every engagement with a licensing and workload assessment that gives you the
+              I start every engagement with a licensing and workload assessment that gives you the
               real numbers for each path — renew, migrate, or hybrid — before anything is touched.
             </p>
           </section>
