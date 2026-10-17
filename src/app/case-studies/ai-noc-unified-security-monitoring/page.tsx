@@ -1,5 +1,15 @@
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import RingExplorer from './RingExplorer';
+import MermaidChart from './MermaidChart';
+
+const DATA_FLOW_DIAGRAM = `flowchart LR
+    FA["Firewall Analytics<br/>Ring 1"] --> SIEM
+    IM["Infra Monitoring + SNMP<br/>Ring 2"] --> SIEM
+    EDRMDM["EDR + MDM<br/>Ring 3"] --> SIEM
+    ID["Identity &amp; Email Suite<br/>Ring 4"] --> SIEM
+    SIEM["Self-Hosted SIEM<br/>Ring 5"] --> LLM["On-Prem LLM<br/>NAS + GPU"]
+    LLM --> DASH["Real-Time NOC Dashboard"]`;
 
 export const metadata = generateSEO({
   title: 'Building a Unified, AI-Assisted NOC',
@@ -162,6 +172,91 @@ export default function AiNocUnifiedSecurityMonitoring() {
           </p>
         </div>
 
+        {/* Interactive ring explorer */}
+        <div className="mb-12">
+          <h2 className="text-lg font-semibold mb-4 text-center">Explore Each Ring</h2>
+          <RingExplorer />
+        </div>
+
+        {/* Mermaid data-flow diagram */}
+        <div className="mb-12 bg-surface-1 rounded-lg p-6">
+          <h2 className="text-lg font-semibold mb-4 text-center">Data Flow at a Glance</h2>
+          <MermaidChart
+            chart={DATA_FLOW_DIAGRAM}
+            ariaLabel="Flowchart: Firewall Analytics, Infra Monitoring plus SNMP, EDR plus MDM, and Identity and Email Suite all feed into a self-hosted SIEM, which feeds an on-prem LLM running on a NAS with GPU, which feeds a real-time NOC dashboard"
+          />
+          <p className="text-center text-sm text-fg-muted mt-3">
+            Same five rings as above, read left to right as a pipeline: every source feeds the SIEM, the SIEM feeds the local LLM, and the LLM feeds the dashboard analysts actually watch.
+          </p>
+        </div>
+
+        {/* Visibility maturity scorecard */}
+        <div className="mb-12 bg-surface-1 rounded-lg p-6 overflow-x-auto">
+          <h2 className="text-lg font-semibold mb-4 text-center">Visibility Maturity by Layer</h2>
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-line text-left">
+                <th className="py-2 pr-4 font-semibold">Ring</th>
+                <th className="py-2 pr-4 font-semibold">Tool(s)</th>
+                <th className="py-2 pr-4 font-semibold">Before: Standalone</th>
+                <th className="py-2 font-semibold">After: Correlated</th>
+              </tr>
+            </thead>
+            <tbody className="text-fg-muted">
+              <tr className="border-b border-line/50">
+                <td className="py-3 pr-4 font-medium text-fg">Perimeter</td>
+                <td className="py-3 pr-4">Firewall Analytics</td>
+                <td className="py-3 pr-4">Own console, reviewed on its own schedule</td>
+                <td className="py-3">Feeds Ring 5 correlation in real time</td>
+              </tr>
+              <tr className="border-b border-line/50">
+                <td className="py-3 pr-4 font-medium text-fg">Network</td>
+                <td className="py-3 pr-4">Infra Monitoring + SNMP</td>
+                <td className="py-3 pr-4">Health alerts isolated from security context</td>
+                <td className="py-3">Correlated against identity &amp; endpoint signals</td>
+              </tr>
+              <tr className="border-b border-line/50">
+                <td className="py-3 pr-4 font-medium text-fg">Endpoint</td>
+                <td className="py-3 pr-4">EDR + MDM</td>
+                <td className="py-3 pr-4">Detection and compliance tracked separately</td>
+                <td className="py-3">Joined to the same incident timeline</td>
+              </tr>
+              <tr className="border-b border-line/50">
+                <td className="py-3 pr-4 font-medium text-fg">Identity</td>
+                <td className="py-3 pr-4">Identity &amp; Email Suite</td>
+                <td className="py-3 pr-4">Sign-in risk reviewed only on explicit alert</td>
+                <td className="py-3">Cross-checked against device &amp; network activity</td>
+              </tr>
+              <tr>
+                <td className="py-3 pr-4 font-medium text-fg">Correlation</td>
+                <td className="py-3 pr-4">SIEM + On-Prem LLM</td>
+                <td className="py-3 pr-4 text-fg-muted/60">— (didn&apos;t exist)</td>
+                <td className="py-3">Produces one prioritized, plain-language incident</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="text-xs text-fg-muted mt-3">
+            Illustrative visibility states, not a vendor-specific or per-client score.
+          </p>
+        </div>
+
+        {/* Triage-time chart */}
+        <div className="mb-12 bg-surface-1 rounded-lg p-6">
+          <h2 className="text-lg font-semibold mb-4 text-center">Mean Triage Time per Incident</h2>
+          <svg viewBox="0 0 560 120" className="w-full max-w-xl mx-auto" role="img" aria-label="Bar chart: mean triage time per incident dropped from about 40 minutes before correlation to about 10 minutes after correlation">
+            <text x={0} y={22} fontSize="12" fill="currentColor" opacity={0.75}>Before (6 consoles)</text>
+            <rect x={0} y={30} width={400} height={20} rx={4} className="fill-surface-0" stroke="#3A81F7" strokeWidth={1.5} />
+            <text x={410} y={45} fontSize="13" fontWeight="700" fill="currentColor">~40 min</text>
+
+            <text x={0} y={82} fontSize="12" fill="currentColor" opacity={0.75}>After (1 dashboard)</text>
+            <rect x={0} y={90} width={100} height={20} rx={4} className="fill-surface-0" stroke="#00A878" strokeWidth={1.5} />
+            <text x={110} y={105} fontSize="13" fontWeight="700" fill="#00A878">~10 min</text>
+          </svg>
+          <p className="text-center text-sm text-fg-muted mt-3">
+            Same figures as the Key Results card above, shown to scale — correlation didn&apos;t just add a dashboard, it cut the time an analyst spends reconstructing what happened.
+          </p>
+        </div>
+
         {/* Article Body */}
         <article className="space-y-10">
           <section>
@@ -296,6 +391,35 @@ export default function AiNocUnifiedSecurityMonitoring() {
               sees, where the seams are, and whether a correlation layer — with or without a local
               AI component — is the right next step for your environment and budget.
             </p>
+          </section>
+
+          {/* Related case studies */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4">Related Case Studies</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link
+                href="/case-studies/building-in-house-private-ai-assistant"
+                className="block bg-surface-1 p-6 rounded-lg hover:border-brand-blue border border-transparent transition-colors"
+              >
+                <h3 className="text-lg font-semibold mb-2">Building an In-House Private AI Assistant</h3>
+                <p className="text-fg-muted text-sm">
+                  The same on-prem-only philosophy behind Ring 5&apos;s local LLM, applied to a
+                  general-purpose internal assistant.
+                </p>
+              </Link>
+              <Link
+                href="/case-studies/fortigate-active-active-asymmetric-traffic-troubleshooting"
+                className="block bg-surface-1 p-6 rounded-lg hover:border-brand-blue border border-transparent transition-colors"
+              >
+                <h3 className="text-lg font-semibold mb-2">
+                  Asymmetric Traffic in a FortiGate Active-Active Cluster
+                </h3>
+                <p className="text-fg-muted text-sm">
+                  A field lesson on why perimeter telemetry (Ring 1) can look healthy while
+                  something underneath is quietly wrong.
+                </p>
+              </Link>
+            </div>
           </section>
 
           {/* CTA */}
