@@ -78,17 +78,18 @@ const jsonLd = {
   "image": "https://w1it.com/images/logo.png",
   "url": "https://w1it.com",
   "telephone": "(832) 472-7991",
-  "email": "info@w1it.com",
+  "email": "contact@w1it.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Seattle",
+    "addressLocality": "Bellevue",
     "addressRegion": "WA",
     "addressCountry": "US"
   },
+  "areaServed": ["Bellevue", "Seattle", "Redmond", "Kirkland"],
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 47.6062,
-    "longitude": -122.3321
+    "latitude": 47.6101,
+    "longitude": -122.2015
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
