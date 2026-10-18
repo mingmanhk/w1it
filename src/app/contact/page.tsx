@@ -25,10 +25,32 @@ export default function ContactPage() {
     const formData = new FormData(form);
     setStatus('submitting');
 
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (!accessKey) {
+      console.error('Contact form: NEXT_PUBLIC_WEB3FORMS_KEY is not configured');
+      setStatus('error');
+      return;
+    }
+
+    // Web3Forms is designed to be called directly from the browser (its access
+    // key is meant to be public/client-safe). Server-to-server proxying of this
+    // call is explicitly unsupported on non-Pro plans and was the root cause of
+    // a prior outage, so submit straight to Web3Forms instead of our own API route.
+    const payload = new FormData();
+    payload.set('access_key', accessKey);
+    payload.set('subject', 'New inquiry from w1it.com');
+    payload.set('from_name', 'W1IT Website');
+    payload.set('name', String(formData.get('name') ?? ''));
+    payload.set('email', String(formData.get('email') ?? ''));
+    const company = formData.get('company');
+    if (company) payload.set('company', String(company));
+    payload.set('message', String(formData.get('message') ?? ''));
+
     try {
-      const response = await fetch('/api/contact/submit', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData,
+        headers: { Accept: 'application/json' },
+        body: payload,
       });
       const data = await response.json().catch(() => null);
 
@@ -36,9 +58,11 @@ export default function ContactPage() {
         setStatus('success');
         form.reset();
       } else {
+        console.error('Web3Forms rejected submission:', data);
         setStatus('error');
       }
-    } catch {
+    } catch (error) {
+      console.error('Contact form submission error:', error);
       setStatus('error');
     }
   }
