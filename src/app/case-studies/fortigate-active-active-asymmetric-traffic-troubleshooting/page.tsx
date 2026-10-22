@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import TableOfContents from '@/components/TableOfContents';
+import RelatedCaseStudies from '@/components/RelatedCaseStudies';
 
 export const metadata = generateSEO({
   title: 'Asymmetric Traffic in a FortiGate Active-Active Cluster',
@@ -28,6 +30,7 @@ export default function FortigateActiveActiveTroubleshooting() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -261,6 +264,26 @@ export default function FortigateActiveActiveTroubleshooting() {
               logs, dual-point packet capture is usually where we go next, not last.
             </p>
           </section>
+
+          <RelatedCaseStudies
+            items={[
+              {
+                slug: 'fortigate-fortibleed-incident-response',
+                title: 'FortiGate FortiBleed Incident Response',
+                blurb: 'Another FortiGate case where the dashboard looked fine and the real problem was underneath.',
+              },
+              {
+                slug: 'network-security-remote-teams',
+                title: 'Network Security Essentials for Remote Teams',
+                blurb: 'VPN and network security fundamentals for distributed teams.',
+              },
+              {
+                slug: 'fragmented-it-standardized-infrastructure',
+                title: 'Fragmented IT to Standardized Infrastructure',
+                blurb: 'Why documented, standardized network infrastructure prevents exactly this kind of surprise.',
+              },
+            ]}
+          />
 
           {/* CTA */}
           <section className="text-center py-8">

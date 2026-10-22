@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import TableOfContents from '@/components/TableOfContents';
+import RelatedCaseStudies from '@/components/RelatedCaseStudies';
 
 export const metadata = generateSEO({
   title: 'FortiGate FortiBleed Incident Response',
@@ -29,6 +31,7 @@ export default function FortiGateFortiBleedIncidentResponse() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -296,6 +299,26 @@ export default function FortiGateFortiBleedIncidentResponse() {
               how far back your logs actually go — with a prioritized plan, not a scare report.
             </p>
           </section>
+
+          <RelatedCaseStudies
+            items={[
+              {
+                slug: 'ai-noc-unified-security-monitoring',
+                title: 'Building a Unified, AI-Assisted NOC',
+                blurb: 'The SIEM and correlation layer this incident forced into existence, generalized across six tools.',
+              },
+              {
+                slug: 'network-security-remote-teams',
+                title: 'Network Security Essentials for Remote Teams',
+                blurb: 'VPN and MFA fundamentals for distributed teams — the same gaps FortiBleed exploited.',
+              },
+              {
+                slug: 'fortigate-active-active-asymmetric-traffic-troubleshooting',
+                title: 'Asymmetric Traffic in a FortiGate Active-Active Cluster',
+                blurb: 'Another FortiGate field case: a cluster that looked healthy while quietly failing.',
+              },
+            ]}
+          />
 
           {/* CTA */}
           <section className="text-center py-8">

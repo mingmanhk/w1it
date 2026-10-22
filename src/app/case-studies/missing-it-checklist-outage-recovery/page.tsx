@@ -3,6 +3,7 @@ import { generateSEO } from '@/lib/seo';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = generateSEO({
   title: 'Case Study: How a Missing Daily IT Checklist Led to a Full Outage — and How Rapid Recovery Saved the Business - Seattle IT Case Study',
@@ -28,6 +29,7 @@ export const metadata: Metadata = generateSEO({
 export default function MissingITChecklistOutageRecovery() {
   return (
     <div>
+      <TableOfContents />
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-surface-0 to-blush">
         <Container>

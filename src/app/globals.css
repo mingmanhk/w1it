@@ -52,3 +52,55 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Print-friendly layout: strip chrome, flatten color, keep content readable */
+@media print {
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  header,
+  footer,
+  nav[aria-label='Breadcrumb'],
+  .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding-top: 0 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  /* Show the destination URL after a link so a printed page stays useful */
+  a[href^='http']::after,
+  a[href^='/']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.75em;
+    color: #444;
+  }
+
+  * {
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+
+  .bg-surface-1,
+  .bg-surface-2,
+  [class*='bg-'] {
+    background: #fff !important;
+  }
+
+  svg {
+    break-inside: avoid;
+  }
+
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+}

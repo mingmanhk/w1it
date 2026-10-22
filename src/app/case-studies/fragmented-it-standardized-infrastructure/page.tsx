@@ -3,6 +3,7 @@ import { generateSEO } from '@/lib/seo';
 import Container from '@/components/Container';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import TableOfContents from '@/components/TableOfContents';
 
 export const metadata: Metadata = generateSEO({
   title: 'Case Study: Transforming Fragmented IT into Documented, Standardized Infrastructure - Seattle IT Consulting',
@@ -28,6 +29,7 @@ export const metadata: Metadata = generateSEO({
 export default function FragmentedITStandardizedInfrastructure() {
   return (
     <div>
+      <TableOfContents />
       {/* Hero Section */}
       <section className="pt-16 pb-12 md:pt-32 md:pb-20 bg-gradient-to-b from-surface-0 to-blush">
         <Container>

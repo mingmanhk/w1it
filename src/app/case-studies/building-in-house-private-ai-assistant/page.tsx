@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import TableOfContents from '@/components/TableOfContents';
+import RelatedCaseStudies from '@/components/RelatedCaseStudies';
 
 export const metadata = generateSEO({
   title: 'Building an In-House Private AI Assistant',
@@ -29,6 +31,7 @@ export default function BuildingInHousePrivateAiAssistant() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -305,6 +308,26 @@ export default function BuildingInHousePrivateAiAssistant() {
               </div>
             </div>
           </section>
+
+          <RelatedCaseStudies
+            items={[
+              {
+                slug: 'ai-noc-unified-security-monitoring',
+                title: 'Building a Unified, AI-Assisted NOC',
+                blurb: 'The same on-prem-only philosophy applied to security monitoring, with a local LLM on a NAS+GPU appliance.',
+              },
+              {
+                slug: 'fragmented-it-standardized-infrastructure',
+                title: 'Fragmented IT to Standardized Infrastructure',
+                blurb: 'The documentation and standardization work that an internal AI assistant draws on.',
+              },
+              {
+                slug: 'choosing-it-support-model',
+                title: 'Choosing the Right IT Support Model',
+                blurb: 'How to think about what to build in-house versus what to outsource.',
+              },
+            ]}
+          />
 
           {/* CTA */}
           <section className="text-center py-8">

@@ -9,6 +9,7 @@ import LanguageProvider from "@/components/LanguageProvider";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import CookieConsent from "@/components/CookieConsent";
+import SiteSearch from "@/components/SiteSearch";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -135,6 +136,7 @@ export default function RootLayout({
             <Footer />
             <BackToTop />
             <CookieConsent />
+            <SiteSearch />
           </LanguageProvider>
         </ThemeProvider>
         <Analytics />

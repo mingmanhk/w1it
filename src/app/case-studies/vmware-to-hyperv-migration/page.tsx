@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import TableOfContents from '@/components/TableOfContents';
+import RelatedCaseStudies from '@/components/RelatedCaseStudies';
 
 export const metadata: Metadata = generateSEO({
   title: 'VMware to Hyper-V Migration - 60% Lower Virtualization Costs',
@@ -27,6 +29,7 @@ export default function VmwareToHypervMigration() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -194,6 +197,26 @@ export default function VmwareToHypervMigration() {
               real numbers for each path — renew, migrate, or hybrid — before anything is touched.
             </p>
           </section>
+
+          <RelatedCaseStudies
+            items={[
+              {
+                slug: 'ferry-company-backup-modernization',
+                title: 'VMware & Veeam Backup Modernization',
+                blurb: 'The backup side of the same virtualization story, for a multi-site European ferry company.',
+              },
+              {
+                slug: 'fragmented-it-standardized-infrastructure',
+                title: 'Fragmented IT to Standardized Infrastructure',
+                blurb: 'Standardizing infrastructure beyond just the hypervisor layer.',
+              },
+              {
+                slug: 'choosing-it-support-model',
+                title: 'Choosing the Right IT Support Model',
+                blurb: 'How to evaluate a major infrastructure decision like this one against your support model.',
+              },
+            ]}
+          />
 
           {/* CTA */}
           <section className="text-center py-8">

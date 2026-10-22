@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { generateSEO } from '@/lib/seo';
+import TableOfContents from '@/components/TableOfContents';
 import RingExplorer from './RingExplorer';
 import MermaidChart from './MermaidChart';
 
@@ -40,6 +41,7 @@ export default function AiNocUnifiedSecurityMonitoring() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}

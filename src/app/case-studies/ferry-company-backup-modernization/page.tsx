@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { generateSEO } from "@/lib/seo";
+import TableOfContents from "@/components/TableOfContents";
+import RelatedCaseStudies from "@/components/RelatedCaseStudies";
 
 // generateSEO adds canonical + per-page Open Graph tags; without them link
 // previews (LinkedIn, Slack) fall back to the generic site card.
@@ -29,6 +31,7 @@ export default function BlogPost() {
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Breadcrumb is rendered once, sitewide, by case-studies/layout.tsx */}
+      <TableOfContents />
 
       <div className="max-w-4xl mx-auto">
         {/* Header */}
@@ -198,6 +201,26 @@ export default function BlogPost() {
             </div>
           </div>
           
+          <RelatedCaseStudies
+            items={[
+              {
+                slug: "vmware-to-hyperv-migration",
+                title: "VMware to Hyper-V Migration",
+                blurb: "The other side of the virtualization decision: migrating off VMware entirely for 60% lower costs.",
+              },
+              {
+                slug: "fragmented-it-standardized-infrastructure",
+                title: "Fragmented IT to Standardized Infrastructure",
+                blurb: "Standardized, documented infrastructure across multiple sites.",
+              },
+              {
+                slug: "missing-it-checklist-outage-recovery",
+                title: "A Missing IT Checklist and a Full Outage",
+                blurb: "What happens when backup and recovery procedures aren't documented and tested.",
+              },
+            ]}
+          />
+
           {/* Related Content */}
           <div className="mt-8 grid md:grid-cols-2 gap-6">
             <div className="bg-blue-50 p-6 rounded-lg">

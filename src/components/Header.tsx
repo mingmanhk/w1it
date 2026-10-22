@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import { useTheme } from '@/components/ThemeProvider';
 import { useLanguage } from '@/components/LanguageProvider';
-import { Menu, X, ChevronDown, Sun, Moon, Languages } from 'lucide-react';
+import { Menu, X, ChevronDown, Sun, Moon, Languages, Search } from 'lucide-react';
 
 export default function Header() {
     const { theme, toggleTheme } = useTheme();
@@ -152,6 +152,13 @@ export default function Header() {
                     {/* Desktop CTA Button */}
                     <div className="hidden lg:flex items-center gap-2">
                         <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('open-site-search'))}
+                            aria-label="Search the site"
+                            className="flex items-center gap-1 px-2 py-2 rounded-lg text-sm font-medium text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            <Search className="h-5 w-5" />
+                        </button>
+                        <button
                             onClick={toggleLang}
                             aria-label={lang === 'en' ? 'Switch to Traditional Chinese' : '切換為英文'}
                             className="flex items-center gap-1 px-2 py-2 rounded-lg text-sm font-medium text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
@@ -173,6 +180,13 @@ export default function Header() {
 
                     {/* Mobile Menu Toggle */}
                     <div className="-mr-2 flex items-center gap-1 lg:hidden">
+                        <button
+                            onClick={() => window.dispatchEvent(new CustomEvent('open-site-search'))}
+                            aria-label="Search the site"
+                            className="p-2 rounded-lg text-fg-muted hover:text-fg hover:bg-surface-1 transition-colors"
+                        >
+                            <Search className="h-5 w-5" />
+                        </button>
                         <button
                             onClick={toggleLang}
                             aria-label={lang === 'en' ? 'Switch to Traditional Chinese' : '切換為英文'}
