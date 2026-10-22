@@ -11,6 +11,20 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    id: 11,
+    title: "IT Governance and Standardizing Operations: A Practical Guide",
+    slug: "it-governance-and-standardized-operations",
+    excerpt: "What IT governance actually means for a growing business, the frameworks worth borrowing from, and a right-sized path to standardized operations without an enterprise budget.",
+    category: "IT Operations",
+    categoryColor: "bg-purple-100 text-purple-800",
+    readTime: "9 min read",
+    date: "Oct 22, 2026",
+    image: "/images/brand/case-backup.png",
+    author: "W1IT Team",
+    featured: true,
+    tags: ["IT Governance", "Standardization", "Change Management", "ITIL"],
+  },
+  {
     id: 10,
     title: "VMware to Hyper-V Migration: Escaping a 3x Licensing Renewal",
     slug: "vmware-to-hyperv-migration",

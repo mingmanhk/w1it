@@ -6,10 +6,11 @@ import RelatedCaseStudies from '@/components/RelatedCaseStudies';
 export const metadata = generateSEO({
   title: 'FortiGate FortiBleed Incident Response',
   description:
-    'FortiBleed was a credential-based attack campaign against exposed FortiGate admin and SSL-VPN logins, not a patchable CVE. How we locked down exposure, rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and an infrastructure monitoring platform.',
+    'FortiBleed is a chained campaign stacking known, patchable FortiOS vulnerabilities with large-scale credential reuse against FortiGate admin and SSL-VPN logins. How we patched to a current build, hunted for persistence, rotated every credential, enforced MFA, and rebuilt monitoring around FortiAnalyzer, a SIEM, and an infrastructure monitoring platform.',
   keywords: [
     'FortiGate FortiBleed',
     'FortiGate credential attack',
+    'FortiOS vulnerability patching',
     'FortiOS brute force password spraying',
     'MFA enforcement',
     'FortiAnalyzer',
@@ -22,7 +23,7 @@ export const metadata = generateSEO({
   openGraph: {
     title: 'FortiGate FortiBleed Incident Response Case Study',
     description:
-      'A credential-based attack campaign against the perimeter firewall - and why rotating credentials and enforcing MFA mattered more than any patch.',
+      'A chained campaign of known FortiOS vulnerabilities plus large-scale credential reuse against the perimeter firewall - why patching, credential rotation, and MFA all had to happen, in that order.',
     type: 'article',
   },
 });
@@ -50,19 +51,20 @@ export default function FortiGateFortiBleedIncidentResponse() {
           </div>
 
           <h1 className="text-4xl font-bold mb-6">
-            FortiGate FortiBleed Response: Why This Wasn&apos;t a Patch Problem
+            FortiGate FortiBleed Response: Why Patching Was the Start, Not the Whole Fix
           </h1>
 
           <p className="text-xl text-fg-muted mb-8">
             FortiBleed is often assumed to be a single software vulnerability you patch and move
-            on from. It isn&apos;t. The 2026 FortiBleed campaign targeted exposed FortiGate admin
-            interfaces and SSL-VPN logins with credentials that had already been stolen or exposed
-            in earlier incidents, replayed via brute-force and password spraying — not a single
-            new zero-day you patch and walk away from. Fortinet&apos;s own analysis attributed the
-            activity to credential reuse rather than a newly disclosed vulnerability, and
-            security researchers covering the campaign made the same point: you can&apos;t patch
-            your way out of a credential attack. The fix is credential hygiene first, then the
-            monitoring to make sure it stays fixed.
+            on from. It isn&apos;t that simple either way. The 2026 FortiBleed campaign isn&apos;t one
+            bug — security researchers tracking it describe it as years of known FortiOS flaws
+            chained together with large-scale credential reuse: leaked and infostealer-sourced
+            credentials tested against internet-facing FortiGate admin interfaces and SSL-VPN
+            logins, with the underlying vulnerabilities used for persistence and to harvest more
+            credentials off the device itself. That combination is exactly why &quot;just patch it&quot;
+            and &quot;just rotate the passwords&quot; are both incomplete on their own. As one research
+            write-up on the campaign puts it: patching is the beginning of the response, not the
+            end of it.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -79,15 +81,15 @@ export default function FortiGateFortiBleedIncidentResponse() {
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Attack Method:</span>
-                  <span>Reused Credentials + Password Spraying</span>
+                  <span>Chained Known CVEs + Credential Reuse</span>
                 </li>
                 <li className="flex justify-between">
-                  <span className="font-medium">CVE Involved:</span>
-                  <span>None — Not a Software Exploit</span>
+                  <span className="font-medium">Firmware Status:</span>
+                  <span>Behind — Patched to a Fixed Build First</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="font-medium">Response Window:</span>
-                  <span>All Credentials Rotated &lt;24 Hrs</span>
+                  <span>Patched &amp; All Credentials Rotated &lt;24 Hrs</span>
                 </li>
               </ul>
             </div>
@@ -122,13 +124,13 @@ export default function FortiGateFortiBleedIncidentResponse() {
 
         {/* Response flow diagram */}
         <div className="mb-12 bg-surface-1 rounded-lg p-6 overflow-x-auto">
-          <h2 className="text-lg font-semibold mb-4 text-center">Response Sequence — Credentials First, Not Firmware</h2>
-          <svg viewBox="0 0 1040 220" className="w-full min-w-[720px]" role="img" aria-label="Six-step response flow: limit exposure, revoke and rotate credentials, enforce MFA, review logs, deploy FortiAnalyzer, correlate with a SIEM and an infrastructure monitoring platform">
+          <h2 className="text-lg font-semibold mb-4 text-center">Response Sequence — Patch First, Then Assume Compromise</h2>
+          <svg viewBox="0 0 1040 220" className="w-full min-w-[720px]" role="img" aria-label="Six-step response flow: patch to a fixed FortiOS build, hunt for persistence, revoke and rotate credentials, enforce MFA, deploy FortiAnalyzer, correlate with a SIEM and an infrastructure monitoring platform">
             {[
-              { n: '1', t: 'Limit', s: 'Lock down VPN &', s2: 'admin exposure' },
-              { n: '2', t: 'Revoke & Rotate', s: 'Every credential —', s2: 'admin, VPN, AD, API' },
-              { n: '3', t: 'Enforce MFA', s: 'Close the gap a', s2: 'patch can’t close' },
-              { n: '4', t: 'Review Logs', s: 'Hunt for anomalous', s2: 'logins, no CVE to match' },
+              { n: '1', t: 'Patch', s: 'Update to a current,', s2: 'fixed FortiOS build' },
+              { n: '2', t: 'Hunt & Rebuild', s: 'Check for persistence;', s2: 'rebuild if compromised' },
+              { n: '3', t: 'Revoke & Rotate', s: 'Every credential —', s2: 'admin, VPN, AD, API' },
+              { n: '4', t: 'Enforce MFA', s: 'Close the gap a', s2: 'patch alone can’t' },
               { n: '5', t: 'FortiAnalyzer', s: 'Centralize &', s2: 'retain every log' },
               { n: '6', t: 'SIEM + Monitoring', s: 'Correlate &', s2: 'monitor going forward' },
             ].map((step, i) => {
@@ -154,87 +156,93 @@ export default function FortiGateFortiBleedIncidentResponse() {
             </defs>
           </svg>
           <p className="text-center text-sm text-fg-muted mt-3">
-            Steps 1–3 close the actual attack path (credentials). Steps 4–6 confirm nothing was missed and keep watching.
+            Steps 1–2 close the known vulnerability chain and check for anything attackers already planted. Steps 3–4 close the credential path patching alone can&apos;t. Steps 5–6 make sure nothing like this goes unnoticed again.
           </p>
         </div>
 
         {/* Article Body */}
         <article className="space-y-10">
           <section>
-            <h2 className="text-2xl font-bold mb-4">The Risk: A Credential Attack Wearing a Vulnerability&apos;s Name</h2>
+            <h2 className="text-2xl font-bold mb-4">The Risk: Neither &quot;Just Patch It&quot; Nor &quot;It&apos;s Not a Patch Problem&quot; Is Right</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              It&apos;s tempting to read &quot;FortiBleed&quot; and assume it means the same thing every time —
-              a specific, numbered software flaw with a patch that closes it. The 2026 FortiBleed
-              campaign wasn&apos;t that. There was no CVE behind it, and Fortinet and third-party
-              researchers (Qualys included) were explicit that it was unrelated to the 2024
-              FortiOS SSL-VPN vulnerability the name gets confused with. What actually happened was
-              simpler and, in some ways, scarier: attackers used previously leaked or reused
-              credentials, combined with brute force and password spraying, against FortiGate
-              management interfaces and SSL-VPN logins left reachable from the internet.
+              It&apos;s tempting to read &quot;FortiBleed&quot; and assume it means one thing — a single
+              numbered flaw with a patch that closes it. It&apos;s just as tempting, once you learn
+              credential reuse is involved, to swing the other way and assume firmware doesn&apos;t
+              matter at all. Both are wrong. Security researchers tracking the 2026 FortiBleed
+              campaign describe it as a chain of previously disclosed, patchable FortiOS
+              vulnerabilities (the device-takeover flaw behind CVE-2024-21762 among them) combined
+              with large-scale credential reuse: attackers test leaked and infostealer-sourced
+              credentials against internet-facing FortiGate admin interfaces and SSL-VPN logins,
+              then use the chained vulnerabilities for persistence and to harvest still more
+              credentials directly off the device.
             </p>
             <p className="text-fg-muted leading-relaxed">
-              That distinction matters because it changes what &quot;fixed&quot; means. A code vulnerability
-              is closed by a patch. A credential attack is closed by assuming every password,
-              API token, and shared secret that touched that exposed login may already be
-              compromised — which means patching the firmware and calling it done would have left
-              the actual attack path, valid-looking credentials, completely open. We treated this
-              as a credential-compromise incident from the first report, not a patching ticket.
+              That combination is what makes either shortcut dangerous. Patching alone closes the
+              entry points but does nothing about credentials an attacker may have already
+              captured, or persistence they may have already planted before the patch landed.
+              Rotating credentials alone leaves the same known, exploitable firmware gaps open to
+              the next pass of the same campaign. We treated this as both a patching gap and a
+              credential-compromise incident from the first report — not a choice between the two.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">What We Did: Credentials First, Monitoring to Make Sure It Stays Fixed</h2>
+            <h2 className="text-2xl font-bold mb-4">What We Did: Patch, Verify, Rotate, Then Make Sure It Stays Fixed</h2>
             <p className="text-fg-muted leading-relaxed mb-6">
               Six steps, in order of what actually closes the exposure versus what confirms and
               sustains it.
             </p>
             <div className="space-y-6">
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">1. Limit the Exposure — Lock Down VPN &amp; Admin Access</h3>
+                <h3 className="text-lg font-semibold mb-2">1. Patch — Update to a Current, Fixed FortiOS Build</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  The FortiGate&apos;s administrative interface and SSL-VPN portal were restricted to
-                  known management IPs immediately, cutting off the open-internet attack surface
-                  the campaign depends on before anything else was touched.
+                  The device was behind on firmware, sitting on a build still exposed to the known
+                  vulnerabilities the campaign chains together. Before anything else, it was
+                  upgraded to a current, fixed FortiOS build and the admin interface and SSL-VPN
+                  portal were restricted to known management IPs — closing the open-internet
+                  attack surface and the specific exploit paths at the same time.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">2. Revoke &amp; Rotate — Every Credential, Not Just One</h3>
+                <h3 className="text-lg font-semibold mb-2">2. Hunt for Persistence — Then Decide Whether to Rebuild</h3>
+                <p className="text-fg-muted leading-relaxed">
+                  A patch closes the door but doesn&apos;t evict anyone already inside. We reviewed
+                  configuration history, admin accounts, and scheduled jobs for anything an
+                  attacker could have planted before the patch, and checked VPN session history,
+                  admin login events, and config-change timestamps for unfamiliar source IPs,
+                  off-hours admin activity, and the repeated-failed-login pattern typical of
+                  password spraying. Finding any of that would have meant rebuilding from a trusted
+                  image rather than trusting the patch alone.
+                </p>
+              </div>
+              <div className="bg-surface-1 p-6 rounded-lg">
+                <h3 className="text-lg font-semibold mb-2">3. Revoke &amp; Rotate — Every Credential, Not Just One</h3>
                 <p className="text-fg-muted leading-relaxed">
                   Every active session was terminated and every credential that could have touched
                   the exposed logins was rotated within 24 hours: local admin accounts, VPN user
                   credentials, AD/LDAP bind accounts, RADIUS secrets, API tokens, and SNMP
-                  community strings. A credential attack isn&apos;t over until the credentials
-                  themselves are no longer valid — this was the step that actually closed the door.
+                  community strings. Patching stops the next exploit attempt; it does nothing about
+                  credentials that may already be sitting in a leaked-credential dump — rotation is
+                  what closes that half of the exposure.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">3. Enforce MFA — Close the Gap a Patch Can&apos;t</h3>
+                <h3 className="text-lg font-semibold mb-2">4. Enforce MFA — Close the Gap a Patch Alone Can&apos;t</h3>
                 <p className="text-fg-muted leading-relaxed">
                   Multi-factor authentication was enforced on both VPN and administrative logins.
-                  Password rotation protects against the credentials that were already exposed;
-                  MFA protects against the next leaked password — which is the actual, durable fix
-                  for a campaign built entirely on credential reuse.
-                </p>
-              </div>
-              <div className="bg-surface-1 p-6 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">4. Review the Logs — Hunt With No CVE to Match Against</h3>
-                <p className="text-fg-muted leading-relaxed">
-                  With no patch advisory or exploit signature to check against, the only way to
-                  know if the campaign had succeeded here was the logs themselves: VPN session
-                  history, admin login events, and config-change timestamps, checked for unfamiliar
-                  source IPs, off-hours admin activity, and the repeated-failed-login pattern
-                  typical of password spraying. The firm&apos;s seven-day log retention was enough to
-                  clear the immediate window, but not enough to be fully confident — which is what
-                  drove the retention change below.
+                  Patching and rotation deal with this incident; MFA is what keeps the next leaked
+                  or reused password from being enough on its own — the durable fix for a campaign
+                  built on credential reuse at scale.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold mb-2">5. Add FortiAnalyzer — Centralize What the Firewall Sees</h3>
                 <p className="text-fg-muted leading-relaxed">
-                  FortiGate logs previously lived on the device itself and rotated out within days.
-                  FortiAnalyzer now pulls every log stream — traffic, VPN sessions, authentication
-                  events, admin activity — into one searchable, retained archive, so the next
-                  &quot;was this login legitimate&quot; question is a query, not a guess.
+                  FortiGate logs previously lived on the device itself and rotated out within days —
+                  not long enough to confidently rule out earlier compromise. FortiAnalyzer now
+                  pulls every log stream — traffic, VPN sessions, authentication events, admin
+                  activity — into one searchable, retained archive, so the next &quot;was this login
+                  legitimate&quot; question is a query, not a guess.
                 </p>
               </div>
               <div className="bg-surface-1 p-6 rounded-lg">
@@ -242,24 +250,26 @@ export default function FortiGateFortiBleedIncidentResponse() {
                 <p className="text-fg-muted leading-relaxed">
                   A SIEM now correlates FortiAnalyzer&apos;s authentication events with broader network
                   signals, while an infrastructure monitoring platform watches servers and services
-                  network-wide. Together they
-                  catch the pattern a credential attack actually looks like — repeated logins from
-                  unfamiliar locations, failed-then-successful auth sequences — rather than waiting
-                  on a vendor advisory that, in this case, never existed.
+                  network-wide. Together they catch the pattern a credential attack actually looks
+                  like — repeated logins from unfamiliar locations, failed-then-successful auth
+                  sequences, firmware drifting out of date again — instead of relying on a single
+                  patch cycle or a single credential reset to hold forever.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="bg-surface-1 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">Tying It Together: Credential Hygiene as the Perimeter</h2>
+            <h2 className="text-2xl font-bold mb-4">Tying It Together: the Perimeter Is Firmware and Credentials, Not One or the Other</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              The lesson this incident reinforced is that the perimeter isn&apos;t only firmware
-              version numbers — it&apos;s every credential that can authenticate to it. FortiAnalyzer
-              and the infrastructure monitoring platform are the sensors; the SIEM is what correlates authentication behavior
-              into a signal worth acting on. None of that replaces rotating credentials and
-              enforcing MFA — it&apos;s what keeps the fix from quietly expiring the next time a
-              password turns up in a leaked-credential dump somewhere else entirely.
+              The lesson this incident reinforced is that the perimeter is both the firmware
+              version and every credential that can authenticate to it — treating either one as
+              the whole fix leaves the other half of the campaign&apos;s playbook open. FortiAnalyzer
+              and the infrastructure monitoring platform are the sensors; the SIEM is what
+              correlates authentication behavior into a signal worth acting on. None of that
+              replaces staying current on firmware, rotating credentials, or enforcing MFA — it&apos;s
+              what catches it quickly the next time firmware drifts out of date or a password turns
+              up in a leaked-credential dump somewhere else entirely.
             </p>
             <p className="text-fg-muted leading-relaxed">
               The output is a real-time, data-driven view of authentication and network activity:
@@ -271,32 +281,36 @@ export default function FortiGateFortiBleedIncidentResponse() {
           <section>
             <h2 className="text-2xl font-bold mb-4">The Result</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              No evidence of compromise was found in the logs available for review once the
-              incident response began. Every credential that could have touched the exposed
-              logins — admin, VPN, AD/LDAP, RADIUS, API tokens, and SNMP community strings — was
-              rotated within 24 hours, and MFA now covers both VPN and administrative access. The
-              firm also now runs with twelve months of retained, centralized logging and
-              correlated alerting that didn&apos;t exist before this incident.
+              The FortiGate was brought onto a current, fixed firmware build, and no evidence of
+              persistence or prior compromise was found during the hunt that followed. Every
+              credential that could have touched the exposed logins — admin, VPN, AD/LDAP, RADIUS,
+              API tokens, and SNMP community strings — was rotated within 24 hours, and MFA now
+              covers both VPN and administrative access. The firm also now runs with twelve months
+              of retained, centralized logging and correlated alerting that didn&apos;t exist before
+              this incident.
             </p>
             <p className="text-fg-muted leading-relaxed">
-              The campaign forced the question. Credential rotation and MFA answered it. Monitoring
-              makes sure the answer holds the next time a password shows up somewhere it shouldn&apos;t.
+              The campaign forced the question on two fronts at once. Patching and a persistence
+              hunt answered the firmware side; credential rotation and MFA answered the other.
+              Monitoring makes sure the answer holds the next time either one drifts.
             </p>
           </section>
 
           <section className="bg-surface-1 p-8 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Is Your Perimeter Exposed to the Same Attack?</h2>
             <p className="text-fg-muted leading-relaxed mb-4">
-              If your FortiGate&apos;s admin interface or SSL-VPN is reachable from the open internet,
-              if MFA isn&apos;t enforced on every VPN and admin login, or if credentials have never
-              been rotated after a staff change or a vendor breach notification, the exposure this
-              case study closes is very likely open on your network too — and no amount of
-              firmware patching will close it, because it isn&apos;t a firmware problem.
+              If your FortiGate is behind on firmware, if its admin interface or SSL-VPN is
+              reachable from the open internet, if MFA isn&apos;t enforced on every VPN and admin
+              login, or if credentials have never been rotated after a staff change or a vendor
+              breach notification, the exposure this case study closes is very likely open on your
+              network too — and closing only one of those gaps still leaves the campaign&apos;s other
+              path in.
             </p>
             <p className="text-fg-muted leading-relaxed">
-              We run a credential and perimeter exposure review: what&apos;s reachable from the
-              internet, where MFA is missing, how old your credentials and shared secrets are, and
-              how far back your logs actually go — with a prioritized plan, not a scare report.
+              We run a credential and perimeter exposure review: current firmware status, what&apos;s
+              reachable from the internet, where MFA is missing, how old your credentials and
+              shared secrets are, and how far back your logs actually go — with a prioritized plan,
+              not a scare report.
             </p>
           </section>
 
