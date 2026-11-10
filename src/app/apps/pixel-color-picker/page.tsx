@@ -51,7 +51,7 @@ export default function PixelColorPicker() {
                 instant access to any color on your screen with pixel-perfect precision.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#">
+                <Button href="https://taskin.app/apps">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
@@ -118,7 +118,7 @@ export default function PixelColorPicker() {
               Download Pixel Color Picker today and experience the fastest way to work with colors
               on macOS.
             </p>
-            <Button href="#">
+            <Button href="https://taskin.app/apps">
               Download for macOS ↗
             </Button>
           </div>

@@ -51,13 +51,13 @@ export default function ScreenGrabber() {
                 has never been easier.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#">
+                <Button href="https://taskin.app/apps">
                   Download App ↗
                 </Button>
                 <div className="text-center sm:text-left">
-                  <div className="inline-block px-4 py-2 bg-blue-100 rounded-lg">
-                    <span className="text-sm font-body font-medium text-blue-700">
-                      November 2025
+                  <div className="inline-block px-4 py-2 bg-green-100 rounded-lg">
+                    <span className="text-sm font-body font-medium text-green-700">
+                      Available now
                     </span>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ export default function ScreenGrabber() {
             <p className="text-lg text-gray-medium mb-8 font-body">
               Download ScreenGrabber and experience the most powerful screenshot tool for macOS.
             </p>
-            <Button href="#">
+            <Button href="https://taskin.app/apps">
               Download for macOS ↗
             </Button>
           </div>

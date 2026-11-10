@@ -51,13 +51,13 @@ export default function DeepTicker() {
                 Apollo, Chart.js, and Material-UI for a seamless trading experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="#">
-                  Download App ↗
+                <Button href="/contact">
+                  Get Notified at Launch
                 </Button>
                 <div className="text-center sm:text-left">
-                  <div className="inline-block px-4 py-2 bg-blue-100 rounded-lg">
-                    <span className="text-sm font-body font-medium text-blue-700">
-                      November 2025
+                  <div className="inline-block px-4 py-2 bg-amber-100 rounded-lg">
+                    <span className="text-sm font-body font-medium text-amber-700">
+                      In Development
                     </span>
                   </div>
                 </div>
@@ -115,11 +115,11 @@ export default function DeepTicker() {
               Stay Ahead of the Market
             </h2>
             <p className="text-lg text-gray-medium mb-8 font-body">
-              Download DeepTicker and get professional-grade stock market tools right in your
-              pocket.
+              DeepTicker is currently in development. Get notified the moment it&apos;s available
+              on iOS.
             </p>
-            <Button href="#">
-              Download for iOS ↗
+            <Button href="/contact">
+              Get Notified at Launch
             </Button>
           </div>
         </Container>
