@@ -58,6 +58,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const caseStudyPages = [
     '/case-studies/ai-noc-unified-security-monitoring',
     '/case-studies/fortigate-fortibleed-incident-response',
+    '/case-studies/fortigate-active-active-asymmetric-traffic-troubleshooting',
+    '/case-studies/building-in-house-private-ai-assistant',
+    '/case-studies/it-governance-and-standardized-operations',
     '/case-studies/bilingual-documentation-global-trade',
     '/case-studies/choosing-it-support-model',
     '/case-studies/ferry-company-backup-modernization',
